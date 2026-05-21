@@ -1,0 +1,23 @@
+<h2>筋肉のイラスト集</h2>
+
+<% images = Dir.glob(Rails.root.join("public/images/muscle/*_quiz.png")) %>
+
+<% images.each do |quiz| %>
+  <% base = File.basename(quiz).sub("_quiz.png", "") %>
+
+  <div style="display:flex; gap:40px; justify-content:center; margin-bottom:30px;">
+
+    <!-- クイズ -->
+    <div>
+      <h3 style="text-align:center;">クイズ</h3>
+      <img src="/images/muscle/<%= base %>_quiz.png" width="300">
+    </div>
+
+    <!-- 解答 -->
+    <div>
+      <h3 style="text-align:center;">解答</h3>
+      <img src="/images/muscle/<%= base %>_answer.png" width="300">
+    </div>
+
+  </div>
+<% end %>

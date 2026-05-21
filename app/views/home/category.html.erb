@@ -1,0 +1,78 @@
+<div style="display:flex; justify-content:center; gap:15px; align-items:center; margin-bottom:20px;">
+
+  <% icon =
+  case @category
+  when "解剖学"
+    "🦴"
+  when "生理学"
+    "🫀"
+  when "運動学"
+    "🏃"
+  else
+    "📘"
+  end
+%>
+
+<h1 style="margin:0;">
+  <%= icon %> <%= @category %>
+</h1>
+
+  <a href="/"
+    style="
+      text-decoration:none;
+      background:#dcdcdc;
+      color:#555;
+      padding:8px 14px;
+      border-radius:8px;
+      font-size:14px;
+      font-weight:bold;
+    ">
+    ←TOP
+  </a>
+
+</div>
+
+<div style="margin-top:20px;">
+
+
+  <!-- 全問挑戦 -->
+  <a href="/select?category=<%= @category %>&index=0" style="text-decoration:none;">
+  <div style="
+  border:1px solid #ccc;
+  background:white;
+  color:black;
+  padding:15px;
+
+  width:40%;
+  max-width:400px;
+
+  margin:0 auto 10px auto;
+
+  text-align:center;
+  border-radius:8px;
+  font-weight:bold;
+">
+    全問挑戦
+  </div>
+</a>
+
+<a href="/select?mode=wrong&category=<%= @category %>" style="text-decoration:none;">
+  <div style="
+  background:#2196F3;
+  color:white;
+  padding:15px;
+
+  width:40%;
+  max-width:400px;
+
+  margin:0 auto;
+
+  text-align:center;
+  border-radius:8px;
+  font-weight:bold;
+">
+    この分野の苦手復習
+  </div>
+</a>
+
+

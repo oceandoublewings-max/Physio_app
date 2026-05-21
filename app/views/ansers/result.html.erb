@@ -1,0 +1,50 @@
+<% if @question.qtype == "choice" %>
+
+  <p style="color: red;">
+    <%= @result %>！正解は <%= @question.answer %>
+  </p>
+
+  <div style="background:#e3f2fd; padding:10px; margin-top:10px;">
+    <%= @question.explanation %>
+  </div>
+
+<% end %>
+
+
+<% if @question.qtype == "true_false" %>
+
+  <p style="color: red;">
+    <%= @result %>！
+  </p>
+
+  <div style="background:#e3f2fd; padding:10px; margin-top:10px;">
+    <%= @question.explanation %>
+  </div>
+
+<% end %>
+
+<<script>
+let wrong = JSON.parse(localStorage.getItem("wrong")) || []
+
+const questionId = <%= @question.id %>
+
+<% if @result.include?("不正解") %>
+
+if (!wrong.some(q => q.id == questionId)) {
+
+  wrong.push({
+    id: questionId,
+    category: "<%= @question.category %>",
+    subcategory: "<%= j @question.subcategory %>"
+  })
+
+}
+
+<% else %>
+
+wrong = wrong.filter(q => q.id != questionId)
+
+<% end %>
+
+localStorage.setItem("wrong", JSON.stringify(wrong))
+</script>

@@ -1,0 +1,75 @@
+<div style="
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+">
+
+  <h1 style="
+    font-size: 40px;
+    margin-bottom: 40px;
+  ">
+    🫀生理学 苦手分析
+  </h1>
+
+  <div id="physiology-box" style="
+     background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+  ">
+  </div>
+
+</div>
+
+<script>
+const wrong = JSON.parse(localStorage.getItem("wrong")) || []
+
+let physiology = 0
+
+let nervePhysiology = 0
+let musclePhysiology = 0
+let circulation = 0
+let respiration = 0
+let organ = 0
+let hormone = 0
+let digestion = 0
+let homeostasis = 0
+
+wrong.forEach(q => {
+
+if(q.category === "生理") physiology++
+
+  if(q.subcategory === "神経生理") nervePhysiology++
+ if(q.subcategory === "筋生理") musclePhysiology++
+ if(q.subcategory === "循環") circulation++
+ if(q.subcategory === "呼吸") respiration++
+ if(q.subcategory === "内臓") organ++
+ if(q.subcategory === "ホルモン") hormone++
+ if(q.subcategory === "消化") digestion++
+ if(q.subcategory === "体温・恒常性") homeostasis++
+
+})
+
+document.getElementById("physiology-box").innerHTML = `
+🫀 生理学：${physiology}問<br><br>
+
+🧠 神経生理：${nervePhysiology}問<br><br>
+
+💪 筋生理：${musclePhysiology}問<br><br>
+
+🫀 循環：${circulation}問<br><br>
+
+🫁 呼吸：${respiration}問<br><br>
+
+🩺 内臓：${organ}問<br><br>
+
+🧪 ホルモン：${hormone}問<br><br>
+
+🍚 消化：${digestion}問<br><br>
+
+🌡️ 体温・恒常性：${homeostasis}問
+`;
+</script>

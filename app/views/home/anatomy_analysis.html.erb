@@ -1,0 +1,63 @@
+<div style="
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+">
+
+  <h1 style="
+    font-size: 40px;
+    margin-bottom: 40px;
+  ">
+    🦴 解剖学 苦手分析
+  </h1>
+
+<div id="anatomy-box" style="
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+  ">
+  </div>
+
+</div>
+
+<script>
+const wrong = JSON.parse(localStorage.getItem("wrong")) || []
+
+let anatomy = 0
+
+let bone = 0
+let muscle = 0
+let nerve = 0
+let organ = 0
+let vessel = 0
+let position = 0
+
+wrong.forEach(q => {
+
+console.log(wrong)
+if(q.category === "解剖") anatomy++
+
+ if(q.subcategory === "骨") bone++
+ if(q.subcategory === "筋肉") muscle++
+ if(q.subcategory === "神経") nerve++
+ if(q.subcategory === "臓器") organ++
+ if(q.subcategory === "血管") vessel++
+ if(q.subcategory === "断面・位置関係") position++
+
+})
+
+document.getElementById("anatomy-box").innerHTML = `
+🦴 解剖学：${anatomy}問<br><br>
+
+🦴 骨：${bone}問<br><br>
+💪 筋肉：${muscle}問<br><br>
+🧠 神経：${nerve}問<br><br>
+🫀 臓器：${organ}問<br><br>
+🩸 血管：${vessel}問<br><br>
+📍 断面・位置関係：${position}問
+`;
+</script>

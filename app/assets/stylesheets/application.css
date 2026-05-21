@@ -1,0 +1,309 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ ```css
+/* ========================================
+   全体
+======================================== */
+
+body {
+  background: #f7f9fc;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* ========================================
+   レイアウト
+======================================== */
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ←ここに追加！ */
+.count-buttons {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  width: 60%;
+  max-width: 500px;
+
+  margin: 0 auto;
+}
+
+.count-btn {
+  width: 100%;
+  padding: 18px;
+
+  border: none;
+  border-radius: 999px;
+
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   共通ボタン
+======================================== */
+
+.main-btn {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* ========================================
+   メニュー
+======================================== */
+
+.menu-btn {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  border-radius: 999px;
+  background: #7DB7E8;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   問題ボタン
+======================================== */
+
+.img-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: #4daaf7;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ========================================
+   問題数ボタン
+======================================== */
+
+.count-btn {
+  width: 100%;
+
+  padding: 20px 0;
+
+  border: none;
+  border-radius: 999px;
+
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.btn-5 {
+  background: #8FD66E;
+}
+
+.btn-10 {
+  background: #7DB7E8;
+}
+
+.btn-15 {
+  background: #F5C06A;
+}
+
+.btn-20 {
+  background: #C999F5;
+}
+
+
+/* ========================================
+   active
+======================================== */
+
+.active {
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(255,255,255,0.25);
+  transform: scale(1.08);
+  filter: brightness(0.92);
+}
+
+
+/* ========================================
+   hover
+======================================== */
+
+
+.main-btn:hover,
+.menu-btn:hover,
+.choice-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+
+/* 4択、〇×ボタン */
+.choice-btn {
+  width: 80%;
+  max-width: 700px;
+
+  padding: 12px;
+  margin: 10px auto;
+
+  display: block;
+
+  border: 2px solid #ddd;
+  border-radius: 999px;
+
+  background: white;
+  color: #222;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.choice-btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.choice-btn:active {
+  background: #dff0ff;
+  transform: scale(0.98);
+}
+
+
+/* ========================================
+   TOPボタン
+======================================== */
+
+.top-btn {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+}
+
+/* ========================================
+   画像
+======================================== */
+
+.material-image {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.illustration-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+}
+
+.question-side{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+@media (max-width:768px){
+
+  .illustration-wrapper{
+    flex-direction:column;
+    align-items:center;
+  }
+
+}
+/* ========================================
+   スマホ
+======================================== */
+
+@media (max-width: 768px) {
+
+  .count-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .top-btn {
+    left: 20px;
+    transform: none;
+  }
+
+
+
+}
+```

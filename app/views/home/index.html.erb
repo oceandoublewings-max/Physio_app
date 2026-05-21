@@ -1,0 +1,269 @@
+<div style="
+  padding:40px;
+  max-width:800px;
+  margin:auto;
+  min-height:100vh;
+
+  background-image:url('/images/top/f_top.png');
+  background-size:cover;
+  background-position:center;
+">
+
+  <h1 style="text-align:center;">
+  理学療法士 国試対策(1.2年生用)
+</h1>
+
+<div style="
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:20px;
+  flex-wrap:wrap;
+">
+
+<!-- 苦手問題（メインボタン） -->
+<a href="/select?mode=wrong" style="text-decoration:none;">
+  <div style="
+    background: #ff6b6b;
+    color: white;
+    padding: 15px;
+
+    width: 220px;
+    margin: 20px auto 0 auto;
+
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  ">
+    苦手問題（全範囲）
+  </div>
+</a>
+
+<!-- イラスト問題（メインボタン） -->
+<a href="/illustration_count" style="text-decoration:none;">
+  <div style="
+    background: #4dabf7;
+    color: white;
+    padding: 15px;
+
+    width: 220px;
+    margin: 20px auto 0 auto;
+
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  ">
+    イラスト問題（全範囲）
+  </div>
+</a>
+</div>
+
+
+<!-- イラスト集（サブリンク） -->
+<div style="
+  width: 60%;
+  margin: 15px auto 0 auto;
+  text-align: center;
+">
+  <a href="/illustrations" style="
+    color: #4CAF50;
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.2s;
+  "
+  onmouseover="this.style.color='#388E3C'"
+  onmouseout="this.style.color='#4CAF50'"
+  >
+    📚 イラスト集
+  </a>
+</div>
+
+<h2 style="margin-top:20px; text-align:center;">分野を選んでください</h2>
+<div style="margin-top:20px;">
+
+
+<!-- 解剖学 -->
+<a href="/category?name=解剖学" style="text-decoration:none;">
+  <div style="
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    padding: 15px;
+
+    width: 60%;
+    margin: 0 auto 10px auto;
+
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  ">
+    🦴 解剖学
+  </div>
+</a>
+
+<!-- 生理学 -->
+<a href="/category?name=生理学" style="text-decoration:none;">
+  <div style="
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    padding: 15px;
+
+    width: 60%;
+    margin: 0 auto 10px auto;
+
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  ">
+    🫀 生理学
+  </div>
+</a>
+
+<!-- 運動学 -->
+<a href="/category?name=運動学" style="text-decoration:none;">
+  <div style="
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    padding: 15px;
+
+    width: 60%;
+    margin: 0 auto 10px auto;
+
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  ">
+    🏃 運動学
+  </div>
+</a>
+
+<div id="analysis-box"
+style="
+margin-top:20px;
+padding:20px;
+background:rgba(240,248,255,0.78);
+border-radius:20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+font-weight:bold;
+line-height:2;
+">
+</div>
+
+</div>
+
+
+
+<script>
+function goWrong(category) {
+  const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
+
+  if (wrong.length === 0) {
+    alert("苦手問題がまだありません");
+    return;
+  }
+
+  window.location.href =
+    "/select?mode=wrong&ids=" + wrong.join(",") +
+    "&category=" + category +
+    "&qtype=choice&index=0";
+}
+</script>
+
+<script>
+const wrong = JSON.parse(localStorage.getItem("wrong")) || []
+console.log(wrong)
+
+let anatomy = 0
+let physiology = 0
+let kinesiology = 0
+
+let bone = 0
+let muscle = 0
+let nerve = 0
+let organ = 0
+let vessel = 0
+let position = 0
+
+
+wrong.forEach(q => {
+  if (q.category === "解剖") anatomy++
+  if (q.category === "生理") physiology++
+  if (q.category === "運動") kinesiology++
+
+  if (q.subcategory === "骨") bone++
+  if (q.subcategory === "筋肉") muscle++
+  if(q.subcategory === "神経") nerve++
+  if(q.subcategory === "臓器") organ++
+  if(q.subcategory === "血管") vessel++
+  if(q.subcategory === "断面・位置関係") position++
+})
+
+document.getElementById("analysis-box").innerHTML = `
+<h3>🔥 苦手問題数</h3>
+
+<a href="/anatomy_analysis" style="
+display:block;
+background:white;
+padding:2px 8px;
+border-radius:6px;
+margin-bottom:4px;
+text-decoration:underline;
+color:black;
+font-size:16px;
+font-weight:600;
+box-shadow:none;
+width:65%;
+margin-left:auto;
+margin-right:auto;
+">
+🦴 解剖学：${anatomy}問
+</a>
+
+<a href="/physiology_analysis" style="
+display:block;
+background:white;
+padding:2px 8px;
+border-radius:6px;
+margin-bottom:4px;
+text-decoration:underline;
+color:black;
+font-size:16px;
+font-weight:600;
+box-shadow:none;
+width:65%;
+margin-left:auto;
+margin-right:auto;
+">
+🫀 生理学：${physiology}問
+</a>
+
+<a href="/kinesiology_analysis" style="
+display:block;
+background:white;
+padding:2px 8px;
+border-radius:6px;
+margin-bottom:4px;
+text-decoration:underline;
+color:black;
+font-size:16px;
+font-weight:600;
+box-shadow:none;
+width:65%;
+margin-left:auto;
+margin-right:auto;
+">
+🏃 運動学：${kinesiology}問
+</a>
+`;
+
+console.log("OK")
+</script>

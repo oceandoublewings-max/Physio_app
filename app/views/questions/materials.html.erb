@@ -1,0 +1,44 @@
+<style>
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* スマホだけ縦並び */
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-row img {
+    width: 90% !important;
+  }
+}
+</style>
+
+<h2>イラスト集</h2>
+
+<% if params[:type] == "bone" %>
+  <h3>骨のイラスト集</h3>
+
+  <div class="image-row">
+    <% Dir.glob(Rails.root.join("public/images/bone/*")).each do |img| %>
+      <img src="<%= img.sub(Rails.root.join('public').to_s, '') %>" width="300">
+    <% end %>
+  </div>
+
+<% elsif params[:type] == "muscle" %>
+  <h3>筋肉のイラスト集</h3>
+
+  <div class="image-row">
+    <% Dir.glob(Rails.root.join("public/images/muscle/*")).each do |img| %>
+      <img src="<%= img.sub(Rails.root.join('public').to_s, '') %>" width="300">
+    <% end %>
+  </div>
+
+<% else %>
+  <a href="/materials?type=bone">骨</a><br><br>
+  <a href="/materials?type=muscle">筋肉</a>
+<% end %>

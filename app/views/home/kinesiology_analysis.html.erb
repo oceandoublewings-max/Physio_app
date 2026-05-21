@@ -1,0 +1,70 @@
+<div style="
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+">
+
+  <h1 style="
+    font-size: 40px;
+    margin-bottom: 40px;
+  ">
+    🏃 運動学 苦手分析
+  </h1>
+
+ <div id="kinesiology-box" style="
+     background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+  ">
+  </div>
+
+</div>
+
+<script>
+const wrong = JSON.parse(localStorage.getItem("wrong")) || []
+
+let kinesiology = 0
+
+let jointMotion = 0
+let rom = 0
+let muscleAction = 0
+let gait = 0
+let posture = 0
+let biomechanics = 0
+let movementAnalysis = 0
+
+wrong.forEach(q => {
+
+if(q.category === "運動") kinesiology++
+
+ if(q.subcategory === "関節運動") jointMotion++
+ if(q.subcategory === "ROM") rom++
+ if(q.subcategory === "筋作用") muscleAction++
+ if(q.subcategory === "歩行") gait++
+ if(q.subcategory === "姿勢") posture++
+ if(q.subcategory === "バイオメカニズム") biomechanics++
+ if(q.subcategory === "動作分析") movementAnalysis++
+})
+
+document.getElementById("kinesiology-box").innerHTML = `
+🏃 運動学：${kinesiology}問<br><br>
+
+🦴 関節運動：${jointMotion}問<br><br>
+
+📏 ROM：${rom}問<br><br>
+
+💪 筋作用：${muscleAction}問<br><br>
+
+🚶 歩行：${gait}問<br><br>
+
+🧍 姿勢：${posture}問<br><br>
+
+⚙️ バイオメカニズム：${biomechanics}問<br><br>
+
+🎥 動作分析：${movementAnalysis}問
+`;
+</script>

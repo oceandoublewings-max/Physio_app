@@ -1,8 +1,8 @@
 def ill(content, image, answer_image, category = "解剖")
   {
     content: content,
-    image: "/images/quiz/bone/#{image}",
-    answer_image: "/images/quiz/bone/#{answer_image}",
+    image: "/images/bone/#{image}",
+    answer_image: "/images/bone/#{answer_image}",
     category: category,
     qtype: "illustration"
   }

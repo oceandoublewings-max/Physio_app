@@ -1,8 +1,8 @@
-def ill(content, image, answer_image, category = "解剖")
+def ill(content, image, answer_image, folder = "bone", category = "解剖")
   {
     content: content,
-    image: "/images/bone/#{image}",
-    answer_image: "/images/bone/#{answer_image}",
+    image: "/images/#{folder}/#{image}",
+    answer_image: "/images/#{folder}/#{answer_image}",
     category: category,
     qtype: "illustration"
   }

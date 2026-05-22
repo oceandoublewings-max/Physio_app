@@ -133,14 +133,20 @@ text-align:right;
 margin-top:-60px;
 padding-right:280px;">
 
-<a href="/questions?ids=<%= params[:ids] %>&index=<%= @index + 1 %>&category=<%= @category %>&qtype=<%= @qtype %>&count=<%= params[:count] %>">
-   style="
+<a href="/questions?ids=<%= params[:ids] %>
+&index=<%= @index + 1 %>
+&category=<%= @category %>
+&qtype=<%= @qtype %>
+&count=<%= params[:count] %>"
+
+style="
 display:inline-block;
 padding:10px 20px;
 background:#007bff;
 color:white;
 text-decoration:none;
-border-radius:8px;">
+border-radius:8px;
+">
 次の問題へ
 
 </a>

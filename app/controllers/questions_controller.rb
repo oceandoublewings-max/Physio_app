@@ -63,7 +63,7 @@ if params[:ids].present?
   # idsの順番どおりに問題を並べる
   @questions = ids.map { |id| Question.find_by(id: id) }.compact
 else
-  @questions = base.order("RAND()").limit(count)
+  @questions = base.order("RANDOM()").limit(count)
 end
 
 @index = params[:index].to_i

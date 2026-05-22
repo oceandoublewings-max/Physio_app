@@ -26,7 +26,8 @@ Question.create!([
   { content: "赤血球の役割は？", choices: "酸素運搬,免疫,止血,消化", answer: "酸素運搬", explanation: "赤血球はヘモグロビンで酸素を運ぶ", category: "生理" },
 
   {content: "膝関節屈曲に関与する筋は？", choices: "ハムストリングス,大腿四頭筋,前脛骨筋,腓腹筋", answer: "ハムストリングス", explanation: "ハムストリングスは膝関節屈曲に関与", category: "運動" }
-]
+,
+
 {
   content: "大腿骨はどこに存在する？",
   choices: "上腕,大腿,前腕,胸郭",

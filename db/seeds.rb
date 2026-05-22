@@ -7450,5 +7450,15 @@ Question.create!([
   subcategory: "動作分析",
   qtype: "true_false",
   explanation: "膝関節は屈曲する"
+},
+
+{
+  content: "この骨は？",
+  image: "/images/quiz/bone/foot_quiz.png",
+  answer_image: "/images/quiz/bone/foot_answer.png",
+  answer: "足部",
+  category: "解剖",
+  qtype: "illustration",
+  explanation: "足部の骨の問題"
 }
 ])

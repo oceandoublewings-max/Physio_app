@@ -28,7 +28,7 @@ let wrong = JSON.parse(localStorage.getItem("wrong")) || []
 
 const questionId = <%= @question.id %>
 
-<% if @result.include?("不正解") %>
+<% if @question.answer == "false" %>
 
 if (!wrong.some(q => q.id == questionId)) {
 

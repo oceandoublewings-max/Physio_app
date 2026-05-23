@@ -7476,444 +7476,592 @@ ill(
   "番号の答えは？",
   "ankle_quiz.png",
   "ankle_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "axis_quiz.png",
   "axis_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "bone_quiz.png",
   "bone_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "cranial_sutures_quiz.png",
   "cranial_sutures_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "femur_quiz.png",
   "femur_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "foot_quiz.png",
   "foot_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "hand_quiz.png",
   "hand_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "humerus_quiz.png",
   "humerus_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "patella_quiz.png",
   "patella_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "pelvis_quiz.png",
   "pelvis_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "pelvis_gender_quiz.png",
   "pelvis_gender_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "radius_quiz.png",
   "radius_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "radius_ulna_quiz.png",
   "radius_ulna_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "scapula_back_quiz.png",
   "scapula_back_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "scapula_front_quiz.png",
   "scapula_front_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "skull_quiz.png",
   "skull_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "spine_quiz.png",
   "spine_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "thorax_quiz.png",
   "thorax_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "tibia_quiz.png",
   "tibia_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "tibia_fibula_quiz.png",
   "tibia_fibula_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "ulna_quiz.png",
   "ulna_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "wrist_quiz.png",
   "wrist_answer.png",
+  "bone",
+  "解剖"
 ),
 
 ill(
   "番号の答えは？",
   "abs_quiz.png",
   "abs_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "adductors_quiz.png",
   "adductors_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "back_quiz.png",
   "back_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "erector_spinae_quiz.png",
   "erector_spinae_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "expiratory_muscles_quiz.png",
   "expiratory_muscles_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "facial_muscles_1_quiz.png",
   "facial_muscles_1_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "facial_muscles_2_quiz.png",
   "facial_muscles_2_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "forearm_dorsal_1_quiz.png",
   "forearm_dorsal_1_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "forearm_dorsal_2_quiz.png",
   "forearm_dorsal_2_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "forearm_palmar_quiz.png",
   "forearm_palmar_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "gluteal_quiz.png",
   "gluteal_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "inspiratory_muscles_quiz.png",
   "inspiratory_muscles_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "intrinsic_hand_1_quiz.png",
   "intrinsic_hand_1_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "intrinsic_hand_2_quiz.png",
   "intrinsic_hand_2_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "lowerleg_anterior_quiz.png",
   "lowerleg_anterior_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "lowerleg_posterior_1_quiz.png",
   "lowerleg_posterior_1_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "lowerleg_posterior_2_quiz.png",
   "lowerleg_posterior_2_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "neck_quiz.png",
   "neck_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "pelvis_quiz.png",
   "pelvis_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "scapula_quiz.png",
   "scapula_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "skull_quiz.png",
   "skull_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "suboccipital_quiz.png",
   "suboccipital_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "thigh_anterior_quiz.png",
   "thigh_anterior_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "thigh_posterior_quiz.png",
   "thigh_posterior_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "upperarm_anterior_quiz.png",
   "upperarm_anterior_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "upperarm_posterior_quiz.png",
   "upperarm_posterior_answer.png",
+"muscle",
+"解剖"
 ),
 
 ill(
   "番号の答えは？",
   "adrenal_gland_quiz.png",
   "adrenal_gland_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "bronchus_1_quiz.png",
   "bronchus_1_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "bronchus_2_quiz.png",
   "bronchus_2_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "bronchus_3_quiz.png",
   "bronchus_3_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "bronchus_4_quiz.png",
   "bronchus_4_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "ear_quiz.png",
   "ear_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "esophagus_quiz.png",
   "esophagus_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "eye_quiz.png",
   "eye_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "female_reproductive_organs_quiz.png",
   "female_reproductive_organs_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "heart_quiz.png",
   "heart_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "kidney_quiz.png",
   "kidney_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "large_intestine_quiz.png",
   "large_intestine_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "liver_quiz.png",
   "liver_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "lung_quiz.png",
   "lung_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "male_reproductive_organs_quiz.png",
   "male_reproductive_organs_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "male_vs_female_bladder_quiz.png",
   "male_vs_female_bladder_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "mouth_quiz.png",
   "mouth_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "nose_quiz.png",
   "nose_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "organs_1_quiz.png",
   "organs_1_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "organs_2_quiz.png",
   "organs_2_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "pancreas_quiz.png",
   "pancreas_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "small_intestine_quiz.png",
   "small_intestine_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "stomach_quiz.png",
   "stomach_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "throat_quiz.png",
   "throat_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "tooth_quiz.png",
   "tooth_answer.png",
+"physiology",
+"生理"
 ),
 
 ill(
   "番号の答えは？",
   "uterus_quiz.png",
   "uterus_answer.png",
+"physiology",
+"生理"
 ),
 
 {

@@ -72,7 +72,7 @@ if @index >= @questions.length
   @finished = true
 else
   @question = @questions[@index]
- Rails.logger.debug "QUESTION: #{@question.inspect}"
+ puts @question.inspect
 end
 end
 

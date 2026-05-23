@@ -14844,5 +14844,7 @@ ill(
   subcategory: "動作分析",
   qtype: "true_false",
   explanation: "平衡感覚へ関与する"
-},
+}
+])
+
 

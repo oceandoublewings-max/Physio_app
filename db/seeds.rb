@@ -7914,5 +7914,6935 @@ ill(
   "番号の答えは？",
   "uterus_quiz.png",
   "uterus_answer.png",
-)
-])
+),
+
+{
+  content: "大腿骨は人体で最も長い骨である",
+  choices: "大腿骨,上腕骨,脛骨,尺骨",
+  answer: "大腿骨",
+  explanation: "大腿骨は人体最長の骨",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "肩甲骨に存在する突起は？",
+  choices: "肩峰,大転子,内果,乳様突起",
+  answer: "肩峰",
+  explanation: "肩甲骨外側に肩峰がある",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "脛骨は下腿のどちら側にある？",
+  choices: "内側,外側,後方,前方",
+  answer: "内側",
+  explanation: "脛骨は下腿内側",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "腓骨は下腿のどちら側にある？",
+  choices: "外側,内側,前方,中央",
+  answer: "外側",
+  explanation: "腓骨は下腿外側",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "胸骨はどこに存在する骨？",
+  choices: "胸部前面,頭部,骨盤,下腿",
+  answer: "胸部前面",
+  explanation: "胸骨は胸郭前面にある",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "上腕骨遠位端外側にあるものは？",
+  choices: "小頭,大転子,尺骨頭,内果",
+  answer: "小頭",
+  explanation: "上腕骨外側に小頭がある",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "骨盤を構成する骨は？",
+  choices: "腸骨,肩甲骨,胸骨,鎖骨",
+  answer: "腸骨",
+  explanation: "骨盤は腸骨などで構成される",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "頭蓋骨で下顎骨と関節を作る骨は？",
+  choices: "側頭骨,前頭骨,頭頂骨,蝶形骨",
+  answer: "側頭骨",
+  explanation: "顎関節を形成する",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "踵骨はどこに存在する？",
+  choices: "足部,手部,骨盤,肩",
+  answer: "足部",
+  explanation: "踵骨は足根骨の1つ",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "脊柱を構成する骨は？",
+  choices: "椎骨,肋骨,鎖骨,肩甲骨",
+  answer: "椎骨",
+  explanation: "脊柱は椎骨で構成される",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "肋骨は何対存在する？",
+  choices: "12対,10対,8対,14対",
+  answer: "12対",
+  explanation: "肋骨は左右12対",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "鎖骨はどことどこをつなぐ？",
+  choices: "胸骨と肩甲骨,頭蓋骨と肩甲骨,上腕骨と胸骨,脛骨と腓骨",
+  answer: "胸骨と肩甲骨",
+  explanation: "肩帯を形成する",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "膝蓋骨はどこに存在する？",
+  choices: "膝前面,肩前面,胸部,骨盤",
+  answer: "膝前面",
+  explanation: "膝関節前面に存在する",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "橈骨は前腕のどちら側？",
+  choices: "母指側,小指側,中央,後方",
+  answer: "母指側",
+  explanation: "橈骨は母指側に位置する",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "尺骨は前腕のどちら側？",
+  choices: "小指側,母指側,中央,前方",
+  answer: "小指側",
+  explanation: "尺骨は小指側に位置する",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節外転の主動作筋は？",
+  choices: "三角筋,大胸筋,広背筋,大円筋",
+  answer: "三角筋",
+  explanation: "三角筋中部線維が肩外転を行う",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節伸展の主動作筋は？",
+  choices: "大腿四頭筋,ハムストリングス,腓腹筋,前脛骨筋",
+  answer: "大腿四頭筋",
+  explanation: "膝伸展を行う代表筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "股関節伸展に関与する筋は？",
+  choices: "大臀筋,中臀筋,腸腰筋,縫工筋",
+  answer: "大臀筋",
+  explanation: "大臀筋は股関節伸展筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "肘関節屈曲に関与する筋は？",
+  choices: "上腕二頭筋,上腕三頭筋,三角筋,広背筋",
+  answer: "上腕二頭筋",
+  explanation: "上腕二頭筋は肘屈曲筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "足関節背屈を行う筋は？",
+  choices: "前脛骨筋,腓腹筋,ヒラメ筋,長腓骨筋",
+  answer: "前脛骨筋",
+  explanation: "前脛骨筋は背屈筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "足関節底屈に関与する筋は？",
+  choices: "腓腹筋,前脛骨筋,長趾伸筋,長母趾伸筋",
+  answer: "腓腹筋",
+  explanation: "腓腹筋は底屈を行う",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "体幹屈曲を行う筋は？",
+  choices: "腹直筋,脊柱起立筋,僧帽筋,広背筋",
+  answer: "腹直筋",
+  explanation: "腹直筋は体幹前屈筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "体幹伸展に関与する筋は？",
+  choices: "脊柱起立筋,腹直筋,大胸筋,前鋸筋",
+  answer: "脊柱起立筋",
+  explanation: "脊柱起立筋は体幹伸展筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "肩甲骨挙上に関与する筋は？",
+  choices: "僧帽筋上部線維,前鋸筋,小胸筋,大胸筋",
+  answer: "僧帽筋上部線維",
+  explanation: "肩をすくめる動きに関与",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "股関節外転を行う筋は？",
+  choices: "中臀筋,大臀筋,大腿四頭筋,内転筋群",
+  answer: "中臀筋",
+  explanation: "中臀筋は股関節外転筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節内転に関与する筋は？",
+  choices: "大胸筋,三角筋,棘上筋,前鋸筋",
+  answer: "大胸筋",
+  explanation: "大胸筋は肩内転筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節伸展を行う筋は？",
+  choices: "広背筋,三角筋前部,大胸筋,前鋸筋",
+  answer: "広背筋",
+  explanation: "広背筋は肩伸展筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "肩甲骨外転を行う筋は？",
+  choices: "前鋸筋,菱形筋,僧帽筋中部,肩甲挙筋",
+  answer: "前鋸筋",
+  explanation: "肩甲骨を前方へ引く",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節屈曲を行う筋は？",
+  choices: "ハムストリングス,大腿四頭筋,前脛骨筋,ヒラメ筋",
+  answer: "ハムストリングス",
+  explanation: "ハムストリングスは膝屈曲筋",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "肩甲骨内転に関与する筋は？",
+  choices: "菱形筋,前鋸筋,大胸筋,腹直筋",
+  answer: "菱形筋",
+  explanation: "肩甲骨を脊柱へ引く",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "坐骨神経はどこを支配する主要神経？",
+  choices: "下肢後面,上肢前面,顔面,胸部",
+  answer: "下肢後面",
+  explanation: "坐骨神経は下肢後面を広く支配する",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "橈骨神経障害で起こりやすいものは？",
+  choices: "下垂手,鷲手,猿手,尖足",
+  answer: "下垂手",
+  explanation: "手関節背屈障害が起こる",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "正中神経障害で起こりやすいものは？",
+  choices: "猿手,下垂手,鷲手,内反足",
+  answer: "猿手",
+  explanation: "母指対立障害が起こる",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "尺骨神経障害で起こりやすいものは？",
+  choices: "鷲手,猿手,下垂手,尖足",
+  answer: "鷲手",
+  explanation: "環指・小指の変形が特徴",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "大腿神経は主にどの筋を支配する？",
+  choices: "大腿四頭筋,ハムストリングス,前脛骨筋,大臀筋",
+  answer: "大腿四頭筋",
+  explanation: "膝伸展筋を支配する",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "顔面神経は何番脳神経？",
+  choices: "Ⅶ,Ⅴ,Ⅹ,Ⅻ",
+  answer: "Ⅶ",
+  explanation: "顔面神経は第7脳神経",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "視神経は何番脳神経？",
+  choices: "Ⅱ,Ⅲ,Ⅴ,Ⅷ",
+  answer: "Ⅱ",
+  explanation: "視神経は第2脳神経",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "動眼神経は何番脳神経？",
+  choices: "Ⅲ,Ⅱ,Ⅴ,Ⅹ",
+  answer: "Ⅲ",
+  explanation: "眼球運動へ関与する",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "迷走神経は何番脳神経？",
+  choices: "Ⅹ,Ⅴ,Ⅶ,Ⅻ",
+  answer: "Ⅹ",
+  explanation: "副交感神経線維を含む",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "舌下神経は何番脳神経？",
+  choices: "Ⅻ,Ⅹ,Ⅸ,Ⅶ",
+  answer: "Ⅻ",
+  explanation: "舌運動を支配する",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "前脛骨筋を支配する神経は？",
+  choices: "深腓骨神経,脛骨神経,閉鎖神経,大腿神経",
+  answer: "深腓骨神経",
+  explanation: "足関節背屈へ関与する",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "ハムストリングスを主に支配する神経は？",
+  choices: "坐骨神経,大腿神経,閉鎖神経,橈骨神経",
+  answer: "坐骨神経",
+  explanation: "下肢後面筋群を支配する",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "横隔膜を支配する神経は？",
+  choices: "横隔神経,迷走神経,顔面神経,舌下神経",
+  answer: "横隔神経",
+  explanation: "呼吸運動へ重要",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "閉鎖神経はどの筋群に関与する？",
+  choices: "内転筋群,伸筋群,屈筋群,背筋群",
+  answer: "内転筋群",
+  explanation: "股関節内転へ関与",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "脛骨神経障害で困難になりやすい動作は？",
+  choices: "つま先立ち,踵歩き,肩外転,肘伸展",
+  answer: "つま先立ち",
+  explanation: "足関節底屈障害が起こる",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "心臓はどの腔に存在する？",
+  choices: "胸腔,腹腔,骨盤腔,頭蓋腔",
+  answer: "胸腔",
+  explanation: "心臓は胸腔内の縦隔に存在する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "胃は主にどの部位に存在する？",
+  choices: "左上腹部,右上腹部,骨盤内,胸部",
+  answer: "左上腹部",
+  explanation: "胃は左上腹部に位置する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "肝臓は主にどの部位に存在する？",
+  choices: "右上腹部,左上腹部,骨盤内,胸腔",
+  answer: "右上腹部",
+  explanation: "肝臓は右上腹部に存在する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "膵臓はどの器官に分類される？",
+  choices: "消化器,呼吸器,泌尿器,感覚器",
+  answer: "消化器",
+  explanation: "膵臓は消化酵素を分泌する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "肺はどの系統の臓器？",
+  choices: "呼吸器,消化器,循環器,泌尿器",
+  answer: "呼吸器",
+  explanation: "肺はガス交換を行う",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "腎臓はどの系統に属する？",
+  choices: "泌尿器,消化器,循環器,呼吸器",
+  answer: "泌尿器",
+  explanation: "尿生成を行う",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "膀胱の役割は？",
+  choices: "尿の貯留,胆汁分泌,ガス交換,血液循環",
+  answer: "尿の貯留",
+  explanation: "尿を一時的にためる",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "小腸で主に行われることは？",
+  choices: "栄養吸収,ガス交換,尿生成,造血",
+  answer: "栄養吸収",
+  explanation: "消化吸収を行う",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "大腸の主な役割は？",
+  choices: "水分吸収,ガス交換,胆汁生成,血液循環",
+  answer: "水分吸収",
+  explanation: "便形成へ関与する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "脾臓の主な役割は？",
+  choices: "免疫機能,尿生成,呼吸,消化",
+  answer: "免疫機能",
+  explanation: "リンパ系臓器である",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "気管はどの系統に属する？",
+  choices: "呼吸器,消化器,循環器,神経系",
+  answer: "呼吸器",
+  explanation: "空気の通り道",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "食道の役割は？",
+  choices: "食物輸送,ガス交換,尿生成,血液ろ過",
+  answer: "食物輸送",
+  explanation: "咽頭から胃へ送る",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "胆嚢の役割は？",
+  choices: "胆汁貯留,尿貯留,血液循環,酸素交換",
+  answer: "胆汁貯留",
+  explanation: "胆汁を一時保存する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "子宮はどの系統の臓器？",
+  choices: "生殖器,呼吸器,循環器,消化器",
+  answer: "生殖器",
+  explanation: "妊娠に関与する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "脳はどこに存在する？",
+  choices: "頭蓋内,胸腔,腹腔,骨盤内",
+  answer: "頭蓋内",
+  explanation: "頭蓋骨内に存在する",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "全身へ血液を送り出す血管は？",
+  choices: "動脈,静脈,毛細血管,リンパ管",
+  answer: "動脈",
+  explanation: "動脈は心臓から血液を送る",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "全身から心臓へ血液を戻す血管は？",
+  choices: "静脈,動脈,毛細血管,冠動脈",
+  answer: "静脈",
+  explanation: "静脈は心臓へ戻る",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "大動脈はどこから始まる？",
+  choices: "左心室,右心室,左心房,右心房",
+  answer: "左心室",
+  explanation: "左心室から全身へ送る",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "肺動脈はどこから出る？",
+  choices: "右心室,左心室,左心房,大動脈",
+  answer: "右心室",
+  explanation: "肺へ血液を送る",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "肺静脈はどこへ流入する？",
+  choices: "左心房,右心房,左心室,右心室",
+  answer: "左心房",
+  explanation: "肺から酸素化血液を戻す",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "上大静脈はどこへ流入する？",
+  choices: "右心房,左心房,右心室,左心室",
+  answer: "右心房",
+  explanation: "上半身の血液を戻す",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "下大静脈はどこへ流入する？",
+  choices: "右心房,左心房,左心室,大動脈",
+  answer: "右心房",
+  explanation: "下半身の血液を戻す",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "冠動脈の役割は？",
+  choices: "心筋へ血液供給,肺へ血液供給,脳へ血液供給,腎臓へ血液供給",
+  answer: "心筋へ血液供給",
+  explanation: "心臓自体へ栄養を送る",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "頸動脈は主にどこへ血液を送る？",
+  choices: "頭部,下肢,上肢,腹部",
+  answer: "頭部",
+  explanation: "脳などへ血液供給する",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "腎動脈はどの臓器へ向かう？",
+  choices: "腎臓,肝臓,肺,胃",
+  answer: "腎臓",
+  explanation: "腎臓へ血液を送る",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "毛細血管で行われることは？",
+  choices: "物質交換,拍動,骨形成,神経伝達",
+  answer: "物質交換",
+  explanation: "酸素や栄養交換を行う",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "橈骨動脈はどこで触知しやすい？",
+  choices: "手関節,足関節,膝窩,頸部",
+  answer: "手関節",
+  explanation: "脈拍測定部位として有名",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "大腿動脈はどこを通る主要動脈？",
+  choices: "大腿部,上腕,前腕,頸部",
+  answer: "大腿部",
+  explanation: "下肢へ血液供給する",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "静脈弁の役割は？",
+  choices: "逆流防止,血圧上昇,酸素交換,拍動形成",
+  answer: "逆流防止",
+  explanation: "血液逆流を防ぐ",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "肺循環で酸素化される場所は？",
+  choices: "肺,肝臓,腎臓,脾臓",
+  answer: "肺",
+  explanation: "肺胞でガス交換する",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "心臓は肺のどこに位置する？",
+  choices: "内側,外側,後方,上方",
+  answer: "内側",
+  explanation: "心臓は左右肺の間にある",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "胃は肝臓のどちら側に位置する？",
+  choices: "左側,右側,前方,下方",
+  answer: "左側",
+  explanation: "胃は左上腹部にある",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "脊柱は胸骨のどちら側にある？",
+  choices: "後方,前方,外側,上方",
+  answer: "後方",
+  explanation: "脊柱は身体後面側",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "膀胱は腸のどこに位置する？",
+  choices: "下方,上方,後方,外側",
+  answer: "下方",
+  explanation: "骨盤内下部に存在する",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "脳は脊髄に対してどこに位置する？",
+  choices: "上方,下方,前方,後方",
+  answer: "上方",
+  explanation: "脳は脊髄の上に位置する",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "前額断で人体を分ける方向は？",
+  choices: "前後,左右,上下,斜め",
+  answer: "前後",
+  explanation: "前額断は前後に分ける",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "矢状断で人体を分ける方向は？",
+  choices: "左右,前後,上下,斜め",
+  answer: "左右",
+  explanation: "矢状断は左右に分ける",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "水平断で人体を分ける方向は？",
+  choices: "上下,左右,前後,斜め",
+  answer: "上下",
+  explanation: "水平断は上下に分ける",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "尺側とはどちら側を指す？",
+  choices: "小指側,母指側,足底側,背側",
+  answer: "小指側",
+  explanation: "尺骨側を示す",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "橈側とはどちら側を指す？",
+  choices: "母指側,小指側,足背側,足底側",
+  answer: "母指側",
+  explanation: "橈骨側を示す",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "近位とはどこに近いことを指す？",
+  choices: "体幹,指先,足先,皮膚",
+  answer: "体幹",
+  explanation: "体幹に近い側を示す",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "遠位とはどこから遠いことを指す？",
+  choices: "体幹,頭部,胸部,腹部",
+  answer: "体幹",
+  explanation: "体幹から遠い側を示す",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "浅層とはどこに近い位置？",
+  choices: "皮膚表面,骨,内臓,関節",
+  answer: "皮膚表面",
+  explanation: "身体表面に近い",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "深層とはどこに近い位置？",
+  choices: "身体内部,皮膚表面,空気,外側",
+  answer: "身体内部",
+  explanation: "身体深部を示す",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "内側とは正中線に対してどちら？",
+  choices: "近い,遠い,上方,下方",
+  answer: "近い",
+  explanation: "正中線へ近い側",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "大腿骨は人体で最も長い骨である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "人体最長の骨である"
+},
+
+{
+  content: "脛骨は下腿内側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "脛骨は下腿内側に存在する"
+},
+
+{
+  content: "腓骨は下腿外側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "腓骨は下腿外側にある"
+},
+
+{
+  content: "肩甲骨には肩峰が存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "肩峰は肩甲骨の突起"
+},
+
+{
+  content: "鎖骨は肩帯を構成する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "肩甲骨とともに肩帯を形成"
+},
+
+{
+  content: "胸骨は胸郭前面に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "胸部前面中央にある"
+},
+
+{
+  content: "橈骨は前腕の母指側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "橈骨は母指側"
+},
+
+{
+  content: "尺骨は前腕の小指側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "尺骨は小指側"
+},
+
+{
+  content: "膝蓋骨は膝関節前面に存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "膝蓋骨は膝前面にある"
+},
+
+{
+  content: "踵骨は足根骨の1つである",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "踵を形成する骨"
+},
+
+{
+  content: "脊柱は椎骨で構成される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "椎骨が連なる構造"
+},
+
+{
+  content: "肋骨は左右12対存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "通常12対存在する"
+},
+
+{
+  content: "上腕骨には小頭が存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "遠位端外側にある"
+},
+
+{
+  content: "骨盤には腸骨が含まれる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "寛骨を構成する"
+},
+
+{
+  content: "側頭骨は顎関節形成に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "下顎骨と関節を作る"
+},
+
+{
+  content: "脛骨は下腿外側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "脛骨は内側に位置する"
+},
+
+{
+  content: "橈骨は小指側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "母指側に位置する"
+},
+
+{
+  content: "腓骨は下腿内側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "外側に位置する"
+},
+
+{
+  content: "踵骨は手根骨である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "足根骨である"
+},
+
+{
+  content: "肋骨は8対存在する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "通常12対存在する"
+},
+
+{
+  content: "大腿四頭筋は膝関節伸展を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "膝伸展の主動作筋"
+},
+
+{
+  content: "ハムストリングスは膝関節屈曲を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "膝屈曲に関与する"
+},
+
+{
+  content: "大臀筋は股関節伸展に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "股関節伸展筋"
+},
+
+{
+  content: "中臀筋は股関節外転を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "股関節外転筋"
+},
+
+{
+  content: "前脛骨筋は足関節背屈を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "足関節背屈筋"
+},
+
+{
+  content: "腓腹筋は足関節底屈を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "底屈に関与する"
+},
+
+{
+  content: "腹直筋は体幹屈曲を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "体幹前屈筋"
+},
+
+{
+  content: "脊柱起立筋は体幹伸展を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "体幹伸展筋"
+},
+
+{
+  content: "上腕二頭筋は肘関節屈曲に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肘屈曲筋"
+},
+
+{
+  content: "上腕三頭筋は肘関節伸展を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肘伸展筋"
+},
+
+{
+  content: "三角筋は肩関節外転に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肩外転筋"
+},
+
+{
+  content: "前鋸筋は肩甲骨外転を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肩甲骨を前方へ動かす"
+},
+
+{
+  content: "菱形筋は肩甲骨内転に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肩甲骨を脊柱側へ引く"
+},
+
+{
+  content: "広背筋は肩関節伸展を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肩伸展筋"
+},
+
+{
+  content: "僧帽筋上部線維は肩甲骨挙上に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肩をすくめる動き"
+},
+
+{
+  content: "前脛骨筋は足関節底屈を行う",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "背屈を行う"
+},
+
+{
+  content: "腓腹筋は足関節背屈を行う",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "底屈を行う"
+},
+
+{
+  content: "腹直筋は体幹伸展を行う",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "体幹屈曲を行う"
+},
+
+{
+  content: "上腕三頭筋は肘関節屈曲を行う",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "肘伸展を行う"
+},
+
+{
+  content: "中臀筋は股関節内転を行う",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "股関節外転を行う"
+},
+
+{
+  content: "坐骨神経は人体で最も太い神経である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "坐骨神経は最大の末梢神経"
+},
+
+{
+  content: "橈骨神経障害では下垂手がみられる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "手関節背屈障害が起こる"
+},
+
+{
+  content: "正中神経障害では猿手がみられる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "母指対立障害が特徴"
+},
+
+{
+  content: "尺骨神経障害では鷲手がみられる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "環指・小指変形が特徴"
+},
+
+{
+  content: "顔面神経は第7脳神経である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "顔面筋支配に関与する"
+},
+
+{
+  content: "視神経は第2脳神経である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "視覚に関与する"
+},
+
+{
+  content: "動眼神経は眼球運動に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "眼球運動筋を支配する"
+},
+
+{
+  content: "迷走神経は第10脳神経である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "副交感神経を含む"
+},
+
+{
+  content: "舌下神経は舌運動に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "舌筋を支配する"
+},
+
+{
+  content: "横隔神経は横隔膜を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "呼吸運動へ関与する"
+},
+
+{
+  content: "前脛骨筋は深腓骨神経支配である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "足関節背屈筋を支配する"
+},
+
+{
+  content: "ハムストリングスは主に坐骨神経支配である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "下肢後面筋群を支配する"
+},
+
+{
+  content: "閉鎖神経は股関節内転筋群へ関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "内転筋群を支配する"
+},
+
+{
+  content: "脛骨神経障害ではつま先立ちが困難になる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "足関節底屈障害が起こる"
+},
+
+{
+  content: "大腿神経は大腿四頭筋を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "膝伸展筋群を支配する"
+},
+
+{
+  content: "橈骨神経障害では鷲手がみられる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "鷲手は尺骨神経障害"
+},
+
+{
+  content: "正中神経障害では下垂手がみられる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "下垂手は橈骨神経障害"
+},
+
+{
+  content: "顔面神経は第5脳神経である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "第7脳神経である"
+},
+
+{
+  content: "視神経は第8脳神経である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "第2脳神経である"
+},
+
+{
+  content: "横隔神経は胃を支配する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "横隔膜を支配する"
+},
+
+{
+  content: "心臓は胸腔内に存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "胸腔内の縦隔に位置する"
+},
+
+{
+  content: "胃は左上腹部に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "胃は左上腹部に存在する"
+},
+
+{
+  content: "肝臓は右上腹部に存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "腹部右側に位置する"
+},
+
+{
+  content: "肺は呼吸器に分類される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "ガス交換を行う"
+},
+
+{
+  content: "腎臓は泌尿器に分類される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "尿生成を行う"
+},
+
+{
+  content: "膀胱は尿を貯留する臓器である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "尿を一時的にためる"
+},
+
+{
+  content: "小腸では栄養吸収が行われる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "消化吸収を担う"
+},
+
+{
+  content: "大腸では主に水分吸収が行われる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "便形成へ関与する"
+},
+
+{
+  content: "脾臓は免疫機能に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "リンパ系臓器である"
+},
+
+{
+  content: "気管は空気の通り道である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "呼吸器の一部"
+},
+
+{
+  content: "食道は食物輸送を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "咽頭から胃へ送る"
+},
+
+{
+  content: "胆嚢は胆汁を貯留する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "胆汁を一時保存する"
+},
+
+{
+  content: "子宮は生殖器に分類される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "妊娠へ関与する"
+},
+
+{
+  content: "脳は頭蓋内に存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "頭蓋骨内にある"
+},
+
+{
+  content: "膵臓は消化器に分類される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "消化酵素を分泌する"
+},
+
+{
+  content: "胃は右上腹部に存在する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "左上腹部に存在する"
+},
+
+{
+  content: "腎臓は呼吸器に分類される",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "泌尿器である"
+},
+
+{
+  content: "肺は消化器である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "呼吸器である"
+},
+
+{
+  content: "膀胱は胆汁を貯留する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "尿を貯留する"
+},
+
+{
+  content: "脳は胸腔内に存在する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "頭蓋内に存在する"
+},
+
+{
+  content: "動脈は心臓から血液を送り出す血管である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "動脈は心臓から出る"
+},
+
+{
+  content: "静脈は心臓へ血液を戻す血管である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "静脈は心臓へ戻る"
+},
+
+{
+  content: "大動脈は左心室から始まる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "全身循環を開始する"
+},
+
+{
+  content: "肺動脈は右心室から出る",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "肺へ血液を送る"
+},
+
+{
+  content: "肺静脈は左心房へ流入する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "酸素化血液を戻す"
+},
+
+{
+  content: "上大静脈は右心房へ流入する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "上半身の血液を戻す"
+},
+
+{
+  content: "下大静脈は右心房へ流入する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "下半身の血液を戻す"
+},
+
+{
+  content: "冠動脈は心筋へ血液を供給する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "心臓自体へ栄養供給する"
+},
+
+{
+  content: "頸動脈は頭部へ血液を送る",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "脳などへ血液供給する"
+},
+
+{
+  content: "腎動脈は腎臓へ向かう",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "腎臓へ血液を送る"
+},
+
+{
+  content: "毛細血管では物質交換が行われる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "酸素や栄養交換を行う"
+},
+
+{
+  content: "橈骨動脈は手関節付近で触知しやすい",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "脈拍測定で用いられる"
+},
+
+{
+  content: "大腿動脈は大腿部を通る主要動脈である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "下肢へ血液供給する"
+},
+
+{
+  content: "静脈弁は血液逆流を防ぐ",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "逆流防止機能を持つ"
+},
+
+{
+  content: "肺循環では肺でガス交換が行われる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "肺胞で酸素交換する"
+},
+
+{
+  content: "動脈は必ず酸素の多い血液を流す",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "肺動脈は静脈血を流す"
+},
+
+{
+  content: "静脈は必ず酸素の少ない血液を流す",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "肺静脈は動脈血を流す"
+},
+
+{
+  content: "肺静脈は右心房へ流入する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "左心房へ流入する"
+},
+
+{
+  content: "大動脈は右心室から始まる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "左心室から始まる"
+},
+
+{
+  content: "静脈弁は血液を送り出すポンプ機能を持つ",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "逆流防止が主な役割"
+},
+
+{
+  content: "心臓は肺の内側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "左右肺の間に位置する"
+},
+
+{
+  content: "胃は肝臓の左側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "胃は左上腹部にある"
+},
+
+{
+  content: "脊柱は胸骨の後方に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "脊柱は身体後面側"
+},
+
+{
+  content: "脳は脊髄の上方に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "中枢神経系の上部"
+},
+
+{
+  content: "膀胱は腸より下方に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "骨盤内下部にある"
+},
+
+{
+  content: "前額断は身体を前後に分ける",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "冠状断とも呼ばれる"
+},
+
+{
+  content: "矢状断は身体を左右に分ける",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "正中断も含まれる"
+},
+
+{
+  content: "水平断は身体を上下に分ける",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "横断面とも呼ばれる"
+},
+
+{
+  content: "橈側は母指側を示す",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "橈骨側を示す"
+},
+
+{
+  content: "尺側は小指側を示す",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "尺骨側を示す"
+},
+
+{
+  content: "近位は体幹に近い位置を示す",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "身体中心へ近い側"
+},
+
+{
+  content: "遠位は体幹から遠い位置を示す",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "末端側を示す"
+},
+
+{
+  content: "浅層は皮膚表面に近い",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "身体表面に近い"
+},
+
+{
+  content: "深層は身体内部に近い",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "身体深部を示す"
+},
+
+{
+  content: "内側は正中線に近い位置を示す",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "身体中心側を示す"
+},
+
+{
+  content: "胃は肝臓の右側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "左側に位置する"
+},
+
+{
+  content: "脊柱は胸骨の前方に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "後方に位置する"
+},
+
+{
+  content: "矢状断は身体を上下に分ける",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "左右に分ける"
+},
+
+{
+  content: "橈側は小指側を示す",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "母指側を示す"
+},
+
+{
+  content: "遠位は体幹に近い位置を示す",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "体幹から遠い側"
+},
+
+{
+  content: "活動電位は神経細胞の興奮で生じる",
+  choices: "活動電位,筋収縮,骨形成,血液凝固",
+  answer: "活動電位",
+  explanation: "神経興奮で発生する電気変化",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "神経細胞の情報伝達部位は？",
+  choices: "シナプス,筋原線維,肺胞,糸球体",
+  answer: "シナプス",
+  explanation: "神経間の接合部",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "中枢神経系に含まれるものは？",
+  choices: "脳,坐骨神経,正中神経,尺骨神経",
+  answer: "脳",
+  explanation: "脳と脊髄が中枢神経",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "末梢神経系に含まれるものは？",
+  choices: "坐骨神経,脳,小脳,脊髄",
+  answer: "坐骨神経",
+  explanation: "末梢へ伸びる神経",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "交感神経が優位で起こりやすい反応は？",
+  choices: "心拍数増加,心拍数低下,縮瞳,消化促進",
+  answer: "心拍数増加",
+  explanation: "活動時に優位になる",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "副交感神経が優位で起こりやすい反応は？",
+  choices: "消化促進,心拍数増加,散瞳,発汗増加",
+  answer: "消化促進",
+  explanation: "安静時に優位となる",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "神経細胞の主な役割は？",
+  choices: "情報伝達,酸素交換,栄養吸収,尿生成",
+  answer: "情報伝達",
+  explanation: "電気信号を伝える",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "髄鞘の役割は？",
+  choices: "伝導速度向上,筋収縮,骨形成,血液循環",
+  answer: "伝導速度向上",
+  explanation: "跳躍伝導を助ける",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "反射中枢として重要なのは？",
+  choices: "脊髄,肝臓,肺,腎臓",
+  answer: "脊髄",
+  explanation: "反射経路に関与する",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "瞳孔縮小に関与するのは？",
+  choices: "副交感神経,交感神経,運動神経,感覚神経",
+  answer: "副交感神経",
+  explanation: "安静時に縮瞳する",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "交感神経優位で起こるものは？",
+  choices: "散瞳,縮瞳,消化促進,徐脈",
+  answer: "散瞳",
+  explanation: "活動時に瞳孔拡大",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "感覚情報を中枢へ送る神経は？",
+  choices: "求心性神経,遠心性神経,運動神経,自律神経",
+  answer: "求心性神経",
+  explanation: "感覚入力を行う",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "運動指令を末梢へ送る神経は？",
+  choices: "遠心性神経,求心性神経,感覚神経,視神経",
+  answer: "遠心性神経",
+  explanation: "筋へ指令を送る",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "脳幹の役割として重要なのは？",
+  choices: "呼吸調節,骨形成,胆汁生成,造血",
+  answer: "呼吸調節",
+  explanation: "生命維持へ重要",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "小脳の主な役割は？",
+  choices: "運動調節,視覚,聴覚,消化",
+  answer: "運動調節",
+  explanation: "協調運動に関与する",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "骨格筋は随意筋である",
+  choices: "骨格筋,平滑筋,心筋,括約筋",
+  answer: "骨格筋",
+  explanation: "自分の意思で動かせる筋",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋収縮に必要なエネルギー源は？",
+  choices: "ATP,カルシウム,酸素,グルコース",
+  answer: "ATP",
+  explanation: "筋収縮にATPが必要",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋収縮に関与するイオンは？",
+  choices: "カルシウム,鉄,ナトリウム,カリウム",
+  answer: "カルシウム",
+  explanation: "収縮開始に必要",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋原線維に存在する収縮タンパクは？",
+  choices: "アクチン,コラーゲン,エラスチン,ケラチン",
+  answer: "アクチン",
+  explanation: "ミオシンと相互作用する",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋収縮時に短縮する部位は？",
+  choices: "サルコメア,骨膜,筋膜,関節包",
+  answer: "サルコメア",
+  explanation: "筋収縮の最小単位",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋疲労に関与しやすい物質は？",
+  choices: "乳酸,カルシウム,鉄,コレステロール",
+  answer: "乳酸",
+  explanation: "疲労物質として知られる",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋肉へ運動指令を送る神経は？",
+  choices: "運動神経,感覚神経,交感神経,副交感神経",
+  answer: "運動神経",
+  explanation: "筋収縮を指令する",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋紡錘の役割は？",
+  choices: "筋長感知,痛覚感知,温度感知,血圧調節",
+  answer: "筋長感知",
+  explanation: "伸張反射へ関与する",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "ゴルジ腱器官の役割は？",
+  choices: "筋張力感知,筋長感知,視覚調節,聴覚調節",
+  answer: "筋張力感知",
+  explanation: "筋張力を検出する",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "等尺性収縮とは？",
+  choices: "筋長が変化しない収縮,筋長が短縮する収縮,筋長が伸びる収縮,反射運動",
+  answer: "筋長が変化しない収縮",
+  explanation: "関節角度変化なし",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋肉が短縮しながら力を出す収縮は？",
+  choices: "求心性収縮,遠心性収縮,等尺性収縮,静止収縮",
+  answer: "求心性収縮",
+  explanation: "筋長短縮を伴う",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋肉が伸びながら力を出す収縮は？",
+  choices: "遠心性収縮,求心性収縮,等尺性収縮,反射収縮",
+  answer: "遠心性収縮",
+  explanation: "制動動作に関与する",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "速筋線維の特徴は？",
+  choices: "瞬発力が高い,疲労しにくい,持久力が高い,酸素消費が少ない",
+  answer: "瞬発力が高い",
+  explanation: "短時間で大きな力を出す",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "遅筋線維の特徴は？",
+  choices: "持久力が高い,瞬発力が高い,疲労しやすい,収縮速度が速い",
+  answer: "持久力が高い",
+  explanation: "長時間活動に適する",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "神経と筋の接合部を何という？",
+  choices: "神経筋接合部,シナプス小胞,筋紡錘,腱器官",
+  answer: "神経筋接合部",
+  explanation: "運動神経終末部",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "全身へ血液を送り出す臓器は？",
+  choices: "心臓,肺,肝臓,腎臓",
+  answer: "心臓",
+  explanation: "循環の中心となる臓器",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "酸素化された血液を全身へ送るのは？",
+  choices: "左心室,右心室,右心房,肺動脈",
+  answer: "左心室",
+  explanation: "大動脈へ送り出す",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "肺へ血液を送る心臓の部位は？",
+  choices: "右心室,左心室,左心房,大動脈",
+  answer: "右心室",
+  explanation: "肺循環を開始する",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "血液中で酸素を運搬するものは？",
+  choices: "ヘモグロビン,アルブミン,血小板,リンパ球",
+  answer: "ヘモグロビン",
+  explanation: "赤血球内に存在する",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "血液凝固に関与するものは？",
+  choices: "血小板,赤血球,白血球,ヘモグロビン",
+  answer: "血小板",
+  explanation: "止血に関与する",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "酸素を多く含む血液を何という？",
+  choices: "動脈血,静脈血,リンパ液,組織液",
+  answer: "動脈血",
+  explanation: "酸素濃度が高い",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "静脈血が多く流れる血管は？",
+  choices: "肺動脈,大動脈,冠動脈,頸動脈",
+  answer: "肺動脈",
+  explanation: "肺へ静脈血を送る",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "脈拍として触れやすい血管は？",
+  choices: "動脈,静脈,毛細血管,リンパ管",
+  answer: "動脈",
+  explanation: "拍動を触知できる",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "血液中で免疫に関与するものは？",
+  choices: "白血球,赤血球,血小板,血漿",
+  answer: "白血球",
+  explanation: "感染防御を行う",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "血圧が最も高い血管は？",
+  choices: "大動脈,静脈,毛細血管,肺静脈",
+  answer: "大動脈",
+  explanation: "左心室直後で圧が高い",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "毛細血管で主に行われることは？",
+  choices: "物質交換,拍動,血液貯留,止血",
+  answer: "物質交換",
+  explanation: "酸素や栄養交換を行う",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "心拍数を増加させやすいのは？",
+  choices: "交感神経,副交感神経,感覚神経,運動神経",
+  answer: "交感神経",
+  explanation: "活動時に優位になる",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "心拍数を低下させやすいのは？",
+  choices: "副交感神経,交感神経,体性神経,運動神経",
+  answer: "副交感神経",
+  explanation: "安静時に優位になる",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "肺で行われる循環を何という？",
+  choices: "肺循環,体循環,門脈循環,リンパ循環",
+  answer: "肺循環",
+  explanation: "肺との循環経路",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "全身を巡る循環を何という？",
+  choices: "体循環,肺循環,冠循環,門脈循環",
+  answer: "体循環",
+  explanation: "全身への循環経路",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "ガス交換が行われる場所は？",
+  choices: "肺胞,気管,咽頭,胸膜",
+  answer: "肺胞",
+  explanation: "肺胞で酸素と二酸化炭素交換を行う",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "吸気時に主に収縮する筋は？",
+  choices: "横隔膜,腹直筋,大臀筋,広背筋",
+  answer: "横隔膜",
+  explanation: "横隔膜収縮で胸腔が広がる",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼気時に胸郭はどうなる？",
+  choices: "縮小する,拡大する,回旋する,変化しない",
+  answer: "縮小する",
+  explanation: "胸腔容積が減少する",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "血液中で酸素を運搬するものは？",
+  choices: "ヘモグロビン,血小板,白血球,アルブミン",
+  answer: "ヘモグロビン",
+  explanation: "赤血球内に存在する",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼吸中枢が存在する部位は？",
+  choices: "延髄,小脳,視床,海馬",
+  answer: "延髄",
+  explanation: "呼吸調節を行う",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "肺へ空気を送る通路は？",
+  choices: "気管,食道,尿管,大動脈",
+  answer: "気管",
+  explanation: "空気の通り道",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "吸気時に肺はどうなる？",
+  choices: "膨らむ,縮む,回転する,変化しない",
+  answer: "膨らむ",
+  explanation: "胸腔拡大で肺も広がる",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "二酸化炭素濃度上昇で起こりやすいのは？",
+  choices: "呼吸促進,呼吸停止,脈拍低下,血圧低下",
+  answer: "呼吸促進",
+  explanation: "換気量を増やそうとする",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "外呼吸とは何を指す？",
+  choices: "肺胞と血液のガス交換,細胞内代謝,筋収縮,血液循環",
+  answer: "肺胞と血液のガス交換",
+  explanation: "肺で行われるガス交換",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "内呼吸とは何を指す？",
+  choices: "血液と組織のガス交換,肺換気,筋収縮,嚥下",
+  answer: "血液と組織のガス交換",
+  explanation: "組織レベルのガス交換",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼吸時に重要な筋は？",
+  choices: "横隔膜,大腿四頭筋,上腕二頭筋,僧帽筋",
+  answer: "横隔膜",
+  explanation: "主要吸気筋である",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼吸によって体外へ排出されるものは？",
+  choices: "二酸化炭素,酸素,窒素,カルシウム",
+  answer: "二酸化炭素",
+  explanation: "代謝産物として排出される",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "肺胞で血液へ取り込まれるものは？",
+  choices: "酸素,二酸化炭素,尿素,乳酸",
+  answer: "酸素",
+  explanation: "血液へ拡散される",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼吸数増加を何という？",
+  choices: "頻呼吸,徐呼吸,無呼吸,低換気",
+  answer: "頻呼吸",
+  explanation: "呼吸回数増加状態",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "安静時呼吸で主に働く筋は？",
+  choices: "横隔膜,腹斜筋,大胸筋,広背筋",
+  answer: "横隔膜",
+  explanation: "主要吸気筋として働く",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "胃の主な役割は？",
+  choices: "食物消化,ガス交換,尿生成,血液循環",
+  answer: "食物消化",
+  explanation: "胃液を分泌して消化を行う",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "小腸で主に行われることは？",
+  choices: "栄養吸収,呼吸,造血,排尿",
+  answer: "栄養吸収",
+  explanation: "消化吸収を行う",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "大腸の主な役割は？",
+  choices: "水分吸収,酸素交換,胆汁生成,筋収縮",
+  answer: "水分吸収",
+  explanation: "便形成に関与する",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "肝臓の役割として正しいのは？",
+  choices: "解毒,ガス交換,尿貯留,神経伝達",
+  answer: "解毒",
+  explanation: "有害物質の分解を行う",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "胆嚢の役割は？",
+  choices: "胆汁貯留,尿生成,血液循環,酸素交換",
+  answer: "胆汁貯留",
+  explanation: "胆汁を一時保存する",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "膵臓の役割として正しいのは？",
+  choices: "消化酵素分泌,ガス交換,造血,筋収縮",
+  answer: "消化酵素分泌",
+  explanation: "膵液を分泌する",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "腎臓の主な役割は？",
+  choices: "尿生成,酸素交換,胆汁生成,栄養吸収",
+  answer: "尿生成",
+  explanation: "老廃物を排出する",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "膀胱の役割は？",
+  choices: "尿貯留,胆汁貯留,血液循環,解毒",
+  answer: "尿貯留",
+  explanation: "尿を一時的にためる",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "脾臓の役割として正しいのは？",
+  choices: "免疫機能,ガス交換,筋収縮,胆汁分泌",
+  answer: "免疫機能",
+  explanation: "リンパ系臓器である",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "肺の役割は？",
+  choices: "ガス交換,栄養吸収,尿生成,血液凝固",
+  answer: "ガス交換",
+  explanation: "酸素と二酸化炭素交換を行う",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "心臓の役割は？",
+  choices: "血液循環,解毒,栄養吸収,尿生成",
+  answer: "血液循環",
+  explanation: "全身へ血液を送る",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "食道の役割は？",
+  choices: "食物輸送,酸素交換,尿貯留,解毒",
+  answer: "食物輸送",
+  explanation: "咽頭から胃へ運ぶ",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "胃液に含まれるものは？",
+  choices: "塩酸,インスリン,胆汁,ヘモグロビン",
+  answer: "塩酸",
+  explanation: "タンパク質消化を助ける",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "インスリンを分泌する臓器は？",
+  choices: "膵臓,肝臓,腎臓,脾臓",
+  answer: "膵臓",
+  explanation: "血糖値調節ホルモン",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "尿が体外へ排出される経路は？",
+  choices: "尿道,食道,気管,胆管",
+  answer: "尿道",
+  explanation: "膀胱から体外へ排出される",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値を下げるホルモンは？",
+  choices: "インスリン,グルカゴン,アドレナリン,コルチゾール",
+  answer: "インスリン",
+  explanation: "膵臓から分泌され血糖値を下げる",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値を上げるホルモンは？",
+  choices: "グルカゴン,インスリン,セロトニン,メラトニン",
+  answer: "グルカゴン",
+  explanation: "肝臓で糖放出を促進する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "インスリンを分泌する臓器は？",
+  choices: "膵臓,肝臓,甲状腺,副腎",
+  answer: "膵臓",
+  explanation: "ランゲルハンス島β細胞から分泌される",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "代謝を促進するホルモンは？",
+  choices: "甲状腺ホルモン,インスリン,ADH,オキシトシン",
+  answer: "甲状腺ホルモン",
+  explanation: "基礎代謝を上昇させる",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "ストレス時に分泌が増えるホルモンは？",
+  choices: "アドレナリン,インスリン,メラトニン,セロトニン",
+  answer: "アドレナリン",
+  explanation: "交感神経作用を強める",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "副腎皮質から分泌されるホルモンは？",
+  choices: "コルチゾール,インスリン,グルカゴン,ADH",
+  answer: "コルチゾール",
+  explanation: "糖代謝や抗炎症作用を持つ",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "体内の水分量調節に関与するホルモンは？",
+  choices: "ADH,インスリン,アドレナリン,チロキシン",
+  answer: "ADH",
+  explanation: "抗利尿ホルモンとも呼ばれる",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "睡眠に関与するホルモンは？",
+  choices: "メラトニン,インスリン,アドレナリン,コルチゾール",
+  answer: "メラトニン",
+  explanation: "睡眠リズム調節に関与する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "成長ホルモンを分泌する部位は？",
+  choices: "下垂体前葉,副腎,膵臓,甲状腺",
+  answer: "下垂体前葉",
+  explanation: "成長促進作用を持つ",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "カルシウム代謝に関与するホルモンは？",
+  choices: "パラトルモン,インスリン,アドレナリン,メラトニン",
+  answer: "パラトルモン",
+  explanation: "血中カルシウム濃度調節に関与する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "女性ホルモンの1つは？",
+  choices: "エストロゲン,テストステロン,アドレナリン,グルカゴン",
+  answer: "エストロゲン",
+  explanation: "女性生殖機能へ関与する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "男性ホルモンの代表は？",
+  choices: "テストステロン,エストロゲン,メラトニン,ADH",
+  answer: "テストステロン",
+  explanation: "男性生殖機能へ関与する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値を下げる働きを持つのは？",
+  choices: "インスリン,グルカゴン,コルチゾール,アドレナリン",
+  answer: "インスリン",
+  explanation: "細胞への糖取り込みを促進する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "甲状腺ホルモンの作用は？",
+  choices: "代謝促進,血液凝固,尿生成,免疫抑制",
+  answer: "代謝促進",
+  explanation: "エネルギー消費を高める",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "ADHの主な作用は？",
+  choices: "尿量減少,血糖低下,骨形成,筋収縮",
+  answer: "尿量減少",
+  explanation: "水分再吸収を促進する",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "食物の消化が最初に始まる場所は？",
+  choices: "口腔,胃,小腸,大腸",
+  answer: "口腔",
+  explanation: "咀嚼と唾液による消化が始まる",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "唾液に含まれる消化酵素は？",
+  choices: "アミラーゼ,ペプシン,リパーゼ,トリプシン",
+  answer: "アミラーゼ",
+  explanation: "デンプン分解に関与する",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胃液に含まれる消化酵素は？",
+  choices: "ペプシン,アミラーゼ,ラクターゼ,マルターゼ",
+  answer: "ペプシン",
+  explanation: "タンパク質分解を行う",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "小腸で主に行われることは？",
+  choices: "栄養吸収,ガス交換,尿生成,血液循環",
+  answer: "栄養吸収",
+  explanation: "消化吸収の中心",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "大腸の主な役割は？",
+  choices: "水分吸収,酸素交換,胆汁生成,ホルモン分泌",
+  answer: "水分吸収",
+  explanation: "便形成に関与する",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胆汁を生成する臓器は？",
+  choices: "肝臓,膵臓,胃,脾臓",
+  answer: "肝臓",
+  explanation: "胆汁は肝臓で作られる",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胆汁を貯留する臓器は？",
+  choices: "胆嚢,膵臓,胃,腎臓",
+  answer: "胆嚢",
+  explanation: "胆汁を一時保存する",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "膵液を分泌する臓器は？",
+  choices: "膵臓,肝臓,胃,脾臓",
+  answer: "膵臓",
+  explanation: "消化酵素を含む膵液を分泌する",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "タンパク質消化に関与する酵素は？",
+  choices: "ペプシン,アミラーゼ,ラクターゼ,マルターゼ",
+  answer: "ペプシン",
+  explanation: "胃でタンパク質分解を行う",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "脂肪消化を助けるものは？",
+  choices: "胆汁,唾液,血液,尿",
+  answer: "胆汁",
+  explanation: "脂肪を乳化する",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胃酸の主成分は？",
+  choices: "塩酸,硫酸,炭酸,乳酸",
+  answer: "塩酸",
+  explanation: "強酸性で消化を助ける",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "消化管の運動を何という？",
+  choices: "蠕動運動,反射運動,随意運動,跳躍運動",
+  answer: "蠕動運動",
+  explanation: "内容物を送る運動",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "食物が口から胃へ送られる通路は？",
+  choices: "食道,気管,尿管,胆管",
+  answer: "食道",
+  explanation: "嚥下後に通過する",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "栄養吸収で重要な構造は？",
+  choices: "絨毛,肺胞,糸球体,骨梁",
+  answer: "絨毛",
+  explanation: "小腸で表面積を増やす",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "デンプン消化に関与する酵素は？",
+  choices: "アミラーゼ,ペプシン,リパーゼ,トリプシン",
+  answer: "アミラーゼ",
+  explanation: "炭水化物分解酵素",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "体温調節中枢が存在する部位は？",
+  choices: "視床下部,延髄,小脳,脊髄",
+  answer: "視床下部",
+  explanation: "体温調節を行う中枢",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "発汗による体温低下で利用される現象は？",
+  choices: "気化熱,放射熱,伝導熱,対流熱",
+  answer: "気化熱",
+  explanation: "汗蒸発で熱を奪う",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "寒冷時に起こりやすい反応は？",
+  choices: "血管収縮,発汗増加,皮膚血流増加,呼吸停止",
+  answer: "血管収縮",
+  explanation: "熱放散を減少させる",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "暑熱時に起こりやすい反応は？",
+  choices: "発汗増加,血管収縮,筋緊張増加,震え",
+  answer: "発汗増加",
+  explanation: "熱放散を促進する",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "恒常性を英語で何という？",
+  choices: "ホメオスタシス,シナプス,フィードバック,メタボリズム",
+  answer: "ホメオスタシス",
+  explanation: "内部環境を一定に保つ",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値調節に関与するホルモンは？",
+  choices: "インスリン,メラトニン,アドレナリン,セロトニン",
+  answer: "インスリン",
+  explanation: "血糖値を低下させる",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "水分量調節に関与するホルモンは？",
+  choices: "ADH,インスリン,グルカゴン,チロキシン",
+  answer: "ADH",
+  explanation: "抗利尿ホルモン",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "体温上昇時に皮膚血管はどうなる？",
+  choices: "拡張する,収縮する,閉塞する,変化しない",
+  answer: "拡張する",
+  explanation: "熱放散を促進する",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "体温低下時にみられる反応は？",
+  choices: "ふるえ,発汗,血管拡張,徐脈",
+  answer: "ふるえ",
+  explanation: "筋収縮で熱産生する",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "体液のpH調節に重要なのは？",
+  choices: "緩衝系,骨形成,筋収縮,消化酵素",
+  answer: "緩衝系",
+  explanation: "酸塩基平衡を保つ",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "腎臓の役割として重要なのは？",
+  choices: "水分調節,ガス交換,筋収縮,視覚調節",
+  answer: "水分調節",
+  explanation: "体液バランス維持に関与する",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "発汗を促進しやすい神経は？",
+  choices: "交感神経,副交感神経,運動神経,感覚神経",
+  answer: "交感神経",
+  explanation: "暑熱時に活性化する",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "細胞外液量調節に重要な臓器は？",
+  choices: "腎臓,肺,脾臓,胃",
+  answer: "腎臓",
+  explanation: "水分・電解質調節を行う",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "恒常性維持に重要な仕組みは？",
+  choices: "フィードバック機構,筋肥大,骨形成,嚥下反射",
+  answer: "フィードバック機構",
+  explanation: "内部環境を調節する",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "体温調節で熱産生に関与するのは？",
+  choices: "筋活動,発汗,皮膚血流増加,呼吸停止",
+  answer: "筋活動",
+  explanation: "筋収縮で熱を生む",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "活動電位は神経細胞の興奮で生じる",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "神経興奮時の電気変化"
+},
+
+{
+  content: "シナプスは神経細胞同士の接合部である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "情報伝達を行う部位"
+},
+
+{
+  content: "脳と脊髄は中枢神経系に含まれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "中枢神経系を構成する"
+},
+
+{
+  content: "坐骨神経は末梢神経系に含まれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "末梢へ伸びる神経"
+},
+
+{
+  content: "交感神経優位で心拍数は増加しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "活動時に優位になる"
+},
+
+{
+  content: "副交感神経優位で消化活動は促進される",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "安静時に働きやすい"
+},
+
+{
+  content: "髄鞘は神経伝導速度を高める",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "跳躍伝導を助ける"
+},
+
+{
+  content: "脊髄は反射中枢として重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "反射経路へ関与する"
+},
+
+{
+  content: "副交感神経優位で瞳孔は縮小しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "縮瞳反応を起こす"
+},
+
+{
+  content: "交感神経優位で瞳孔は拡大しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "散瞳反応を起こす"
+},
+
+{
+  content: "求心性神経は感覚情報を中枢へ送る",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "感覚入力を伝える"
+},
+
+{
+  content: "遠心性神経は運動指令を末梢へ送る",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "筋へ指令を出す"
+},
+
+{
+  content: "脳幹は呼吸調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "生命維持機能を持つ"
+},
+
+{
+  content: "小脳は運動調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "協調運動を行う"
+},
+
+{
+  content: "神経細胞の主な役割は情報伝達である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "電気信号を伝える"
+},
+
+{
+  content: "交感神経優位で消化活動は促進される",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "抑制されやすい"
+},
+
+{
+  content: "副交感神経優位で心拍数は増加する",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "低下しやすい"
+},
+
+{
+  content: "髄鞘は神経伝導を遅くする",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "伝導速度を高める"
+},
+
+{
+  content: "求心性神経は運動指令を送る",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "感覚情報を送る"
+},
+
+{
+  content: "小脳は消化酵素分泌を調節する",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "主に運動調節へ関与する"
+},
+
+{
+  content: "骨格筋は随意筋である",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "自分の意思で動かせる筋"
+},
+
+{
+  content: "筋収縮にはATPが必要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "エネルギー源として必要"
+},
+
+{
+  content: "カルシウムは筋収縮に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "収縮開始に必要"
+},
+
+{
+  content: "アクチンは筋収縮タンパクの1つである",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "ミオシンと相互作用する"
+},
+
+{
+  content: "サルコメアは筋収縮の最小単位である",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "筋原線維内に存在する"
+},
+
+{
+  content: "乳酸は筋疲労に関与しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "疲労物質として知られる"
+},
+
+{
+  content: "運動神経は筋へ指令を送る",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "筋収縮を指令する"
+},
+
+{
+  content: "筋紡錘は筋長を感知する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "伸張反射へ関与する"
+},
+
+{
+  content: "ゴルジ腱器官は筋張力を感知する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "筋張力検出器"
+},
+
+{
+  content: "等尺性収縮では筋長変化が少ない",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "関節角度変化も少ない"
+},
+
+{
+  content: "求心性収縮では筋肉が短縮する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "筋長短縮を伴う"
+},
+
+{
+  content: "遠心性収縮では筋肉が伸びながら力を出す",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "制動動作で多い"
+},
+
+{
+  content: "速筋線維は瞬発力に優れる",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "短時間で強い力を出す"
+},
+
+{
+  content: "遅筋線維は持久力に優れる",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "長時間活動に適する"
+},
+
+{
+  content: "神経筋接合部は神経と筋の接合部である",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "運動神経終末部"
+},
+
+{
+  content: "骨格筋は不随意筋である",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "随意筋である"
+},
+
+{
+  content: "カルシウムは筋収縮に不要である",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "収縮開始に必要"
+},
+
+{
+  content: "筋紡錘は筋張力を感知する",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "筋長を感知する"
+},
+
+{
+  content: "速筋線維は持久力に優れる",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "瞬発力に優れる"
+},
+
+{
+  content: "等尺性収縮では筋長が大きく短縮する",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "筋長変化は少ない"
+},
+
+{
+  content: "心臓は全身へ血液を送り出す",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "循環の中心臓器である"
+},
+
+{
+  content: "左心室は全身へ血液を送る",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "大動脈へ血液を送り出す"
+},
+
+{
+  content: "右心室は肺へ血液を送る",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "肺循環を開始する"
+},
+
+{
+  content: "ヘモグロビンは酸素運搬に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "赤血球内に存在する"
+},
+
+{
+  content: "血小板は血液凝固に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "止血作用を持つ"
+},
+
+{
+  content: "動脈血は酸素を多く含む",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "肺で酸素化される"
+},
+
+{
+  content: "肺動脈には静脈血が流れる",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "肺へ静脈血を送る"
+},
+
+{
+  content: "動脈では脈拍を触知しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "拍動を感じやすい"
+},
+
+{
+  content: "白血球は免疫に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "感染防御を行う"
+},
+
+{
+  content: "大動脈は血圧が高い血管である",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "左心室直後で高圧"
+},
+
+{
+  content: "毛細血管では物質交換が行われる",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "酸素や栄養交換を行う"
+},
+
+{
+  content: "交感神経優位で心拍数は増加しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "活動時に優位となる"
+},
+
+{
+  content: "副交感神経優位で心拍数は低下しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "安静時に優位となる"
+},
+
+{
+  content: "肺循環では肺でガス交換が行われる",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "酸素化が行われる"
+},
+
+{
+  content: "体循環は全身へ血液を送る循環である",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "全身組織へ循環する"
+},
+
+{
+  content: "肺静脈には静脈血が流れる",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "酸素化された動脈血が流れる"
+},
+
+{
+  content: "右心室は全身へ血液を送る",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "肺へ血液を送る"
+},
+
+{
+  content: "白血球は酸素運搬を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "酸素運搬は赤血球"
+},
+
+{
+  content: "副交感神経優位で心拍数は増加する",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "低下しやすい"
+},
+
+{
+  content: "毛細血管では脈拍を強く触知できる",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "拍動はほぼ感じない"
+},
+
+{
+  content: "肺胞ではガス交換が行われる",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "酸素と二酸化炭素交換を行う"
+},
+
+{
+  content: "横隔膜は吸気時に収縮する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "胸腔を広げる"
+},
+
+{
+  content: "呼気時には胸郭容積が減少する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "肺から空気が出る"
+},
+
+{
+  content: "ヘモグロビンは酸素運搬に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "赤血球内に存在する"
+},
+
+{
+  content: "呼吸中枢は延髄に存在する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "呼吸調節を行う"
+},
+
+{
+  content: "気管は空気の通り道である",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "肺へ空気を送る"
+},
+
+{
+  content: "吸気時に肺は膨らむ",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "胸腔拡大に伴う"
+},
+
+{
+  content: "二酸化炭素濃度上昇で呼吸は促進されやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "換気量を増加させる"
+},
+
+{
+  content: "外呼吸とは肺胞と血液のガス交換である",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "肺で行われる"
+},
+
+{
+  content: "内呼吸とは血液と組織のガス交換である",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "組織レベルで行われる"
+},
+
+{
+  content: "呼吸によって二酸化炭素は体外へ排出される",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "代謝産物として排出される"
+},
+
+{
+  content: "肺胞では酸素が血液へ取り込まれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "血液へ拡散する"
+},
+
+{
+  content: "頻呼吸とは呼吸数増加を指す",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "呼吸回数が多い状態"
+},
+
+{
+  content: "安静時呼吸では横隔膜が主に働く",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "主要吸気筋である"
+},
+
+{
+  content: "呼吸は生命維持に重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "酸素供給に必要"
+},
+
+{
+  content: "横隔膜は呼気時に主に収縮する",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "吸気時に収縮する"
+},
+
+{
+  content: "肺胞では尿生成が行われる",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "ガス交換を行う"
+},
+
+{
+  content: "呼吸中枢は小脳に存在する",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "延髄に存在する"
+},
+
+{
+  content: "呼気時に胸郭容積は増加する",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "減少する"
+},
+
+{
+  content: "外呼吸とは筋収縮を指す",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "肺胞と血液のガス交換"
+},
+
+{
+  content: "胃は食物消化に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "胃液を分泌して消化を行う"
+},
+
+{
+  content: "小腸は栄養吸収を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "消化吸収の中心"
+},
+
+{
+  content: "大腸は主に水分吸収を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "便形成へ関与する"
+},
+
+{
+  content: "肝臓は解毒作用を持つ",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "有害物質を分解する"
+},
+
+{
+  content: "胆嚢は胆汁を貯留する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "胆汁を一時保存する"
+},
+
+{
+  content: "膵臓は消化酵素を分泌する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "膵液を分泌する"
+},
+
+{
+  content: "腎臓は尿生成を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "老廃物を排出する"
+},
+
+{
+  content: "膀胱は尿を貯留する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "尿を一時的にためる"
+},
+
+{
+  content: "脾臓は免疫機能に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "リンパ系臓器である"
+},
+
+{
+  content: "肺はガス交換を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "酸素と二酸化炭素交換を行う"
+},
+
+{
+  content: "心臓は血液循環を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "全身へ血液を送る"
+},
+
+{
+  content: "食道は食物輸送を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "咽頭から胃へ運ぶ"
+},
+
+{
+  content: "胃液には塩酸が含まれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "タンパク質消化を助ける"
+},
+
+{
+  content: "膵臓はインスリンを分泌する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "血糖値調節に関与する"
+},
+
+{
+  content: "尿は尿道から排出される",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "膀胱から体外へ出る"
+},
+
+{
+  content: "肝臓はガス交換を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "ガス交換は肺で行う"
+},
+
+{
+  content: "膀胱は胆汁を貯留する",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "尿を貯留する"
+},
+
+{
+  content: "肺は尿生成を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "ガス交換を行う"
+},
+
+{
+  content: "小腸は主にガス交換を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "栄養吸収を行う"
+},
+
+{
+  content: "食道は空気の通り道である",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "食物輸送を行う"
+},
+
+{
+  content: "インスリンは血糖値を下げる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "細胞への糖取り込みを促進する"
+},
+
+{
+  content: "グルカゴンは血糖値を上げる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "肝臓で糖放出を促進する"
+},
+
+{
+  content: "インスリンは膵臓から分泌される",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "ランゲルハンス島β細胞から分泌される"
+},
+
+{
+  content: "甲状腺ホルモンは代謝を促進する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "基礎代謝を上昇させる"
+},
+
+{
+  content: "アドレナリンはストレス時に分泌が増える",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "交感神経作用を強める"
+},
+
+{
+  content: "コルチゾールは副腎皮質から分泌される",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "糖代謝や抗炎症作用を持つ"
+},
+
+{
+  content: "ADHは体内の水分量調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "抗利尿ホルモンとも呼ばれる"
+},
+
+{
+  content: "メラトニンは睡眠に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "睡眠リズム調節を行う"
+},
+
+{
+  content: "成長ホルモンは下垂体前葉から分泌される",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "成長促進作用を持つ"
+},
+
+{
+  content: "パラトルモンはカルシウム代謝に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "血中カルシウム濃度を調節する"
+},
+
+{
+  content: "エストロゲンは女性ホルモンの1つである",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "女性生殖機能へ関与する"
+},
+
+{
+  content: "テストステロンは男性ホルモンである",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "男性生殖機能へ関与する"
+},
+
+{
+  content: "ADHは尿量を減少させる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "水分再吸収を促進する"
+},
+
+{
+  content: "インスリンは血糖値を低下させる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "血糖値調節に関与する"
+},
+
+{
+  content: "甲状腺ホルモンは代謝亢進作用を持つ",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "エネルギー消費を高める"
+},
+
+{
+  content: "インスリンは血糖値を上げる",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "血糖値を下げる"
+},
+
+{
+  content: "グルカゴンは血糖値を下げる",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "血糖値を上げる"
+},
+
+{
+  content: "ADHは尿量を増加させる",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "尿量を減少させる"
+},
+
+{
+  content: "メラトニンは覚醒を強めるホルモンである",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "睡眠リズムに関与する"
+},
+
+{
+  content: "テストステロンは女性ホルモンである",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "男性ホルモンである"
+},
+
+{
+  content: "食物の消化は口腔から始まる",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "咀嚼と唾液分泌が行われる"
+},
+
+{
+  content: "唾液にはアミラーゼが含まれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "デンプン分解に関与する"
+},
+
+{
+  content: "胃液にはペプシンが含まれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "タンパク質消化酵素"
+},
+
+{
+  content: "小腸は栄養吸収を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "消化吸収の中心"
+},
+
+{
+  content: "大腸は主に水分吸収を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "便形成に関与する"
+},
+
+{
+  content: "肝臓は胆汁を生成する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "胆汁は脂肪消化を助ける"
+},
+
+{
+  content: "胆嚢は胆汁を貯留する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "胆汁を一時保存する"
+},
+
+{
+  content: "膵臓は膵液を分泌する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "消化酵素を含む"
+},
+
+{
+  content: "ペプシンはタンパク質消化に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "胃で働く酵素"
+},
+
+{
+  content: "胆汁は脂肪消化を助ける",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "脂肪を乳化する"
+},
+
+{
+  content: "胃酸の主成分は塩酸である",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "強酸性で消化を助ける"
+},
+
+{
+  content: "蠕動運動は消化管内容物を送る運動である",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "食物を先へ送る"
+},
+
+{
+  content: "食道は食物輸送を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "咽頭から胃へ運ぶ"
+},
+
+{
+  content: "小腸絨毛は栄養吸収に重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "表面積を広げる"
+},
+
+{
+  content: "アミラーゼはデンプン分解に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "炭水化物消化酵素"
+},
+
+{
+  content: "胃は主にガス交換を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "食物消化を行う"
+},
+
+{
+  content: "胆嚢は尿を貯留する",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "胆汁を貯留する"
+},
+
+{
+  content: "小腸は主に水分吸収だけを行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "主に栄養吸収を行う"
+},
+
+{
+  content: "ペプシンは脂肪分解酵素である",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "タンパク質分解酵素"
+},
+
+{
+  content: "アミラーゼはタンパク質を分解する",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "デンプンを分解する"
+},
+
+{
+  content: "視床下部は体温調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "体温調節中枢が存在する"
+},
+
+{
+  content: "発汗は体温低下に役立つ",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "汗の蒸発で熱を奪う"
+},
+
+{
+  content: "寒冷時には血管収縮が起こりやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "熱放散を減少させる"
+},
+
+{
+  content: "暑熱時には発汗が増加しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "熱放散を促進する"
+},
+
+{
+  content: "ホメオスタシスは内部環境を一定に保つ",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "恒常性維持機構である"
+},
+
+{
+  content: "インスリンは血糖値調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "血糖値を低下させる"
+},
+
+{
+  content: "ADHは水分量調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "抗利尿ホルモンである"
+},
+
+{
+  content: "体温上昇時には皮膚血管が拡張しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "熱放散を促進する"
+},
+
+{
+  content: "体温低下時にはふるえがみられやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "筋活動で熱産生する"
+},
+
+{
+  content: "緩衝系は体液pH調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "酸塩基平衡を保つ"
+},
+
+{
+  content: "腎臓は水分調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "体液バランス維持を行う"
+},
+
+{
+  content: "交感神経は発汗促進に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "暑熱時に活性化する"
+},
+
+{
+  content: "腎臓は細胞外液量調節に重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "水分・電解質調節を行う"
+},
+
+{
+  content: "フィードバック機構は恒常性維持に重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "内部環境調節に関与する"
+},
+
+{
+  content: "筋活動は熱産生に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "筋収縮で熱を生む"
+},
+
+{
+  content: "視床下部は呼吸だけを調節する",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "体温調節にも関与する"
+},
+
+{
+  content: "発汗は体温を上昇させる",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "熱放散で体温低下を助ける"
+},
+
+{
+  content: "寒冷時には皮膚血管が拡張しやすい",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "収縮しやすい"
+},
+
+{
+  content: "ADHは尿量を増加させる",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "尿量を減少させる"
+},
+
+{
+  content: "ホメオスタシスとは骨形成を指す",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "内部環境を一定に保つこと"
+},
+
+{
+  content: "肘関節を曲げる動きを何という？",
+  choices: "屈曲,伸展,外転,回旋",
+  answer: "屈曲",
+  explanation: "関節角度が小さくなる動き",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節を伸ばす動きを何という？",
+  choices: "伸展,屈曲,内転,外旋",
+  answer: "伸展",
+  explanation: "関節角度が大きくなる動き",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "腕を体側から離す動きは？",
+  choices: "外転,内転,屈曲,伸展",
+  answer: "外転",
+  explanation: "身体正中線から離れる",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "腕を身体へ近づける動きは？",
+  choices: "内転,外転,屈曲,回外",
+  answer: "内転",
+  explanation: "身体正中線へ近づく",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "前腕で手のひらを上へ向ける動きは？",
+  choices: "回外,回内,背屈,底屈",
+  answer: "回外",
+  explanation: "手掌が前方・上方を向く",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "前腕で手のひらを下へ向ける動きは？",
+  choices: "回内,回外,外旋,内旋",
+  answer: "回内",
+  explanation: "手掌が後方・下方を向く",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "足関節でつま先を上げる動きは？",
+  choices: "背屈,底屈,回内,外転",
+  answer: "背屈",
+  explanation: "足背を脛へ近づける",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "足関節でつま先立ちする動きは？",
+  choices: "底屈,背屈,内反,外反",
+  answer: "底屈",
+  explanation: "足底方向へ動く",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "股関節で太ももを前へ上げる動きは？",
+  choices: "屈曲,伸展,内転,外旋",
+  answer: "屈曲",
+  explanation: "大腿を前方へ動かす",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "股関節で脚を後ろへ動かす動きは？",
+  choices: "伸展,屈曲,外転,回外",
+  answer: "伸展",
+  explanation: "大腿を後方へ動かす",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節で腕を前へ上げる動きは？",
+  choices: "屈曲,伸展,内旋,外転",
+  answer: "屈曲",
+  explanation: "上肢を前方へ挙上する",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節で腕を後ろへ引く動きは？",
+  choices: "伸展,屈曲,外転,回内",
+  answer: "伸展",
+  explanation: "上肢を後方へ動かす",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節で上腕を外へ回す動きは？",
+  choices: "外旋,内旋,回外,回内",
+  answer: "外旋",
+  explanation: "上腕骨を外側へ回す",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節で上腕を内へ回す動きは？",
+  choices: "内旋,外旋,背屈,回外",
+  answer: "内旋",
+  explanation: "上腕骨を内側へ回す",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "複数方向へ円を描くような運動を何という？",
+  choices: "環回,屈曲,伸展,回外",
+  answer: "環回",
+  explanation: "円を描くような複合運動",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節屈曲の正常可動域は？",
+  choices: "180°,90°,45°,60°",
+  answer: "180°",
+  explanation: "肩関節屈曲は約180°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節外転の正常可動域は？",
+  choices: "180°,70°,30°,90°",
+  answer: "180°",
+  explanation: "肩関節外転は約180°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "肘関節屈曲の正常可動域は？",
+  choices: "145°,90°,180°,45°",
+  answer: "145°",
+  explanation: "肘関節屈曲は約145°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "肘関節伸展の正常可動域は？",
+  choices: "0°,45°,90°,180°",
+  answer: "0°",
+  explanation: "肘伸展は0°が基準",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "前腕回外の正常可動域は？",
+  choices: "90°,45°,180°,30°",
+  answer: "90°",
+  explanation: "前腕回外は約90°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "前腕回内の正常可動域は？",
+  choices: "90°,30°,180°,60°",
+  answer: "90°",
+  explanation: "前腕回内は約90°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "股関節屈曲の正常可動域は？",
+  choices: "125°,45°,180°,70°",
+  answer: "125°",
+  explanation: "股関節屈曲は約125°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "股関節伸展の正常可動域は？",
+  choices: "15°,90°,45°,125°",
+  answer: "15°",
+  explanation: "股関節伸展は約15°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節屈曲の正常可動域は？",
+  choices: "130°,45°,180°,60°",
+  answer: "130°",
+  explanation: "膝関節屈曲は約130°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節伸展の正常可動域は？",
+  choices: "0°,130°,45°,90°",
+  answer: "0°",
+  explanation: "膝伸展は0°が基準",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "足関節背屈の正常可動域は？",
+  choices: "20°,45°,90°,60°",
+  answer: "20°",
+  explanation: "足関節背屈は約20°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "足関節底屈の正常可動域は？",
+  choices: "45°,20°,90°,10°",
+  answer: "45°",
+  explanation: "足関節底屈は約45°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "頸部回旋の正常可動域は？",
+  choices: "60°,20°,120°,30°",
+  answer: "60°",
+  explanation: "頸部回旋は左右約60°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "体幹前屈の正常可動域は？",
+  choices: "45°,15°,90°,120°",
+  answer: "45°",
+  explanation: "体幹前屈は約45°",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "ROMとは何の略？",
+  choices: "Range of Motion,Rate of Muscle,Rotation of Muscle,Range of Muscle",
+  answer: "Range of Motion",
+  explanation: "関節可動域を意味する",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "大腿四頭筋の主な作用は？",
+  choices: "膝伸展,膝屈曲,股関節内転,足関節底屈",
+  answer: "膝伸展",
+  explanation: "膝を伸ばす主動作筋",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "ハムストリングスの主な作用は？",
+  choices: "膝屈曲,膝伸展,肩外転,足背屈",
+  answer: "膝屈曲",
+  explanation: "膝を曲げる作用を持つ",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "大臀筋の主な作用は？",
+  choices: "股関節伸展,股関節屈曲,膝伸展,肩外転",
+  answer: "股関節伸展",
+  explanation: "立ち上がり動作で重要",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "中臀筋の主な作用は？",
+  choices: "股関節外転,股関節内転,膝屈曲,体幹回旋",
+  answer: "股関節外転",
+  explanation: "片脚立位で重要",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "前脛骨筋の主な作用は？",
+  choices: "足関節背屈,足関節底屈,膝伸展,股関節外転",
+  answer: "足関節背屈",
+  explanation: "つま先を上げる動き",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "腓腹筋の主な作用は？",
+  choices: "足関節底屈,足関節背屈,膝伸展,肩外転",
+  answer: "足関節底屈",
+  explanation: "つま先立ちで働く",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "腹直筋の主な作用は？",
+  choices: "体幹屈曲,体幹伸展,股関節外転,肩甲骨挙上",
+  answer: "体幹屈曲",
+  explanation: "上体起こしで働く",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "脊柱起立筋の主な作用は？",
+  choices: "体幹伸展,体幹屈曲,股関節屈曲,膝屈曲",
+  answer: "体幹伸展",
+  explanation: "姿勢保持に重要",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "上腕二頭筋の主な作用は？",
+  choices: "肘関節屈曲,肘関節伸展,肩関節外転,体幹回旋",
+  answer: "肘関節屈曲",
+  explanation: "肘を曲げる筋",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "上腕三頭筋の主な作用は？",
+  choices: "肘関節伸展,肘関節屈曲,肩関節内転,足関節背屈",
+  answer: "肘関節伸展",
+  explanation: "肘を伸ばす筋",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "三角筋中部線維の主な作用は？",
+  choices: "肩関節外転,肩関節屈曲,膝伸展,体幹伸展",
+  answer: "肩関節外転",
+  explanation: "腕を横へ上げる",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "広背筋の主な作用は？",
+  choices: "肩関節伸展,肩関節外転,膝屈曲,足関節底屈",
+  answer: "肩関節伸展",
+  explanation: "腕を後方へ引く",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "前鋸筋の主な作用は？",
+  choices: "肩甲骨外転,肩甲骨内転,肩関節屈曲,膝伸展",
+  answer: "肩甲骨外転",
+  explanation: "肩甲骨を前へ動かす",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "菱形筋の主な作用は？",
+  choices: "肩甲骨内転,肩甲骨外転,股関節屈曲,肘伸展",
+  answer: "肩甲骨内転",
+  explanation: "肩甲骨を脊柱側へ寄せる",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "僧帽筋上部線維の主な作用は？",
+  choices: "肩甲骨挙上,肩甲骨下制,体幹屈曲,足底屈",
+  answer: "肩甲骨挙上",
+  explanation: "肩をすくめる動き",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "歩行周期で踵が床につく時期は？",
+  choices: "踵接地,立脚中期,遊脚期,蹴り出し",
+  answer: "踵接地",
+  explanation: "歩行開始時の接地動作",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "歩行周期で足が床についている期間は？",
+  choices: "立脚期,遊脚期,加速期,減速期",
+  answer: "立脚期",
+  explanation: "歩行周期の約60%を占める",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "歩行周期で足が空中にある期間は？",
+  choices: "遊脚期,立脚期,両脚支持期,接地期",
+  answer: "遊脚期",
+  explanation: "歩行周期の約40%",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "正常歩行で最も長い時期は？",
+  choices: "立脚期,遊脚期,加速期,減速期",
+  answer: "立脚期",
+  explanation: "約60%を占める",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時につま先で地面を蹴る時期は？",
+  choices: "蹴り出し,踵接地,初期接地,加速期",
+  answer: "蹴り出し",
+  explanation: "前進推進力を生む",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "片脚だけで支持している時期は？",
+  choices: "片脚支持期,両脚支持期,遊脚期,加速期",
+  answer: "片脚支持期",
+  explanation: "一方の脚のみ接地",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "両足が床についている期間は？",
+  choices: "両脚支持期,片脚支持期,遊脚期,加速期",
+  answer: "両脚支持期",
+  explanation: "歩行開始・終了時にみられる",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時の推進力に関与しやすい筋は？",
+  choices: "腓腹筋,前脛骨筋,上腕二頭筋,腹直筋",
+  answer: "腓腹筋",
+  explanation: "蹴り出しで働く",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時につま先の引っかかり防止に重要な筋は？",
+  choices: "前脛骨筋,腓腹筋,大臀筋,大胸筋",
+  answer: "前脛骨筋",
+  explanation: "足関節背屈を行う",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "中臀筋が弱化すると起こりやすい歩行は？",
+  choices: "トレンデレンブルグ歩行,鶏歩,痙性歩行,失調性歩行",
+  answer: "トレンデレンブルグ歩行",
+  explanation: "骨盤保持が困難になる",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "前脛骨筋麻痺で起こりやすい歩行は？",
+  choices: "鶏歩,痙性歩行,動揺性歩行,小刻み歩行",
+  answer: "鶏歩",
+  explanation: "足尖が引っかかりやすい",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "パーキンソン病でみられやすい歩行は？",
+  choices: "小刻み歩行,鶏歩,失調性歩行,動揺性歩行",
+  answer: "小刻み歩行",
+  explanation: "歩幅減少が特徴",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "小脳障害でみられやすい歩行は？",
+  choices: "失調性歩行,鶏歩,痙性歩行,小刻み歩行",
+  answer: "失調性歩行",
+  explanation: "ふらつきが特徴",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "痙性麻痺でみられやすい歩行は？",
+  choices: "痙性歩行,鶏歩,動揺性歩行,失調性歩行",
+  answer: "痙性歩行",
+  explanation: "下肢が突っ張る歩行",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "正常歩行で最初に接地する部位は？",
+  choices: "踵,つま先,足底中央,母趾",
+  answer: "踵",
+  explanation: "通常は踵接地から始まる",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "正常姿勢で耳垂はどこ付近を通る？",
+  choices: "肩峰,膝蓋骨,大転子,外果",
+  answer: "肩峰",
+  explanation: "側面姿勢の基準線上にある",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "猫背姿勢を何という？",
+  choices: "円背,反り腰,側弯,平背",
+  answer: "円背",
+  explanation: "胸椎後弯増強姿勢",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "腰椎前弯が強い姿勢を何という？",
+  choices: "反り腰,円背,平背,側弯",
+  answer: "反り腰",
+  explanation: "腰椎前弯増強姿勢",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "脊柱が側方へ弯曲する状態を何という？",
+  choices: "側弯,円背,平背,前弯",
+  answer: "側弯",
+  explanation: "左右方向への弯曲",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "胸椎後弯が減少した姿勢は？",
+  choices: "平背,円背,側弯,反張膝",
+  answer: "平背",
+  explanation: "脊柱弯曲が少ない姿勢",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "片脚立位時の骨盤保持に重要な筋は？",
+  choices: "中臀筋,大腿四頭筋,腹直筋,上腕二頭筋",
+  answer: "中臀筋",
+  explanation: "骨盤水平保持に重要",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "良い姿勢保持に重要な筋群は？",
+  choices: "抗重力筋,咀嚼筋,表情筋,呼吸筋",
+  answer: "抗重力筋",
+  explanation: "重力に抗して姿勢保持する",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "長時間座位で起こりやすい姿勢は？",
+  choices: "円背,正常姿勢,反張膝,外反膝",
+  answer: "円背",
+  explanation: "猫背姿勢になりやすい",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "姿勢保持に重要な感覚は？",
+  choices: "平衡感覚,味覚,嗅覚,聴覚",
+  answer: "平衡感覚",
+  explanation: "バランス維持に必要",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "立位姿勢保持に関与する器官は？",
+  choices: "前庭器,胃,肝臓,膀胱",
+  answer: "前庭器",
+  explanation: "平衡機能を担う",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "頭部前方姿勢で負担が増えやすい部位は？",
+  choices: "頸部,足関節,手関節,肘関節",
+  answer: "頸部",
+  explanation: "首への負担が増加する",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "姿勢制御に関与する中枢は？",
+  choices: "小脳,肝臓,膵臓,腎臓",
+  answer: "小脳",
+  explanation: "平衡・協調運動へ関与",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "膝が過伸展した姿勢を何という？",
+  choices: "反張膝,内反膝,外反膝,円背",
+  answer: "反張膝",
+  explanation: "膝過伸展姿勢",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "膝が内側へ入る姿勢を何という？",
+  choices: "外反膝,内反膝,反張膝,円背",
+  answer: "外反膝",
+  explanation: "X脚とも呼ばれる",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "膝が外側へ開く姿勢を何という？",
+  choices: "内反膝,外反膝,側弯,平背",
+  answer: "内反膝",
+  explanation: "O脚とも呼ばれる",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "力のモーメントは何によって変化する？",
+  choices: "力の大きさと距離,筋肉量のみ,体温のみ,呼吸数のみ",
+  answer: "力の大きさと距離",
+  explanation: "モーメントアームが重要",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "てこの支点となるものは？",
+  choices: "関節,筋肉,骨膜,靭帯",
+  answer: "関節",
+  explanation: "運動時の回転中心",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "筋力が加わる点を何という？",
+  choices: "力点,支点,作用点,重心",
+  answer: "力点",
+  explanation: "筋収縮による力が加わる",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "体重など負荷が加わる点を何という？",
+  choices: "作用点,力点,支点,回転点",
+  answer: "作用点",
+  explanation: "抵抗が加わる場所",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "肘関節屈曲はどのてこに分類される？",
+  choices: "第三のてこ,第一のてこ,第二のてこ,滑車",
+  answer: "第三のてこ",
+  explanation: "力点が中央にある",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "つま先立ちはどのてこに分類される？",
+  choices: "第二のてこ,第一のてこ,第三のてこ,回転てこ",
+  answer: "第二のてこ",
+  explanation: "作用点が中央にある",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "頭部前後運動はどのてこに分類される？",
+  choices: "第一のてこ,第二のてこ,第三のてこ,固定てこ",
+  answer: "第一のてこ",
+  explanation: "支点が中央にある",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "重心が高いほどどうなりやすい？",
+  choices: "不安定,安定,変化なし,軽量化",
+  answer: "不安定",
+  explanation: "バランスを崩しやすい",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "支持基底面が広いほどどうなる？",
+  choices: "安定する,不安定になる,筋力低下する,柔軟性低下する",
+  answer: "安定する",
+  explanation: "重心移動に耐えやすい",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時の重心移動に関与するものは？",
+  choices: "骨盤運動,胃運動,腸蠕動,胆汁分泌",
+  answer: "骨盤運動",
+  explanation: "効率的歩行へ関与する",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "摩擦力が大きいとどうなる？",
+  choices: "滑りにくい,滑りやすい,軽くなる,重力消失",
+  answer: "滑りにくい",
+  explanation: "接触抵抗が増える",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "重心線が支持基底面内にあると？",
+  choices: "安定しやすい,転倒しやすい,筋力低下する,関節固定される",
+  answer: "安定しやすい",
+  explanation: "バランス保持しやすい",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "加速度に関係する法則は？",
+  choices: "ニュートン第2法則,パスカルの法則,ベルヌーイの定理,フックの法則",
+  answer: "ニュートン第2法則",
+  explanation: "F=maで表される",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "慣性の法則は何法則？",
+  choices: "ニュートン第1法則,ニュートン第2法則,ニュートン第3法則,作用反作用の法則",
+  answer: "ニュートン第1法則",
+  explanation: "静止・等速運動維持の法則",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "作用反作用を説明する法則は？",
+  choices: "ニュートン第3法則,ニュートン第1法則,パスカルの法則,フックの法則",
+  answer: "ニュートン第3法則",
+  explanation: "互いに逆向きの力が働く",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "立ち上がり動作で主に必要な関節運動は？",
+  choices: "股関節伸展,肩関節外転,前腕回外,頸部回旋",
+  answer: "股関節伸展",
+  explanation: "下肢伸展筋群が重要",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時の蹴り出しで主に働く筋は？",
+  choices: "腓腹筋,前脛骨筋,上腕二頭筋,腹直筋",
+  answer: "腓腹筋",
+  explanation: "足関節底屈で推進力を生む",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "階段昇段で特に重要な筋は？",
+  choices: "大腿四頭筋,前鋸筋,上腕三頭筋,腹横筋",
+  answer: "大腿四頭筋",
+  explanation: "膝伸展で身体を持ち上げる",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "階段降段で重要な収縮様式は？",
+  choices: "遠心性収縮,求心性収縮,等尺性収縮,反射収縮",
+  answer: "遠心性収縮",
+  explanation: "身体をゆっくり下ろす",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "片脚立位保持に重要な筋は？",
+  choices: "中臀筋,大胸筋,上腕二頭筋,広背筋",
+  answer: "中臀筋",
+  explanation: "骨盤安定へ関与する",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "しゃがみ込み動作で必要な関節運動は？",
+  choices: "膝関節屈曲,肩関節外転,頸部伸展,前腕回外",
+  answer: "膝関節屈曲",
+  explanation: "下肢関節屈曲が必要",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "椅子から立ち上がる際に前傾する主な目的は？",
+  choices: "重心移動,呼吸促進,視野拡大,筋弛緩",
+  answer: "重心移動",
+  explanation: "支持基底面内へ重心を移動する",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時に足尖の引っかかり防止へ重要な筋は？",
+  choices: "前脛骨筋,腓腹筋,大臀筋,大腿四頭筋",
+  answer: "前脛骨筋",
+  explanation: "足関節背屈を行う",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "立位保持で重要な感覚は？",
+  choices: "平衡感覚,味覚,嗅覚,触覚のみ",
+  answer: "平衡感覚",
+  explanation: "姿勢制御へ関与する",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "寝返り動作で重要な運動は？",
+  choices: "体幹回旋,膝伸展,足関節底屈,肩外転",
+  answer: "体幹回旋",
+  explanation: "身体を回転させる",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "立ち上がり動作初期で重心はどう動く？",
+  choices: "前方移動,後方移動,上方移動のみ,変化しない",
+  answer: "前方移動",
+  explanation: "足部上へ移動する",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "歩行速度に影響しやすいものは？",
+  choices: "歩幅,視力,色覚,味覚",
+  answer: "歩幅",
+  explanation: "歩幅と歩行率が関与する",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "動作分析で観察されやすいものは？",
+  choices: "関節運動,血液型,髪色,利き手のみ",
+  answer: "関節運動",
+  explanation: "動作時の運動パターンを見る",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時の骨盤安定に重要な筋は？",
+  choices: "中臀筋,上腕三頭筋,腹直筋,前鋸筋",
+  answer: "中臀筋",
+  explanation: "片脚支持時に働く",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "立位バランス保持に重要な器官は？",
+  choices: "前庭器,胃,肝臓,膀胱",
+  answer: "前庭器",
+  explanation: "平衡感覚へ関与する",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "屈曲は関節角度が小さくなる運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "関節を曲げる運動"
+},
+
+{
+  content: "伸展は関節角度が大きくなる運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "関節を伸ばす運動"
+},
+
+{
+  content: "外転は身体正中線から離れる運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "腕や脚を外へ動かす"
+},
+
+{
+  content: "内転は身体正中線へ近づく運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "腕や脚を内へ戻す"
+},
+
+{
+  content: "回外は手のひらを上へ向ける運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "前腕の回旋運動"
+},
+
+{
+  content: "回内は手のひらを下へ向ける運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "前腕の回旋運動"
+},
+
+{
+  content: "背屈は足関節でつま先を上げる運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "足背を脛へ近づける"
+},
+
+{
+  content: "底屈はつま先立ちの運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "足底方向へ動かす"
+},
+
+{
+  content: "股関節屈曲は太ももを前へ上げる運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "大腿を前方へ動かす"
+},
+
+{
+  content: "股関節伸展は脚を後ろへ動かす運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "大腿を後方へ動かす"
+},
+
+{
+  content: "肩関節外旋は上腕を外へ回す運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "上腕骨を外側へ回す"
+},
+
+{
+  content: "肩関節内旋は上腕を内へ回す運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "上腕骨を内側へ回す"
+},
+
+{
+  content: "環回は円を描くような運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "複合的な回転運動"
+},
+
+{
+  content: "肩関節屈曲は腕を前へ上げる運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "上肢前方挙上"
+},
+
+{
+  content: "肩関節伸展は腕を後ろへ引く運動である",
+  answer: "true",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "上肢後方移動"
+},
+
+{
+  content: "屈曲は関節角度を大きくする運動である",
+  answer: "false",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "小さくする運動"
+},
+
+{
+  content: "外転は身体正中線へ近づく運動である",
+  answer: "false",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "正中線から離れる"
+},
+
+{
+  content: "回内は手のひらを上へ向ける運動である",
+  answer: "false",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "下へ向ける運動"
+},
+
+{
+  content: "背屈はつま先立ちの運動である",
+  answer: "false",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "つま先を上げる運動"
+},
+
+{
+  content: "肩関節内旋は上腕を外へ回す運動である",
+  answer: "false",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false",
+  explanation: "内側へ回す運動"
+},
+
+{
+  content: "肩関節屈曲の正常可動域は180°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "肩関節屈曲は約180°"
+},
+
+{
+  content: "肩関節外転の正常可動域は180°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "肩関節外転は約180°"
+},
+
+{
+  content: "肘関節屈曲の正常可動域は145°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "肘関節屈曲は約145°"
+},
+
+{
+  content: "肘関節伸展の正常可動域は0°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "伸展は0°基準"
+},
+
+{
+  content: "前腕回外の正常可動域は90°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "前腕回外は約90°"
+},
+
+{
+  content: "前腕回内の正常可動域は90°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "前腕回内は約90°"
+},
+
+{
+  content: "股関節屈曲の正常可動域は125°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "股関節屈曲は約125°"
+},
+
+{
+  content: "股関節伸展の正常可動域は15°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "股関節伸展は約15°"
+},
+
+{
+  content: "膝関節屈曲の正常可動域は130°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "膝関節屈曲は約130°"
+},
+
+{
+  content: "膝関節伸展の正常可動域は0°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "膝伸展は0°基準"
+},
+
+{
+  content: "足関節背屈の正常可動域は20°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "足関節背屈は約20°"
+},
+
+{
+  content: "足関節底屈の正常可動域は45°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "足関節底屈は約45°"
+},
+
+{
+  content: "頸部回旋の正常可動域は60°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "左右約60°"
+},
+
+{
+  content: "体幹前屈の正常可動域は45°である",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "体幹前屈は約45°"
+},
+
+{
+  content: "ROMは関節可動域を意味する",
+  answer: "true",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "Range of Motionの略"
+},
+
+{
+  content: "肩関節屈曲の正常可動域は90°である",
+  answer: "false",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "約180°である"
+},
+
+{
+  content: "股関節伸展の正常可動域は90°である",
+  answer: "false",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "約15°である"
+},
+
+{
+  content: "足関節背屈の正常可動域は45°である",
+  answer: "false",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "約20°である"
+},
+
+{
+  content: "ROMは筋力を表す略語である",
+  answer: "false",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "関節可動域を表す"
+},
+
+{
+  content: "膝関節伸展の正常可動域は130°である",
+  answer: "false",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false",
+  explanation: "0°が基準"
+},
+
+{
+  content: "大腿四頭筋は膝伸展に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "膝を伸ばす主動作筋"
+},
+
+{
+  content: "ハムストリングスは膝屈曲に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "膝を曲げる筋群"
+},
+
+{
+  content: "大臀筋は股関節伸展に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "立ち上がり動作で重要"
+},
+
+{
+  content: "中臀筋は股関節外転に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "骨盤安定に重要"
+},
+
+{
+  content: "前脛骨筋は足関節背屈に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "つま先を上げる"
+},
+
+{
+  content: "腓腹筋は足関節底屈に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "つま先立ちで働く"
+},
+
+{
+  content: "腹直筋は体幹屈曲に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "上体起こしで働く"
+},
+
+{
+  content: "脊柱起立筋は体幹伸展に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "姿勢保持に重要"
+},
+
+{
+  content: "上腕二頭筋は肘関節屈曲に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肘を曲げる筋"
+},
+
+{
+  content: "上腕三頭筋は肘関節伸展に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肘を伸ばす筋"
+},
+
+{
+  content: "三角筋中部線維は肩関節外転に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "腕を横へ上げる"
+},
+
+{
+  content: "広背筋は肩関節伸展に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "腕を後方へ引く"
+},
+
+{
+  content: "前鋸筋は肩甲骨外転に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肩甲骨を前へ動かす"
+},
+
+{
+  content: "菱形筋は肩甲骨内転に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肩甲骨を脊柱側へ寄せる"
+},
+
+{
+  content: "僧帽筋上部線維は肩甲骨挙上に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肩をすくめる動き"
+},
+
+{
+  content: "大腿四頭筋は膝屈曲に関与する",
+  answer: "false",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "膝伸展に関与する"
+},
+
+{
+  content: "ハムストリングスは膝伸展に関与する",
+  answer: "false",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "膝屈曲に関与する"
+},
+
+{
+  content: "前脛骨筋は足関節底屈に関与する",
+  answer: "false",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "背屈に関与する"
+},
+
+{
+  content: "上腕三頭筋は肘関節屈曲に関与する",
+  answer: "false",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肘伸展に関与する"
+},
+
+{
+  content: "広背筋は肩関節外転に関与する",
+  answer: "false",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false",
+  explanation: "肩関節伸展に関与する"
+},
+
+{
+  content: "立脚期は足が床についている期間である",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "歩行周期の約60%を占める"
+},
+
+{
+  content: "遊脚期は足が空中にある期間である",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "歩行周期の約40%"
+},
+
+{
+  content: "正常歩行では踵接地から始まる",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "踵が最初に床へ接地する"
+},
+
+{
+  content: "蹴り出しではつま先で地面を押す",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "前進推進力を生む"
+},
+
+{
+  content: "片脚支持期では一方の脚のみ接地している",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "片脚で体重支持する"
+},
+
+{
+  content: "両脚支持期では両足が床についている",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "歩行開始・終了時にみられる"
+},
+
+{
+  content: "腓腹筋は歩行時の蹴り出しに関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "足関節底屈で推進力を出す"
+},
+
+{
+  content: "前脛骨筋は足尖の引っかかり防止に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "足関節背屈を行う"
+},
+
+{
+  content: "中臀筋弱化でトレンデレンブルグ歩行がみられやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "骨盤保持が困難になる"
+},
+
+{
+  content: "前脛骨筋麻痺で鶏歩がみられやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "足尖が引っかかりやすい"
+},
+
+{
+  content: "パーキンソン病では小刻み歩行がみられやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "歩幅減少が特徴"
+},
+
+{
+  content: "小脳障害では失調性歩行がみられやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "ふらつき歩行が特徴"
+},
+
+{
+  content: "痙性麻痺では痙性歩行がみられやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "下肢が突っ張る"
+},
+
+{
+  content: "正常歩行では立脚期が最も長い",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "歩行周期の約60%"
+},
+
+{
+  content: "歩行速度は歩幅に影響される",
+  answer: "true",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "歩幅と歩行率が関与する"
+},
+
+{
+  content: "遊脚期では両足が床についている",
+  answer: "false",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "足は空中にある"
+},
+
+{
+  content: "前脛骨筋は歩行時の蹴り出し主動作筋である",
+  answer: "false",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "主に腓腹筋が関与する"
+},
+
+{
+  content: "鶏歩は中臀筋弱化でみられる",
+  answer: "false",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "前脛骨筋麻痺でみられやすい"
+},
+
+{
+  content: "小刻み歩行は小脳障害でみられやすい",
+  answer: "false",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "パーキンソン病でみられやすい"
+},
+
+{
+  content: "正常歩行ではつま先から接地する",
+  answer: "false",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false",
+  explanation: "通常は踵接地から始まる"
+},
+
+{
+  content: "円背は猫背姿勢を指す",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "胸椎後弯増強姿勢"
+},
+
+{
+  content: "反り腰は腰椎前弯増強姿勢である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "腰が過度に反った姿勢"
+},
+
+{
+  content: "側弯は脊柱が側方へ弯曲した状態である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "左右方向への弯曲"
+},
+
+{
+  content: "平背は脊柱弯曲が少ない姿勢である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "胸椎後弯減少姿勢"
+},
+
+{
+  content: "中臀筋は片脚立位時の骨盤保持に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "骨盤水平保持へ関与する"
+},
+
+{
+  content: "抗重力筋は姿勢保持に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "重力に抗して働く"
+},
+
+{
+  content: "長時間座位では円背姿勢になりやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "猫背になりやすい"
+},
+
+{
+  content: "平衡感覚は姿勢保持に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "バランス制御へ関与する"
+},
+
+{
+  content: "前庭器は立位姿勢保持に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "平衡感覚を担う"
+},
+
+{
+  content: "頭部前方姿勢では頸部負担が増えやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "首へのストレス増加"
+},
+
+{
+  content: "小脳は姿勢制御に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "平衡・協調運動を行う"
+},
+
+{
+  content: "反張膝は膝過伸展姿勢である",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "膝が後方へ反る"
+},
+
+{
+  content: "外反膝はX脚とも呼ばれる",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "膝が内側へ入る"
+},
+
+{
+  content: "内反膝はO脚とも呼ばれる",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "膝が外側へ開く"
+},
+
+{
+  content: "正常姿勢では重心線が安定に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "バランス保持へ重要"
+},
+
+{
+  content: "円背は腰椎前弯増強姿勢である",
+  answer: "false",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "胸椎後弯増強姿勢"
+},
+
+{
+  content: "反り腰は胸椎後弯減少姿勢である",
+  answer: "false",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "腰椎前弯増強姿勢"
+},
+
+{
+  content: "外反膝はO脚とも呼ばれる",
+  answer: "false",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "X脚とも呼ばれる"
+},
+
+{
+  content: "内反膝はX脚とも呼ばれる",
+  answer: "false",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "O脚とも呼ばれる"
+},
+
+{
+  content: "前庭器は消化機能を調節する",
+  answer: "false",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false",
+  explanation: "平衡感覚へ関与する"
+},
+
+{
+  content: "関節はてこの支点となる",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "運動時の回転中心となる"
+},
+
+{
+  content: "筋力が加わる点を力点という",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "筋収縮による力が加わる"
+},
+
+{
+  content: "負荷が加わる点を作用点という",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "抵抗が加わる場所"
+},
+
+{
+  content: "肘関節屈曲は第三のてこである",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "力点が中央にある"
+},
+
+{
+  content: "つま先立ちは第二のてこである",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "作用点が中央にある"
+},
+
+{
+  content: "頭部前後運動は第一のてこである",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "支点が中央にある"
+},
+
+{
+  content: "重心が高いほど不安定になりやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "バランスを崩しやすい"
+},
+
+{
+  content: "支持基底面が広いほど安定しやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "重心移動へ耐えやすい"
+},
+
+{
+  content: "骨盤運動は歩行時の重心移動に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "効率的歩行に重要"
+},
+
+{
+  content: "摩擦力が大きいほど滑りにくい",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "接触抵抗が増える"
+},
+
+{
+  content: "重心線が支持基底面内にあると安定しやすい",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "転倒しにくい"
+},
+
+{
+  content: "ニュートン第2法則は加速度に関係する",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "F=maで表される"
+},
+
+{
+  content: "ニュートン第1法則は慣性の法則である",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "静止・等速運動維持"
+},
+
+{
+  content: "ニュートン第3法則は作用反作用の法則である",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "逆向きに同じ力が働く"
+},
+
+{
+  content: "力のモーメントは距離にも影響される",
+  answer: "true",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "モーメントアームが重要"
+},
+
+{
+  content: "肘関節屈曲は第一のてこである",
+  answer: "false",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "第三のてこである"
+},
+
+{
+  content: "支持基底面が狭いほど安定しやすい",
+  answer: "false",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "広い方が安定する"
+},
+
+{
+  content: "重心が高いほど安定しやすい",
+  answer: "false",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "不安定になりやすい"
+},
+
+{
+  content: "摩擦力が大きいほど滑りやすい",
+  answer: "false",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "滑りにくくなる"
+},
+
+{
+  content: "ニュートン第1法則は作用反作用の法則である",
+  answer: "false",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false",
+  explanation: "慣性の法則である"
+},
+
+{
+  content: "立ち上がり動作では股関節伸展が重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "下肢伸展筋群が重要"
+},
+
+{
+  content: "歩行時の蹴り出しでは腓腹筋が働く",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "足関節底屈で推進力を生む"
+},
+
+{
+  content: "階段昇段では大腿四頭筋が重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "膝伸展で身体を持ち上げる"
+},
+
+{
+  content: "階段降段では遠心性収縮が重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "身体をゆっくり下ろす"
+},
+
+{
+  content: "片脚立位保持には中臀筋が重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "骨盤安定へ関与する"
+},
+
+{
+  content: "しゃがみ込みでは膝関節屈曲が必要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "下肢関節屈曲を伴う"
+},
+
+{
+  content: "立ち上がり時の前傾は重心移動に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "足部上へ重心を移動する"
+},
+
+{
+  content: "前脛骨筋は歩行時の足尖引っかかり防止に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "足関節背屈を行う"
+},
+
+{
+  content: "平衡感覚は立位保持に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "姿勢制御へ関与する"
+},
+
+{
+  content: "寝返り動作では体幹回旋が重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "身体を回転させる"
+},
+
+{
+  content: "立ち上がり初期では重心が前方へ移動する",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "支持基底面内へ移動する"
+},
+
+{
+  content: "歩幅は歩行速度に影響する",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "歩幅と歩行率が関与する"
+},
+
+{
+  content: "動作分析では関節運動を観察する",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "運動パターンを確認する"
+},
+
+{
+  content: "中臀筋は歩行時の骨盤安定に重要である",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "片脚支持時に働く"
+},
+
+{
+  content: "前庭器は立位バランス保持に関与する",
+  answer: "true",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "平衡感覚を担う"
+},
+
+{
+  content: "立ち上がり動作では肩関節外転が主動作である",
+  answer: "false",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "主に股関節・膝関節伸展が重要"
+},
+
+{
+  content: "階段降段では求心性収縮のみが重要である",
+  answer: "false",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "遠心性収縮が重要"
+},
+
+{
+  content: "歩行時の蹴り出しでは前脛骨筋が主に働く",
+  answer: "false",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "主に腓腹筋が働く"
+},
+
+{
+  content: "寝返り動作では膝伸展だけが重要である",
+  answer: "false",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "体幹回旋が重要"
+},
+
+{
+  content: "前庭器は消化活動を調節する",
+  answer: "false",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false",
+  explanation: "平衡感覚へ関与する"
+},
+

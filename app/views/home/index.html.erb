@@ -217,7 +217,19 @@ wrong.forEach(q => {
 })
 
 document.getElementById("analysis-box").innerHTML = `
-<h3>🔥 苦手問題数</h3>
+<h3 style="
+font-size:28px;
+margin-bottom:20px;
+">
+🔥 苦手問題数
+</h3>
+
+<div style="
+display:flex;
+justify-content:space-around;
+gap:10px;
+margin-top:20px;
+">
 
 <a href="/anatomy_analysis" style="
 display:flex;
@@ -232,12 +244,10 @@ color:black;
 font-size:18px;
 font-weight:600;
 box-shadow:none;
-width:90%;
-min-width:260px;
+width:95%;
 white-space:nowrap;
-display:inline-flex;
-margin-left:auto;
-margin-right:auto;
+display:flex;
+justify-content:center;
 ">
 🦴 解剖学：${anatomy}問
 </a>
@@ -255,12 +265,10 @@ color:black;
 font-size:18px;
 font-weight:600;
 box-shadow:none;
-width:90%;
-min-width:260px;
+width:95%;
 white-space:nowrap;
-display:inline-flex;
-margin-left:auto;
-margin-right:auto;
+display:flex;
+justify-content:center;
 ">
 🫀 生理学：${physiology}問
 </a>
@@ -278,15 +286,16 @@ color:black;
 font-size:18px;
 font-weight:600;
 box-shadow:none;
-width:90%;
-min-width:260px;
+width:95%;
 white-space:nowrap;
-display:inline-flex;
-margin-left:auto;
-margin-right:auto;
+display:flex;
+justify-content:center;
 ">
 🏃 運動学：${kinesiology}問
 </a>
+
+</div>
+
 `;
 
 console.log("OK")

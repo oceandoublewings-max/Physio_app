@@ -24,7 +24,11 @@
 
 <% end %>
 
-
+<% if @question.qtype != "illustration" %>
+  <div style="text-align:center;">
+    <h2 id="score-text"></h2>
+  </div>
+<% end %>
 
 <script>
 let wrong = JSON.parse(localStorage.getItem("wrong")) || []

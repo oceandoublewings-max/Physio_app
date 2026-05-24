@@ -274,6 +274,8 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
   正答率
 </h3>
 
+<h4 id="score-text"></h4>
+
 </div>
 
 <% end %>
@@ -294,20 +296,19 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
 
 
 <script>
-  const score = Number(localStorage.getItem("score") || 0)
-  const total = Number(localStorage.getItem("total") || 0)
+const score = Number(localStorage.getItem("score")) || 0
+const total = Number(localStorage.getItem("total")) || 0
 
-  const percent = total > 0
-    ? Math.round((score / total) * 100)
-    : 0
+const rate = total > 0
+  ? Math.round((score / total) * 100)
+  : 0
 
- if ("<%= params[:qtype] %>" != "illustration") {
-  document.getElementById("score").innerText =
-    `正答率: ${percent}% (${score}/${total})`
+const scoreText = document.getElementById("score-text")
+
+if (scoreText) {
+  scoreText.innerHTML =
+    score + " / " + total + "問 (" + rate + "%)"
 }
-  // リセット
-  localStorage.removeItem("score")
-  localStorage.removeItem("total")
 </script>
 
 <% end %>

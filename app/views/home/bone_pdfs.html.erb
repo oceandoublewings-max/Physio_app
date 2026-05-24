@@ -2,10 +2,14 @@
 
 <div style="text-align:center;">
 
-  <p>
-    <a href="/pdfs/bone/bone_001.pdf" target="_blank">
-      📄 bone_001.pdf
-    </a>
-  </p>
+  <% (1..44).each do |i| %>
+
+    <p>
+      <a href="/pdfs/bone/bone_<%= "%03d" % i %>.pdf" target="_blank">
+        📄 bone_<%= "%03d" % i %>.pdf
+      </a>
+    </p>
+
+  <% end %>
 
 </div>

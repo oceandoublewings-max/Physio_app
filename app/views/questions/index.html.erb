@@ -187,7 +187,7 @@ function checkAnswer(choice) {
 
   if (choice.trim() === correctAnswer.trim()) {
     score += 1;
-    wrong = wrong.filter(id => Number(id) !== Number(questionId));
+    wrong = wrong.filter(q => q.id !== Number(questionId));
 
     document.getElementById("result").innerHTML =
       "<span style='color:green;font-weight:bold;'>正解！</span>" +

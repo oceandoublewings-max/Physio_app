@@ -14,8 +14,9 @@ get "/select", to: "questions#select"
 post "/questions/api_create", to: "questions#api_create"
 get 'illustrations', to: 'home#illustrations'
 get "/category", to: "home#category"
-get "/illustrations/bone", to: "home#bone"
-get "/illustrations/muscle", to: "home#muscle"
+get "/bone_pdfs", to: "home#bone_pdfs"
+get "/muscle_pdfs", to: "home#muscle_pdfs"
+get "/physiology_pdfs", to: "home#physiology_pdfs"
 get "/physiology", to: "home#physiology"
 get '/materials', to: 'questions#materials'
 get "/illustration_count", to: "questions#illustration_count"

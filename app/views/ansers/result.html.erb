@@ -21,14 +21,10 @@
     <%= @question.explanation %>
   </div>
 
-
 <% end %>
 
-<% if @question.qtype != "illustration" %>
-  <div style="text-align:center;">
-    <h2 id="score-text"></h2>
-  </div>
-<% end %>
+<h2 id="score-text"></h2>
+
 
 <script>
 let wrong = JSON.parse(localStorage.getItem("wrong")) || []
@@ -53,8 +49,8 @@ wrong = wrong.filter(q => q.id != questionId)
 
 localStorage.setItem("wrong", JSON.stringify(wrong))
 
-const score = localStorage.getItem("score") || 0
-const total = localStorage.getItem("total") || 0
+const score = Number(localStorage.getItem("score")) || 0
+const total = Number(localStorage.getItem("total")) || 0
 
 const rate = total > 0
   ? Math.round((score / total) * 100)

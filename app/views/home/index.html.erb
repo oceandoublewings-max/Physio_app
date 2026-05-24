@@ -126,7 +126,7 @@ function goWrong(category) {
   }
 
   window.location.href =
-    "/select?mode=wrong&ids=" + wrong.join(",") +
+    "/select?mode=wrong&ids=" + wrong.map(q => q.id).join(",") +
     "&category=" + category +
     "&qtype=choice&index=0";
 }

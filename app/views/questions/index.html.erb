@@ -97,23 +97,17 @@ font-size:18px;
 【解答欄】
 </p>
 
-<% if @question.answer_count.present? %>
-
-  <div style="
-    margin-top:25px;
-    font-size:22px;
-    line-height:2;
-    text-align:left;
-    display:inline-block;
-  ">
-
-    <% @question.answer_count.times do |i| %>
-      <p><%= i + 1 %> ____________</p>
-    <% end %>
-
-  </div>
-
-<% end %>
+<textarea placeholder="ここに解答を書こう"
+style="
+width:300px;
+height:120px;
+display:block;
+margin:20px auto;
+border:2px solid black;
+border-radius:10px;
+padding:10px;
+font-size:18px;
+"></textarea>
 
 
 

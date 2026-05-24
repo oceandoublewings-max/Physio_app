@@ -34,6 +34,7 @@ const questionId = <%= @question.id %>
 <% if @result.include?("不正解") %>
 
 if (!wrong.some(q => q.id == questionId)) {
+  console.log("SUB", "<%= @question.subcategory %>")
   wrong.push({
     id: questionId,
     category: "<%= @question.category %>",

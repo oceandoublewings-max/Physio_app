@@ -48,3 +48,19 @@ wrong = wrong.filter(q => q.id != questionId)
 
 localStorage.setItem("wrong", JSON.stringify(wrong))
 </script>
+
+<div style="text-align:center; margin-top:40px;">
+  <h2 id="score-text"></h2>
+</div>
+
+<script>
+  const score = localStorage.getItem("score") || 0
+  const total = localStorage.getItem("total") || 0
+
+  const rate = total > 0
+    ? Math.round((score / total) * 100)
+    : 0
+
+  document.getElementById("score-text").innerHTML =
+    `${score} / ${total}問 (${rate}%)`
+</script>

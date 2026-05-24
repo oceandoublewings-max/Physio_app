@@ -21,9 +21,10 @@
     <%= @question.explanation %>
   </div>
 
+
 <% end %>
 
-<h2 id="score-text"></h2>
+
 
 <script>
 let wrong = JSON.parse(localStorage.getItem("wrong")) || []
@@ -55,6 +56,10 @@ const rate = total > 0
   ? Math.round((score / total) * 100)
   : 0
 
-document.getElementById("score-text").innerHTML =
-  `${score} / ${total}問 (${rate}%)`
+const scoreText = document.getElementById("score-text")
+
+if (scoreText) {
+  scoreText.innerHTML =
+    score + " / " + total + "問 (" + rate + "%)"
+}
 </script>

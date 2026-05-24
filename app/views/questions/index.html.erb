@@ -198,7 +198,8 @@ function checkAnswer(choice) {
     if (!wrong.includes(Number(questionId))) {
     wrong.push({
   id: Number(questionId),
-  category: "<%= @question.category %>"
+  category: "<%= @question.category %>",
+  subcategory: "<%= @question.subcategory %>"
 });
     }
 

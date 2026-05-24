@@ -108,22 +108,22 @@
 <% end %>
 
 
-
-
 <!-- ↓ 問題数選択 -->
 <% if params[:qtype].present? || params[:mode] == "wrong" %>
 
 <h3 style="text-align:center; margin-top:30px;">問題数を選択</h3>
-
-<p style="
-font-size:13px;
-color:gray;
-text-align:right;
-margin-top:8px;
-margin-right:25%;
-">
-※イラスト問題は自己採点形式です
-</p>
+<% if params[:qtype] == "illustration" %>
+  <p style="
+    font-size:14px;
+    color:gray;
+    text-align:center;
+    margin-top:8px;
+    line-height:1.6;
+  ">
+    ※イラスト問題は自己採点形式です<br>
+    ノートや紙に書きながら学習してください
+  </p>
+<% end %>
 
 <div class="count-buttons illustration-count-buttons">
 

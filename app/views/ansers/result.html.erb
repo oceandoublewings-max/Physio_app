@@ -23,7 +23,9 @@
 
 <% end %>
 
-<<script>
+<h2 id="score-text"></h2>
+
+<script>
 let wrong = JSON.parse(localStorage.getItem("wrong")) || []
 
 const questionId = <%= @question.id %>
@@ -31,13 +33,11 @@ const questionId = <%= @question.id %>
 <% if @result.include?("不正解") %>
 
 if (!wrong.some(q => q.id == questionId)) {
-
   wrong.push({
     id: questionId,
     category: "<%= @question.category %>",
     subcategory: "<%= @question.subcategory %>"
   })
-
 }
 
 <% else %>
@@ -47,20 +47,14 @@ wrong = wrong.filter(q => q.id != questionId)
 <% end %>
 
 localStorage.setItem("wrong", JSON.stringify(wrong))
-</script>
 
-<div style="text-align:center; margin-top:40px;">
-  <h2 id="score-text"></h2>
-</div>
+const score = localStorage.getItem("score") || 0
+const total = localStorage.getItem("total") || 0
 
-<script>
-  const score = localStorage.getItem("score") || 0
-  const total = localStorage.getItem("total") || 0
+const rate = total > 0
+  ? Math.round((score / total) * 100)
+  : 0
 
-  const rate = total > 0
-    ? Math.round((score / total) * 100)
-    : 0
-
-  document.getElementById("score-text").innerHTML =
-    `${score} / ${total}問 (${rate}%)`
+document.getElementById("score-text").innerHTML =
+  `${score} / ${total}問 (${rate}%)`
 </script>

@@ -60,6 +60,8 @@ end
 if params[:ids].present?
   ids = params[:ids].split(",")
 
+  count = [count, ids.length].min
+
   # idsの順番どおりに問題を並べる
   @questions = ids.map { |id| Question.find_by(id: id) }.compact
 else

@@ -136,7 +136,7 @@ function goWrong(category) {
 
 window.location.href =
 "/questions?mode=wrong&ids=" +
-encodeURIComponent(filtered.join(",")) +
+encodeURIComponent(filtered.map(q => q.id).join(",")) +
 "&category=" + category +
 "&count=5&index=0";
 }

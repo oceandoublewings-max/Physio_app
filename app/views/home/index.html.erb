@@ -111,10 +111,7 @@ line-height:1.4;
 ">
 </div>
 
-
 </div>
-
-
 
 <script>
 function goWrong(category) {
@@ -126,9 +123,8 @@ function goWrong(category) {
   }
 
   window.location.href =
-    "/select?mode=wrong&ids=" + wrong.map(q => q.id).join(",") +
-    "&category=" + category +
-    "&qtype=choice&index=0";
+"/select?mode=wrong&ids=" + wrong.map(q => q.id).join(",") +
+"&qtype=all";
 }
 </script>
 

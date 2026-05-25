@@ -125,7 +125,7 @@ function goWrong(category) {
 
  const filtered = wrong.filter(q =>
   q.category === category
-);
+).map(q => q.id);
 
   console.log(filtered);
 
@@ -136,7 +136,7 @@ function goWrong(category) {
 
 window.location.href =
 "/questions?mode=wrong&ids=" +
-encodeURIComponent(filtered.map(q => q.id).join(",")) +
+encodeURIComponent(filtered.join(",")) +
 "&category=" + category +
 "&count=5&index=0";
 }

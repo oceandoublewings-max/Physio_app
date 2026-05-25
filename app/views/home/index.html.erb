@@ -123,8 +123,8 @@ function goWrong(category) {
   console.log(currentQtype);
   console.log(wrong);
 
-  const filtered = wrong.filter(q =>
-  q.category.includes(category)
+ const filtered = wrong.filter(q =>
+  q.category === category
 );
 
   console.log(filtered);
@@ -135,11 +135,10 @@ function goWrong(category) {
   }
 
   window.location.href =
-    "/questions?mode=wrong&ids=" +
-    encodeURIComponent(filtered.map(q => q.id).join(",")) +
-    "&qtype=" + currentQtype +
-    "&category=" + category +
-    "&count=5&index=0";
+"/questions?mode=wrong&ids=" +
+encodeURIComponent(filtered.map(q => q.id).join(",")) +
+"&category=" + category +
+"&count=5&index=0";
 }
 </script>
 

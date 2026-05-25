@@ -260,9 +260,7 @@ else
   bg_image = "/images/top/sad_skeleton.png"
 end
 %>
-<p>score: <%= @score %></p>
-<p>total: <%= @total %></p>
-<p>percent: <%= score_percent %></p>
+
 
 <div style="
   background-image: url('<%= bg_image %>');
@@ -323,9 +321,20 @@ const rate = total > 0
 const scoreText = document.getElementById("score-text")
 
 if (scoreText) {
-  scoreText.innerHTML =
-    score + " / " + total + "問 (" + rate + "%)"
+  scoreText.innerHTML = `${score} / ${total}問 (${rate}%)`
 }
+
+if (rate >= 80) {
+  document.body.style.backgroundImage =
+    "url('/images/top/happy_skeleton.png')";
+} else {
+  document.body.style.backgroundImage =
+    "url('/images/top/sad_skeleton.png')";
+}
+
+document.body.style.backgroundRepeat = "no-repeat"
+document.body.style.backgroundPosition = "center 60px"
+document.body.style.backgroundSize = "320px"
 </script>
 
 <% end %>

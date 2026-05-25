@@ -247,16 +247,29 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
 <% else %>
 
 <!-- 🔥 終了画面 -->
-<p>お疲れ様👏</p>
 
+<p>お疲れ様👏</p>
+<%
+  score_percent = (@score.to_f / @total * 100).round
+
+  if score_percent >= 80
+    bg_image = "/images/top/happy_skeleton.png"
+  else
+    bg_image = "/images/top/sad_skeleton.png"
+  end
+%>
 <div style="
   background:#f8fbff;
-  width:260px;
-  margin:30px auto;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-  text-align:center;
+background-image: url('<%= bg_image %>');
+background-size: 250px;
+background-repeat: no-repeat;
+background-position: center;
+width:260px;
+margin:30px auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+text-align:center;
 ">
   <% unless @qtype == "illustration" %>
 

@@ -62,8 +62,11 @@ if params[:ids].present?
 
   count = [count, ids.length].min
 
-  # idsの順番どおりに問題を並べる
-  @questions = ids.map { |id| Question.find_by(id: id) }.compact
+  @questions = base.where(
+  id: ids,
+  category: @category,
+  qtype: params[:qtype]
+).limit(count)
 else
   @questions = base.order("RANDOM()").limit(count)
 end
@@ -75,6 +78,8 @@ if @index >= @questions.length
 else
   @question = @questions[@index]
  puts @question.inspect
+ puts "CATEGORY: #{@question.category}"
+puts "QTYPE: #{@question.qtype}"
 end
 end
 

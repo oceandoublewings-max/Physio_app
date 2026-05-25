@@ -249,7 +249,7 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
 <!-- 🔥 終了画面 -->
 
 <p>お疲れ様👏</p>
-<p><%= score_percent %></p>
+
 <%
 score_percent =
 @total.to_i > 0 ? ((@score.to_f / @total.to_f) * 100).round : 0
@@ -260,6 +260,7 @@ else
   bg_image = "/images/top/sad_skeleton.png"
 end
 %>
+
 
 <div style="
   background-image: url('<%= bg_image %>');

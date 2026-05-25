@@ -124,8 +124,7 @@ function goWrong(category) {
   console.log(wrong);
 
   const filtered = wrong.filter(q =>
-  q.category.includes(category) &&
-  q.qtype === currentQtype
+  q.category.includes(category)
 );
 
   console.log(filtered);

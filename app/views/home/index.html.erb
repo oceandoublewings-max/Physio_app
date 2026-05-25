@@ -134,9 +134,9 @@ function goWrong(category) {
     return;
   }
 
-  window.location.href =
+window.location.href =
 "/questions?mode=wrong&ids=" +
-encodeURIComponent(filtered.map(q => q.id).join(",")) +
+encodeURIComponent(filtered.join(",")) +
 "&category=" + category +
 "&count=5&index=0";
 }

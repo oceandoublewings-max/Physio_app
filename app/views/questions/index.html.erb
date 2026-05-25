@@ -196,10 +196,11 @@ function checkAnswer(choice) {
       "</div>";
   } else {
     if (!wrong.some(q => q.id === Number(questionId))) {
-    wrong.push({
+  wrong.push({
   id: Number(questionId),
   category: "<%= @question.category %>",
-  subcategory: "<%= @question.subcategory %>"
+  subcategory: "<%= @question.subcategory %>",
+  qtype: "<%= @question.qtype %>"
 });
     }
 
@@ -340,7 +341,7 @@ if (qtype !== "illustration") {
   document.body.style.backgroundPosition = "center 60px";
   document.body.style.backgroundSize = "320px";
   }
-  
+
 </script>
 
 <% end %>

@@ -43,69 +43,7 @@
 </div>
 <% end %>
 
-<div style="
-  display:flex;
-  flex-direction:column;
-  gap:15px;
 
-  width:60%;
-  max-width:500px;
-
-  margin:0 auto;
-">
-
-  <!-- 全部 -->
- <a href="/select?category=<%= @category %>&qtype=all&mode=<%= params[:mode] %>"
-   style="text-decoration:none;">
-    <button class="img-btn <%= 'active' if params[:qtype] == 'all' %>">
-      全部（ランダム）
-    </button>
-  </a>
-
-  <!-- 4択 -->
-  <a href="/select?category=<%= @category %>&qtype=choice&mode=<%= params[:mode] %>"
-   style="text-decoration:none;">
-  <button class="img-btn <%= 'active' if params[:qtype] == 'choice' %>">
-      4択問題
-    </button>
-  </a>
-
-  <!-- ○× -->
-  <a href="/select?category=<%= @category %>&qtype=true_false&mode=<%= params[:mode] %>"
-   style="text-decoration:none;">
-    <button class="img-btn <%= 'active' if params[:qtype] == 'true_false' %>">
-      ○×問題
-    </button>
-  </a>
-
-  <!-- イラスト -->
-
-  <% if @category == "運動学" %>
-
-  <div style="
-  background:#ccc;
-  color:white;
-  padding:18px;
-  border-radius:999px;
-  text-align:center;
-  font-weight:bold;
-  opacity:0.7;
-  ">
-    イラスト問題（準備中）
-  </div>
-
-<% else %>
-
-  <a href="/select?category=<%= @category %>&qtype=illustration&mode=<%= params[:mode] %>"
-    style="text-decoration:none;">
-    
-    <button class="img-btn <%= 'active' if params[:qtype] == 'illustration' %>">
-      イラスト問題
-    </button>
-
-  </a>
-
-<% end %>
 
 
 <!-- ↓ 問題数選択 -->

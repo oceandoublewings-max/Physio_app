@@ -123,7 +123,7 @@ function goWrong(category) {
   }
 
   window.location.href =
-"/select?mode=wrong&ids=" + wrong.map(q => q.id).join(",") +
+"/select?mode=wrong&ids=" + encodeURIComponent(wrong.map(q => q.id).join(",")) +
 "&qtype=all";
 }
 </script>

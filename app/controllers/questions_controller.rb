@@ -44,7 +44,7 @@ end
 count = params[:count].to_i
 count = 10 if count == 0
 
-if params[:ids].blank? && params[:index].nil?
+if params[:ids].blank? && params[:mode] != "wrong" && params[:index].nil?
   ids = base.order("RANDOM()").limit(count).pluck(:id)
 
   redirect_to questions_path(

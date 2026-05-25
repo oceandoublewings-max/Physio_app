@@ -35,11 +35,12 @@ const questionId = <%= @question.id %>
 
 if (!wrong.some(q => q.id == questionId)) {
   console.log("SUB", "<%= @question.subcategory %>")
-  wrong.push({
-    id: questionId,
-    category: "<%= @question.category %>",
-    subcategory: "<%= @question.subcategory %>"
-  })
+wrong.push({
+  id: questionId,
+  category: "<%= @question.category %>",
+  subcategory: "<%= @question.subcategory %>",
+  qtype: "<%= @question.qtype %>"
+})
 }
 
 <% else %>

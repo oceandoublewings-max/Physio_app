@@ -117,14 +117,19 @@ line-height:1.4;
 function goWrong(category) {
   const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
-  if (wrong.length === 0) {
+  const currentQtype = "choice";
+
+  const filtered = wrong.filter(q => q.qtype === currentQtype);
+
+  if (filtered.length === 0) {
     alert("苦手問題がまだありません");
     return;
   }
 
   window.location.href =
-"/select?mode=wrong&ids=" + encodeURIComponent(wrong.map(q => q.id).join(",")) +
-"&qtype=all";
+    "/select?mode=wrong&ids=" +
+    encodeURIComponent(filtered.map(q => q.id).join(",")) +
+    "&qtype=" + currentQtype;
 }
 </script>
 

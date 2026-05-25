@@ -261,9 +261,9 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
 %>
 <div style="
   background-image: url('<%= bg_image %>');
-  background-size: contain;
+  background-size: 420px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   width:260px;
   margin:30px auto;
   padding:25px;
@@ -273,7 +273,7 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
   <% unless @qtype == "illustration" %>
 
 <div style="
-  background:#f8fbff;
+  background: rgba(255,255,255,0.75);
   width:220px;
   margin:20px auto;
   padding:15px;

@@ -250,8 +250,8 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
 
 <p>お疲れ様👏</p>
 <%
-  score_percent = (@score.to_f / @total * 100).round
-
+  score_percent = ((@score.to_f / @total.to_f) * 100).round
+  
   if score_percent >= 80
     bg_image = "/images/top/happy_skeleton.png"
   else

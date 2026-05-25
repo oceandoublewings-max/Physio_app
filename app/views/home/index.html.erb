@@ -121,6 +121,8 @@ function goWrong(category) {
 
   const filtered = wrong.filter(q => q.qtype === currentQtype);
 
+  console.log(filtered)
+
   if (filtered.length === 0) {
     alert("苦手問題がまだありません");
     return;

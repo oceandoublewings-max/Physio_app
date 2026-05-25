@@ -43,6 +43,7 @@
 </div>
 <% end %>
 
+<% unless params[:mode] == "wrong" %>
 <div style="
   display:flex;
   flex-direction:column;
@@ -105,7 +106,7 @@
 
   </a>
 
-
+<% end %>
 
 
 <!-- ↓ 問題数選択 -->

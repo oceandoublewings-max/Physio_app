@@ -68,7 +68,7 @@ if params[:ids].present?
   qtype: params[:qtype]
 ).limit(count)
 else
-  @questions = base.order("RANDOM()").limit(count)
+   @questions = []
 end
 
 @index = params[:index].to_i

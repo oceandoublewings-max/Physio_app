@@ -22,10 +22,13 @@ Rails.logger.debug "QTYPE: #{@qtype}"
 
 base = Question.all
 
-if @category.present?
-  base = base.where(category: @category)
+if @category == "解剖"
+  base = base.where(category: ["解剖", "解剖学"])
+elsif @category == "生理"
+  base = base.where(category: ["生理", "生理学"])
+elsif @category == "運動"
+  base = base.where(category: ["運動", "運動学"])
 end
-
 
 # 👇qtypeで絞り込み
 if @qtype == "choice"

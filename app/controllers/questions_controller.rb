@@ -65,9 +65,18 @@ if params[:ids].present?
 
   count = [count, ids.length].min
 
-  @questions = Question.where(id: ids).limit(count)
+  @questions = Question.where(id: ids)
 
-  return
+  if @category.present?
+    @questions = @questions.where(category: @category)
+  end
+
+  if @qtype.present? && @qtype != "all"
+    @questions = @questions.where(qtype: @qtype)
+  end
+
+  @questions = @questions.limit(count)
+
 else
   @questions = base.order("RANDOM()").limit(count)
 end

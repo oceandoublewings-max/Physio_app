@@ -233,8 +233,8 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
       "/questions?ids=<%= params[:ids] %>" +
       "&count=<%= params[:count] %>" +
       "&index=" + nextIndex +
-      "&category=<%= @category %>" +
-      "&qtype=<%= @qtype %>";
+      "&category=<%= params[:category] %>" +
+      "&qtype=<%= params[:qtype] %>";
       "&mode=wrong";
   }
 }, 1500);

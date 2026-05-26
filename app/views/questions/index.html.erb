@@ -230,12 +230,12 @@ localStorage.setItem("wrong", JSON.stringify(wrong));
   } else {
     // 次へ
     window.location.href =
-      "/questions?ids=<%= params[:ids] %>" +
-      "&count=<%= params[:count] %>" +
-      "&index=" + nextIndex +
-      "&category=<%= params[:category] %>" +
-      "&qtype=<%= params[:qtype] %>";
-      "&mode=wrong";
+    "/questions?ids=<%= params[:ids] %>" +
+    "&count=<%= params[:count] %>" +
+    "&index=" + nextIndex +
+    "&category=<%= params[:category] %>" +
+    "&qtype=<%= params[:qtype] %>" +
+    "&mode=wrong";
   }
 }, 1500);
 }

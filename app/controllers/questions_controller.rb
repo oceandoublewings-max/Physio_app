@@ -66,6 +66,8 @@ if params[:ids].present?
   count = [count, ids.length].min
 
   @questions = Question.where(id: ids).limit(count)
+
+  return
 else
   @questions = base.order("RANDOM()").limit(count)
 end

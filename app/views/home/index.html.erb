@@ -10,12 +10,7 @@ background-position:center center;
 background-repeat:no-repeat;
 ">
 
-  <h1 style="
-text-align:center;
-margin-bottom:10px;
-font-size:48px;
-font-weight:bold;
-">
+  <h1 style="text-align:center; margin-bottom:10px;">
   PT 国試対策 (1.2年生用)
 </h1>
 
@@ -129,7 +124,7 @@ function goWrong(category) {
   console.log(wrong);
 
  const filtered = wrong.filter(q =>
-  q.category === category
+  q.category.includes(category)
 ).map(q => q.id);
 
   console.log(filtered);

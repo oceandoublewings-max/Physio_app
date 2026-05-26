@@ -62,10 +62,13 @@ if params[:ids].present?
 
   count = [count, ids.length].min
 
-  @questions = base.where(
-  id: ids,
-  category: @category,
-).limit(count)
+@questions = base.where(id: ids)
+
+@questions = @questions.where(category: "解剖") if @category == "解剖"
+@questions = @questions.where(category: "生理") if @category == "生理"
+@questions = @questions.where(category: "運動") if @category == "運動"
+
+@questions = @questions.limit(count)
 else
   @questions = base.order("RANDOM()").limit(count) 
 end

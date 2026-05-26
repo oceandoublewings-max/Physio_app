@@ -67,7 +67,7 @@ if params[:ids].present?
   category: @category,
 ).limit(count)
 else
-   @questions = []
+  @questions = base.order("RANDOM()").limit(count) 
 end
 
 @index = params[:index].to_i

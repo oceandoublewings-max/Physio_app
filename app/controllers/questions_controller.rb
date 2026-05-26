@@ -64,9 +64,9 @@ if params[:ids].present?
 
 @questions = base.where(id: ids)
 
-@questions = @questions.where(category: "解剖") if @category == "解剖"
-@questions = @questions.where(category: "生理") if @category == "生理"
-@questions = @questions.where(category: "運動") if @category == "運動"
+@questions = @questions.where(category: ["解剖", "解剖学"]) if @category == "解剖"
+@questions = @questions.where(category: ["生理", "生理学"]) if @category == "生理"
+@questions = @questions.where(category: ["運動", "運動学"]) if @category == "運動"
 
 @questions = @questions.limit(count)
 else

@@ -77,13 +77,9 @@ if params[:ids].present?
 
   @questions = @questions
 
-else
-  if params[:mode] == "wrong"
-    @questions = []
-  else
+
     @questions = base.order("RANDOM()").limit(count)
-  end
-end
+
 
 @index = params[:index].to_i
 

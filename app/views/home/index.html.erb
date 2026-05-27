@@ -117,8 +117,7 @@ line-height:1.4;
 function goWrong(category) {
   const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
-  const currentQtype =
-  new URLSearchParams(window.location.search).get("qtype");
+  const currentQtype = "<%= params[:qtype] %>";
 
   console.log(currentQtype);
   console.log(wrong);

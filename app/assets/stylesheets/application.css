@@ -146,7 +146,27 @@ p {
 }
 
 .subcategory {
-  margin-bottom: 10px;
+  font-size: 18px;
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.question-content {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-count {
+  font-size: 16px;
+  color: #777;
   font-weight: bold;
 }
 

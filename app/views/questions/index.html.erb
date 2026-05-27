@@ -172,11 +172,14 @@ onclick="this.disabled=true; checkAnswer('false')">✕</button>
 <script>
 function checkAnswer(choice) {
 
-  if (window.answered) return;
+  if (window.answered === true) {
+    return;
+  }
+
   window.answered = true;
 
   document.querySelectorAll(".choice-btn").forEach(btn => {
-    btn.disabled = true;
+    btn.style.pointerEvents = "none";
   });
 
   const correctAnswer = "<%= j @question.answer.to_s %>";

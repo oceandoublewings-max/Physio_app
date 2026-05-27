@@ -63,8 +63,10 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 <div class="question-header">
   <% if @question.subcategory.present? %>
   <div class="subcategory">
-    <%= @question.subcategory %>
+    【<%= @question.subcategory %>】
   </div>
+<% end %>
+  
   
 
   <div class="question-count">
@@ -321,7 +323,7 @@ const qtype = "<%= @qtype %>"
 // ← これ追加
   document.body.style.backgroundImage = "none";
 
-if (qtype !== "illustration" && typeof rate !== "undefined") {
+if (qtype !== "illustration") {
 
   if (rate >= 80) {
     document.body.style.backgroundImage =

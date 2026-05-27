@@ -321,7 +321,7 @@ const qtype = "<%= @qtype %>"
 // ← これ追加
   document.body.style.backgroundImage = "none";
 
-if (qtype !== "illustration") {
+if (qtype !== "illustration" && typeof rate !== "undefined") {
 
   if (rate >= 80) {
     document.body.style.backgroundImage =

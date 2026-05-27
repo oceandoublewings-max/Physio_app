@@ -125,6 +125,7 @@ function goWrong(category) {
 
 const filtered = wrong.filter(q =>
   q.category === category &&
+  q.qtype === currentQtype &&
   q.qtype !== "illustration"
 ).map(q => q.id);
 

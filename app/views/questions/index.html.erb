@@ -151,9 +151,9 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 <div class="choices">
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
     <button class="choice-btn"
-      onclick="checkAnswer(<%= choice.to_json %>)"
-      <%= choice %>
-    </button>
+onclick="this.disabled=true; checkAnswer(<%= choice.to_json %>)">
+  <%= choice %>
+</button>
   <% end %>
 </div>
 
@@ -161,9 +161,10 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 <!-- ○× -->
 <button class="choice-btn"
-onclick="checkAnswer('true')">○</button>
+onclick="this.disabled=true; checkAnswer('true')">○</button>
+
 <button class="choice-btn"
-onclick="checkAnswer('false')">✕</button>
+onclick="this.disabled=true; checkAnswer('false')">✕</button>
 <% end %>
 
 <p id="result"></p>

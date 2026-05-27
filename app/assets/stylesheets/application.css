@@ -145,6 +145,11 @@ p {
   text-decoration: none;
 }
 
+.subcategory {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
 /* ========================================
    問題数ボタン
 ======================================== */

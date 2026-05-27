@@ -60,9 +60,13 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 </div>
 
 
-<p><%= @question.content %></p>
+<div class="subcategory">
+  【<%= @question.subcategory %>】
+</div>
 
-<p><%= @question.subcategory %></p>
+<div class="question-content">
+  <%= @question.content %>
+</div>
 
 <% if @question.qtype.to_s == "illustration" %>
 

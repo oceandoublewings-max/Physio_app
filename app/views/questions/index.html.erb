@@ -143,6 +143,7 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 <% elsif @question.qtype.to_s == "choice" %>
 
+
   <!-- 4択 -->
   <div class="choices">
     <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
@@ -163,6 +164,8 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 <script>
 function checkAnswer(choice) {
 
+if (window.answered) return;
+window.answered = true;
 
   const correctAnswer = "<%= j @question.answer.to_s %>";
   const explanation = "<%= j @question.explanation.to_s %>";

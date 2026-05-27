@@ -61,9 +61,11 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 
 <div class="question-header">
+  <% if @question.subcategory.present? %>
   <div class="subcategory">
-    【<%= @question.subcategory %>】
+    <%= @question.subcategory %>
   </div>
+  <% end %>
 
   <div class="question-count">
     <%= @index + 1 %> / <%= @questions.length %>
@@ -160,6 +162,10 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 <script>
 function checkAnswer(choice) {
+
+if (window.answered) return;
+  window.answered = true;
+
   const correctAnswer = "<%= j @question.answer.to_s %>";
   const explanation = "<%= j @question.explanation.to_s %>";
   const questionId = "<%= @question.id.to_s %>";

@@ -190,6 +190,7 @@ function checkAnswer(choice) {
 
   if (choice.trim() === correctAnswer.trim()) {
     score += 1;
+
     wrong = wrong.filter(q => q.id !== Number(questionId));
 
     document.getElementById("result").innerHTML =
@@ -197,20 +198,16 @@ function checkAnswer(choice) {
       "<div style='background:#e3f2fd;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
       explanation +
       "</div>";
+
   } else {
 
-  if ("<%= @question.qtype %>" === "illustration") {
-    localStorage.setItem("wrong", JSON.stringify(wrong));
-    return;
-  }
-
     if (!wrong.some(q => q.id === Number(questionId))) {
-  wrong.push({
-  id: Number(questionId),
-  category: "<%= @question.category %>",
-  subcategory: "<%= @question.subcategory %>",
-  qtype: "<%= @question.qtype %>"
-});
+      wrong.push({
+        id: Number(questionId),
+        category: "<%= @question.category %>",
+        subcategory: "<%= @question.subcategory %>",
+        qtype: "<%= @question.qtype %>"
+      });
     }
 
     document.getElementById("result").innerHTML =
@@ -221,17 +218,24 @@ function checkAnswer(choice) {
   }
 
   localStorage.setItem("score", score);
-localStorage.setItem("total", "<%= params[:count] %>");
-localStorage.setItem("wrong", JSON.stringify(wrong));
+  localStorage.setItem("total", "<%= params[:count] %>");
+  localStorage.setItem("wrong", JSON.stringify(wrong));
 
- function showAnswer() {
+  showAnswer();
+}
+
+function showAnswer() {
   const answerImage = document.getElementById("answer-image");
 
   if (answerImage) {
     answerImage.style.display = "block";
   }
 
-  document.getElementById("next-btn").style.display = "block";
+  const nextBtn = document.getElementById("next-btn");
+
+  if (nextBtn) {
+    nextBtn.style.display = "block";
+  }
 }
 </script>
 

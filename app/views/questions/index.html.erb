@@ -325,6 +325,8 @@ const qtype = "<%= @qtype %>"
 
 if (qtype !== "illustration") {
 
+  if (typeof rate === "undefined") return;
+
   if (rate >= 80) {
     document.body.style.backgroundImage =
       "url('/images/top/happy_skeleton.png')";

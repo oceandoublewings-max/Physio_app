@@ -75,7 +75,7 @@ if params[:ids].present?
     @questions = @questions.where(qtype: @qtype)
   end
 
-  @questions = @questions.limit(count)
+  @questions = @questions
 
 else
   @questions = base.order("RANDOM()").limit(count)

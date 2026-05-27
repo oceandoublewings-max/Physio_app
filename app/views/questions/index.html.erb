@@ -188,6 +188,12 @@ function checkAnswer(choice) {
       explanation +
       "</div>";
   } else {
+
+  if ("<%= @question.qtype %>" === "illustration") {
+    localStorage.setItem("wrong", JSON.stringify(wrong));
+    return;
+  }
+
     if (!wrong.some(q => q.id === Number(questionId))) {
   wrong.push({
   id: Number(questionId),

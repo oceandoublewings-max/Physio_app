@@ -169,6 +169,10 @@ function checkAnswer(choice) {
 if (window.answered) return;
 window.answered = true;
 
+document.querySelectorAll(".choice-btn").forEach(btn => {
+  btn.disabled = true;
+});
+
   const correctAnswer = "<%= j @question.answer.to_s %>";
   const explanation = "<%= j @question.explanation.to_s %>";
   const questionId = "<%= @question.id.to_s %>";

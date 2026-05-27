@@ -146,25 +146,26 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
   <!-- 4択 -->
   <div class="choices">
     <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
-      <button class="choice-btn" onclick="checkAnswer(<%= choice.to_json %>)"><%= choice %></button>
+      <button class="choice-btn" onclick="checkAnswer(this, <%= choice.to_json %>)"><%= choice %></button>
     <% end %>
   </div>
 
 <% else %>
 
   <!-- ○× -->
-  <button class="choice-btn" onclick="checkAnswer('true')">○</button>
-  <button class="choice-btn" onclick="checkAnswer('false')">×</button>
-
+  <button class="choice-btn" onclick="checkAnswer(this, 'true')">○</button>
+  <button class="choice-btn" onclick="checkAnswer(this, 'false')">×</button>
 <% end %>
 
 <p id="result"></p>
 
 <script>
-function checkAnswer(choice) {
+function checkAnswer(button, choice) {
 
 if (window.answered) return;
   window.answered = true;
+
+  button.style.backgroundColor = "#e3f2fd";
 
   const correctAnswer = "<%= j @question.answer.to_s %>";
   const explanation = "<%= j @question.explanation.to_s %>";

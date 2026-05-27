@@ -151,7 +151,7 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 <div class="choices">
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
     <button class="choice-btn"
-      onclick="this.onclick=null; checkAnswer(<%= choice.to_json %>)">
+      onclick="checkAnswer(<%= choice.to_json %>)"
       <%= choice %>
     </button>
   <% end %>
@@ -161,10 +161,9 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 <!-- ○× -->
 <button class="choice-btn"
-  onclick="this.onclick=null; checkAnswer('true')">○</button>
-
+onclick="checkAnswer('true')">○</button>
 <button class="choice-btn"
-  onclick="this.onclick=null; checkAnswer('false')">×</button>
+onclick="checkAnswer('false')">✕</button>
 <% end %>
 
 <p id="result"></p>
@@ -172,12 +171,12 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 <script>
 function checkAnswer(choice) {
 
-if (window.answered) return;
-window.answered = true;
+  if (window.answered) return;
+  window.answered = true;
 
-document.querySelectorAll(".choice-btn").forEach(btn => {
-  btn.disabled = true;
-});
+  document.querySelectorAll(".choice-btn").forEach(btn => {
+    btn.disabled = true;
+  });
 
   const correctAnswer = "<%= j @question.answer.to_s %>";
   const explanation = "<%= j @question.explanation.to_s %>";

@@ -21922,7 +21922,4936 @@ ill(
   subcategory: "動作分析",
   qtype: "true_false",
   explanation: "バランス能力評価に用いる"
+},
+
+{
+  content: "鎖骨骨折で損傷しやすい神経叢は？",
+  choices: "腕神経叢,腰神経叢,仙骨神経叢,頸神経叢",
+  answer: "腕神経叢",
+  explanation: "【国試ポイント】\n鎖骨下を腕神経叢が通過。\n上肢のしびれに注意。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "脛骨粗面に付着する筋は？",
+  choices: "大腿四頭筋,大臀筋,腓腹筋,前脛骨筋",
+  answer: "大腿四頭筋",
+  explanation: "【国試ポイント】\n膝蓋靭帯を介して付着。\nジャンパー膝関連。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "坐骨結節に主に起始を持つ筋群は？",
+  choices: "ハムストリングス,下腿三頭筋,腸腰筋,大腿四頭筋",
+  answer: "ハムストリングス",
+  explanation: "【国試ポイント】\n股関節伸展・膝屈曲。\n肉離れ頻出部位。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "腓骨神経麻痺で起こりやすい歩行は？",
+  choices: "鶏歩,分回し歩行,失調性歩行,痙性歩行",
+  answer: "鶏歩",
+  explanation: "【国試ポイント】\n下垂足が特徴。\n前脛骨筋麻痺と関連。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "肩甲棘の上方に存在する筋は？",
+  choices: "棘上筋,棘下筋,小円筋,肩甲下筋",
+  answer: "棘上筋",
+  explanation: "【国試ポイント】\n外転初動に重要。\n腱板損傷で頻出。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "大腿骨大転子に停止する筋として正しいのは？",
+  choices: "中臀筋,大腿直筋,薄筋,縫工筋",
+  answer: "中臀筋",
+  explanation: "【国試ポイント】\n股関節外転筋。\nトレンデレンブルグ徴候頻出。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "第2頸椎に存在する特徴的構造は？",
+  choices: "歯突起,横突孔,肋骨窩,仙骨角",
+  answer: "歯突起",
+  explanation: "【国試ポイント】\n環軸関節の回旋運動。\n軸椎＝歯突起は超頻出。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "肋骨と胸椎で構成される関節は？",
+  choices: "肋椎関節,肩鎖関節,仙腸関節,腕尺関節",
+  answer: "肋椎関節",
+  explanation: "【国試ポイント】\n呼吸運動に関与。\n胸郭運動とセットで覚える。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "踵骨に付着する代表的な腱は？",
+  choices: "アキレス腱,膝蓋腱,上腕二頭筋腱,腸脛靭帯",
+  answer: "アキレス腱",
+  explanation: "【国試ポイント】\n下腿三頭筋が付着。\n断裂はスポーツ障害で頻出。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "上腕骨外科頸骨折で損傷しやすい神経は？",
+  choices: "腋窩神経,尺骨神経,橈骨神経,正中神経",
+  answer: "腋窩神経",
+  explanation: "【国試ポイント】\n三角筋麻痺に注意。\n肩外転障害が出現。",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "choice"
+},
+
+{
+  content: "前脛骨筋の主な作用は？",
+  choices: "足関節背屈,足関節底屈,膝関節伸展,股関節外転",
+  answer: "足関節背屈",
+  explanation: "【国試ポイント】\n深腓骨神経支配。\n麻痺で下垂足が出現。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "中臀筋の主な作用は？",
+  choices: "股関節外転,股関節屈曲,膝関節伸展,足関節底屈",
+  answer: "股関節外転",
+  explanation: "【国試ポイント】\n上殿神経支配。\n歩行時の骨盤安定で重要。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "上腕三頭筋を支配する神経は？",
+  choices: "橈骨神経,正中神経,尺骨神経,筋皮神経",
+  answer: "橈骨神経",
+  explanation: "【国試ポイント】\n肘関節伸展筋。\n橈骨神経麻痺で下垂手。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "腓腹筋の主な作用は？",
+  choices: "足関節底屈,足関節背屈,股関節外転,膝関節伸展",
+  answer: "足関節底屈",
+  explanation: "【国試ポイント】\n脛骨神経支配。\nつま先立ちで重要。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "大腿四頭筋の停止部は？",
+  choices: "脛骨粗面,坐骨結節,大転子,踵骨",
+  answer: "脛骨粗面",
+  explanation: "【国試ポイント】\n膝蓋靭帯を介して停止。\n膝伸展の主動作筋。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "棘上筋の主な作用は？",
+  choices: "肩関節外転初動,肩関節内転,肘関節伸展,股関節屈曲",
+  answer: "肩関節外転初動",
+  explanation: "【国試ポイント】\n腱板筋群の1つ。\n損傷頻度が高い。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "大臀筋を支配する神経は？",
+  choices: "下殿神経,上殿神経,大腿神経,坐骨神経",
+  answer: "下殿神経",
+  explanation: "【国試ポイント】\n股関節伸展筋。\n立ち上がりで重要。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "前鋸筋を支配する神経は？",
+  choices: "長胸神経,肩甲上神経,腋窩神経,橈骨神経",
+  answer: "長胸神経",
+  explanation: "【国試ポイント】\n麻痺で翼状肩甲。\n肩甲骨固定に重要。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "ハムストリングスの主な作用は？",
+  choices: "膝関節屈曲,膝関節伸展,肩関節屈曲,足関節背屈",
+  answer: "膝関節屈曲",
+  explanation: "【国試ポイント】\n坐骨結節起始が多い。\n肉離れ頻出。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "小円筋を支配する神経は？",
+  choices: "腋窩神経,橈骨神経,尺骨神経,正中神経",
+  answer: "腋窩神経",
+  explanation: "【国試ポイント】\n肩関節外旋に作用。\n腱板筋群で頻出。",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "choice"
+},
+
+{
+  content: "下垂手を起こしやすい神経麻痺は？",
+  choices: "橈骨神経,正中神経,尺骨神経,腋窩神経",
+  answer: "橈骨神経",
+  explanation: "【国試ポイント】\n下垂手＝橈骨神経麻痺。\n上腕骨骨幹部骨折と関連。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "猿手を起こしやすい神経麻痺は？",
+  choices: "正中神経,尺骨神経,橈骨神経,筋皮神経",
+  answer: "正中神経",
+  explanation: "【国試ポイント】\n母指対立障害が特徴。\n手根管症候群が頻出。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "鷲手を起こしやすい神経麻痺は？",
+  choices: "尺骨神経,正中神経,橈骨神経,腋窩神経",
+  answer: "尺骨神経",
+  explanation: "【国試ポイント】\n骨間筋麻痺が特徴。\n肘部管症候群で頻出。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "三角筋を支配する神経は？",
+  choices: "腋窩神経,橈骨神経,正中神経,尺骨神経",
+  answer: "腋窩神経",
+  explanation: "【国試ポイント】\n肩関節外転に重要。\n外科頸骨折と関連。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "前脛骨筋を支配する神経は？",
+  choices: "深腓骨神経,脛骨神経,坐骨神経,大腿神経",
+  answer: "深腓骨神経",
+  explanation: "【国試ポイント】\n麻痺で下垂足。\n鶏歩が特徴。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "横隔膜を支配する神経は？",
+  choices: "横隔神経,迷走神経,副神経,舌下神経",
+  answer: "横隔神経",
+  explanation: "【国試ポイント】\nC3〜5由来。\n呼吸運動で重要。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "僧帽筋を支配する脳神経は？",
+  choices: "副神経,顔面神経,迷走神経,三叉神経",
+  answer: "副神経",
+  explanation: "【国試ポイント】\n第11脳神経。\n肩挙上障害に注意。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "顔面表情筋を支配する神経は？",
+  choices: "顔面神経,三叉神経,舌咽神経,視神経",
+  answer: "顔面神経",
+  explanation: "【国試ポイント】\nベル麻痺で頻出。\n第7脳神経。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "下腿三頭筋を支配する神経は？",
+  choices: "脛骨神経,深腓骨神経,浅腓骨神経,閉鎖神経",
+  answer: "脛骨神経",
+  explanation: "【国試ポイント】\n足関節底屈筋群。\nアキレス腱反射と関連。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "大腿四頭筋を支配する神経は？",
+  choices: "大腿神経,閉鎖神経,坐骨神経,脛骨神経",
+  answer: "大腿神経",
+  explanation: "【国試ポイント】\n膝伸展に重要。\n膝蓋腱反射と関連。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "choice"
+},
+
+{
+  content: "インスリンを分泌する臓器は？",
+  choices: "膵臓,肝臓,脾臓,腎臓",
+  answer: "膵臓",
+  explanation: "【国試ポイント】\nランゲルハンス島β細胞。\n糖尿病と関連頻出。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "胆汁を産生する臓器は？",
+  choices: "肝臓,胆嚢,膵臓,脾臓",
+  answer: "肝臓",
+  explanation: "【国試ポイント】\n胆嚢は貯蔵を担当。\n脂肪消化で重要。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "尿を一時的に貯留する臓器は？",
+  choices: "膀胱,腎臓,尿管,尿道",
+  answer: "膀胱",
+  explanation: "【国試ポイント】\n排尿反射と関連。\n骨盤底筋も重要。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "ガス交換を行う臓器は？",
+  choices: "肺,肝臓,胃,脾臓",
+  answer: "肺",
+  explanation: "【国試ポイント】\n肺胞で酸素交換。\nCOPDが頻出。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "主に水分吸収を行う臓器は？",
+  choices: "大腸,小腸,胃,食道",
+  answer: "大腸",
+  explanation: "【国試ポイント】\n便形成に関与。\n脱水とも関連。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "胃液を分泌する臓器は？",
+  choices: "胃,小腸,肝臓,脾臓",
+  answer: "胃",
+  explanation: "【国試ポイント】\nペプシンを含む。\n胃潰瘍が頻出。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "血液をろ過し尿を生成する臓器は？",
+  choices: "腎臓,膀胱,肝臓,胆嚢",
+  answer: "腎臓",
+  explanation: "【国試ポイント】\nネフロンが基本単位。\n腎不全と関連。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "食物を胃へ送る管状器官は？",
+  choices: "食道,気管,尿管,十二指腸",
+  answer: "食道",
+  explanation: "【国試ポイント】\n蠕動運動で輸送。\n誤嚥と関連。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "免疫機能にも関与する臓器は？",
+  choices: "脾臓,胃,膀胱,胆嚢",
+  answer: "脾臓",
+  explanation: "【国試ポイント】\nリンパ系臓器。\n血液浄化も行う。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "栄養吸収を主に行う臓器は？",
+  choices: "小腸,大腸,胃,食道",
+  answer: "小腸",
+  explanation: "【国試ポイント】\n絨毛で吸収を行う。\n消化吸収の中心。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "choice"
+},
+
+{
+  content: "心臓から全身へ血液を送る最大の動脈は？",
+  choices: "大動脈,肺動脈,冠動脈,鎖骨下動脈",
+  answer: "大動脈",
+  explanation: "【国試ポイント】\n左心室から起始。\n動脈瘤が頻出。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "心筋へ血液を送る血管は？",
+  choices: "冠動脈,肺静脈,大腿動脈,門脈",
+  answer: "冠動脈",
+  explanation: "【国試ポイント】\n閉塞で心筋梗塞。\n狭心症も重要。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "肺へ静脈血を送る血管は？",
+  choices: "肺動脈,肺静脈,大動脈,上大静脈",
+  answer: "肺動脈",
+  explanation: "【国試ポイント】\n例外的に静脈血が流れる。\n右心室から分岐。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "肺から左心房へ戻る血管は？",
+  choices: "肺静脈,肺動脈,冠静脈,門脈",
+  answer: "肺静脈",
+  explanation: "【国試ポイント】\n例外的に動脈血が流れる。\n酸素化血液を運ぶ。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "下肢の触診でよく確認する動脈は？",
+  choices: "足背動脈,肺動脈,腋窩動脈,脳底動脈",
+  answer: "足背動脈",
+  explanation: "【国試ポイント】\n末梢循環評価で重要。\nPADと関連。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "上肢で血圧測定時に使用される動脈は？",
+  choices: "上腕動脈,橈骨動脈,尺骨動脈,大腿動脈",
+  answer: "上腕動脈",
+  explanation: "【国試ポイント】\n肘窩付近で測定。\n聴診法で頻出。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "門脈が血液を運ぶ先は？",
+  choices: "肝臓,肺,脾臓,腎臓",
+  answer: "肝臓",
+  explanation: "【国試ポイント】\n消化管から肝臓へ流入。\n門脈圧亢進が重要。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "脳へ血液を送る主要動脈は？",
+  choices: "内頸動脈,大腿動脈,腋窩動脈,肺静脈",
+  answer: "内頸動脈",
+  explanation: "【国試ポイント】\n脳梗塞と関連。\n頸動脈触診も頻出。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "大腿三角を通る主要動脈は？",
+  choices: "大腿動脈,膝窩動脈,腓骨動脈,肺動脈",
+  answer: "大腿動脈",
+  explanation: "【国試ポイント】\n拍動触知部位として重要。\n止血部位でも頻出。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "下大静脈が流入する部位は？",
+  choices: "右心房,左心房,右心室,左心室",
+  answer: "右心房",
+  explanation: "【国試ポイント】\n全身静脈血が戻る。\n上大静脈も同部位へ流入。",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "choice"
+},
+
+{
+  content: "脛骨は腓骨のどちら側に位置する？",
+  choices: "内側,外側,後方,前方",
+  answer: "内側",
+  explanation: "【国試ポイント】\n脛骨＝内側、腓骨＝外側。\n断面問題で頻出。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "橈骨は尺骨のどちら側に位置する？",
+  choices: "外側,内側,後方,中央",
+  answer: "外側",
+  explanation: "【国試ポイント】\n橈骨＝母指側。\n前腕断面で重要。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "心臓は肺に対してどの位置にある？",
+  choices: "内側,外側,後方,下方",
+  answer: "内側",
+  explanation: "【国試ポイント】\n縦隔に位置する。\n胸部断面で頻出。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "気管は食道に対してどの位置にある？",
+  choices: "前方,後方,外側,下方",
+  answer: "前方",
+  explanation: "【国試ポイント】\n誤嚥問題で関連。\n頸部断面で重要。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "膝窩動脈は膝窩でどの筋より深層にある？",
+  choices: "脛骨神経,皮膚,大伏在静脈,腓腹筋",
+  answer: "脛骨神経",
+  explanation: "【国試ポイント】\n膝窩は神経→静脈→動脈。\nNVAを覚える。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "大腿三角で最も内側に位置するのは？",
+  choices: "大腿静脈,大腿動脈,大腿神経,縫工筋",
+  answer: "大腿静脈",
+  explanation: "【国試ポイント】\n外側からNAV。\n大腿三角は超頻出。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "肺尖は鎖骨に対してどの位置まで達する？",
+  choices: "上方,下方,内側,後方",
+  answer: "上方",
+  explanation: "【国試ポイント】\n鎖骨上まで達する。\n気胸問題で重要。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "坐骨神経は大臀筋に対してどの位置を走行する？",
+  choices: "深層,浅層,前方,内側",
+  answer: "深層",
+  explanation: "【国試ポイント】\n殿部筋注で重要。\n神経損傷に注意。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "腎臓は腹膜に対してどの位置にある？",
+  choices: "後腹膜,腹膜内,腹腔内,骨盤内",
+  answer: "後腹膜",
+  explanation: "【国試ポイント】\n後腹膜臓器は頻出。\n尿管もセットで覚える。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "脊髄は椎体に対してどの位置に存在する？",
+  choices: "後方,前方,外側,下方",
+  answer: "後方",
+  explanation: "【国試ポイント】\n脊柱管内を走行。\n椎間板ヘルニアと関連。",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "choice"
+},
+
+{
+  content: "大腿骨は人体で最も長い骨である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n荷重支持で重要。\n大腿骨頸部骨折が頻出。"
+},
+
+{
+  content: "脛骨は下腿の内側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脛骨＝内側。\n腓骨＝外側を区別する。"
+},
+
+{
+  content: "膝蓋骨は人体最大の種子骨である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n大腿四頭筋腱内に存在。\n膝伸展効率を高める。"
+},
+
+{
+  content: "橈骨は母指側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n前腕断面で頻出。\n尺骨＝小指側。"
+},
+
+{
+  content: "第2頸椎には歯突起が存在する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n軸椎の特徴。\n回旋運動に重要。"
+},
+
+{
+  content: "踵骨にはアキレス腱が付着する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n下腿三頭筋が停止。\nアキレス腱断裂頻出。"
+},
+
+{
+  content: "肩甲骨の関節窩は上腕骨と関節を作る",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肩関節を構成。\n脱臼しやすい関節。"
+},
+
+{
+  content: "坐骨結節はハムストリングスの起始部である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n股関節伸展で重要。\n肉離れ頻出。"
+},
+
+{
+  content: "上腕骨外科頸骨折では腋窩神経損傷に注意する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n三角筋麻痺が出現。\n肩外転障害を生じる。"
+},
+
+{
+  content: "肋骨は胸郭を構成する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n呼吸運動に関与。\n胸椎とも関節を作る。"
+},
+
+{
+  content: "尺骨は母指側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n尺骨＝小指側。\n橈骨＝母指側。"
+},
+
+{
+  content: "膝蓋骨は長骨に分類される",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n種子骨に分類。\n人体最大の種子骨。"
+},
+
+{
+  content: "脛骨は下腿の外側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脛骨＝内側。\n外側は腓骨。"
+},
+
+{
+  content: "第1頸椎には歯突起が存在する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n歯突起は第2頸椎。\n第1頸椎＝環椎。"
+},
+
+{
+  content: "踵骨には膝蓋靭帯が付着する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "骨",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nアキレス腱が付着。\n膝蓋靭帯は脛骨粗面。"
+},
+
+{
+  content: "前脛骨筋は足関節背屈に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n深腓骨神経支配。\n麻痺で下垂足。"
+},
+
+{
+  content: "中臀筋は股関節外転に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n上殿神経支配。\nトレンデレンブルグ徴候頻出。"
+},
+
+{
+  content: "上腕三頭筋は肘関節伸展に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n橈骨神経支配。\n下垂手と関連。"
+},
+
+{
+  content: "腓腹筋は足関節底屈に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脛骨神経支配。\nつま先立ちで重要。"
+},
+
+{
+  content: "棘上筋は肩関節外転初動に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n腱板筋群の1つ。\n損傷頻度が高い。"
+},
+
+{
+  content: "前鋸筋麻痺では翼状肩甲が出現する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n長胸神経支配。\n肩甲骨固定で重要。"
+},
+
+{
+  content: "ハムストリングスは膝関節屈曲に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n坐骨結節起始が多い。\n肉離れ頻出。"
+},
+
+{
+  content: "大臀筋は股関節伸展に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n下殿神経支配。\n立ち上がりで重要。"
+},
+
+{
+  content: "三角筋は肩関節外転に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n腋窩神経支配。\n外科頸骨折と関連。"
+},
+
+{
+  content: "大腿四頭筋は膝関節伸展に働く",
+  answer: "true",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n大腿神経支配。\n膝蓋腱反射と関連。"
+},
+
+{
+  content: "前脛骨筋は足関節底屈に働く",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n前脛骨筋＝背屈。\n下垂足で頻出。"
+},
+
+{
+  content: "中臀筋は股関節内転に働く",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n主作用は外転。\n歩行安定に重要。"
+},
+
+{
+  content: "腓腹筋は足関節背屈に働く",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n足関節底屈筋。\nつま先立ちで働く。"
+},
+
+{
+  content: "前鋸筋は橈骨神経支配である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n長胸神経支配。\n翼状肩甲と関連。"
+},
+
+{
+  content: "大腿四頭筋は膝関節屈曲に働く",
+  answer: "false",
+  category: "解剖",
+  subcategory: "筋肉",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n膝関節伸展筋。\n大腿神経支配。"
+},
+
+{
+  content: "橈骨神経麻痺では下垂手がみられる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n手関節背屈障害が特徴。\n上腕骨骨幹部骨折と関連。"
+},
+
+{
+  content: "正中神経麻痺では猿手がみられる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n母指対立障害が特徴。\n手根管症候群頻出。"
+},
+
+{
+  content: "尺骨神経麻痺では鷲手がみられる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n骨間筋麻痺が特徴。\n肘部管症候群と関連。"
+},
+
+{
+  content: "腋窩神経は三角筋を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肩外転に重要。\n外科頸骨折で損傷しやすい。"
+},
+
+{
+  content: "深腓骨神経麻痺では下垂足が出現する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n前脛骨筋麻痺が特徴。\n鶏歩がみられる。"
+},
+
+{
+  content: "横隔神経は横隔膜を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nC3〜5由来。\n呼吸運動で重要。"
+},
+
+{
+  content: "副神経は僧帽筋を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n第11脳神経。\n肩挙上障害が出現。"
+},
+
+{
+  content: "顔面神経は表情筋を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nベル麻痺で頻出。\n第7脳神経。"
+},
+
+{
+  content: "脛骨神経は下腿三頭筋を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n足関節底屈筋群。\nアキレス腱反射と関連。"
+},
+
+{
+  content: "大腿神経は大腿四頭筋を支配する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n膝関節伸展で重要。\n膝蓋腱反射と関連。"
+},
+
+{
+  content: "橈骨神経麻痺では猿手がみられる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n猿手＝正中神経麻痺。\n橈骨神経＝下垂手。"
+},
+
+{
+  content: "尺骨神経麻痺では下垂手がみられる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n下垂手＝橈骨神経麻痺。\n尺骨神経＝鷲手。"
+},
+
+{
+  content: "横隔神経は上腕二頭筋を支配する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n横隔膜を支配。\n呼吸運動に重要。"
+},
+
+{
+  content: "顔面神経は咀嚼筋を支配する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n咀嚼筋＝三叉神経。\n顔面神経＝表情筋。"
+},
+
+{
+  content: "大腿神経はハムストリングスを支配する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nハムストリングスは坐骨神経。\n大腿神経＝大腿四頭筋。"
+},
+
+{
+  content: "膵臓はインスリンを分泌する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nβ細胞から分泌。\n糖尿病と関連頻出。"
+},
+
+{
+  content: "肝臓は胆汁を産生する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胆嚢は貯蔵を担当。\n脂肪消化で重要。"
+},
+
+{
+  content: "膀胱は尿を一時的に貯留する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n排尿反射と関連。\n骨盤底筋も重要。"
+},
+
+{
+  content: "肺はガス交換を行う臓器である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肺胞で酸素交換。\nCOPDが頻出。"
+},
+
+{
+  content: "大腸は主に水分吸収を行う",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n便形成に関与。\n脱水とも関連。"
+},
+
+{
+  content: "胃は胃液を分泌する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nペプシンを含む。\n胃潰瘍が頻出。"
+},
+
+{
+  content: "腎臓は血液をろ過して尿を生成する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nネフロンが基本単位。\n腎不全と関連。"
+},
+
+{
+  content: "食道は蠕動運動で食物を運ぶ",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胃へ食物を送る。\n誤嚥と関連。"
+},
+
+{
+  content: "脾臓は免疫機能に関与する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nリンパ系臓器。\n血液浄化も行う。"
+},
+
+{
+  content: "小腸は栄養吸収の中心である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n絨毛で吸収を行う。\n消化吸収で重要。"
+},
+
+{
+  content: "肺は尿を生成する臓器である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n尿生成＝腎臓。\n肺はガス交換を行う。"
+},
+
+{
+  content: "胆嚢は胆汁を産生する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胆汁産生＝肝臓。\n胆嚢は貯蔵を行う。"
+},
+
+{
+  content: "胃は主に水分吸収を行う",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n水分吸収＝大腸。\n胃は消化を担当。"
+},
+
+{
+  content: "膵臓は肺胞を持つ臓器である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肺胞は肺に存在。\n膵臓は内分泌・外分泌。"
+},
+
+{
+  content: "小腸は便を貯留する臓器である",
+  answer: "false",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n便形成は大腸。\n小腸は栄養吸収中心。"
+},
+
+{
+  content: "大動脈は左心室から起始する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n全身へ血液を送る最大動脈。\n動脈瘤が頻出。"
+},
+
+{
+  content: "冠動脈は心筋へ血液を送る",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n閉塞で心筋梗塞。\n狭心症も重要。"
+},
+
+{
+  content: "肺動脈には静脈血が流れる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n右心室から肺へ流れる。\n例外血管として頻出。"
+},
+
+{
+  content: "肺静脈には動脈血が流れる",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n左心房へ戻る。\n酸素化血液を運ぶ。"
+},
+
+{
+  content: "足背動脈は末梢循環評価で触診される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nPAD評価で重要。\n下肢血流確認に使う。"
+},
+
+{
+  content: "上腕動脈は血圧測定で利用される",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肘窩付近で測定。\n聴診法で頻出。"
+},
+
+{
+  content: "門脈は消化管から肝臓へ血液を運ぶ",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n門脈圧亢進が重要。\n肝硬変と関連。"
+},
+
+{
+  content: "内頸動脈は脳へ血液を送る",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脳梗塞と関連。\n頸動脈触診も重要。"
+},
+
+{
+  content: "大腿動脈は大腿三角を通過する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n拍動確認部位。\n止血部位でも頻出。"
+},
+
+{
+  content: "下大静脈は右心房へ流入する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n全身静脈血が戻る。\n上大静脈も同様。"
+},
+
+{
+  content: "肺動脈には動脈血が流れる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肺動脈＝静脈血。\n例外として頻出。"
+},
+
+{
+  content: "肺静脈には静脈血が流れる",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肺静脈＝動脈血。\n左心房へ戻る。"
+},
+
+{
+  content: "冠動脈は肺へ血液を送る",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n冠動脈＝心筋栄養血管。\n閉塞で心筋梗塞。"
+},
+
+{
+  content: "門脈は腎臓へ直接流入する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n門脈は肝臓へ流入。\n消化管血流を集める。"
+},
+
+{
+  content: "下大静脈は左心房へ流入する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "血管",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n右心房へ流入。\n全身静脈血が戻る。"
+},
+
+{
+  content: "脛骨は腓骨の内側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脛骨＝内側。\n腓骨＝外側で頻出。"
+},
+
+{
+  content: "橈骨は尺骨の外側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n橈骨＝母指側。\n前腕断面で重要。"
+},
+
+{
+  content: "心臓は肺の内側に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n縦隔に存在。\n胸部断面で頻出。"
+},
+
+{
+  content: "気管は食道の前方に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n誤嚥問題で関連。\n頸部断面で重要。"
+},
+
+{
+  content: "膝窩では脛骨神経が最も浅層にある",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n膝窩は神経→静脈→動脈。\nNVAで覚える。"
+},
+
+{
+  content: "大腿三角では大腿神経が最も外側にある",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n外側からNAV。\n超頻出ポイント。"
+},
+
+{
+  content: "肺尖は鎖骨より上方まで達する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n気胸問題で重要。\n鎖骨上窩と関連。"
+},
+
+{
+  content: "坐骨神経は大臀筋の深層を走行する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n殿部筋注で重要。\n神経損傷に注意。"
+},
+
+{
+  content: "腎臓は後腹膜臓器である",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n尿管も後腹膜。\n国試頻出。"
+},
+
+{
+  content: "脊髄は椎体の後方に位置する",
+  answer: "true",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脊柱管内を走行。\nヘルニア問題で重要。"
+},
+
+{
+  content: "脛骨は腓骨の外側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脛骨＝内側。\n腓骨＝外側。"
+},
+
+{
+  content: "気管は食道の後方に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n気管＝前方。\n食道＝後方。"
+},
+
+{
+  content: "大腿三角では大腿静脈が最も外側にある",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n外側からNAV。\n静脈は中央寄り。"
+},
+
+{
+  content: "心臓は肺の外側に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n心臓は縦隔。\n肺の内側に存在。"
+},
+
+{
+  content: "脊髄は椎体の前方に位置する",
+  answer: "false",
+  category: "解剖",
+  subcategory: "断面・位置関係",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脊柱管内を走行。\n椎体の後方にある。"
+},
+
+{
+  content: "活動電位の発生に最も重要なイオンは？",
+  choices: "Na⁺,K⁺,Ca²⁺,Cl⁻",
+  answer: "Na⁺",
+  explanation: "【国試ポイント】\n脱分極でNa⁺流入。\n活動電位の基本。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "安静時膜電位の維持に重要なイオンは？",
+  choices: "K⁺,Na⁺,Ca²⁺,Mg²⁺",
+  answer: "K⁺",
+  explanation: "【国試ポイント】\n細胞内はK⁺が多い。\n静止膜電位で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "神経伝導速度を高める構造は？",
+  choices: "髄鞘,樹状突起,シナプス,核",
+  answer: "髄鞘",
+  explanation: "【国試ポイント】\n跳躍伝導を行う。\n脱髄疾患が重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "中枢神経系で髄鞘を形成する細胞は？",
+  choices: "オリゴデンドロサイト,シュワン細胞,星状膠細胞,ミクログリア",
+  answer: "オリゴデンドロサイト",
+  explanation: "【国試ポイント】\n末梢はシュワン細胞。\n国試頻出比較。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "神経伝達物質として代表的なのは？",
+  choices: "アセチルコリン,インスリン,ヘモグロビン,ペプシン",
+  answer: "アセチルコリン",
+  explanation: "【国試ポイント】\n神経筋接合部で作用。\n重症筋無力症関連。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "交感神経刺激で起こりやすい反応は？",
+  choices: "心拍数増加,縮瞳,消化促進,排尿促進",
+  answer: "心拍数増加",
+  explanation: "【国試ポイント】\n闘争・逃走反応。\n血圧上昇も重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "副交感神経刺激で起こりやすい反応は？",
+  choices: "消化促進,心拍数増加,散瞳,発汗増加",
+  answer: "消化促進",
+  explanation: "【国試ポイント】\n休息と消化。\n迷走神経が重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "膝蓋腱反射の中枢レベルは？",
+  choices: "L2〜4,L5〜S1,C5〜6,C7〜8",
+  answer: "L2〜4",
+  explanation: "【国試ポイント】\n大腿神経支配。\n深部腱反射で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "アキレス腱反射の中枢レベルは？",
+  choices: "S1〜2,L2〜4,C5〜6,T1〜2",
+  answer: "S1〜2",
+  explanation: "【国試ポイント】\n脛骨神経支配。\n下腿三頭筋と関連。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "脳幹に存在し呼吸調節へ重要な部位は？",
+  choices: "延髄,小脳,視床,基底核",
+  answer: "延髄",
+  explanation: "【国試ポイント】\n呼吸・循環中枢を含む。\n生命維持で重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋収縮に直接必要なイオンは？",
+  choices: "Ca²⁺,Na⁺,K⁺,Cl⁻",
+  answer: "Ca²⁺",
+  explanation: "【国試ポイント】\nカルシウムで収縮開始。\n筋小胞体から放出される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "骨格筋収縮のエネルギー源として直接使われるのは？",
+  choices: "ATP,乳酸,グリコーゲン,脂肪酸",
+  answer: "ATP",
+  explanation: "【国試ポイント】\n筋収縮の直接エネルギー。\nATP分解で力発生。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋収縮で細いフィラメントを構成するタンパクは？",
+  choices: "アクチン,ミオシン,チューブリン,コラーゲン",
+  answer: "アクチン",
+  explanation: "【国試ポイント】\n細いフィラメント＝アクチン。\n太いフィラメント＝ミオシン。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋収縮で太いフィラメントを構成するタンパクは？",
+  choices: "ミオシン,アクチン,エラスチン,ケラチン",
+  answer: "ミオシン",
+  explanation: "【国試ポイント】\nクロスブリッジ形成。\n筋収縮機構で重要。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "速筋線維の特徴として正しいのは？",
+  choices: "疲労しやすい,持久力が高い,ミトコンドリアが多い,赤色が強い",
+  answer: "疲労しやすい",
+  explanation: "【国試ポイント】\n瞬発力に優れる。\n白筋とも呼ばれる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "遅筋線維の特徴として正しいのは？",
+  choices: "持久力が高い,疲労しやすい,白色が強い,瞬発力が高い",
+  answer: "持久力が高い",
+  explanation: "【国試ポイント】\n赤筋とも呼ばれる。\nミトコンドリアが多い。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "筋紡錘が主に感知するのは？",
+  choices: "筋の伸張,痛み,温度,血流",
+  answer: "筋の伸張",
+  explanation: "【国試ポイント】\n伸張反射に関与。\n深部感覚で重要。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "ゴルジ腱器官が存在する部位は？",
+  choices: "腱,筋腹,骨膜,皮膚",
+  answer: "腱",
+  explanation: "【国試ポイント】\n筋張力を感知。\n自己抑制に関与。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "等尺性収縮の特徴は？",
+  choices: "筋長が変化しない,筋長が短縮する,筋長が伸張する,関節運動が大きい",
+  answer: "筋長が変化しない",
+  explanation: "【国試ポイント】\n姿勢保持で重要。\n関節角度は一定。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "遠心性収縮の特徴は？",
+  choices: "筋が伸びながら収縮する,筋が短縮する,筋活動がない,関節固定のみ行う",
+  answer: "筋が伸びながら収縮する",
+  explanation: "【国試ポイント】\n階段降段で重要。\nブレーキ作用を行う。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "choice"
+},
+
+{
+  content: "心拍数を増加させる自律神経は？",
+  choices: "交感神経,副交感神経,体性神経,迷走神経",
+  answer: "交感神経",
+  explanation: "【国試ポイント】\n心拍数・血圧を上昇。\n闘争・逃走反応で重要。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "副交感神経刺激で起こる変化は？",
+  choices: "心拍数低下,血圧上昇,瞳孔散大,発汗増加",
+  answer: "心拍数低下",
+  explanation: "【国試ポイント】\n迷走神経が関与。\n安静時に優位。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "全身へ血液を送り出す心室は？",
+  choices: "左心室,右心室,左心房,右心房",
+  answer: "左心室",
+  explanation: "【国試ポイント】\n大動脈へ駆出。\n壁が厚いのが特徴。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "肺循環へ血液を送り出す心室は？",
+  choices: "右心室,左心室,左心房,右心房",
+  answer: "右心室",
+  explanation: "【国試ポイント】\n肺動脈へ駆出。\n静脈血を送る。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "酸素を運搬する血液成分は？",
+  choices: "ヘモグロビン,アルブミン,血小板,フィブリン",
+  answer: "ヘモグロビン",
+  explanation: "【国試ポイント】\n赤血球に含まれる。\n貧血で低下する。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "血液凝固に重要な血液成分は？",
+  choices: "血小板,赤血球,白血球,リンパ球",
+  answer: "血小板",
+  explanation: "【国試ポイント】\n止血機能を担う。\n減少で出血傾向。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "心筋へ血液を供給する血管は？",
+  choices: "冠動脈,肺動脈,大静脈,門脈",
+  answer: "冠動脈",
+  explanation: "【国試ポイント】\n閉塞で心筋梗塞。\n狭心症も重要。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "正常成人の安静時心拍数に最も近いのは？",
+  choices: "60〜100回/分,20〜40回/分,120〜160回/分,180〜200回/分",
+  answer: "60〜100回/分",
+  explanation: "【国試ポイント】\n頻脈・徐脈判定で重要。\nバイタル評価基本。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "血圧測定で一般的に使用される動脈は？",
+  choices: "上腕動脈,橈骨動脈,大腿動脈,肺動脈",
+  answer: "上腕動脈",
+  explanation: "【国試ポイント】\n肘窩付近で測定。\n聴診法が頻出。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "酸素化された血液を全身へ送る血管は？",
+  choices: "大動脈,肺動脈,上大静脈,下大静脈",
+  answer: "大動脈",
+  explanation: "【国試ポイント】\n左心室から起始。\n循環の基本経路。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "choice"
+},
+
+{
+  content: "吸息時に主に働く筋は？",
+  choices: "横隔膜,腹直筋,広背筋,大臀筋",
+  answer: "横隔膜",
+  explanation: "【国試ポイント】\n横隔神経支配。\n呼吸運動の主動筋。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼吸中枢が存在する部位は？",
+  choices: "延髄,小脳,視床,海馬",
+  answer: "延髄",
+  explanation: "【国試ポイント】\n呼吸・循環中枢を含む。\n生命維持に重要。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "ガス交換が行われる部位は？",
+  choices: "肺胞,気管,咽頭,気管支",
+  answer: "肺胞",
+  explanation: "【国試ポイント】\n酸素と二酸化炭素交換。\nCOPDで重要。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "横隔膜を支配する神経は？",
+  choices: "横隔神経,迷走神経,副神経,舌下神経",
+  answer: "横隔神経",
+  explanation: "【国試ポイント】\nC3〜5由来。\n「3・4・5で横隔膜生きる」。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "呼吸時に酸素を運搬する血液成分は？",
+  choices: "ヘモグロビン,血小板,アルブミン,フィブリン",
+  answer: "ヘモグロビン",
+  explanation: "【国試ポイント】\n赤血球内に存在。\n貧血で低下する。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "COPDで代表的にみられる症状は？",
+  choices: "呼吸困難,片麻痺,失語症,褥瘡",
+  answer: "呼吸困難",
+  explanation: "【国試ポイント】\n喫煙との関連が強い。\n慢性進行性疾患。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "吸息時に胸郭を拡張する筋は？",
+  choices: "外肋間筋,内肋間筋,腹横筋,大腿四頭筋",
+  answer: "外肋間筋",
+  explanation: "【国試ポイント】\n吸息補助で重要。\n胸郭拡張を行う。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "動脈血酸素飽和度を測定する機器は？",
+  choices: "パルスオキシメータ,血圧計,心電計,肺活量計",
+  answer: "パルスオキシメータ",
+  explanation: "【国試ポイント】\nSpO2を測定。\n呼吸状態評価で重要。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "気道へ異物侵入を防ぐ構造は？",
+  choices: "喉頭蓋,声帯,鼻甲介,甲状軟骨",
+  answer: "喉頭蓋",
+  explanation: "【国試ポイント】\n嚥下時に気道を閉鎖。\n誤嚥予防で重要。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "肺活量測定で評価される主な機能は？",
+  choices: "換気機能,循環機能,腎機能,肝機能",
+  answer: "換気機能",
+  explanation: "【国試ポイント】\n拘束性・閉塞性障害評価。\n呼吸リハで頻出。",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "choice"
+},
+
+{
+  content: "腎臓の主な働きは？",
+  choices: "尿の生成,胆汁分泌,酸素交換,血糖上昇",
+  answer: "尿の生成",
+  explanation: "【国試ポイント】\nネフロンが基本単位。\n腎不全で重要。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "膀胱に尿がたまると起こる反射は？",
+  choices: "排尿反射,嚥下反射,伸張反射,対光反射",
+  answer: "排尿反射",
+  explanation: "【国試ポイント】\n副交感神経が関与。\n脊髄損傷でも頻出。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "胃で主に行われる働きは？",
+  choices: "食物の消化,尿の濃縮,酸素交換,造血",
+  answer: "食物の消化",
+  explanation: "【国試ポイント】\n胃液を分泌。\n胃潰瘍が頻出。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "小腸の主な働きは？",
+  choices: "栄養吸収,便の貯留,胆汁産生,造血",
+  answer: "栄養吸収",
+  explanation: "【国試ポイント】\n絨毛で吸収を行う。\n消化吸収の中心。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "大腸で主に吸収されるものは？",
+  choices: "水分,酸素,カルシウム,脂肪",
+  answer: "水分",
+  explanation: "【国試ポイント】\n便形成に重要。\n脱水と関連。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "肝臓の働きとして正しいのは？",
+  choices: "胆汁産生,酸素交換,尿生成,心拍調整",
+  answer: "胆汁産生",
+  explanation: "【国試ポイント】\n代謝・解毒も重要。\n肝硬変が頻出。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "膵臓から分泌され血糖を下げるホルモンは？",
+  choices: "インスリン,アドレナリン,グルカゴン,コルチゾール",
+  answer: "インスリン",
+  explanation: "【国試ポイント】\nβ細胞から分泌。\n糖尿病で重要。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "脾臓の働きとして正しいのは？",
+  choices: "免疫機能,尿生成,胆汁分泌,換気運動",
+  answer: "免疫機能",
+  explanation: "【国試ポイント】\nリンパ系臓器。\n古い赤血球も処理。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "食道で行われる主な運動は？",
+  choices: "蠕動運動,回旋運動,伸張反射,対光反射",
+  answer: "蠕動運動",
+  explanation: "【国試ポイント】\n胃へ食物を送る。\n誤嚥と関連。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "胆嚢の主な役割は？",
+  choices: "胆汁の貯蔵,尿の生成,酸素交換,血液循環",
+  answer: "胆汁の貯蔵",
+  explanation: "【国試ポイント】\n胆汁産生は肝臓。\n脂肪消化を助ける。",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値を下げるホルモンは？",
+  choices: "インスリン,グルカゴン,アドレナリン,コルチゾール",
+  answer: "インスリン",
+  explanation: "【国試ポイント】\n膵β細胞から分泌。\n糖尿病で頻出。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値を上げるホルモンは？",
+  choices: "グルカゴン,インスリン,アルドステロン,バソプレシン",
+  answer: "グルカゴン",
+  explanation: "【国試ポイント】\n膵α細胞から分泌。\nインスリンと拮抗する。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "成長ホルモンを分泌する器官は？",
+  choices: "下垂体前葉,甲状腺,副腎皮質,膵臓",
+  answer: "下垂体前葉",
+  explanation: "【国試ポイント】\nGHとも呼ばれる。\n巨人症と関連。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "代謝を促進するホルモンを分泌する器官は？",
+  choices: "甲状腺,副甲状腺,膵臓,脾臓",
+  answer: "甲状腺",
+  explanation: "【国試ポイント】\nチロキシンを分泌。\nバセドウ病が頻出。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "カルシウム代謝に関与するホルモンは？",
+  choices: "パラトルモン,インスリン,アドレナリン,セロトニン",
+  answer: "パラトルモン",
+  explanation: "【国試ポイント】\n副甲状腺から分泌。\n血中Ca²⁺を上昇させる。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "ストレス時に分泌が増えるホルモンは？",
+  choices: "コルチゾール,インスリン,メラトニン,カルシトニン",
+  answer: "コルチゾール",
+  explanation: "【国試ポイント】\n副腎皮質ホルモン。\n糖新生を促進する。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "夜間に分泌が増えるホルモンは？",
+  choices: "メラトニン,アドレナリン,インスリン,アルドステロン",
+  answer: "メラトニン",
+  explanation: "【国試ポイント】\n睡眠リズム調節。\n松果体から分泌。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "抗利尿ホルモンの主な作用は？",
+  choices: "水分再吸収促進,血糖低下,胃酸分泌,骨形成",
+  answer: "水分再吸収促進",
+  explanation: "【国試ポイント】\nADHとも呼ばれる。\n尿量を減少させる。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "アドレナリンを分泌する部位は？",
+  choices: "副腎髄質,副腎皮質,下垂体後葉,甲状腺",
+  answer: "副腎髄質",
+  explanation: "【国試ポイント】\n交感神経作用を強める。\n心拍数増加で重要。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "カルシトニンを分泌する器官は？",
+  choices: "甲状腺,副甲状腺,下垂体,膵臓",
+  answer: "甲状腺",
+  explanation: "【国試ポイント】\n血中Ca²⁺を低下。\nパラトルモンと拮抗。",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "choice"
+},
+
+{
+  content: "唾液に含まれデンプンを分解する酵素は？",
+  choices: "アミラーゼ,ペプシン,リパーゼ,トリプシン",
+  answer: "アミラーゼ",
+  explanation: "【国試ポイント】\n口腔で消化開始。\n炭水化物分解酵素。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胃液に含まれタンパク質を分解する酵素は？",
+  choices: "ペプシン,アミラーゼ,リパーゼ,マルターゼ",
+  answer: "ペプシン",
+  explanation: "【国試ポイント】\n胃で働く酵素。\n胃酸により活性化。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胆汁の主な働きは？",
+  choices: "脂肪乳化,糖分解,タンパク合成,酸素運搬",
+  answer: "脂肪乳化",
+  explanation: "【国試ポイント】\n胆汁は肝臓で産生。\n胆嚢に貯蔵される。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "栄養吸収を主に行う部位は？",
+  choices: "小腸,大腸,胃,食道",
+  answer: "小腸",
+  explanation: "【国試ポイント】\n絨毛で吸収を行う。\n消化吸収の中心。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "水分吸収を主に行う部位は？",
+  choices: "大腸,胃,食道,十二指腸",
+  answer: "大腸",
+  explanation: "【国試ポイント】\n便形成に重要。\n脱水とも関連。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "膵液を分泌する臓器は？",
+  choices: "膵臓,肝臓,脾臓,胆嚢",
+  answer: "膵臓",
+  explanation: "【国試ポイント】\n消化酵素を含む。\n糖尿病とも関連。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "嚥下時に気道閉鎖へ関与する構造は？",
+  choices: "喉頭蓋,声帯,鼻甲介,甲状軟骨",
+  answer: "喉頭蓋",
+  explanation: "【国試ポイント】\n誤嚥防止で重要。\n嚥下障害で頻出。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "食物を胃へ送る運動は？",
+  choices: "蠕動運動,対光反射,伸張反射,屈曲反射",
+  answer: "蠕動運動",
+  explanation: "【国試ポイント】\n食道で重要。\n自律神経が関与。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "胃酸の主成分は？",
+  choices: "塩酸,HCO3-,NaCl,Ca²⁺",
+  answer: "塩酸",
+  explanation: "【国試ポイント】\n強酸性で殺菌作用。\n胃潰瘍とも関連。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "便の形成に最も関与する部位は？",
+  choices: "大腸,小腸,胃,食道",
+  answer: "大腸",
+  explanation: "【国試ポイント】\n水分吸収を行う。\n下痢・便秘で重要。",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "choice"
+},
+
+{
+  content: "体温調節中枢が存在する部位は？",
+  choices: "視床下部,延髄,小脳,海馬",
+  answer: "視床下部",
+  explanation: "【国試ポイント】\n体温・自律神経を調節。\n恒常性維持で重要。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "発汗による主な熱放散方法は？",
+  choices: "蒸発,伝導,放射,対流",
+  answer: "蒸発",
+  explanation: "【国試ポイント】\n汗の気化熱を利用。\n高温環境で重要。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "寒冷時に起こりやすい反応は？",
+  choices: "皮膚血管収縮,発汗増加,皮膚血管拡張,呼吸抑制",
+  answer: "皮膚血管収縮",
+  explanation: "【国試ポイント】\n熱放散を減少。\n交感神経が関与。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "高温時に起こりやすい反応は？",
+  choices: "皮膚血管拡張,筋収縮増加,悪寒,震え",
+  answer: "皮膚血管拡張",
+  explanation: "【国試ポイント】\n熱放散を促進。\n発汗も増加する。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "体液のpH調節に重要な器官は？",
+  choices: "肺,脾臓,胆嚢,皮膚",
+  answer: "肺",
+  explanation: "【国試ポイント】\nCO2排出でpH調整。\n呼吸性アシドーシス重要。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "血糖値を一定に保つ働きを何という？",
+  choices: "恒常性,順応,反射,適応",
+  answer: "恒常性",
+  explanation: "【国試ポイント】\nホメオスタシスとも呼ぶ。\n生理学の基本概念。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "脱水時に分泌が増加するホルモンは？",
+  choices: "ADH,インスリン,チロキシン,カルシトニン",
+  answer: "ADH",
+  explanation: "【国試ポイント】\n抗利尿ホルモン。\n水分再吸収を促進。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "震えによる熱産生を何という？",
+  choices: "シバリング,対流,蒸発,放射",
+  answer: "シバリング",
+  explanation: "【国試ポイント】\n筋収縮で熱産生。\n寒冷時に出現。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "正常成人の深部体温に最も近いのは？",
+  choices: "37℃,30℃,40℃,25℃",
+  answer: "37℃",
+  explanation: "【国試ポイント】\n恒常性で一定維持。\n発熱時に上昇する。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "腎臓が恒常性維持で担う役割は？",
+  choices: "水・電解質調整,酸素交換,胆汁分泌,筋収縮",
+  answer: "水・電解質調整",
+  explanation: "【国試ポイント】\n体液量調節に重要。\n腎不全で障害される。",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "choice"
+},
+
+{
+  content: "活動電位ではNa⁺流入により脱分極が起こる",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nNa⁺流入で膜電位上昇。\n活動電位の基本。"
+},
+
+{
+  content: "安静時膜電位の維持にはK⁺が重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n細胞内にK⁺が多い。\n静止膜電位で頻出。"
+},
+
+{
+  content: "髄鞘は神経伝導速度を高める",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n跳躍伝導を行う。\n脱髄疾患と関連。"
+},
+
+{
+  content: "中枢神経で髄鞘を形成するのはオリゴデンドロサイトである",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n末梢ではシュワン細胞。\n頻出比較問題。"
+},
+
+{
+  content: "アセチルコリンは神経伝達物質である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n神経筋接合部で作用。\n重症筋無力症で重要。"
+},
+
+{
+  content: "交感神経刺激で心拍数は増加する",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n闘争・逃走反応。\n血圧上昇も起こる。"
+},
+
+{
+  content: "副交感神経刺激で消化活動は促進される",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n休息と消化に関与。\n迷走神経が重要。"
+},
+
+{
+  content: "膝蓋腱反射の中枢レベルはL2〜4である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n大腿神経支配。\n深部腱反射で頻出。"
+},
+
+{
+  content: "アキレス腱反射の中枢レベルはS1〜2である",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脛骨神経支配。\n下腿三頭筋と関連。"
+},
+
+{
+  content: "延髄には呼吸中枢が存在する",
+  answer: "true",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n生命維持に重要。\n循環中枢も存在。"
+},
+
+{
+  content: "活動電位ではK⁺流入により脱分極が起こる",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n脱分極はNa⁺流入。\nK⁺は再分極で重要。"
+},
+
+{
+  content: "副交感神経刺激で心拍数は増加する",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n副交感神経で徐脈。\n迷走神経が関与。"
+},
+
+{
+  content: "膝蓋腱反射の中枢レベルはS1〜2である",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n膝蓋腱反射＝L2〜4。\nS1〜2はアキレス腱反射。"
+},
+
+{
+  content: "アセチルコリンはホルモンである",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n代表的神経伝達物質。\n神経筋接合部で重要。"
+},
+
+{
+  content: "髄鞘は神経伝導速度を低下させる",
+  answer: "false",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n跳躍伝導で高速化。\n脱髄で伝導低下。"
+},
+
+{
+  content: "筋収縮にはCa²⁺が必要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nCa²⁺で収縮開始。\n筋小胞体から放出される。"
+},
+
+{
+  content: "ATPは筋収縮の直接的エネルギー源である",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nATP分解で力発生。\n筋収縮の基本。"
+},
+
+{
+  content: "アクチンは細いフィラメントを構成する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n細い＝アクチン。\n太い＝ミオシン。"
+},
+
+{
+  content: "ミオシンは太いフィラメントを構成する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nクロスブリッジ形成。\n筋収縮で重要。"
+},
+
+{
+  content: "速筋線維は疲労しやすい",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n瞬発力に優れる。\n白筋とも呼ばれる。"
+},
+
+{
+  content: "遅筋線維は持久力が高い",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n赤筋とも呼ばれる。\nミトコンドリアが多い。"
+},
+
+{
+  content: "筋紡錘は筋の伸張を感知する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n伸張反射に関与。\n深部感覚で重要。"
+},
+
+{
+  content: "ゴルジ腱器官は筋張力を感知する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n腱に存在する。\n自己抑制で重要。"
+},
+
+{
+  content: "等尺性収縮では筋長が変化しない",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n姿勢保持で重要。\n関節角度は一定。"
+},
+
+{
+  content: "遠心性収縮では筋が伸びながら収縮する",
+  answer: "true",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nブレーキ作用。\n階段降段で重要。"
+},
+
+{
+  content: "アクチンは太いフィラメントを構成する",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nアクチン＝細い。\nミオシン＝太い。"
+},
+
+{
+  content: "速筋線維は持久力に優れる",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n速筋は疲労しやすい。\n瞬発動作向き。"
+},
+
+{
+  content: "筋紡錘は筋張力を感知する",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n筋紡錘＝筋伸張。\n筋張力は腱器官。"
+},
+
+{
+  content: "等尺性収縮では筋長が短縮する",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n筋長は変化しない。\n姿勢保持で重要。"
+},
+
+{
+  content: "遠心性収縮では筋活動が起こらない",
+  answer: "false",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n伸びながら収縮する。\n制動作用を行う。"
+},
+
+{
+  content: "交感神経刺激で心拍数は増加する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n闘争・逃走反応。\n血圧上昇も起こる。"
+},
+
+{
+  content: "副交感神経刺激で心拍数は低下する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n迷走神経が関与。\n安静時に優位。"
+},
+
+{
+  content: "左心室は全身へ血液を送り出す",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n大動脈へ駆出。\n壁が厚いのが特徴。"
+},
+
+{
+  content: "右心室は肺循環へ血液を送る",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肺動脈へ駆出。\n静脈血を送る。"
+},
+
+{
+  content: "ヘモグロビンは酸素運搬に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n赤血球に含まれる。\n貧血で低下する。"
+},
+
+{
+  content: "血小板は血液凝固に重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n止血機能を担う。\n減少で出血傾向。"
+},
+
+{
+  content: "冠動脈は心筋へ血液を供給する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n閉塞で心筋梗塞。\n狭心症も重要。"
+},
+
+{
+  content: "正常成人の安静時心拍数は60〜100回/分程度である",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n頻脈・徐脈評価で重要。\nバイタル基本。"
+},
+
+{
+  content: "血圧測定では上腕動脈を用いることが多い",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肘窩付近で測定。\n聴診法で頻出。"
+},
+
+{
+  content: "大動脈は左心室から起始する",
+  answer: "true",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n全身循環の開始部。\n最大の動脈。"
+},
+
+{
+  content: "副交感神経刺激で心拍数は増加する",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n副交感神経は徐脈作用。\n迷走神経が関与。"
+},
+
+{
+  content: "右心室は全身へ血液を送り出す",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n全身循環＝左心室。\n右心室は肺循環。"
+},
+
+{
+  content: "ヘモグロビンは血液凝固を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n酸素運搬を担う。\n凝固は血小板。"
+},
+
+{
+  content: "冠動脈は肺へ血液を送る",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n冠動脈＝心筋栄養血管。\n閉塞で心筋梗塞。"
+},
+
+{
+  content: "大動脈は右心房から起始する",
+  answer: "false",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n左心室から起始。\n循環経路の基本。"
+},
+
+{
+  content: "横隔膜は吸息時に働く",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n呼吸の主動筋。\n横隔神経支配。"
+},
+
+{
+  content: "呼吸中枢は延髄に存在する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n生命維持に重要。\n循環中枢も存在。"
+},
+
+{
+  content: "肺胞ではガス交換が行われる",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n酸素と二酸化炭素交換。\nCOPDで重要。"
+},
+
+{
+  content: "横隔神経は横隔膜を支配する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nC3〜5由来。\n頻出神経。"
+},
+
+{
+  content: "ヘモグロビンは酸素運搬に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n赤血球内に存在。\n貧血で低下する。"
+},
+
+{
+  content: "COPDでは呼吸困難がみられる",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n喫煙と関連。\n慢性進行性疾患。"
+},
+
+{
+  content: "外肋間筋は吸息時に働く",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胸郭拡張に関与。\n吸息補助筋。"
+},
+
+{
+  content: "パルスオキシメータはSpO2を測定する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n酸素化評価で重要。\n呼吸管理で頻出。"
+},
+
+{
+  content: "喉頭蓋は誤嚥防止に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n嚥下時に気道閉鎖。\n誤嚥性肺炎で重要。"
+},
+
+{
+  content: "肺活量測定では換気機能を評価する",
+  answer: "true",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n拘束性・閉塞性評価。\n呼吸リハで重要。"
+},
+
+{
+  content: "横隔膜は呼息時の主動筋である",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n吸息時の主動筋。\n呼息は通常受動的。"
+},
+
+{
+  content: "肺胞では血液凝固が行われる",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n肺胞ではガス交換。\n凝固は血小板が担当。"
+},
+
+{
+  content: "COPDでは酸素交換能が改善する",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n呼吸機能は低下。\n呼吸困難が出現。"
+},
+
+{
+  content: "外肋間筋は呼息時に主に働く",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n吸息時に働く。\n胸郭拡張に関与。"
+},
+
+{
+  content: "パルスオキシメータは血圧を測定する",
+  answer: "false",
+  category: "生理",
+  subcategory: "呼吸",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nSpO2を測定。\n酸素化評価で重要。"
+},
+
+{
+  content: "腎臓は尿を生成する臓器である",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nネフロンが基本単位。\n腎不全で重要。"
+},
+
+{
+  content: "膀胱は尿を一時的に貯留する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n排尿反射と関連。\n骨盤底筋も重要。"
+},
+
+{
+  content: "胃は食物の消化に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胃液を分泌する。\n胃潰瘍が頻出。"
+},
+
+{
+  content: "小腸は栄養吸収の中心である",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n絨毛で吸収を行う。\n消化吸収で重要。"
+},
+
+{
+  content: "大腸は主に水分吸収を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n便形成に関与。\n脱水と関連。"
+},
+
+{
+  content: "肝臓は胆汁を産生する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n代謝・解毒も行う。\n肝硬変で重要。"
+},
+
+{
+  content: "膵臓はインスリンを分泌する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nβ細胞から分泌。\n糖尿病で頻出。"
+},
+
+{
+  content: "脾臓は免疫機能に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nリンパ系臓器。\n古い赤血球も処理。"
+},
+
+{
+  content: "食道は蠕動運動を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胃へ食物を送る。\n誤嚥と関連。"
+},
+
+{
+  content: "胆嚢は胆汁を貯蔵する",
+  answer: "true",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胆汁産生は肝臓。\n脂肪消化を助ける。"
+},
+
+{
+  content: "腎臓は酸素交換を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n酸素交換＝肺。\n腎臓は尿生成を行う。"
+},
+
+{
+  content: "胃は主に水分吸収を行う",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n水分吸収＝大腸。\n胃は消化が中心。"
+},
+
+{
+  content: "膵臓は胆汁を貯蔵する",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胆汁貯蔵＝胆嚢。\n膵臓は消化酵素分泌。"
+},
+
+{
+  content: "小腸は便を貯留する臓器である",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n便形成は大腸。\n小腸は栄養吸収中心。"
+},
+
+{
+  content: "脾臓は尿を生成する",
+  answer: "false",
+  category: "生理",
+  subcategory: "内臓",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n尿生成＝腎臓。\n脾臓は免疫機能。"
+},
+
+{
+  content: "インスリンは血糖値を下げる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n膵β細胞から分泌。\n糖尿病で頻出。"
+},
+
+{
+  content: "グルカゴンは血糖値を上げる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n膵α細胞から分泌。\nインスリンと拮抗。"
+},
+
+{
+  content: "成長ホルモンは下垂体前葉から分泌される",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nGHとも呼ばれる。\n巨人症で重要。"
+},
+
+{
+  content: "甲状腺ホルモンは代謝を促進する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nチロキシンが代表。\nバセドウ病で頻出。"
+},
+
+{
+  content: "パラトルモンは血中Ca²⁺を上昇させる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n副甲状腺から分泌。\nカルシトニンと拮抗。"
+},
+
+{
+  content: "コルチゾールはストレス時に増加する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n副腎皮質ホルモン。\n糖新生を促進する。"
+},
+
+{
+  content: "メラトニンは睡眠リズムに関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n松果体から分泌。\n夜間に増加する。"
+},
+
+{
+  content: "ADHは水分再吸収を促進する",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n抗利尿ホルモン。\n尿量を減少させる。"
+},
+
+{
+  content: "アドレナリンは副腎髄質から分泌される",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n交感神経作用を強める。\n心拍数増加で重要。"
+},
+
+{
+  content: "カルシトニンは血中Ca²⁺を低下させる",
+  answer: "true",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n甲状腺から分泌。\n骨代謝で重要。"
+},
+
+{
+  content: "インスリンは血糖値を上げる",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n血糖低下作用。\n糖尿病で頻出。"
+},
+
+{
+  content: "グルカゴンは血糖値を下げる",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n血糖上昇作用。\nインスリンと拮抗。"
+},
+
+{
+  content: "ADHは尿量を増加させる",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n水分再吸収を促進。\n尿量は減少する。"
+},
+
+{
+  content: "アドレナリンは副甲状腺から分泌される",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n副腎髄質から分泌。\n交感神経作用を強める。"
+},
+
+{
+  content: "メラトニンは昼間に最も分泌される",
+  answer: "false",
+  category: "生理",
+  subcategory: "ホルモン",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n夜間に増加。\n睡眠リズム調節。"
+},
+
+{
+  content: "唾液アミラーゼはデンプンを分解する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n口腔で消化開始。\n炭水化物分解酵素。"
+},
+
+{
+  content: "ペプシンはタンパク質を分解する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胃液に含まれる。\n胃酸で活性化する。"
+},
+
+{
+  content: "胆汁は脂肪の乳化を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胆汁は肝臓で産生。\n胆嚢に貯蔵される。"
+},
+
+{
+  content: "小腸は栄養吸収の中心である",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n絨毛で吸収を行う。\n消化吸収で重要。"
+},
+
+{
+  content: "大腸は主に水分吸収を行う",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n便形成に関与。\n脱水と関連。"
+},
+
+{
+  content: "膵臓は膵液を分泌する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n消化酵素を含む。\n糖尿病とも関連。"
+},
+
+{
+  content: "喉頭蓋は誤嚥防止に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n嚥下時に気道閉鎖。\n誤嚥性肺炎で重要。"
+},
+
+{
+  content: "食道では蠕動運動が行われる",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胃へ食物を送る。\n自律神経が関与。"
+},
+
+{
+  content: "胃酸の主成分は塩酸である",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n強酸性で殺菌作用。\n胃潰瘍と関連。"
+},
+
+{
+  content: "便形成には大腸が重要である",
+  answer: "true",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n水分吸収を行う。\n下痢・便秘で重要。"
+},
+
+{
+  content: "ペプシンは脂肪を分解する",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nタンパク質分解酵素。\n脂肪乳化は胆汁。"
+},
+
+{
+  content: "大腸は栄養吸収の中心である",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n栄養吸収中心＝小腸。\n大腸は水分吸収。"
+},
+
+{
+  content: "胆汁は膵臓で産生される",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n胆汁産生＝肝臓。\n胆嚢に貯蔵される。"
+},
+
+{
+  content: "喉頭蓋は呼吸時に気道を閉鎖する",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n嚥下時に閉鎖する。\n誤嚥防止で重要。"
+},
+
+{
+  content: "胃酸の主成分はNaClである",
+  answer: "false",
+  category: "生理",
+  subcategory: "消化",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n主成分は塩酸。\n強酸性で殺菌作用。"
+},
+
+{
+  content: "体温調節中枢は視床下部に存在する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n視床下部が恒常性を調節。\n自律神経とも関連。"
+},
+
+{
+  content: "発汗による熱放散は蒸発による",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n汗の気化熱を利用。\n高温環境で重要。"
+},
+
+{
+  content: "寒冷時には皮膚血管収縮が起こる",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n熱放散を減少。\n交感神経が関与。"
+},
+
+{
+  content: "高温時には皮膚血管拡張が起こる",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n熱放散を促進。\n発汗も増加する。"
+},
+
+{
+  content: "肺は体液pH調節に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nCO2排出でpH調整。\n呼吸性アシドーシス重要。"
+},
+
+{
+  content: "恒常性はホメオスタシスとも呼ばれる",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n内部環境を一定維持。\n生理学の基本概念。"
+},
+
+{
+  content: "ADHは水分再吸収を促進する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n抗利尿ホルモン。\n尿量を減少させる。"
+},
+
+{
+  content: "シバリングは熱産生に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n筋収縮で熱産生。\n寒冷時に出現。"
+},
+
+{
+  content: "正常深部体温は約37℃である",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n恒常性で一定維持。\n発熱時に上昇する。"
+},
+
+{
+  content: "腎臓は水・電解質調整に関与する",
+  answer: "true",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n体液量調節で重要。\n腎不全で障害される。"
+},
+
+{
+  content: "寒冷時には皮膚血管拡張が起こる",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n寒冷時は血管収縮。\n熱放散を減少する。"
+},
+
+{
+  content: "高温時にはシバリングが増加する",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\nシバリングは寒冷時。\n熱産生を目的とする。"
+},
+
+{
+  content: "ADHは尿量を増加させる",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n水分再吸収を促進。\n尿量は減少する。"
+},
+
+{
+  content: "視床下部は呼吸筋そのものである",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n体温調節中枢。\n呼吸筋ではない。"
+},
+
+{
+  content: "恒常性では内部環境が常に大きく変化する",
+  answer: "false",
+  category: "生理",
+  subcategory: "体温・恒常性",
+  qtype: "true_false",
+  explanation: "【国試ポイント】\n内部環境を一定維持。\nホメオスタシス重要。"
+},
+
+{
+  content: "肩関節外転の主動作筋は？",
+  choices: "三角筋,大胸筋,広背筋,上腕三頭筋",
+  answer: "三角筋",
+  explanation: "【国試ポイント】\n腋窩神経支配。\n棘上筋は初動で重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "股関節伸展の主動作筋は？",
+  choices: "大臀筋,中臀筋,腸腰筋,縫工筋",
+  answer: "大臀筋",
+  explanation: "【国試ポイント】\n下殿神経支配。\n立ち上がりで重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節伸展に働く筋は？",
+  choices: "大腿四頭筋,ハムストリングス,前脛骨筋,腓腹筋",
+  answer: "大腿四頭筋",
+  explanation: "【国試ポイント】\n大腿神経支配。\n膝蓋腱反射と関連。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "足関節背屈に働く筋は？",
+  choices: "前脛骨筋,ヒラメ筋,腓腹筋,長腓骨筋",
+  answer: "前脛骨筋",
+  explanation: "【国試ポイント】\n深腓骨神経支配。\n麻痺で下垂足。"
+},
+
+{
+  content: "肘関節屈曲の主動作筋は？",
+  choices: "上腕二頭筋,上腕三頭筋,円回内筋,尺側手根屈筋",
+  answer: "上腕二頭筋",
+  explanation: "【国試ポイント】\n筋皮神経支配。\n前腕回外作用も持つ。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節内旋に働く筋は？",
+  choices: "肩甲下筋,棘下筋,小円筋,棘上筋",
+  answer: "肩甲下筋",
+  explanation: "【国試ポイント】\n腱板筋群の1つ。\n肩関節安定に重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "股関節外転に働く筋は？",
+  choices: "中臀筋,大腿直筋,薄筋,大内転筋",
+  answer: "中臀筋",
+  explanation: "【国試ポイント】\n歩行時骨盤安定。\nトレンデレンブルグ徴候頻出。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "手関節背屈に関与する神経は？",
+  choices: "橈骨神経,尺骨神経,正中神経,筋皮神経",
+  answer: "橈骨神経",
+  explanation: "【国試ポイント】\n麻痺で下垂手。\n上腕骨骨幹部骨折関連。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節屈曲に主に働く筋群は？",
+  choices: "ハムストリングス,大腿四頭筋,下腿三頭筋,中臀筋",
+  answer: "ハムストリングス",
+  explanation: "【国試ポイント】\n坐骨結節起始。\n肉離れ頻出。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "足関節底屈に主に働く筋は？",
+  choices: "下腿三頭筋,前脛骨筋,長趾伸筋,長母趾伸筋",
+  answer: "下腿三頭筋",
+  explanation: "【国試ポイント】\n脛骨神経支配。\nつま先立ちで重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節屈曲の正常ROMに最も近いのは？",
+  choices: "180°,90°,45°,20°",
+  answer: "180°",
+  explanation: "【国試ポイント】\n肩関節屈曲＝180°。\n国試頻出ROM。"
+},
+
+{
+  content: "肩関節外転の正常ROMに最も近いのは？",
+  choices: "180°,60°,30°,10°",
+  answer: "180°",
+  explanation: "【国試ポイント】\n肩外転も180°。\n肩甲上腕リズム重要。"
+},
+
+{
+  content: "肘関節屈曲の正常ROMに最も近いのは？",
+  choices: "145°,60°,90°,200°",
+  answer: "145°",
+  explanation: "【国試ポイント】\n肘屈曲145°。\nADL評価で重要。"
+},
+
+{
+  content: "膝関節屈曲の正常ROMに最も近いのは？",
+  choices: "130°,45°,70°,200°",
+  answer: "130°",
+  explanation: "【国試ポイント】\n正座動作と関連。\n拘縮評価で頻出。"
+},
+
+{
+  content: "足関節背屈の正常ROMに最も近いのは？",
+  choices: "20°,90°,45°,0°",
+  answer: "20°",
+  explanation: "【国試ポイント】\n歩行時に重要。\n下腿三頭筋短縮関連。"
+},
+
+{
+  content: "足関節底屈の正常ROMに最も近いのは？",
+  choices: "45°,10°,90°,5°",
+  answer: "45°",
+  explanation: "【国試ポイント】\nつま先立ちで使用。\n脛骨神経支配。"
+},
+
+{
+  content: "股関節屈曲の正常ROMに最も近いのは？",
+  choices: "125°,30°,70°,180°",
+  answer: "125°",
+  explanation: "【国試ポイント】\nSLRとも関連。\nADL評価で重要。"
+},
+
+{
+  content: "股関節伸展の正常ROMに最も近いのは？",
+  choices: "15°,90°,60°,45°",
+  answer: "15°",
+  explanation: "【国試ポイント】\n大臀筋が主動作筋。\n歩行後期で重要。"
+},
+
+{
+  content: "前腕回外の正常ROMに最も近いのは？",
+  choices: "90°,20°,45°,150°",
+  answer: "90°",
+  explanation: "【国試ポイント】\n上腕二頭筋も作用。\n橈尺関節運動。"
+},
+
+{
+  content: "頸部回旋の正常ROMに最も近いのは？",
+  choices: "60°,10°,180°,25°",
+  answer: "60°",
+  explanation: "【国試ポイント】\n環軸関節が重要。\n交通確認動作で使用。"
+},
+
+{
+  content: "大臀筋の主な作用は？",
+  choices: "股関節伸展,股関節屈曲,膝伸展,足関節背屈",
+  answer: "股関節伸展",
+  explanation: "【国試ポイント】\n立ち上がり動作で重要。\n下殿神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "中臀筋の主な作用は？",
+  choices: "股関節外転,股関節内転,膝屈曲,足関節底屈",
+  answer: "股関節外転",
+  explanation: "【国試ポイント】\n歩行時骨盤安定。\nトレンデレンブルグ徴候頻出。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "上腕二頭筋の主な作用は？",
+  choices: "肘関節屈曲,肘関節伸展,肩関節外転,手関節掌屈",
+  answer: "肘関節屈曲",
+  explanation: "【国試ポイント】\n前腕回外作用も持つ。\n筋皮神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "歩行周期で両脚が接地している時期を何という？",
+  choices: "両脚支持期,遊脚期,立脚中期,加速期",
+  answer: "両脚支持期",
+  explanation: "【国試ポイント】\n歩行安定に重要。\n高齢者で延長しやすい。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "立脚期に骨盤安定へ重要な筋は？",
+  choices: "中臀筋,大臀筋,前脛骨筋,上腕二頭筋",
+  answer: "中臀筋",
+  explanation: "【国試ポイント】\n弱化でトレンデレンブルグ歩行。\n股関節外転筋。"
+},
+
+{
+  content: "下垂足でみられやすい歩行は？",
+  choices: "鶏歩,痙性歩行,小刻み歩行,失調性歩行",
+  answer: "鶏歩",
+  explanation: "【国試ポイント】\n深腓骨神経麻痺で出現。\n足尖引っかかり回避。"
+},
+
+{
+  content: "パーキンソン病で特徴的な歩行は？",
+  choices: "小刻み歩行,鶏歩,動揺性歩行,間欠性跛行",
+  answer: "小刻み歩行",
+  explanation: "【国試ポイント】\n前傾姿勢も特徴。\nすくみ足が頻出。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "立脚初期に踵接地を制御する筋は？",
+  choices: "前脛骨筋,下腿三頭筋,大腿四頭筋,中臀筋",
+  answer: "前脛骨筋",
+  explanation: "【国試ポイント】\n遠心性収縮で制御。\n下垂足で重要。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "つま先離地に重要な筋は？",
+  choices: "下腿三頭筋,前脛骨筋,大臀筋,大腿四頭筋",
+  answer: "下腿三頭筋",
+  explanation: "【国試ポイント】\n足関節底屈を行う。\n推進力に重要。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "choice"
+},
+
+{
+  content: "歩行周期で足が床から離れている時期は？",
+  choices: "遊脚期,立脚期,両脚支持期,荷重応答期",
+  answer: "遊脚期",
+  explanation: "【国試ポイント】\n下肢前方移動期。\n転倒リスクとも関連。"
+},
+
+{
+  content: "片麻痺患者でみられやすい歩行は？",
+  choices: "分回し歩行,鶏歩,小刻み歩行,失調性歩行",
+  answer: "分回し歩行",
+  explanation: "【国試ポイント】\n痙性麻痺で出現。\n脳卒中で頻出。"
+},
+
+{
+  content: "歩行時に最もエネルギー消費が少ない移動様式は？",
+  choices: "正常歩行,四つ這い,跳躍,走行",
+  answer: "正常歩行",
+  explanation: "【国試ポイント】\n効率的移動様式。\n重心移動が重要。"
+},
+
+{
+  content: "失調性歩行がみられやすい障害部位は？",
+  choices: "小脳,基底核,脊髄前角,大脳辺縁系",
+  answer: "小脳",
+  explanation: "【国試ポイント】\n酩酊様歩行が特徴。\n平衡障害と関連。"
+},
+
+{
+  content: "立位姿勢保持で重要な筋は？",
+  choices: "脊柱起立筋,上腕二頭筋,前脛骨筋,大胸筋",
+  answer: "脊柱起立筋",
+  explanation: "【国試ポイント】\n抗重力筋として重要。\n姿勢保持に関与。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "choice"
+},
+
+{
+  content: "抗重力筋に含まれる筋は？",
+  choices: "下腿三頭筋,上腕三頭筋,円回内筋,小円筋",
+  answer: "下腿三頭筋",
+  explanation: "【国試ポイント】\n立位保持で重要。\n姿勢制御に関与。"
+},
+
+{
+  content: "円背姿勢で増強する脊柱弯曲は？",
+  choices: "胸椎後弯,腰椎前弯,頸椎前弯,側弯",
+  answer: "胸椎後弯",
+  explanation: "【国試ポイント】\n高齢者で頻出。\n猫背姿勢とも呼ぶ。"
+},
+
+{
+  content: "反り腰で増強する弯曲は？",
+  choices: "腰椎前弯,胸椎後弯,頸椎後弯,側弯",
+  answer: "腰椎前弯",
+  explanation: "【国試ポイント】\n腹筋弱化と関連。\n骨盤前傾を伴う。"
+},
+
+{
+  content: "正常立位で重心線が通る部位は？",
+  choices: "耳垂前方,肩峰後方,膝蓋骨後方,踵後方",
+  answer: "耳垂前方",
+  explanation: "【国試ポイント】\n姿勢分析で頻出。\n重心線確認重要。"
+},
+
+{
+  content: "座位姿勢保持で重要な感覚は？",
+  choices: "深部感覚,味覚,嗅覚,聴覚",
+  answer: "深部感覚",
+  explanation: "【国試ポイント】\n姿勢制御で重要。\n小脳とも関連。"
+},
+
+{
+  content: "トレンデレンブルグ徴候で低下している筋は？",
+  choices: "中臀筋,大臀筋,前脛骨筋,大腿直筋",
+  answer: "中臀筋",
+  explanation: "【国試ポイント】\n股関節外転筋。\n歩行時骨盤保持。"
+},
+
+{
+  content: "姿勢反射に重要な中枢は？",
+  choices: "小脳,海馬,側頭葉,視床",
+  answer: "小脳",
+  explanation: "【国試ポイント】\n平衡機能に重要。\n失調性歩行と関連。"
+},
+
+{
+  content: "骨盤後傾で短縮しやすい筋は？",
+  choices: "ハムストリングス,腸腰筋,大腿直筋,縫工筋",
+  answer: "ハムストリングス",
+  explanation: "【国試ポイント】\n骨盤後傾を助長。\n座位姿勢と関連。"
+},
+
+{
+  content: "立位バランス評価でよく用いられる検査は？",
+  choices: "ロンベルグ試験,SLRテスト,ジャクソンテスト,ラセーグ徴候",
+  answer: "ロンベルグ試験",
+  explanation: "【国試ポイント】\n平衡機能評価。\n深部感覚障害で陽性。"
+},
+
+{
+  content: "関節運動で回転中心からの距離を何という？",
+  choices: "モーメントアーム,支点,作用線,重心",
+  answer: "モーメントアーム",
+  explanation: "【国試ポイント】\n長いほど効率的。\nトルク計算で重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "choice"
+},
+
+{
+  content: "てこの支点にあたるのは？",
+  choices: "関節,筋,骨,重心",
+  answer: "関節",
+  explanation: "【国試ポイント】\n筋力学の基本。\n人体は第3のてこ多い。"
+},
+
+{
+  content: "筋力×距離で表されるものは？",
+  choices: "トルク,速度,加速度,摩擦",
+  answer: "トルク",
+  explanation: "【国試ポイント】\n回転力を表す。\n関節運動解析で重要。"
+},
+
+{
+  content: "重心が支持基底面内にあると姿勢はどうなる？",
+  choices: "安定する,不安定になる,転倒する,筋活動が消失する",
+  answer: "安定する",
+  explanation: "【国試ポイント】\n支持基底面が広いほど安定。\nバランス評価で重要。"
+},
+
+{
+  content: "歩行時に床から受ける力を何という？",
+  choices: "床反力,遠心力,浮力,慣性力",
+  answer: "床反力",
+  explanation: "【国試ポイント】\n歩行分析で頻出。\n鉛直成分が重要。"
+},
+
+{
+  content: "人体で最も多くみられるてこの種類は？",
+  choices: "第3のてこ,第1のてこ,第2のてこ,滑車",
+  answer: "第3のてこ",
+  explanation: "【国試ポイント】\n速度・可動域に有利。\n上腕二頭筋が代表例。"
+},
+
+{
+  content: "第1のてこの例として正しいのは？",
+  choices: "頸部伸展,つま先立ち,肘屈曲,握力動作",
+  answer: "頸部伸展",
+  explanation: "【国試ポイント】\n支点が中央。\nシーソー型てこ。"
+},
+
+{
+  content: "第2のてこの例として正しいのは？",
+  choices: "つま先立ち,肘屈曲,肩外転,膝伸展",
+  answer: "つま先立ち",
+  explanation: "【国試ポイント】\n力点より作用点が遠い。\n力学的に有利。"
+},
+
+{
+  content: "肘関節屈曲で主に働くてこの種類は？",
+  choices: "第3のてこ,第1のてこ,第2のてこ,滑車機構",
+  answer: "第3のてこ",
+  explanation: "【国試ポイント】\n上腕二頭筋が代表例。\n速度に有利。"
+},
+
+{
+  content: "支持基底面が狭くなると姿勢はどうなる？",
+  choices: "不安定になる,安定する,筋活動が不要になる,重心が消失する",
+  answer: "不安定になる",
+  explanation: "【国試ポイント】\n片脚立位で不安定。\n転倒リスク増加。"
+},
+
+{
+  content: "立ち上がり動作で主に働く筋は？",
+  choices: "大腿四頭筋,前脛骨筋,上腕二頭筋,腹直筋",
+  answer: "大腿四頭筋",
+  explanation: "【国試ポイント】\n膝伸展で重要。\n大腿神経支配。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "choice"
+},
+
+{
+  content: "歩行時に骨盤安定へ重要な筋は？",
+  choices: "中臀筋,大臀筋,前脛骨筋,大胸筋",
+  answer: "中臀筋",
+  explanation: "【国試ポイント】\n立脚側で働く。\n弱化で動揺性歩行。"
+},
+
+{
+  content: "階段昇段で特に重要な関節運動は？",
+  choices: "膝伸展,足関節背屈,肩外転,前腕回外",
+  answer: "膝伸展",
+  explanation: "【国試ポイント】\n大腿四頭筋が重要。\n昇段動作で頻出。"
+},
+
+{
+  content: "階段降段で重要な筋収縮は？",
+  choices: "遠心性収縮,等尺性収縮,求心性収縮,不随意収縮",
+  answer: "遠心性収縮",
+  explanation: "【国試ポイント】\nブレーキ作用を行う。\n大腿四頭筋が重要。"
+},
+
+{
+  content: "立ち上がり動作初期で起こる動きは？",
+  choices: "体幹前傾,体幹後屈,肩外転,頸部伸展",
+  answer: "体幹前傾",
+  explanation: "【国試ポイント】\n重心前方移動。\n立ち上がり分析で重要。"
+},
+
+{
+  content: "歩行時のつまずき防止に重要な筋は？",
+  choices: "前脛骨筋,下腿三頭筋,中臀筋,上腕三頭筋",
+  answer: "前脛骨筋",
+  explanation: "【国試ポイント】\n足関節背屈を行う。\n麻痺で下垂足。"
+},
+
+{
+  content: "片脚立位保持で重要な筋は？",
+  choices: "中臀筋,大腿直筋,前脛骨筋,大胸筋",
+  answer: "中臀筋",
+  explanation: "【国試ポイント】\n骨盤安定に重要。\nトレンデレンブルグ徴候関連。"
+},
+
+{
+  content: "歩行時の推進力を生む筋は？",
+  choices: "下腿三頭筋,前脛骨筋,腹直筋,上腕二頭筋",
+  answer: "下腿三頭筋",
+  explanation: "【国試ポイント】\n足関節底屈を行う。\nつま先離地で重要。"
+},
+
+{
+  content: "立位保持で重要な感覚は？",
+  choices: "深部感覚,味覚,嗅覚,聴覚",
+  answer: "深部感覚",
+  explanation: "【国試ポイント】\n姿勢制御に重要。\nロンベルグ試験関連。"
+},
+
+{
+  content: "パーキンソン病で特徴的な動作は？",
+  choices: "小刻み歩行,鶏歩,分回し歩行,失調性歩行",
+  answer: "小刻み歩行",
+  explanation: "【国試ポイント】\nすくみ足も特徴。\n前傾姿勢を伴う。"
+},
+
+{
+  content: "肩関節外転では三角筋が主に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n腋窩神経支配。\n棘上筋は初動で重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節伸展では大臀筋が主に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n立ち上がりで重要。\n下殿神経支配。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "膝関節伸展では大腿四頭筋が働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n大腿神経支配。\n膝蓋腱反射関連。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "足関節背屈では前脛骨筋が働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n深腓骨神経支配。\n麻痺で下垂足。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "肘関節屈曲では上腕二頭筋が働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋皮神経支配。\n前腕回外作用も持つ。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "肩関節内旋では肩甲下筋が働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n腱板筋群の1つ。\n肩関節安定に重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節外転では中臀筋が働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行時骨盤安定。\nトレンデレンブルグ徴候関連。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "手関節背屈には橈骨神経が関与する",
+  answer: "true",
+  explanation: "【国試ポイント】\n麻痺で下垂手。\n上腕骨骨幹部骨折関連。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "膝関節屈曲ではハムストリングスが働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n坐骨結節起始。\n肉離れが頻出。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "足関節底屈では下腿三頭筋が働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n脛骨神経支配。\nつま先立ちで重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "肩関節外転では大胸筋が主に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n大胸筋は内転作用。\n外転は三角筋が重要。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節伸展では腸腰筋が主に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n腸腰筋は股関節屈曲。\n伸展は大臀筋。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "足関節背屈では下腿三頭筋が主に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n下腿三頭筋は底屈。\n背屈は前脛骨筋。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "肘関節伸展では上腕二頭筋が主に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n上腕二頭筋は屈曲。\n伸展は上腕三頭筋。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節外転では大内転筋が主に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n大内転筋は内転作用。\n外転は中臀筋。",
+  category: "運動",
+  subcategory: "関節運動",
+  qtype: "true_false"
+},
+
+{
+  content: "肩関節屈曲の正常ROMに最も近いのは？",
+  choices: "180°,90°,45°,20°",
+  answer: "180°",
+  explanation: "【国試ポイント】\n肩関節屈曲＝180°。\n国試頻出ROM。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節外転の正常ROMに最も近いのは？",
+  choices: "180°,60°,30°,10°",
+  answer: "180°",
+  explanation: "【国試ポイント】\n肩外転も180°。\n肩甲上腕リズム重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "肘関節屈曲の正常ROMに最も近いのは？",
+  choices: "145°,60°,90°,200°",
+  answer: "145°",
+  explanation: "【国試ポイント】\n肘屈曲145°。\nADL評価で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "膝関節屈曲の正常ROMに最も近いのは？",
+  choices: "130°,45°,70°,200°",
+  answer: "130°",
+  explanation: "【国試ポイント】\n正座動作と関連。\n拘縮評価で頻出。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "足関節背屈の正常ROMに最も近いのは？",
+  choices: "20°,90°,45°,0°",
+  answer: "20°",
+  explanation: "【国試ポイント】\n歩行時に重要。\n下腿三頭筋短縮関連。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "足関節底屈の正常ROMに最も近いのは？",
+  choices: "45°,10°,90°,5°",
+  answer: "45°",
+  explanation: "【国試ポイント】\nつま先立ちで使用。\n脛骨神経支配。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "股関節屈曲の正常ROMに最も近いのは？",
+  choices: "125°,30°,70°,180°",
+  answer: "125°",
+  explanation: "【国試ポイント】\nSLRとも関連。\nADL評価で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "股関節伸展の正常ROMに最も近いのは？",
+  choices: "15°,90°,60°,45°",
+  answer: "15°",
+  explanation: "【国試ポイント】\n大臀筋が主動作筋。\n歩行後期で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "前腕回外の正常ROMに最も近いのは？",
+  choices: "90°,20°,45°,150°",
+  answer: "90°",
+  explanation: "【国試ポイント】\n上腕二頭筋も作用。\n橈尺関節運動。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "頸部回旋の正常ROMに最も近いのは？",
+  choices: "60°,10°,180°,25°",
+  answer: "60°",
+  explanation: "【国試ポイント】\n環軸関節が重要。\n交通確認動作で使用。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "choice"
+},
+
+{
+  content: "大臀筋の主な作用は？",
+  choices: "股関節伸展,股関節屈曲,膝伸展,足関節背屈",
+  answer: "股関節伸展",
+  explanation: "【国試ポイント】\n立ち上がり動作で重要。\n下殿神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "中臀筋の主な作用は？",
+  choices: "股関節外転,股関節内転,膝屈曲,足関節底屈",
+  answer: "股関節外転",
+  explanation: "【国試ポイント】\n歩行時骨盤安定。\nトレンデレンブルグ徴候頻出。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "上腕二頭筋の主な作用は？",
+  choices: "肘関節屈曲,肘関節伸展,肩関節外転,手関節掌屈",
+  answer: "肘関節屈曲",
+  explanation: "【国試ポイント】\n前腕回外作用も持つ。\n筋皮神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "上腕三頭筋の主な作用は？",
+  choices: "肘関節伸展,肘関節屈曲,肩関節内旋,股関節伸展",
+  answer: "肘関節伸展",
+  explanation: "【国試ポイント】\n橈骨神経支配。\n腱反射C7関連。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "前脛骨筋の主な作用は？",
+  choices: "足関節背屈,足関節底屈,膝伸展,股関節外転",
+  answer: "足関節背屈",
+  explanation: "【国試ポイント】\n深腓骨神経支配。\n麻痺で下垂足。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "下腿三頭筋の主な作用は？",
+  choices: "足関節底屈,足関節背屈,膝伸展,股関節屈曲",
+  answer: "足関節底屈",
+  explanation: "【国試ポイント】\nつま先立ちで重要。\n脛骨神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "大腿四頭筋の主な作用は？",
+  choices: "膝関節伸展,膝関節屈曲,股関節外転,足関節背屈",
+  answer: "膝関節伸展",
+  explanation: "【国試ポイント】\n大腿神経支配。\n膝蓋腱反射関連。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "ハムストリングスの主な作用は？",
+  choices: "膝関節屈曲,膝関節伸展,股関節内旋,足関節背屈",
+  answer: "膝関節屈曲",
+  explanation: "【国試ポイント】\n坐骨結節起始。\n肉離れが頻出。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "三角筋中部線維の主な作用は？",
+  choices: "肩関節外転,肩関節内転,肘伸展,前腕回内",
+  answer: "肩関節外転",
+  explanation: "【国試ポイント】\n腋窩神経支配。\n棘上筋と協働。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "腸腰筋の主な作用は？",
+  choices: "股関節屈曲,股関節伸展,膝伸展,足関節底屈",
+  answer: "股関節屈曲",
+  explanation: "【国試ポイント】\n歩行時振り出しで重要。\n股関節屈筋群代表。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "choice"
+},
+
+{
+  content: "肩関節屈曲の正常ROMは約180°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n肩屈曲＝180°。\n国試頻出ROM。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "肩関節外転の正常ROMは約180°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n肩外転も180°。\n肩甲上腕リズム重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "肘関節屈曲の正常ROMは約145°である",
+  answer: "true",
+  explanation: "【国試ポイント】\nADL動作で重要。\n頻出ROM角度。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "膝関節屈曲の正常ROMは約130°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n正座動作と関連。\n拘縮評価で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "足関節背屈の正常ROMは約20°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行時に重要。\n下腿三頭筋短縮関連。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "足関節底屈の正常ROMは約45°である",
+  answer: "true",
+  explanation: "【国試ポイント】\nつま先立ち動作。\n脛骨神経支配。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節屈曲の正常ROMは約125°である",
+  answer: "true",
+  explanation: "【国試ポイント】\nSLRとも関連。\nADL評価で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節伸展の正常ROMは約15°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行後期で重要。\n大臀筋が関与。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "前腕回外の正常ROMは約90°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n上腕二頭筋も作用。\n橈尺関節運動。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "頸部回旋の正常ROMは約60°である",
+  answer: "true",
+  explanation: "【国試ポイント】\n環軸関節が重要。\n交通確認動作関連。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "肩関節屈曲の正常ROMは約90°である",
+  answer: "false",
+  explanation: "【国試ポイント】\n正常は180°。\n肩ROM頻出問題。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "肘関節屈曲の正常ROMは約45°である",
+  answer: "false",
+  explanation: "【国試ポイント】\n正常は145°。\nADLで重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "足関節背屈の正常ROMは約90°である",
+  answer: "false",
+  explanation: "【国試ポイント】\n正常は20°。\n歩行分析で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "股関節伸展の正常ROMは約90°である",
+  answer: "false",
+  explanation: "【国試ポイント】\n正常は15°。\n歩行後期で使用。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "頸部回旋の正常ROMは約10°である",
+  answer: "false",
+  explanation: "【国試ポイント】\n正常は60°。\n頸部可動域評価で重要。",
+  category: "運動",
+  subcategory: "ROM",
+  qtype: "true_false"
+},
+
+{
+  content: "大臀筋は股関節伸展に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n立ち上がりで重要。\n下殿神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "中臀筋は股関節外転に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行時骨盤安定。\nトレンデレンブルグ徴候関連。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "上腕二頭筋は肘関節屈曲に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n前腕回外作用も持つ。\n筋皮神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "上腕三頭筋は肘関節伸展に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n橈骨神経支配。\n腱反射C7関連。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "前脛骨筋は足関節背屈に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n深腓骨神経支配。\n麻痺で下垂足。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "下腿三頭筋は足関節底屈に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\nつま先立ちで重要。\n脛骨神経支配。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "大腿四頭筋は膝関節伸展に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n大腿神経支配。\n膝蓋腱反射関連。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "ハムストリングスは膝関節屈曲に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n坐骨結節起始。\n肉離れが頻出。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "三角筋中部線維は肩関節外転に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n腋窩神経支配。\n棘上筋と協働。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "腸腰筋は股関節屈曲に働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行時振り出しで重要。\n股関節屈筋群代表。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "大臀筋は股関節屈曲に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n大臀筋は伸展作用。\n屈曲は腸腰筋。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "中臀筋は股関節内転に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n主作用は外転。\n歩行時骨盤保持重要。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "前脛骨筋は足関節底屈に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n前脛骨筋は背屈。\n底屈は下腿三頭筋。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "上腕三頭筋は肘関節屈曲に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n上腕三頭筋は伸展。\n屈曲は上腕二頭筋。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "大腿四頭筋は膝関節屈曲に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n大腿四頭筋は伸展。\n屈曲はハムストリングス。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "立脚期は歩行周期の約60％を占める",
+  answer: "true",
+  explanation: "【国試ポイント】\n遊脚期は約40％。\n正常歩行分析で重要。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "遊脚期では足部が床から離れている",
+  answer: "true",
+  explanation: "【国試ポイント】\n下肢前方移動期。\nつまずき予防重要。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "中臀筋は歩行時の骨盤安定に重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n弱化で動揺性歩行。\nトレンデレンブルグ徴候関連。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "前脛骨筋は歩行時の足尖クリアランスに重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n足関節背屈を行う。\n麻痺で下垂足。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "下腿三頭筋は歩行時の推進力に関与する",
+  answer: "true",
+  explanation: "【国試ポイント】\nつま先離地で重要。\n足関節底屈を行う。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "パーキンソン病では小刻み歩行がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\nすくみ足も特徴。\n前傾姿勢を伴う。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "片麻痺では分回し歩行がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\n痙性麻痺で出現。\n脳卒中で頻出。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "小脳障害では失調性歩行がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\n酩酊様歩行が特徴。\n平衡障害関連。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "鶏歩は下垂足でみられやすい",
+  answer: "true",
+  explanation: "【国試ポイント】\n足尖引っかかり回避。\n腓骨神経麻痺関連。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "両脚支持期では両足が接地している",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行安定に重要。\n高齢者で延長しやすい。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "立脚期では足部が常に床から離れている",
+  answer: "false",
+  explanation: "【国試ポイント】\n立脚期は接地期。\n支持機能を担う。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "前脛骨筋は歩行時の足関節底屈に重要である",
+  answer: "false",
+  explanation: "【国試ポイント】\n前脛骨筋は背屈筋。\n下垂足と関連。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "パーキンソン病では鶏歩が特徴的である",
+  answer: "false",
+  explanation: "【国試ポイント】\n特徴は小刻み歩行。\n鶏歩は下垂足関連。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "小脳障害では分回し歩行が特徴的である",
+  answer: "false",
+  explanation: "【国試ポイント】\n小脳障害は失調性歩行。\n分回し歩行は片麻痺。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "下腿三頭筋は歩行時の足関節背屈を行う",
+  answer: "false",
+  explanation: "【国試ポイント】\n下腿三頭筋は底屈筋。\n推進力に重要。",
+  category: "運動",
+  subcategory: "歩行",
+  qtype: "true_false"
+},
+
+{
+  content: "脊柱起立筋は立位姿勢保持に重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n抗重力筋として重要。\n姿勢保持に関与。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "下腿三頭筋は抗重力筋に含まれる",
+  answer: "true",
+  explanation: "【国試ポイント】\n立位保持で重要。\n姿勢制御に関与。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "円背姿勢では胸椎後弯が増強する",
+  answer: "true",
+  explanation: "【国試ポイント】\n猫背姿勢とも呼ぶ。\n高齢者で頻出。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "反り腰では腰椎前弯が増強する",
+  answer: "true",
+  explanation: "【国試ポイント】\n骨盤前傾を伴う。\n腹筋弱化と関連。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "正常立位では重心線が耳垂前方を通る",
+  answer: "true",
+  explanation: "【国試ポイント】\n姿勢分析で頻出。\n重心線確認重要。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "深部感覚は姿勢制御に重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n小脳とも関連。\nバランス保持で重要。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "中臀筋弱化でトレンデレンブルグ徴候がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\n股関節外転筋重要。\n歩行時骨盤下降。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "小脳は姿勢反射に重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n平衡機能に関与。\n失調性歩行関連。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "ハムストリングス短縮は骨盤後傾を助長する",
+  answer: "true",
+  explanation: "【国試ポイント】\n座位姿勢と関連。\n柔軟性評価重要。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "ロンベルグ試験は平衡機能評価に用いられる",
+  answer: "true",
+  explanation: "【国試ポイント】\n深部感覚障害で陽性。\n姿勢制御評価。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "脊柱起立筋は主に肩関節運動を行う",
+  answer: "false",
+  explanation: "【国試ポイント】\n主に体幹伸展作用。\n姿勢保持で重要。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "円背姿勢では腰椎前弯が増強する",
+  answer: "false",
+  explanation: "【国試ポイント】\n円背は胸椎後弯増強。\n猫背姿勢を示す。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "反り腰では胸椎後弯が減少する",
+  answer: "false",
+  explanation: "【国試ポイント】\n特徴は腰椎前弯増強。\n骨盤前傾を伴う。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "深部感覚は姿勢制御に関与しない",
+  answer: "false",
+  explanation: "【国試ポイント】\n深部感覚は重要。\nバランス保持に関与。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "ロンベルグ試験は筋力測定を行う検査である",
+  answer: "false",
+  explanation: "【国試ポイント】\n平衡機能評価検査。\n深部感覚障害関連。",
+  category: "運動",
+  subcategory: "姿勢",
+  qtype: "true_false"
+},
+
+{
+  content: "モーメントアームが長いほど大きなトルクを発揮しやすい",
+  answer: "true",
+  explanation: "【国試ポイント】\n距離が長いほど有利。\n関節運動解析で重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "人体では第3のてこが最も多い",
+  answer: "true",
+  explanation: "【国試ポイント】\n速度と可動域に有利。\n上腕二頭筋が代表例。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "床反力は歩行分析で重要な指標である",
+  answer: "true",
+  explanation: "【国試ポイント】\n歩行時に床から受ける力。\n鉛直成分が重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "支持基底面が広いほど姿勢は安定しやすい",
+  answer: "true",
+  explanation: "【国試ポイント】\n重心動揺が減少。\n立位バランスで重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "人体の関節はてこの支点として働く",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋力学の基本。\n関節中心が重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "トルクは筋力と距離の積で表される",
+  answer: "true",
+  explanation: "【国試ポイント】\n回転力を意味する。\nROMや筋力で重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "つま先立ちは第2のてこの例である",
+  answer: "true",
+  explanation: "【国試ポイント】\n力学的に有利。\n下腿三頭筋が関与。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "頸部伸展は第1のてこの例である",
+  answer: "true",
+  explanation: "【国試ポイント】\n支点が中央。\nシーソー型てこ。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "肘関節屈曲は第3のてこの例である",
+  answer: "true",
+  explanation: "【国試ポイント】\n上腕二頭筋が代表例。\n速度に有利。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "重心が支持基底面内にあると安定しやすい",
+  answer: "true",
+  explanation: "【国試ポイント】\n転倒予防で重要。\n姿勢制御基本。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "支持基底面が狭いほど姿勢は安定する",
+  answer: "false",
+  explanation: "【国試ポイント】\n狭いほど不安定。\n片脚立位で重要。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "床反力は空気中から受ける力である",
+  answer: "false",
+  explanation: "【国試ポイント】\n床面から受ける反力。\n歩行分析で頻出。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "第3のてこは力学的に最も有利である",
+  answer: "false",
+  explanation: "【国試ポイント】\n速度に有利。\n力学的有利は第2。"
+},
+
+{
+  content: "トルクは筋力のみで決定される",
+  answer: "false",
+  explanation: "【国試ポイント】\n距離も重要。\nモーメントアーム関連。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "重心が支持基底面外でも常に安定している",
+  answer: "false",
+  explanation: "【国試ポイント】\n支持基底面外では不安定。\n転倒リスク増加。",
+  category: "運動",
+  subcategory: "バイオメカニズム",
+  qtype: "true_false"
+},
+
+{
+  content: "立ち上がり動作では大腿四頭筋が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n膝伸展で重要。\n大腿神経支配。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "歩行時の骨盤安定には中臀筋が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n立脚側で働く。\n弱化で動揺性歩行。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "階段昇段では膝関節伸展が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n大腿四頭筋が重要。\n昇段動作で頻出。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "階段降段では遠心性収縮が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\nブレーキ作用を行う。\n大腿四頭筋重要。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "立ち上がり動作初期では体幹前傾が起こる",
+  answer: "true",
+  explanation: "【国試ポイント】\n重心前方移動。\n立ち上がり分析で重要。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "歩行時のつまずき防止には前脛骨筋が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n足関節背屈を行う。\n麻痺で下垂足。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "片脚立位保持には中臀筋が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n骨盤安定に重要。\n外転筋弱化で骨盤下降。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "歩行時の推進力には下腿三頭筋が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n足関節底屈を行う。\nつま先離地で重要。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "立位保持には深部感覚が重要である",
+  answer: "true",
+  explanation: "【国試ポイント】\n姿勢制御で重要。\nロンベルグ試験関連。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "パーキンソン病では小刻み歩行がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\nすくみ足も特徴。\n前傾姿勢を伴う。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "立ち上がり動作では上腕二頭筋が主に働く",
+  answer: "false",
+  explanation: "【国試ポイント】\n主に大腿四頭筋重要。\n膝伸展が必要。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "階段降段では求心性収縮のみが重要である",
+  answer: "false",
+  explanation: "【国試ポイント】\n遠心性収縮で制御。\nブレーキ作用重要。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "歩行時のつまずき防止には下腿三頭筋が重要である",
+  answer: "false",
+  explanation: "【国試ポイント】\n前脛骨筋が重要。\n足関節背屈を行う。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "片脚立位では中臀筋は不要である",
+  answer: "false",
+  explanation: "【国試ポイント】\n骨盤安定に重要。\n弱化で骨盤下降。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "パーキンソン病では鶏歩が特徴的である",
+  answer: "false",
+  explanation: "【国試ポイント】\n特徴は小刻み歩行。\n鶏歩は下垂足関連。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
 }
 ])
-
 

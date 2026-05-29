@@ -34353,4 +34353,814 @@ category: "運動",
 subcategory: "ROM",
 qtype: "true_false"
 },
+
+{
+content: "膵液の分泌促進は交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n膵液分泌は副交感神経で促進される。\n交感神経では抑制される。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『B群は無髄である』は、末梢神経について正しい。",
+answer: "false",
+explanation: "【国試ポイント】\nB群線維は有髄神経線維。\n自律神経節前線維として重要。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『自律神経節後線維は有髄神経線維である』は、神経線維の特徴で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n自律神経節後線維は無髄。\n節前線維は有髄。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『興奮は減衰せずに伝わる』は1本の神経線維を電気刺激した場合の興奮伝導の説明で正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n活動電位は減衰せず伝導する。\n全か無かの法則も頻出。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "副交感神経の作用で収縮する筋は立毛筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n立毛筋は交感神経支配。\n寒い時の鳥肌で有名。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "膵液の分泌抑制は、副交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n副交感神経は膵液分泌を促進。\n抑制ではない。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "自律神経について、精神的因子は関与しない。",
+answer: "false",
+explanation: "【国試ポイント】\n緊張や不安で心拍数が上がるように\n精神的因子も関与する。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "筋紡錘の求心性神経線維はⅢ神経線維である。",
+answer: "false",
+explanation: "【国試ポイント】\n筋紡錘の一次終末はIa線維。\n国試頻出。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『Aα線維は錘外筋線維を支配する』は神経線維について正しい。",
+answer: "true",
+explanation: "【国試ポイント】\nAα線維は骨格筋を支配。\n最も太く伝導速度も速い。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "瞳孔散大は、副交感神経が交感神経より優位に働いたときの反応である。",
+answer: "false",
+explanation: "【国試ポイント】\n瞳孔散大は交感神経。\n瞳孔縮小は副交感神経。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『静止膜電位は負の値である』は細胞膜電位について誤っている。",
+answer: "false",
+explanation: "【国試ポイント】\n静止膜電位は負の値。\n約−70mVが代表的。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "瞳孔の縮小は交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n瞳孔縮小は副交感神経。\n動眼神経が関与する。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『興奮は並走する別の線維に伝わる』は1本の神経線維を電気刺激した場合の興奮伝導の説明で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n興奮は隣の神経線維へは伝わらない。\n伝導は同じ線維内のみ。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "心拍数の減少は交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n心拍数減少は副交感神経。\n交感神経は増加させる。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "交感神経の機能で『水晶体の厚さを減少させる』は正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n交感神経で毛様体筋は弛緩。\n水晶体は薄くなる。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "涙液の分泌抑制は、副交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n涙液分泌は副交感神経で促進。\n抑制ではない。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "気管支収縮は、副交感神経が交感神経より優位に働いたときの反応である。",
+answer: "true",
+explanation: "【国試ポイント】\n副交感神経は気管支を収縮させる。\n交感神経は拡張させる。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "1本の神経線維を電気刺激した場合の興奮伝導の説明で『興奮の大きさは変わらずに伝わる』は誤っている。",
+answer: "false",
+explanation: "【国試ポイント】\n活動電位の大きさは一定。\n減衰しない。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『有髄神経線維の伝導速度は線維の直径と反比例する』は、神経線維の特徴で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n伝導速度は線維直径に比例。\n太いほど速い。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "消化液の分泌抑制は副交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n副交感神経は消化液分泌を促進。\n消化活動を活発にする。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "膀胱の収縮は交感神経の作用である。",
+answer: "false",
+explanation: "【国試ポイント】\n交感神経では膀胱は弛緩。\n排尿は副交感神経。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "内耳神経は副交感神経線維を含む。",
+answer: "false",
+explanation: "【国試ポイント】\n内耳神経は感覚神経。\n副交感神経線維は含まない。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "交感神経刺激は膀胱を収縮させる。",
+answer: "false",
+explanation: "【国試ポイント】\n交感神経は膀胱を弛緩。\n蓄尿に働く。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『有髄線維では興奮が髄鞘に伝わる』は1本の神経線維を電気刺激した場合の興奮伝導の説明で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n興奮はランビエ絞輪を跳躍伝導する。\n髄鞘自体には伝わらない。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "副交感神経の作用で収縮する筋は瞳孔散大筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n瞳孔散大筋は交感神経支配。\n副交感神経は瞳孔括約筋。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "気管支の拡張は交感神経の作用である。",
+answer: "true",
+explanation: "【国試ポイント】\n交感神経は気管支を拡張。\n運動時に重要。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『C群は有髄である』は、末梢神経について正しい。",
+answer: "false",
+explanation: "【国試ポイント】\nC群線維は無髄。\n伝導速度は遅い。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "『興奮は太い線維ほど速く伝わる』は1本の神経線維を電気刺激した場合の興奮伝導の説明で正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n伝導速度は線維直径に比例。\n太い線維ほど速い。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "交感神経の機能で『肝臓でのグリコーゲン合成を促進する』は正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n交感神経はグリコーゲン分解を促進。\n血糖値を上昇させる。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "自律神経について、体性内臓反射の求心路である。",
+answer: "false",
+explanation: "【国試ポイント】\n自律神経は遠心路。\n求心路ではない。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "神経筋接合部の神経伝達物質はγアミノ酪酸である。",
+answer: "false",
+explanation: "【国試ポイント】\n神経筋接合部の伝達物質は\nアセチルコリン。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+content: "滑車神経は副交感神経線維を含む。",
+answer: "false",
+explanation: "【国試ポイント】\n滑車神経は上斜筋を支配する\n体性運動神経。",
+category: "生理",
+subcategory: "神経生理",
+qtype: "true_false"
+},
+
+{
+  content: "舌下神経は副交感神経線維を含む。",
+  answer: "false",
+  explanation: "【国試ポイント】\n舌下神経は舌筋を支配する運動神経。\n副交感神経線維は含まない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の機能で『膵液分泌を促進する』は正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n膵液分泌は副交感神経で促進。\n交感神経では抑制される。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『A群は最も太い』は、末梢神経について正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\nA群線維は最も太い。\n伝導速度も最速。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "心拍数の増加は、副交感神経の作用である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n心拍数増加は交感神経。\n副交感神経は減少させる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『交感神経節前線維はC群である』は、末梢神経について正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n交感神経節前線維はB群。\nC群は無髄線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『交感神経節後線維はB群である』は、末梢神経について正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n交感神経節後線維はC群。\nB群は節前線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "内肛門括約筋の収縮は、副交感神経の作用である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n内肛門括約筋収縮は交感神経。\n排便時は弛緩する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『脳の白質は無髄神経線維である』は、神経線維の特徴で正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n脳白質は有髄神経線維が主体。\n髄鞘により白く見える。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "迷走神経は副交感神経線維を含む。",
+  answer: "true",
+  explanation: "【国試ポイント】\n迷走神経は代表的な副交感神経。\n胸腹部臓器を支配する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "神経筋接合部の神経伝達物質はアセチルコリンである。",
+  answer: "true",
+  explanation: "【国試ポイント】\n神経筋接合部の伝達物質は\nアセチルコリン。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋紡錘の求心性神経線維はIa神経線維である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋紡錘一次終末はIa線維。\n国試頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自律神経について、興奮は不随意である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n自律神経は意思と無関係に働く。\n不随意神経である。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『活動電位の発火直後には不応期が存在する』は細胞膜電位について誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n活動電位後には不応期が存在。\n連続発火を制御する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『Aγ線維は皮膚の痛覚を伝える』は神経線維について正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\nAγ線維は筋紡錘を支配。\n痛覚は主にAδ線維とC線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋紡錘の求心性神経線維はIb神経線維である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋紡錘はIa線維。\nIb線維は腱器官。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "排尿筋弛緩は、副交感神経が交感神経より優位に働いたときの反応である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n排尿筋弛緩は交感神経。\n副交感神経は収縮させる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1本の神経線維を電気刺激した場合の興奮伝導の説明で『興奮は両方向に伝わる』は誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n人工刺激では興奮は両方向へ伝導。\n生理的には一方向。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『無髄神経線維はRanvier絞輪を有する』は、神経線維の特徴で正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\nRanvier絞輪は有髄線維に存在。\n跳躍伝導に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "神経筋接合部の神経伝達物質はセロトニンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n神経筋接合部の伝達物質は\nアセチルコリン。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自律神経について、副交感神経の節後線維は交感神経に比べて長い。",
+  answer: "true",
+  explanation: "【国試ポイント】\n副交感神経は節後線維が長い。\n交感神経は節後線維が短い。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『C線維は圧覚を伝える』は神経線維について正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\nC線維は痛覚や温覚を伝える。\n圧覚ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "動眼神経は副交感神経線維を含む。",
+  answer: "true",
+  explanation: "【国試ポイント】\n動眼神経は瞳孔括約筋や毛様体筋を支配する副交感神経線維を含む。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副交感神経の作用で収縮する筋は血管平滑筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n血管平滑筋は主に交感神経支配。\n副交感神経支配は少ない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "発汗促進は副交感神経の作用である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n発汗は交感神経の作用。\nただし伝達物質はアセチルコリン。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の興奮によって生じるのは涙腺分泌の亢進である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n涙液分泌は副交感神経で促進。\n交感神経ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1本の神経線維を電気刺激した場合の興奮伝導の説明で『興奮は隣接する別の線維に伝わる』は誤っている。",
+  answer: "true",
+  explanation: "【国試ポイント】\n興奮は同じ神経線維内を伝導する。\n隣の線維には伝わらない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋紡錘の求心性神経線維はⅡ神経線維である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋紡錘の二次終末はⅡ群線維。\n一次終末はIa線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "神経筋接合部の神経伝達物質はアドレナリンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n神経筋接合部はアセチルコリン。\nアドレナリンではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "心拍数増加は、副交感神経が交感神経より優位に働いたときの反応である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n心拍数増加は交感神経。\n副交感神経は減少させる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の機能で『直腸平滑筋を収縮させる』は正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n交感神経は直腸運動を抑制。\n排便は副交感神経が促進する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自律神経について、交感神経節前線維の伝達物質はノルアドレナリンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n節前線維の伝達物質はアセチルコリン。\nノルアドレナリンは主に節後線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『Aδ線維は自律神経の節前線維である』は神経線維について正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n自律神経節前線維はB線維。\nAδ線維は痛覚などを伝える。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の興奮によって生じるのは気管支の拡張である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n交感神経は気管支を拡張。\n運動時に酸素取り込みを助ける。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の機能で『心収縮力を減少させる』は正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n交感神経は心収縮力を増加。\n心拍数も増加させる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の興奮によって生じるのは皮膚血管の収縮である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n交感神経は皮膚血管を収縮。\n体温保持に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副交感神経刺激は消化管運動性を低下させる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n副交感神経は消化活動を促進。\n消化管運動も亢進する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『有髄神経線維は太いほど圧迫で障害を受けやすい』は、神経線維の特徴で正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n太い有髄線維は圧迫に弱い。\n深部感覚障害が先行しやすい。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "神経筋接合部の神経伝達物質はドパミンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n神経筋接合部の伝達物質は\nアセチルコリン。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "気管支の収縮は、副交感神経の作用である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n副交感神経は気管支を収縮。\n交感神経は拡張。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『カリウムイオンは脱分極のときに細胞外から細胞内に移動する』は細胞膜電位について誤っている。",
+  answer: "true",
+  explanation: "【国試ポイント】\n脱分極ではNa+が細胞内へ流入。\nK+ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の興奮によって生じるのは筋血管の収縮である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n骨格筋血管は拡張方向。\n運動時の血流を確保する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『Aβ線維は錘内筋線維を支配する』は神経線維について正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n錘内筋線維はAγ線維が支配。\nAβ線維ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "気管支の拡張は副交感神経の作用である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n気管支拡張は交感神経。\n副交感神経では収縮する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "瞳孔散大は副交感神経の作用である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n瞳孔散大は交感神経。\n副交感神経は縮瞳。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『脱分極で極性が正の部分をオーバーシュートという』は細胞膜電位について誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\nオーバーシュートは正しい。\n膜電位が0mVを超える状態。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『興奮は一方向に伝わる』は1本の神経線維を電気刺激した場合の興奮伝導の説明で正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n人工刺激では両方向へ伝導。\n生理的条件では一方向。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副交感神経の作用で収縮する筋は排尿筋である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n排尿筋収縮は副交感神経。\n排尿を促進する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副交感神経刺激は唾液分泌を抑制する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n副交感神経は唾液分泌を促進。\n消化活動を助ける。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1本の神経線維を電気刺激した場合の興奮伝導の説明で『有髄線維では跳躍伝導が起こる』は誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n有髄線維では跳躍伝導が起こる。\n伝導速度が速い。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『活動電位は全か無の法則に従う』は細胞膜電位について誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n活動電位は全か無の法則に従う。\n閾値を超えると発生する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副交感神経刺激は縮瞳を引き起こす。",
+  answer: "true",
+  explanation: "【国試ポイント】\n副交感神経は瞳孔括約筋を収縮。\n縮瞳を起こす。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋紡錘の求心性神経線維はⅣ神経線維である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋紡錘はIa・Ⅱ群線維。\nⅣ群線維ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1本の神経線維を電気刺激した場合の興奮伝導の説明で『興奮は太い線維ほど速く伝わる』は誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n太い線維ほど伝導速度は速い。\n正しい記述である。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋内血管拡張は、副交感神経が交感神経より優位に働いたときの反応である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋内血管拡張は交感神経反応。\n運動時にみられる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経刺激は心筋の収縮力を低下させる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n交感神経は心収縮力を増加。\n心拍数も増加させる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副交感神経の作用で収縮する筋は内肛門括約筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n内肛門括約筋収縮は交感神経。\n副交感神経では弛緩する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "交感神経の興奮によって生じるのは消化腺分泌の亢進である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n交感神経は消化活動を抑制。\n分泌も低下する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "心拍数減少は副交感神経の作用である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n心拍数減少は副交感神経。\n迷走神経が関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
 ])

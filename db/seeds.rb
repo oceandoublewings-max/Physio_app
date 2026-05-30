@@ -37295,5 +37295,401 @@ qtype: "true_false"
   category: "解剖",
   subcategory: "臓器",
   qtype: "true_false"
+},
+
+{
+  content: "母指ー第3頸髄節はデルマトームと支配節の組合せで正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n母指はC6。\nC3ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "半規管は頭部の回転運動を感知する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n半規管は回転加速度を感知。\n平衡覚で頻出。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "皮膚の侵害受容器はPacini小体である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n侵害受容器は自由神経終末。\nPacini小体は振動覚。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "皮下組織は脂肪細胞で占められている。",
+  answer: "true",
+  explanation: "【国試ポイント】\n皮下組織には脂肪組織が豊富。\n保温作用も担う。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "硝子体は網膜に入る光量を調整する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n光量調節は虹彩。\n硝子体ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "立体覚は複合感覚に含まれない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n立体覚は複合感覚。\n皮質感覚の代表。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "膜迷路は中耳にある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n膜迷路は内耳。\n平衡覚と聴覚に関与。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "放線冠は視覚の伝導路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n視覚伝導路は視放線。\n放線冠ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "脳弓は視覚の伝導路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n脳弓は辺縁系。\n記憶に関与する。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "網膜中心窩には錐体よりも杆体の方が多い。",
+  answer: "false",
+  explanation: "【国試ポイント】\n中心窩は錐体が高密度。\n最も視力が高い部位。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "視放線→視交叉→視索→外側膝状体は視覚伝導路の順である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n正しくは視神経→視交叉→視索→外側膝状体→視放線。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "大脳脚は後脊髄小脳路が通る。",
+  answer: "false",
+  explanation: "【国試ポイント】\n後脊髄小脳路は下小脳脚を通る。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "耳管は内耳にある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n耳管は中耳と咽頭を連絡する。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "外側脊髄視床路は痛覚の脊髄神経路である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n痛覚・温覚は外側脊髄視床路を上行する。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "一次ニューロンの細胞体は後角にある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次ニューロンは脊髄神経節に存在。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "左上肢の圧覚は左脊髄前索を上行する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n圧覚は前脊髄視床路。\n国試頻出。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "薄束は痛覚の脊髄神経路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n薄束は深部感覚。\n痛覚ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "立毛筋は横紋筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n立毛筋は平滑筋。\n自律神経支配。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "肛門ー第1仙髄節はデルマトームと支配節の組合せで正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n肛門周囲はS5。\n仙髄領域は頻出。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "左上肢の温覚は右脊髄後索を上行する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n温覚は外側脊髄視床路。\n後索は通らない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "角膜には血管が多数分布している。",
+  answer: "false",
+  explanation: "【国試ポイント】\n角膜は無血管組織。\n透明性維持に重要。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "下行性の神経線維が通るのは内側毛帯である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n内側毛帯は上行性感覚路。\n下行路ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "温覚ーPacini（パチニ）小体は、皮膚感覚と受容器の組合せで正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\nPacini小体は振動覚。\n温覚ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "触覚ーKrause（クラウゼ）小体は、皮膚感覚と受容器の組合せで正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n触覚はMeissner小体。\nKrause小体ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "眼動脈は外頸動脈の分枝である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n眼動脈は内頸動脈の分枝。\n国試頻出。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "皮膚の侵害受容器はMeissner小体である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n侵害受容器は自由神経終末。\nMeissner小体は触覚。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "虹彩には瞳孔括約筋がある。",
+  answer: "true",
+  explanation: "【国試ポイント】\n虹彩には括約筋と散大筋が存在。\n瞳孔径を調節する。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "前庭は蝸牛と三半規管からなる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n前庭は卵形嚢と球形嚢を含む。\n蝸牛・半規管とは別。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "蝸牛管には耳石が存在する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n耳石は卵形嚢・球形嚢に存在。\n蝸牛管にはない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "回転後眼振は、動いている乗り物を注視する際にみられる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n乗り物注視でみられるのは視運動性眼振。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "毛様体は視覚器で光の受容器がある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n光受容器は網膜。\n毛様体ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "関節位置覚は複合感覚に含まれない。",
+  answer: "true",
+  explanation: "【国試ポイント】\n関節位置覚は深部感覚。\n複合感覚ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "頭位眼振は、動いている乗り物を注視する際にみられる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n乗り物注視でみられるのは視運動性眼振。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "視索→視放線→外側膝状体→視交叉は視覚伝導路の順である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n正しくは視神経→視交叉→視索→外側膝状体→視放線。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "臍ー第8胸髄節はデルマトームと支配節の組合せで正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n臍はT10。\n国試超頻出。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "レンズ核は視覚の伝導路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nレンズ核は大脳基底核。\n視覚伝導路ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "毛様体筋は近くを見るときに収縮する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n近見反射で毛様体筋は収縮。\n水晶体が厚くなる。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "視交叉→外側膝状体→視索→視放線は視覚伝導路の順である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n視索は外側膝状体の前。\n順番に注意。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "虹彩は涙液を産生する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n涙液は涙腺で産生。\n虹彩ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "虹彩は視覚器で光の受容器がある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n光受容器は網膜。\n虹彩は瞳孔径を調節。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "膝ー第1腰髄節はデルマトームと支配節の組合せで正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n膝はL3。\nL1ではない。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "痛覚の伝導路は延髄で二次ニューロンになる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n痛覚は脊髄後角で二次ニューロンになる。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "圧覚ーRuffini（ルフィニ）終末は、皮膚感覚と受容器の組合せで正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\nRuffini終末は圧覚・皮膚伸展を受容。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "網膜は視覚器で光の受容器がある。",
+  answer: "true",
+  explanation: "【国試ポイント】\n杆体・錐体が存在。\n光受容器は網膜。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
 }
 ])

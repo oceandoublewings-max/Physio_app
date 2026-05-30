@@ -35163,4 +35163,1543 @@ qtype: "true_false"
   subcategory: "神経生理",
   qtype: "true_false"
 },
+
+{
+  content: "前庭動眼反射－三叉神経は反射と脳神経の組合せとして正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n前庭動眼反射は前庭神経と動眼神経が関与。\n三叉神経ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側脳室に接しているのは淡蒼球である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n側脳室に接するのは尾状核。\n基底核の位置関係は頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "線条体を構成するのは被殻である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n線条体は尾状核と被殻で構成。\n基底核の代表構造。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "腱をたたいて骨格筋を急速に伸ばすと起こる筋単収縮に関与するのは筋紡錘である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n伸張反射の受容器は筋紡錘。\n膝蓋腱反射で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "内包は随意運動に関与しない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n内包には錐体路が通る。\n随意運動に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "腱をたたいて骨格筋を急速に伸ばすと起こる筋単収縮に関与するのはRuffini終末である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n伸張反射に関与するのは筋紡錘。\nRuffini終末ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "扁桃体は大脳辺縁系に含まれない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n扁桃体は辺縁系の代表構造。\n情動と関係が深い。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "線条体を構成するのは淡蒼球である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n線条体は尾状核と被殻。\n淡蒼球は含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『脊髄の前角でシナプスを形成する』は錐体路について誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n錐体路は脊髄前角細胞と連絡する。\n随意運動の主要伝導路。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "随意運動の制御に関与する部位は海馬である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n海馬は記憶に関与。\n随意運動は大脳皮質や基底核、小脳が担当。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "成人の安静閉眼時脳波でα波（基礎律動）の振幅が最も大きい部位は側頭部である",
+  answer: "false",
+  explanation: "【国試ポイント】\nα波は後頭部で最も明瞭。\n安静閉眼時に出現する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "第一次体性感覚野は大脳の中心後回にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n中心後回＝第一次体性感覚野。\n感覚情報の認知に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋緊張が亢進するのはレム睡眠である",
+  answer: "false",
+  explanation: "【国試ポイント】\nレム睡眠では筋緊張は低下。\n夢を見やすい時期。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中大脳動脈―海馬は脳血管と灌流域の組合せで正しい",
+  answer: "false",
+  explanation: "【国試ポイント】\n海馬は主に後大脳動脈領域。\n血管支配は頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "大脳基底核を経由するのは錐体路である",
+  answer: "false",
+  explanation: "【国試ポイント】\n大脳基底核は錐体外路系。\n随意運動の調節を行う。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自原抑制について、反射の中枢は中脳にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n自原抑制の中枢は脊髄。\nゴルジ腱器官が関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "下顎反射―顔面神経は反射と脳神経の組合せで正しい",
+  answer: "false",
+  explanation: "【国試ポイント】\n下顎反射は三叉神経。\n顔面神経ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Wernicke野は前頭葉に含まれる",
+  answer: "false",
+  explanation: "【国試ポイント】\nWernicke野は側頭葉。\n言語理解を担当する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌の運動を支配する神経の神経核があるのは延髄である",
+  answer: "true",
+  explanation: "【国試ポイント】\n舌下神経核は延髄に存在。\n舌運動を支配する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "随意運動の制御に関与する部位は松果体である",
+  answer: "false",
+  explanation: "【国試ポイント】\n松果体はメラトニン分泌。\n運動制御には関与しない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "皮質脊髄路は被蓋を通過する",
+  answer: "false",
+  explanation: "【国試ポイント】\n皮質脊髄路は大脳脚基底部を通る。\n被蓋ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "聴覚野―頭頂葉は大脳の領野と部位の組合せで正しい",
+  answer: "false",
+  explanation: "【国試ポイント】\n聴覚野は側頭葉。\n頭頂葉ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "被殻は大脳基底核に含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n被殻は大脳基底核の構成要素。\n尾状核とともに線条体を形成。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "随意運動の制御に関与する部位は扁桃体である",
+  answer: "false",
+  explanation: "【国試ポイント】\n扁桃体は情動に関与。\n運動制御ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "白質に分類されるのは被殻である",
+  answer: "false",
+  explanation: "【国試ポイント】\n被殻は灰白質。\n白質ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "扁桃体は大脳基底核に含まれない",
+  answer: "true",
+  explanation: "【国試ポイント】\n扁桃体は辺縁系の構造。\n大脳基底核には含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "伸張反射で求心性線維として働くのはⅠa線維である",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋紡錘の求心性線維はⅠa線維。\n伸張反射で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "帯状回は側頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n帯状回は辺縁葉に属する。\n情動や記憶に関与。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "オリーブ核は中脳にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n下オリーブ核は延髄に存在。\n小脳との連絡に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Monro孔は第三脳室と第四脳室の間に位置する",
+  answer: "false",
+  explanation: "【国試ポイント】\nMonro孔は側脳室と第三脳室を連絡する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "成人の安静閉眼時脳波でα波の振幅が最も大きい部位は頭頂部である",
+  answer: "false",
+  explanation: "【国試ポイント】\nα波は後頭部で最も明瞭。\n安静閉眼時に出現する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "遠心性線維はγ運動線維である",
+  answer: "true",
+  explanation: "【国試ポイント】\nγ運動線維は筋紡錘へ向かう遠心性線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "視床下部は随意運動に関与しない",
+  answer: "true",
+  explanation: "【国試ポイント】\n視床下部は自律神経や内分泌調節が中心。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Papez回路に含まれないのは視床前核である",
+  answer: "false",
+  explanation: "【国試ポイント】\n視床前核はPapez回路の構成要素。\n記憶機能と関連する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "白質に分類されるのは脊髄前角である",
+  answer: "false",
+  explanation: "【国試ポイント】\n脊髄前角は灰白質。\n運動ニューロン細胞体が存在する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "補足運動野は大脳の中心後回にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n補足運動野は前頭葉内側面。\n運動計画に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "頭部MRIのT2強調像で2は海馬である",
+  answer: "false",
+  explanation: "【国試ポイント】\n海馬の位置はMRI問題で頻出。\n解剖学的位置を確認しておく。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+}
+
+{
+  content: "線条体を構成するのは尾状核である",
+  answer: "true",
+  explanation: "【国試ポイント】\n尾状核は線条体の構成要素。\n被殻と合わせて線条体を形成する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "脊髄では中心管の周囲に白質が存在する",
+  answer: "false",
+  explanation: "【国試ポイント】\n中心管周囲は灰白質。\n白質は外側に位置する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "随意運動の制御に関与する部位は青斑核である",
+  answer: "false",
+  explanation: "【国試ポイント】\n青斑核はノルアドレナリン作動性。\n覚醒や注意に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "折りたたみナイフ現象に関与する感覚神経線維はIb線維である",
+  answer: "true",
+  explanation: "【国試ポイント】\nゴルジ腱器官の求心路はIb線維。\n折りたたみナイフ現象に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "海馬は大脳辺縁系に含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n海馬は辺縁系の代表構造。\n記憶形成に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側脳室に接しているのは黒質である",
+  answer: "false",
+  explanation: "【国試ポイント】\n黒質は中脳に存在。\n側脳室には接しない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一連の動作の企画は小脳の役割である",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動企画は前頭葉や補足運動野。\n小脳は運動の協調を担う。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "角回は視覚失認に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n角回は読字・書字機能に関与。\n失読失書で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自原抑制の効果器は同名筋である",
+  answer: "true",
+  explanation: "【国試ポイント】\n自原抑制はゴルジ腱器官反射。\n同名筋の活動を抑制する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "伸張反射に関与する受容器はMeissner小体である",
+  answer: "false",
+  explanation: "【国試ポイント】\n伸張反射の受容器は筋紡錘。\nMeissner小体は触覚受容器。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中心前回は随意運動に関与しない",
+  answer: "false",
+  explanation: "【国試ポイント】\n中心前回は一次運動野。\n随意運動の出力中枢。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "外側皮質脊髄路では上肢に対応する線維は下肢に対応する線維より外側にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n外側皮質脊髄路は頚髄線維が内側。\n仙髄線維が外側に位置する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "成人の安静閉眼時脳波でα波の振幅が最も大きい部位は後頭部である",
+  answer: "true",
+  explanation: "【国試ポイント】\nα波は後頭部優位。\n安静閉眼時に出現する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "入眠直後に多く出現するのはレム睡眠である",
+  answer: "false",
+  explanation: "【国試ポイント】\n入眠直後はノンレム睡眠。\nレム睡眠は後に出現する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "海馬は側頭葉に存在する",
+  answer: "true",
+  explanation: "【国試ポイント】\n海馬は側頭葉内側面。\n記憶形成に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "角回は側頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n角回は頭頂葉後部。\n言語機能に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "折りたたみナイフ現象に関与する感覚神経線維はIb線維である",
+  answer: "true",
+  explanation: "【国試ポイント】\nIb線維はゴルジ腱器官由来。\n折りたたみナイフ現象で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "記憶に基づく運動の修飾は小脳の役割である",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動の企画は大脳皮質。\n小脳は運動の協調を担う。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "線条体を構成するのは前障である",
+  answer: "false",
+  explanation: "【国試ポイント】\n線条体は尾状核と被殻。\n前障は含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "急速眼球運動がみられるのはレム睡眠である",
+  answer: "true",
+  explanation: "【国試ポイント】\nREM＝Rapid Eye Movement。\n急速眼球運動が特徴。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "網様体は大脳基底核に含まれない",
+  answer: "true",
+  explanation: "【国試ポイント】\n網様体は脳幹に存在。\n基底核ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "疑核は中脳にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n疑核は延髄に存在。\n舌咽・迷走神経と関連。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自発的な行為のプログラミングは小脳の役割である",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動プログラムは補足運動野。\n小脳は協調運動を担当。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Ⅱ群線維は筋紡錘の動的感受性を調整する",
+  answer: "false",
+  explanation: "【国試ポイント】\nⅡ群線維は静的伸張を伝える。\n動的感受性はIa線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "扁桃体は短期記憶に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n短期記憶は海馬が重要。\n扁桃体は情動に関与。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "レム睡眠では脳波は高振幅である",
+  answer: "false",
+  explanation: "【国試ポイント】\nREM睡眠は低振幅速波。\n覚醒時に近い脳波を示す。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "乳頭体は大脳辺縁系に含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n乳頭体は辺縁系の構成要素。\nPapez回路で頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Wernicke野は後頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\nWernicke野は側頭葉後部。\n言語理解を担う。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側脳室に接しているのは尾状核である",
+  answer: "true",
+  explanation: "【国試ポイント】\n尾状核は側脳室外側壁に接する。\n国試頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "歯状回は側頭葉にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n歯状回は海馬傍回の一部。\n側頭葉内側面に存在。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "尾状核は大脳基底核に含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n尾状核は大脳基底核の代表構造。\n線条体を構成する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "大脳脚は随意運動に関与しない",
+  answer: "false",
+  explanation: "【国試ポイント】\n大脳脚には皮質脊髄路が通る。\n随意運動に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "脊髄円錐は脳と脊髄の移行部である",
+  answer: "false",
+  explanation: "【国試ポイント】\n脳と脊髄の移行部は延髄。\n脊髄円錐は脊髄下端。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "白質に分類されるのは淡蒼球である",
+  answer: "false",
+  explanation: "【国試ポイント】\n淡蒼球は灰白質。\n神経細胞体が集まる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "視床下部は長期記憶に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n長期記憶は海馬が重要。\n視床下部は自律神経調節。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "線条体を構成するのは下垂体である",
+  answer: "false",
+  explanation: "【国試ポイント】\n線条体は尾状核と被殻。\n下垂体は内分泌器官。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "前脳基底部は相貌失認に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n相貌失認は紡錘状回の障害。\n前脳基底部ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "椎骨動脈の還流域は中心前回である",
+  answer: "false",
+  explanation: "【国試ポイント】\n中心前回は主に中大脳動脈領域。\n椎骨動脈系ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "紡錘状回は相貌失認に関与する",
+  answer: "true",
+  explanation: "【国試ポイント】\n紡錘状回は顔認識に重要。\n障害で相貌失認を生じる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋紡錘内の錘内筋線維を支配するのはα運動線維である",
+  answer: "false",
+  explanation: "【国試ポイント】\n錘内筋線維はγ運動線維支配。\nα運動線維は錘外筋線維。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌の運動を支配する神経の神経核があるのは中脳である",
+  answer: "false",
+  explanation: "【国試ポイント】\n舌下神経核は延髄に存在。\n中脳ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一次嗅皮質は後頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次嗅皮質は側頭葉内側。\n後頭葉ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "脈絡叢は第三脳室と第四脳室の間に位置する",
+  answer: "false",
+  explanation: "【国試ポイント】\n第三脳室と第四脳室の間は中脳水道。\n脈絡叢ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "後大脳動脈の還流域に視床が含まれる",
+  answer: "true",
+  explanation: "【国試ポイント】\n視床は後大脳動脈系から血流を受ける。\n国試頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Papez回路に含まれないのは縁上回である",
+  answer: "true",
+  explanation: "【国試ポイント】\nPapez回路は海馬・乳頭体など。\n縁上回は含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "滑脳症では脳溝増加がみられる",
+  answer: "false",
+  explanation: "【国試ポイント】\n滑脳症では脳回・脳溝が減少。\n脳表が平滑になる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一次運動野は側頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次運動野は前頭葉の中心前回。\n側頭葉ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌の運動を支配する神経の神経核があるのは間脳である",
+  answer: "false",
+  explanation: "【国試ポイント】\n舌下神経核は延髄に存在。\n間脳ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "脳底動脈の還流域にBroca野が含まれる",
+  answer: "false",
+  explanation: "【国試ポイント】\nBroca野は中大脳動脈領域。\n脳底動脈ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Magendie孔は第三脳室と第四脳室の間に位置する",
+  answer: "false",
+  explanation: "【国試ポイント】\n第三脳室と第四脳室の間は中脳水道。\nMagendie孔は第四脳室出口。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "後根は脊髄神経節をつくる",
+  answer: "true",
+  explanation: "【国試ポイント】\n脊髄神経節は後根に存在。\n感覚神経細胞体が集まる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中心溝は前頭葉と頭頂葉の間にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n中心溝は前頭葉と頭頂葉の境界。\n中心前回と中心後回を分ける。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一晩に20回程度みられるのはレム睡眠である",
+  answer: "false",
+  explanation: "【国試ポイント】\nレム睡眠は約4〜5回出現。\n20回程度ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌の運動を支配する神経の神経核があるのは橋である",
+  answer: "false",
+  explanation: "【国試ポイント】\n舌下神経核は延髄に存在。\n橋ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Papez回路に乳頭体は含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n乳頭体はPapez回路の構成要素。\n頻出事項。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "脊髄の下端は第5腰椎までである",
+  answer: "false",
+  explanation: "【国試ポイント】\n成人の脊髄下端はL1〜L2。\n馬尾形成の基礎。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "折りたたみナイフ現象に関与する感覚神経線維はⅣ群線維である",
+  answer: "false",
+  explanation: "【国試ポイント】\n折りたたみナイフ現象はIb線維。\nゴルジ腱器官由来。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "赤核は中脳にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n赤核は中脳被蓋に存在。\n錐体外路系で重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "外側皮質脊髄路は後索を通る",
+  answer: "false",
+  explanation: "【国試ポイント】\n外側皮質脊髄路は側索を下降。\n後索ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "随意運動の制御に関与する部位は歯状核である",
+  answer: "true",
+  explanation: "【国試ポイント】\n歯状核は小脳核の一つ。\n運動計画や随意運動に関与。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "扁桃体は大脳辺縁系を構成する",
+  answer: "true",
+  explanation: "【国試ポイント】\n扁桃体は辺縁系の主要構造。\n情動や記憶に関与。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Broca野は側頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\nBroca野は前頭葉下前頭回。\n運動性言語中枢。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Papez回路に海馬傍回は含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n海馬傍回はPapez回路の構成要素。\n記憶に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "対光反射は動眼神経を介する",
+  answer: "true",
+  explanation: "【国試ポイント】\n求心路は視神経。\n遠心路は動眼神経。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "黒質は中脳に存在する",
+  answer: "true",
+  explanation: "【国試ポイント】\n黒質は中脳の重要核。\nパーキンソン病と関連。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "腱をたたいて骨格筋を急速に伸ばすと起こる筋単収縮に関与するのはPacini小体である",
+  answer: "false",
+  explanation: "【国試ポイント】\n伸張反射に関与するのは筋紡錘。\nPacini小体ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "海馬は体温調節を担う",
+  answer: "false",
+  explanation: "【国試ポイント】\n体温調節中枢は視床下部。\n海馬は記憶に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中小脳脚は中脳と小脳を連絡する",
+  answer: "false",
+  explanation: "【国試ポイント】\n中小脳脚は橋と小脳を連絡。\n中脳と小脳は上小脳脚。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "二分脊椎と水頭症の合併は中枢神経発生異常の特徴である",
+  answer: "true",
+  explanation: "【国試ポイント】\n二分脊椎は水頭症を合併しやすい。\n先天奇形の頻出事項。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自原抑制の求心性神経線維はIa群線維である",
+  answer: "false",
+  explanation: "【国試ポイント】\n自原抑制はIb群線維。\nゴルジ腱器官由来。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "帯状回は大脳辺縁系に含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n帯状回は辺縁系の主要構造。\n情動や記憶に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Ia群線維は核袋線維からの求心線維である",
+  answer: "true",
+  explanation: "【国試ポイント】\nIa群線維は一次終末。\n核袋線維と核鎖線維を支配する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "第二次視覚野は中心後回にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n視覚野は後頭葉。\n中心後回は体性感覚野。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Papez回路に帯状回は含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n帯状回はPapez回路の構成要素。\n記憶回路として重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "黒質は被蓋と大脳脚の間に位置する",
+  answer: "true",
+  explanation: "【国試ポイント】\n中脳は被蓋・黒質・大脳脚で構成。\n黒質はその中間に位置する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Arnold-Chiari奇形では脊髄の頭蓋内嵌入がみられる",
+  answer: "false",
+  explanation: "【国試ポイント】\nArnold-Chiari奇形は小脳扁桃の下垂。\n脊髄の嵌入ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "乳頭体は大脳辺縁系を構成する",
+  answer: "true",
+  explanation: "【国試ポイント】\n乳頭体は辺縁系の構成要素。\nPapez回路にも含まれる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "海馬傍回は側頭葉にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n海馬傍回は側頭葉内側面。\n記憶機能に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側脳室に接しているのは被殻である",
+  answer: "false",
+  explanation: "【国試ポイント】\n側脳室に接するのは尾状核。\n被殻は接しない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "松果体は大脳辺縁系を構成する",
+  answer: "false",
+  explanation: "【国試ポイント】\n松果体は間脳の内分泌器官。\n辺縁系には含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動前野は中心後回にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動前野は前頭葉。\n中心後回は体性感覚野。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "全前脳胞症では顔面外側の欠損がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\n全前脳胞症は前脳分離異常。\n顔面形成異常を伴う。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "嗅球は内分泌に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n嗅球は嗅覚伝導路。\n内分泌機能は持たない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "腱反射に関与するのは自由神経終末である",
+  answer: "false",
+  explanation: "【国試ポイント】\n腱反射は筋紡錘が受容器。\n自由神経終末ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "下垂体は大脳辺縁系を構成する",
+  answer: "false",
+  explanation: "【国試ポイント】\n下垂体は内分泌器官。\n辺縁系には含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "帯状回は運動学習に関与する",
+  answer: "true",
+  explanation: "【国試ポイント】\n帯状回は辺縁系の一部。\n学習や情動と関連する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Dandy-Walker症候群では後頭蓋窩の異常がみられる",
+  answer: "true",
+  explanation: "【国試ポイント】\n小脳虫部形成不全と第4脳室拡大。\n後頭蓋窩拡大が特徴。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "大脳脚は腹側に位置する",
+  answer: "true",
+  explanation: "【国試ポイント】\n中脳は背側から被蓋・黒質・大脳脚。\n大脳脚は最腹側。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "上小脳脚は小脳と中脳を連絡する",
+  answer: "true",
+  explanation: "【国試ポイント】\n上小脳脚は中脳へ連絡。\n中小脳脚は橋と連絡。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "前頭眼野は中心後回にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n前頭眼野は前頭葉。\n中心後回ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側脳室に接しているのは扁桃体である",
+  answer: "false",
+  explanation: "【国試ポイント】\n側脳室に接する代表構造は尾状核。\n扁桃体ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一次聴覚野は辺縁葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次聴覚野は側頭葉。\n上側頭回に存在する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "外側皮質脊髄路は脊髄前角細胞にシナプス結合する",
+  answer: "true",
+  explanation: "【国試ポイント】\n最終的に前角細胞へ伝達。\n随意運動を制御する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一次体性感覚野は頭頂葉にある",
+  answer: "true",
+  explanation: "【国試ポイント】\n一次体性感覚野は中心後回。\n頭頂葉に存在する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Broca野は前頭葉に含まれる",
+  answer: "true",
+  explanation: "【国試ポイント】\nBroca野は下前頭回。\n運動性言語中枢である。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "侵害受容反射は伸張反射である",
+  answer: "false",
+  explanation: "【国試ポイント】\n侵害受容反射は屈曲反射。\n伸張反射ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "小脳は随意運動に関与しない",
+  answer: "false",
+  explanation: "【国試ポイント】\n小脳は運動の協調・調節に重要。\n随意運動に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中心前回は側頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n中心前回は前頭葉。\n一次運動野に相当する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "脳梁は左右の大脳半球を連絡する",
+  answer: "true",
+  explanation: "【国試ポイント】\n脳梁は最大の交連線維。\n左右半球を連絡する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "咽頭反射は副神経を介する",
+  answer: "false",
+  explanation: "【国試ポイント】\n咽頭反射は舌咽神経と迷走神経。\n副神経ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "成人の安静閉眼時脳波でα波の振幅が最も大きい部位は中心部である",
+  answer: "false",
+  explanation: "【国試ポイント】\nα波は後頭部で最も優位。\n閉眼時に出現しやすい。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "紡錘状回は前頭葉に含まれる",
+  answer: "false",
+  explanation: "【国試ポイント】\n紡錘状回は側頭葉下面〜後頭葉下面。\n顔認知に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "前脳動脈は黒質を灌流する",
+  answer: "false",
+  explanation: "【国試ポイント】\n黒質は中脳に存在。\n主に後大脳動脈系が栄養する。",
+  category: "生理",
+  subcategory: "循環",
+  qtype: "true_false"
+},
+
+{
+  content: "角回は前頭葉に含まれる",
+  answer: "false",
+  explanation: "【国試ポイント】\n角回は頭頂葉下部。\n言語理解に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "外側皮質脊髄路は延髄で交叉する",
+  answer: "true",
+  explanation: "【国試ポイント】\n延髄下部の錐体交叉で交叉。\nその後外側索を下行する。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "線条体は大脳辺縁系を構成する",
+  answer: "false",
+  explanation: "【国試ポイント】\n線条体は大脳基底核。\n辺縁系には含まれない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "弧束核は中脳にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n孤束核は延髄に存在。\n内臓感覚の中継核である。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中心前回は前頭葉に含まれる",
+  answer: "true",
+  explanation: "【国試ポイント】\n中心前回は一次運動野。\n前頭葉に位置する。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "視覚情報を運動指令へ変換するのは小脳の役割である",
+  answer: "true",
+  explanation: "【国試ポイント】\n小脳は感覚情報を利用し運動を調節。\n運動学習にも関与する。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "Luschka孔は第三脳室と第四脳室の間に位置する",
+  answer: "false",
+  explanation: "【国試ポイント】\n第三脳室と第四脳室を結ぶのは中脳水道。\nLuschka孔は第四脳室外側口。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "角膜反射の求心路は視神経である",
+  answer: "false",
+  explanation: "【国試ポイント】\n求心路は三叉神経V1。\n遠心路は顔面神経。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "海馬は相貌失認に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n海馬は記憶形成。\n相貌失認は紡錘状回障害で生じる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "終糸は尾骨前面に付着する",
+  answer: "false",
+  explanation: "【国試ポイント】\n終糸は尾骨背面付近へ付着。\n脊髄を固定する役割がある。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "成人の安静閉眼時脳波でα波の振幅が最も大きい部位は前頭部である",
+  answer: "false",
+  explanation: "【国試ポイント】\nα波は後頭部優位。\n前頭部ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "淡蒼球は大脳基底核に含まれない",
+  answer: "false",
+  explanation: "【国試ポイント】\n淡蒼球は被殻とともにレンズ核を構成。\n大脳基底核に含まれる。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "錐体路は大脳脚を経由しない",
+  answer: "false",
+  explanation: "【国試ポイント】\n錐体路は内包→大脳脚→橋→延髄を通る。\n大脳脚を経由する。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "歯状核は中脳にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n歯状核は小脳深部核。\n中脳ではない。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "単シナプス反射である",
+  answer: "true",
+  explanation: "【国試ポイント】\n伸張反射は単シナプス反射。\n筋紡錘が受容器である。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "折りたたみナイフ現象に関与する感覚神経線維はIbである",
+  answer: "true",
+  explanation: "【国試ポイント】\nIb線維は腱器官由来。\n折りたたみナイフ現象に関与する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一次視覚野は前頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次視覚野は後頭葉。\n鳥距溝周囲に存在する。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "中脳蓋は背側に位置する",
+  answer: "true",
+  explanation: "【国試ポイント】\n中脳蓋は中脳背側。\n四丘体を含む。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "一次体性感覚野は側頭葉にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次体性感覚野は頭頂葉。\n中心後回に位置する。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "自原抑制の受容器は筋紡錘である",
+  answer: "false",
+  explanation: "【国試ポイント】\n自原抑制の受容器は腱器官。\n筋紡錘ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "白質に分類されるのは視床である",
+  answer: "false",
+  explanation: "【国試ポイント】\n視床は灰白質。\n白質ではない。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "外側皮質脊髄路は運動前野からの投射線維を含まない",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動前野からも皮質脊髄路へ投射する。\n一次運動野のみではない。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "乳頭体は相貌失認に関与する",
+  answer: "false",
+  explanation: "【国試ポイント】\n乳頭体は記憶回路に関与。\n相貌失認は紡錘状回障害で生じる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "求心性線維はIb群線維である",
+  answer: "false",
+  explanation: "【国試ポイント】\n伸張反射の求心路はIa線維。\nIb線維は腱器官由来。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌の運動を支配する神経核は脊髄にある",
+  answer: "false",
+  explanation: "【国試ポイント】\n舌下神経核は延髄に存在。\n脊髄ではない。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "運動プランの切り替えは小脳の役割である",
+  answer: "true",
+  explanation: "【国試ポイント】\n小脳は運動の協調と修正を行う。\n運動学習にも重要。",
+  category: "運動",
+  subcategory: "動作分析",
+  qtype: "true_false"
+},
+
+{
+  content: "二次終末は核鎖線維に比べ核袋線維との結合が強い",
+  answer: "false",
+  explanation: "【国試ポイント】\n二次終末は核鎖線維との結合が強い。\n核袋線維優位ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "自原抑制は単シナプス反射である",
+  answer: "false",
+  explanation: "【国試ポイント】\n自原抑制は介在ニューロンを介する。\n多シナプス反射である。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "大多数は延髄で交差する",
+  answer: "true",
+  explanation: "【国試ポイント】\n皮質脊髄路の大部分は延髄下部で交叉。\n錐体交叉を形成する。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "大脳の運動皮質から始まる",
+  answer: "true",
+  explanation: "【国試ポイント】\n錐体路は一次運動野を主起始とする。\n随意運動を担う。",
+  category: "運動",
+  subcategory: "筋作用",
+  qtype: "true_false"
+},
+
+{
+  content: "内包は大脳辺縁系に含まれない",
+  answer: "true",
+  explanation: "【国試ポイント】\n内包は白質線維束。\n辺縁系には含まれない。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+}
 ])

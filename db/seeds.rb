@@ -36701,5 +36701,599 @@ qtype: "true_false"
   category: "解剖",
   subcategory: "神経",
   qtype: "true_false"
+},
+
+{
+  content: "外側膝状体は、視覚の伝導路である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n外側膝状体は視覚伝導路の中継核。\n視覚は外側膝状体、聴覚は内側膝状体。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "左上肢の感覚と伝導路が通る部位との組合せで『振動覚－左脊髄側索』は正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n振動覚は後索を上行する。\n側索を通るのは痛覚・温度覚。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "空間分解能は全視野で均一である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n空間分解能は中心窩で最も高い。\n周辺視野では低下する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "眼動脈は外頸動脈の分枝である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n眼動脈は内頸動脈の分枝。\n眼窩内へ進入する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "皮膚の侵害受容器は毛包受容体である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n侵害受容器は自由神経終末。\n毛包受容体は触覚受容器。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "触覚の線維は中脳で交叉する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n触覚・振動覚は延髄で交叉する。\n後索-内側毛帯路を通る。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "副神経は味覚を支配する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n副神経は胸鎖乳突筋と僧帽筋を支配。\n味覚には関与しない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "皮膚の侵害受容器はRuffini終末である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n侵害受容器は自由神経終末。\nRuffini終末は皮膚伸展を感知する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "外側脊髄視床路は痛覚の脊髄神経経路である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n痛覚・温度覚は外側脊髄視床路を上行。\n脊髄で交叉する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "圧覚の線維は脊髄視床路を通る。",
+  answer: "false",
+  explanation: "【国試ポイント】\n圧覚は後索路で伝導される。\n脊髄視床路は痛覚・温度覚。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "一次視覚野は側頭葉にある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n一次視覚野は後頭葉に存在する。\n鳥距溝周囲に位置する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "下小脳脚は後脊髄小脳路が通る。",
+  answer: "true",
+  explanation: "【国試ポイント】\n後脊髄小脳路は下小脳脚を通る。\n固有感覚を小脳へ伝える。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "温度覚の線維は脊髄節で交叉する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n温度覚は脊髄レベルで交叉。\n外側脊髄視床路を上行する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "視察→視交叉→視放線→外側膝状体は視覚伝導路の順で正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n正しくは視索→外側膝状体→視放線→視覚野。\n順序問題は頻出。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌下神経は味覚を支配する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n舌下神経は舌運動を支配。\n味覚には関与しない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "『表皮には基底層が含まれる』は皮膚について誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n基底層は表皮に含まれる。\n表皮最深部に位置する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "下丘は視覚の伝導路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n下丘は聴覚反射に関与。\n視覚は上丘が関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "視神経乳頭は眼球軸の外側にある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n視神経乳頭は眼球後極の内側。\n生理的盲点に相当する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "部位覚は複合感覚に含まれない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n部位覚は複合感覚に含まれる。\n二点識別覚などと合わせて重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "耳管は咽頭に開口している。",
+  answer: "true",
+  explanation: "【国試ポイント】\n耳管は中耳と咽頭を連絡する。\n中耳圧の調整に重要。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中小脳脚は後脊髄小脳路が通る。",
+  answer: "false",
+  explanation: "【国試ポイント】\n後脊髄小脳路は下小脳脚を通る。\n中小脳脚は橋小脳線維が通る。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "舌咽神経は味覚を支配する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n舌咽神経は舌後1/3の味覚を伝える。\n顔面神経は舌前2/3を支配する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "視運動性眼振は、静止している人が、動いている乗り物を注視する際にみられる生理的な眼球運動に含まれる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n視運動性眼振は移動する視標を追う際にみられる。\n生理的眼振の一種である。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "注視眼振は、静止している人が、動いている乗り物を注視する際にみられる生理的な眼球運動に含まれる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n動く視標を追うのは視運動性眼振。\n注視眼振は病的眼振として扱われる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "下行性の神経線維が通るのは薄束である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n薄束は後索を上行する感覚路。\n下行路ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "虹彩には瞳孔散大筋がある。",
+  answer: "true",
+  explanation: "【国試ポイント】\n虹彩には瞳孔散大筋と瞳孔括約筋が存在する。\n自律神経支配を受ける。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "半規管は蝸牛神経の支配を受ける。",
+  answer: "false",
+  explanation: "【国試ポイント】\n半規管は前庭神経が支配する。\n蝸牛神経は聴覚を伝える。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "視細胞の杆体は色覚を司る。",
+  answer: "false",
+  explanation: "【国試ポイント】\n色覚を司るのは錐体。\n杆体は暗所視に関与する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "暗順応は明順応より速やかに行われる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n明順応の方が速い。\n暗順応は時間がかかる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "角膜は光信号を電気信号に変換する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n光を電気信号へ変換するのは網膜の視細胞。\n角膜は光を屈折させる。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "赤核脊髄路は痛覚の脊髄神経路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n赤核脊髄路は運動路。\n痛覚は脊髄視床路を通る。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "左上肢の感覚と伝導路が通る部位との組合せで『痛覚－右脊髄側索』は正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n痛覚は脊髄で交叉する。\n左上肢の痛覚は右側索を上行する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "半規管にはコルチ器が存在する。",
+  answer: "false",
+  explanation: "【国試ポイント】\nコルチ器は蝸牛管に存在する。\n半規管には膨大部稜がある。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "鼓膜はキヌタ骨に接している。",
+  answer: "false",
+  explanation: "【国試ポイント】\n鼓膜はツチ骨に付着する。\nキヌタ骨はツチ骨とアブミ骨の間にある。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "内側毛帯は後脊髄小脳路が通る。",
+  answer: "false",
+  explanation: "【国試ポイント】\n後脊髄小脳路は下小脳脚を通る。\n内側毛帯は深部感覚の伝導路である。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "下行性の神経線維が通るのは楔状束である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n楔状束は上行性の感覚路。\n下行路ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "上小脳脚は後脊髄小脳路が通る。",
+  answer: "false",
+  explanation: "【国試ポイント】\n後脊髄小脳路は下小脳脚を通る。\n上小脳脚は主に遠心路が通る。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "内耳は側頭骨の錐体部内にある。",
+  answer: "true",
+  explanation: "【国試ポイント】\n内耳は側頭骨錐体部に存在する。\n蝸牛や半規管を含む。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "二点識別覚は複合感覚に含まれない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n二点識別覚は複合感覚の代表。\n皮質機能の評価に用いる。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "蝸牛管は内リンパの流れが受容器の刺激となる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n内リンパの流れで刺激されるのは半規管。\n蝸牛管は音刺激を受容する。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "皮膚の侵害受容器は自由神経終末である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n痛覚は自由神経終末で受容される。\n代表的な侵害受容器である。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "乳頭－第4胸髄節はデルマトームと支配髄節の組合せで正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n乳頭はT4。\n臍はT10も頻出。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "鼓室は外耳にある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n鼓室は中耳に含まれる。\n外耳は耳介と外耳道で構成される。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "痛覚－自由神経終末は、皮膚感覚と受容器の組合せで正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n痛覚は自由神経終末で受容される。\n国試頻出の組合せ。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "毛様体には血管がない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n血管がないのは角膜。\n毛様体は血流が豊富。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "下行性の神経線維が通るのは錐体である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n錐体路は運動の下行路。\n延髄錐体で交叉する。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨迷路は内耳にある。",
+  answer: "true",
+  explanation: "【国試ポイント】\n骨迷路は内耳の構造。\n蝸牛・前庭・半規管を含む。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "真皮には感覚受容器が分布する。",
+  answer: "true",
+  explanation: "【国試ポイント】\nMeissner小体やPacinian小体などが存在する。\n真皮は感覚受容器が豊富。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "冷覚－Meissner小体は、皮膚感覚と受容器の組合せで正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\nMeissner小体は触覚。\n冷覚は自由神経終末で受容する。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "角膜には血管が多数分布している。",
+  answer: "false",
+  explanation: "【国試ポイント】\n角膜は無血管組織。\n透明性維持に重要である。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "下行性の神経線維が通るのは外側毛帯である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n外側毛帯は聴覚伝導路。\n下行路ではない。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "網膜は眼球の内圧を保つ。",
+  answer: "false",
+  explanation: "【国試ポイント】\n眼圧維持には房水が重要。\n網膜は視覚受容器を含む。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "ツチ骨は中耳にある。",
+  answer: "true",
+  explanation: "【国試ポイント】\n耳小骨はツチ骨・キヌタ骨・アブミ骨。\nいずれも中耳に存在する。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "視交叉→視索→外側膝状体→視放線は視神経から視覚野に至る伝導路の順で正しい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n視覚伝導路の基本。\n国試頻出ルート。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "左上肢の位置覚と伝導路が通る部位の組合せで『位置覚－右脊髄後索』は正しい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n後索路は延髄まで同側を上行。\n左上肢なら左後索。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "滑車神経は味覚を支配する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n滑車神経は眼球運動神経。\n味覚は支配しない。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "眼球壁外膜は強膜と内膜からなる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n外膜は角膜と強膜。\n内膜は網膜。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "毛様体は水晶体の厚さを変化させる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n毛様体筋の収縮で調節が行われる。\n近くを見る時に重要。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "重量覚は複合感覚に含まれない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n重量覚は複合感覚。\n皮質感覚として扱われる。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "角膜は視覚器で光の受容器がある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n光受容器は網膜。\n角膜は光を屈折させる。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "硝子体は視覚器で光の受容器がある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n硝子体は透明なゲル状組織。\n光受容器は存在しない。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "固視微動は、静止している人が動いている乗り物を注視する際にみられる生理的な眼球運動に含まれる。",
+  answer: "false",
+  explanation: "【国試ポイント】\nその状況では視運動性眼振。\n固視微動は注視中にみられる微小運動。",
+  category: "生理",
+  subcategory: "感覚",
+  qtype: "true_false"
+},
+
+{
+  content: "楔状束は痛覚の脊髄神経路である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n楔状束は深部感覚。\n痛覚は脊髄視床路。",
+  category: "生理",
+  subcategory: "神経生理",
+  qtype: "true_false"
+},
+
+{
+  content: "中耳には聴覚と平衡覚をつかさどる感覚器がある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n感覚器は内耳に存在する。\n中耳は音の伝達が役割。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
+},
+
+{
+  content: "顔面神経は味覚を支配する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n顔面神経は舌前2/3の味覚を担当。\n国試頻出。",
+  category: "解剖",
+  subcategory: "神経",
+  qtype: "true_false"
+},
+
+{
+  content: "エクリン腺は全身の皮膚に分布する。",
+  answer: "true",
+  explanation: "【国試ポイント】\nエクリン汗腺は全身に分布。\n体温調節に重要。",
+  category: "解剖",
+  subcategory: "臓器",
+  qtype: "true_false"
 }
 ])

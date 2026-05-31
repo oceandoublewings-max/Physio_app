@@ -37691,5 +37691,410 @@ qtype: "true_false"
   category: "生理",
   subcategory: "感覚",
   qtype: "true_false"
+},
+
+{
+  content: "エリスロポエチンは血液凝固因子である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nエリスロポエチンは赤血球産生を促進する。\n血液凝固因子ではない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "骨髄系幹細胞から生成されるのは、血液中の血小板について誤っている。",
+  answer: "false",
+  explanation: "【国試ポイント】\n血小板は骨髄系幹細胞由来。\n巨核球から産生される。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "好酸球は抗体を産生する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n抗体を産生するのはB細胞・形質細胞。\n好酸球は寄生虫やアレルギーで重要。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "アルブミンは血液凝固因子である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nアルブミンは血漿膠質浸透圧を保つ。\n凝固因子ではない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "線維素溶解に働くのはフィブリンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n線溶に働くのはプラスミン。\nフィブリンは血栓形成に関与する。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "線維素溶解に働くのはアルブミンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n線溶に働くのはプラスミン。\nアルブミンは浸透圧維持が主な役割。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "単球・好酸球・好中球・リンパ球・好塩基球の中で、細菌貪食能が最も高いのは好中球である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n好中球は細菌貪食の中心。\n急性炎症で増加しやすい。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "キラーT細胞は他の免疫細胞を破壊する。",
+  answer: "false",
+  explanation: "【国試ポイント】\nキラーT細胞はウイルス感染細胞などを破壊する。\n他の免疫細胞を主に破壊するわけではない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "好中球は抗体を産生する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n抗体産生はB細胞・形質細胞。\n好中球は貪食が主な働き。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "単球・好酸球・好中球・リンパ球・好塩基球の中で、細菌貪食能が最も高いのはリンパ球である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n細菌貪食能が高いのは好中球。\nリンパ球は免疫応答で重要。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "血小板が減少すると出血時間が延長する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n血小板は一次止血に関与。\n減少すると出血しやすくなる。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "生体の防御作用としてB細胞リンパ球が産生するのは免疫グロブリンである。",
+  answer: "true",
+  explanation: "【国試ポイント】\nB細胞は抗体を産生する。\n抗体は免疫グロブリンである。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "マクロファージは抗体を産生する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n抗体産生はB細胞・形質細胞。\nマクロファージは貪食と抗原提示を行う。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "B細胞は抗体を産生する。",
+  answer: "true",
+  explanation: "【国試ポイント】\nB細胞は形質細胞へ分化して抗体を産生する。\n液性免疫で重要。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "線維素溶解に働くのはグロブリンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n線維素溶解はプラスミンが働く。\nグロブリンではない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "副腎皮質ホルモンは免疫機能を亢進させる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n副腎皮質ホルモンは免疫を抑制する。\n炎症反応も抑える。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "生体の防御作用としてB細胞リンパ球が産生するのはインターロイキン2である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nB細胞は抗体を産生する。\nインターロイキン2は主にT細胞で重要。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "好中球はサイトカインを産生する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n好中球は炎症反応に関与する。\nサイトカイン産生にも関わる。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "赤血球はpH調節に関与する。",
+  answer: "false",
+  explanation: "【国試ポイント】\npH調節は緩衝系・肺・腎が重要。\n赤血球単独の主作用ではない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "好塩基球は抗体を産生する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n抗体産生はB細胞・形質細胞。\n好塩基球はアレルギー反応に関与する。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "線維素溶解に働くのはプラスミンである。",
+  answer: "true",
+  explanation: "【国試ポイント】\nプラスミンはフィブリンを分解する。\n線溶系の中心。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "組織液が過剰になった状態を浮腫という。",
+  answer: "true",
+  explanation: "【国試ポイント】\n組織液が過剰に貯留した状態が浮腫。\nむくみの原因となる。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "生体の防御作用としてB細胞リンパ球が産生するのはインターフェロンγである。",
+  answer: "false",
+  explanation: "【国試ポイント】\nB細胞は抗体を産生する。\nインターフェロンγは主にT細胞が産生。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "血小板は脾臓で作られる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n血小板は骨髄の巨核球から産生される。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "20万/mm3は血小板の基準範囲内である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n血小板基準値は約15〜35万/mm3。\n20万/mm3は正常範囲。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "プラスミノゲンは血液凝固因子である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nプラスミノゲンは線溶系。\n活性化されるとプラスミンになる。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "直径は2〜5μmである。",
+  answer: "false",
+  explanation: "【国試ポイント】\n血小板の直径は約2〜5μm。\nこの記述は正しい。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "単球・好酸球・好中球・リンパ球・好塩基球の中で、細菌貪食能が最も高いのは単球である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n最も高いのは好中球。\n単球も貪食を行う。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "形質細胞は抗体を産生する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n形質細胞はB細胞から分化。\n抗体産生細胞である。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "生体の防御作用としてB細胞リンパ球が産生するのはアセチルコリンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\nB細胞は抗体を産生する。\nアセチルコリンは神経伝達物質。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "線維素溶解に働くのはトロンビンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\nトロンビンは凝固系。\n線溶系はプラスミンが担当する。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "寿命は約120日である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n120日は赤血球の寿命。\n血小板は約7〜10日。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "トロンビンは血液凝固因子である。",
+  answer: "true",
+  explanation: "【国試ポイント】\nトロンビンはフィブリノゲンをフィブリンへ変換する。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "エリスロポエチンは赤血球の破壊を促す。",
+  answer: "false",
+  explanation: "【国試ポイント】\nエリスロポエチンは赤血球産生を促進する。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "リンパ管内のリンパは主幹動脈に流入する。",
+  answer: "false",
+  explanation: "【国試ポイント】\nリンパは静脈角へ流入する。\n動脈には流入しない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "肝障害では浮腫は生じない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n肝障害ではアルブミン低下により浮腫を生じる。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "単球・好酸球・好中球・リンパ球・好塩基球の中で、細菌貪食能が最も高いのは好酸球である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n細菌貪食能が最も高いのは好中球。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "組織液中の高分子の蛋白はリンパ管より末梢血管に多く流入する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n高分子蛋白は主にリンパ管へ回収される。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "白血球で最も多いのは好中球である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n白血球の約50〜70％を好中球が占める。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "ヘルパーT細胞は免疫反応の抑制に働く。",
+  answer: "false",
+  explanation: "【国試ポイント】\nヘルパーT細胞は免疫反応を活性化する。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "組織液の90％が毛細リンパ管に流入する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n約10％がリンパ管へ回収される。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "単球・好酸球・好中球・リンパ球・好塩基球の中で、細菌貪食能が最も高いのは好塩基球である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n細菌貪食能が最も高いのは好中球。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "血漿成分にフィブリノゲンは含まれない。",
+  answer: "false",
+  explanation: "【国試ポイント】\nフィブリノゲンは血漿に含まれる凝固因子。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "ヘモグロビンは血液凝固因子である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nヘモグロビンは酸素運搬を担う。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
+},
+
+{
+  content: "生体の防御作用としてB細胞リンパ球が産生するのは興奮性アミノ酸である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nB細胞は抗体を産生する。\n興奮性アミノ酸ではない。",
+  category: "生理",
+  subcategory: "体液・免疫",
+  qtype: "true_false"
 }
 ])

@@ -17,6 +17,8 @@ get "/category", to: "home#category"
 get "/bone_pdfs", to: "home#bone_pdfs"
 get "/muscle_pdfs", to: "home#muscle_pdfs"
 get "/physiology_pdfs", to: "home#physiology_pdfs"
+get "/anatomy_pdfs", to: "home#anatomy_pdfs"
+get "/neurovascular_pdfs", to: "home#neurovascular_pdfs"
 get "/physiology", to: "home#physiology"
 get '/materials', to: 'questions#materials'
 get "/illustration_count", to: "questions#illustration_count"

@@ -24,4 +24,19 @@ end
 def kinesiology_analysis
 end
 
+def anatomy_pdfs
+end
+
+def bone_pdfs
+end
+
+def muscle_pdfs
+end
+
+def neurovascular_pdfs
+end
+
+def physiology_pdfs
+end
+
 end

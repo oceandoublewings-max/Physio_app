@@ -38096,5 +38096,2975 @@ qtype: "true_false"
   category: "生理",
   subcategory: "体液・免疫",
   qtype: "true_false"
+},
+
+{
+content: "洞結節があるのは右心房である",
+answer: "true",
+explanation: "【国試ポイント】\n洞結節は右心房上部に存在。\n心臓のペースメーカー。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心臓壁は2層からなる",
+answer: "false",
+explanation: "【国試ポイント】\n心臓壁は3層構造。\n心内膜・心筋層・心外膜。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "右下肢からのリンパは右リンパ本幹に流入する",
+answer: "false",
+explanation: "【国試ポイント】\n右下肢リンパは胸管へ流入。\n右リンパ本幹ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には骨格筋の血管収縮が起こる",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は血流増加のため血管拡張。\n骨格筋血流は増える。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射では心拍数が増加する",
+answer: "false",
+explanation: "【国試ポイント】\n頸動脈洞反射では徐脈。\n血圧低下に働く。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "総頸動脈は大動脈弓から頭頸部へ向かう主要な動脈である",
+answer: "true",
+explanation: "【国試ポイント】\n総頸動脈は内頸・外頸動脈へ分岐。\n頸部で重要。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "甲状腺機能亢進症では心拍数が減少する",
+answer: "false",
+explanation: "【国試ポイント】\n甲状腺機能亢進では頻脈。\n代謝亢進が特徴。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には皮膚血流が減少する",
+answer: "false",
+explanation: "【国試ポイント】\n体温調節のため皮膚血流は増加。\n発汗と関連。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "上大静脈と下大静脈を結ぶ静脈は脾静脈である",
+answer: "false",
+explanation: "【国試ポイント】\n脾静脈は門脈系。\n上下大静脈を結ばない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "右房室弁は三尖弁である",
+answer: "true",
+explanation: "【国試ポイント】\n右房室弁＝三尖弁。\n左房室弁＝僧帽弁。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射では徐脈になる",
+answer: "true",
+explanation: "【国試ポイント】\n迷走神経が興奮。\n心拍数は低下する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "低体温では心拍数が減少する",
+answer: "true",
+explanation: "【国試ポイント】\n代謝低下に伴い徐脈。\n重度では不整脈も出現。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "大腿動脈の触知部位は鼠径部中央付近である",
+answer: "true",
+explanation: "【国試ポイント】\n鼠径靭帯中央付近で触知。\n頻出の触診部位。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "房室結節は刺激伝導系ではない",
+answer: "false",
+explanation: "【国試ポイント】\n房室結節は刺激伝導系。\n洞結節からの興奮を伝える。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "足背動脈は足背で触知できる",
+answer: "true",
+explanation: "【国試ポイント】\n足背動脈は足背で触診可能。\n末梢循環評価で重要。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "安静時に比べ運動時に血液の分配量が増加するのは心臓である",
+answer: "true",
+explanation: "【国試ポイント】\n運動時は心筋の酸素需要増加。\n冠血流量も増加する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "胸管は左鎖骨下静脈に流入する",
+answer: "true",
+explanation: "【国試ポイント】\n胸管は左静脈角へ流入。\n右リンパ本幹と混同注意。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "椎骨動脈は鎖骨下動脈から分岐する",
+answer: "true",
+explanation: "【国試ポイント】\n椎骨動脈は鎖骨下動脈の枝。\n脳底動脈を形成する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動負荷時には腎血流量が増加する",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は骨格筋へ血流再分配。\n腎血流量は減少する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射の遠心路は迷走神経を介する",
+answer: "true",
+explanation: "【国試ポイント】\n遠心路は迷走神経。\n心拍数を低下させる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "腕頭動脈は大動脈弓の最初の分枝である",
+answer: "true",
+explanation: "【国試ポイント】\n大動脈弓の枝は\n腕頭動脈→左総頸動脈→左鎖骨下動脈。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "房室束は心臓の刺激伝導系ではない",
+answer: "false",
+explanation: "【国試ポイント】\n房室束は刺激伝導系。\nHis束とも呼ばれる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "洞結節があるのは頸動脈洞である",
+answer: "false",
+explanation: "【国試ポイント】\n洞結節は右心房上部。\n頸動脈洞ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射の求心路は舌咽神経を介する",
+answer: "true",
+explanation: "【国試ポイント】\n求心路は舌咽神経。\n遠心路は迷走神経。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には尿へのナトリウム排泄は促進される",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は体液保持が優先。\nNa排泄は抑制される。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心尖は左第8肋間に位置する",
+answer: "false",
+explanation: "【国試ポイント】\n心尖は左第5肋間。\n鎖骨中線付近で触知。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には皮膚血流量が増加する",
+answer: "true",
+explanation: "【国試ポイント】\n体温調節のため増加。\n発汗と関連する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射は血中酸素濃度の上昇によって生じる",
+answer: "false",
+explanation: "【国試ポイント】\n頸動脈洞反射は圧受容器反射。\n血圧変化に反応する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "リンパ節は毛細リンパ管の途中に存在する",
+answer: "true",
+explanation: "【国試ポイント】\nリンパ液はリンパ節を通過。\n免疫機能を担う。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には骨格筋の血流量が増加する",
+answer: "true",
+explanation: "【国試ポイント】\n活動筋への血流は増加。\n酸素需要に対応する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の①は後下小脳動脈である",
+answer: "false",
+explanation: "【国試ポイント】\n①は後下小脳動脈ではない。\n血管走行の確認が重要。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射の遠心路は迷走神経を介する",
+answer: "true",
+explanation: "【国試ポイント】\n遠心路は迷走神経。\n心拍数を低下させる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "リンパ管には弁機構がない",
+answer: "false",
+explanation: "【国試ポイント】\nリンパ管には弁が存在。\n逆流を防止する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には静脈還流量が増加する",
+answer: "true",
+explanation: "【国試ポイント】\n筋ポンプ作用で増加。\n心拍出量増加に寄与。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "P波はHis束の興奮を表す",
+answer: "false",
+explanation: "【国試ポイント】\nP波は心房脱分極。\nHis束ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "中大脳動脈は内頸動脈から直接分岐する",
+answer: "true",
+explanation: "【国試ポイント】\n中大脳動脈は内頸動脈の終枝。\n脳梗塞で頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "乳び槽は横隔膜上部に存在する",
+answer: "false",
+explanation: "【国試ポイント】\n乳び槽は横隔膜下。\n胸管の起始部。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には腎血流量が増加する",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は骨格筋へ再分配。\n腎血流量は減少する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "上腕動脈は上腕二頭筋腱の外側で触知する。",
+answer: "false",
+explanation: "【国試ポイント】\n上腕動脈は上腕二頭筋腱の内側。\n触診部位は頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には静脈血の酸素含有量は減少する。",
+answer: "true",
+explanation: "【国試ポイント】\n活動筋で酸素消費が増加。\n静脈血酸素量は低下する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の上腕動脈の触診部位は正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n上腕動脈は肘窩内側で触知。\n触診部位は国試頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時には肝血流は減少する。",
+answer: "true",
+explanation: "【国試ポイント】\n運動時は骨格筋へ血流再配分。\n肝血流は減少する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "右下肢のリンパ液は胸管へ流入する。",
+answer: "true",
+explanation: "【国試ポイント】\n右上半身以外は胸管へ流入。\nリンパ系の基本事項。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心筋の収縮は主に水素イオンの細胞内流入によって生じる。",
+answer: "false",
+explanation: "【国試ポイント】\n心筋収縮はCa²⁺が重要。\n水素イオンではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の3は下行大動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n3は大動脈弓付近。\n下行大動脈ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射では血圧が低下する。",
+answer: "true",
+explanation: "【国試ポイント】\n副交感神経が優位になる。\n血圧と心拍数は低下する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射の遠心路は迷走神経である。",
+answer: "true",
+explanation: "【国試ポイント】\n求心路は舌咽神経。\n遠心路は迷走神経。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "貧血では心拍数が減少する。",
+answer: "false",
+explanation: "【国試ポイント】\n酸素運搬低下を補うため。\n心拍数は増加する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "T波は心室の脱分極を表す。",
+answer: "false",
+explanation: "【国試ポイント】\nT波は心室再分極。\n脱分極はQRS波。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "上大静脈と下大静脈を結ぶ静脈は上腸間膜静脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n門脈系の静脈。\n上大静脈と下大静脈を結ばない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "洞結節があるのは左心房である。",
+answer: "false",
+explanation: "【国試ポイント】\n洞結節は右心房。\n心臓のペースメーカー。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "血圧が上昇すると頸動脈洞反射が起こる。",
+answer: "true",
+explanation: "【国試ポイント】\n血圧上昇で反射発動。\n心拍数を低下させる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "内頸動脈から直接分岐しないのは眼動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n眼動脈は内頸動脈の枝。\n国試頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "脳血流量は減少するは運動時の循環反応で誤っている。",
+answer: "true",
+explanation: "【国試ポイント】\n脳血流は概ね維持。\n著明な減少はしない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "長期臥床で心拍数が減少する。",
+answer: "false",
+explanation: "【国試ポイント】\n脱調節で頻脈傾向。\n起立耐性も低下する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "浅側頭動脈は外耳孔後方で触知する。",
+answer: "false",
+explanation: "【国試ポイント】\n耳珠前方で触知。\n触診部位は頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "脾臓はリンパ液を濾過する。",
+answer: "false",
+explanation: "【国試ポイント】\n脾臓は血液を濾過。\nリンパ節はリンパ液を濾過。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "運動時に血液分配量が増加するのは脾臓である。",
+answer: "false",
+explanation: "【国試ポイント】\n骨格筋や心臓へ増加。\n脾臓は減少する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "洞房結節は心臓の刺激伝導系ではない。",
+answer: "false",
+explanation: "【国試ポイント】\n刺激伝導系の起始。\nペースメーカーである。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "化学的刺激によって生じるのは頸動脈洞反射である。",
+answer: "false",
+explanation: "【国試ポイント】\n化学受容器反射。\n頸動脈洞反射は圧受容器反射。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "PR間隔は房室伝導時間を表す。",
+answer: "true",
+explanation: "【国試ポイント】\nPQ間隔とも呼ぶ。\n房室伝導評価に重要。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "脳血流量は運動時に増加する。",
+answer: "false",
+explanation: "【国試ポイント】\n大きな増加はしない。\nほぼ一定に保たれる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "内頸動脈から直接分岐しないのは後交通動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n後交通動脈は内頸動脈の枝。\nウィリス動脈輪を形成。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "右上肢からのリンパは右頭部からのリンパと合流する。",
+answer: "true",
+explanation: "【国試ポイント】\n右リンパ本幹を形成。\n右静脈角へ流入する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "上大静脈と下大静脈を結ぶ静脈は鎖骨下静脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n鎖骨下静脈は上肢の還流路。\n奇静脈系が関連。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "上大静脈と下大静脈を結ぶ静脈は奇静脈である。",
+answer: "true",
+explanation: "【国試ポイント】\n側副血行路として重要。\n国試頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "QRS波はPurkinje線維の興奮を意味する。",
+answer: "false",
+explanation: "【国試ポイント】\nQRS波は心室脱分極。\nPurkinje線維単独ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "腸管由来のリンパ液を乳糜という。",
+answer: "true",
+explanation: "【国試ポイント】\n脂肪を多く含む。\n白色乳状を呈する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "冠血流は増加するは運動負荷による生体反応で誤っている。",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は冠血流増加。\n心筋酸素需要に対応。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "グリコーゲン分解は運動時に促進される。",
+answer: "true",
+explanation: "【国試ポイント】\nエネルギー供給のため。\n交感神経が関与。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "足背動脈は長母趾伸筋腱と長趾伸筋腱の間で触知する。",
+answer: "true",
+explanation: "【国試ポイント】\n代表的な触診部位。\n国試頻出事項。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "冠血流は減少するは運動負荷による血流配分で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n冠血流は増加する。\n心筋酸素需要が増える。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図は鎖骨下動脈の触診部位で誤っている。",
+answer: "true",
+explanation: "【国試ポイント】\n鎖骨下動脈の触診は難しい。\n図の位置は誤り。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "内臓血管の拡張が起こるは運動時の変化で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は内臓血管収縮。\n骨格筋血流が増加。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "内頸動脈から直接分岐しないのは前交通動脈である。",
+answer: "true",
+explanation: "【国試ポイント】\n前交通動脈は左右前大脳動脈を連結。\n内頸動脈の直接枝ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心臓への静脈還流量は運動時に増加する。",
+answer: "true",
+explanation: "【国試ポイント】\n筋ポンプ作用で増加。\n心拍出量増加に重要。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心筋は伸張されると収縮力が低下する。",
+answer: "false",
+explanation: "【国試ポイント】\nFrank-Starlingの法則。\n適度な伸張で収縮力増加。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "冠血流は低下するは運動時の生体反応で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n冠血流は増加する。\n心筋酸素需要増加に対応。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "脳血流は増加するは運動負荷による血流配分で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n脳血流は概ね一定。\n著明な増加はしない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の5は鎖骨下動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n図の5は総頸動脈系。\n鎖骨下動脈ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "Purkinje線維は心臓の刺激伝導系である。",
+answer: "true",
+explanation: "【国試ポイント】\n心室へ興奮を伝える。\n刺激伝導系の一部。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "右リンパ本幹のリンパは右静脈角へ流入する。",
+answer: "true",
+explanation: "【国試ポイント】\n右上半身のリンパを集める。\n右静脈角へ注ぐ。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "固有心筋は刺激伝導系に含まれる。",
+answer: "false",
+explanation: "【国試ポイント】\n固有心筋は収縮担当。\n刺激伝導系ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "胸管は左静脈角へ流入する。",
+answer: "true",
+explanation: "【国試ポイント】\n胸管は全身の大部分を集める。\n左静脈角へ流入。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "洞結節があるのは冠静脈洞である。",
+answer: "false",
+explanation: "【国試ポイント】\n洞結節は右心房。\n冠静脈洞ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "腎血流は増加するは運動時の生体反応で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は腎血流減少。\n骨格筋へ再配分される。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射で血圧は上昇する。",
+answer: "false",
+explanation: "【国試ポイント】\n反射により血圧低下。\n心拍数も減少する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "安静時に比べ運動時に血液分配量が増加するのは骨格筋である。",
+answer: "true",
+explanation: "【国試ポイント】\n運動時は骨格筋血流増加。\n最重要事項。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心室中隔右側から左側へ興奮が伝わる。",
+answer: "false",
+explanation: "【国試ポイント】\n興奮は左から右へ。\nQ波形成に関与。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "脳血流は増加するは運動負荷による生体反応で誤っている。",
+answer: "true",
+explanation: "【国試ポイント】\n脳血流は概ね一定。\n増加とは言えない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "肝血流は減少するは運動負荷による血流配分で正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n運動時は内臓血流減少。\n骨格筋へ優先配分。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の4は胸大動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n4は大動脈弓。\n胸大動脈ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "皮膚血流量は減少するは運動時の変化で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は皮膚血流増加。\n熱放散を促進する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "安静時に比べ運動時に血液の分配量が増加するのは消化管である。",
+answer: "false",
+explanation: "【国試ポイント】\n消化管血流は減少。\n骨格筋へ再分配される。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の4は腕頭動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n腕頭動脈は大動脈弓から最初に分岐。\n図の4ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "徐脈になるは頸動脈洞反射で正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n迷走神経が興奮。\n心拍数は低下する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "洞結節があるのは右心室である。",
+answer: "false",
+explanation: "【国試ポイント】\n洞結節は右心房。\n上大静脈開口部付近。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心室中隔は左室側に凸である。",
+answer: "true",
+explanation: "【国試ポイント】\n左室圧が高いため。\n右室側へ突出する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "胸管は右の静脈角へ合流する。",
+answer: "false",
+explanation: "【国試ポイント】\n胸管は左静脈角へ流入。\n右ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "洞房結節から房室結節へ興奮は伝わる。",
+answer: "true",
+explanation: "【国試ポイント】\n正常刺激伝導路。\nSA結節→AV結節。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "右脚から房室結節へ興奮は伝わる。",
+answer: "false",
+explanation: "【国試ポイント】\n伝導は房室結節から右脚。\n逆方向ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "冠状動脈は大動脈から分岐する。",
+answer: "true",
+explanation: "【国試ポイント】\n左右冠状動脈は上行大動脈起始。\n心筋へ血液を供給する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "左心室と左心房は同時に収縮が始まる。",
+answer: "false",
+explanation: "【国試ポイント】\nまず心房収縮。\nその後に心室収縮が起こる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "左上肢のリンパは左鎖骨下リンパ本幹に流れ込む。",
+answer: "true",
+explanation: "【国試ポイント】\n左上肢のリンパを回収。\n最終的に左静脈角へ流入。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "上大静脈と下大静脈を結ぶ静脈は腎静脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n腎静脈は下大静脈へ流入。\n両者を結ぶ静脈ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "ノルアドレナリンは心筋収縮力を増加する。",
+answer: "true",
+explanation: "【国試ポイント】\n交感神経作用で収縮力増加。\n心拍数も増加する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "乳び槽は腸リンパ本幹と腰リンパ本幹が合流してできる。",
+answer: "true",
+explanation: "【国試ポイント】\n胸管の起始部。\nリンパ系の重要構造。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図は膝窩動脈の触診部位で誤っている。",
+answer: "true",
+explanation: "【国試ポイント】\n膝窩動脈は膝窩中央で触知。\n図の位置は不適切。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "化学的刺激によって生じることは頸動脈洞反射で誤っている。",
+answer: "true",
+explanation: "【国試ポイント】\n頸動脈洞反射は圧受容器反射。\n化学受容器反射ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "総頸動脈−胸鎖乳突筋の外縁は動脈触知部位との組合せで正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n総頸動脈の代表的触診部位。\n国試頻出。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "ST間隔は心室内興奮到達時間である。",
+answer: "false",
+explanation: "【国試ポイント】\n心室内興奮到達時間はQRS。\nSTは心室興奮持続期。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心室心外膜側→心室心内膜側は刺激の伝わる方向で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n興奮は心内膜側から心外膜側へ。\n再分極は逆方向。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "収縮期に冠血管の血流は増加する。",
+answer: "false",
+explanation: "【国試ポイント】\n左冠動脈血流は拡張期に増加。\n収縮期は圧迫される。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "図の2は右鎖骨下動脈である。",
+answer: "true",
+explanation: "【国試ポイント】\n腕頭動脈から分岐。\n右上肢へ向かう。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "脱水で心拍数が減少する。",
+answer: "false",
+explanation: "【国試ポイント】\n循環血液量低下。\n代償的に頻脈となる。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "リンパ管には弁機構が存在しない。",
+answer: "false",
+explanation: "【国試ポイント】\nリンパ管には弁がある。\n逆流を防止する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "分時心拍出量は増加するは運動時の循環反応で誤っている。",
+answer: "false",
+explanation: "【国試ポイント】\n運動時は心拍出量増加。\n骨格筋血流を増やす。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "筋血流は増加するは運動負荷による生体反応で誤っている。",
+answer: "false",
+explanation: "【国試ポイント】\n筋血流は増加する。\n酸素需要に対応する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "心筋の再分極に最も影響するのはK+電流である。",
+answer: "true",
+explanation: "【国試ポイント】\n再分極はK+流出が主体。\n活動電位終末に重要。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "左脚→ヒス束は刺激の伝わる方向で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\nヒス束から左脚へ伝導。\n逆方向ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "内頸動脈から直接分岐しないのは前大脳動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n前大脳動脈は内頸動脈の枝。\n直接分岐する。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "求心路は舌下神経を介するは頸動脈洞反射で正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n求心路は舌咽神経。\n舌下神経ではない。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "腎血流量は減少するは運動時の循環反応で誤っている。",
+answer: "false",
+explanation: "【国試ポイント】\n腎血流は減少する。\n骨格筋へ血流再分配。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞反射で求心路は舌咽神経を介する。",
+answer: "true",
+explanation: "【国試ポイント】\n求心路は舌咽神経。\n遠心路は迷走神経。",
+category: "生理",
+subcategory: "循環",
+qtype: "true_false"
+},
+
+{
+content: "末梢組織への酸素供給を増やすのは体温の低下である。",
+answer: "false",
+explanation: "【国試ポイント】\n体温上昇で酸素解離曲線右方移動。\n組織への酸素供給が増加する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺の栄養血管は肺動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n栄養血管は気管支動脈。\n肺動脈は機能血管。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "努力性呼気時に働く筋は内肋間筋である。",
+answer: "true",
+explanation: "【国試ポイント】\n内肋間筋は努力呼気筋。\n腹筋群も働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "スパイロメトリーで計測できないのは1回換気量である。",
+answer: "false",
+explanation: "【国試ポイント】\n1回換気量は測定可能。\n残気量は測定できない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "血中の酸素分圧の低下は化学受容体を介して伝えられる。",
+answer: "true",
+explanation: "【国試ポイント】\n頸動脈小体が感知。\n呼吸中枢へ情報を送る。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "咳反射の中枢は大脳皮質にある。",
+answer: "false",
+explanation: "【国試ポイント】\n咳反射中枢は延髄。\n大脳皮質ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "残気量＝全肺気量−肺活量である。",
+answer: "true",
+explanation: "【国試ポイント】\n国試頻出公式。\n全肺気量から肺活量を引く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈小体は血中酸素分圧の低下を感知する。",
+answer: "true",
+explanation: "【国試ポイント】\n末梢化学受容器。\n低酸素で興奮する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "咳反射では吸気相と呼気相の間に声門が閉鎖する。",
+answer: "true",
+explanation: "【国試ポイント】\n一旦声門を閉鎖。\nその後急速に開放する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈洞の圧受容器からの求心路は迷走神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n求心路は舌咽神経。\n迷走神経ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺の栄養血管は肺動脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n気管支動脈が栄養血管。\n肺動脈は機能血管。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "細気管支には軟骨がある。",
+answer: "false",
+explanation: "【国試ポイント】\n細気管支に軟骨はない。\n平滑筋が発達する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "終末細気管支の次は肺胞である。",
+answer: "false",
+explanation: "【国試ポイント】\n終末細気管支の次は呼吸細気管支。\nその後肺胞へ続く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "O2の運搬は酸化ヘモグロビンが行う。",
+answer: "true",
+explanation: "【国試ポイント】\n酸素の大部分はHb結合。\n溶解型は少量。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "気道の虚脱を抑えるのは口すぼめ呼吸である。",
+answer: "true",
+explanation: "【国試ポイント】\n呼気時気道内圧を維持。\nCOPDで有効。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺活量＝予備吸気量＋予備呼気量である。",
+answer: "false",
+explanation: "【国試ポイント】\n肺活量＝予備吸気量＋1回換気量＋予備呼気量。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "安静呼気時に外肋間筋は収縮する。",
+answer: "false",
+explanation: "【国試ポイント】\n安静呼気は受動運動。\n外肋間筋は主に吸気筋。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "左肺の内側面が接するのは食道である。",
+answer: "true",
+explanation: "【国試ポイント】\n左肺内側面には食道圧痕がある。\n大動脈とも接する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "吸気時に横隔膜は下降する。",
+answer: "true",
+explanation: "【国試ポイント】\n横隔膜収縮で下降。\n胸腔容積が増加する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "上気道とは鼻腔から咽頭までのことをいう。",
+answer: "true",
+explanation: "【国試ポイント】\n上気道は鼻腔・副鼻腔・咽頭。\n喉頭まで含める場合もある。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "強制呼気時に働く筋は胸鎖乳突筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n胸鎖乳突筋は吸気補助筋。\n強制呼気では腹筋群が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "ヘモグロビン酸素解離曲線の右方移動は代謝性アルカローシスで起こる。",
+answer: "false",
+explanation: "【国試ポイント】\nアルカローシスでは左方移動。\n右方移動はアシドーシス。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "呼吸性アルカローシスでは尿は酸性になる。",
+answer: "false",
+explanation: "【国試ポイント】\n代償でHCO3−を排泄。\n尿はアルカリ性に傾く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "強制呼気時に働く筋は腹斜筋である。",
+answer: "true",
+explanation: "【国試ポイント】\n腹斜筋は強制呼気筋。\n腹圧を高める。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "気管の延長線に対する気管支の分岐角度は右より左の方が大きい。",
+answer: "true",
+explanation: "【国試ポイント】\n右主気管支はより垂直。\n左主気管支は水平に近い。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "血中CO2分圧が増加すると呼吸が抑制される。",
+answer: "false",
+explanation: "【国試ポイント】\nCO2上昇は呼吸中枢を刺激。\n呼吸は促進される。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "強い不安があると呼吸は促進される。",
+answer: "true",
+explanation: "【国試ポイント】\n情動は呼吸に影響する。\n不安で過換気になることがある。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "呼吸中枢は吸息中枢と呼息中枢に分かれている。",
+answer: "true",
+explanation: "【国試ポイント】\n延髄と橋に呼吸中枢がある。\n吸息・呼息を調節する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺気量で『1秒率＝1秒量÷％肺活量』は正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n1秒率＝1秒量÷努力肺活量。\n閉塞性障害で低下する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "頸動脈小体は総頸動脈と鎖骨下動脈の分岐部にある。",
+answer: "false",
+explanation: "【国試ポイント】\n頸動脈小体は総頸動脈分岐部。\n頸動脈洞の近くに存在する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "気道の拡張は呼吸運動の促進要因として正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n気道抵抗が減少する。\n換気効率が向上する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "左肺の内側面が接するのは下大静脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n下大静脈は右肺と関係が深い。\n左肺は心臓や大動脈に接する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "末梢組織への酸素供給を増やすのはpHの低下である。",
+answer: "true",
+explanation: "【国試ポイント】\nBohr効果で右方移動。\n酸素解離が促進される。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "終末細気管支は肺胞に開口する。",
+answer: "false",
+explanation: "【国試ポイント】\n終末細気管支の次は呼吸細気管支。\n肺胞へは直接開かない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "嚥下反射が起こると呼吸が一時停止する。",
+answer: "true",
+explanation: "【国試ポイント】\n誤嚥防止のため呼吸停止。\n嚥下性無呼吸という。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "咳反射で『流速はおよそ1L/秒である』は正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n咳反射は非常に高速。\n1L/秒より大きい。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "正常の血液pHは7.0である。",
+answer: "false",
+explanation: "【国試ポイント】\n正常pHは7.35〜7.45。\n弱アルカリ性である。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "強制呼気時に働く筋は大胸筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n大胸筋は吸気補助筋。\n強制呼気では腹筋群が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "スパイロメトリーで計測できないのは1秒量である。",
+answer: "false",
+explanation: "【国試ポイント】\n1秒量は測定可能。\n残気量は測定できない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "末梢組織への酸素供給を増やすのはヘモグロビン濃度減少である。",
+answer: "false",
+explanation: "【国試ポイント】\nHb減少では酸素運搬能低下。\n酸素供給は減少する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "嘔吐では代謝性アルカローシスになる。",
+answer: "true",
+explanation: "【国試ポイント】\n胃酸喪失でH+が減少。\n代謝性アルカローシスとなる。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "強制呼気時に働く筋は外肋間筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n外肋間筋は吸気筋。\n強制呼気では内肋間筋が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "成人の喉頭から気管支までの距離は20〜25cmである。",
+answer: "true",
+explanation: "【国試ポイント】\n気管長は約10〜12cm。\n主気管支まで含め約20cm前後。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "全肺気量を増加させるのは口すぼめ呼吸である。",
+answer: "false",
+explanation: "【国試ポイント】\n口すぼめ呼吸は気道虚脱を防ぐ。\n全肺気量を増やす目的ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "気管支は右より左の方が太く短い。",
+answer: "false",
+explanation: "【国試ポイント】\n右主気管支が太く短い。\n誤嚥物も右に入りやすい。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "努力性呼気時に働く筋は胸鎖乳突筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n胸鎖乳突筋は吸気補助筋。\n努力性呼気では腹筋群が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "吸気時に気道抵抗は上昇する。",
+answer: "false",
+explanation: "【国試ポイント】\n吸気時は気道が拡張。\n気道抵抗は低下する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "呼気時に腹圧は上昇する。",
+answer: "true",
+explanation: "【国試ポイント】\n横隔膜が弛緩。\n腹圧は相対的に上昇する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "咳反射は肺胞の受容器刺激によって誘発される。",
+answer: "false",
+explanation: "【国試ポイント】\n気道粘膜の刺激で誘発。\n肺胞受容器ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "スパイロメトリーで計測できないのは予備吸気量である。",
+answer: "false",
+explanation: "【国試ポイント】\n予備吸気量は測定可能。\n残気量は測定できない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "動脈血酸素分圧の上昇は呼吸運動の促進要因である。",
+answer: "false",
+explanation: "【国試ポイント】\nPaO2低下で呼吸促進。\n上昇では刺激が減少する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "スパイロメトリーで計測できないのは最大吸気量である。",
+answer: "false",
+explanation: "【国試ポイント】\n最大吸気量は測定可能。\n残気量は測定不可。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "胸郭下部は前後方向の動きが左右方向より大きい。",
+answer: "false",
+explanation: "【国試ポイント】\n下位肋骨はバケツ柄運動。\n左右方向の拡大が大きい。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "左肺の内側面が接するのは奇静脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n奇静脈は右肺と関係。\n左肺は大動脈と接する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "ヘモグロビン酸素解離曲線の右方移動は血中2,3-DPG濃度低下で起こる。",
+answer: "false",
+explanation: "【国試ポイント】\n2,3-DPG低下は左方移動。\n増加で右方移動する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "四肢の運動は呼吸運動の促進要因である。",
+answer: "true",
+explanation: "【国試ポイント】\n運動時は換気量増加。\n呼吸中枢も刺激される。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "大動脈弓の圧受容器からの求心路は舌咽神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n大動脈弓は迷走神経。\n頸動脈洞は舌咽神経。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "縦隔の後面は心臓である。",
+answer: "false",
+explanation: "【国試ポイント】\n心臓は縦隔内に存在。\n後縦隔には食道などがある。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "過換気では呼吸性アシドーシスになる。",
+answer: "false",
+explanation: "【国試ポイント】\nCO2低下により。\n呼吸性アルカローシスとなる。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "末梢組織への酸素供給を増やすのは赤血球数減少である。",
+answer: "false",
+explanation: "【国試ポイント】\n赤血球減少で運搬能低下。\n酸素供給も減少する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "左肺の内側面が接するのは上大静脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n上大静脈は右肺と関係。\n左肺は大動脈と接する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺気量で『最大吸気量＝1回換気量＋予備吸気量』は正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n最大吸気量(IC)。\nTV＋IRVで求める。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "吸気時間を延長させるのは口すぼめ呼吸である。",
+answer: "false",
+explanation: "【国試ポイント】\n口すぼめ呼吸は呼気延長。\n気道虚脱を防ぐ。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "呼吸仕事量を増加させるのは口すぼめ呼吸である。",
+answer: "false",
+explanation: "【国試ポイント】\n口すぼめ呼吸は気道虚脱を防ぐ。\n呼吸仕事量を減らす方向に働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "左肺の内側面が接するのは大動脈弓である。",
+answer: "true",
+explanation: "【国試ポイント】\n左肺は大動脈弓と接する。\n右肺は上大静脈などと関係。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "カプサイシンの吸入で咳反射は抑制される。",
+answer: "false",
+explanation: "【国試ポイント】\nカプサイシンは咳反射を誘発。\n咳嗽反射の検査に使われる。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "健常者の安静時呼吸では呼気時の気道内圧は陽圧である。",
+answer: "true",
+explanation: "【国試ポイント】\n呼気時は肺内圧が陽圧。\n空気が外へ流れる。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "健常者の安静時吸気では胸鎖乳突筋の収縮がみられる。",
+answer: "false",
+explanation: "【国試ポイント】\n胸鎖乳突筋は吸気補助筋。\n安静時は主に横隔膜が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "左肺門は右肺門より高位である。",
+answer: "true",
+explanation: "【国試ポイント】\n左肺門は右より高い。\n肺門の左右差は頻出。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "末梢組織への酸素供給を増やすのはPCO2の低下である。",
+answer: "false",
+explanation: "【国試ポイント】\nPCO2上昇で右方移動。\n酸素解離が促進される。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "努力性呼気時に働く筋は腹直筋である。",
+answer: "true",
+explanation: "【国試ポイント】\n努力呼気では腹筋群が働く。\n腹直筋も呼気筋。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "努力性呼気時に働く筋は外肋間筋である。",
+answer: "false",
+explanation: "【国試ポイント】\n外肋間筋は吸気筋。\n努力呼気は内肋間筋・腹筋群。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺尖は鎖骨と同じ高さに位置する。",
+answer: "false",
+explanation: "【国試ポイント】\n肺尖は鎖骨より上方。\n第1肋骨上縁付近まで達する。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "努力性呼気時に働く筋は横隔膜である。",
+answer: "false",
+explanation: "【国試ポイント】\n横隔膜は主吸気筋。\n努力呼気では腹筋群が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "健常者の安静時呼吸では呼気時に外肋間筋の収縮がみられる。",
+answer: "false",
+explanation: "【国試ポイント】\n外肋間筋は吸気筋。\n安静呼気は主に受動的。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "咽頭はC7〜C8の高さにある。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭は頭蓋底〜C6付近。\nC7〜C8ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "機能的残気量は予備吸気量＋残気量である。",
+answer: "false",
+explanation: "【国試ポイント】\n機能的残気量＝予備呼気量＋残気量。\n肺気量の頻出公式。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "輪状軟骨は弾性軟骨である。",
+answer: "false",
+explanation: "【国試ポイント】\n輪状軟骨は硝子軟骨。\n弾性軟骨ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "区域気管支は左右10本ずつある。",
+answer: "false",
+explanation: "【国試ポイント】\n右10区域・左8〜10区域。\n左右同数ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "健常者の安静時呼吸では呼気時の胸腔内圧は陽圧である。",
+answer: "false",
+explanation: "【国試ポイント】\n胸腔内圧は通常陰圧。\n呼気時も陰圧を保つ。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "第3肋骨は胸骨柄と関節を形成する。",
+answer: "false",
+explanation: "【国試ポイント】\n胸骨柄と関節するのは第1肋骨。\n第3肋骨は胸骨体。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "機能的残気量を増加させるのは口すぼめ呼吸である。",
+answer: "false",
+explanation: "【国試ポイント】\n口すぼめ呼吸は気道虚脱予防。\n機能的残気量増加が目的ではない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "輪状軟骨は弾性軟骨である。",
+answer: "false",
+explanation: "【国試ポイント】\n輪状軟骨は硝子軟骨。\n喉頭軟骨の分類は頻出。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "健常者の安静時呼吸数は25回/分程度である。",
+answer: "false",
+explanation: "【国試ポイント】\n成人の安静時呼吸数は12〜20回/分。\n25回/分は多い。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "スパイロメトリーで計測できないのは機能的残気量である。",
+answer: "true",
+explanation: "【国試ポイント】\n残気量を含む肺気量は測定不可。\n機能的残気量も測定できない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "臓側胸膜と壁側胸膜は連続している。",
+answer: "true",
+explanation: "【国試ポイント】\n肺門部で連続する。\n胸膜の基本解剖。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "右主気管支は左主気管支よりも短い。",
+answer: "true",
+explanation: "【国試ポイント】\n右主気管支は短く太く垂直。\n誤嚥が起こりやすい。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "努力性呼気時に働く筋は横隔膜である。",
+answer: "false",
+explanation: "【国試ポイント】\n横隔膜は吸気筋。\n努力呼気では腹筋群が働く。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "胸膜腔は吸気時に拡大する。",
+answer: "true",
+explanation: "【国試ポイント】\n吸気時は胸郭が拡張。\n胸膜腔も拡大方向となる。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "肺胞二酸化炭素分圧の低下は呼吸運動の促進要因である。",
+answer: "false",
+explanation: "【国試ポイント】\nCO2上昇が呼吸中枢を刺激。\n低下では促進されない。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "髄液のpH上昇は呼吸運動の促進要因である。",
+answer: "false",
+explanation: "【国試ポイント】\npH低下（H+上昇）が呼吸中枢を刺激。\npH上昇では抑制方向。",
+category: "生理",
+subcategory: "呼吸",
+qtype: "true_false"
+},
+
+{
+content: "舌下神経―唾液分泌は、嚥下に関わる神経とその働きの組合せで正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n唾液分泌は顔面神経・舌咽神経。\n舌下神経は舌運動を支配。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "肝横隔面上縁は第5肋骨の高さにある。",
+answer: "false",
+explanation: "【国試ポイント】\n肝上縁は右第5肋間付近。\n第5肋骨そのものではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃内の停滞時間は糖質より脂肪の方が長い。",
+answer: "true",
+explanation: "【国試ポイント】\n脂肪は胃排出が遅い。\n糖質→蛋白質→脂肪の順。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃体の下端部を胃底という。",
+answer: "false",
+explanation: "【国試ポイント】\n胃底は噴門の上方。\n胃体下端部ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "第7胸椎の高さの水平断で最も腹側にあるのは右心室である。",
+answer: "true",
+explanation: "【国試ポイント】\n心臓前面の大部分は右心室。\n胸部断面で頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "ペプシンは蛋白質をポリペプチドに分解する。",
+answer: "true",
+explanation: "【国試ポイント】\nペプシンは胃の蛋白分解酵素。\n蛋白質をポリペプチドへ分解。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "αアミラーゼはマルトースをブドウ糖に分解する。",
+answer: "false",
+explanation: "【国試ポイント】\nαアミラーゼはデンプンを分解。\nマルトース→ブドウ糖はマルターゼ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃内pHの低下は胃液の分泌を促進する。",
+answer: "false",
+explanation: "【国試ポイント】\npH低下はガストリン分泌を抑制。\n胃液分泌は低下する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃酸を分泌する腺は幽門前庭に多くみられる。",
+answer: "false",
+explanation: "【国試ポイント】\n胃酸は胃底腺の壁細胞が分泌。\n幽門前庭ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "小腸は十二指腸と回腸からなる。",
+answer: "false",
+explanation: "【国試ポイント】\n小腸は十二指腸・空腸・回腸。\n空腸を忘れやすい。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "嚥下中枢が存在する部位は赤核である。",
+answer: "false",
+explanation: "【国試ポイント】\n嚥下中枢は延髄。\n赤核ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "リパーゼは脂肪を脂肪酸とグリセリンに分解する。",
+answer: "true",
+explanation: "【国試ポイント】\nリパーゼは脂質分解酵素。\n脂肪酸とグリセリンを生成。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "顔面神経―下顎の運動は、嚥下に関わる神経とその働きの組合せで正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n下顎運動は三叉神経。\n顔面神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "消化酵素が含まれるのは胆汁である。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁に消化酵素は含まれない。\n脂肪の乳化を行う。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "マルターゼはデンプンをデキストリンに分解する。",
+answer: "false",
+explanation: "【国試ポイント】\nマルターゼはマルトースを分解。\nデンプン分解はアミラーゼ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "空腸に続いて回腸がある。",
+answer: "true",
+explanation: "【国試ポイント】\n小腸の順序は\n十二指腸→空腸→回腸。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "舌下神経は脳の背側から出る。",
+answer: "false",
+explanation: "【国試ポイント】\n舌下神経は延髄前外側溝から出る。\n背側ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "十二指腸は粘膜ヒダに富む。",
+answer: "false",
+explanation: "【国試ポイント】\n粘膜ヒダは空腸で発達。\n十二指腸では少ない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "ガストリンの分泌は胃液の分泌を促進する。",
+answer: "true",
+explanation: "【国試ポイント】\nガストリンは胃酸分泌を促進。\n胃運動も亢進させる。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "肝臓へ酸素を供給する血管は門脈である。",
+answer: "false",
+explanation: "【国試ポイント】\n肝臓への酸素供給は肝動脈。\n門脈は栄養豊富な血液を運ぶ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "味覚の求心路は舌下神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n味覚は顔面神経・舌咽神経・迷走神経。\n舌下神経は舌運動。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "顔面神経は上咽頭後壁の触覚をつかさどる。",
+answer: "false",
+explanation: "【国試ポイント】\n上咽頭後壁の感覚は三叉神経。\n顔面神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "舌咽神経は上咽頭後壁の触覚をつかさどる。",
+answer: "true",
+explanation: "【国試ポイント】\n上咽頭の感覚は舌咽神経。\n嚥下反射にも関与する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "迷走神経―嚥下反射は、嚥下に関わる神経とその働きの組合せで正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n迷走神経は咽頭・喉頭筋を支配。\n嚥下反射に重要。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "咽頭部の表在感覚を支配するのは舌咽神経である。",
+answer: "true",
+explanation: "【国試ポイント】\n咽頭の知覚は主に舌咽神経。\n嚥下反射の求心路。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "大弯は肝胃間膜によって肝臓と結合している。",
+answer: "false",
+explanation: "【国試ポイント】\n肝胃間膜は小弯と肝臓を連結。\n大弯ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "十二指腸内への酸性内容物の流入は胃液の分泌を促進する。",
+answer: "false",
+explanation: "【国試ポイント】\nセクレチン分泌により胃液分泌は抑制。\n胃排出も抑制される。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "小腸内の胆汁は大半が大腸で再吸収される。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁酸は回腸で再吸収。\n腸肝循環を形成する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "十二指腸は後腹膜腔に存在しない。",
+answer: "false",
+explanation: "【国試ポイント】\n十二指腸の大部分は後腹膜器官。\n国試頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "副腎は後腹膜腔に存在しない。",
+answer: "false",
+explanation: "【国試ポイント】\n副腎は腎臓とともに後腹膜器官。\n位置関係は頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃液分泌の増加は食物が胃に到達してから起こる。",
+answer: "false",
+explanation: "【国試ポイント】\n頭相では食物到達前から胃液分泌。\n条件反射で起こる。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "摂食嚥下の咽頭期に生じる現象は鼻咽腔開放である。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭期では鼻咽腔は閉鎖。\n鼻腔への逆流を防ぐ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁は酸性である。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁は弱アルカリ性。\n胃酸を中和する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "口腔で舌背に舌小帯がある。",
+answer: "false",
+explanation: "【国試ポイント】\n舌小帯は舌下面に存在。\n舌背ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "十二指腸は腸間膜を有する。",
+answer: "false",
+explanation: "【国試ポイント】\n十二指腸の大部分は後腹膜器官。\n腸間膜を持たない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "咽頭部の表在感覚を支配するのは顔面神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭感覚は舌咽神経。\n顔面神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食塊が咽頭粘膜に触れると嚥下反射が誘発される。",
+answer: "true",
+explanation: "【国試ポイント】\n嚥下反射は咽頭刺激で誘発。\n求心路は舌咽神経。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "肝右葉は左葉より大きい。",
+answer: "true",
+explanation: "【国試ポイント】\n肝臓は右葉が大きい。\n解剖の基本事項。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "糖―空腸は、栄養素と吸収部位の組合せで正しい。",
+answer: "true",
+explanation: "【国試ポイント】\n糖質の主な吸収部位は空腸。\n小腸で吸収される。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "小腸の静脈血は下大静脈に直接注ぐ。",
+answer: "false",
+explanation: "【国試ポイント】\n小腸静脈血は門脈へ流入。\n肝臓を経由する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "嚥下中枢が存在する部位は橋である。",
+answer: "false",
+explanation: "【国試ポイント】\n嚥下中枢は延髄。\n橋ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食塊が食道に達すると食道の蠕動運動が生じる。",
+answer: "true",
+explanation: "【国試ポイント】\n食塊通過により一次蠕動が発生。\n胃へ輸送される。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "トリプシンはトリペプチドをアミノ酸に分解する。",
+answer: "false",
+explanation: "【国試ポイント】\nトリプシンはタンパク質をペプチドへ分解。\nアミノ酸まで分解しない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "咽頭部の表在感覚を支配するのは三叉神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭感覚は主に舌咽神経。\n三叉神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "回腸と盲腸の移行部には弁がある。",
+answer: "true",
+explanation: "【国試ポイント】\n回盲弁が存在する。\n大腸内容物の逆流を防ぐ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "口峡は口腔と咽頭の境である。",
+answer: "true",
+explanation: "【国試ポイント】\n口峡は口腔と中咽頭の境界。\n解剖で頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "膵臓は胃の後方に位置する。",
+answer: "true",
+explanation: "【国試ポイント】\n膵臓は後腹膜器官。\n胃の後方に存在する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "膵尾は十二指腸に接する。",
+answer: "false",
+explanation: "【国試ポイント】\n十二指腸に接するのは膵頭。\n膵尾は脾臓側。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁は胆嚢で産生される。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁は肝臓で産生。\n胆嚢は貯蔵・濃縮を行う。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "神経核は橋にある。",
+answer: "false",
+explanation: "【国試ポイント】\n舌下神経核は延髄に存在。\n橋ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "脂肪―十二指腸は、栄養素と吸収部位の組合せで正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n脂肪の主な吸収部位は空腸。\n十二指腸ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁には消化酵素が含まれる。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁に消化酵素は含まれない。\n脂肪の乳化を行う。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "大腸は結腸と直腸からなる。",
+answer: "false",
+explanation: "【国試ポイント】\n大腸は盲腸・結腸・直腸から構成。\n盲腸も含まれる。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "迷走神経は上咽頭後壁の触覚をつかさどる。",
+answer: "false",
+explanation: "【国試ポイント】\n上咽頭の感覚は三叉神経。\n迷走神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃の肛門側の開口部を噴門という。",
+answer: "false",
+explanation: "【国試ポイント】\n肛門側は幽門。\n噴門は食道との境界。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "摂食嚥下の咽頭期に生じる現象は喉頭蓋反転である。",
+answer: "true",
+explanation: "【国試ポイント】\n喉頭蓋が反転し気道を保護。\n誤嚥防止に重要。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "膵管は十二指腸に開口する。",
+answer: "true",
+explanation: "【国試ポイント】\n主膵管は十二指腸乳頭へ開口。\n胆管と合流する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "内肛門括約筋は横紋筋からなる。",
+answer: "false",
+explanation: "【国試ポイント】\n内肛門括約筋は平滑筋。\n外肛門括約筋は横紋筋。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "嚥下反射のときに喉頭蓋が後方に倒れる。",
+answer: "true",
+explanation: "【国試ポイント】\n喉頭蓋反転により気道を閉鎖。\n誤嚥を防ぐ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "内因子はビタミンB6の吸収に関与する。",
+answer: "false",
+explanation: "【国試ポイント】\n内因子はビタミンB12吸収に必要。\nB6ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "大腸のリンパ流は胸管に注ぐ。",
+answer: "true",
+explanation: "【国試ポイント】\n腸管リンパは最終的に胸管へ流入。\n静脈角へ注ぐ。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃の筋層は2層の平滑筋からなる。",
+answer: "false",
+explanation: "【国試ポイント】\n胃は斜走・輪走・縦走の3層。\n他の消化管より1層多い。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "ランゲルハンス島は膵頭に多く存在する。",
+answer: "false",
+explanation: "【国試ポイント】\nランゲルハンス島は膵尾に多い。\n内分泌機能を担う。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "腎臓は後腹膜腔に存在しない。",
+answer: "false",
+explanation: "【国試ポイント】\n腎臓は代表的な後腹膜器官。\n位置関係は頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "舌咽神経―舌の運動は、嚥下に関わる神経とその働きの組合せで正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n舌運動は舌下神経。\n舌咽神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁は脂肪の吸収を抑制する。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁は脂肪を乳化し吸収促進。\n抑制しない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "交感神経の緊張は胃液の分泌を促進する。",
+answer: "false",
+explanation: "【国試ポイント】\n交感神経は胃液分泌を抑制。\n副交感神経が促進する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食道は気管の前方に位置する。",
+answer: "false",
+explanation: "【国試ポイント】\n食道は気管の後方。\n位置関係は頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "咽頭部の表在感覚を支配するのは迷走神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭感覚は主に舌咽神経。\n迷走神経ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "膵臓は後腹膜腔に存在しない。",
+answer: "false",
+explanation: "【国試ポイント】\n膵臓は後腹膜器官。\n胃の後方に位置する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "嚥下中枢が存在する部位は延髄である。",
+answer: "true",
+explanation: "【国試ポイント】\n嚥下中枢は延髄網様体。\n国試頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "肝臓は胃の前壁と接する。",
+answer: "false",
+explanation: "【国試ポイント】\n肝臓は胃の前壁ではなく小彎側と接する。\n位置関係を整理。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "摂食嚥下の咽頭期に生じる現象は輪状咽頭筋収縮である。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭期では輪状咽頭筋は弛緩。\n食塊通過を助ける。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "空腸は回腸より長い。",
+answer: "false",
+explanation: "【国試ポイント】\n回腸の方が長い。\n空腸は近位部。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "咽頭部の表在感覚を支配するのは舌下神経である。",
+answer: "false",
+explanation: "【国試ポイント】\n舌下神経は舌運動。\n感覚支配ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "膵体は横行結腸前面を横走する。",
+answer: "false",
+explanation: "【国試ポイント】\n膵体は胃後方を横走。\n横行結腸前面ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "舌筋を支配するのは舌下神経である。",
+answer: "true",
+explanation: "【国試ポイント】\n舌筋の運動支配は舌下神経。\n舌口蓋筋のみ例外。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食塊の咽頭への送り込み時に口蓋帆張筋が緊張する。",
+answer: "true",
+explanation: "【国試ポイント】\n口蓋帆張筋は軟口蓋を緊張。\n嚥下時に重要。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "舌根に舌乳頭がある。",
+answer: "false",
+explanation: "【国試ポイント】\n舌乳頭は主に舌体部。\n舌根には少ない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食塊が舌によって咽頭に送られる過程を口腔期という。",
+answer: "true",
+explanation: "【国試ポイント】\n口腔期は随意運動。\n舌で食塊を咽頭へ送る。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁は総胆管から小腸内へ排出される。",
+answer: "true",
+explanation: "【国試ポイント】\n胆汁は総胆管を通り十二指腸へ。\n胆道系の基本。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "舌下神経は両側支配である。",
+answer: "false",
+explanation: "【国試ポイント】\n舌下神経は対側優位支配。\n舌偏位で頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食道は3か所の狭窄部をもつ。",
+answer: "true",
+explanation: "【国試ポイント】\n頸部・気管支交叉部・横隔膜貫通部。\n食道3狭窄は頻出。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食塊の食道への送り込み時に輪状咽頭筋が収縮する。",
+answer: "false",
+explanation: "【国試ポイント】\n食塊通過時は弛緩。\n収縮すると通過できない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "蛋白質―胃は栄養素と吸収部位の組合せで正しい。",
+answer: "false",
+explanation: "【国試ポイント】\n蛋白質の主な吸収は小腸。\n胃では吸収されない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "嚥下中枢が存在する部位は中脳である。",
+answer: "false",
+explanation: "【国試ポイント】\n嚥下中枢は延髄。\n中脳ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "ペプシンは脂質を分解する。",
+answer: "false",
+explanation: "【国試ポイント】\nペプシンはタンパク質分解酵素。\n脂質は分解しない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "摂食嚥下の咽頭期に生じる現象は吸気である。",
+answer: "false",
+explanation: "【国試ポイント】\n咽頭期では一時的に呼吸停止。\n誤嚥を防止する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "ビタミンB12―空腸は栄養素と吸収部位の組合せで正しい。",
+answer: "false",
+explanation: "【国試ポイント】\nビタミンB12は回腸で吸収。\n空腸ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "セクレチンは胃液分泌を促進する。",
+answer: "false",
+explanation: "【国試ポイント】\nセクレチンは胃液分泌を抑制。\n膵液分泌を促進する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "口腔内の食塊は反射運動で咽頭へ送られる。",
+answer: "false",
+explanation: "【国試ポイント】\n口腔期は随意運動。\n咽頭期から反射運動。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆管は空腸に開口する。",
+answer: "false",
+explanation: "【国試ポイント】\n総胆管は十二指腸へ開口。\n空腸ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁は胆細管から分泌される。",
+answer: "true",
+explanation: "【国試ポイント】\n胆汁は肝細胞で産生。\n胆細管へ分泌される。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "横行結腸右端は下行結腸に連なる。",
+answer: "false",
+explanation: "【国試ポイント】\n横行結腸右端は上行結腸に続く。\n下行結腸は左側。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "摂食嚥下の咽頭期に生じる現象は咀嚼である。",
+answer: "false",
+explanation: "【国試ポイント】\n咀嚼は口腔準備期。\n咽頭期ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "嚥下中枢が存在する部位は小脳である。",
+answer: "false",
+explanation: "【国試ポイント】\n嚥下中枢は延髄。\n小脳ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "輪状咽頭筋が収縮すると食塊が食道に入る。",
+answer: "false",
+explanation: "【国試ポイント】\n食塊通過時は輪状咽頭筋が弛緩。\n収縮では通過できない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "横行結腸は後腹膜腔に存在しない。",
+answer: "true",
+explanation: "【国試ポイント】\n横行結腸は腹膜内器官。\n後腹膜器官ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁は胆嚢で産生される。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁は肝臓で産生。\n胆嚢は貯蔵・濃縮を行う。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "膵頭は脾臓に接する。",
+answer: "false",
+explanation: "【国試ポイント】\n膵頭は十二指腸に接する。\n脾臓に近いのは膵尾。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "口蓋の後方を硬口蓋という。",
+answer: "false",
+explanation: "【国試ポイント】\n前方が硬口蓋。\n後方は軟口蓋。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胆汁酸塩の大部分は大腸で再吸収される。",
+answer: "false",
+explanation: "【国試ポイント】\n胆汁酸塩は回腸で再吸収。\n腸肝循環を行う。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "鉄は結腸で吸収される。",
+answer: "false",
+explanation: "【国試ポイント】\n鉄は主に十二指腸で吸収。\n結腸ではない。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "胃底は胃の下方をいう。",
+answer: "false",
+explanation: "【国試ポイント】\n胃底は噴門より上方。\n胃の最上部に位置する。",
+category: "解剖",
+subcategory: "臓器",
+qtype: "true_false"
+},
+
+{
+content: "嚥下反射が起こると舌骨は下方に移動する。",
+answer: "false",
+explanation: "【国試ポイント】\n嚥下時は舌骨が前上方へ移動。\n気道閉鎖を助ける。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "三叉神経は上咽頭後壁の触覚をつかさどる。",
+answer: "false",
+explanation: "【国試ポイント】\n上咽頭後壁の感覚は第2頸神経。\n三叉神経ではない。",
+category: "解剖",
+subcategory: "神経",
+qtype: "true_false"
+},
+
+{
+content: "胃の左縁を小弯という。",
+answer: "true",
+explanation: "【国試ポイント】\n胃の右縁が大弯。\n左縁が小弯である。",
+category: "解剖",
+subcategory: "臓器",
+qtype: "true_false"
+},
+
+{
+content: "食道と胃の境に噴門が位置する。",
+answer: "true",
+explanation: "【国試ポイント】\n噴門は食道と胃の接合部。\n胃の入口にあたる。",
+category: "解剖",
+subcategory: "臓器",
+qtype: "true_false"
+},
+
+{
+content: "肝静脈は下大静脈に連なる。",
+answer: "true",
+explanation: "【国試ポイント】\n肝静脈は下大静脈へ流入。\n門脈とは異なる。",
+category: "解剖",
+subcategory: "血管",
+qtype: "true_false"
+},
+
+{
+content: "三叉神経―口唇閉鎖は正しい組み合わせである。",
+answer: "false",
+explanation: "【国試ポイント】\n口唇閉鎖は顔面神経。\n三叉神経ではない。",
+category: "解剖",
+subcategory: "神経",
+qtype: "true_false"
+},
+
+{
+content: "嚥下後の呼吸は吸気から再開される。",
+answer: "false",
+explanation: "【国試ポイント】\n嚥下後は呼気から再開。\n誤嚥予防に重要。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "食物の摂取によって胆汁分泌は増加する。",
+answer: "true",
+explanation: "【国試ポイント】\n食事で胆嚢収縮。\n胆汁排出が促進される。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
+},
+
+{
+content: "第2頸神経は上咽頭後壁の触覚をつかさどる。",
+answer: "true",
+explanation: "【国試ポイント】\n上咽頭後壁の感覚は第2頸神経。\n頻出事項。",
+category: "解剖",
+subcategory: "神経",
+qtype: "true_false"
+},
+
+{
+content: "口腔粘膜は重層扁平上皮からなる。",
+answer: "true",
+explanation: "【国試ポイント】\n口腔粘膜は重層扁平上皮。\n摩擦に強い構造。",
+category: "解剖",
+subcategory: "臓器",
+qtype: "true_false"
+},
+
+{
+content: "胃壁の伸展は胃液分泌を促進する。",
+answer: "true",
+explanation: "【国試ポイント】\n胃壁伸展で胃液分泌増加。\n迷走神経反射も関与する。",
+category: "生理",
+subcategory: "消化",
+qtype: "true_false"
 }
 ])

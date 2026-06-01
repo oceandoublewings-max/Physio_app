@@ -35495,7 +35495,7 @@ qtype: "true_false"
   category: "生理",
   subcategory: "神経生理",
   qtype: "true_false"
-}
+},
 
 {
   content: "線条体を構成するのは尾状核である",

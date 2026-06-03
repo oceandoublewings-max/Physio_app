@@ -43136,5 +43136,770 @@ qtype: "true_false"
   qtype: "illustration",
   image: "/images/kinesiology/center_of_gravity_quiz.png",
   answer_image: "/images/kinesiology/center_of_gravity_answer.png"
+},
+
+{
+  content: "インクエン酸は、嫌気的代謝の過程で生成される物質である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nインクエン酸はTCA回路の中間代謝産物。\n嫌気的代謝産物ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋線維膜の電位依存性Na+チャネルが開いて脱分極が生じる。",
+  answer: "true",
+  explanation: "【国試ポイント】\nNa+流入で脱分極が起こる。\n活動電位発生の基本。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "活動電位の発射頻度は200回/秒を超える。",
+  answer: "false",
+  explanation: "【国試ポイント】\n活動電位頻度には上限がある。\n200回/秒超は一般的ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "リンゴ酸は、嫌気的代謝の過程で生成される物質である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nリンゴ酸はTCA回路の中間代謝産物。\n嫌気的代謝産物ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動神経活動電位の発生によって筋弛緩が生じる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動神経活動電位は筋収縮を引き起こす。\n弛緩ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動神経終末には髄鞘がある。",
+  answer: "false",
+  explanation: "【国試ポイント】\n神経終末部では髄鞘は消失する。\n神経筋接合部の頻出事項。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側頭筋・上腕二頭筋・虫様筋・前脛骨筋・腓腹筋の中で、運動単位当たりの筋線維数が最も少ないのは側頭筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n微細運動を行う筋ほど運動単位は小さい。\n虫様筋が代表例。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "アクチンフィラメントのATPが加水分解を生じる。",
+  answer: "false",
+  explanation: "【国試ポイント】\nATPを加水分解するのはミオシン頭部。\nアクチンではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "ヒラメ筋において比率が低いのは、タイプIIb線維と比べたタイプI線維の特徴である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nヒラメ筋はタイプI線維が豊富。\n持久性に優れる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "周囲組織の毛細血管が密であるのは、タイプIIb線維と比べたタイプI線維の特徴である。",
+  answer: "true",
+  explanation: "【国試ポイント】\nタイプI線維は有酸素代謝主体。\n毛細血管が豊富。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "横行小管の中をCa2+が運搬される。",
+  answer: "false",
+  explanation: "【国試ポイント】\n横行小管は活動電位を伝える構造。\nCa2+は筋小胞体から放出される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動終板は筋線維の深部に存在する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動終板は筋線維膜上に存在する。\n深部ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "正常では1つの筋線維につき1個の神経筋接合部が存在する。",
+  answer: "true",
+  explanation: "【国試ポイント】\n1筋線維に対し通常1つの運動終板。\n国試頻出。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の収縮において、電気刺激で1秒間に5〜6回の単収縮を起こすと強縮となる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n強縮にはより高頻度の刺激が必要。\n5〜6回/秒では不十分。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側頭筋・上腕二頭筋・虫様筋・前脛骨筋・腓腹筋の中で、運動単位当たりの筋線維数が最も少ないのは前脛骨筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n最も小さい運動単位をもつ代表は虫様筋。\n精密運動に関与する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "ミトコンドリアが少ないのは、タイプIIb線維と比べたタイプI線維の特徴である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nタイプI線維はミトコンドリアが豊富。\n持久性に優れる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "精密な動きをする筋では神経支配比が大きい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n精密運動では神経支配比は小さい。\n少数の筋線維を支配する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動単位には求心性線維が含まれる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動単位は運動神経と筋線維で構成。\n求心性線維は含まれない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の収縮において、単収縮の頻度が過剰になると完全強縮から不完全強縮に移行する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n刺激頻度が増えると不完全強縮から完全強縮へ移行する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "ピルビン酸は、嫌気的代謝の過程で生成される物質である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n解糖系でピルビン酸が生成される。\n嫌気的代謝の重要産物。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "全張力から静止張力を引くと活動張力が得られる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n全張力＝静止張力＋活動張力。\n公式は頻出。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋を徐々に収縮すると大きな運動単位が先に活動を始める。",
+  answer: "false",
+  explanation: "【国試ポイント】\nサイズの原理により小さい運動単位から動員される。\n大きい運動単位は後。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側頭筋・上腕二頭筋・虫様筋・前脛骨筋・腓腹筋の中で、運動単位当たりの筋線維数が最も少ないのは虫様筋である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n虫様筋は精密運動を行う。\n運動単位は非常に小さい。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "遠心性運動は求心性運動より大きな筋張力を発揮することができる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n遠心性収縮は求心性収縮より大きな張力を発揮できる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "クエン酸は、嫌気的代謝の過程で生成される物質である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nクエン酸はTCA回路の中間代謝産物。\n嫌気的代謝ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "ミオグロビン量が少ないのは、タイプIIb線維と比べたタイプI線維の特徴である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nタイプI線維はミオグロビンが豊富。\n赤筋の特徴。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "コハク酸は、嫌気的代謝の過程で生成される物質である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nコハク酸はTCA回路の中間代謝産物。\n嫌気的代謝産物ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "活動張力は筋長が長くなるほど大きくなる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n活動張力には最適筋長が存在する。\n長いほど大きいわけではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側頭筋・上腕二頭筋・虫様筋・前脛骨筋・腓腹筋の中で、運動単位当たりの筋線維数が最も少ないのは上腕二頭筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n最も小さい運動単位をもつ代表は虫様筋。\n精密運動に関与する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動神経終末のシナプス間隙にドパミンが放出される。",
+  answer: "false",
+  explanation: "【国試ポイント】\n神経筋接合部で放出されるのはアセチルコリン。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "求心性運動では速度が速いほど最大筋張力が小さい。",
+  answer: "true",
+  explanation: "【国試ポイント】\n求心性収縮では速度が増すほど発揮張力は低下する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の収縮において、単収縮を加重させても収縮力は変化しない。",
+  answer: "false",
+  explanation: "【国試ポイント】\n加重により張力は増加する。\n強縮の基礎。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋張力が一定の場合、短縮速度は負荷が小さいほど速い。",
+  answer: "true",
+  explanation: "【国試ポイント】\n負荷が小さいほど筋短縮速度は速くなる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋線維の活動電位の持続時間は単収縮の持続時間よりも長い。",
+  answer: "false",
+  explanation: "【国試ポイント】\n活動電位は数ms。\n単収縮の方が長い。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "側頭筋・上腕二頭筋・虫様筋・前脛骨筋・腓腹筋の中で、運動単位当たりの筋線維数が最も少ないのは腓腹筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n最も小さい運動単位をもつ代表は虫様筋。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "同じ運動単位の筋線維は同一の筋線維タイプからなる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n1つの運動単位を構成する筋線維は同じタイプで統一される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "トロポニンが移動してミオシンフィラメントの結合部位が露出する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n移動するのはトロポミオシン。\nトロポニンはCa2+と結合する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋小胞体からMg2+が放出される。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋小胞体から放出されるのはCa2+。\nMg2+ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "持久力のある筋肉において比率が高いのは、タイプIIb線維と比べたタイプI線維の特徴である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n持久力に優れる筋ではタイプI線維の割合が高い。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の収縮において、電気刺激を与えた場合、単収縮に先行して活動電位が生じる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n活動電位が発生した後に収縮が起こる。\n興奮収縮連関の基本。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の構造で筋収縮時に長さが一定なのはZ帯である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n長さが一定なのはA帯。\nZ帯間距離は短縮する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "上腕二頭筋より虫様筋の方が神経支配比は大きい。",
+  answer: "false",
+  explanation: "【国試ポイント】\n虫様筋は精密運動を行う。\n神経支配比は小さい。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "速筋は遅筋に比べ強縮を起こす刺激頻度の閾値が高い。",
+  answer: "true",
+  explanation: "【国試ポイント】\n速筋は収縮時間が短い。\n強縮には高頻度刺激が必要。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の筋収縮で筋小胞体にはNa+を貯蔵している。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋小胞体に貯蔵されるのはCa2+。\nNa+ではない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Z帯とZ帯との間を筋節という。",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋節（サルコメア）はZ帯からZ帯まで。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の構造で筋収縮時に長さが一定なのはI帯である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nI帯は収縮時に短縮する。\n一定なのはA帯。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1個の運動ニューロンとそれに支配される筋線維群を運動単位という。",
+  answer: "true",
+  explanation: "【国試ポイント】\n運動単位の基本定義。\n国試頻出。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "タイプIIA＞タイプIIB＞タイプIは単一筋線維が発生する張力の大きい順に並んでいる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n一般にIIB＞IIA＞Iの順で張力が大きい。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動による疲労時に筋内で増えるのはクレアチンリン酸である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nクレアチンリン酸は消費され減少する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動による疲労時に筋内で増えるのはグリコーゲンである。",
+  answer: "false",
+  explanation: "【国試ポイント】\nグリコーゲンはエネルギー源として消費される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1つの筋は単一の運動単位で構成される。",
+  answer: "false",
+  explanation: "【国試ポイント】\n1つの筋は多数の運動単位で構成される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "支配神経に単一刺激を加えて起こる収縮を単収縮という。",
+  answer: "true",
+  explanation: "【国試ポイント】\n単一刺激で起こる収縮が単収縮。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "伸張反射では弱い刺激で活動を開始するのは速筋である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nサイズの原理により遅筋が先に動員される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の筋収縮で神経筋接合部での興奮の伝達は神経と筋との間で双方向性である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n神経筋接合部の伝達は一方向性。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "最も強い筋収縮は筋のすべての運動単位が同期して活動するときに起こる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n全運動単位が動員されると最大筋力となる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の筋収縮で活動電位は筋収縮に遅れて発生する。",
+  answer: "false",
+  explanation: "【国試ポイント】\n活動電位が先行し、その後に収縮が起こる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の筋収縮でCa2+が筋小胞体から放出されると筋収縮が起こる。",
+  answer: "true",
+  explanation: "【国試ポイント】\nCa2+放出が興奮収縮連関の引き金となる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の構造で筋収縮時に長さが一定なのはA帯である。",
+  answer: "true",
+  explanation: "【国試ポイント】\nA帯はミオシン長を反映し長さが変化しない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "タイプIIB＞タイプI＞タイプIIAは単一筋線維が発生する張力の大きい順に並んでいる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n一般にIIB＞IIA＞Iの順で張力が大きい。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の構造で筋収縮時に長さが一定なのはH帯である。",
+  answer: "false",
+  explanation: "【国試ポイント】\nH帯は収縮時に短縮する。\n一定なのはA帯。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋小胞体へのカルシウムイオン取り込みの増加は筋疲労時にみられる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋疲労ではCa2+動態が低下する。\n収縮力低下の原因となる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "刺激頻度を5〜6Hzに上げると強縮が起こる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n5〜6Hzでは階段現象。\n強縮にはより高頻度刺激が必要。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "タイプI＞タイプIIA＞タイプIIBは単一筋線維が発生する張力の大きい順に並んでいる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n張力はIIB＞IIA＞Iの順に大きい。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "A帯は筋収縮時に短縮する。",
+  answer: "false",
+  explanation: "【国試ポイント】\nA帯の長さは一定。\n短縮するのはI帯とH帯。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "筋形質中のpHの上昇は筋疲労時にみられる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋疲労ではH+が増加しpHは低下する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の筋収縮でミオシン頭部の角度が戻るときにATPの加水分解が起こる。",
+  answer: "true",
+  explanation: "【国試ポイント】\nATP加水分解でミオシン頭部が再び起立する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動による疲労時に筋内で増えるのはATPである。",
+  answer: "false",
+  explanation: "【国試ポイント】\nATPは消費される。\n疲労時は低下傾向。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "ADP濃度の増加は筋疲労時にみられる。",
+  answer: "true",
+  explanation: "【国試ポイント】\nATP分解によりADPが増加する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動による疲労時に筋内で増えるのは乳酸である。",
+  answer: "true",
+  explanation: "【国試ポイント】\n嫌気的代謝で乳酸が増加する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動単位には求心性線維が含まれる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n運動単位は運動ニューロンと筋線維からなる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "A帯を明帯という。",
+  answer: "false",
+  explanation: "【国試ポイント】\nA帯は暗帯。\nI帯が明帯。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "乳酸の減少は筋疲労時にみられる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n筋疲労時は乳酸が増加する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "運動による疲労時に筋内で増えるのは水素イオン（H+）である。",
+  answer: "true",
+  explanation: "【国試ポイント】\nH+増加によりpHが低下する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "タイプIIB＞タイプIIA＞タイプIは単一筋線維が発生する張力の大きい順に並んでいる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n速筋ほど大きな張力を発生する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "Z帯は筋収縮時に伸長する。",
+  answer: "false",
+  explanation: "【国試ポイント】\nZ帯間距離は短縮する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "単収縮が連続して起こると階段現象がみられる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n反復刺激初期に収縮力が徐々に増大する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1個の運動ニューロンが何本の筋線維を支配しているかを神経支配比という。",
+  answer: "true",
+  explanation: "【国試ポイント】\n神経支配比は運動単位の大きさを示す。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "I帯の中央部にZ帯がある。",
+  answer: "true",
+  explanation: "【国試ポイント】\nZ帯はI帯の中央に位置する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "電気刺激を与えた場合に筋活動電位が収縮に先行して生じる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n活動電位が先に発生し、その後収縮が起こる。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "1つの筋肉は多数の運動単位で構成される。",
+  answer: "true",
+  explanation: "【国試ポイント】\n筋は多数の運動単位から構成される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "タイプIIA＞タイプI＞タイプIIBは単一筋線維が発生する張力の大きい順に並んでいる。",
+  answer: "false",
+  explanation: "【国試ポイント】\n正しくはIIB＞IIA＞I。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "神経支配比が小さいほど微細な運動ができる。",
+  answer: "true",
+  explanation: "【国試ポイント】\n虫様筋や外眼筋が代表例。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "グリコーゲンの増加は筋疲労時にみられる。",
+  answer: "false",
+  explanation: "【国試ポイント】\nグリコーゲンは消費され減少する。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "随意運動時には大きな運動単位ほど先に活動を始める。",
+  answer: "false",
+  explanation: "【国試ポイント】\nサイズの原理により小さい運動単位から動員される。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
+},
+
+{
+  content: "骨格筋の構造で筋収縮時に長さが一定なのは筋帯である。",
+  answer: "false",
+  explanation: "【国試ポイント】\n長さが一定なのはA帯。\n筋帯という名称は用いない。",
+  category: "生理",
+  subcategory: "筋生理",
+  qtype: "true_false"
 }
 ])

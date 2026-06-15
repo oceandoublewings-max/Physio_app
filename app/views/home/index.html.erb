@@ -273,19 +273,8 @@ width:26%
 console.log("OK")
 </script>
 
-<div class="bottom-links">
-  <a href="/pdfs" class="bottom-card">
-    <span>📚</span>
-    <small>参考資料</small>
-  </a>
-
-  <a href="/stamps" class="bottom-card">
-    <span>🎖️</span>
-    <small>スタンプ図鑑</small>
-  </a>
-
-  <a href="/contact" class="bottom-card">
-    <span>✉️</span>
-    <small>お問い合わせ</small>
-  </a>
+<div class="footer-links">
+  <%= link_to "📚 参考資料", pdf_index_path %>
+  <%= link_to "🎖️ 図鑑", stamps_path %>
+  <%= link_to "✉️ 問合せ", contact_path %>
 </div>

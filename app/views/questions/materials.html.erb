@@ -18,10 +18,10 @@
 }
 </style>
 
-<h2>イラスト集</h2>
+<h2>参考資料</h2>
 
 <% if params[:type] == "bone" %>
-  <h3>骨のイラスト集</h3>
+  <h3>骨の参考資料</h3>
 
   <div class="image-row">
     <% Dir.glob(Rails.root.join("public/images/bone/*")).each do |img| %>
@@ -30,7 +30,7 @@
   </div>
 
 <% elsif params[:type] == "muscle" %>
-  <h3>筋肉のイラスト集</h3>
+  <h3>筋肉の参考資料</h3>
 
   <div class="image-row">
     <% Dir.glob(Rails.root.join("public/images/muscle/*")).each do |img| %>

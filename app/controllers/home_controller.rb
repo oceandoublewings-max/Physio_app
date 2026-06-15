@@ -39,4 +39,10 @@ end
 def physiology_pdfs
 end
 
+def stamps
+end
+
+def contact
+end
+
 end

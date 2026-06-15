@@ -21,6 +21,8 @@ get "/anatomy_pdfs", to: "home#anatomy_pdfs"
 get "/neurovascular_pdfs", to: "home#neurovascular_pdfs"
 get "/physiology", to: "home#physiology"
 get '/materials', to: 'questions#materials'
+get "/stamps", to: "home#stamps"
+get "/contact", to: "home#contact"
 get "/illustration_count", to: "questions#illustration_count"
 get "anatomy_analysis", to: "home#anatomy_analysis"
 get "physiology_analysis", to: "home#physiology_analysis"

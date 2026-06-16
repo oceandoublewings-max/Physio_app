@@ -149,6 +149,8 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
   <!-- 5択 -->
 <div class="choices">
+<p>件数: <%= @question.choices.split(",").count %></p>
+
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
     <button class="choice-btn"
 onclick="this.disabled=true; checkAnswer(<%= choice.to_json %>)">

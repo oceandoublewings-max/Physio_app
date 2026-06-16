@@ -150,9 +150,7 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
   <!-- 5択 -->
 <div class="choices">
 
-<p>ID: <%= @question.id %></p>
-<p>CHOICES: <%= @question.choices %></p>
-<p>件数: <%= @question.choices.split(",").count %></p>
+<p>件数: <%= @question.choices.inspect %></p>
 
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
     <button class="choice-btn"

@@ -85,6 +85,8 @@ if @index >= @questions.length
   @finished = true
 else
   @question = @questions[@index]
+
+  Rails.logger.info "DEBUG_CHOICES: #{@question.content} / #{@question.choices}"
  puts @question.inspect
  puts "CATEGORY: #{@question.category}"
 puts "QTYPE: #{@question.qtype}"

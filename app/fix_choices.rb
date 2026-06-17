@@ -8,4 +8,4 @@ end
 
 File.write("db/seeds.rb", text)
 
-puts "完了"
+puts "完了"q

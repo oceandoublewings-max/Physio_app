@@ -145,7 +145,9 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 <% elsif @question.qtype.to_s == "choice" %>
 
-
+<p style="color:red;">
+  <%= @question.choices %>
+</p>
 
   <!-- 5択 -->
 <div class="choices">

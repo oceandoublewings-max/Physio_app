@@ -86,10 +86,6 @@ if @index >= @questions.length
 else
   @question = @questions[@index]
 
-Rails.logger.info "QUESTION: #{@question.inspect}"
-Rails.logger.info "CATEGORY: #{@question.category}"
-Rails.logger.info "QTYPE: #{@question.qtype}"
-Rails.logger.info "CHOICES: #{@question.choices}"
 end
 end
 

@@ -19,6 +19,7 @@ get "/muscle_pdfs", to: "home#muscle_pdfs"
 get "/physiology_pdfs", to: "home#physiology_pdfs"
 get "/anatomy_pdfs", to: "home#anatomy_pdfs"
 get "/neurovascular_pdfs", to: "home#neurovascular_pdfs"
+get "/kinesiology_pdfs", to: "home#kinesiology_pdfs"
 get "/physiology", to: "home#physiology"
 get '/materials', to: 'questions#materials'
 get "/stamps", to: "home#stamps"

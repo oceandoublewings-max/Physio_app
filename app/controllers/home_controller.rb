@@ -39,6 +39,9 @@ end
 def physiology_pdfs
 end
 
+def kinesiology_pdfs
+end
+
 def stamps
 end
 

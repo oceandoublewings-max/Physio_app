@@ -43,7 +43,6 @@
 </div>
 
 
-<% unless params[:mode] == "wrong" %>
 <div style="
   display:flex;
   flex-direction:column;
@@ -81,9 +80,7 @@
 
   <!-- イラスト -->
 
-  <% if @category == "運動学" %>
-
-<a href="/select?category=<%= @category %>&qtype=illustration"
+<a href="/select?category=<%= @category %>&qtype=illustration&mode=<%= params[:mode] %>"
    style="text-decoration:none;">
 
   <button class="img-btn <%= 'active' if params[:qtype] == 'illustration' %>">
@@ -91,30 +88,6 @@
   </button>
 
 </a>
-
-<% else %>
-
-<a href="/select?category=<%= @category %>&qtype=illustration"
-   style="text-decoration:none;">
-
-  <button class="img-btn <%= 'active' if params[:qtype] == 'illustration' %>">
-    イラスト問題
-  </button>
-
-</a>
-
-<% end %>
-
-  <a href="/select?category=<%= @category %>&qtype=illustration&mode=<%= params[:mode] %>"
-    style="text-decoration:none;">
-    
-    <button class="img-btn <%= 'active' if params[:qtype] == 'illustration' %>">
-      イラスト問題
-    </button>
-
-  </a>
-
-
 
 <!-- ↓ 問題数選択 -->
 <% if params[:qtype].present? || params[:mode] == "wrong" %>
@@ -170,5 +143,5 @@
 
 
 <% end %> 
-
+<% end %> 
 

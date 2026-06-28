@@ -46,5 +46,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  adapter: sqlite3
-  database: storage/production.sqlite3
+  url: <%= ENV["DATABASE_URL"] %>

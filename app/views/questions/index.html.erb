@@ -88,9 +88,8 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
     <!-- 問題画像 -->
     <div style="margin-top:0px; text-align:center;">
 
-      <img src="<%= @question.image %>"
-      <p><%= @question.image %></p>
-  style="
+   <%= image_tag @question.image,
+  style: "
     width:auto;
     max-width:95%;
     max-height:700px;
@@ -98,9 +97,9 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
     object-fit:contain;
     display:block;
     margin:0 auto;
-    border-radius:10px;"
-    >
-    </div>
+    border-radius:10px;
+  "
+%>
 
  
     <!-- 答えを見る -->
@@ -127,8 +126,8 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
    text-align:center;
    padding-top:40px;">
 
-    <img src="<%= @question.answer_image %>"
-  style="
+  <%= image_tag @question.answer_image,
+  style: "
     width:auto;
     max-width:95%;
     max-height:700px;
@@ -136,9 +135,9 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
     object-fit:contain;
     display:block;
     margin:0 auto;
-    border-radius:10px;"
-    >
-  </div>
+    border-radius:10px;
+  "
+%>
 
 </div>
 

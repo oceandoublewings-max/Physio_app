@@ -1,25 +1,71 @@
-<h1 style="text-align:center;">
-🏅 スタンプ図鑑
+<h1 style="text-align:center; margin-bottom:30px;">
+  🏅 スタンプ図鑑
 </h1>
 
 <div style="
-width:120px;
-height:120px;
-margin:40px auto;
-border:2px solid #ccc;
-border-radius:10px;
-background:white;
-display:flex;
-align-items:center;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+max-width:500px;
+margin:0 auto;
+padding:10px;
 ">
 
-  <%= image_tag "/images/stamps/stamp_001.png",
-      style: "width:100%; height:100%; object-fit:contain;" %>
+<% (1..25).each do |i| %>
+
+  <div style="
+    border:2px solid #ddd;
+    border-radius:12px;
+    background:white;
+    aspect-ratio:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  ">
+
+    <% file = "stamps/stamp_%03d.png" % i %>
+
+    <% if File.exist?(Rails.root.join("public","images",file)) %>
+
+      <%= image_tag "/images/#{file}",
+          style:"width:70%; height:70%; object-fit:contain;" %>
+
+    <% else %>
+
+      <div style="
+        width:70%;
+        height:70%;
+        border:2px dashed #ccc;
+        border-radius:10px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#bbb;
+        font-size:28px;
+      ">
+        ?
+      </div>
+
+    <% end %>
+
+    <div style="
+      margin-top:4px;
+      font-size:13px;
+      color:#666;
+      font-weight:bold;
+    ">
+      <%= "%03d" % i %>
+    </div>
+
+  </div>
+
+<% end %>
 
 </div>
 
-<h2 style="text-align:center; margin-top:40px;">
+<h2 style="text-align:center; margin-top:50px;">
 🎃 期間限定スタンプ
 </h2>
 

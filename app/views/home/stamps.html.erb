@@ -30,8 +30,8 @@ padding:10px;
     <% if File.exist?(Rails.root.join("public","images",file)) %>
 
       <%= image_tag "/images/#{file}",
-    style:"width:70%; height:70%; object-fit:contain; cursor:pointer;",
-    onclick:"openStamp('/images/#{file}','<%= "%03d" % i %>')"
+      style: "width:70%; height:70%; object-fit:contain; cursor:pointer;",
+      onclick: "openStamp('/images/#{file}', 'No.#{'%03d' % i}')" %>
     <% else %>
 
       <div style="

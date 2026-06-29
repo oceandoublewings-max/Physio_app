@@ -30,8 +30,8 @@ padding:10px;
     <% if File.exist?(Rails.root.join("public","images",file)) %>
 
       <%= image_tag "/images/#{file}",
-          style:"width:70%; height:70%; object-fit:contain;" %>
-
+    style:"width:70%; height:70%; object-fit:contain; cursor:pointer;",
+    onclick:"openStamp('/images/#{file}')" %>
     <% else %>
 
       <div style="
@@ -91,3 +91,36 @@ margin:20px auto;
 <% end %>
 
 </div>
+
+<div id="stampModal"
+     onclick="closeStamp()"
+     style="
+       display:none;
+       position:fixed;
+       inset:0;
+       background:rgba(0,0,0,0.7);
+       justify-content:center;
+       align-items:center;
+       z-index:9999;
+     ">
+
+  <img id="stampImage"
+       style="
+         max-width:80%;
+         max-height:80%;
+         background:white;
+         border-radius:20px;
+         padding:20px;
+       ">
+</div>
+
+<script>
+function openStamp(src){
+  document.getElementById("stampImage").src = src;
+  document.getElementById("stampModal").style.display="flex";
+}
+
+function closeStamp(){
+  document.getElementById("stampModal").style.display="none";
+}
+</script>

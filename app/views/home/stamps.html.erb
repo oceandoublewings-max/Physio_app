@@ -31,7 +31,8 @@ padding:10px;
 
       <%= image_tag "/images/#{file}",
       style: "width:70%; height:70%; object-fit:contain; cursor:pointer;",
-      onclick:"openStamp('/images/#{file}')"
+      onclick: "openStamp('/images/#{file}')"
+%>
     <% else %>
 
       <div style="
@@ -106,19 +107,8 @@ margin:20px auto;
        background:rgba(0,0,0,0.7);
        justify-content:center;
        align-items:center;
-       flex-direction:column;
        z-index:9999;
      ">
-
-  <div id="stampTitle"
-       style="
-         color:white;
-         font-size:24px;
-         font-weight:bold;
-         margin-bottom:20px;
-         text-align:center;
-       ">
-  </div>
 
   <img id="stampImage"
        style="

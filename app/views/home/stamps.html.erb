@@ -31,7 +31,7 @@ padding:10px;
 
       <%= image_tag "/images/#{file}",
       style: "width:70%; height:70%; object-fit:contain; cursor:pointer;",
-      onclick: "openStamp('/images/#{file}', 'No.#{'%03d' % i}')" %>
+      onclick:"openStamp('/images/#{file}')"
     <% else %>
 
       <div style="
@@ -54,12 +54,6 @@ padding:10px;
   margin-top:6px;
   text-align:center;
 ">
-  <div style="
-    font-size:11px;
-    color:#888;
-  ">
-    🏋️‍♂️ スタンプ
-  </div>
 
   <div style="
     font-size:14px;
@@ -138,9 +132,8 @@ margin:20px auto;
 </div>
 
 <script>
-function openStamp(src,no){
+function openStamp(src){
   document.getElementById("stampImage").src = src;
-  document.getElementById("stampTitle").textContent = "🏋️ スタンプ " + no;
   document.getElementById("stampModal").style.display = "flex";
 }
 

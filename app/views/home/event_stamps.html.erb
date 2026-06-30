@@ -1,0 +1,256 @@
+<h1 style="text-align:center; margin-bottom:30px;">
+🎉 イベントスタンプ図鑑
+</h1>
+
+<p style="
+text-align:center;
+color:#666;
+font-size:15px;
+margin-bottom:30px;
+line-height:1.7;
+">
+期間限定イベントで獲得できるスタンプです✨
+</p>
+
+<hr>
+
+<h2 style="text-align:center;">
+🎃 ハロウィン
+</h2>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+max-width:520px;
+margin:0 auto;
+padding:10px;
+">
+
+<% (1..25).each do |i| %>
+
+  <% file = "events/halloween_%03d.png" % i %>
+
+  <div style="
+    border:2px solid #ddd;
+    border-radius:12px;
+    background:white;
+    aspect-ratio:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  ">
+
+    <% if File.exist?(Rails.root.join("public","images",file)) %>
+
+      <%= image_tag "/images/#{file}",
+        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
+        onclick:"openStamp('/images/#{file}')"
+      %>
+
+    <% else %>
+
+      <span style="
+        font-size:28px;
+        color:#c8d5e6;
+        font-weight:bold;
+      ">
+        <%= "%03d" % i %>
+      </span>
+
+    <% end %>
+
+  </div>
+
+<% end %>
+
+</div>
+
+<hr>
+
+<h2 style="text-align:center;">
+🎄 クリスマス
+</h2>
+
+<p style="text-align:center;color:#888;">準備中</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+max-width:520px;
+margin:0 auto;
+padding:10px;
+">
+
+<% (1..25).each do |i| %>
+
+  <% file = "events/christmas_%03d.png" % i %>
+
+  <div style="
+    border:2px solid #ddd;
+    border-radius:12px;
+    background:white;
+    aspect-ratio:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  ">
+
+    <% if File.exist?(Rails.root.join("public","images",file)) %>
+
+      <%= image_tag "/images/#{file}",
+        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
+        onclick:"openStamp('/images/#{file}')"
+      %>
+
+    <% else %>
+
+      <span style="
+        font-size:28px;
+        color:#c8d5e6;
+        font-weight:bold;
+      ">
+        <%= "%03d" % i %>
+      </span>
+
+    <% end %>
+
+  </div>
+
+<% end %>
+
+</div>
+
+<hr>
+
+<h2 style="text-align:center;">
+🎍 お正月
+</h2>
+
+<p style="text-align:center;color:#888;">準備中</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+max-width:520px;
+margin:0 auto;
+padding:10px;
+">
+
+<% (1..25).each do |i| %>
+
+  <% file = "events/newyear_%03d.png" % i %>
+
+  <div style="
+    border:2px solid #ddd;
+    border-radius:12px;
+    background:white;
+    aspect-ratio:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  ">
+
+    <% if File.exist?(Rails.root.join("public","images",file)) %>
+
+      <%= image_tag "/images/#{file}",
+        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
+        onclick:"openStamp('/images/#{file}')"
+      %>
+
+    <% else %>
+
+      <span style="
+        font-size:28px;
+        color:#c8d5e6;
+        font-weight:bold;
+      ">
+        <%= "%03d" % i %>
+      </span>
+
+    <% end %>
+
+  </div>
+
+<% end %>
+
+</div>
+
+<hr>
+
+<h2 style="text-align:center;">
+🌸 春イベント
+</h2>
+
+<p style="text-align:center;color:#888;">準備中</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+max-width:520px;
+margin:0 auto;
+padding:10px;
+">
+
+<% (1..25).each do |i| %>
+
+  <% file = "events/spring_%03d.png" % i %>
+
+  <div style="
+    border:2px solid #ddd;
+    border-radius:12px;
+    background:white;
+    aspect-ratio:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  ">
+
+    <% if File.exist?(Rails.root.join("public","images",file)) %>
+
+      <%= image_tag "/images/#{file}",
+        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
+        onclick:"openStamp('/images/#{file}')"
+      %>
+
+    <% else %>
+
+      <span style="
+        font-size:28px;
+        color:#c8d5e6;
+        font-weight:bold;
+      ">
+        <%= "%03d" % i %>
+      </span>
+
+    <% end %>
+
+  </div>
+
+<% end %>
+
+</div>
+
+<div style="text-align:center; margin:50px 0;">
+
+<%= link_to "◀ 🏅 通常スタンプ図鑑へ戻る",
+stamps_path,
+style:"
+display:inline-block;
+padding:12px 24px;
+background:#4caf50;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+font-size:16px;
+" %>
+
+</div>

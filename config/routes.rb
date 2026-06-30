@@ -28,6 +28,8 @@ get "/illustration_count", to: "questions#illustration_count"
 get "anatomy_analysis", to: "home#anatomy_analysis"
 get "physiology_analysis", to: "home#physiology_analysis"
 get "kinesiology_analysis", to: "home#kinesiology_analysis"
+get "stamps", to: "home#stamps"
+get "event_stamps", to: "home#event_stamps"
   # Defines the root path route ("/")
   # root "posts#index"
 end

@@ -48,4 +48,7 @@ end
 def contact
 end
 
+def event_stamps
+end
+
 end

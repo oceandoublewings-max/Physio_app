@@ -91,6 +91,8 @@ end
 
 def select
   @category = params[:category]
+
+  Rails.logger.info "SELECT params: #{params.to_unsafe_h}"
 end
 
 def api_create

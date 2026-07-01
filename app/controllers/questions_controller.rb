@@ -76,9 +76,9 @@ if params[:ids].present?
 
   @questions = Question.where(id: ids)
 
-  if @category.present?
-    @questions = @questions.where(category: @category)
-  end
+  if @category.present? && @category != "all"
+  @questions = @questions.where(category: @category)
+end
 
   if @qtype.present? && @qtype != "all"
     @questions = @questions.where(qtype: @qtype)
@@ -112,7 +112,11 @@ def select
     "運動学" => "運動"
   }
 
-  @category = map[params[:category]] || params[:category]
+  if params[:category] == "all"
+    @category = nil
+  else
+    @category = map[params[:category]] || params[:category]
+  end
 end
 
 def api_create

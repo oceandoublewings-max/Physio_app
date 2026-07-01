@@ -255,28 +255,48 @@ width:26%
 </div>
 
 
-<!-- 苦手問題（メインボタン）  
-<a href="/select?mode=wrong" style="text-decoration:none;">
+<!-- 苦手問題（全範囲） -->
+<a href="javascript:void(0)"
+   onclick="goWrongAll()"
+   style="text-decoration:none;">
   <div style="
-    background: #ff6b6b;
-    color: white;
-    padding: 15px;
+    background:#ff6b6b;
+    color:white;
+    padding:15px;
 
-    width: 220px;
-    margin: 20px auto 0 auto;
+    width:80%;
+    max-width:700px;
 
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin:20px auto 0 auto;
+
+    text-align:center;
+    border-radius:8px;
+    font-weight:bold;
   ">
-    後で戻す(苦手問題全範囲）
+    🔥 苦手問題（全範囲）
   </div>
 </a>
--->
 `;
 
 console.log("OK")
+
+function goWrongAll() {
+
+  const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
+
+  const filtered = wrong.map(q => q.id);
+
+  if (filtered.length === 0) {
+    alert("苦手問題がまだありません");
+    return;
+  }
+
+  window.location.href =
+    "/select?mode=wrong" +
+    "&ids=" + encodeURIComponent(filtered.join(",")) +
+    "&category=all";
+}
+
 </script>
 
 

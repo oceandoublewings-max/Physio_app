@@ -224,7 +224,7 @@ function checkAnswer(choice) {
   }
 
   localStorage.setItem("score", score);
-  localStorage.setItem("total", "<%= params[:count] %>");
+  localStorage.setItem("total", "<%= @questions.length %>");
   localStorage.setItem("wrong", JSON.stringify(wrong));
 
   showAnswer();

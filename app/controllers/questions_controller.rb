@@ -47,6 +47,15 @@ end
 count = params[:count].to_i
 count = 10 if count == 0
 
+# 苦手問題
+if params[:mode] == "wrong" && params[:ids].present?
+  ids = params[:ids].split(",").map(&:to_i)
+
+  base = base.where(id: ids)
+
+  count = [count, ids.size].min
+end
+
 if params[:ids].blank? && params[:mode] != "wrong" && params[:index].nil?
   ids = base.order("RANDOM()").limit(count).pluck(:id)
 
@@ -75,7 +84,7 @@ if params[:ids].present?
     @questions = @questions.where(qtype: @qtype)
   end
 
-else
+elsif params[:mode] != "wrong"
   @questions = base.order("RANDOM()").limit(count)
 end
 

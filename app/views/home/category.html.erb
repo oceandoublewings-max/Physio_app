@@ -82,10 +82,18 @@
 <script>
 function goWrong(category) {
 
+  const map = {
+    "解剖学": "解剖",
+    "生理学": "生理",
+    "運動学": "運動"
+  };
+
+  const key = map[category] || category;
+
   const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
   const filtered = wrong
-    .filter(q => q.category === category)
+    .filter(q => q.category === key)
     .map(q => q.id);
 
   if (filtered.length === 0) {
@@ -96,6 +104,6 @@ function goWrong(category) {
   window.location.href =
     "/select?mode=wrong" +
     "&ids=" + encodeURIComponent(filtered.join(",")) +
-    "&category=" + encodeURIComponent(category);
+    "&category=" + encodeURIComponent(key);
 }
 </script>

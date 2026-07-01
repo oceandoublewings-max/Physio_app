@@ -111,30 +111,30 @@
 
 <div class="count-buttons illustration-count-buttons">
 
- <a href="<%= params[:mode] == 'wrong' ?
+<a href="<%= params[:mode] == 'wrong' ?
 "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=5&index=0" :
-"/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=5&index=0"
+"/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=5"
 %>" onclick="localStorage.removeItem('score'); localStorage.removeItem('total');">
   <button class="count-btn btn-5">5問</button>
 </a>
 
 <a href="<%= params[:mode] == 'wrong' ?
 "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=10&index=0" :
-"/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=10&index=0"
+"/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=10"
 %>" onclick="localStorage.removeItem('score'); localStorage.removeItem('total');">
   <button class="count-btn btn-10">10問</button>
 </a>
 
 <a href="<%= params[:mode] == 'wrong' ?
 "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=15&index=0" :
-"/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=15&index=0"
+"/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=15"
 %>" onclick="localStorage.removeItem('score'); localStorage.removeItem('total');">
   <button class="count-btn btn-15">15問</button>
 </a>
 
 <a href="<%= params[:mode] == 'wrong' ?
 "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=20&index=0" :
-"/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype]}&count=20&index=0"
+"/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=20"
 %>" onclick="localStorage.removeItem('score'); localStorage.removeItem('total');">
   <button class="count-btn btn-20">20問</button>
 </a>

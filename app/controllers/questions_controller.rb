@@ -90,9 +90,16 @@ end
 end
 
 def select
-  @category = params[:category]
-  @qtype    = params[:qtype]
-  @mode     = params[:mode]
+  @mode = params[:mode]
+  @qtype = params[:qtype]
+
+  map = {
+    "解剖学" => "解剖",
+    "生理学" => "生理",
+    "運動学" => "運動"
+  }
+
+  @category = map[params[:category]] || params[:category]
 end
 
 def api_create

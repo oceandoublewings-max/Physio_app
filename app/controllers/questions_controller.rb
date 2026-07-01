@@ -88,6 +88,10 @@ elsif params[:mode] != "wrong"
   @questions = base.order("RANDOM()").limit(count)
 end
 
+if @questions.nil?
+  @questions = []
+end
+
 @index = params[:index].to_i
 
 if @index >= @questions.length

@@ -34,45 +34,68 @@
 
 <div style="margin-top:20px;">
 
-
   <!-- 全問挑戦 -->
   <a href="/select?category=<%= @category %>&index=0" style="text-decoration:none;">
-  <div style="
-  border:1px solid #ccc;
-  background:white;
-  color:black;
-  padding:15px;
+    <div style="
+      border:1px solid #ccc;
+      background:white;
+      color:black;
+      padding:15px;
 
-  width:80%;
-  max-width:700px;
+      width:80%;
+      max-width:700px;
 
-  margin:0 auto 10px auto;
+      margin:0 auto 10px auto;
 
-  text-align:center;
-  border-radius:8px;
-  font-weight:bold;
-">
-    全問挑戦
-  </div>
-</a>
+      text-align:center;
+      border-radius:8px;
+      font-weight:bold;
+    ">
+      全問挑戦
+    </div>
+  </a>
 
-<a href="/select?mode=wrong&category=<%= @category %>" style="text-decoration:none;">
-  <div style="
-  background:#2196F3;
-  color:white;
-  padding:15px;
+  <!-- この分野の苦手復習 -->
+  <a href="javascript:void(0)"
+     onclick="goWrong('<%= @category %>')"
+     style="text-decoration:none;">
+    <div style="
+      background:#2196F3;
+      color:white;
+      padding:15px;
 
-  width:80%;
-  max-width:700px;
+      width:80%;
+      max-width:700px;
 
-  margin:0 auto;
+      margin:0 auto;
 
-  text-align:center;
-  border-radius:8px;
-  font-weight:bold;
-">
-    この分野の苦手復習
-  </div>
-</a>
+      text-align:center;
+      border-radius:8px;
+      font-weight:bold;
+    ">
+      この分野の苦手復習
+    </div>
+  </a>
 
+</div>
 
+<script>
+function goWrong(category) {
+
+  const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
+
+  const filtered = wrong
+    .filter(q => q.category === category)
+    .map(q => q.id);
+
+  if (filtered.length === 0) {
+    alert("この分野の苦手問題はありません");
+    return;
+  }
+
+  window.location.href =
+    "/select?mode=wrong" +
+    "&ids=" + encodeURIComponent(filtered.join(",")) +
+    "&category=" + encodeURIComponent(category);
+}
+</script>

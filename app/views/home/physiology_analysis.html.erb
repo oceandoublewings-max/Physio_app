@@ -54,7 +54,7 @@
   </div>
   <p style="
   text-align:right;
-  font-size:13px;
+  font-size:11px;
   color:#888;
   margin-top:8px;
   margin-bottom:0;
@@ -94,6 +94,60 @@ wrong.forEach(q => {
 
 })
 
+const weakAreas = [
+  { name: "神経生理", icon: "🧠", count: nervePhysiology },
+  { name: "筋生理", icon: "💪", count: musclePhysiology },
+  { name: "循環", icon: "🫀", count: circulation },
+  { name: "呼吸", icon: "🫁", count: respiration },
+  { name: "内臓", icon: "🩺", count: organ },
+  { name: "ホルモン", icon: "🧪", count: hormone },
+  { name: "消化", icon: "🍚", count: digestion },
+  { name: "体温・恒常性", icon: "🌡️", count: homeostasis }
+];
+
+const maxWeak = Math.max(...weakAreas.map(a => a.count));
+
+let weakMessage = "";
+
+if (maxWeak > 0) {
+  const topWeak = weakAreas.filter(a => a.count === maxWeak);
+
+  weakMessage = `
+  <div style="
+    margin-top:16px;
+    padding:14px;
+    background:#F8FBFF;
+    border:1px solid #D6E8FF;
+    border-radius:12px;
+    text-align:center;
+  ">
+
+    <div style="
+      font-size:18px;
+      font-weight:bold;
+    ">
+      🥇 一番苦手：${topWeak.map(a => a.name).join("・")}
+    </div>
+
+    <div style="
+      margin-top:8px;
+      font-size:16px;
+    ">
+      ${topWeak.map(a => `${a.icon} ${a.name}（${a.count}問）`).join("<br>")}
+    </div>
+
+    <div style="
+      margin-top:8px;
+      font-size:14px;
+      color:#666;
+    ">
+      💡 次に勉強すると効果的！
+    </div>
+
+  </div>
+  `;
+}
+
 document.getElementById("physiology-box").innerHTML = `
 🫀 生理学：${physiology}問<br><br>
 
@@ -105,6 +159,8 @@ document.getElementById("physiology-box").innerHTML = `
 🧪 ホルモン：${hormone}問<br>
 🍚 消化：${digestion}問<br>
 🌡️ 体温・恒常性：${homeostasis}問
+
+${weakMessage}
 `;
 const ctx = document.getElementById("radarChart");
 
@@ -124,16 +180,20 @@ new Chart(ctx, {
     datasets: [{
       label: "苦手問題数",
       data: [
-        nervePhysiology,
-        musclePhysiology,
-        circulation,
-        respiration,
-        organ,
-        hormone,
-        digestion,
-        homeostasis
-      ]
-    }]
+  nervePhysiology,
+  musclePhysiology,
+  circulation,
+  respiration,
+  organ,
+  hormone,
+  digestion,
+  homeostasis
+],
+borderColor: "#4A90E2",
+backgroundColor: "rgba(74,144,226,0.25)",
+pointBackgroundColor: "#4A90E2",
+pointBorderColor: "#4A90E2",
+borderWidth: 4
   },
   options: {
     responsive: true,

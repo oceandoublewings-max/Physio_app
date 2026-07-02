@@ -55,7 +55,7 @@
   </div>
 <p style="
   text-align:right;
-  font-size:13px;
+  font-size:11px;
   color:#888;
   margin-top:8px;
   margin-bottom:0;
@@ -91,6 +91,58 @@ wrong.forEach(q => {
 
 })
 
+const weakAreas = [
+  { name: "骨", icon: "🦴", count: bone },
+  { name: "筋肉", icon: "💪", count: muscle },
+  { name: "神経", icon: "🧠", count: nerve },
+  { name: "臓器", icon: "🫀", count: organ },
+  { name: "血管", icon: "🩸", count: vessel },
+  { name: "断面・位置関係", icon: "📍", count: position }
+];
+
+const maxWeak = Math.max(...weakAreas.map(a => a.count));
+
+let weakMessage = "";
+
+if (maxWeak > 0) {
+  const topWeak = weakAreas.filter(a => a.count === maxWeak);
+
+  weakMessage = `
+  <div style="
+    margin-top:16px;
+    padding:14px;
+    background:#F8FBFF;
+    border:1px solid #D6E8FF;
+    border-radius:12px;
+    text-align:center;
+  ">
+
+    <div style="
+      font-size:18px;
+      font-weight:bold;
+    ">
+      🥇 一番苦手：${topWeak.map(a => a.name).join("・")}
+    </div>
+
+    <div style="
+      margin-top:8px;
+      font-size:16px;
+    ">
+      ${topWeak.map(a => `${a.icon} ${a.name}（${a.count}問）`).join("<br>")}
+    </div>
+
+    <div style="
+      margin-top:8px;
+      font-size:14px;
+      color:#666;
+    ">
+      💡 次に勉強すると効果的！
+    </div>
+
+  </div>
+  `;
+}
+
 document.getElementById("anatomy-box").innerHTML = `
 🦴 解剖学：${anatomy}問<br><br>
 
@@ -100,6 +152,8 @@ document.getElementById("anatomy-box").innerHTML = `
 🫀 臓器：${organ}問<br>
 🩸 血管：${vessel}問<br>
 📍 断面・位置関係：${position}問
+
+${weakMessage}
 `;
 const ctx = document.getElementById("radarChart");
 new Chart(ctx, {
@@ -114,16 +168,21 @@ new Chart(ctx, {
       "断面"
     ],
     datasets: [{
-      label: "苦手問題数",
-      data: [
-        bone,
-        muscle,
-        nerve,
-        organ,
-        vessel,
-        position
-            ]
-    }]
+  label: "苦手問題数",
+  data: [
+    bone,
+    muscle,
+    nerve,
+    organ,
+    vessel,
+    position
+  ],
+  borderColor: "#4A90E2",
+  backgroundColor: "rgba(74,144,226,0.25)",
+  pointBackgroundColor: "#4A90E2",
+  pointBorderColor: "#4A90E2",
+  borderWidth: 4
+}]
   },
   options: {
     responsive: true,

@@ -174,38 +174,39 @@ new Chart(ctx, {
       "動作分析"
     ],
     datasets: [{
-      label: "苦手問題数",
-      data: [
-  jointMotion,
-  rom,
-  muscleAction,
-  gait,
-  posture,
-  biomechanics,
-  movementAnalysis
-],
-borderColor: "#4A90E2",
-backgroundColor: "rgba(74,144,226,0.25)",
-pointBackgroundColor: "#4A90E2",
-pointBorderColor: "#4A90E2",
-borderWidth: 4
- }]
-},
-options: 
-    responsive: true,
-    plugins: {
-      legend: {
-        display: false
-      }
-    },
-    scales: {
-      r: {
-        beginAtZero: true,
-        ticks: {
-          stepSize: 1
-        }
+  label: "苦手問題数",
+  data: [
+    nervePhysiology,
+    musclePhysiology,
+    circulation,
+    respiration,
+    organ,
+    hormone,
+    digestion,
+    homeostasis
+  ],
+  borderColor: "#4A90E2",
+  backgroundColor: "rgba(74,144,226,0.25)",
+  pointBackgroundColor: "#4A90E2",
+  pointBorderColor: "#4A90E2",
+  borderWidth: 4
+    }]
+  },
+  options: {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false
+    }
+  },
+  scales: {
+    r: {
+      beginAtZero: true,
+      ticks: {
+        stepSize: 1
       }
     }
   }
+}
 });
 </script>

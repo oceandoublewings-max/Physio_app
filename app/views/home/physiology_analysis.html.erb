@@ -1,24 +1,24 @@
 <div style="
   max-width: 700px;
-  margin: 40px auto;
+  margin: 20px auto;
   text-align: center;
 ">
 
   <h1 style="
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 20px;
   ">
-    🫀生理学 苦手分析
+    🫀 生理学 苦手分析
   </h1>
 
   <div id="physiology-box" style="
-     background: white;
-    padding: 12px;
-    border-radius: 20px;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 1.6;
   ">
   </div>
 
@@ -40,36 +40,29 @@ let homeostasis = 0
 
 wrong.forEach(q => {
 
-if(q.category === "生理") physiology++
+  if(q.category === "生理") physiology++
 
   if(q.subcategory === "神経生理") nervePhysiology++
- if(q.subcategory === "筋生理") musclePhysiology++
- if(q.subcategory === "循環") circulation++
- if(q.subcategory === "呼吸") respiration++
- if(q.subcategory === "内臓") organ++
- if(q.subcategory === "ホルモン") hormone++
- if(q.subcategory === "消化") digestion++
- if(q.subcategory === "体温・恒常性") homeostasis++
+  if(q.subcategory === "筋生理") musclePhysiology++
+  if(q.subcategory === "循環") circulation++
+  if(q.subcategory === "呼吸") respiration++
+  if(q.subcategory === "内臓") organ++
+  if(q.subcategory === "ホルモン") hormone++
+  if(q.subcategory === "消化") digestion++
+  if(q.subcategory === "体温・恒常性") homeostasis++
 
 })
 
 document.getElementById("physiology-box").innerHTML = `
 🫀 生理学：${physiology}問<br><br>
 
-🧠 神経生理：${nervePhysiology}問<br><br>
-
-💪 筋生理：${musclePhysiology}問<br><br>
-
-🫀 循環：${circulation}問<br><br>
-
-🫁 呼吸：${respiration}問<br><br>
-
-🩺 内臓：${organ}問<br><br>
-
-🧪 ホルモン：${hormone}問<br><br>
-
-🍚 消化：${digestion}問<br><br>
-
+🧠 神経生理：${nervePhysiology}問<br>
+💪 筋生理：${musclePhysiology}問<br>
+🫀 循環：${circulation}問<br>
+🫁 呼吸：${respiration}問<br>
+🩺 内臓：${organ}問<br>
+🧪 ホルモン：${hormone}問<br>
+🍚 消化：${digestion}問<br>
 🌡️ 体温・恒常性：${homeostasis}問
 `;
 </script>

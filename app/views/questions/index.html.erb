@@ -275,6 +275,18 @@ if (nextBtn && "<%= @question.qtype %>" !== "illustration") {
 
 function goIllustration(addWrong) {
 
+  let score = parseInt(localStorage.getItem("score")) || 0;
+  let total = parseInt(localStorage.getItem("total")) || 0;
+
+  total += 1;
+
+  if (!addWrong) {
+    score += 1;
+  }
+
+  localStorage.setItem("score", score);
+  localStorage.setItem("total", total);
+
   let wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
   if (addWrong) {
@@ -282,17 +294,19 @@ function goIllustration(addWrong) {
     const questionId = <%= @question.id %>;
 
     if (!wrong.some(q => q.id === questionId)) {
-
       wrong.push({
         id: questionId,
         category: "<%= @question.category %>",
         subcategory: "<%= @question.subcategory %>",
         qtype: "<%= @question.qtype %>"
       });
-
-      localStorage.setItem("wrong", JSON.stringify(wrong));
     }
+
+  } else {
+    wrong = wrong.filter(q => q.id !== <%= @question.id %>);
   }
+
+  localStorage.setItem("wrong", JSON.stringify(wrong));
 
   window.location.href =
     "/questions?ids=<%= params[:ids] %>" +
@@ -358,7 +372,7 @@ function goIllustration(addWrong) {
   border-radius:20px;
   text-align:center;
 ">
-  <% unless @qtype == "illustration" %>
+ <% if true %>
 
 <div style="
   background: rgba(255,255,255,0.75);

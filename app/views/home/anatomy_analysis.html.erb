@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <div style="
   max-width: 700px;
   margin: 20px auto;
@@ -5,8 +7,9 @@
 ">
 
   <h1 style="
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 28px;
+  margin-bottom: 16px;
+  margin-top: 8px;
   ">
     🦴 解剖学 苦手分析
   </h1>
@@ -20,6 +23,35 @@
     font-weight: bold;
     line-height: 1.6;
   ">
+  </div>
+
+</div>
+
+<div style="
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+">
+
+  <h2 style="
+    font-size:22px;
+    margin-bottom:20px;
+  ">
+    ⭐ 分野別 苦手度チャート
+  </h2>
+
+  <div style="
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#999;
+    border:2px dashed #ddd;
+    border-radius:12px;
+  ">
+    <canvas id="radarChart"></canvas>
   </div>
 
 </div>
@@ -59,4 +91,45 @@ document.getElementById("anatomy-box").innerHTML = `
 🩸 血管：${vessel}問<br>
 📍 断面・位置関係：${position}問
 `;
+const ctx = document.getElementById("radarChart");
+new Chart(ctx, {
+  type: "radar",
+  data: {
+    labels: [
+      "骨",
+      "筋肉",
+      "神経",
+      "臓器",
+      "血管",
+      "断面"
+    ],
+    datasets: [{
+      label: "苦手問題数",
+      data: [
+        bone,
+        muscle,
+        nerve,
+        organ,
+        vessel,
+        position
+      ]
+      }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      r: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 1
+        }
+      }
+    }
+  }
+});
 </script>

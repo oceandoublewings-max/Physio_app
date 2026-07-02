@@ -7,6 +7,16 @@ class HomeController < ApplicationController
 
 def category
   @category = params[:name]
+
+  category_map = {
+    "解剖学" => "解剖",
+    "生理学" => "生理",
+    "運動学" => "運動"
+  }
+
+  @question_count = Question.where(
+    category: category_map[@category]
+  ).count
 end
 
 def bone

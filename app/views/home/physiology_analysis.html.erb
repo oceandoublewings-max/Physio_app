@@ -1,16 +1,18 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <div style="
   max-width: 700px;
-  margin: 20px auto;
+  margin:5px auto 15px;
   text-align: center;
 ">
 
   <h1 style="
-     font-size: 28px;
-  margin-bottom: 16px;
-  margin-top: 8px;
-  ">
-    🫀 生理学 苦手分析
-  </h1>
+  font-size:24px;
+  margin-top:0;
+  margin-bottom:10px;
+">
+  🫀 生理学 苦手分析
+</h1>
 
   <div id="physiology-box" style="
     background: white;
@@ -26,30 +28,29 @@
 </div>
 
 <div style="
-  margin-top: 20px;
+  margin-top: 12px;
   background: white;
-  padding: 20px;
+  padding: 16px;
   border-radius: 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 ">
 
   <h2 style="
-    font-size:22px;
-    margin-bottom:20px;
-  ">
-    ⭐ 分野別 苦手度チャート
-  </h2>
+  font-size:18px;
+  margin-bottom:10px;
+">
+  ⭐ 分野別 苦手度チャート
+</h2>
 
   <div style="
-    height:300px;
+    height:360px;
     display:flex;
     justify-content:center;
     align-items:center;
     color:#999;
-    border:2px dashed #ddd;
     border-radius:12px;
   ">
-    ここにレーダーチャートが入ります
+    <canvas id="radarChart"></canvas>
   </div>
 
 </div>
@@ -95,4 +96,50 @@ document.getElementById("physiology-box").innerHTML = `
 🍚 消化：${digestion}問<br>
 🌡️ 体温・恒常性：${homeostasis}問
 `;
+const ctx = document.getElementById("radarChart");
+
+new Chart(ctx, {
+  type: "radar",
+  data: {
+    labels: [
+      "神経生理",
+      "筋生理",
+      "循環",
+      "呼吸",
+      "内臓",
+      "ホルモン",
+      "消化",
+      "体温"
+    ],
+    datasets: [{
+      label: "苦手問題数",
+      data: [
+        nervePhysiology,
+        musclePhysiology,
+        circulation,
+        respiration,
+        organ,
+        hormone,
+        digestion,
+        homeostasis
+      ]
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      r: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 1
+        }
+      }
+    }
+  }
+});
 </script>

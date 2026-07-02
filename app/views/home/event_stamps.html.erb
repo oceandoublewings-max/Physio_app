@@ -10,11 +10,29 @@ margin-bottom:30px;
 text-align:center;
 color:#666;
 font-size:15px;
-margin-bottom:30px;
+margin-bottom:20px;
 line-height:1.7;
 ">
 期間限定イベントで獲得できるスタンプ✨
 </p>
+
+<div style="text-align:center; margin-bottom:30px;">
+
+<%= link_to "◀ 🏅 通常スタンプ図鑑へ戻る",
+stamps_path,
+style:"
+display:inline-block;
+padding:12px 24px;
+background:#4caf50;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+font-size:16px;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+" %>
+
+</div>
 
 <hr>
 
@@ -239,22 +257,5 @@ padding:10px;
   </div>
 
 <% end %>
-
-</div>
-
-<div style="text-align:center; margin:50px 0;">
-
-<%= link_to "◀ 🏅 通常スタンプ図鑑へ戻る",
-stamps_path,
-style:"
-display:inline-block;
-padding:12px 24px;
-background:#4caf50;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-font-size:16px;
-" %>
 
 </div>

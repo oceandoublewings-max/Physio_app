@@ -265,11 +265,10 @@ function showAnswer() {
     illustrationButtons.style.display = "block";
   }
 
-  const nextBtn = document.getElementById("next-btn");
+ const nextBtn = document.getElementById("next-btn");
 
-  if (nextBtn) {
-    nextBtn.style.display = "block";
-  }
+if (nextBtn && "<%= @question.qtype %>" !== "illustration") {
+  nextBtn.style.display = "block";
 }
 
 

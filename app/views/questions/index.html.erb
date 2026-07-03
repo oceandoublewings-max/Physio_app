@@ -216,39 +216,39 @@ function checkAnswer(choice) {
 
   let wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
-  if (choice.trim() === correctAnswer.trim()) {
-    score += 1;
+ if (choice.trim() === correctAnswer.trim()) {
+  score += 1;
 
-    wrong = wrong.filter(q => q.id !== Number(questionId));
+  wrong = wrong.filter(q => q.id !== Number(questionId));
 
-    document.getElementById("result").innerHTML =
-      "<span style='color:green;font-weight:bold;'>正解！</span>" +
-      "<div style='background:#e3f2fd;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
-      explanation +
-      "</div>";
+  document.getElementById("result").innerHTML =
+    "<span style='color:green;font-weight:bold;'>正解！</span>" +
+    "<div style='background:#FFF9C4;border:2px solid #FFD54F;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
+    explanation +
+    "</div>";
 
-  } else {
+} else {
 
-    if (!wrong.some(q => q.id === Number(questionId))) {
-      wrong.push({
-        id: Number(questionId),
-        category: "<%= @question.category %>",
-        subcategory: "<%= @question.subcategory %>",
-        qtype: "<%= @question.qtype %>"
-      });
-    }
-
-    const displayAnswer =
-  correctAnswer.trim() === "true" ? "〇" :
-  correctAnswer.trim() === "false" ? "❌" :
-  correctAnswer;
-
-document.getElementById("result").innerHTML =
-  "<span style='color:red;font-weight:bold;'>不正解！ 正解：" + displayAnswer + "</span>" +
-  "<div style='background:#e3f2fd;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
-  explanation +
-  "</div>";
+  if (!wrong.some(q => q.id === Number(questionId))) {
+    wrong.push({
+      id: Number(questionId),
+      category: "<%= @question.category %>",
+      subcategory: "<%= @question.subcategory %>",
+      qtype: "<%= @question.qtype %>"
+    });
   }
+
+  const displayAnswer =
+    correctAnswer.trim() === "true" ? "〇" :
+    correctAnswer.trim() === "false" ? "❌" :
+    correctAnswer;
+
+  document.getElementById("result").innerHTML =
+    "<span style='color:red;font-weight:bold;'>不正解！ 正解： " + displayAnswer + "</span>" +
+    "<div style='background:#FFF9C4;border:2px solid #FFD54F;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
+    explanation +
+    "</div>";
+}
 
   localStorage.setItem("score", score);
   localStorage.setItem("total", "<%= @questions.length %>");

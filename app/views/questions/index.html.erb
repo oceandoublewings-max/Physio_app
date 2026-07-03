@@ -222,7 +222,7 @@ function checkAnswer(choice) {
     wrong = wrong.filter(q => q.id !== Number(questionId));
 
     document.getElementById("result").innerHTML =
-      "<span style='color:green;font-weight:bold;'>⭕ 正解！</span>" +
+      "<span style='color:green;font-weight:bold;'>正解！</span>" +
       "<div style='background:#e3f2fd;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
       explanation +
       "</div>";
@@ -244,7 +244,7 @@ function checkAnswer(choice) {
   correctAnswer;
 
 document.getElementById("result").innerHTML =
-  "<span style='color:red;font-weight:bold;'>❌ 不正解！ 正解： " + displayAnswer + "</span>" +
+  "<span style='color:red;font-weight:bold;'>不正解！ 正解：" + displayAnswer + "</span>" +
   "<div style='background:#e3f2fd;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
   explanation +
   "</div>";

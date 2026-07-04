@@ -1,54 +1,360 @@
-<h1 style="
-  text-align:center;
-  font-size:26px;
-  margin-top:22px;
-  margin-bottom:24px;
-">
-  💪 筋肉資料集
-</h1>
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-<div style="
-  width:82%;
-  max-width:380px;
-  margin:0 auto;
-">
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at 50% 10%, rgba(42, 92, 145, 0.08), transparent 34%),
+      linear-gradient(180deg, #f5f8fc 0%, #ffffff 48%, #f7f9fc 100%);
+    color: #0c2340;
+  }
 
-  <!-- サンプル -->
+  .muscle-library-page {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 18px 18px 30px;
+  }
+
+  /* ===== 上部ヘッダー ===== */
+  .muscle-library-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 22px 22px;
+    margin-bottom: 24px;
+    border-radius: 0 0 30px 30px;
+    background:
+      radial-gradient(circle at 85% 25%, rgba(255,255,255,0.13), transparent 30%),
+      linear-gradient(135deg, #071d3a 0%, #0b3765 58%, #39719e 100%);
+    box-shadow: 0 12px 30px rgba(7, 29, 58, 0.18);
+  }
+
+  .muscle-library-hero::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(214, 154, 50, 0.14);
+    border-radius: 50%;
+    right: -45px;
+    top: -70px;
+  }
+
+  .muscle-library-hero::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    right: 20px;
+    bottom: -65px;
+  }
+
+  .hero-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border: 2px solid #d7a74c;
+    border-radius: 15px;
+    font-size: 25px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .hero-title {
+    margin: 0;
+    color: #ffffff;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-en {
+    margin-top: 5px;
+    color: #e2b45c;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-message {
+    position: relative;
+    z-index: 1;
+    margin: 17px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(226, 180, 92, 0.35);
+    color: rgba(255,255,255,0.82);
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== 見出し ===== */
+  .muscle-library-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin: 0 0 18px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #102b4c;
+  }
+
+  .muscle-library-heading::before,
+  .muscle-library-heading::after {
+    content: "";
+    width: 38px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d69a32);
+  }
+
+  .muscle-library-heading::after {
+    background: linear-gradient(90deg, #d69a32, transparent);
+  }
+
+  /* ===== サンプルカード ===== */
+  .sample-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 92px;
+    overflow: hidden;
+    padding: 14px 48px 14px 16px;
+    margin-bottom: 14px;
+    background: rgba(255,255,255,0.97);
+    border: 1px solid rgba(15, 48, 82, 0.10);
+    border-bottom: 4px solid #d69a32;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #10233d;
+    box-shadow:
+      0 7px 18px rgba(15, 48, 82, 0.08),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+    transition: transform 0.15s ease;
+  }
+
+  .sample-card:active {
+    transform: scale(0.98);
+  }
+
+  .sample-card::after {
+    content: "›";
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-53%);
+    color: #a7b0bb;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .sample-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    border-radius: 50%;
+    font-size: 27px;
+    background: radial-gradient(circle at 35% 30%, #fff3d2, #efb95a);
+    box-shadow: 0 6px 15px rgba(214,154,50,0.24);
+  }
+
+  .sample-name {
+    display: block;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .sample-en {
+    display: block;
+    margin-top: 4px;
+    color: #b37817;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  /* ===== 購入カード ===== */
+  .purchase-card {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 18px;
+    border-radius: 20px;
+    background:
+      radial-gradient(circle at 90% 20%, rgba(255,255,255,0.10), transparent 30%),
+      linear-gradient(135deg, #071d3a 0%, #0b3765 65%, #2e6593 100%);
+    box-shadow: 0 10px 24px rgba(7, 29, 58, 0.18);
+  }
+
+  .purchase-card::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: -45px;
+    bottom: -70px;
+    border: 1px solid rgba(226,180,92,0.18);
+    border-radius: 50%;
+  }
+
+  .purchase-label {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 11px;
+    border: 1px solid rgba(226,180,92,0.55);
+    border-radius: 20px;
+    color: #e2b45c;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+
+  .purchase-title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #ffffff;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .purchase-text {
+    position: relative;
+    z-index: 1;
+    margin: 10px 0 0;
+    color: rgba(255,255,255,0.72);
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .coming-soon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 16px;
+    border: 1px solid rgba(226,180,92,0.55);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    color: #e2b45c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  @media (max-width: 380px) {
+    .muscle-library-page {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    .muscle-library-hero {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .hero-title {
+      font-size: 24px;
+    }
+
+    .sample-name {
+      font-size: 17px;
+    }
+
+    .purchase-title {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<div class="muscle-library-page">
+
+  <section class="muscle-library-hero">
+    <div class="hero-top">
+
+      <div class="hero-icon">💪</div>
+
+      <div>
+        <h1 class="hero-title">筋肉資料集</h1>
+        <div class="hero-en">MUSCLE LIBRARY</div>
+      </div>
+
+    </div>
+
+    <p class="hero-message">
+      筋肉の名称や位置を確認できる国試対策資料です。
+    </p>
+  </section>
+
+  <div class="muscle-library-heading">
+    資料を見る
+  </div>
+
   <a href="/pdfs/muscle/000muscle_sample.pdf"
      target="_blank"
-     style="
-      display:block;
-      text-decoration:none;
-      margin-bottom:14px;
-     ">
-    <div style="
-      background:#4CAF50;
-      color:white;
-      padding:13px;
-      border-radius:12px;
-      text-align:center;
-      font-size:18px;
-      font-weight:bold;
-      box-shadow:0 2px 6px rgba(0,0,0,.15);
-    ">
-      📄 サンプルを見る
+     class="sample-card">
+
+    <div class="sample-icon">📄</div>
+
+    <div>
+      <span class="sample-name">サンプルを見る</span>
+      <span class="sample-en">VIEW SAMPLE</span>
     </div>
+
   </a>
 
-  <!-- 購入・ダウンロード -->
-  <div style="
-    background:#fff8e1;
-    border:1px solid #f0d98a;
-    border-radius:12px;
-    padding:16px;
-  ">
-    <h2 style="
-      text-align:center;
-      margin:0;
-      font-size:20px;
-    ">
-      💰 購入・ダウンロード
+  <div class="purchase-card">
+
+    <div class="purchase-label">
+      FULL VERSION
+    </div>
+
+    <h2 class="purchase-title">
+      <span>💰</span>
+      <span>購入・ダウンロード</span>
     </h2>
+
+    <p class="purchase-text">
+      完全版の資料はこちらからダウンロードできます。
+    </p>
+
+    <div class="coming-soon">
+      COMING SOON
+    </div>
+
   </div>
 
 </div>

@@ -1,316 +1,766 @@
-<div style="
-padding:5px 15px;
-max-width:800px;
-margin:auto;
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-background-image:url('/images/top/f_top.png');
-background-size:80%;
-background-position:center center;
-background-repeat:no-repeat;
-">
+  body {
+    margin: 0;
+    background: #eef3f9;
+    color: #102847;
+  }
 
-<h1 style="
-text-align:center;
-margin:5px 0;
-font-size:24px;
-white-space:nowrap;
-">
-  PT 国試対策（1.2年生）
-</h1>
+  .top-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: #f8fbff;
+  }
 
-問題数: <%= Question.count %>
-<%= Rails.env %>
+  /* =========================
+     上部ヒーロー
+  ========================= */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 245px;
+    padding: 24px 22px 20px;
+    color: white;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 30, 66, 0.98) 0%,
+        rgba(6, 42, 87, 0.95) 48%,
+        rgba(7, 55, 105, 0.75) 100%
+      ),
+      url('/images/top/f_top.png');
 
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 28px 28px;
+  }
 
-<p style="text-align:center; font-size:13px; color:#666; margin:2px 0;">
-  <span style="color:#ff6600; font-weight:bold;">🆕</span>
-  2026.06.03 骨イラスト追加
-</p>
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        120deg,
+        transparent 55%,
+        rgba(255,255,255,0.08) 55.5%,
+        transparent 56%
+      );
+  }
 
-<p style="text-align:center; font-size:13px; color:#666; margin:2px 0;">
-  <span style="color:#ff6600; font-weight:bold;">🆕</span>
-  2026.06.02 神経血管イラスト追加
-</p>
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
 
+  .hero-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
+  .hero-mark {
+    width: 42px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d7b85e;
+    border-radius: 8px 8px 14px 14px;
+    color: #e8cd7b;
+    font-size: 22px;
+    background: rgba(0,0,0,0.18);
+  }
 
-<h2 style="margin-top:3px; margin-bottom:6px; text-align:center; font-size:18px;">
-  分野を選んでください
-</h2>
-
-
-<!-- 解剖 -->
-<a href="/category?name=解剖学" style="text-decoration:none;">
-  <div style="
-    border: 1px solid #ccc;
-    background: white;
-    color: black;
-    padding: 4px 10px;
-    width:82%;
+  .hero-title {
+    margin: 0;
+    color: white;
+    font-family: serif;
+    font-size: clamp(24px, 6vw, 38px);
+    letter-spacing: 0.04em;
     white-space: nowrap;
-    margin: 0 auto 4px auto;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 24px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  ">
-    🦴 解剖学
-  </div>
-</a>
+  }
 
-<!-- 生理 -->
-<a href="/category?name=生理学" style="text-decoration:none;">
-  <div style="
-    border: 1px solid #ccc;
-    background: white;
-    color: black;
-    padding: 4px 8px;
-    width:82%;
+  .grade-badge {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 3px 9px;
+    border: 1px solid #d8b963;
+    border-radius: 7px;
+    color: #f1d98d;
+    font-size: 12px;
+    vertical-align: middle;
     white-space: nowrap;
-    margin: 0 auto 4px auto;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 24px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  ">
-    🫀 生理学
-  </div>
-</a>
+  }
 
-<!-- 運動 -->
-<a href="/category?name=運動学" style="text-decoration:none;">
-  <div style="
-    border: 1px solid #ccc;
+  .hero-subtitle {
+    margin: 3px 0 0 53px;
+    color: #d8bd73;
+    font-size: 9px;
+    letter-spacing: 0.17em;
+  }
+
+  .question-count {
+    margin-top: 25px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: #f0d27d;
+  }
+
+  .question-count-label {
+    font-size: 16px;
+  }
+
+  .question-count-number {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 11vw, 62px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .question-count-unit {
+    font-size: 16px;
+  }
+
+  .hero-status {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #e8f1ff;
+  }
+
+  .hero-status-icon {
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .news-list {
+    margin-top: 18px;
+  }
+
+  .news-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 7px;
+    font-size: 13px;
+    color: white;
+  }
+
+  .new-badge {
+    min-width: 42px;
+    padding: 3px 6px;
+    text-align: center;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #2985e8, #1762bd);
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+  }
+
+  /* =========================
+     共通セクション
+  ========================= */
+  .page-content {
+    padding: 24px 14px 20px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 22px;
+    color: #18283f;
+    font-family: serif;
+    font-size: clamp(20px, 5vw, 28px);
+    letter-spacing: 0.06em;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    content: "";
+    width: 42px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a94f);
+  }
+
+  .section-title::after {
+    background: linear-gradient(90deg, #c9a94f, transparent);
+  }
+
+  /* =========================
+     分野カード
+  ========================= */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    padding: 20px 4px 17px;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
     background: white;
-    color: black;
-    padding: 4px 8px;
-    width:82%;
+    border: 1px solid #e7ebf0;
+    border-radius: 17px;
+    box-shadow: 0 7px 18px rgba(17, 45, 80, 0.10);
+  }
+
+  .category-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 7px;
+  }
+
+  .category-card.anatomy::after {
+    background: linear-gradient(90deg, #c6982d, #f4df91, #bd8420);
+  }
+
+  .category-card.physiology::after {
+    background: linear-gradient(90deg, #ba151f, #ff6d68, #b80f18);
+  }
+
+  .category-card.kinesiology::after {
+    background: linear-gradient(90deg, #1548a6, #5795f3, #153d94);
+  }
+
+  .category-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 36px;
+    box-shadow:
+      inset 0 2px 4px rgba(255,255,255,0.8),
+      0 5px 12px rgba(0,0,0,0.13);
+  }
+
+  .anatomy .category-icon {
+    background: linear-gradient(145deg, #fff7dc, #d8b656);
+  }
+
+  .physiology .category-icon {
+    background: linear-gradient(145deg, #ffb2ae, #e84343);
+  }
+
+  .kinesiology .category-icon {
+    background: linear-gradient(145deg, #79b2f5, #2363bf);
+  }
+
+  .category-name {
+    margin: 0;
+    font-family: serif;
+    font-size: clamp(20px, 5.2vw, 29px);
     white-space: nowrap;
-    margin: 0 auto 4px auto;
+  }
+
+  .category-en {
+    margin-top: 5px;
+    font-family: Georgia, serif;
+    font-size: clamp(8px, 2.3vw, 12px);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .anatomy .category-en {
+    color: #b18a32;
+  }
+
+  .physiology .category-en {
+    color: #c23b3b;
+  }
+
+  .kinesiology .category-en {
+    color: #285eae;
+  }
+
+  /* =========================
+     苦手問題分析
+  ========================= */
+  .analysis-section {
+    margin-top: 28px;
+    padding: 20px 12px 18px;
+    background:
+      linear-gradient(145deg, rgba(255,255,255,0.95), rgba(234,244,255,0.95));
+    border: 1px solid #d3e2f1;
+    border-radius: 24px;
+    box-shadow: 0 5px 18px rgba(29, 66, 108, 0.09);
+  }
+
+  .analysis-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    color: #15375e;
+    font-family: serif;
+    font-size: clamp(21px, 5.5vw, 29px);
+  }
+
+  .analysis-heading::before,
+  .analysis-heading::after {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: #aebdce;
+  }
+
+  .analysis-subtitle {
+    margin: 8px 0 17px;
     text-align: center;
-    border-radius: 10px;
+    color: #66778b;
+    font-size: 12px;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .analysis-card {
+    min-width: 0;
+    padding: 12px 4px 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #172438;
+    background: white;
+    border: 1px solid #e1e7ee;
+    border-radius: 13px;
+    box-shadow: 0 3px 10px rgba(27, 54, 85, 0.07);
+  }
+
+  .analysis-label {
+    font-size: clamp(12px, 3.3vw, 16px);
     font-weight: bold;
-    font-size: 24px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  ">
-    🏃 運動学
-  </div>
-</a>
+    white-space: nowrap;
+  }
+
+  .analysis-number {
+    margin-top: 6px;
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 8vw, 42px);
+    line-height: 1;
+  }
+
+  .analysis-number small {
+    margin-left: 2px;
+    font-family: serif;
+    font-size: 13px;
+  }
+
+  .mini-bar {
+    height: 5px;
+    margin: 11px 8px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #edf0f4;
+  }
+
+  .mini-bar-fill {
+    height: 100%;
+    width: 55%;
+    border-radius: 20px;
+  }
+
+  .bar-anatomy {
+    background: linear-gradient(90deg, #b88b2b, #efd579);
+  }
+
+  .bar-physiology {
+    background: linear-gradient(90deg, #b91722, #ff7770);
+  }
+
+  .bar-kinesiology {
+    background: linear-gradient(90deg, #1d51ad, #69a1ef);
+  }
+
+  .wrong-all-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 13px;
+    color: white;
+    background: linear-gradient(100deg, #1476dc, #6243e8);
+    box-shadow: 0 6px 15px rgba(65, 77, 213, 0.22);
+    font-family: serif;
+    font-size: clamp(17px, 4.7vw, 23px);
+    cursor: pointer;
+  }
+
+  .wrong-all-note {
+    margin: 8px 0 0;
+    text-align: center;
+    color: #778493;
+    font-size: 11px;
+  }
+
+  /* =========================
+     下部リンク
+  ========================= */
+  .bottom-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 28px;
+    padding: 5px 0 8px;
+  }
+
+  .bottom-link {
+    min-width: 0;
+    padding: 5px 3px;
+    text-align: center;
+    text-decoration: none;
+    color: #173251;
+    border-right: 1px solid #d7dde5;
+  }
+
+  .bottom-link:last-child {
+    border-right: none;
+  }
+
+  .bottom-icon {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 31px;
+  }
+
+  .bottom-title {
+    display: block;
+    font-family: serif;
+    font-size: clamp(16px, 4.5vw, 22px);
+    white-space: nowrap;
+  }
+
+  .bottom-note {
+    display: block;
+    margin-top: 4px;
+    color: #7c8795;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 380px) {
+    .page-content {
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+
+    .category-grid {
+      gap: 6px;
+    }
+
+    .category-icon {
+      width: 62px;
+      height: 62px;
+      font-size: 31px;
+    }
+
+    .analysis-section {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .analysis-grid {
+      gap: 5px;
+    }
+  }
+</style>
 
 
-<div id="analysis-box"
-style="
-margin-top:4px;
-padding:8px;
-background:rgba(240,248,255,0.78);
-border-radius:20px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.06);
-font-weight:bold;
-line-height:1.4;
-">
+<div class="top-page">
+
+  <!-- =========================
+       上部
+  ========================= -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-title-row">
+        <div class="hero-mark">⚕</div>
+
+        <h1 class="hero-title">
+          PT 国試対策
+          <span class="grade-badge">1.2年生</span>
+        </h1>
+      </div>
+
+      <p class="hero-subtitle">
+        PHYSICAL THERAPIST NATIONAL EXAM PREP
+      </p>
+
+      <div class="question-count">
+        <span class="question-count-label">問題数</span>
+        <span class="question-count-number"><%= number_with_delimiter(Question.count) %></span>
+        <span class="question-count-unit">問</span>
+      </div>
+
+      <div class="hero-status">
+        <span class="hero-status-icon">✓</span>
+        苦手問題機能は現在調整中です
+      </div>
+
+      <div class="news-list">
+
+        <div class="news-item">
+          <span class="new-badge">NEW</span>
+          <span>2026.06.03 骨イラスト追加</span>
+        </div>
+
+        <div class="news-item">
+          <span class="new-badge">NEW</span>
+          <span>2026.06.02 神経血管イラスト追加</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main class="page-content">
+
+    <!-- =========================
+         分野選択
+    ========================= -->
+    <h2 class="section-title">
+      分野を選んでください
+    </h2>
+
+    <div class="category-grid">
+
+      <a href="/category?name=解剖学"
+         class="category-card anatomy">
+
+        <div class="category-icon">🦴</div>
+
+        <h3 class="category-name">解剖学</h3>
+
+        <div class="category-en">
+          ANATOMY
+        </div>
+
+      </a>
+
+
+      <a href="/category?name=生理学"
+         class="category-card physiology">
+
+        <div class="category-icon">🫀</div>
+
+        <h3 class="category-name">生理学</h3>
+
+        <div class="category-en">
+          PHYSIOLOGY
+        </div>
+
+      </a>
+
+
+      <a href="/category?name=運動学"
+         class="category-card kinesiology">
+
+        <div class="category-icon">🏃</div>
+
+        <h3 class="category-name">運動学</h3>
+
+        <div class="category-en">
+          KINESIOLOGY
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <!-- =========================
+         苦手問題分析
+    ========================= -->
+    <section class="analysis-section">
+
+      <h2 class="analysis-heading">
+        🔥 苦手問題分析
+      </h2>
+
+      <p class="analysis-subtitle">
+        苦手を「見える化」して、効率的に克服しよう
+      </p>
+
+      <div id="analysis-box"></div>
+
+    </section>
+
+
+    <!-- =========================
+         下部リンク
+    ========================= -->
+    <div class="bottom-links">
+
+      <%= link_to "/materials", class: "bottom-link" do %>
+        <span class="bottom-icon">📚</span>
+        <span class="bottom-title">参考資料</span>
+        <span class="bottom-note">重要ポイントを整理</span>
+      <% end %>
+
+
+      <%= link_to "/stamps", class: "bottom-link" do %>
+        <span class="bottom-icon">🏅</span>
+        <span class="bottom-title">図鑑</span>
+        <span class="bottom-note">イラストで理解を深める</span>
+      <% end %>
+
+
+      <%= link_to "/contact", class: "bottom-link" do %>
+        <span class="bottom-icon">✉️</span>
+        <span class="bottom-title">問合せ</span>
+        <span class="bottom-note">サポートに連絡する</span>
+      <% end %>
+
+    </div>
+
+  </main>
+
 </div>
 
-</div>
 
 <script>
-function goWrong(category) {
   const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
- const currentQtype = "true_false";
+  let anatomy = 0;
+  let physiology = 0;
+  let kinesiology = 0;
 
-  console.log(currentQtype);
-  console.log(wrong);
+  wrong.forEach(q => {
+    if (q.category === "解剖") anatomy++;
+    if (q.category === "生理") physiology++;
+    if (q.category === "運動") kinesiology++;
+  });
 
-const filtered = wrong.filter(q =>
-  q.category === category &&
-  q.qtype === currentQtype &&
-  q.qtype !== "illustration"
-).map(q => q.id);
 
-  console.log(filtered);
-  
- if (filtered.length === 0) {
-  alert("苦手問題はありません");
-  return;
-}
+  document.getElementById("analysis-box").innerHTML = `
 
-window.location.href =
-"/select?mode=wrong" +
-"&ids=" + encodeURIComponent(filtered.join(",")) +
-"&category=" + encodeURIComponent(category) +
-"&qtype=" + encodeURIComponent(currentQtype) +
-"&count=" + count +
-"&index=0";
+    <div class="analysis-grid">
+
+      <a href="/anatomy_analysis"
+         class="analysis-card">
+
+        <div class="analysis-label">
+          🦴 解剖学
+        </div>
+
+        <div class="analysis-number">
+          ${anatomy}<small>問</small>
+        </div>
+
+        <div class="mini-bar">
+          <div class="mini-bar-fill bar-anatomy"></div>
+        </div>
+
+      </a>
+
+
+      <a href="/physiology_analysis"
+         class="analysis-card">
+
+        <div class="analysis-label">
+          🫀 生理学
+        </div>
+
+        <div class="analysis-number">
+          ${physiology}<small>問</small>
+        </div>
+
+        <div class="mini-bar">
+          <div class="mini-bar-fill bar-physiology"></div>
+        </div>
+
+      </a>
+
+
+      <a href="/kinesiology_analysis"
+         class="analysis-card">
+
+        <div class="analysis-label">
+          🏃 運動学
+        </div>
+
+        <div class="analysis-number">
+          ${kinesiology}<small>問</small>
+        </div>
+
+        <div class="mini-bar">
+          <div class="mini-bar-fill bar-kinesiology"></div>
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <button
+      type="button"
+      class="wrong-all-button"
+      onclick="goWrongAll()">
+
+      🔥 苦手問題（全範囲） 〉
+
+    </button>
+
+    <p class="wrong-all-note">
+      全分野の苦手問題をまとめて解く
+    </p>
+  `;
+
+
+  function goWrongAll() {
+
+    const wrong =
+      JSON.parse(localStorage.getItem("wrong")) || [];
+
+    const filtered =
+      wrong.map(q => q.id);
+
+    if (filtered.length === 0) {
+      alert("苦手問題はありません");
+      return;
+    }
+
+    window.location.href =
+      "/select?mode=wrong" +
+      "&ids=" + encodeURIComponent(filtered.join(",")) +
+      "&category=all";
+  }
 </script>
-
-<script>
-const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
-
-let anatomy = 0
-let physiology = 0
-let kinesiology = 0
-
-let bone = 0
-let muscle = 0
-let nerve = 0
-let organ = 0
-let vessel = 0
-let position = 0
-
-
-wrong.forEach(q => {
-  if (q.category === "解剖") anatomy++
-  if (q.category === "生理") physiology++
-  if (q.category === "運動") kinesiology++
-
-  if (q.subcategory === "骨") bone++
-  if (q.subcategory === "筋肉") muscle++
-  if(q.subcategory === "神経") nerve++
-  if(q.subcategory === "臓器") organ++
-  if(q.subcategory === "血管") vessel++
-  if(q.subcategory === "断面・位置関係") position++
-})
-
-document.getElementById("analysis-box").innerHTML = `
-<h3 style="
-font-size:20px;
-margin-bottom:20px;
-">
-🔥 苦手問題分析
-</h3>
-
-<div style="
-display:flex;
-justify-content:space-around;
-gap:10px;
-margin-top:20px;
-">
-
-<a href="/anatomy_analysis"
-style="
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:white;
-padding:8px;
-border-radius:6px;
-margin-bottom:4px;
-text-decoration:underline;
-color:black;
-font-size:16px;
-font-weight:600;
-box-shadow:none;
-width:26%
-">
-🦴 解剖<br>${anatomy}問
-</a>
-
-<a href="/physiology_analysis"
-style="
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:white;
-padding:8px;
-border-radius:6px;
-margin-bottom:4px;
-text-decoration:underline;
-color:black;
-font-size:16px;
-font-weight:600;
-box-shadow:none;
-width:26%
-">
-🫀 生理<br>${physiology}問
-</a>
-
-<a href="/kinesiology_analysis"
-style="
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:white;
-padding:8px;
-border-radius:6px;
-margin-bottom:4px;
-text-decoration:underline;
-color:black;
-font-size:16px;
-font-weight:600;
-box-shadow:none;
-width:26%
-">
-🏃 運動<br>${kinesiology}問
-</a>
-
-</div>
-
-
-<!-- 苦手問題（全範囲） -->
-<a href="javascript:void(0)"
-   onclick="goWrongAll()"
-   style="text-decoration:none;">
-  <div style="
-    background:#ff6b6b;
-    color:white;
-    padding:10px;
-
-    width:80%;
-    max-width:700px;
-
-    margin:10px auto 0 auto;
-
-    text-align:center;
-    border-radius:8px;
-    font-weight:bold;
-  ">
-    🔥 苦手問題（全範囲）
-  </div>
-</a>
-`;
-
-console.log("OK")
-
-function goWrongAll() {
-
-  const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
-
-  const filtered = wrong.map(q => q.id);
-
-  if (filtered.length === 0) {
-  alert("苦手問題はありません");
-  return;
-}
-
-  window.location.href =
-    "/select?mode=wrong" +
-    "&ids=" + encodeURIComponent(filtered.join(",")) +
-    "&category=all";
-}
-
-</script>
-
-
-<div style="
-  margin-top: 20px;
-  padding-top: 12px;
-  border-top: 1px solid #ddd;
-  text-align: center;
-">
-
-<%= link_to "📚 参考資料", "/materials",
-  style: "color:#2e7d32; margin:0 8px; text-decoration:underline; font-weight:bold; font-size:18px;" %>
-
-<%= link_to "🏅 図鑑", "/stamps",
-  style: "color:#d4a017; margin:0 8px; text-decoration:underline; font-weight:bold; font-size:18px;" %>
-
-<%= link_to "✉️ 問合せ", "/contact",
-  style: "color:#777; margin:0 8px; text-decoration:underline; font-weight:bold; font-size:18px;" %>
-
-</div>

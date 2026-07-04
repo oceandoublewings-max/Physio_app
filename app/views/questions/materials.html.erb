@@ -1,55 +1,359 @@
 <style>
-.pdf-card{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:72%;
-  max-width:340px;
-  height:58px;
-  box-sizing:border-box;
-  margin:10px auto;
-  padding:0 8px;
-  background:#fff;
-  border:1px solid #ddd;
-  border-radius:10px;
-  text-decoration:none;
-  color:#000;
-  text-align:center;
-  font-size:17px;
-  font-weight:bold;
-  box-shadow:0 1px 4px rgba(0,0,0,.06);
-}
+  * {
+    box-sizing: border-box;
+  }
 
-.pdf-card:hover{
-  background:#f7f7f7;
-}
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at 50% 10%, rgba(42, 92, 145, 0.08), transparent 34%),
+      linear-gradient(180deg, #f5f8fc 0%, #ffffff 48%, #f7f9fc 100%);
+    color: #0c2340;
+  }
+
+  .materials-page {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 18px 18px 30px;
+  }
+
+  /* ===== 上部タイトル ===== */
+  .materials-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 22px 22px;
+    margin-bottom: 22px;
+    border-radius: 0 0 30px 30px;
+    background:
+      radial-gradient(circle at 85% 25%, rgba(255,255,255,0.13), transparent 30%),
+      linear-gradient(135deg, #071d3a 0%, #0b3765 58%, #39719e 100%);
+    box-shadow: 0 12px 30px rgba(7, 29, 58, 0.18);
+  }
+
+  .materials-hero::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(212, 177, 82, 0.12);
+    border-radius: 50%;
+    right: -45px;
+    top: -70px;
+  }
+
+  .materials-hero::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    right: 20px;
+    bottom: -65px;
+  }
+
+  .hero-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border: 2px solid #d7b75c;
+    border-radius: 15px;
+    font-size: 25px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .hero-title {
+    margin: 0;
+    color: #ffffff;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-en {
+    margin-top: 5px;
+    color: #d7b75c;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-message {
+    position: relative;
+    z-index: 1;
+    margin: 17px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(215, 183, 92, 0.35);
+    color: rgba(255,255,255,0.82);
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== 見出し ===== */
+  .materials-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin: 0 0 17px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #102b4c;
+  }
+
+  .materials-heading::before,
+  .materials-heading::after {
+    content: "";
+    width: 38px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c7a94d);
+  }
+
+  .materials-heading::after {
+    background: linear-gradient(90deg, #c7a94d, transparent);
+  }
+
+  /* ===== カード ===== */
+  .materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .material-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 76px;
+    overflow: hidden;
+    padding: 10px 48px 10px 14px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(15, 48, 82, 0.10);
+    border-radius: 18px;
+    text-decoration: none;
+    color: #10233d;
+    box-shadow:
+      0 7px 18px rgba(15, 48, 82, 0.07),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .material-card:active {
+    transform: scale(0.98);
+  }
+
+  .material-card::after {
+    content: "›";
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-53%);
+    color: #a7b0bb;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .material-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    border-radius: 50%;
+    font-size: 26px;
+  }
+
+  .material-text {
+    min-width: 0;
+  }
+
+  .material-name {
+    display: block;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .material-en {
+    display: block;
+    margin-top: 3px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+  }
+
+  /* ===== 分野カラー ===== */
+  .bone-card {
+    border-bottom: 4px solid #d4b13e;
+  }
+
+  .bone-card .material-icon {
+    background: radial-gradient(circle at 35% 30%, #fff9dc, #efd26c);
+    box-shadow: 0 6px 15px rgba(212,177,62,0.24);
+  }
+
+  .bone-card .material-en {
+    color: #a98722;
+  }
+
+  .muscle-card {
+    border-bottom: 4px solid #d69a32;
+  }
+
+  .muscle-card .material-icon {
+    background: radial-gradient(circle at 35% 30%, #fff3d2, #efb95a);
+    box-shadow: 0 6px 15px rgba(214,154,50,0.24);
+  }
+
+  .muscle-card .material-en {
+    color: #b37817;
+  }
+
+  .neuro-card {
+    border-bottom: 4px solid #a93c3c;
+  }
+
+  .neuro-card .material-icon {
+    background: radial-gradient(circle at 35% 30%, #ffe3e3, #d86a6a);
+    box-shadow: 0 6px 15px rgba(169,60,60,0.22);
+  }
+
+  .neuro-card .material-en {
+    color: #a93c3c;
+  }
+
+  .physiology-card {
+    border-bottom: 4px solid #d62f43;
+  }
+
+  .physiology-card .material-icon {
+    background: radial-gradient(circle at 35% 30%, #ffdfe4, #ef6f7d);
+    box-shadow: 0 6px 15px rgba(214,47,67,0.22);
+  }
+
+  .physiology-card .material-en {
+    color: #c5293c;
+  }
+
+  .kinesiology-card {
+    border-bottom: 4px solid #286dc5;
+  }
+
+  .kinesiology-card .material-icon {
+    background: radial-gradient(circle at 35% 30%, #ddecff, #5597e8);
+    box-shadow: 0 6px 15px rgba(40,109,197,0.22);
+  }
+
+  .kinesiology-card .material-en {
+    color: #286dc5;
+  }
+
+  @media (max-width: 380px) {
+    .materials-page {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    .materials-hero {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .hero-title {
+      font-size: 24px;
+    }
+
+    .material-name {
+      font-size: 16px;
+    }
+  }
 </style>
 
-<h1 style="
-  text-align:center;
-  font-size:22px;
-  margin-top:18px;
-  margin-bottom:18px;
-">
-  📚 参考資料
-</h1>
+<div class="materials-page">
 
-<a href="/bone_pdfs" class="pdf-card">
-  🦴 骨資料集
-</a>
+  <section class="materials-hero">
+    <div class="hero-top">
+      <div class="hero-icon">📚</div>
 
-<a href="/muscle_pdfs" class="pdf-card">
-  💪 筋肉資料集
-</a>
+      <div>
+        <h1 class="hero-title">参考資料</h1>
+        <div class="hero-en">REFERENCE LIBRARY</div>
+      </div>
+    </div>
 
-<a href="/neurovascular_pdfs" class="pdf-card" style="font-size:16px;">
-  🩸 神経・血管資料集
-</a>
+    <p class="hero-message">
+      国試対策に使える資料を分野別にまとめています。
+    </p>
+  </section>
 
-<a href="/physiology_pdfs" class="pdf-card">
-  🫀 生理学資料集
-</a>
+  <div class="materials-heading">
+    資料を選んでください
+  </div>
 
-<a href="/kinesiology_pdfs" class="pdf-card">
-  🏃 運動学資料集
-</a>
+  <div class="materials-list">
+
+    <a href="/bone_pdfs" class="material-card bone-card">
+      <div class="material-icon">🦴</div>
+      <div class="material-text">
+        <span class="material-name">骨資料集</span>
+        <span class="material-en">BONE LIBRARY</span>
+      </div>
+    </a>
+
+    <a href="/muscle_pdfs" class="material-card muscle-card">
+      <div class="material-icon">💪</div>
+      <div class="material-text">
+        <span class="material-name">筋肉資料集</span>
+        <span class="material-en">MUSCLE LIBRARY</span>
+      </div>
+    </a>
+
+    <a href="/neurovascular_pdfs" class="material-card neuro-card">
+      <div class="material-icon">🩸</div>
+      <div class="material-text">
+        <span class="material-name">神経・血管資料集</span>
+        <span class="material-en">NEUROVASCULAR LIBRARY</span>
+      </div>
+    </a>
+
+    <a href="/physiology_pdfs" class="material-card physiology-card">
+      <div class="material-icon">🫀</div>
+      <div class="material-text">
+        <span class="material-name">生理学資料集</span>
+        <span class="material-en">PHYSIOLOGY LIBRARY</span>
+      </div>
+    </a>
+
+    <a href="/kinesiology_pdfs" class="material-card kinesiology-card">
+      <div class="material-icon">🏃</div>
+      <div class="material-text">
+        <span class="material-name">運動学資料集</span>
+        <span class="material-en">KINESIOLOGY LIBRARY</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>

@@ -1,86 +1,468 @@
-<div style="display:flex; justify-content:center; gap:15px; align-items:center; margin-bottom:20px;">
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-  <% icon =
-  case @category
-  when "解剖学"
-    "🦴"
-  when "生理学"
-    "🫀"
-  when "運動学"
-    "🏃"
-  else
-    "📘"
-  end
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(25, 76, 130, 0.05), transparent 38%),
+      #f5f8fc;
+    color: #0b2343;
+  }
+
+  .category-page {
+    width: min(92%, 520px);
+    margin: 0 auto;
+    padding: 22px 0 45px;
+  }
+
+  /* =========================
+     分野ヘッダー
+  ========================= */
+  .category-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 28px 28px;
+    padding: 24px 22px 26px;
+    margin-bottom: 26px;
+    background:
+      radial-gradient(circle at 88% 18%, rgba(255,255,255,0.13), transparent 32%),
+      linear-gradient(135deg, #082548 0%, #0d3a69 58%, #174f82 100%);
+    box-shadow: 0 12px 30px rgba(9, 40, 77, 0.16);
+  }
+
+  .category-hero::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    right: -70px;
+    top: -80px;
+  }
+
+  .category-hero::after {
+    content: "";
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+    right: 12px;
+    bottom: -90px;
+  }
+
+  .hero-top-row {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .category-label {
+    margin: 0;
+    color: rgba(255,255,255,0.72);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+
+  .top-link {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #f0d58c;
+    border: 1px solid rgba(232, 201, 118, 0.65);
+    border-radius: 999px;
+    padding: 7px 13px;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .category-title-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 15px;
+  }
+
+  .category-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 26px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(236, 207, 132, 0.55);
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.05);
+  }
+
+  .category-title {
+    margin: 0;
+    color: #fff;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .category-en {
+    margin: 3px 0 0;
+    color: #e8ca7d;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-count {
+    position: relative;
+    z-index: 2;
+    margin: 18px 0 0;
+    color: rgba(255,255,255,0.82);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-count strong {
+    color: #f0d58c;
+    font-family: Georgia, "Yu Mincho", serif;
+    font-size: 25px;
+    margin: 0 4px;
+    font-weight: 500;
+  }
+
+  /* =========================
+     見出し
+  ========================= */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 0 18px;
+    color: #102b4d;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .section-heading::before,
+  .section-heading::after {
+    content: "";
+    width: 38px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a84f);
+  }
+
+  .section-heading::after {
+    background: linear-gradient(90deg, #c9a84f, transparent);
+  }
+
+  /* =========================
+     学習方法カード
+  ========================= */
+  .study-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .study-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .study-card {
+    position: relative;
+    min-height: 130px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    border: 1px solid #e3e9f0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow:
+      0 8px 20px rgba(20, 52, 88, 0.09),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+  }
+
+  .study-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #b58a27, #f1d985, #b58a27);
+  }
+
+  .study-card:active {
+    transform: scale(0.98);
+  }
+
+  .study-icon {
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fff7d8, #ecd084);
+    box-shadow: 0 6px 15px rgba(180, 137, 37, 0.2);
+    font-size: 28px;
+  }
+
+  .study-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .study-title {
+    display: block;
+    color: #102b4d;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .study-en {
+    display: block;
+    margin-top: 5px;
+    color: #a78537;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .study-description {
+    display: block;
+    margin-top: 8px;
+    color: #788596;
+    font-size: 11px;
+  }
+
+  .study-arrow {
+    flex-shrink: 0;
+    color: #b38b32;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  /* 苦手復習だけ少し特別感 */
+  .wrong-card {
+    border-color: #d8e3ef;
+    background:
+      radial-gradient(circle at 90% 20%, rgba(44, 119, 209, 0.08), transparent 35%),
+      #fff;
+  }
+
+  .wrong-icon {
+    background: linear-gradient(145deg, #edf7ff, #b8dcff);
+    box-shadow: 0 6px 15px rgba(38, 119, 211, 0.16);
+  }
+
+  .wrong-card::after {
+    background: linear-gradient(90deg, #176ec7, #65b5ff, #6643e8);
+  }
+
+  .wrong-card .study-en {
+    color: #3979bd;
+  }
+
+  .wrong-card .study-arrow {
+    color: #357ac3;
+  }
+
+  @media (max-width: 390px) {
+    .category-page {
+      width: 94%;
+      padding-top: 14px;
+    }
+
+    .category-hero {
+      padding: 20px 18px 22px;
+    }
+
+    .category-title {
+      font-size: 27px;
+    }
+
+    .study-card {
+      min-height: 120px;
+      padding: 17px 16px;
+      gap: 14px;
+    }
+
+    .study-icon {
+      width: 55px;
+      height: 55px;
+      font-size: 25px;
+    }
+
+    .study-title {
+      font-size: 19px;
+    }
+  }
+</style>
+
+<%
+  icon =
+    case @category
+    when "解剖学"
+      "🦴"
+    when "生理学"
+      "🫀"
+    when "運動学"
+      "🏃"
+    else
+      "📘"
+    end
+
+  category_en =
+    case @category
+    when "解剖学"
+      "ANATOMY"
+    when "生理学"
+      "PHYSIOLOGY"
+    when "運動学"
+      "KINESIOLOGY"
+    else
+      "NATIONAL EXAM PREP"
+    end
 %>
 
-<h1 style="margin:0;">
-  <%= icon %> <%= @category %>
-  <span style="font-size:0.5em; color:#777; font-weight:normal;">
-    （<%= number_with_delimiter(@question_count) %>問）
-  </span>
-</h1>
+<div class="category-page">
 
-  <a href="/"
-    style="
-      text-decoration:none;
-      background:#dcdcdc;
-      color:#555;
-      padding:8px 14px;
-      border-radius:8px;
-      font-size:14px;
-      font-weight:bold;
-    ">
-    ←TOP
-  </a>
+  <section class="category-hero">
+
+    <div class="hero-top-row">
+      <p class="category-label">
+        PT NATIONAL EXAM PREP
+      </p>
+
+      <a href="/" class="top-link">
+        ← TOP
+      </a>
+    </div>
+
+    <div class="category-title-wrap">
+
+      <div class="category-icon">
+        <%= icon %>
+      </div>
+
+      <div>
+        <h1 class="category-title">
+          <%= @category %>
+        </h1>
+
+        <p class="category-en">
+          <%= category_en %>
+        </p>
+      </div>
+
+    </div>
+
+    <p class="hero-count">
+      収録問題数
+      <strong><%= number_with_delimiter(@question_count) %></strong>
+      問
+    </p>
+
+  </section>
+
+
+  <h2 class="section-heading">
+    学習方法を選択
+  </h2>
+
+
+  <div class="study-cards">
+
+    <!-- 全問挑戦 -->
+    <a
+      href="/select?category=<%= @category %>&index=0"
+      class="study-link"
+    >
+      <div class="study-card">
+
+        <div class="study-icon">
+          📖
+        </div>
+
+        <div class="study-text">
+          <span class="study-title">
+            全問挑戦
+          </span>
+
+          <span class="study-en">
+            ALL QUESTIONS
+          </span>
+
+          <span class="study-description">
+            問題形式を選んで学習する
+          </span>
+        </div>
+
+        <span class="study-arrow">
+          ›
+        </span>
+
+      </div>
+    </a>
+
+
+    <!-- この分野の苦手復習 -->
+    <a
+      href="javascript:void(0)"
+      onclick="goWrong('<%= @category %>')"
+      class="study-link"
+    >
+      <div class="study-card wrong-card">
+
+        <div class="study-icon wrong-icon">
+          🔥
+        </div>
+
+        <div class="study-text">
+          <span class="study-title">
+            苦手問題復習
+          </span>
+
+          <span class="study-en">
+            REVIEW WEAK POINTS
+          </span>
+
+          <span class="study-description">
+            この分野の苦手問題だけを復習
+          </span>
+        </div>
+
+        <span class="study-arrow">
+          ›
+        </span>
+
+      </div>
+    </a>
+
+  </div>
 
 </div>
 
-<div style="margin-top:20px;">
-
-  <!-- 全問挑戦 -->
-  <a href="/select?category=<%= @category %>&index=0" style="text-decoration:none;">
-    <div style="
-      border:1px solid #ccc;
-      background:white;
-      color:black;
-      padding:15px;
-
-      width:80%;
-      max-width:700px;
-
-      margin:0 auto 10px auto;
-
-      text-align:center;
-      border-radius:8px;
-      font-weight:bold;
-    ">
-      全問挑戦
-    </div>
-  </a>
-
-  <!-- この分野の苦手復習 -->
-  <a href="javascript:void(0)"
-     onclick="goWrong('<%= @category %>')"
-     style="text-decoration:none;">
-    <div style="
-      background:#2196F3;
-      color:white;
-      padding:15px;
-
-      width:80%;
-      max-width:700px;
-
-      margin:0 auto;
-
-      text-align:center;
-      border-radius:8px;
-      font-weight:bold;
-    ">
-      この分野の苦手復習
-    </div>
-  </a>
-
-</div>
 
 <script>
 function goWrong(category) {

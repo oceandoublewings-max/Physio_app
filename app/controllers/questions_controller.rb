@@ -51,9 +51,23 @@ count = 10 if count == 0
 if params[:mode] == "wrong" && params[:ids].present?
   ids = params[:ids].split(",").map(&:to_i)
 
+  # 苦手問題全体
   base = base.where(id: ids)
 
+  # 出題数（5・10・15・20）
   count = [count, ids.size].min
+
+  # ランダムで必要数だけ抽選
+  ids = base.order("RANDOM()").limit(count).pluck(:id)
+
+  redirect_to questions_path(
+    mode: "wrong",
+    ids: ids.join(","),
+    category: params[:category],
+    qtype: params[:qtype],
+    count: count,
+    index: 0
+  ) and return if params[:index].nil?
 end
 
 if params[:ids].blank? && params[:mode] != "wrong" && params[:index].nil?

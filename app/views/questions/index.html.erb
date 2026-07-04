@@ -508,6 +508,21 @@ onclick="this.disabled=true; checkAnswer('false')">✕</button>
 </div>
 
 <script>
+function playQuizSound(type) {
+  if (localStorage.getItem("soundEnabled") !== "on") {
+    return;
+  }
+
+  const soundPath =
+    type === "correct"
+      ? "/sounds/correct.mp3"
+      : "/sounds/wrong.mp3";
+
+  const audio = new Audio(soundPath);
+  audio.currentTime = 0;
+  audio.play().catch(() => {});
+}
+
 function checkAnswer(choice) {
 
   if (window.answered === true) {
@@ -532,6 +547,7 @@ function checkAnswer(choice) {
 
  if (choice.trim() === correctAnswer.trim()) {
   score += 1;
+  playQuizSound("correct");
 
   wrong = wrong.filter(q => q.id !== Number(questionId));
 
@@ -542,6 +558,8 @@ function checkAnswer(choice) {
     "</div>";
 
 } else {
+
+  playQuizSound("wrong");
 
   if (!wrong.some(q => q.id === Number(questionId))) {
     wrong.push({
@@ -593,6 +611,12 @@ if (nextBtn && "<%= @question.qtype %>" !== "illustration") {
 }
 
 function goIllustration(addWrong) {
+
+  if (addWrong) {
+    playQuizSound("wrong");
+  } else {
+    playQuizSound("correct");
+  }
 
   let score = parseInt(localStorage.getItem("score")) || 0;
   let total = parseInt(localStorage.getItem("total")) || 0;

@@ -1,95 +1,50 @@
 <style>
-.image-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+.pdf-card{
+  display:block;
+  width:85%;
+  margin:18px auto;
+  padding:18px;
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:15px;
+  text-decoration:none;
+  color:#000;
+  text-align:center;
+  font-size:28px;
+  font-weight:bold;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-/* スマホだけ縦並び */
-@media (max-width: 768px) {
-  .image-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-row img {
-    width: 90% !important;
-  }
+.pdf-card:hover{
+  background:#f7f7f7;
 }
 </style>
 
-<h2>参考資料</h2>
+<h1 style="
+text-align:center;
+font-size:36px;
+margin-top:30px;
+margin-bottom:35px;
+">
+📚 参考資料
+</h1>
 
-<% if params[:type] == "bone" %>
-  <h3>骨の参考資料</h3>
-
-  <div class="image-row">
-    <% Dir.glob(Rails.root.join("public/images/bone/*")).each do |img| %>
-      <img src="<%= img.sub(Rails.root.join('public').to_s, '') %>" width="300">
-    <% end %>
-  </div>
-
-<% elsif params[:type] == "muscle" %>
-  <h3>筋肉の参考資料</h3>
-
-  <div class="image-row">
-    <% Dir.glob(Rails.root.join("public/images/muscle/*")).each do |img| %>
-      <img src="<%= img.sub(Rails.root.join('public').to_s, '') %>" width="300">
-    <% end %>
-  </div>
-
-<% else %>
-  <div style="text-align:center; margin-top:30px;">
-
-  <a href="/anatomy_pdfs" style="
-    display:block;
-    width:80%;
-    margin:12px auto;
-    padding:14px;
-    background:white;
-    border:1px solid #ddd;
-    border-radius:12px;
-    text-decoration:none;
-    color:black;
-    font-size:22px;
-    font-weight:bold;
-  ">
-    📚 解剖学
-  </a>
-
-  <a href="/physiology_pdfs" style="
-    display:block;
-    width:80%;
-    margin:12px auto;
-    padding:14px;
-    background:white;
-    border:1px solid #ddd;
-    border-radius:12px;
-    text-decoration:none;
-    color:black;
-    font-size:22px;
-    font-weight:bold;
-  ">
-    🫀 生理学
-  </a>
-
- <a href="/kinesiology_pdfs"
-   style="
-   display:block;
-   width:80%;
-   margin:12px auto;
-   padding:14px;
-   background:white;
-   border:1px solid #ddd;
-   border-radius:12px;
-   text-decoration:none;
-   color:black;
-   font-size:22px;
-   font-weight:bold;
-   ">
-   🏃 運動学
+<a href="/bone_pdfs" class="pdf-card">
+🦴 骨資料集
 </a>
-</div>
 
-</div>
-<% end %>
+<a href="/muscle_pdfs" class="pdf-card">
+💪 筋肉資料集
+</a>
+
+<a href="/neurovascular_pdfs" class="pdf-card">
+🩸 神経・血管資料集
+</a>
+
+<a href="/physiology_pdfs" class="pdf-card">
+🫀 生理学資料集
+</a>
+
+<a href="/kinesiology_pdfs" class="pdf-card">
+🏃 運動学資料集
+</a>

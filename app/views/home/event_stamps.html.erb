@@ -1,264 +1,617 @@
-<h1 style="
-text-align:center;
-font-size:30px;
-margin-bottom:30px;
-white-space:nowrap;
-">
-🎉 イベントスタンプ図鑑
-</h1>
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-<p style="
-text-align:center;
-color:#666;
-font-size:15px;
-margin-bottom:20px;
-line-height:1.7;
-">
-期間限定イベントで獲得できるスタンプ✨
-</p>
+  body {
+    margin: 0;
+    background: #f3f6fb;
+    color: #0d2948;
+    font-family:
+      "Hiragino Mincho ProN",
+      "Yu Mincho",
+      "YuMincho",
+      serif;
+  }
 
-<div style="text-align:center; margin-bottom:30px;">
+  .event-stamp-page {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+  }
 
-<%= link_to "◀ 🏅 通常スタンプ図鑑へ戻る",
-stamps_path,
-style:"
-display:inline-block;
-padding:12px 24px;
-background:#4caf50;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-font-size:16px;
-box-shadow:0 4px 10px rgba(0,0,0,.15);
-" %>
+  /* =========================
+     ヘッダー
+  ========================= */
+  .event-stamp-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 24px 30px;
+    background:
+      radial-gradient(
+        circle at 88% 18%,
+        rgba(255,255,255,.10) 0,
+        rgba(255,255,255,0) 32%
+      ),
+      linear-gradient(
+        120deg,
+        #082846 0%,
+        #0d3b67 55%,
+        #376b99 100%
+      );
+    color: white;
+    border-radius: 0 0 42px 42px;
+    box-shadow: 0 12px 30px rgba(8,40,70,.16);
+  }
 
-</div>
+  .event-stamp-hero::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -80px;
+    top: -95px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+  }
 
-<hr>
+  .event-stamp-hero-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
 
-<h2 style="text-align:center;">
-🎃 ハロウィン
-</h2>
+  .event-stamp-hero-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    border: 2px solid #d8bd69;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    background: rgba(255,255,255,.04);
+  }
 
-<p style="text-align:center;color:#888;">準備中</p>
+  .event-stamp-hero-title {
+    margin: 0;
+    font-size: 27px;
+    line-height: 1.15;
+    letter-spacing: .02em;
+    font-weight: 700;
+    white-space: nowrap;
+  }
 
-<div style="
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
-max-width:520px;
-margin:0 auto;
-padding:10px;
-">
+  .event-stamp-hero-title span {
+    color: #e2c86f;
+  }
 
-<% (1..25).each do |i| %>
+  .event-stamp-hero-en {
+    margin-top: 7px;
+    color: #d8bd69;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: .16em;
+  }
 
-  <% file = "events/halloween_%03d.png" % i %>
+  .event-stamp-hero-message {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.18);
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+  }
 
-  <div style="
-    border:2px solid #ddd;
-    border-radius:12px;
-    background:white;
-    aspect-ratio:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-  ">
+  .event-stamp-hero-message-main {
+    font-size: 15px;
+    font-weight: 700;
+  }
 
-    <% if File.exist?(Rails.root.join("public","images",file)) %>
+  .event-stamp-hero-message-sub {
+    margin-top: 6px;
+    color: rgba(255,255,255,.72);
+    font-size: 12px;
+  }
 
-      <%= image_tag "/images/#{file}",
-        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
-        onclick:"openStamp('/images/#{file}')"
-      %>
+  /* =========================
+     通常図鑑へ戻る
+  ========================= */
+  .normal-link-area {
+    padding: 22px 20px 8px;
+  }
 
-    <% else %>
+  .normal-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 18px;
+    background: linear-gradient(110deg, #0b4d87, #2f68a1);
+    color: white;
+    text-decoration: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(10,61,105,.20);
+  }
 
-      <span style="
-        font-size:28px;
-        color:#c8d5e6;
-        font-weight:bold;
-      ">
-        <%= "%03d" % i %>
+  .normal-link-left {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .normal-link-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: rgba(255,255,255,.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .normal-link-text {
+    text-align: left;
+  }
+
+  .normal-link-main {
+    display: block;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .normal-link-sub {
+    display: block;
+    margin-top: 3px;
+    color: rgba(255,255,255,.66);
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: .13em;
+  }
+
+  .normal-link-arrow {
+    color: #e2c86f;
+    font-size: 21px;
+  }
+
+  /* =========================
+     イベントカード
+  ========================= */
+  .event-sections {
+    padding: 18px 14px 0;
+  }
+
+  .event-section {
+    margin-bottom: 18px;
+    padding: 18px 12px 14px;
+    background: rgba(255,255,255,.78);
+    border: 1px solid #d9e3ee;
+    border-radius: 24px;
+    box-shadow: 0 10px 28px rgba(13,41,72,.07);
+  }
+
+  .event-section-heading {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .event-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 21px;
+    letter-spacing: .05em;
+  }
+
+  .event-section-title::before,
+  .event-section-title::after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #c9ad58;
+  }
+
+  .event-section-status {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 3px 11px;
+    border: 1px solid #d8bd69;
+    border-radius: 999px;
+    color: #9a7d29;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .05em;
+  }
+
+  /* =========================
+     スタンプグリッド
+  ========================= */
+  .event-stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+  }
+
+  .event-stamp-cell {
+    aspect-ratio: 1;
+    border: 1.5px solid #d5dee8;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #ffffff, #f7f9fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(13,41,72,.04);
+  }
+
+  .event-stamp-cell img {
+    width: 87%;
+    height: 87%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform .15s ease;
+  }
+
+  .event-stamp-cell img:active {
+    transform: scale(.93);
+  }
+
+  .event-stamp-number {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #c5cfda;
+    font-weight: bold;
+  }
+
+  /* =========================
+     モーダル
+  ========================= */
+  #stampModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(4,20,37,.78);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+  }
+
+  #stampImage {
+    max-width: 82%;
+    max-height: 75%;
+    background: white;
+    border: 2px solid #d8bd69;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 20px 55px rgba(0,0,0,.30);
+  }
+
+  @media (max-width: 480px) {
+    .event-stamp-hero {
+      padding: 30px 20px 27px;
+      border-radius: 0 0 34px 34px;
+    }
+
+    .event-stamp-hero-icon {
+      width: 52px;
+      height: 52px;
+      font-size: 26px;
+      border-radius: 15px;
+    }
+
+    .event-stamp-hero-title {
+      font-size: 23px;
+    }
+
+    .event-section {
+      border-radius: 20px;
+    }
+  }
+</style>
+
+
+<div class="event-stamp-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================= -->
+  <section class="event-stamp-hero">
+
+    <div class="event-stamp-hero-top">
+
+      <div class="event-stamp-hero-icon">
+        🎉
+      </div>
+
+      <div>
+        <h1 class="event-stamp-hero-title">
+          イベントスタンプ<span>図鑑</span>
+        </h1>
+
+        <div class="event-stamp-hero-en">
+          LIMITED EVENT COLLECTION
+        </div>
+      </div>
+
+    </div>
+
+    <div class="event-stamp-hero-message">
+
+      <div class="event-stamp-hero-message-main">
+        ✨ 期間限定イベントでスタンプGET！
+      </div>
+
+      <div class="event-stamp-hero-message-sub">
+        季節限定の特別なスタンプを集めよう
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       通常スタンプ図鑑へ
+  ========================= -->
+  <div class="normal-link-area">
+
+    <%= link_to stamps_path, class: "normal-link" do %>
+
+      <div class="normal-link-left">
+
+        <div class="normal-link-icon">
+          🏅
+        </div>
+
+        <div class="normal-link-text">
+          <span class="normal-link-main">
+            通常スタンプ図鑑へ戻る
+          </span>
+
+          <span class="normal-link-sub">
+            STANDARD STAMP COLLECTION
+          </span>
+        </div>
+
+      </div>
+
+      <span class="normal-link-arrow">
+        ›
       </span>
 
     <% end %>
 
   </div>
 
-<% end %>
 
-</div>
+  <!-- =========================
+       イベント一覧
+  ========================= -->
+  <div class="event-sections">
 
-<hr>
 
-<h2 style="text-align:center;">
-🎄 クリスマス
-</h2>
+    <!-- ハロウィン -->
+    <section class="event-section">
 
-<p style="text-align:center;color:#888;">準備中</p>
+      <div class="event-section-heading">
+        <h2 class="event-section-title">
+          🎃 ハロウィン
+        </h2>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
-max-width:520px;
-margin:0 auto;
-padding:10px;
-">
+        <span class="event-section-status">
+          準備中
+        </span>
+      </div>
 
-<% (1..25).each do |i| %>
+      <div class="event-stamp-grid">
 
-  <% file = "events/christmas_%03d.png" % i %>
+        <% (1..25).each do |i| %>
 
-  <div style="
-    border:2px solid #ddd;
-    border-radius:12px;
-    background:white;
-    aspect-ratio:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-  ">
+          <% file = "events/halloween_%03d.png" % i %>
 
-    <% if File.exist?(Rails.root.join("public","images",file)) %>
+          <div class="event-stamp-cell">
 
-      <%= image_tag "/images/#{file}",
-        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
-        onclick:"openStamp('/images/#{file}')"
-      %>
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
 
-    <% else %>
+              <%= image_tag "/images/#{file}",
+                onclick: "openStamp('/images/#{file}')"
+              %>
 
-      <span style="
-        font-size:28px;
-        color:#c8d5e6;
-        font-weight:bold;
-      ">
-        <%= "%03d" % i %>
-      </span>
+            <% else %>
 
-    <% end %>
+              <span class="event-stamp-number">
+                <%= "%03d" % i %>
+              </span>
+
+            <% end %>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </section>
+
+
+    <!-- クリスマス -->
+    <section class="event-section">
+
+      <div class="event-section-heading">
+        <h2 class="event-section-title">
+          🎄 クリスマス
+        </h2>
+
+        <span class="event-section-status">
+          準備中
+        </span>
+      </div>
+
+      <div class="event-stamp-grid">
+
+        <% (1..25).each do |i| %>
+
+          <% file = "events/christmas_%03d.png" % i %>
+
+          <div class="event-stamp-cell">
+
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+
+              <%= image_tag "/images/#{file}",
+                onclick: "openStamp('/images/#{file}')"
+              %>
+
+            <% else %>
+
+              <span class="event-stamp-number">
+                <%= "%03d" % i %>
+              </span>
+
+            <% end %>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </section>
+
+
+    <!-- お正月 -->
+    <section class="event-section">
+
+      <div class="event-section-heading">
+        <h2 class="event-section-title">
+          🎍 お正月
+        </h2>
+
+        <span class="event-section-status">
+          準備中
+        </span>
+      </div>
+
+      <div class="event-stamp-grid">
+
+        <% (1..25).each do |i| %>
+
+          <% file = "events/newyear_%03d.png" % i %>
+
+          <div class="event-stamp-cell">
+
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+
+              <%= image_tag "/images/#{file}",
+                onclick: "openStamp('/images/#{file}')"
+              %>
+
+            <% else %>
+
+              <span class="event-stamp-number">
+                <%= "%03d" % i %>
+              </span>
+
+            <% end %>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </section>
+
+
+    <!-- 春イベント -->
+    <section class="event-section">
+
+      <div class="event-section-heading">
+        <h2 class="event-section-title">
+          🌸 春イベント
+        </h2>
+
+        <span class="event-section-status">
+          準備中
+        </span>
+      </div>
+
+      <div class="event-stamp-grid">
+
+        <% (1..25).each do |i| %>
+
+          <% file = "events/spring_%03d.png" % i %>
+
+          <div class="event-stamp-cell">
+
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+
+              <%= image_tag "/images/#{file}",
+                onclick: "openStamp('/images/#{file}')"
+              %>
+
+            <% else %>
+
+              <span class="event-stamp-number">
+                <%= "%03d" % i %>
+              </span>
+
+            <% end %>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </section>
+
 
   </div>
 
-<% end %>
+</div>
+
+
+<!-- =========================
+     スタンプ拡大
+========================= -->
+<div id="stampModal" onclick="closeStamp()">
+
+  <img id="stampImage">
 
 </div>
 
-<hr>
 
-<h2 style="text-align:center;">
-🎍 お正月
-</h2>
+<script>
+  function openStamp(src) {
+    document.getElementById("stampImage").src = src;
+    document.getElementById("stampModal").style.display = "flex";
+  }
 
-<p style="text-align:center;color:#888;">準備中</p>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
-max-width:520px;
-margin:0 auto;
-padding:10px;
-">
-
-<% (1..25).each do |i| %>
-
-  <% file = "events/newyear_%03d.png" % i %>
-
-  <div style="
-    border:2px solid #ddd;
-    border-radius:12px;
-    background:white;
-    aspect-ratio:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-  ">
-
-    <% if File.exist?(Rails.root.join("public","images",file)) %>
-
-      <%= image_tag "/images/#{file}",
-        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
-        onclick:"openStamp('/images/#{file}')"
-      %>
-
-    <% else %>
-
-      <span style="
-        font-size:28px;
-        color:#c8d5e6;
-        font-weight:bold;
-      ">
-        <%= "%03d" % i %>
-      </span>
-
-    <% end %>
-
-  </div>
-
-<% end %>
-
-</div>
-
-<hr>
-
-<h2 style="text-align:center;">
-🌸 春イベント
-</h2>
-
-<p style="text-align:center;color:#888;">準備中</p>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
-max-width:520px;
-margin:0 auto;
-padding:10px;
-">
-
-<% (1..25).each do |i| %>
-
-  <% file = "events/spring_%03d.png" % i %>
-
-  <div style="
-    border:2px solid #ddd;
-    border-radius:12px;
-    background:white;
-    aspect-ratio:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-  ">
-
-    <% if File.exist?(Rails.root.join("public","images",file)) %>
-
-      <%= image_tag "/images/#{file}",
-        style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
-        onclick:"openStamp('/images/#{file}')"
-      %>
-
-    <% else %>
-
-      <span style="
-        font-size:28px;
-        color:#c8d5e6;
-        font-weight:bold;
-      ">
-        <%= "%03d" % i %>
-      </span>
-
-    <% end %>
-
-  </div>
-
-<% end %>
-
-</div>
+  function closeStamp() {
+    document.getElementById("stampModal").style.display = "none";
+  }
+</script>

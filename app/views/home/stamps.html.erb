@@ -1,116 +1,486 @@
-<h1 style="text-align:center;">
-  🏅 スタンプ図鑑
-</h1>
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-<p style="
-  text-align:center;
-  color:#666;
-  font-size:15px;
-  margin-bottom:25px;
-  line-height:1.7;
-">
-💀 問題を解いてスタンプGET！<br>
-コンプリート目指して頑張ろう✨
-</p>
+  body {
+    margin: 0;
+    background: #f3f6fb;
+    color: #0d2948;
+    font-family:
+      "Hiragino Mincho ProN",
+      "Yu Mincho",
+      "YuMincho",
+      serif;
+  }
 
-<div style="text-align:center; margin-bottom:30px;">
+  .stamp-page {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+  }
 
-<%= link_to "🎉 イベントスタンプ図鑑はこちら ▶",
-event_stamps_path,
-style:"
-display:inline-block;
-padding:12px 24px;
-background:#ff9800;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-font-size:16px;
-box-shadow:0 4px 10px rgba(0,0,0,.15);
-" %>
+  /* =========================
+     ヘッダー
+  ========================= */
+  .stamp-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 24px 30px;
+    background:
+      radial-gradient(
+        circle at 88% 18%,
+        rgba(255,255,255,.10) 0,
+        rgba(255,255,255,0) 32%
+      ),
+      linear-gradient(
+        120deg,
+        #082846 0%,
+        #0d3b67 55%,
+        #376b99 100%
+      );
+    color: white;
+    border-radius: 0 0 42px 42px;
+    box-shadow: 0 12px 30px rgba(8,40,70,.16);
+  }
+
+  .stamp-hero::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -80px;
+    top: -95px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+  }
+
+  .stamp-hero-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stamp-hero-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    border: 2px solid #d8bd69;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .stamp-hero-title {
+    margin: 0;
+    font-size: 29px;
+    line-height: 1.15;
+    letter-spacing: .05em;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .stamp-hero-title span {
+    color: #e2c86f;
+  }
+
+  .stamp-hero-en {
+    margin-top: 7px;
+    color: #d8bd69;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: .18em;
+  }
+
+  .stamp-hero-message {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.18);
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+  }
+
+  .stamp-hero-message-main {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+
+  .stamp-hero-message-sub {
+    margin-top: 6px;
+    color: rgba(255,255,255,.72);
+    font-size: 12px;
+  }
+
+  /* =========================
+     イベント導線
+  ========================= */
+  .event-link-area {
+    padding: 22px 20px 8px;
+  }
+
+  .event-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 18px;
+    background: linear-gradient(110deg, #0b4d87, #2f68a1);
+    color: white;
+    text-decoration: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(10,61,105,.20);
+  }
+
+  .event-link-left {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .event-link-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: rgba(255,255,255,.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .event-link-text {
+    text-align: left;
+  }
+
+  .event-link-main {
+    display: block;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .event-link-sub {
+    display: block;
+    margin-top: 3px;
+    color: rgba(255,255,255,.66);
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: .13em;
+  }
+
+  .event-link-arrow {
+    color: #e2c86f;
+    font-size: 21px;
+  }
+
+  /* =========================
+     図鑑タイトル
+  ========================= */
+  .collection-heading {
+    padding: 22px 20px 12px;
+    text-align: center;
+  }
+
+  .collection-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin: 0;
+    font-size: 21px;
+    letter-spacing: .06em;
+  }
+
+  .collection-title::before,
+  .collection-title::after {
+    content: "";
+    width: 38px;
+    height: 1px;
+    background: #c9ad58;
+  }
+
+  .collection-sub {
+    margin-top: 7px;
+    color: #8290a1;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 11px;
+  }
+
+  /* =========================
+     スタンプグリッド
+  ========================= */
+  .stamp-grid-wrap {
+    padding: 0 14px;
+  }
+
+  .stamp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 9px;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 14px;
+    background: rgba(255,255,255,.72);
+    border: 1px solid #d9e3ee;
+    border-radius: 24px;
+    box-shadow: 0 10px 28px rgba(13,41,72,.07);
+  }
+
+  .stamp-cell {
+    aspect-ratio: 1;
+    border: 1.5px solid #d5dee8;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #ffffff, #f7f9fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(13,41,72,.04);
+  }
+
+  .stamp-cell img {
+    width: 87%;
+    height: 87%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform .15s ease;
+  }
+
+  .stamp-cell img:active {
+    transform: scale(.93);
+  }
+
+  .stamp-number {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #c5cfda;
+    font-weight: bold;
+  }
+
+  /* =========================
+     モーダル
+  ========================= */
+  #stampModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(4,20,37,.78);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+  }
+
+  #stampImage {
+    max-width: 82%;
+    max-height: 75%;
+    background: white;
+    border: 2px solid #d8bd69;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 20px 55px rgba(0,0,0,.30);
+  }
+
+  @media (max-width: 480px) {
+    .stamp-hero {
+      padding: 30px 20px 27px;
+      border-radius: 0 0 34px 34px;
+    }
+
+    .stamp-hero-icon {
+      width: 52px;
+      height: 52px;
+      font-size: 26px;
+      border-radius: 15px;
+    }
+
+    .stamp-hero-title {
+      font-size: 25px;
+    }
+
+    .stamp-grid {
+      gap: 7px;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .stamp-cell {
+      border-radius: 11px;
+    }
+
+    .stamp-number {
+      font-size: 17px;
+    }
+  }
+</style>
+
+
+<div class="stamp-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================= -->
+  <section class="stamp-hero">
+
+    <div class="stamp-hero-top">
+
+      <div class="stamp-hero-icon">
+        🏅
+      </div>
+
+      <div>
+        <h1 class="stamp-hero-title">
+          スタンプ<span>図鑑</span>
+        </h1>
+
+        <div class="stamp-hero-en">
+          STAMP COLLECTION
+        </div>
+      </div>
+
+    </div>
+
+    <div class="stamp-hero-message">
+      <div class="stamp-hero-message-main">
+        💀 問題を解いてスタンプGET！
+      </div>
+
+      <div class="stamp-hero-message-sub">
+        コンプリート目指して頑張ろう ✨
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       イベントスタンプ図鑑へ
+  ========================= -->
+  <div class="event-link-area">
+
+    <%= link_to event_stamps_path, class: "event-link" do %>
+
+      <div class="event-link-left">
+
+        <div class="event-link-icon">
+          🎉
+        </div>
+
+        <div class="event-link-text">
+          <span class="event-link-main">
+            イベントスタンプ図鑑
+          </span>
+
+          <span class="event-link-sub">
+            LIMITED EVENT COLLECTION
+          </span>
+        </div>
+
+      </div>
+
+      <span class="event-link-arrow">
+        ›
+      </span>
+
+    <% end %>
+
+  </div>
+
+
+  <!-- =========================
+       コレクション見出し
+  ========================= -->
+  <div class="collection-heading">
+
+    <h2 class="collection-title">
+      COLLECTION
+    </h2>
+
+    <div class="collection-sub">
+      集めたスタンプをタップして見てみよう
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       スタンプ一覧
+  ========================= -->
+  <div class="stamp-grid-wrap">
+
+    <div class="stamp-grid">
+
+      <% (1..100).each do |i| %>
+
+        <% file = "stamps/stamp_%03d.png" % i %>
+
+        <div class="stamp-cell">
+
+          <% if File.exist?(Rails.root.join("public", "images", file)) %>
+
+            <%= image_tag "/images/#{file}",
+              onclick: "openStamp('/images/#{file}')"
+            %>
+
+          <% else %>
+
+            <span class="stamp-number">
+              <%= "%03d" % i %>
+            </span>
+
+          <% end %>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
 
 </div>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:10px;
-max-width:520px;
-margin:0 auto;
-padding:10px;
-">
 
-<% (1..100).each do |i| %>
+<!-- =========================
+     スタンプ拡大
+========================= -->
+<div id="stampModal" onclick="closeStamp()">
 
-<% file = "stamps/stamp_%03d.png" % i %>
-
-<div style="
-aspect-ratio:1;
-border:2px solid #ddd;
-border-radius:12px;
-background:#fafafa;
-display:flex;
-justify-content:center;
-align-items:center;
-position:relative;
-overflow:hidden;
-">
-
-<% if File.exist?(Rails.root.join("public","images",file)) %>
-
-<%= image_tag "/images/#{file}",
-style:"width:85%;height:85%;object-fit:contain;cursor:pointer;",
-onclick:"openStamp('/images/#{file}')"
-%>
-
-<% else %>
-
-<span style="
-font-size:28px;
-color:#c8d5e6;
-font-weight:bold;
-">
-<%= "%03d" % i %>
-</span>
-
-<% end %>
+  <img id="stampImage">
 
 </div>
 
-<% end %>
-
-</div>
-
-<div id="stampModal"
-onclick="closeStamp()"
-style="
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.7);
-justify-content:center;
-align-items:center;
-z-index:9999;
-">
-
-<img id="stampImage"
-style="
-max-width:80%;
-max-height:75%;
-background:white;
-border-radius:20px;
-padding:20px;
-">
-
-</div>
 
 <script>
-function openStamp(src){
-  document.getElementById("stampImage").src = src;
-  document.getElementById("stampModal").style.display = "flex";
-}
+  function openStamp(src) {
+    document.getElementById("stampImage").src = src;
+    document.getElementById("stampModal").style.display = "flex";
+  }
 
-function closeStamp(){
-  document.getElementById("stampModal").style.display = "none";
-}
+  function closeStamp() {
+    document.getElementById("stampModal").style.display = "none";
+  }
 </script>

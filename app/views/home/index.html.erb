@@ -13,7 +13,6 @@
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    min-height: 100vh;
     background: #f8fbff;
   }
 
@@ -23,8 +22,8 @@
   .hero {
     position: relative;
     overflow: hidden;
-    min-height: 245px;
-    padding: 24px 22px 20px;
+    min-height: 200px;
+    padding: 16px 18px 14px;
     color: white;
     background:
       linear-gradient(
@@ -37,7 +36,7 @@
 
     background-size: cover;
     background-position: center;
-    border-radius: 0 0 28px 28px;
+    border-radius: 0 0 24px 24px;
   }
 
   .hero::after {
@@ -62,20 +61,20 @@
   .hero-title-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .hero-mark {
-    width: 42px;
-    height: 48px;
+    width: 36px;
+    height: 40px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #d7b85e;
-    border-radius: 8px 8px 14px 14px;
+    border-radius: 7px 7px 12px 12px;
     color: #e8cd7b;
-    font-size: 22px;
+    font-size: 18px;
     background: rgba(0,0,0,0.18);
   }
 
@@ -83,91 +82,92 @@
     margin: 0;
     color: white;
     font-family: serif;
-    font-size: clamp(24px, 6vw, 38px);
-    letter-spacing: 0.04em;
+    font-size: clamp(21px, 5.5vw, 34px);
+    letter-spacing: 0.03em;
     white-space: nowrap;
   }
 
   .grade-badge {
     display: inline-block;
-    margin-left: 5px;
-    padding: 3px 9px;
+    margin-left: 4px;
+    padding: 2px 7px;
     border: 1px solid #d8b963;
-    border-radius: 7px;
+    border-radius: 6px;
     color: #f1d98d;
-    font-size: 12px;
+    font-size: 10px;
     vertical-align: middle;
     white-space: nowrap;
   }
 
   .hero-subtitle {
-    margin: 3px 0 0 53px;
+    margin: 2px 0 0 44px;
     color: #d8bd73;
-    font-size: 9px;
-    letter-spacing: 0.17em;
+    font-size: 7px;
+    letter-spacing: 0.14em;
   }
 
   .question-count {
-    margin-top: 25px;
+    margin-top: 13px;
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 6px;
     color: #f0d27d;
   }
 
   .question-count-label {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .question-count-number {
     font-family: Georgia, serif;
-    font-size: clamp(42px, 11vw, 62px);
+    font-size: clamp(36px, 9vw, 50px);
     line-height: 1;
     letter-spacing: 0.02em;
   }
 
   .question-count-unit {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .hero-status {
-    margin-top: 8px;
-    font-size: 13px;
+    margin-top: 5px;
+    font-size: 11px;
     color: #e8f1ff;
   }
 
   .hero-status-icon {
     display: inline-flex;
-    width: 22px;
-    height: 22px;
-    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255,255,255,0.45);
     border-radius: 50%;
     background: rgba(255,255,255,0.1);
+    font-size: 10px;
   }
 
   .news-list {
-    margin-top: 18px;
+    margin-top: 9px;
   }
 
   .news-item {
     display: flex;
     align-items: center;
-    gap: 9px;
-    margin-top: 7px;
-    font-size: 13px;
+    gap: 7px;
+    margin-top: 4px;
+    font-size: 10px;
     color: white;
   }
 
   .new-badge {
-    min-width: 42px;
-    padding: 3px 6px;
+    min-width: 36px;
+    padding: 2px 5px;
     text-align: center;
     border-radius: 4px;
     background: linear-gradient(135deg, #2985e8, #1762bd);
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bold;
     box-shadow: 0 2px 7px rgba(0,0,0,0.2);
   }
@@ -176,25 +176,25 @@
      共通セクション
   ========================= */
   .page-content {
-    padding: 24px 14px 20px;
+    padding: 13px 11px 8px;
   }
 
   .section-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin: 0 0 22px;
+    gap: 8px;
+    margin: 0 0 11px;
     color: #18283f;
     font-family: serif;
-    font-size: clamp(20px, 5vw, 28px);
-    letter-spacing: 0.06em;
+    font-size: clamp(18px, 4.5vw, 24px);
+    letter-spacing: 0.05em;
   }
 
   .section-title::before,
   .section-title::after {
     content: "";
-    width: 42px;
+    width: 35px;
     height: 1px;
     background: linear-gradient(90deg, transparent, #c9a94f);
   }
@@ -209,21 +209,21 @@
   .category-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 7px;
   }
 
   .category-card {
     position: relative;
     overflow: hidden;
     min-width: 0;
-    padding: 20px 4px 17px;
+    padding: 10px 3px 10px;
     text-align: center;
     text-decoration: none;
     color: #111;
     background: white;
     border: 1px solid #e7ebf0;
-    border-radius: 17px;
-    box-shadow: 0 7px 18px rgba(17, 45, 80, 0.10);
+    border-radius: 14px;
+    box-shadow: 0 5px 13px rgba(17, 45, 80, 0.10);
   }
 
   .category-card::after {
@@ -232,7 +232,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 7px;
+    height: 5px;
   }
 
   .category-card.anatomy::after {
@@ -248,17 +248,17 @@
   }
 
   .category-icon {
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 15px;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 7px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 36px;
+    font-size: 26px;
     box-shadow:
       inset 0 2px 4px rgba(255,255,255,0.8),
-      0 5px 12px rgba(0,0,0,0.13);
+      0 4px 9px rgba(0,0,0,0.13);
   }
 
   .anatomy .category-icon {
@@ -276,15 +276,15 @@
   .category-name {
     margin: 0;
     font-family: serif;
-    font-size: clamp(20px, 5.2vw, 29px);
+    font-size: clamp(17px, 4.4vw, 23px);
     white-space: nowrap;
   }
 
   .category-en {
-    margin-top: 5px;
+    margin-top: 2px;
     font-family: Georgia, serif;
-    font-size: clamp(8px, 2.3vw, 12px);
-    letter-spacing: 0.04em;
+    font-size: clamp(7px, 2vw, 10px);
+    letter-spacing: 0.03em;
     white-space: nowrap;
   }
 
@@ -304,81 +304,81 @@
      苦手問題分析
   ========================= */
   .analysis-section {
-    margin-top: 28px;
-    padding: 20px 12px 18px;
+    margin-top: 13px;
+    padding: 11px 9px 9px;
     background:
       linear-gradient(145deg, rgba(255,255,255,0.95), rgba(234,244,255,0.95));
     border: 1px solid #d3e2f1;
-    border-radius: 24px;
-    box-shadow: 0 5px 18px rgba(29, 66, 108, 0.09);
+    border-radius: 19px;
+    box-shadow: 0 4px 13px rgba(29, 66, 108, 0.09);
   }
 
   .analysis-heading {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 7px;
     margin: 0;
     color: #15375e;
     font-family: serif;
-    font-size: clamp(21px, 5.5vw, 29px);
+    font-size: clamp(18px, 4.7vw, 24px);
   }
 
   .analysis-heading::before,
   .analysis-heading::after {
     content: "";
-    width: 34px;
+    width: 28px;
     height: 1px;
     background: #aebdce;
   }
 
   .analysis-subtitle {
-    margin: 8px 0 17px;
+    margin: 3px 0 8px;
     text-align: center;
     color: #66778b;
-    font-size: 12px;
+    font-size: 9px;
   }
 
   .analysis-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 6px;
   }
 
   .analysis-card {
     min-width: 0;
-    padding: 12px 4px 11px;
+    padding: 7px 3px 6px;
     text-align: center;
     text-decoration: none;
     color: #172438;
     background: white;
     border: 1px solid #e1e7ee;
-    border-radius: 13px;
-    box-shadow: 0 3px 10px rgba(27, 54, 85, 0.07);
+    border-radius: 11px;
+    box-shadow: 0 3px 8px rgba(27, 54, 85, 0.07);
   }
 
   .analysis-label {
-    font-size: clamp(12px, 3.3vw, 16px);
+    font-size: clamp(10px, 2.9vw, 14px);
     font-weight: bold;
     white-space: nowrap;
   }
 
   .analysis-number {
-    margin-top: 6px;
+    margin-top: 3px;
     font-family: Georgia, serif;
-    font-size: clamp(28px, 8vw, 42px);
+    font-size: clamp(23px, 6.5vw, 32px);
     line-height: 1;
   }
 
   .analysis-number small {
-    margin-left: 2px;
+    margin-left: 1px;
     font-family: serif;
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .mini-bar {
-    height: 5px;
-    margin: 11px 8px 0;
+    height: 4px;
+    margin: 6px 7px 0;
     overflow: hidden;
     border-radius: 20px;
     background: #edf0f4;
@@ -406,25 +406,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 7px;
     width: 100%;
-    margin-top: 15px;
-    padding: 14px 10px;
+    margin-top: 8px;
+    padding: 9px 8px;
     border: none;
-    border-radius: 13px;
+    border-radius: 11px;
     color: white;
     background: linear-gradient(100deg, #1476dc, #6243e8);
-    box-shadow: 0 6px 15px rgba(65, 77, 213, 0.22);
+    box-shadow: 0 5px 12px rgba(65, 77, 213, 0.22);
     font-family: serif;
-    font-size: clamp(17px, 4.7vw, 23px);
+    font-size: clamp(15px, 4vw, 20px);
     cursor: pointer;
   }
 
   .wrong-all-note {
-    margin: 8px 0 0;
+    margin: 4px 0 0;
     text-align: center;
     color: #778493;
-    font-size: 11px;
+    font-size: 8px;
   }
 
   /* =========================
@@ -433,13 +433,13 @@
   .bottom-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 28px;
-    padding: 5px 0 8px;
+    margin-top: 12px;
+    padding: 3px 0 2px;
   }
 
   .bottom-link {
     min-width: 0;
-    padding: 5px 3px;
+    padding: 3px 2px;
     text-align: center;
     text-decoration: none;
     color: #173251;
@@ -452,48 +452,53 @@
 
   .bottom-icon {
     display: block;
-    margin-bottom: 7px;
-    font-size: 31px;
+    margin-bottom: 2px;
+    font-size: 22px;
   }
 
   .bottom-title {
     display: block;
     font-family: serif;
-    font-size: clamp(16px, 4.5vw, 22px);
+    font-size: clamp(14px, 3.8vw, 18px);
     white-space: nowrap;
   }
 
   .bottom-note {
     display: block;
-    margin-top: 4px;
+    margin-top: 2px;
     color: #7c8795;
-    font-size: 9px;
+    font-size: 7px;
     white-space: nowrap;
   }
 
   @media (max-width: 380px) {
+    .hero {
+      min-height: 190px;
+      padding: 14px 14px 12px;
+    }
+
     .page-content {
-      padding-left: 9px;
-      padding-right: 9px;
-    }
-
-    .category-grid {
-      gap: 6px;
-    }
-
-    .category-icon {
-      width: 62px;
-      height: 62px;
-      font-size: 31px;
-    }
-
-    .analysis-section {
       padding-left: 8px;
       padding-right: 8px;
     }
 
-    .analysis-grid {
+    .category-grid {
       gap: 5px;
+    }
+
+    .category-icon {
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+    }
+
+    .analysis-section {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    .analysis-grid {
+      gap: 4px;
     }
   }
 </style>

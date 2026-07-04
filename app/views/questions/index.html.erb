@@ -365,91 +365,239 @@ function goIllustration(addWrong) {
 <% else %>
 <!-- 🔥 終了画面 -->
 
-<p>お疲れ様👏</p>
+<div class="result-page">
 
-<div style="
-  background-size: 320px;
-  background-repeat: no-repeat;
-  background-position: center 60px;
-  width:260px;
-  margin:30px auto;
-  padding:25px;
-  border-radius:20px;
-  text-align:center;
-">
- <% if true %>
+  <p class="result-title">お疲れ様です！👏</p>
 
-<div style="
-  background: rgba(255,255,255,0.75);
-  width:220px;
-  margin:20px auto;
-  padding:15px;
-  border-radius:20px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-  text-align:center;
-">
+  <div class="result-spacer"></div>
 
-<h3 style="margin-top:0;">
-  正答率
-</h3>
+  <div class="score-card">
 
-<h4 id="score-text"></h4>
+    <h3 class="score-heading">正答率</h3>
+
+    <div class="score-ring" id="score-ring">
+      <div class="score-ring-inner">
+        <div class="score-percent" id="score-percent">0%</div>
+        <div class="score-count" id="score-count">0 / 0問</div>
+      </div>
+    </div>
+
+    <div class="score-comment" id="score-comment"></div>
+
+  </div>
+
+  <div class="top-button-wrap">
+    <a href="/?index=0" class="top-button">
+      TOPへ戻る
+    </a>
+  </div>
 
 </div>
 
-<% end %>
+<style>
+.result-page {
+  width:100%;
+  text-align:center;
+  padding:10px 16px 40px;
+  box-sizing:border-box;
+}
 
-<div style="text-align:center; margin-top:25px;">
-  <a href="/?index=0"
-     style="
-       background:#4da3ff;
-       color:white;
-       padding:12px 24px;
-       border-radius:12px;
-       text-decoration:none;
-       font-weight:bold;
-     ">
-    TOPへ戻る
-  </a>
-</div>
+.result-title {
+  margin:0;
+  color:#174f8a;
+  font-size:28px;
+  font-weight:800;
+}
 
+.result-spacer {
+  height:300px;
+}
+
+.score-card {
+  width:min(88%, 420px);
+  margin:0 auto;
+  padding:22px 18px 18px;
+  box-sizing:border-box;
+  background:rgba(255,255,255,0.94);
+  border-radius:26px;
+  box-shadow:0 8px 24px rgba(37, 95, 150, 0.14);
+}
+
+.score-heading {
+  margin:0 0 14px;
+  color:#174f8a;
+  font-size:27px;
+  font-weight:800;
+}
+
+.score-ring {
+  width:190px;
+  height:190px;
+  margin:0 auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:conic-gradient(
+    #4da3ff 0deg,
+    #4da3ff 0deg,
+    #e8edf3 0deg,
+    #e8edf3 360deg
+  );
+  box-shadow:0 5px 16px rgba(77,163,255,0.18);
+}
+
+.score-ring-inner {
+  width:145px;
+  height:145px;
+  border-radius:50%;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.score-percent {
+  color:#318cf0;
+  font-size:48px;
+  line-height:1;
+  font-weight:900;
+}
+
+.score-count {
+  margin-top:12px;
+  color:#174f8a;
+  font-size:20px;
+  font-weight:800;
+}
+
+.score-comment {
+  margin:18px auto 0;
+  padding:13px 14px;
+  background:#eef7ff;
+  border-radius:14px;
+  color:#174f8a;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.6;
+}
+
+.top-button-wrap {
+  margin-top:24px;
+}
+
+.top-button {
+  display:inline-block;
+  min-width:220px;
+  padding:13px 28px;
+  box-sizing:border-box;
+  background:#4da3ff;
+  color:white;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(77,163,255,0.28);
+}
+
+@media (max-width:480px) {
+  .result-title {
+    font-size:25px;
+  }
+
+  .result-spacer {
+    height:280px;
+  }
+
+  .score-card {
+    width:92%;
+    padding:20px 15px 16px;
+  }
+
+  .score-ring {
+    width:175px;
+    height:175px;
+  }
+
+  .score-ring-inner {
+    width:132px;
+    height:132px;
+  }
+
+  .score-percent {
+    font-size:44px;
+  }
+
+  .score-count {
+    font-size:18px;
+  }
+}
+</style>
 
 <script>
-const score = Number(localStorage.getItem("score")) || 0
-const total = Number(localStorage.getItem("total")) || 0
+const score = Number(localStorage.getItem("score")) || 0;
+const total = Number(localStorage.getItem("total")) || 0;
 
 const rate = total > 0
   ? Math.round((score / total) * 100)
-  : 0
+  : 0;
 
-const scoreText = document.getElementById("score-text")
+const degree = rate * 3.6;
 
-if (scoreText) {
-  scoreText.innerHTML = `${score} / ${total}問 (${rate}%)`
+const scoreRing = document.getElementById("score-ring");
+const scorePercent = document.getElementById("score-percent");
+const scoreCount = document.getElementById("score-count");
+const scoreComment = document.getElementById("score-comment");
+
+if (scoreRing) {
+  scoreRing.style.background =
+    `conic-gradient(
+      #4da3ff 0deg,
+      #4da3ff ${degree}deg,
+      #e8edf3 ${degree}deg,
+      #e8edf3 360deg
+    )`;
 }
 
-const qtype = "<%= @qtype %>"
-// ← これ追加
-  document.body.style.backgroundImage = "none";
+if (scorePercent) {
+  scorePercent.textContent = `${rate}%`;
+}
 
-if (true) {
+if (scoreCount) {
+  scoreCount.textContent = `${score} / ${total}問`;
+}
 
-
+if (scoreComment) {
   if (rate >= 80) {
-    document.body.style.backgroundImage =
-      "url('/images/top/happy_skeleton.png')";
+    scoreComment.innerHTML =
+      "🌟 すごい！しっかり身についてるね！<br>この調子で続けよう！";
+  } else if (rate >= 60) {
+    scoreComment.innerHTML =
+      "✨ あと少し！いい調子！<br>復習したらもっと伸びるよ！";
+  } else if (rate >= 40) {
+    scoreComment.innerHTML =
+      "⭐ 間違えた問題も、次の正解につながる大切なステップ！<br>一緒に頑張っていこう！";
   } else {
-    document.body.style.backgroundImage =
-      "url('/images/top/sad_skeleton.png')";
+    scoreComment.innerHTML =
+      "🌱 ここから伸びる！<br>もう一度挑戦してみよう！";
   }
+}
 
-  document.body.style.backgroundRepeat = "no-repeat";
-  document.body.style.backgroundPosition = "center 60px";
-  document.body.style.backgroundSize = "320px";
-  }
+document.body.style.backgroundImage = "none";
 
+if (rate >= 80) {
+  document.body.style.backgroundImage =
+    "url('/images/top/happy_skeleton.png')";
+} else {
+  document.body.style.backgroundImage =
+    "url('/images/top/sad_skeleton.png')";
+}
+
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundPosition = "center 75px";
+document.body.style.backgroundSize = "320px";
 </script>
 
 <% end %>
 <% end %>
-

@@ -222,12 +222,25 @@
 
   .category-item {
     min-width: 0;
-    padding: 13px 5px 11px;
-    text-align: center;
+    min-height: 82px;
+    padding: 10px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
     background: #fff;
     border: 1px solid #e8edf3;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(19, 49, 83, 0.05);
+  }
+
+  .category-left {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .category-icon {
@@ -236,7 +249,7 @@
   }
 
   .category-name {
-    margin-top: 6px;
+    margin-top: 5px;
     color: #52647a;
     font-size: 11px;
     font-weight: 700;
@@ -244,12 +257,13 @@
   }
 
   .category-count {
-    margin-top: 2px;
+    flex-shrink: 0;
     color: #102d52;
     font-family: Georgia, serif;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .category-count span {
@@ -272,7 +286,7 @@
   .weakest-inner {
     position: relative;
     overflow: hidden;
-    padding: 15px 16px 13px;
+    padding: 19px 16px 17px;
     border-radius: 18px;
     text-align: center;
     background:
@@ -303,10 +317,20 @@
   .weakest-title {
     position: relative;
     z-index: 2;
-    margin-top: 7px;
+    margin-top: 5px;
     color: white;
     font-size: 18px;
     font-weight: 700;
+  }
+
+  .weakest-list {
+    position: relative;
+    z-index: 2;
+    margin-top: 9px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.7;
   }
 
   .weakest-tip {
@@ -453,7 +477,9 @@
     }
 
     .category-item {
-      padding: 8px 2px 7px;
+      min-height: 64px;
+      padding: 7px 7px;
+      gap: 3px;
       border-radius: 12px;
     }
 
@@ -467,8 +493,7 @@
     }
 
     .category-count {
-      margin-top: 1px;
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .category-count span {
@@ -476,12 +501,12 @@
     }
 
     .weakest-card {
-      margin: 0 10px 10px;
+      margin: 0 10px 12px;
       border-radius: 15px;
     }
 
     .weakest-inner {
-      padding: 9px 12px 8px;
+      padding: 10px 12px 9px;
       border-radius: 14px;
     }
 
@@ -491,9 +516,14 @@
     }
 
     .weakest-title {
-      margin-top: 4px;
+      margin-top: 3px;
       font-size: 14px;
-      white-space: nowrap;
+    }
+
+    .weakest-list {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 1.4;
     }
 
     .weakest-tip {
@@ -503,7 +533,7 @@
     }
 
     .chart-card {
-      margin-top: 10px;
+      margin-top: 12px;
       padding: 14px 10px 10px;
     }
 
@@ -567,48 +597,60 @@
     <div class="category-grid">
 
       <div class="category-item">
-        <div class="category-icon">🦴</div>
-        <div class="category-name">骨</div>
+        <div class="category-left">
+          <div class="category-icon">🦴</div>
+          <div class="category-name">骨</div>
+        </div>
         <div class="category-count">
           <span id="bone-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">💪</div>
-        <div class="category-name">筋肉</div>
+        <div class="category-left">
+          <div class="category-icon">💪</div>
+          <div class="category-name">筋肉</div>
+        </div>
         <div class="category-count">
           <span id="muscle-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">🧠</div>
-        <div class="category-name">神経</div>
+        <div class="category-left">
+          <div class="category-icon">🧠</div>
+          <div class="category-name">神経</div>
+        </div>
         <div class="category-count">
           <span id="nerve-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">🫀</div>
-        <div class="category-name">臓器</div>
+        <div class="category-left">
+          <div class="category-icon">🫀</div>
+          <div class="category-name">臓器</div>
+        </div>
         <div class="category-count">
           <span id="organ-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">🩸</div>
-        <div class="category-name">血管</div>
+        <div class="category-left">
+          <div class="category-icon">🩸</div>
+          <div class="category-name">血管</div>
+        </div>
         <div class="category-count">
           <span id="vessel-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">📍</div>
-        <div class="category-name">断面・位置</div>
+        <div class="category-left">
+          <div class="category-icon">📍</div>
+          <div class="category-name">断面・位置</div>
+        </div>
         <div class="category-count">
           <span id="position-count">0</span><span>問</span>
         </div>
@@ -676,12 +718,12 @@ document.getElementById("position-count").textContent = position
 
 
 const weakAreas = [
-  { name: "骨", count: bone },
-  { name: "筋肉", count: muscle },
-  { name: "神経", count: nerve },
-  { name: "臓器", count: organ },
-  { name: "血管", count: vessel },
-  { name: "断面・位置関係", count: position }
+  { name: "骨", icon: "🦴", count: bone },
+  { name: "筋肉", icon: "💪", count: muscle },
+  { name: "神経", icon: "🧠", count: nerve },
+  { name: "臓器", icon: "🫀", count: organ },
+  { name: "血管", icon: "🩸", count: vessel },
+  { name: "断面・位置関係", icon: "📍", count: position }
 ]
 
 const maxWeak = Math.max(...weakAreas.map(a => a.count))
@@ -689,14 +731,6 @@ const maxWeak = Math.max(...weakAreas.map(a => a.count))
 if (maxWeak > 0) {
 
   const topWeak = weakAreas.filter(a => a.count === maxWeak)
-
-  let weakestText = ""
-
-  if (topWeak.length === 1) {
-    weakestText = `${topWeak[0].name}（${topWeak[0].count}問）`
-  } else {
-    weakestText = `${topWeak.map(a => a.name).join("・")}（各${maxWeak}問）`
-  }
 
   document.getElementById("weakest-area").innerHTML = `
     <div class="weakest-card">
@@ -707,7 +741,7 @@ if (maxWeak > 0) {
         </div>
 
         <div class="weakest-title">
-          🥇 一番苦手：${weakestText}
+          🥇 一番苦手：${topWeak.map(a => a.name).join("・")}
         </div>
 
         <div class="weakest-tip">

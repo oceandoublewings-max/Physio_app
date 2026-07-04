@@ -135,10 +135,10 @@ const filtered = wrong.filter(q =>
 
   console.log(filtered);
   
-  if (filtered.length === 0) {
-    alert("苦手問題がまだありません");
-    return;
-  }
+ if (filtered.length === 0) {
+  alert("苦手問題はありません");
+  return;
+}
 
 window.location.href =
 "/select?mode=wrong" +
@@ -287,9 +287,9 @@ function goWrongAll() {
   const filtered = wrong.map(q => q.id);
 
   if (filtered.length === 0) {
-    alert("苦手問題がまだありません");
-    return;
-  }
+  alert("苦手問題はありません");
+  return;
+}
 
   window.location.href =
     "/select?mode=wrong" +

@@ -222,12 +222,25 @@
 
   .category-item {
     min-width: 0;
-    padding: 13px 5px 11px;
-    text-align: center;
+    min-height: 82px;
+    padding: 10px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
     background: #fff;
     border: 1px solid #e8edf3;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(19, 49, 83, 0.05);
+  }
+
+  .category-left {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .category-icon {
@@ -236,7 +249,7 @@
   }
 
   .category-name {
-    margin-top: 6px;
+    margin-top: 5px;
     color: #52647a;
     font-size: 11px;
     font-weight: 700;
@@ -249,12 +262,13 @@
   }
 
   .category-count {
-    margin-top: 2px;
+    flex-shrink: 0;
     color: #102d52;
     font-family: Georgia, serif;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .category-count span:last-child {
@@ -281,7 +295,7 @@
   .weakest-inner {
     position: relative;
     overflow: hidden;
-    padding: 19px 16px 17px;
+    padding: 15px 16px 13px;
     border-radius: 18px;
     text-align: center;
     background:
@@ -312,20 +326,10 @@
   .weakest-title {
     position: relative;
     z-index: 2;
-    margin-top: 5px;
+    margin-top: 7px;
     color: white;
     font-size: 18px;
     font-weight: 700;
-  }
-
-  .weakest-list {
-    position: relative;
-    z-index: 2;
-    margin-top: 9px;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.7;
   }
 
   .weakest-tip {
@@ -389,83 +393,160 @@
 
   @media (max-width: 420px) {
     .analysis-page {
-      padding: 10px 10px 28px;
+      padding: 6px 10px 24px;
     }
 
     .analysis-hero {
-      min-height: 250px;
-      padding: 26px 22px 24px;
+      min-height: 145px;
+      padding: 15px 18px 14px;
+      border-radius: 0 0 26px 26px;
     }
 
     .hero-brand {
-      font-size: 9px;
-      letter-spacing: 2px;
+      font-size: 8px;
+      letter-spacing: 1.8px;
     }
 
     .top-button {
-      padding: 8px 14px;
-      font-size: 10px;
+      padding: 6px 12px;
+      font-size: 9px;
     }
 
     .hero-main {
-      margin-top: 31px;
-      gap: 15px;
+      margin-top: 13px;
+      gap: 11px;
     }
 
     .hero-icon {
-      width: 67px;
-      height: 67px;
-      font-size: 30px;
+      width: 48px;
+      height: 48px;
+      font-size: 23px;
     }
 
     .hero-title {
-      font-size: 32px;
-      letter-spacing: 4px;
+      font-size: 27px;
+      letter-spacing: 3px;
     }
 
     .hero-en {
-      font-size: 10px;
-      letter-spacing: 2px;
+      margin-top: 3px;
+      font-size: 8px;
+      letter-spacing: 1.8px;
     }
 
     .hero-message {
-      margin-top: 26px;
-      font-size: 13px;
+      margin: 10px 0 0;
+      font-size: 10px;
+      letter-spacing: 0;
+      white-space: nowrap;
     }
 
     .section-title {
-      margin: 28px 0 17px;
-      font-size: 22px;
+      margin: 17px 0 12px;
+      font-size: 20px;
+      gap: 10px;
     }
 
     .section-title::before,
     .section-title::after {
-      width: 30px;
+      width: 28px;
+    }
+
+    .total-area {
+      padding: 12px 16px 10px;
+    }
+
+    .total-label {
+      font-size: 9px;
+      letter-spacing: 1.7px;
+    }
+
+    .total-number {
+      margin-top: 2px;
+      font-size: 31px;
+    }
+
+    .total-number span:last-child {
+      font-size: 12px;
     }
 
     .category-grid {
-      gap: 8px;
-      padding: 13px;
+      gap: 7px;
+      padding: 10px;
     }
 
     .category-item {
-      padding: 12px 3px 10px;
+      min-height: 64px;
+      padding: 7px;
+      gap: 3px;
+      border-radius: 12px;
+    }
+
+    .category-icon {
+      font-size: 18px;
     }
 
     .category-name {
-      font-size: 10px;
+      margin-top: 3px;
+      font-size: 9px;
     }
 
     .category-name.small {
-      font-size: 8px;
+      font-size: 7px;
+      letter-spacing: -0.7px;
     }
 
     .category-count {
-      font-size: 21px;
+      font-size: 15px;
+    }
+
+    .category-count span:last-child {
+      font-size: 8px;
+    }
+
+    .weakest-card {
+      margin: 0 10px 10px;
+      border-radius: 15px;
+    }
+
+    .weakest-inner {
+      padding: 9px 12px 8px;
+      border-radius: 14px;
+    }
+
+    .weakest-label {
+      font-size: 8px;
+      letter-spacing: 1.6px;
+    }
+
+    .weakest-title {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .weakest-tip {
+      margin-top: 5px;
+      padding-top: 5px;
+      font-size: 9px;
+    }
+
+    .chart-card {
+      margin-top: 10px;
+      padding: 14px 10px 10px;
+    }
+
+    .chart-kicker {
+      font-size: 8px;
+    }
+
+    .chart-title {
+      margin-top: 2px;
+      font-size: 18px;
     }
 
     .chart-wrap {
-      height: 330px;
+      height: 315px;
+      margin-top: 4px;
     }
   }
 </style>
@@ -526,56 +607,70 @@
     <div class="category-grid">
 
       <div class="category-item">
-        <div class="category-icon">🦴</div>
-        <div class="category-name">関節運動</div>
+        <div class="category-left">
+          <div class="category-icon">🦴</div>
+          <div class="category-name">関節運動</div>
+        </div>
         <div class="category-count">
           <span id="joint-motion-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">📏</div>
-        <div class="category-name">ROM</div>
+        <div class="category-left">
+          <div class="category-icon">📏</div>
+          <div class="category-name">ROM</div>
+        </div>
         <div class="category-count">
           <span id="rom-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">💪</div>
-        <div class="category-name">筋作用</div>
+        <div class="category-left">
+          <div class="category-icon">💪</div>
+          <div class="category-name">筋作用</div>
+        </div>
         <div class="category-count">
           <span id="muscle-action-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">🚶</div>
-        <div class="category-name">歩行</div>
+        <div class="category-left">
+          <div class="category-icon">🚶</div>
+          <div class="category-name">歩行</div>
+        </div>
         <div class="category-count">
           <span id="gait-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">🧍</div>
-        <div class="category-name">姿勢</div>
+        <div class="category-left">
+          <div class="category-icon">🧍</div>
+          <div class="category-name">姿勢</div>
+        </div>
         <div class="category-count">
           <span id="posture-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item">
-        <div class="category-icon">⚙️</div>
-        <div class="category-name small">バイオメカニズム</div>
+        <div class="category-left">
+          <div class="category-icon">⚙️</div>
+          <div class="category-name small">バイオメカニズム</div>
+        </div>
         <div class="category-count">
           <span id="biomechanics-count">0</span><span>問</span>
         </div>
       </div>
 
       <div class="category-item last-item">
-        <div class="category-icon">🎥</div>
-        <div class="category-name">動作分析</div>
+        <div class="category-left">
+          <div class="category-icon">🎥</div>
+          <div class="category-name">動作分析</div>
+        </div>
         <div class="category-count">
           <span id="movement-analysis-count">0</span><span>問</span>
         </div>
@@ -656,13 +751,13 @@ document.getElementById("movement-analysis-count").textContent = movementAnalysi
 
 
 const weakAreas = [
-  { name: "関節運動", icon: "🦴", count: jointMotion },
-  { name: "ROM", icon: "📏", count: rom },
-  { name: "筋作用", icon: "💪", count: muscleAction },
-  { name: "歩行", icon: "🚶", count: gait },
-  { name: "姿勢", icon: "🧍", count: posture },
-  { name: "バイオメカニズム", icon: "⚙️", count: biomechanics },
-  { name: "動作分析", icon: "🎥", count: movementAnalysis }
+  { name: "関節運動", count: jointMotion },
+  { name: "ROM", count: rom },
+  { name: "筋作用", count: muscleAction },
+  { name: "歩行", count: gait },
+  { name: "姿勢", count: posture },
+  { name: "バイオメカニズム", count: biomechanics },
+  { name: "動作分析", count: movementAnalysis }
 ]
 
 
@@ -672,6 +767,14 @@ const maxWeak = Math.max(...weakAreas.map(a => a.count))
 if (maxWeak > 0) {
 
   const topWeak = weakAreas.filter(a => a.count === maxWeak)
+
+  let weakestText = ""
+
+  if (topWeak.length === 1) {
+    weakestText = `${topWeak[0].name}（${topWeak[0].count}問）`
+  } else {
+    weakestText = `${topWeak.map(a => a.name).join("・")}（各${maxWeak}問）`
+  }
 
   document.getElementById("weakest-area").innerHTML = `
     <div class="weakest-card">
@@ -683,11 +786,7 @@ if (maxWeak > 0) {
         </div>
 
         <div class="weakest-title">
-          🥇 一番苦手：${topWeak.map(a => a.name).join("・")}
-        </div>
-
-        <div class="weakest-list">
-          ${topWeak.map(a => `${a.icon} ${a.name}（${a.count}問）`).join("<br>")}
+          🥇 一番苦手：${weakestText}
         </div>
 
         <div class="weakest-tip">

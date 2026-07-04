@@ -91,13 +91,13 @@ if params[:ids].present?
 
   @questions = Question.where(id: ids).sort_by { |q| ids.index(q.id.to_s) }
 
-  if @category.present? && @category != "all"
-  @questions = @questions.where(category: @category)
+if @category.present? && @category != "all"
+  @questions = @questions.select { |q| q.category == @category }
 end
 
-  if @qtype.present? && @qtype != "all"
-    @questions = @questions.where(qtype: @qtype)
-  end
+if @qtype.present? && @qtype != "all"
+  @questions = @questions.select { |q| q.qtype == @qtype }
+end
 
 elsif params[:mode] != "wrong"
   @questions = base.order("RANDOM()").limit(count)

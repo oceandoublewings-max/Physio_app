@@ -89,51 +89,6 @@ def index
   end
 end
 
-if params[:ids].blank? && params[:mode] != "wrong" && params[:index].nil?
-  ids = base.order("RANDOM()").limit(count).pluck(:id)
-
-  redirect_to questions_path(
-    ids: ids.join(","),
-    count: count,
-    index: 0,
-    qtype: params[:qtype],
-    category: @category
-  )
-  return
-end
-
-if params[:ids].present?
-  ids = params[:ids].split(",")
-
-  count = [count, ids.length].min
-
-  @questions = Question.where(id: ids).sort_by { |q| ids.index(q.id.to_s) }
-
-if @category.present? && @category != "all"
-  @questions = @questions.select { |q| q.category == @category }
-end
-
-if @qtype.present? && @qtype != "all"
-  @questions = @questions.select { |q| q.qtype == @qtype }
-end
-
-elsif params[:mode] != "wrong"
-  @questions = base.order("RANDOM()").limit(count)
-end
-
-if @questions.nil?
-  @questions = []
-end
-
-@index = params[:index].to_i
-
-if @index >= @questions.length
-  @finished = true
-else
-  @question = @questions[@index]
-
-end
-end
 
 def select
   @mode = params[:mode]

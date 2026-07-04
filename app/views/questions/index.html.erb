@@ -291,6 +291,25 @@ body > * {
     border-radius:19px;
   }
 }
+
+.choice-list .choice-btn {
+  margin:3px auto;
+}
+
+#result > span {
+  padding:4px 0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+#illustration-buttons button {
+  white-space:nowrap;
+  padding-left:8px !important;
+  padding-right:8px !important;
+  font-size:14px !important;
+}
+
 </style>
 
 
@@ -443,7 +462,7 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
 
   <!-- 5択 -->
-<div class="choices">
+<div class="choices choice-list">
 
 
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>

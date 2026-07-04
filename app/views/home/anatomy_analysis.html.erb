@@ -272,7 +272,7 @@
   .weakest-inner {
     position: relative;
     overflow: hidden;
-    padding: 19px 16px 17px;
+    padding: 15px 16px 13px;
     border-radius: 18px;
     text-align: center;
     background:
@@ -303,20 +303,10 @@
   .weakest-title {
     position: relative;
     z-index: 2;
-    margin-top: 5px;
+    margin-top: 7px;
     color: white;
     font-size: 18px;
     font-weight: 700;
-  }
-
-  .weakest-list {
-    position: relative;
-    z-index: 2;
-    margin-top: 9px;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.7;
   }
 
   .weakest-tip {
@@ -486,12 +476,12 @@
     }
 
     .weakest-card {
-      margin: 0 10px 12px;
+      margin: 0 10px 10px;
       border-radius: 15px;
     }
 
     .weakest-inner {
-      padding: 10px 12px 9px;
+      padding: 9px 12px 8px;
       border-radius: 14px;
     }
 
@@ -501,14 +491,9 @@
     }
 
     .weakest-title {
-      margin-top: 3px;
-      font-size: 14px;
-    }
-
-    .weakest-list {
       margin-top: 4px;
-      font-size: 12px;
-      line-height: 1.4;
+      font-size: 14px;
+      white-space: nowrap;
     }
 
     .weakest-tip {
@@ -518,7 +503,7 @@
     }
 
     .chart-card {
-      margin-top: 12px;
+      margin-top: 10px;
       padding: 14px 10px 10px;
     }
 
@@ -691,12 +676,12 @@ document.getElementById("position-count").textContent = position
 
 
 const weakAreas = [
-  { name: "骨", icon: "🦴", count: bone },
-  { name: "筋肉", icon: "💪", count: muscle },
-  { name: "神経", icon: "🧠", count: nerve },
-  { name: "臓器", icon: "🫀", count: organ },
-  { name: "血管", icon: "🩸", count: vessel },
-  { name: "断面・位置関係", icon: "📍", count: position }
+  { name: "骨", count: bone },
+  { name: "筋肉", count: muscle },
+  { name: "神経", count: nerve },
+  { name: "臓器", count: organ },
+  { name: "血管", count: vessel },
+  { name: "断面・位置関係", count: position }
 ]
 
 const maxWeak = Math.max(...weakAreas.map(a => a.count))
@@ -704,6 +689,14 @@ const maxWeak = Math.max(...weakAreas.map(a => a.count))
 if (maxWeak > 0) {
 
   const topWeak = weakAreas.filter(a => a.count === maxWeak)
+
+  let weakestText = ""
+
+  if (topWeak.length === 1) {
+    weakestText = `${topWeak[0].name}（${topWeak[0].count}問）`
+  } else {
+    weakestText = `${topWeak.map(a => a.name).join("・")}（各${maxWeak}問）`
+  }
 
   document.getElementById("weakest-area").innerHTML = `
     <div class="weakest-card">
@@ -714,11 +707,7 @@ if (maxWeak > 0) {
         </div>
 
         <div class="weakest-title">
-          🥇 一番苦手：${topWeak.map(a => a.name).join("・")}
-        </div>
-
-        <div class="weakest-list">
-          ${topWeak.map(a => `${a.icon} ${a.name}（${a.count}問）`).join("<br>")}
+          🥇 一番苦手：${weakestText}
         </div>
 
         <div class="weakest-tip">

@@ -157,6 +157,51 @@ body > * {
   box-shadow:0 3px 10px rgba(17,55,94,.10);
 }
 
+.choice-btn {
+  position:relative;
+}
+
+.choice-btn.correct-choice {
+  border:3px solid #43a047 !important;
+  box-shadow:0 0 0 3px rgba(67,160,71,.10), 0 6px 16px rgba(17,55,94,.08) !important;
+}
+
+.choice-btn.selected-correct::before,
+.choice-btn.selected-wrong::before {
+  position:absolute;
+  left:-34px;
+  top:50%;
+  transform:translateY(-50%);
+  width:28px;
+  text-align:center;
+  font-size:27px;
+  line-height:1;
+  font-weight:900;
+}
+
+.choice-btn.selected-correct::before {
+  content:"○";
+  color:#43a047;
+}
+
+.choice-btn.selected-wrong {
+  border-color:#ef9a9a !important;
+}
+
+.choice-btn.selected-wrong::before {
+  content:"×";
+  color:#e53935;
+}
+
+@media (max-width:480px) {
+  .choice-btn.selected-correct::before,
+  .choice-btn.selected-wrong::before {
+    left:-28px;
+    width:24px;
+    font-size:25px;
+  }
+}
+
 .illustration-wrapper {
   width:min(92%, 680px);
   margin:0 auto;
@@ -467,7 +512,7 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
     <button class="choice-btn"
-onclick="this.disabled=true; checkAnswer(<%= choice.to_json %>)">
+onclick="checkAnswer(<%= choice.to_json %>, this)">
   <%= choice %>
 </button>
   <% end %>
@@ -477,10 +522,10 @@ onclick="this.disabled=true; checkAnswer(<%= choice.to_json %>)">
 
 <!-- ○× -->
 <button class="choice-btn"
-onclick="this.disabled=true; checkAnswer('true')">○</button>
+onclick="checkAnswer('true', this)">○</button>
 
 <button class="choice-btn"
-onclick="this.disabled=true; checkAnswer('false')">✕</button>
+onclick="checkAnswer('false', this)">✕</button>
 <% end %>
 
 <p id="result"></p>
@@ -523,7 +568,7 @@ function playQuizSound(type) {
   audio.play().catch(() => {});
 }
 
-function checkAnswer(choice) {
+function checkAnswer(choice, selectedButton) {
 
   if (window.answered === true) {
     return;
@@ -539,6 +584,16 @@ function checkAnswer(choice) {
   const explanation = "<%= j @question.explanation.to_s %>";
   const questionId = "<%= @question.id.to_s %>";
 
+  const choiceButtons = Array.from(document.querySelectorAll(".choice-btn"));
+  const correctButton = choiceButtons.find(btn => {
+    const buttonValue =
+      btn.textContent.trim() === "○" ? "true" :
+      btn.textContent.trim() === "✕" ? "false" :
+      btn.textContent.trim();
+
+    return buttonValue.trim() === correctAnswer.trim();
+  });
+
   let score = parseInt(localStorage.getItem("score")) || 0;
   let total = parseInt(localStorage.getItem("total")) || 0;
   total += 1;
@@ -551,8 +606,11 @@ function checkAnswer(choice) {
 
   wrong = wrong.filter(q => q.id !== Number(questionId));
 
+  if (selectedButton) {
+    selectedButton.classList.add("selected-correct", "correct-choice");
+  }
+
   document.getElementById("result").innerHTML =
-    "<span style='color:green;font-weight:bold;'>正解！</span>" +
     "<div style='background:#FFF9C4;border:2px solid #FFD54F;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
     explanation +
     "</div>";
@@ -570,13 +628,15 @@ function checkAnswer(choice) {
     });
   }
 
-  const displayAnswer =
-    correctAnswer.trim() === "true" ? "〇" :
-    correctAnswer.trim() === "false" ? "❌" :
-    correctAnswer;
+  if (selectedButton) {
+    selectedButton.classList.add("selected-wrong");
+  }
+
+  if (correctButton) {
+    correctButton.classList.add("correct-choice");
+  }
 
   document.getElementById("result").innerHTML =
-    "<span style='color:red;font-weight:bold;'>不正解！ 正解： " + displayAnswer + "</span>" +
     "<div style='background:#FFF9C4;border:2px solid #FFD54F;padding:15px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;'>" +
     explanation +
     "</div>";

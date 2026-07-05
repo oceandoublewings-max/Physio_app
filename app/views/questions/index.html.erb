@@ -773,10 +773,17 @@ function goIllustration(addWrong) {
 
     <h3 class="score-heading">正答率</h3>
 
-    <div class="score-ring" id="score-ring">
-      <div class="score-ring-inner">
-        <div class="score-percent" id="score-percent">0%</div>
-        <div class="score-count" id="score-count">0 / 0問</div>
+    <div class="score-ring-wrap">
+      <span class="score-sparkle sparkle-one">✦</span>
+      <span class="score-sparkle sparkle-two">✦</span>
+      <span class="score-sparkle sparkle-three">✧</span>
+      <span class="score-sparkle sparkle-four">✦</span>
+
+      <div class="score-ring" id="score-ring">
+        <div class="score-ring-inner">
+          <div class="score-percent" id="score-percent">0%</div>
+          <div class="score-count" id="score-count">0 / 0問</div>
+        </div>
       </div>
     </div>
 
@@ -826,6 +833,64 @@ function goIllustration(addWrong) {
   color:#174f8a;
   font-size:27px;
   font-weight:800;
+}
+
+.score-ring-wrap {
+  width:250px;
+  margin:0 auto;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.score-sparkle {
+  position:absolute;
+  z-index:3;
+  color:#ffd45c;
+  text-shadow:
+    0 0 7px rgba(255,212,92,.75),
+    0 0 16px rgba(255,196,45,.35);
+  animation:scoreTwinkle 1.8s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.sparkle-one {
+  left:3px;
+  top:22px;
+  font-size:30px;
+}
+
+.sparkle-two {
+  right:0;
+  top:58px;
+  font-size:23px;
+  animation-delay:.4s;
+}
+
+.sparkle-three {
+  left:12px;
+  bottom:25px;
+  font-size:22px;
+  animation-delay:.8s;
+}
+
+.sparkle-four {
+  right:10px;
+  bottom:18px;
+  font-size:29px;
+  animation-delay:1.1s;
+}
+
+@keyframes scoreTwinkle {
+  0%, 100% {
+    transform:scale(.72) rotate(0deg);
+    opacity:.4;
+  }
+  50% {
+    transform:scale(1.22) rotate(12deg);
+    opacity:1;
+  }
 }
 
 .score-ring {

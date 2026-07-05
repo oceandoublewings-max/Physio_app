@@ -922,19 +922,15 @@ if (scoreComment) {
   }
 }
 
-document.body.style.backgroundImage = "none";
+const skeletonImage =
+  rate >= 80
+    ? "url('/images/top/happy_skeleton.png')"
+    : "url('/images/top/sad_skeleton.png')";
 
-if (rate >= 80) {
-  document.body.style.backgroundImage =
-    "url('/images/top/happy_skeleton.png')";
-} else {
-  document.body.style.backgroundImage =
-    "url('/images/top/sad_skeleton.png')";
-}
-
-document.body.style.backgroundRepeat = "no-repeat";
-document.body.style.backgroundPosition = "center 75px";
-document.body.style.backgroundSize = "320px";
+document.body.style.setProperty("background-image", skeletonImage, "important");
+document.body.style.setProperty("background-repeat", "no-repeat", "important");
+document.body.style.setProperty("background-position", "center 75px", "important");
+document.body.style.setProperty("background-size", "320px", "important");
 </script>
 
 <% end %>

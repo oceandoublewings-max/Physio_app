@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 root "home#index"
 
 get "/questions", to: "questions#index"
+get "/questions/review", to: "questions#review"
 get "/select", to: "questions#select"
 post "/questions/api_create", to: "questions#api_create"
 get 'illustrations', to: 'home#illustrations'

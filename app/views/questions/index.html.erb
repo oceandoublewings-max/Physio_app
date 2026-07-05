@@ -553,6 +553,10 @@ onclick="checkAnswer('false', this)">✕</button>
 </div>
 
 <script>
+<% if @index.to_i == 0 %>
+localStorage.setItem("currentQuizReview", JSON.stringify([]));
+<% end %>
+
 function playQuizSound(type) {
   if (localStorage.getItem("soundEnabled") !== "on") {
     return;
@@ -593,6 +597,18 @@ function checkAnswer(choice, selectedButton) {
 
     return buttonValue.trim() === correctAnswer.trim();
   });
+
+  let reviewItems = JSON.parse(localStorage.getItem("currentQuizReview")) || [];
+
+  reviewItems.push({
+    question: <%= @question.content.to_json.html_safe %>,
+    selected: choice.trim() === "true" ? "○" : (choice.trim() === "false" ? "✕" : choice),
+    correct: correctAnswer.trim() === "true" ? "○" : (correctAnswer.trim() === "false" ? "✕" : correctAnswer),
+    explanation: <%= @question.explanation.to_s.to_json.html_safe %>,
+    isCorrect: choice.trim() === correctAnswer.trim()
+  });
+
+  localStorage.setItem("currentQuizReview", JSON.stringify(reviewItems));
 
   let score = parseInt(localStorage.getItem("score")) || 0;
   let total = parseInt(localStorage.getItem("total")) || 0;
@@ -677,6 +693,18 @@ function goIllustration(addWrong) {
   } else {
     playQuizSound("correct");
   }
+
+  let reviewItems = JSON.parse(localStorage.getItem("currentQuizReview")) || [];
+
+  reviewItems.push({
+    question: <%= @question.content.to_json.html_safe %>,
+    selected: addWrong ? "できなかった" : "できた！",
+    correct: "自己採点",
+    explanation: "",
+    isCorrect: !addWrong
+  });
+
+  localStorage.setItem("currentQuizReview", JSON.stringify(reviewItems));
 
   let score = parseInt(localStorage.getItem("score")) || 0;
   let total = parseInt(localStorage.getItem("total")) || 0;
@@ -791,7 +819,11 @@ function goIllustration(addWrong) {
 
   </div>
 
-  <div class="top-button-wrap">
+  <div class="result-button-wrap">
+    <a href="/questions/review" class="review-button">
+      解答を振り返る
+    </a>
+
     <a href="/?index=0" class="top-button">
       TOPへ戻る
     </a>
@@ -946,21 +978,41 @@ function goIllustration(addWrong) {
   line-height:1.6;
 }
 
-.top-button-wrap {
-  margin-top:24px;
+.result-button-wrap {
+  width:min(92%, 420px);
+  margin:24px auto 0;
+  display:flex;
+  gap:10px;
+}
+
+.review-button,
+.top-button {
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  min-height:52px;
+  padding:10px 8px;
+  box-sizing:border-box;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:800;
+  box-sizing:border-box;
+}
+
+.review-button {
+  background:#fff;
+  color:#174f8a;
+  border:1px solid rgba(23,79,138,.22);
+  box-shadow:0 4px 10px rgba(37,95,150,.10);
 }
 
 .top-button {
-  display:inline-block;
-  min-width:220px;
-  padding:13px 28px;
-  box-sizing:border-box;
   background:#4da3ff;
   color:white;
-  border-radius:14px;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:bold;
+  border:1px solid #4da3ff;
   box-shadow:0 4px 10px rgba(77,163,255,0.28);
 }
 

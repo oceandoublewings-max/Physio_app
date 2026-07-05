@@ -1,0 +1,275 @@
+
+<style>
+:root {
+  --review-navy:#0b2d55;
+  --review-navy2:#174f8a;
+  --review-gold:#d7b85a;
+  --review-bg:#f4f7fb;
+  --review-line:#dfe7f0;
+  --review-text:#102b4e;
+}
+
+html, body {
+  min-height:100%;
+  margin:0;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(42,105,166,.10), transparent 28%),
+    linear-gradient(180deg, #f4f7fb 0%, #f8faff 100%) !important;
+  color:var(--review-text);
+}
+
+.review-page {
+  width:min(92%, 680px);
+  margin:0 auto;
+  padding:18px 0 40px;
+  box-sizing:border-box;
+}
+
+.review-header {
+  padding:18px 20px;
+  background:linear-gradient(120deg, #08284c 0%, #0f3c6c 62%, #315f8c 100%);
+  border:1px solid rgba(215,184,90,.55);
+  border-radius:20px;
+  box-shadow:0 10px 24px rgba(10,45,85,.16);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.review-header::after {
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  right:-55px;
+  top:-85px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+}
+
+.review-header h1 {
+  position:relative;
+  z-index:1;
+  margin:0;
+  color:#fff;
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:.03em;
+}
+
+.review-header p {
+  position:relative;
+  z-index:1;
+  margin:7px 0 0;
+  color:rgba(255,255,255,.75);
+  font-size:13px;
+  font-weight:700;
+}
+
+.review-list {
+  margin-top:18px;
+}
+
+.review-card {
+  margin-bottom:14px;
+  padding:17px;
+  box-sizing:border-box;
+  background:rgba(255,255,255,.97);
+  border:1px solid var(--review-line);
+  border-left:6px solid #4da3ff;
+  border-radius:18px;
+  box-shadow:0 7px 18px rgba(17,55,94,.09);
+}
+
+.review-card.wrong {
+  border-left-color:#ef7777;
+}
+
+.review-card-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:9px;
+}
+
+.review-number {
+  color:#63758a;
+  font-size:13px;
+  font-weight:800;
+}
+
+.review-mark {
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#edf7ff;
+  color:#2584df;
+  font-size:20px;
+  font-weight:900;
+}
+
+.review-card.wrong .review-mark {
+  background:#fff0f0;
+  color:#e55353;
+}
+
+.review-question {
+  margin:0 0 14px;
+  color:#102b4e;
+  font-size:18px;
+  line-height:1.55;
+  font-weight:800;
+}
+
+.answer-row {
+  margin:6px 0;
+  padding:9px 11px;
+  border-radius:11px;
+  background:#f6f9fc;
+  color:#334e68;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.answer-label {
+  color:#174f8a;
+  font-weight:800;
+}
+
+.point-box {
+  margin-top:12px;
+  padding:12px 13px;
+  background:#fffdf2;
+  border:1px solid rgba(215,184,90,.65);
+  border-radius:13px;
+  color:#4c4328;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.review-empty {
+  margin-top:18px;
+  padding:30px 18px;
+  background:#fff;
+  border-radius:18px;
+  text-align:center;
+  color:#63758a;
+  font-weight:700;
+  box-shadow:0 7px 18px rgba(17,55,94,.08);
+}
+
+.review-back-wrap {
+  margin-top:22px;
+  text-align:center;
+}
+
+.review-back {
+  display:inline-block;
+  min-width:220px;
+  padding:12px 24px;
+  box-sizing:border-box;
+  background:linear-gradient(135deg, #0d3d6d, #1c5c96);
+  color:#fff;
+  border-radius:13px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:800;
+  box-shadow:0 6px 16px rgba(13,61,109,.22);
+}
+
+@media (max-width:480px) {
+  .review-page {
+    width:92%;
+    padding-top:12px;
+  }
+
+  .review-header {
+    padding:16px 14px;
+    border-radius:18px;
+  }
+
+  .review-header h1 {
+    font-size:22px;
+  }
+
+  .review-card {
+    padding:15px;
+  }
+
+  .review-question {
+    font-size:17px;
+  }
+}
+</style>
+
+<div class="review-page">
+
+  <div class="review-header">
+    <h1>解答を振り返る</h1>
+    <p>今回チャレンジした問題</p>
+  </div>
+
+  <div id="review-list" class="review-list"></div>
+
+  <div class="review-back-wrap">
+    <a href="javascript:history.back()" class="review-back">
+      結果画面へ戻る
+    </a>
+  </div>
+
+</div>
+
+<script>
+function escapeReviewHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+const reviewList = document.getElementById("review-list");
+const reviewItems = JSON.parse(localStorage.getItem("currentQuizReview")) || [];
+
+if (reviewItems.length === 0) {
+  reviewList.innerHTML =
+    '<div class="review-empty">今回の解答データはありません。</div>';
+} else {
+  reviewList.innerHTML = reviewItems.map((item, index) => {
+    const isCorrect = item.isCorrect === true;
+    const explanation = item.explanation
+      ? `<div class="point-box">${escapeReviewHtml(item.explanation).replace(/\n/g, "<br>")}</div>`
+      : "";
+
+    return `
+      <div class="review-card ${isCorrect ? "" : "wrong"}">
+        <div class="review-card-head">
+          <div class="review-number">問題 ${index + 1}</div>
+          <div class="review-mark">${isCorrect ? "○" : "×"}</div>
+        </div>
+
+        <div class="review-question">
+          ${escapeReviewHtml(item.question)}
+        </div>
+
+        <div class="answer-row">
+          <span class="answer-label">自分の答え：</span>
+          ${escapeReviewHtml(item.selected)}
+        </div>
+
+        <div class="answer-row">
+          <span class="answer-label">正解：</span>
+          ${escapeReviewHtml(item.correct)}
+        </div>
+
+        ${explanation}
+      </div>
+    `;
+  }).join("");
+}
+</script>

@@ -125,4 +125,7 @@ end
 def illustration_count
 end
 
+def review
+end
+
 end

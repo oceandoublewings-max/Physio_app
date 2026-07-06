@@ -1,5 +1,7 @@
 <style>
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
   body {
     margin: 0;
@@ -9,7 +11,7 @@
     color: #0c2340;
   }
 
-  .kinesiology-library-page {
+  .muscle-library-page {
     width: 100%;
     max-width: 430px;
     min-height: 100vh;
@@ -17,7 +19,8 @@
     padding: 18px 18px 30px;
   }
 
-  .kinesiology-library-hero {
+  /* ===== 上部ヘッダー ===== */
+  .muscle-library-hero {
     position: relative;
     overflow: hidden;
     padding: 24px 22px 22px;
@@ -29,18 +32,18 @@
     box-shadow: 0 12px 30px rgba(7, 29, 58, 0.18);
   }
 
-  .kinesiology-library-hero::before {
+  .muscle-library-hero::before {
     content: "";
     position: absolute;
     width: 180px;
     height: 180px;
-    border: 1px solid rgba(85, 151, 232, 0.16);
+    border: 1px solid rgba(214, 154, 50, 0.14);
     border-radius: 50%;
     right: -45px;
     top: -70px;
   }
 
-  .kinesiology-library-hero::after {
+  .muscle-library-hero::after {
     content: "";
     position: absolute;
     width: 110px;
@@ -66,7 +69,7 @@
     width: 52px;
     height: 52px;
     flex-shrink: 0;
-    border: 2px solid #6aa8f0;
+    border: 2px solid #d7a74c;
     border-radius: 15px;
     font-size: 25px;
     background: rgba(255,255,255,0.04);
@@ -76,14 +79,15 @@
     margin: 0;
     color: #ffffff;
     font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
 
   .hero-en {
     margin-top: 5px;
-    color: #8bbdff;
+    color: #e2b45c;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -94,14 +98,15 @@
     z-index: 1;
     margin: 17px 0 0;
     padding-top: 14px;
-    border-top: 1px solid rgba(139, 189, 255, 0.35);
+    border-top: 1px solid rgba(226, 180, 92, 0.35);
     color: rgba(255,255,255,0.82);
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.04em;
   }
 
-  .kinesiology-library-heading {
+  /* ===== 見出し ===== */
+  .muscle-library-heading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,18 +119,19 @@
     color: #102b4c;
   }
 
-  .kinesiology-library-heading::before,
-  .kinesiology-library-heading::after {
+  .muscle-library-heading::before,
+  .muscle-library-heading::after {
     content: "";
     width: 38px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #286dc5);
+    background: linear-gradient(90deg, transparent, #d69a32);
   }
 
-  .kinesiology-library-heading::after {
-    background: linear-gradient(90deg, #286dc5, transparent);
+  .muscle-library-heading::after {
+    background: linear-gradient(90deg, #d69a32, transparent);
   }
 
+  /* ===== サンプルカード ===== */
   .sample-card {
     position: relative;
     display: flex;
@@ -137,7 +143,7 @@
     margin-bottom: 14px;
     background: rgba(255,255,255,0.97);
     border: 1px solid rgba(15, 48, 82, 0.10);
-    border-bottom: 4px solid #286dc5;
+    border-bottom: 4px solid #d69a32;
     border-radius: 18px;
     text-decoration: none;
     color: #10233d;
@@ -172,8 +178,8 @@
     margin-right: 15px;
     border-radius: 50%;
     font-size: 27px;
-    background: radial-gradient(circle at 35% 30%, #ddecff, #5597e8);
-    box-shadow: 0 6px 15px rgba(40,109,197,0.22);
+    background: radial-gradient(circle at 35% 30%, #fff3d2, #efb95a);
+    box-shadow: 0 6px 15px rgba(214,154,50,0.24);
   }
 
   .sample-name {
@@ -187,12 +193,13 @@
   .sample-en {
     display: block;
     margin-top: 4px;
-    color: #286dc5;
+    color: #b37817;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.15em;
   }
 
+  /* ===== 購入カード ===== */
   .purchase-card {
     position: relative;
     overflow: hidden;
@@ -211,7 +218,7 @@
     height: 120px;
     right: -45px;
     bottom: -70px;
-    border: 1px solid rgba(139,189,255,0.18);
+    border: 1px solid rgba(226,180,92,0.18);
     border-radius: 50%;
   }
 
@@ -221,9 +228,9 @@
     display: inline-block;
     padding: 4px 10px;
     margin-bottom: 11px;
-    border: 1px solid rgba(139,189,255,0.55);
+    border: 1px solid rgba(226,180,92,0.55);
     border-radius: 20px;
-    color: #8bbdff;
+    color: #e2b45c;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -260,28 +267,28 @@
     justify-content: center;
     min-height: 46px;
     margin-top: 16px;
-    border: 1px solid rgba(139,189,255,0.55);
+    border: 1px solid rgba(226,180,92,0.55);
     border-radius: 12px;
     background: rgba(255,255,255,0.06);
-    color: #8bbdff;
+    color: #e2b45c;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
   }
 
   @media (max-width: 380px) {
-    .kinesiology-library-page {
+    .muscle-library-page {
       padding-left: 14px;
       padding-right: 14px;
     }
 
-    .kinesiology-library-hero {
+    .muscle-library-hero {
       padding-left: 18px;
       padding-right: 18px;
     }
 
     .hero-title {
-      font-size: 24px;
+      font-size: 18px;
     }
 
     .sample-name {
@@ -294,28 +301,30 @@
   }
 </style>
 
-<div class="kinesiology-library-page">
+<div class="muscle-library-page">
 
-  <section class="kinesiology-library-hero">
+  <section class="muscle-library-hero">
     <div class="hero-top">
-      <div class="hero-icon">🏃</div>
+
+      <div class="hero-icon">💪</div>
 
       <div>
-        <h1 class="hero-title">運動学資料集</h1>
-        <div class="hero-en">KINESIOLOGY LIBRARY</div>
+        <h1 class="hero-title">筋肉資料集</h1>
+        <div class="hero-en">MUSCLE LIBRARY</div>
       </div>
+
     </div>
 
     <p class="hero-message">
-      関節運動や動作を確認できる国試対策資料です。
+      筋肉の名称や位置を確認できる国試対策資料です。
     </p>
   </section>
 
-  <div class="kinesiology-library-heading">
+  <div class="muscle-library-heading">
     資料を見る
   </div>
 
-  <a href="/pdfs/kinesiology/000kinesiology_sample.pdf"
+  <a href="/pdfs/muscle/000muscle_sample.pdf"
      target="_blank"
      class="sample-card">
 
@@ -325,9 +334,11 @@
       <span class="sample-name">サンプルを見る</span>
       <span class="sample-en">VIEW SAMPLE</span>
     </div>
+
   </a>
 
   <div class="purchase-card">
+
     <div class="purchase-label">
       FULL VERSION
     </div>
@@ -344,6 +355,7 @@
     <div class="coming-soon">
       COMING SOON
     </div>
+
   </div>
 
 </div>

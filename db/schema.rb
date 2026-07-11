@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_11_085717) do
+ActiveRecord::Schema[7.1].define(version: 2026_07_11_095804) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,8 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_11_085717) do
     t.string "answer_image"
     t.string "subcategory"
     t.integer "answer_count"
+    t.string "goro_title"
+    t.text "goro"
   end
 
 end

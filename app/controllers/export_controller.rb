@@ -5,15 +5,15 @@ class ExportController < ApplicationController
   )
 
   def anatomy
-    export_markdown("解剖学", "anatomy")
+    export_markdown("解剖", "anatomy")
   end
 
   def physiology
-    export_markdown("生理学", "physiology")
+    export_markdown("生理", "physiology")
   end
 
   def kinesiology
-    export_markdown("運動学", "kinesiology")
+    export_markdown("運動", "kinesiology")
   end
 
   private

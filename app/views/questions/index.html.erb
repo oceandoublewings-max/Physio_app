@@ -166,40 +166,30 @@ body > * {
   box-shadow:0 0 0 3px rgba(67,160,71,.10), 0 6px 16px rgba(17,55,94,.08) !important;
 }
 
-.choice-btn.selected-correct::before,
-.choice-btn.selected-wrong::before {
+
+.choice-btn.selected-correct{
+  background:#e8f5e9 !important;
+}
+.choice-btn.selected-wrong{
+  background:#ffebee !important;
+  border-color:#e53935 !important;
+}
+.choice-btn.correct-choice::after,
+.choice-btn.selected-wrong::after{
   position:absolute;
-  left:-34px;
+  right:16px;
   top:50%;
   transform:translateY(-50%);
-  width:28px;
-  text-align:center;
-  font-size:27px;
-  line-height:1;
-  font-weight:900;
+  font-size:13px;
+  font-weight:800;
 }
-
-.choice-btn.selected-correct::before {
-  content:"○";
-  color:#43a047;
+.choice-btn.correct-choice::after{
+  content:"正解 ✓";
+  color:#2e7d32;
 }
-
-.choice-btn.selected-wrong {
-  border-color:#ef9a9a !important;
-}
-
-.choice-btn.selected-wrong::before {
-  content:"×";
-  color:#e53935;
-}
-
-@media (max-width:480px) {
-  .choice-btn.selected-correct::before,
-  .choice-btn.selected-wrong::before {
-    left:-28px;
-    width:24px;
-    font-size:25px;
-  }
+.choice-btn.selected-wrong::after{
+  content:"あなた";
+  color:#c62828;
 }
 
 .illustration-wrapper {
@@ -645,7 +635,7 @@ function checkAnswer(choice, selectedButton) {
   wrong = wrong.filter(q => q.id !== Number(questionId));
 
   if (selectedButton) {
-    selectedButton.classList.add("selected-correct", "correct-choice");
+    selectedButton.classList.add("correct-choice");
   }
 
   document.getElementById("result").innerHTML = explanationHtml;

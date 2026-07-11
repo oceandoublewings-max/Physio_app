@@ -31,6 +31,9 @@ get "physiology_analysis", to: "home#physiology_analysis"
 get "kinesiology_analysis", to: "home#kinesiology_analysis"
 get "stamps", to: "home#stamps"
 get "event_stamps", to: "home#event_stamps"
+get "export/anatomy", to: "export#anatomy"
+get "export/physiology", to: "export#physiology"
+get "export/kinesiology", to: "export#kinesiology"
   # Defines the root path route ("/")
   # root "posts#index"
 end

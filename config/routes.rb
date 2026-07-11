@@ -31,9 +31,14 @@ get "physiology_analysis", to: "home#physiology_analysis"
 get "kinesiology_analysis", to: "home#kinesiology_analysis"
 get "stamps", to: "home#stamps"
 get "event_stamps", to: "home#event_stamps"
-get "export/anatomy", to: "export#anatomy"
-get "export/physiology", to: "export#physiology"
-get "export/kinesiology", to: "export#kinesiology"
+get "export/anatomy_choice", to: "export#anatomy_choice"
+get "export/anatomy_true_false", to: "export#anatomy_true_false"
+
+get "export/physiology_choice", to: "export#physiology_choice"
+get "export/physiology_true_false", to: "export#physiology_true_false"
+
+get "export/kinesiology_choice", to: "export#kinesiology_choice"
+get "export/kinesiology_true_false", to: "export#kinesiology_true_false"
   # Defines the root path route ("/")
   # root "posts#index"
 end

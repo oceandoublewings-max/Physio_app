@@ -4,24 +4,36 @@ class ExportController < ApplicationController
     password: ENV.fetch("EXPORT_PASSWORD", "your_password")
   )
 
-  def anatomy
-    export_markdown("解剖", "anatomy")
+  def anatomy_choice
+    export_markdown("解剖", "choice", "anatomy_choice")
   end
 
-  def physiology
-    export_markdown("生理", "physiology")
+  def anatomy_true_false
+    export_markdown("解剖", "true_false", "anatomy_true_false")
   end
 
-  def kinesiology
-    export_markdown("運動", "kinesiology")
+  def physiology_choice
+    export_markdown("生理", "choice", "physiology_choice")
+  end
+
+  def physiology_true_false
+    export_markdown("生理", "true_false", "physiology_true_false")
+  end
+
+  def kinesiology_choice
+    export_markdown("運動", "choice", "kinesiology_choice")
+  end
+
+  def kinesiology_true_false
+    export_markdown("運動", "true_false", "kinesiology_true_false")
   end
 
   private
 
-  def export_markdown(category, filename)
-    questions = Question.where(category: category).order(:id)
+  def export_markdown(category, qtype, filename)
+    questions = Question.where(category: category, qtype: qtype).order(:id)
 
-    text = "# #{category} ゴロ集\n\n"
+    text = "# #{category} #{qtype == "choice" ? "5択" : "○×"} ゴロ集\n\n"
 
     questions.each do |q|
       text << <<~MD

@@ -33,9 +33,34 @@ class ExportController < ApplicationController
   def export_markdown(category, qtype, filename)
     questions = Question.where(category: category, qtype: qtype).order(:id)
 
-    text = "# #{category} #{qtype == "choice" ? "5択" : "○×"} ゴロ集\n\n"
+    title = qtype == "choice" ? "5択" : "○×"
 
-    questions.each do |q|
+    text = "# #{category} #{title} ゴロ集\n\n"
+
+    current_subcategory = nil
+
+    questions.each_with_index do |q, index|
+      # 50問ごとに区切り
+      if index % 50 == 0
+        start_no = index + 1
+        end_no = [index + 50, questions.size].min
+        section = (index / 50) + 1
+
+        text << <<~MD
+
+        ============================================================
+        🎯 ゴロ作成#{section}（#{start_no}～#{end_no}問）
+        ============================================================
+
+        MD
+      end
+
+      # サブカテゴリ見出し
+      if q.subcategory != current_subcategory
+        current_subcategory = q.subcategory
+        text << "\n## #{current_subcategory}\n\n"
+      end
+
       text << <<~MD
       ---
       問題ID: #{q.id}

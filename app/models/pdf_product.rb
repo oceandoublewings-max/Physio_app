@@ -1,0 +1,2 @@
+class PdfProduct < ApplicationRecord
+end

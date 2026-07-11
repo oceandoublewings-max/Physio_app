@@ -162,6 +162,7 @@ body > * {
 }
 
 .choice-btn.correct-choice {
+  background:#e8f5e9 !important;
   border:3px solid #43a047 !important;
   box-shadow:0 0 0 3px rgba(67,160,71,.10), 0 6px 16px rgba(17,55,94,.08) !important;
 }
@@ -502,6 +503,7 @@ box-shadow:0 1px 3px rgba(0,0,0,0.08);
 
   <% @question.choices.split(",").map(&:strip).shuffle.each do |choice| %>
     <button class="choice-btn"
+data-answer-value="<%= choice %>"
 onclick="checkAnswer(<%= choice.to_json %>, this)">
   <%= choice %>
 </button>
@@ -512,9 +514,11 @@ onclick="checkAnswer(<%= choice.to_json %>, this)">
 
 <!-- ○× -->
 <button class="choice-btn"
+data-answer-value="true"
 onclick="checkAnswer('true', this)">○</button>
 
 <button class="choice-btn"
+data-answer-value="false"
 onclick="checkAnswer('false', this)">✕</button>
 <% end %>
 
@@ -562,6 +566,13 @@ function playQuizSound(type) {
   audio.play().catch(() => {});
 }
 
+function normalizeAnswerValue(value) {
+  const v = String(value ?? "").trim();
+  if (["true","○","◯","〇"].includes(v)) return "true";
+  if (["false","✕","×","✖"].includes(v)) return "false";
+  return v;
+}
+
 function checkAnswer(choice, selectedButton) {
 
   if (window.answered === true) {
@@ -574,7 +585,8 @@ function checkAnswer(choice, selectedButton) {
     btn.style.pointerEvents = "none";
   });
 
-  const correctAnswer = "<%= j @question.answer.to_s %>";
+  const correctAnswer = normalizeAnswerValue("<%= j @question.answer.to_s %>");
+  const selectedAnswer = normalizeAnswerValue(choice);
   const explanation = "<%= j @question.explanation.to_s %>";
   const goroTitle = "";
   const goro = "<%= j @question.goro.to_s %>";
@@ -602,22 +614,18 @@ function checkAnswer(choice, selectedButton) {
 
   const choiceButtons = Array.from(document.querySelectorAll(".choice-btn"));
   const correctButton = choiceButtons.find(btn => {
-    const buttonValue =
-      btn.textContent.trim() === "○" ? "true" :
-      btn.textContent.trim() === "✕" ? "false" :
-      btn.textContent.trim();
-
-    return buttonValue.trim() === correctAnswer.trim();
+    const buttonValue = normalizeAnswerValue(btn.dataset.answerValue || btn.textContent);
+    return buttonValue === correctAnswer;
   });
 
   let reviewItems = JSON.parse(localStorage.getItem("currentQuizReview")) || [];
 
   reviewItems.push({
     question: <%= @question.content.to_json.html_safe %>,
-    selected: choice.trim() === "true" ? "○" : (choice.trim() === "false" ? "✕" : choice),
-    correct: correctAnswer.trim() === "true" ? "○" : (correctAnswer.trim() === "false" ? "✕" : correctAnswer),
+    selected: selectedAnswer === "true" ? "○" : (selectedAnswer === "false" ? "✕" : choice),
+    correct: correctAnswer === "true" ? "○" : (correctAnswer === "false" ? "✕" : correctAnswer),
     explanation: <%= @question.explanation.to_s.to_json.html_safe %>,
-    isCorrect: choice.trim() === correctAnswer.trim()
+    isCorrect: selectedAnswer === correctAnswer
   });
 
   localStorage.setItem("currentQuizReview", JSON.stringify(reviewItems));
@@ -628,7 +636,7 @@ function checkAnswer(choice, selectedButton) {
 
   let wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
- if (choice.trim() === correctAnswer.trim()) {
+ if (selectedAnswer === correctAnswer) {
   score += 1;
   playQuizSound("correct");
 

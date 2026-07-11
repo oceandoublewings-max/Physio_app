@@ -38,18 +38,23 @@ def anatomy_pdfs
 end
 
 def bone_pdfs
+  @pdf_product = PdfProduct.find_by(title: "骨資料集")
 end
 
 def muscle_pdfs
+  @pdf_product = PdfProduct.find_by(title: "筋肉資料集")
 end
 
 def neurovascular_pdfs
+  @pdf_product = PdfProduct.find_by(title: "神経・血管資料集")
 end
 
 def physiology_pdfs
+  @pdf_product = PdfProduct.find_by(title: "生理学資料集")
 end
 
 def kinesiology_pdfs
+  @pdf_product = PdfProduct.find_by(title: "運動学資料集")
 end
 
 def stamps

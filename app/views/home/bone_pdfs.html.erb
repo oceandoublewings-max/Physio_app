@@ -309,14 +309,14 @@
       <div class="hero-icon">🦴</div>
 
       <div>
-        <h1 class="hero-title">骨資料集</h1>
+        <h1 class="hero-title"><%= @pdf_product.title %></h1>
         <div class="hero-en">BONE LIBRARY</div>
       </div>
 
     </div>
 
     <p class="hero-message">
-      骨の名称や位置を確認できる国試対策資料です。
+      <%= @pdf_product.description %>
     </p>
   </section>
 
@@ -349,11 +349,12 @@
     </h2>
 
     <p class="purchase-text">
-      完全版の資料はこちらからダウンロードできます。
+      完全版の資料はこちらからダウンロードできます。<br>
+      <strong>¥<%= @pdf_product.price %>（税込）</strong>
     </p>
 
     <div class="coming-soon">
-      COMING SOON
+      ¥<%= @pdf_product.price %>で購入する
     </div>
 
   </div>

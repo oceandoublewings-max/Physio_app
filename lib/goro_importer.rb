@@ -21,32 +21,42 @@ class GoroImporter
       question = Question.find_by(id: id.to_i)
       next unless question
 
-      goro = block[/ゴロ:\s*(.*)/, 1]&.strip
-
-      explanation = block[/国試ポイント:\s*(.+)/m, 1]
-      explanation = explanation&.strip
+      goro_title = block[/ゴロタイトル:\s*(.*?)\nゴロ:/m, 1]&.strip
+      goro = block[/ゴロ:\s*(.*?)\n国試ポイント:/m, 1]&.strip
+      explanation = block[/国試ポイント:\s*(.*)/m, 1]&.strip
 
       attrs = {}
 
-      attrs[:goro] = goro unless goro.nil?
+      attrs[:goro_title] =
+        if goro_title.present?
+          goro_title
+        else
+          nil
+        end
 
-      if explanation.present?
-        attrs[:explanation] = explanation
+      attrs[:goro] =
+        if goro.present?
+          goro
+        else
+          nil
+        end
+
+      attrs[:explanation] = explanation if explanation.present?
+
+      unless attrs.empty?
+        question.update!(attrs)
+        updated += 1
+        puts "✓ 更新 #{question.id}"
       end
-
-      question.update!(attrs) unless attrs.empty?
-
-      updated += 1
-      puts "✓ 更新 #{question.id}"
     end
 
-    puts "----------------------------"
+    puts "------------------------------"
     puts "#{updated}件 更新しました"
   end
 
   def self.import_all
     Dir.glob(Rails.root.join("app/goro/**/*.md")).sort.each do |file|
-      puts "============================"
+      puts "=============================="
       puts File.basename(file)
       import(file)
     end

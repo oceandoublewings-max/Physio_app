@@ -588,26 +588,32 @@ function checkAnswer(choice, selectedButton) {
   const correctAnswer = normalizeAnswerValue("<%= j @question.answer.to_s %>");
   const selectedAnswer = normalizeAnswerValue(choice);
   const explanation = "<%= j @question.explanation.to_s %>";
-  const goroTitle = "";
+  const goroTitle = "<%= j @question.goro_title.to_s %>";
   const goro = "<%= j @question.goro.to_s %>";
 
   let explanationHtml =
     "<div style='background:#FFF9C4;border:2px solid #FFD54F;padding:13px;margin:20px auto;width:80%;max-width:900px;border-radius:10px;font-size:15px;line-height:1.6;'>" +
     explanation;
 
+if (goroTitle.trim() !== "" || goro.trim() !== "") {
+  explanationHtml +=
+    "<hr style='margin:12px 0;border:none;border-top:1px solid #e0d39a;'>" +
+    "<div style='margin-top:8px;font-size:14px;'><strong>🧠 覚え方（ゴロ）</strong></div>";
+
+  if (goroTitle.trim() !== "") {
+    explanationHtml +=
+      "<div style='margin-top:6px;font-weight:bold;font-size:15px;'>" +
+      goroTitle +
+      "</div>";
+  }
+
   if (goro.trim() !== "") {
     explanationHtml +=
-      "<hr style='margin:12px 0;border:none;border-top:1px solid #e0d39a;'>" +
-      "<div style='margin-top:8px;font-size:14px;'><strong>🧠 覚え方（ゴロ）</strong></div>";
-
-    if (goroTitle.trim() !== "") {
-      explanationHtml +=
-        "<div style='margin-top:6px;font-weight:bold;font-size:15px;'>" + goroTitle + "</div>";
-    }
-
-    explanationHtml +=
-      "<div style='margin-top:6px;font-size:14px;line-height:1.6;'>" + goro + "</div>";
+      "<div style='margin-top:6px;font-size:14px;line-height:1.6;'>" +
+      goro +
+      "</div>";
   }
+}
 
   explanationHtml += "</div>";
   const questionId = "<%= @question.id.to_s %>";

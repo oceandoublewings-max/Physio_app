@@ -608,9 +608,10 @@ if (goroTitle.trim() !== "" || goro.trim() !== "") {
   }
 
   if (goro.trim() !== "") {
+    let goroText = goro.replace(/^国試ポイント\s*:?\s*/m, "").trim();
     explanationHtml +=
       "<div style='margin-top:6px;font-size:14px;line-height:1.6;'>" +
-      goro +
+      goroText +
       "</div>";
   }
 }

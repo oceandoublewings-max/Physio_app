@@ -588,7 +588,18 @@ function checkAnswer(choice, selectedButton) {
   const correctAnswer = normalizeAnswerValue("<%= j @question.answer.to_s %>");
   const selectedAnswer = normalizeAnswerValue(choice);
   const explanation = "<%= j @question.explanation.to_s %>";
-  explanationHtml += "</div>";
+
+  const explanationHtml = `
+<div style="
+  background:#fff8dc;
+  border:1px solid #d7b85a;
+  border-radius:12px;
+  padding:12px;
+  margin-top:12px;
+  text-align:left;
+">
+${explanation.replace(/\n/g, "<br>")}
+</div>`;
   const questionId = "<%= @question.id.to_s %>";
 
   const choiceButtons = Array.from(document.querySelectorAll(".choice-btn"));

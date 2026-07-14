@@ -1,0 +1,184 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #eef3f9;
+    font-family: sans-serif;
+    color: #102847;
+  }
+
+  .login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+  }
+
+  .hero {
+    padding: 32px 24px;
+    text-align: center;
+    color: white;
+    background:
+      linear-gradient(
+        135deg,
+        #041e42 0%,
+        #0a4278 100%
+      );
+  }
+
+  .hero h1{
+    margin:0;
+    font-size:32px;
+    font-family: serif;
+  }
+
+  .hero p{
+    margin-top:8px;
+    color:#d8bd73;
+    font-size:13px;
+  }
+
+  .content{
+    padding:28px 24px;
+  }
+
+  .skeleton{
+    font-size:72px;
+    text-align:center;
+    margin-bottom:12px;
+  }
+
+  h2{
+    margin:0;
+    text-align:center;
+    font-size:24px;
+  }
+
+  .description{
+    text-align:center;
+    color:#666;
+    margin:12px 0 26px;
+    line-height:1.8;
+  }
+
+  .guest-btn{
+    display:block;
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#1f73d6;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    text-align:center;
+  }
+
+  .guest-btn:hover{
+    background:#185fb3;
+  }
+
+  .box{
+    margin-top:28px;
+    padding:18px;
+    border-radius:14px;
+    background:#f7f9fc;
+    border:1px solid #dfe6ef;
+  }
+
+  .box h3{
+    margin-top:0;
+    text-align:center;
+  }
+
+  .box ul{
+    margin:0;
+    padding-left:22px;
+    line-height:2;
+  }
+
+  .soon{
+    margin-top:28px;
+    text-align:center;
+    color:#777;
+    line-height:2;
+  }
+</style>
+
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="hero">
+
+      <h1>⚕ PT国試対策</h1>
+
+      <p>
+        PHYSICAL THERAPIST NATIONAL EXAM PREP
+      </p>
+
+    </div>
+
+    <div class="content">
+
+      <div class="skeleton">
+        💀
+      </div>
+
+      <h2>まずはゲストでお試し！</h2>
+
+      <p class="description">
+        登録不要ですぐに学習できます。<br>
+        気に入ったら正式登録でデータを保存できます。
+      </p>
+
+      <%= button_to "👤 ゲストで始める",
+          "/guest_login",
+          method: :post,
+          class: "guest-btn" %>
+
+      <div class="box">
+
+        <h3>ログインするとできること</h3>
+
+        <ul>
+          <li>📚 学習履歴を保存</li>
+          <li>🔥 苦手問題を保存</li>
+          <li>🏅 スタンプを保存</li>
+          <li>☁️ 機種変更しても安心</li>
+          <li>📖 PDF資料集を購入・閲覧</li>
+        </ul>
+
+      </div>
+
+      <div class="soon">
+
+        <strong>正式版で追加予定</strong><br><br>
+
+        🍎 Appleでログイン<br>
+        🟢 Googleでログイン<br>
+        ✉️ メールアドレスでログイン
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

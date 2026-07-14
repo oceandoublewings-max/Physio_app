@@ -475,7 +475,7 @@
 
         <% (1..25).each do |i| %>
 
-          <% file = "events/autumn_%03d.png" % i %>
+          <% file = "events/summer_%03d.png" % i %>
 
           <div class="event-stamp-cell">
 
@@ -590,48 +590,7 @@
     </section>
 
 
-    <!-- クリスマス -->
-    <section class="event-section">
 
-      <div class="event-section-heading">
-        <h2 class="event-section-title">
-          🎄 クリスマス
-        </h2>
-
-        <span class="event-section-status">
-          準備中
-        </span>
-      </div>
-
-      <div class="event-stamp-grid">
-
-        <% (1..25).each do |i| %>
-
-          <% file = "events/christmas_%03d.png" % i %>
-
-          <div class="event-stamp-cell">
-
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
-
-              <%= image_tag "/images/#{file}",
-                onclick: "openStamp('/images/#{file}')"
-              %>
-
-            <% else %>
-
-              <span class="event-stamp-number">
-                <%= "%03d" % i %>
-              </span>
-
-            <% end %>
-
-          </div>
-
-        <% end %>
-
-      </div>
-
-    </section>
 
   </div>
 

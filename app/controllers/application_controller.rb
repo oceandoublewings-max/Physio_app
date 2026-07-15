@@ -7,8 +7,7 @@ class ApplicationController < ActionController::Base
   def require_login
     return if session[:user_id].present?
 
-    # ログイン不要ページ
-    return if controller_name.in?(%w[home sessions])
+    return if controller_name == "sessions"
 
     redirect_to login_path
   end

@@ -67,4 +67,13 @@ class HomeController < ApplicationController
   def event_stamps
   end
 
+  def about
+  end
+
+  def terms
+  end
+
+  def privacy
+  end
+
 end

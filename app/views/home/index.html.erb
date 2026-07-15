@@ -181,7 +181,11 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  .sound-settings-panel {
+  .settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:9998;}
+.settings-overlay.is-open{display:block;}
+.settings-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(320px,90vw);background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.25);display:none;z-index:9999;}
+.settings-modal.is-open{display:block;}
+.sound-settings-panel {
     position: absolute;
     bottom: 48px;
     right: 8px;
@@ -617,7 +621,8 @@
         ⚙️
       </button>
 
-      <div class="sound-settings-panel" id="sound-settings-panel">
+      <div class="settings-overlay" id="settings-overlay"></div>
+      <div class="settings-modal" id="sound-settings-panel">
         <p class="sound-settings-title">⚙️ 設定</p>
 
         <div style="margin-bottom:10px;">
@@ -654,6 +659,7 @@
         <div style="text-align:center;font-size:11px;color:#7c8795;">
           Version 1.0.0
         </div>
+              <div style="margin-top:16px;text-align:center;"><button type="button" id="close-settings" class="sound-option" style="width:100%;">✕ 閉じる</button></div>
       </div>
     </div>
 
@@ -886,7 +892,8 @@
     event.stopPropagation();
 
     const isOpen =
-      soundSettingsPanel.classList.toggle("is-open");
+      document.getElementById("settings-overlay").classList.toggle("is-open");
+    soundSettingsPanel.classList.toggle("is-open");
 
     soundSettingsButton.setAttribute(
       "aria-expanded",
@@ -903,6 +910,7 @@
 
       updateSoundButtons();
 
+      document.getElementById("settings-overlay").classList.remove("is-open");
       soundSettingsPanel.classList.remove("is-open");
       soundSettingsButton.setAttribute("aria-expanded", "false");
     });
@@ -910,6 +918,7 @@
 
   document.addEventListener("click", function(event) {
     if (!document.getElementById("sound-settings").contains(event.target)) {
+      document.getElementById("settings-overlay").classList.remove("is-open");
       soundSettingsPanel.classList.remove("is-open");
       soundSettingsButton.setAttribute("aria-expanded", "false");
     }
@@ -937,3 +946,4 @@
       "&category=all";
   }
 </script>
+<script>document.getElementById("settings-overlay")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});document.getElementById("close-settings")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});</script>

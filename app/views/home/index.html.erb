@@ -607,9 +607,26 @@
       <div class="settings-modal" id="sound-settings-panel">
         <p class="sound-settings-title">⚙️ 設定</p>
 
-        <div style="margin-bottom:10px;">
-          <div style="font-size:18px;font-weight:bold;color:red;margin-bottom:6px;">
-  🔊 効果音
+        <div style="margin-bottom:16px;">
+
+  <div style="display:flex;align-items:center;font-size:15px;font-weight:700;color:#102847;margin-bottom:10px;">
+    🔊&nbsp;効果音
+  </div>
+
+  <div class="sound-options">
+    <button type="button"
+            class="sound-option"
+            data-sound="on">
+      ON
+    </button>
+
+    <button type="button"
+            class="sound-option"
+            data-sound="off">
+      OFF
+    </button>
+  </div>
+
 </div>
           <div class="sound-options">
             <button type="button" class="sound-option" data-sound="on">
@@ -624,10 +641,17 @@
 
         <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">
 
-        <div style="font-size:12px;line-height:2;">
-          👤 アカウント<br>
-          <span style="color:#6b7280;">（ゲスト利用中）</span>
-        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+
+  <div style="font-size:15px;font-weight:700;color:#102847;">
+    👤 アカウント
+  </div>
+
+  <div style="font-size:14px;color:#6b7280;padding-left:4px;">
+    ゲスト利用中
+  </div>
+
+</div>
 
         <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">
 

@@ -183,27 +183,9 @@
 
   .settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:9998;}
 .settings-overlay.is-open{display:block;}
-.settings-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(320px,90vw);background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.25);display:none;z-index:9999;}
+.settings-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(320px,90vw);max-height:85vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.25);display:none;z-index:9999;}
 .settings-modal.is-open{display:block;}
-.sound-settings-panel {
-    position: absolute;
-    bottom: 48px;
-    right: 8px;
-    width: 185px;
-    max-width: calc(100vw - 30px);
-    padding: 11px 12px;
-    display: none;
-    color: #102847;
-    background: rgba(255,255,255,0.98);
-    border: 1px solid #d8e1eb;
-    border-radius: 13px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
-    z-index: 9999;
-  }
 
-  .sound-settings-panel.is-open {
-    display: block;
-  }
 
   .sound-settings-title {
     margin: 0 0 8px;

@@ -44,8 +44,14 @@ body{
 }
 .skeleton{
   text-align:center;
-  font-size:56px;
-  margin-bottom:8px;
+  margin-bottom:10px;
+}
+
+.skeleton img{
+  width:110px;
+  height:auto;
+  display:block;
+  margin:0 auto;
 }
 h2{
   margin:0;
@@ -127,7 +133,9 @@ h2{
 
     <div class="content">
 
-      <div class="skeleton">💀</div>
+      <div class="skeleton">
+  <%= image_tag "stamps/stamp_003.png", alt: "ガイコツくん" %>
+</div>
 
       <h2>まずはゲストでお試し！</h2>
 

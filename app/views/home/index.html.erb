@@ -183,9 +183,10 @@
 
   .sound-settings-panel {
     position: absolute;
+    top: 44px;
     right: 0;
-    bottom: 42px;
-    width: 178px;
+    width: 185px;
+    max-width: calc(100vw - 30px);
     padding: 11px 12px;
     display: none;
     color: #102847;
@@ -193,6 +194,7 @@
     border: 1px solid #d8e1eb;
     border-radius: 13px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+    z-index: 9999;
   }
 
   .sound-settings-panel.is-open {

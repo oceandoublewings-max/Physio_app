@@ -53,7 +53,7 @@ h2{
   font-size:22px;
 }
 .description{
-  margin:10px 0 20px;
+  margin:10px 0 18px;
   text-align:center;
   color:#666;
   line-height:1.6;
@@ -72,28 +72,48 @@ h2{
   text-align:center;
   text-decoration:none;
 }
+.guest-badges{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:16px 0 4px;
+}
+.guest-badges span{
+  background:#eef5ff;
+  color:#1b3763;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+}
 .box{
-  margin-top:18px;
+  margin-top:20px;
   padding:16px;
   border-radius:14px;
   background:#f8fbff;
   border:1px solid #dfe6ef;
 }
 .box h3{
-  margin:0 0 10px;
+  margin:0 0 12px;
   text-align:center;
-  font-size:24px;
+  font-size:22px;
 }
 .box ul{
   margin:0;
-  padding-left:20px;
+  padding-left:22px;
   line-height:2;
 }
 .soon{
-  margin-top:20px;
+  margin-top:22px;
   text-align:center;
   color:#666;
-  line-height:1.8;
+  line-height:1.9;
+}
+.guest-note{
+  margin-top:16px;
+  font-size:14px;
+  color:#666;
 }
 </style>
 
@@ -113,30 +133,43 @@ h2{
 
       <p class="description">
         登録不要ですぐ学習できます。<br>
-        正式登録でデータを保存できます。
+        正式登録すると学習データを保存できます。
       </p>
 
-      <%= button_to "👤 ゲストで始める",
+      <%= button_to "🚀 今すぐゲストで始める",
           "/guest_login",
           method: :post,
           class: "guest-btn" %>
+
+      <div class="guest-badges">
+        <span>✅ 無料</span>
+        <span>⚡ 登録不要</span>
+        <span>📚 すぐ始められる</span>
+      </div>
 
       <div class="box">
         <h3>ログインするとできること</h3>
         <ul>
           <li>📊 苦手分析</li>
-          <li>🏅 スタンプ保存</li>
-          <li>☁️ データ保存・引き継ぎ</li>
+          <li>🏅 スタンプコレクション</li>
+          <li>☁️ 学習データ保存</li>
+          <li>📱 機種変更でも引き継ぎOK</li>
         </ul>
       </div>
 
       <div class="soon">
-        <strong>正式版で追加予定</strong><br><br>
+        <strong>🚧 正式版で利用できます</strong><br><br>
+
         🍎 Appleでログイン<br>
         🟢 Googleでログイン<br>
         ✉️ メールアドレスでログイン
+
+        <div class="guest-note">
+          ゲストでもすべての問題を体験できます。
+        </div>
       </div>
 
     </div>
+
   </div>
 </div>

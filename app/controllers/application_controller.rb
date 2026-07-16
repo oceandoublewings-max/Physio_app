@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    return if session[:user_id].present?
+    return if current_user.present?
 
     return if controller_name == "sessions"
 

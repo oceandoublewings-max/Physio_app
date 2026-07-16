@@ -16,9 +16,13 @@ class SessionsController < ApplicationController
   end
 
   def guest_login
-    user = User.create!(guest: true)
+    user = User.create!(
+      guest: true,
+      email: "guest_#{SecureRandom.hex(8)}@example.com",
+      password: Devise.friendly_token[0, 20]
+    )
 
-    session[:user_id] = user.id
+    sign_in(user)
 
     redirect_to root_path, notice: "ゲストログインしました！"
   end

@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
-
-  get "/auth/:provider/callback", to: "sessions#create"
-  get "/auth/failure", to: redirect("/login")
+  devise_for :users,
+    controllers: {
+      omniauth_callbacks: "users/omniauth_callbacks"
+    }
 
   root "home#index"
 
   get "/login", to: "sessions#login"
   post "/guest_login", to: "sessions#guest_login"
   delete "/logout", to: "sessions#destroy"
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -19,6 +17,7 @@ Rails.application.routes.draw do
   get "/questions/review", to: "questions#review"
   get "/select", to: "questions#select"
   post "/questions/api_create", to: "questions#api_create"
+
   get "illustrations", to: "home#illustrations"
   get "/category", to: "home#category"
   get "/bone_pdfs", to: "home#bone_pdfs"
@@ -32,6 +31,7 @@ Rails.application.routes.draw do
   get "/stamps", to: "home#stamps"
   get "/contact", to: "home#contact"
   get "/illustration_count", to: "questions#illustration_count"
+
   get "anatomy_analysis", to: "home#anatomy_analysis"
   get "physiology_analysis", to: "home#physiology_analysis"
   get "kinesiology_analysis", to: "home#kinesiology_analysis"
@@ -47,5 +47,4 @@ Rails.application.routes.draw do
   get "export/physiology_true_false", to: "export#physiology_true_false"
   get "export/kinesiology_choice", to: "export#kinesiology_choice"
   get "export/kinesiology_true_false", to: "export#kinesiology_true_false"
-
 end

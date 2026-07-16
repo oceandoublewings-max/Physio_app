@@ -16,14 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def guest_login
-    password = Devise.friendly_token[0, 20]
-
-    user = User.create!(
-      guest: true,
-      email: "guest_#{SecureRandom.uuid}@example.com",
-      password: password,
-      password_confirmation: password
-    )
+    user = User.create!(guest: true)
 
     session[:user_id] = user.id
 

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  get "/auth/:provider/callback", to: "sessions#create"
+  get "/auth/failure", to: redirect("/login")
+
   root "home#index"
 
   get "/login", to: "sessions#login"

@@ -1,188 +1,91 @@
 <!-- login.html.erb 完全版 -->
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  background:#eef3f9;
-  font-family:sans-serif;
-  color:#102847;
-}
-.login-page{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px;
-}
-.login-card{
-  width:100%;
-  max-width:430px;
-  background:#fff;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 12px 35px rgba(0,0,0,.12);
-}
-.hero{
-  padding:22px 20px;
-  text-align:center;
-  color:#fff;
-  background:linear-gradient(135deg,#041e42 0%,#0a4278 100%);
-}
-.hero h1{
-  margin:0;
-  font-size:30px;
-  font-family:serif;
-}
-.hero p{
-  margin:8px 0 0;
-  color:#d8bd73;
-  font-size:12px;
-  letter-spacing:1px;
-  line-height:1.4;
-}
-.content{
-  padding:20px;
-}
-.skeleton{
-  text-align:center;
-  margin-bottom:2px;
-}
-
-.skeleton img{
-  width:110px;
-  max-width:110px;
-  height:auto;
-  display:block;
-  margin:0 auto;
-}
-h2{
-  margin:0;
-  text-align:center;
-  font-size:20px;
-}
-.description{
-  margin:10px 0 18px;
-  text-align:center;
-  color:#666;
-  line-height:1.6;
-  font-size:16px;
-}
-.guest-btn{
-  display:block;
-  width:100%;
-  padding:15px;
-  border:none;
-  border-radius:14px;
-  background:linear-gradient(180deg,#3d86ea,#2d6fd3);
-  color:#fff;
-  font-size:18px;
-  font-weight:bold;
-  text-align:center;
-  text-decoration:none;
-}
-.guest-badges{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:16px 0 4px;
-}
-.guest-badges span{
-  background:#eef5ff;
-  color:#1b3763;
-  padding:5px 10px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:700;
-}
-.box{
-  margin-top:20px;
-  padding:15px;
-  border-radius:14px;
-  background:#f8fbff;
-  border:1px solid #dfe6ef;
-}
-.box h3{
-  margin:0 0 12px;
-  text-align:center;
-  font-size:20px;
-}
-.box ul{
-  margin:0;
-  padding-left:22px;
-  line-height:1.8;
-}
-.soon{
-  margin-top:22px;
-  text-align:center;
-  color:#666;
-  line-height:1.9;
-}
-.guest-note{
-  margin-top:16px;
-  font-size:14px;
-  color:#666;
-}
+body{margin:0;background:#eef3f9;font-family:sans-serif;color:#102847;}
+.login-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:12px;}
+.login-card{width:100%;max-width:430px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.12);}
+.hero{padding:22px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#041e42 0%,#0a4278 100%);}
+.hero h1{margin:0;font-size:30px;font-family:serif;}
+.hero p{margin:8px 0 0;color:#d8bd73;font-size:12px;letter-spacing:1px;line-height:1.4;}
+.content{padding:20px;}
+.skeleton{text-align:center;margin-bottom:2px;}
+.skeleton img{width:110px;max-width:110px;height:auto;display:block;margin:0 auto;}
+h2{margin:0;text-align:center;font-size:20px;}
+.description{margin:10px 0 18px;text-align:center;color:#666;line-height:1.6;font-size:16px;}
+.guest-btn{display:block;width:100%;padding:15px;border:none;border-radius:14px;background:linear-gradient(180deg,#3d86ea,#2d6fd3);color:#fff;font-size:18px;font-weight:bold;text-align:center;text-decoration:none;}
+.guest-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:16px 0 4px;}
+.guest-badges span{background:#eef5ff;color:#1b3763;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;}
+.box{margin-top:20px;padding:15px;border-radius:14px;background:#f8fbff;border:1px solid #dfe6ef;}
+.box h3{margin:0 0 12px;text-align:center;font-size:20px;}
+.box ul{margin:0;padding-left:22px;line-height:1.8;}
+.soon{margin-top:22px;text-align:center;color:#666;line-height:1.9;}
+.guest-note{margin-top:16px;font-size:14px;color:#666;}
 </style>
 
 <div class="login-page">
-  <div class="login-card">
-
-    <div class="hero">
-      <h1>⚕ PT・OT共通 基礎学習</h1>
-      <p>PHYSICAL THERAPIST NATIONAL EXAM PREP</p>
-    </div>
-
-    <div class="content">
-
-      <div class="skeleton">
-  <img src="/images/stamps/stamp_003.png" alt="ガイコツくん">
+<div class="login-card">
+<div class="hero">
+<h1>⚕ PT・OT共通 基礎学習</h1>
+<p>PHYSICAL THERAPIST NATIONAL EXAM PREP</p>
 </div>
 
-      <h2>まずはゲストでお試し！</h2>
+<div class="content">
+<div class="skeleton">
+<img src="/images/stamps/stamp_003.png" alt="ガイコツくん">
+</div>
 
-      <p class="description">
-         登録不要ですぐ学習できます。<br>
-         正式登録すると<br>
-        学習データを保存できます。
-      </p>
+<h2>まずはゲストでお試し！</h2>
 
-      <%= button_to "🚀 今すぐゲストで始める",
-          "/guest_login",
-          method: :post,
-          class: "guest-btn" %>
+<p class="description">
+登録不要ですぐ学習できます。<br>
+正式登録すると<br>
+学習データを保存できます。
+</p>
 
-      <div class="guest-badges">
-        <span>✅ 無料</span>
-        <span>⚡ 登録不要</span>
-        <span>📚 すぐ始められる</span>
-      </div>
+<%= button_to "🚀 今すぐゲストで始める",
+"/guest_login",
+method: :post,
+class: "guest-btn" %>
 
-      <div class="box">
-        <h3>無料登録で利用できる機能</h3>
-        <ul>
-          <li>📊 苦手分析レーダー</li>
-          <li>📈 分野別分析</li>
-          <li>🏅 スタンプ保存</li>
-          <li>☁️ データ保存・引き継ぎ</li>
-          <li>📖 PDF資料集の購入</li>
-        </ul>
-        <div style="margin-top:8px;font-size:12px;color:#888;text-align:center;">※PDF資料集のみ有料です</div>
-      </div>
+<div class="guest-badges">
+<span>✅ 無料</span>
+<span>⚡ 登録不要</span>
+<span>📚 すぐ始められる</span>
+</div>
 
-      <div class="soon">
-        <strong>🍎 無料登録（近日対応）</strong><br><br>
+<div class="box">
+<h3>無料登録で利用できる機能</h3>
+<ul>
+<li>📊 苦手分析レーダー</li>
+<li>📈 分野別分析</li>
+<li>🏅 スタンプ保存</li>
+<li>☁️ データ保存・引き継ぎ</li>
+<li>📖 PDF資料集の購入</li>
+</ul>
+<div style="margin-top:8px;font-size:12px;color:#888;text-align:center;">※PDF資料集のみ有料です</div>
+</div>
 
-        🍎 Appleでログイン<br>
-        🟢 Googleでログイン<br>
-        ✉️ メールアドレスでログイン
+<div class="soon">
+<strong>🍎 無料登録（近日対応）</strong><br><br>
 
-        <div class="guest-note">
-          ゲストでもアプリを体験できます。<br>※PDF資料集の購入は無料登録後にご利用いただけます。
-        </div>
-      </div>
+🍎 Appleでログイン（準備中）<br><br>
 
-    </div>
+<%= button_to user_google_oauth2_omniauth_authorize_path,
+    method: :post,
+    data: { turbo: false },
+    class: "guest-btn",
+    style: "margin-bottom:12px;background:#34A853;" do %>
+  🟢 Googleでログイン
+<% end %>
 
-  </div>
+✉️ メールアドレスでログイン（準備中)
+
+<div class="guest-note">
+ゲストでもアプリを体験できます。<br>
+※PDF資料集の購入は無料登録後にご利用いただけます。
+</div>
+</div>
+
+</div>
+</div>
 </div>

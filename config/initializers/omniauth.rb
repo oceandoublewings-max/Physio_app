@@ -1,9 +1,13 @@
-Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_oauth2,
-           ENV["GOOGLE_CLIENT_ID"],
-           ENV["GOOGLE_CLIENT_SECRET"],
-           {
-             scope: "email,profile",
-             prompt: "select_account"
-           }
-end
+# frozen_string_literal: true
+
+# ============================================================
+# OmniAuth の設定は Devise が管理します。
+#
+# config/initializers/devise.rb
+#
+# の
+#
+# config.omniauth :google_oauth2, ...
+#
+# を使用するため、このファイルでは何も設定しません。
+# ============================================================

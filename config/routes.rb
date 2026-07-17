@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       omniauth_callbacks: "users/omniauth_callbacks"
     }
 
-  root "home#index"
+  root "sessions#login"
 
   get "/login", to: "sessions#login"
   post "/guest_login", to: "sessions#guest_login"

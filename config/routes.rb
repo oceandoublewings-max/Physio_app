@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   root "sessions#login"
 
+  get "/home", to: "home#index", as: :home
+
   get "/login", to: "sessions#login"
   post "/guest_login", to: "sessions#guest_login"
   delete "/logout", to: "sessions#destroy"

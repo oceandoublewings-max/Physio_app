@@ -25,4 +25,19 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to new_user_session_path,
                 alert: "Googleログイン中にエラーが発生しました。"
   end
+
+  def failure
+    Rails.logger.error "========== OMNIAUTH FAILURE =========="
+    Rails.logger.error "error: #{request.env['omniauth.error']}"
+    Rails.logger.error "error.type: #{request.env['omniauth.error.type']}"
+    Rails.logger.error "error.strategy: #{request.env['omniauth.error.strategy']}"
+    Rails.logger.error "error.reason: #{request.env['omniauth.error.reason']}"
+
+    if request.env["omniauth.error"].respond_to?(:backtrace)
+      Rails.logger.error request.env["omniauth.error"].backtrace.join("\n")
+    end
+
+    redirect_to new_user_session_path,
+                alert: "Googleログインに失敗しました。"
+  end
 end

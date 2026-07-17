@@ -28,8 +28,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    reset_session
     sign_out(current_user) if user_signed_in?
+    reset_session
 
     redirect_to login_path, notice: "ログアウトしました。"
   end

@@ -3,7 +3,957 @@
     box-sizing: border-box;
   }
 
+  body {<style>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
+    margin: 0;
+    background: #eef3f9;
+    color: #102847;
+  }
+
+  .top-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #f8fbff;
+  }
+
+  /* =========================
+     上部ヒーロー
+  ========================= */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 165px;
+    padding: 16px 18px 14px;
+    color: white;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 30, 66, 0.98) 0%,
+        rgba(6, 42, 87, 0.95) 48%,
+        rgba(7, 55, 105, 0.75) 100%
+      ),
+      url('/images/top/f_top.png');
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        120deg,
+        transparent 55%,
+        rgba(255,255,255,0.08) 55.5%,
+        transparent 56%
+      );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-mark {
+    width: 36px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d7b85e;
+    border-radius: 7px 7px 12px 12px;
+    color: #e8cd7b;
+    font-size: 18px;
+    background: rgba(0,0,0,0.18);
+  }
+
+  .hero-title {
+    margin: 0;
+    color: white;
+    font-family: serif;
+    font-size: clamp(21px, 5.5vw, 34px);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .grade-badge {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 7px;
+    border: 1px solid #d8b963;
+    border-radius: 6px;
+    color: #f1d98d;
+    font-size: 10px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .hero-subtitle {
+    margin: 2px 0 0 44px;
+    color: #d8bd73;
+    font-size: 7px;
+    letter-spacing: 0.14em;
+  }
+
+  .question-count {
+    margin-top: 13px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    color: #f0d27d;
+  }
+
+  .question-count-label {
+    font-size: 14px;
+  }
+
+  .question-count-number {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 7.5vw, 42px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .question-count-unit {
+    font-size: 14px;
+  }
+
+  .news-list {
+    margin-top: 9px;
+  }
+
+  .news-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 4px;
+    font-size: 10px;
+    color: white;
+  }
+
+  .new-badge {
+    min-width: 36px;
+    padding: 2px 5px;
+    text-align: center;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #2985e8, #1762bd);
+    font-size: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+  }
+
+
+  /* =========================
+     効果音設定
+  ========================= */
+  .sound-settings {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 10;
+  }
+
+  .sound-settings-button {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(232, 205, 123, 0.65);
+    border-radius: 50%;
+    color: #f1d98d;
+    background: rgba(4, 30, 66, 0.68);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:9998;}
+.settings-overlay.is-open{display:block;}
+.settings-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(320px,90vw);max-height:85vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.25);display:none;z-index:9999;}
+.settings-modal.is-open{display:block;}
+
+
+  .sound-settings-title {
+    margin: 0 0 8px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .sound-options {
+    display: flex;
+    gap: 7px;
+  }
+
+  .sound-option {
+    flex: 1;
+    padding: 7px 5px;
+    border: 1px solid #d5dde7;
+    border-radius: 9px;
+    color: #5f6f82;
+    background: #f6f8fb;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .sound-option.is-active {
+    color: white;
+    border-color: #236fd0;
+    background: linear-gradient(135deg, #2484e8, #315dc7);
+    box-shadow: 0 3px 8px rgba(35,111,208,0.24);
+  }
+
+  /* =========================
+     共通セクション
+  ========================= */
+  .page-content {
+    padding: 13px 11px 8px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 11px;
+    color: #18283f;
+    font-family: serif;
+    font-size: clamp(18px, 4.5vw, 24px);
+    letter-spacing: 0.05em;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    content: "";
+    width: 35px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a94f);
+  }
+
+  .section-title::after {
+    background: linear-gradient(90deg, #c9a94f, transparent);
+  }
+
+  /* =========================
+     分野カード
+  ========================= */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    padding: 10px 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    background: white;
+    border: 1px solid #e7ebf0;
+    border-radius: 14px;
+    box-shadow: 0 5px 13px rgba(17, 45, 80, 0.10);
+  }
+
+  .category-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+  }
+
+  .category-card.anatomy::after {
+    background: linear-gradient(90deg, #c6982d, #f4df91, #bd8420);
+  }
+
+  .category-card.physiology::after {
+    background: linear-gradient(90deg, #ba151f, #ff6d68, #b80f18);
+  }
+
+  .category-card.kinesiology::after {
+    background: linear-gradient(90deg, #1548a6, #5795f3, #153d94);
+  }
+
+  .category-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 26px;
+    box-shadow:
+      inset 0 2px 4px rgba(255,255,255,0.8),
+      0 4px 9px rgba(0,0,0,0.13);
+  }
+
+  .anatomy .category-icon {
+    background: linear-gradient(145deg, #fff7dc, #d8b656);
+  }
+
+  .physiology .category-icon {
+    background: linear-gradient(145deg, #ffb2ae, #e84343);
+  }
+
+  .kinesiology .category-icon {
+    background: linear-gradient(145deg, #79b2f5, #2363bf);
+  }
+
+  .category-name {
+    margin: 0;
+    font-family: serif;
+    font-size: clamp(17px, 4.4vw, 23px);
+    white-space: nowrap;
+  }
+
+  .category-en {
+    margin-top: 2px;
+    font-family: Georgia, serif;
+    font-size: clamp(7px, 2vw, 10px);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .anatomy .category-en {
+    color: #b18a32;
+  }
+
+  .physiology .category-en {
+    color: #c23b3b;
+  }
+
+  .kinesiology .category-en {
+    color: #285eae;
+  }
+
+  /* =========================
+     苦手問題分析
+  ========================= */
+  .analysis-section {
+    margin-top: 13px;
+    padding: 11px 9px 9px;
+    background:
+      linear-gradient(145deg, rgba(255,255,255,0.95), rgba(234,244,255,0.95));
+    border: 1px solid #d3e2f1;
+    border-radius: 19px;
+    box-shadow: 0 4px 13px rgba(29, 66, 108, 0.09);
+  }
+
+  .analysis-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 0;
+    color: #15375e;
+    font-family: serif;
+    font-size: clamp(18px, 4.7vw, 24px);
+  }
+
+  .analysis-heading::before,
+  .analysis-heading::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: #aebdce;
+  }
+
+  .analysis-subtitle {
+    margin: 3px 0 8px;
+    text-align: center;
+    color: #66778b;
+    font-size: 9px;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .analysis-card {
+    min-width: 0;
+    padding: 7px 3px 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #172438;
+    background: white;
+    border: 1px solid #e1e7ee;
+    border-radius: 11px;
+    box-shadow: 0 3px 8px rgba(27, 54, 85, 0.07);
+  }
+
+  .analysis-label {
+    font-size: clamp(10px, 2.9vw, 14px);
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .analysis-number {
+    margin-top: 3px;
+    font-family: Georgia, serif;
+    font-size: clamp(23px, 6.5vw, 32px);
+    line-height: 1;
+  }
+
+  .analysis-number small {
+    margin-left: 1px;
+    font-family: serif;
+    font-size: 10px;
+  }
+
+  .mini-bar {
+    height: 4px;
+    margin: 6px 7px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #edf0f4;
+  }
+
+  .mini-bar-fill {
+    height: 100%;
+    width: 55%;
+    border-radius: 20px;
+  }
+
+  .bar-anatomy {
+    background: linear-gradient(90deg, #b88b2b, #efd579);
+  }
+
+  .bar-physiology {
+    background: linear-gradient(90deg, #b91722, #ff7770);
+  }
+
+  .bar-kinesiology {
+    background: linear-gradient(90deg, #1d51ad, #69a1ef);
+  }
+
+  .wrong-all-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px 8px;
+    border: none;
+    border-radius: 11px;
+    color: white;
+    background: linear-gradient(100deg, #1476dc, #6243e8);
+    box-shadow: 0 5px 12px rgba(65, 77, 213, 0.22);
+    font-family: serif;
+    font-size: clamp(15px, 4vw, 20px);
+    cursor: pointer;
+  }
+
+  .wrong-all-note {
+    margin: 4px 0 0;
+    text-align: center;
+    color: #778493;
+    font-size: 8px;
+  }
+
+  /* =========================
+     下部リンク
+  ========================= */
+  .bottom-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 12px;
+    padding: 3px 0 2px;
+  }
+
+  .bottom-link {
+    min-width: 0;
+    padding: 3px 2px;
+    text-align: center;
+    text-decoration: none;
+    color: #173251;
+    border-right: 1px solid #d7dde5;
+  }
+
+  .bottom-link:last-child {
+    border-right: none;
+  }
+
+  .bottom-icon {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 22px;
+  }
+
+  .bottom-title {
+    display: block;
+    font-family: serif;
+    font-size: clamp(14px, 3.8vw, 18px);
+    white-space: nowrap;
+  }
+
+  .bottom-note {
+    display: block;
+    margin-top: 2px;
+    color: #7c8795;
+    font-size: 7px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 380px) {
+    .hero {
+      min-height: 160px;
+      padding: 14px 14px 12px;
+    }
+
+    .page-content {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .category-grid {
+      gap: 5px;
+    }
+
+    .category-icon {
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+    }
+
+    .analysis-section {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+
+    .analysis-grid {
+      gap: 4px;
+    }
+  }
+</style>
+
+
+<div class="top-page">
+
+  <!-- =========================
+       上部
+  ========================= -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-title-row">
+        <div class="hero-mark">⚕</div>
+
+        <h1 class="hero-title">
+          PT・OT共通基礎学習
+          <span class="grade-badge">1.2年生</span>
+        </h1>
+      </div>
+
+      <p class="hero-subtitle">
+        PHYSICAL THERAPIST NATIONAL EXAM PREP
+      </p>
+
+      <div class="question-count">
+        <span class="question-count-label">問題数</span>
+        <span class="question-count-number"><%= number_with_delimiter(Question.count) %></span>
+        <span class="question-count-unit">問</span>
+      </div>
+
+      <div class="news-list">
+
+        <div class="news-item">
+          <span class="new-badge">NEW</span>
+          <span>2026.07.14 修正完了</span>
+        </div>
+
+        <div class="news-item">
+          <span class="new-badge">NEW</span>
+         <span>2026.07.13 国試ポイント バグ修正途中</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="sound-settings" id="sound-settings">
+      <button
+        type="button"
+        class="sound-settings-button"
+        id="sound-settings-button"
+        aria-label="効果音設定"
+        aria-expanded="false">
+        ⚙️
+      </button>
+
+      <div class="settings-overlay" id="settings-overlay"></div>
+      <div class="settings-modal" id="sound-settings-panel">
+        <p class="sound-settings-title">⚙️ 設定</p>
+
+        <div style="margin-bottom:16px;">
+
+  <div style="display:flex;align-items:center;font-size:15px;font-weight:700;color:#102847;margin-bottom:10px;">
+    🔊&nbsp;効果音
+  </div>
+
+  <div class="sound-options">
+    <button type="button"
+            class="sound-option"
+            data-sound="on">
+      ON
+    </button>
+
+    <button type="button"
+            class="sound-option"
+            data-sound="off">
+      OFF
+    </button>
+  </div>
+
+</div>
+        <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">
+
+        <div style="display:flex;flex-direction:column;gap:6px;">
+
+  <div style="font-size:15px;font-weight:700;color:#102847;">
+    👤 アカウント
+  </div>
+
+  <div style="font-size:14px;color:#6b7280;padding-left:4px;">
+    ログイン中
+  </div>
+
+  <%= button_to "🚪 ログアウト",
+      logout_path,
+      method: :delete,
+      form: { data: { turbo: false } },
+      style: "margin-top:10px;width:100%;border:none;border-radius:10px;padding:10px;background:#ef4444;color:white;font-size:14px;font-weight:bold;cursor:pointer;" %>
+
+</div>
+
+        <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">
+
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:600;color:#102847;">
+          <a href="/about" style="color:#102847;text-decoration:none;">ℹ️ このアプリについて</a>
+          <a href="/terms" style="color:#102847;text-decoration:none;">📄 利用規約</a>
+          <a href="/privacy" style="color:#102847;text-decoration:none;">🔒 プライバシーポリシー</a>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">
+
+        <div style="text-align:center;font-size:11px;color:#7c8795;">
+          Version 1.0.0
+        </div>
+              <div style="margin-top:16px;text-align:center;"><button type="button" id="close-settings" class="sound-option" style="width:100%;">✕ 閉じる</button></div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <main class="page-content">
+
+    <!-- =========================
+         分野選択
+    ========================= -->
+    <h2 class="section-title">
+      分野を選んでください
+    </h2>
+
+    <div class="category-grid">
+
+      <a href="/category?name=解剖学"
+         class="category-card anatomy">
+
+        <div class="category-icon">🦴</div>
+
+        <h3 class="category-name">解剖学</h3>
+
+        <div class="category-en">
+          ANATOMY
+        </div>
+
+      </a>
+
+
+      <a href="/category?name=生理学"
+         class="category-card physiology">
+
+        <div class="category-icon">🫀</div>
+
+        <h3 class="category-name">生理学</h3>
+
+        <div class="category-en">
+          PHYSIOLOGY
+        </div>
+
+      </a>
+
+
+      <a href="/category?name=運動学"
+         class="category-card kinesiology">
+
+        <div class="category-icon">🏃</div>
+
+        <h3 class="category-name">運動学</h3>
+
+        <div class="category-en">
+          KINESIOLOGY
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <!-- =========================
+         苦手問題分析
+    ========================= -->
+    <section class="analysis-section">
+
+      <h2 class="analysis-heading">
+        🔥 苦手問題分析
+      </h2>
+
+      <p class="analysis-subtitle">
+        苦手を「見える化」して、効率的に克服しよう
+      </p>
+
+      <div id="analysis-box"></div>
+
+    </section>
+
+
+    <!-- =========================
+         下部リンク
+    ========================= -->
+    <div class="bottom-links">
+
+      <%= link_to "/materials", class: "bottom-link" do %>
+        <span class="bottom-icon">📚</span>
+        <span class="bottom-title">参考資料</span>
+        <span class="bottom-note">重要ポイントを整理</span>
+      <% end %>
+
+
+      <%= link_to "/stamps", class: "bottom-link" do %>
+        <span class="bottom-icon">🏅</span>
+        <span class="bottom-title">図鑑</span>
+        <span class="bottom-note">イラストで理解を深める</span>
+      <% end %>
+
+
+      <%= link_to "/contact", class: "bottom-link" do %>
+        <span class="bottom-icon">✉️</span>
+        <span class="bottom-title">問合せ</span>
+        <span class="bottom-note">サポートに連絡する</span>
+      <% end %>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<script>
+  const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
+
+  let anatomy = 0;
+  let physiology = 0;
+  let kinesiology = 0;
+
+  wrong.forEach(q => {
+    if (q.category === "解剖") anatomy++;
+    if (q.category === "生理") physiology++;
+    if (q.category === "運動") kinesiology++;
+  });
+
+
+  document.getElementById("analysis-box").innerHTML = `
+
+    <div class="analysis-grid">
+
+      <a href="/anatomy_analysis"
+         class="analysis-card">
+
+        <div class="analysis-label">
+          🦴 解剖学
+        </div>
+
+        <div class="analysis-number">
+          ${anatomy}<small>問</small>
+        </div>
+
+        <div class="mini-bar">
+          <div class="mini-bar-fill bar-anatomy"></div>
+        </div>
+
+      </a>
+
+
+      <a href="/physiology_analysis"
+         class="analysis-card">
+
+        <div class="analysis-label">
+          🫀 生理学
+        </div>
+
+        <div class="analysis-number">
+          ${physiology}<small>問</small>
+        </div>
+
+        <div class="mini-bar">
+          <div class="mini-bar-fill bar-physiology"></div>
+        </div>
+
+      </a>
+
+
+      <a href="/kinesiology_analysis"
+         class="analysis-card">
+
+        <div class="analysis-label">
+          🏃 運動学
+        </div>
+
+        <div class="analysis-number">
+          ${kinesiology}<small>問</small>
+        </div>
+
+        <div class="mini-bar">
+          <div class="mini-bar-fill bar-kinesiology"></div>
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <button
+      type="button"
+      class="wrong-all-button"
+      onclick="goWrongAll()">
+
+      🔥 苦手問題（全範囲） 〉
+
+    </button>
+
+    <p class="wrong-all-note">
+      全分野の苦手問題をまとめて解く
+    </p>
+  `;
+
+
+
+  // =========================
+  // 効果音設定
+  // =========================
+  const soundSettingsButton =
+    document.getElementById("sound-settings-button");
+
+  const soundSettingsPanel =
+    document.getElementById("sound-settings-panel");
+
+  const soundOptions =
+    document.querySelectorAll(".sound-option");
+
+  function getSoundSetting() {
+    return localStorage.getItem("soundEnabled") || "off";
+  }
+
+  function updateSoundButtons() {
+    const currentSetting = getSoundSetting();
+
+    soundOptions.forEach(button => {
+      button.classList.toggle(
+        "is-active",
+        button.dataset.sound === currentSetting
+      );
+    });
+  }
+
+  soundSettingsButton.addEventListener("click", function(event) {
+    event.stopPropagation();
+
+    const isOpen =
+      document.getElementById("settings-overlay").classList.toggle("is-open");
+    soundSettingsPanel.classList.toggle("is-open");
+
+    soundSettingsButton.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+  });
+
+  soundOptions.forEach(button => {
+    button.addEventListener("click", function() {
+      localStorage.setItem(
+        "soundEnabled",
+        this.dataset.sound
+      );
+
+      updateSoundButtons();
+
+      document.getElementById("settings-overlay").classList.remove("is-open");
+      soundSettingsPanel.classList.remove("is-open");
+      soundSettingsButton.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("click", function(event) {
+    if (!document.getElementById("sound-settings").contains(event.target)) {
+      document.getElementById("settings-overlay").classList.remove("is-open");
+      soundSettingsPanel.classList.remove("is-open");
+      soundSettingsButton.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  updateSoundButtons();
+
+
+  function goWrongAll() {
+
+    const wrong =
+      JSON.parse(localStorage.getItem("wrong")) || [];
+
+    const filtered =
+      wrong.map(q => q.id);
+
+    if (filtered.length === 0) {
+      alert("苦手問題はありません");
+      return;
+    }
+
+    window.location.href =
+      "/select?mode=wrong" +
+      "&ids=" + encodeURIComponent(filtered.join(",")) +
+      "&category=all";
+  }
+</script>
+<script>document.getElementById("settings-overlay")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});document.getElementById("close-settings")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});</script>
     margin: 0;
     background: #eef3f9;
     color: #102847;

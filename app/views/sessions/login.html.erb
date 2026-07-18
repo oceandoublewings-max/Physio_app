@@ -343,71 +343,50 @@
     font-weight: 900;
   }
 
-  /* ===== 登録機能 ===== */
-  .benefit-box {
-    margin-top: 12px;
-    padding: 12px;
-    border: 1px solid #dfe7f0;
-    border-radius: 18px;
-    background:
-      linear-gradient(180deg, rgba(248, 251, 255, 0.98), rgba(243, 247, 252, 0.98));
+  
+/* ===== 登録機能 ===== */
+  .benefit-box{
+    margin-top:14px;
+    border-radius:20px;
+    overflow:hidden;
+    background:linear-gradient(180deg,#08224c,#0c356c);
+    border:1px solid rgba(214,182,96,.45);
+    color:#fff;
   }
-
-  .benefit-title {
-    margin: 0 0 13px;
-    text-align: center;
-    color: #102847;
-    font-size: 16px;
-    font-weight: 900;
+  .benefit-title{
+    margin:0;
+    padding:16px;
+    text-align:center;
+    color:#e9c96f;
+    font-size:20px;
+    font-weight:900;
+    border-bottom:1px solid rgba(233,201,111,.25);
   }
-
-  .benefit-grid {
+  .benefit-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:8px;
+    grid-template-columns:repeat(2,1fr);
   }
-
-  .benefit-item {
-    min-height:48px;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    padding: 10px;
-    border: 1px solid #e1e8f0;
-    border-radius: 13px;
-    background: #ffffff;
-    box-shadow: 0 3px 10px rgba(16, 40, 71, 0.04);
+  .benefit-item{
+    display:flex;align-items:center;gap:12px;
+    min-height:84px;
+    padding:16px;
+    background:transparent;
+    border:none;
+    border-right:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    box-shadow:none;
   }
-
-  .benefit-item:last-child{grid-column:auto;min-height:48px;}
-
-  .benefit-icon {
-    width: 34px;
-    height: 34px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    border-radius: 10px;
-    background: #edf4fd;
-    font-size: 18px;
+  .benefit-item:nth-child(2n){border-right:none;}
+  .benefit-item:nth-last-child(-n+1){grid-column:1/-1;border-right:none;}
+  .benefit-icon{
+    width:48px;height:48px;border-radius:12px;
+    background:rgba(255,255,255,.08);
+    display:grid;place-items:center;font-size:28px;
   }
-
-  .benefit-copy strong {
-    display: block;
-    color: #18365d;
-    font-size: 12px;
-    line-height: 1.35;
-  }
-
-   .benefit-copy span {
-    display:none;
-    margin-top: 2px;
-    color: #7b8797;
-    font-size: 9px;
-    line-height: 1.4;
-  }
-
+  .benefit-copy strong{display:block;color:#fff;font-size:17px;}
+  .benefit-copy span{display:block;color:#cfd9ea;font-size:12px;margin-top:4px;}
   .guest-note {
+
     margin: 15px 0 0;
     color: #758196;
     font-size: 11px;

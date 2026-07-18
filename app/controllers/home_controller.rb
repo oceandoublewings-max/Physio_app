@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  # ログイン前でも利用規約・プライバシーポリシーを表示できるようにする
+  skip_before_action :authenticate_user!, only: [:terms, :privacy], raise: false
+  skip_before_action :require_login, only: [:terms, :privacy], raise: false
 
   def index
   end

@@ -1,92 +1,605 @@
-<!-- login.html.erb 完全版（改善版） -->
+<!-- app/views/.../login.html.erb 完全版 -->
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#eef3f9;font-family:sans-serif;color:#102847;}
-.login-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:12px;}
-.login-card{width:100%;max-width:430px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.12);}
-.hero{position:relative;padding:22px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#041e42 0%,#0a4278 100%);}
-.hero h1{margin:0;font-size:30px;font-family:serif;}
-.hero p{margin:8px 0 0;color:#d8bd73;font-size:12px;letter-spacing:1px;line-height:1.4;}
-.hero .hero-skeleton{position:absolute;top:2px;right:4px;}
-.hero .hero-skeleton img{width:68px;height:auto;}
-.content{padding:20px;}
-h2{margin:0;text-align:center;font-size:20px;}
-.description{margin:10px 0 18px;text-align:center;color:#666;line-height:1.6;font-size:16px;}
-.guest-btn,.google-btn{display:block;width:100%;padding:15px;border:none;border-radius:14px;color:#fff;font-size:18px;font-weight:bold;text-align:center;text-decoration:none;cursor:pointer;}
-.guest-btn{background:linear-gradient(180deg,#3d86ea,#2d6fd3);}
-.google-btn{background:#34a853;margin-bottom:12px;}
-.guest-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:16px 0 4px;}
-.guest-badges span{background:#eef5ff;color:#1b3763;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;}
-.box{margin-top:20px;padding:15px;border-radius:14px;background:#f8fbff;border:1px solid #dfe6ef;}
-.box h3{margin:0 0 12px;text-align:center;font-size:20px;}
-.box ul{margin:0;padding-left:22px;line-height:1.8;}
-.login-area{margin-top:22px;text-align:center;color:#666;line-height:1.7;}
-.login-title{display:block;margin-bottom:12px;color:#102847;font-size:18px;}
-.preparing{margin:12px 0;font-size:15px;}
-.guest-note{margin-top:16px;font-size:14px;color:#666;line-height:1.7;}
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 12% 8%, rgba(43, 102, 174, 0.12), transparent 28%),
+      linear-gradient(180deg, #edf3fa 0%, #f7f9fc 100%);
+    color: #102847;
+    font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+      "Yu Gothic", "Meiryo", sans-serif;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  .login-page {
+    min-height: 100vh;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-shell {
+    width: 100%;
+    max-width: 430px;
+    overflow: hidden;
+    border: 1px solid rgba(16, 40, 71, 0.08);
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow:
+      0 24px 60px rgba(16, 40, 71, 0.14),
+      0 6px 18px rgba(16, 40, 71, 0.07);
+  }
+
+  /* ===== ヘッダー ===== */
+  .login-hero {
+    position: relative;
+    min-height: 176px;
+    overflow: hidden;
+    padding: 20px 18px 18px;
+    color: #ffffff;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.11), transparent 30%),
+      linear-gradient(145deg, #071f44 0%, #0b386d 58%, #0d4b85 100%);
+  }
+
+  .login-hero::after {
+    content: "";
+    position: absolute;
+    right: -55px;
+    bottom: -95px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .hero-top {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .brand-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border: 1px solid rgba(216, 189, 115, 0.78);
+    border-radius: 12px;
+    color: #dfc57d;
+    background: rgba(2, 17, 39, 0.3);
+    font-family: Georgia, serif;
+    font-size: 23px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .brand-copy {
+    line-height: 1.15;
+  }
+
+  .brand-copy strong {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #dcc47e;
+  }
+
+  .brand-copy span {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.74);
+  }
+
+  .grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 7px 11px;
+    border: 1px solid rgba(225, 200, 126, 0.65);
+    border-radius: 999px;
+    color: #f2dc9f;
+    background: rgba(5, 25, 56, 0.55);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .hero-main {
+    position: relative;
+    z-index: 2;
+    margin-top: 18px;
+    padding-right: 82px;
+  }
+
+  .hero-main h1 {
+    margin: 0;
+    font-family: Georgia, "Yu Mincho", serif;
+    font-size: 29px;
+    line-height: 1.28;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  }
+
+  .hero-main p {
+    margin: 8px 0 0;
+    color: #dfc57d;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+  }
+
+  .hero-skeleton {
+    position: absolute;
+    z-index: 4;
+    right: 10px;
+    bottom: -3px;
+    width: 92px;
+    pointer-events: none;
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.16));
+  }
+
+  .hero-skeleton img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .gold-line {
+    height: 3px;
+    background: linear-gradient(90deg, #b99135, #f0d88d 50%, #b99135);
+  }
+
+  /* ===== 本文 ===== */
+  .login-content {
+    padding: 22px 20px 20px;
+  }
+
+  .guest-heading {
+    margin: 0 0 14px;
+    text-align: center;
+    color: #102847;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+  }
+
+  .guest-form,
+  .oauth-form {
+    margin: 0;
+  }
+
+  .guest-form .guest-btn,
+  .oauth-form .google-btn {
+    width: 100%;
+  }
+
+  .guest-btn {
+    min-height: 56px;
+    border: 0;
+    border-radius: 15px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #3d8df0 0%, #2e6fd2 100%);
+    box-shadow:
+      0 9px 20px rgba(46, 111, 210, 0.27),
+      inset 0 1px 0 rgba(255, 255, 255, 0.26);
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .guest-btn:active {
+    transform: translateY(1px);
+    box-shadow:
+      0 5px 13px rgba(46, 111, 210, 0.24),
+      inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  }
+
+  .guest-badges {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: 13px;
+  }
+
+  .guest-badges span {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 5px;
+    border: 1px solid #dbe7f5;
+    border-radius: 999px;
+    color: #23466f;
+    background: #f2f7fd;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 23px 0 15px;
+    color: #718096;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #dce4ee;
+  }
+
+  /* ===== ログインボタン ===== */
+  .auth-stack {
+    display: grid;
+    gap: 10px;
+  }
+
+  .apple-btn,
+  .google-btn,
+  .mail-btn {
+    position: relative;
+    min-height: 52px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+  }
+
+  .apple-btn {
+    border: 1px solid #111111;
+    color: #ffffff;
+    background: #111111;
+    opacity: 0.55;
+  }
+
+  .google-btn {
+    border: 1px solid #cfd7e1;
+    color: #26384f;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(16, 40, 71, 0.07);
+    cursor: pointer;
+  }
+
+  .mail-btn {
+    border: 1px solid #dce3eb;
+    color: #718096;
+    background: #f7f9fc;
+    opacity: 0.75;
+  }
+
+  .auth-icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+  .google-letter {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #4285f4;
+  }
+
+  .coming-soon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 7px;
+    border-radius: 999px;
+    color: #725a16;
+    background: #f5df95;
+    font-size: 9px;
+    font-weight: 900;
+  }
+
+  /* ===== 登録機能 ===== */
+  .benefit-box {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #dfe7f0;
+    border-radius: 18px;
+    background:
+      linear-gradient(180deg, rgba(248, 251, 255, 0.98), rgba(243, 247, 252, 0.98));
+  }
+
+  .benefit-title {
+    margin: 0 0 13px;
+    text-align: center;
+    color: #102847;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .benefit-item {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px;
+    border: 1px solid #e1e8f0;
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(16, 40, 71, 0.04);
+  }
+
+  .benefit-item:last-child {
+    grid-column: 1 / -1;
+    min-height: 58px;
+  }
+
+  .benefit-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    background: #edf4fd;
+    font-size: 18px;
+  }
+
+  .benefit-copy strong {
+    display: block;
+    color: #18365d;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .benefit-copy span {
+    display: block;
+    margin-top: 2px;
+    color: #7b8797;
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .guest-note {
+    margin: 15px 0 0;
+    color: #758196;
+    font-size: 11px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .login-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e4e9ef;
+    font-size: 10px;
+  }
+
+  .login-footer a {
+    color: #738095;
+    text-decoration: none;
+  }
+
+  .login-footer span {
+    color: #c1c8d1;
+  }
+
+  @media (max-width: 390px) {
+    .login-page {
+      padding: 8px;
+    }
+
+    .login-shell {
+      border-radius: 22px;
+    }
+
+    .login-hero {
+      min-height: 164px;
+      padding: 17px 15px 16px;
+    }
+
+    .hero-main h1 {
+      font-size: 26px;
+    }
+
+    .hero-skeleton {
+      right: 7px;
+      width: 84px;
+    }
+
+    .login-content {
+      padding: 19px 16px 18px;
+    }
+
+    .guest-heading {
+      font-size: 19px;
+    }
+
+    .guest-badges {
+      gap: 5px;
+    }
+
+    .guest-badges span {
+      font-size: 9px;
+    }
+  }
 </style>
 
 <div class="login-page">
-  <div class="login-card">
-    <div class="hero">
+  <main class="login-shell">
+    <header class="login-hero">
+      <div class="hero-top">
+        <div class="brand-mark">
+          <div class="brand-icon">⚕</div>
+          <div class="brand-copy">
+            <strong>PT・OT COMMON</strong>
+            <span>基礎から学ぶ国試対策</span>
+          </div>
+        </div>
+
+        <div class="grade-badge">1・2年生向け</div>
+      </div>
+
+      <div class="hero-main">
+        <h1>PT・OT共通<br>基礎学習</h1>
+        <p>PHYSICAL THERAPIST NATIONAL EXAM PREP</p>
+      </div>
+
       <div class="hero-skeleton">
         <img src="/images/stamps/stamp_003.png" alt="ガイコツくん">
       </div>
+    </header>
 
-      <h1>⚕ PT・OT共通<br>基礎学習</h1>
-      <p>PHYSICAL THERAPIST NATIONAL EXAM PREP</p>
-    </div>
+    <div class="gold-line"></div>
 
-    <div class="content">
-
-      <h2>まずはゲストでお試し！</h2>
-
-      <p class="description">
-        登録不要ですぐ学習できます。<br>
-        Googleで無料登録すると、<br>
-        学習データや苦手分析を保存できます。
-      </p>
+    <section class="login-content">
+      <h2 class="guest-heading">まずはゲストでお試し！</h2>
 
       <%= button_to "🚀 今すぐゲストで始める",
           "/guest_login",
           method: :post,
-          class: "guest-btn" %>
+          class: "guest-btn",
+          form_class: "guest-form" %>
 
       <div class="guest-badges">
-        <span>✅ 問題演習無料</span>
+        <span>✓ 問題演習無料</span>
         <span>⚡ 登録不要</span>
         <span>📚 すぐ始める</span>
       </div>
 
-      <div class="box">
-        <h3>登録すると使える機能</h3>
-        <ul>
-          <li>☁️ 学習データ保存・引き継ぎ</li>
-          <li>📊 苦手分析レーダー</li>
-          <li>📈 分野別分析</li>
-          <li>🏅 スタンプ保存</li>
-          <li>📖 PDF資料集の購入</li>
-        </ul>
-      </div>
+      <div class="section-divider">無料登録・ログイン</div>
 
-      <div class="login-area">
-        <strong class="login-title">無料登録はこちら</strong>
+      <div class="auth-stack">
+        <div class="apple-btn" aria-disabled="true">
+          <span class="auth-icon"></span>
+          Appleで続ける
+          <span class="coming-soon">準備中</span>
+        </div>
 
         <%= button_to user_google_oauth2_omniauth_authorize_path,
             method: :post,
             data: { turbo: false },
-            class: "google-btn" do %>
-          G&nbsp;&nbsp;Googleでログイン
+            class: "google-btn",
+            form_class: "oauth-form" do %>
+          <span class="auth-icon google-letter">G</span>
+          Googleで続ける
         <% end %>
 
-        <div class="preparing">🍎 Appleで続ける（準備中）</div>
-        <div class="preparing">✉️ メールアドレスでログイン（準備中）</div>
-
-        <div class="guest-note">
-          ※あとからGoogleログインへ変更できます。<br>
-          学習データの保存・苦手分析はGoogleログイン後に利用できます。
+        <div class="mail-btn" aria-disabled="true">
+          <span class="auth-icon">✉</span>
+          メールアドレスで続ける
+          <span class="coming-soon">準備中</span>
         </div>
       </div>
-    </div>
-  </div>
+
+      <div class="benefit-box">
+        <h3 class="benefit-title">登録すると使える機能</h3>
+
+        <div class="benefit-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">☁️</div>
+            <div class="benefit-copy">
+              <strong>学習データ保存</strong>
+              <span>端末を変えても引き継げる</span>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📊</div>
+            <div class="benefit-copy">
+              <strong>苦手分析</strong>
+              <span>苦手分野がひと目で分かる</span>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-copy">
+              <strong>分野別分析</strong>
+              <span>学習状況を細かく確認</span>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🏅</div>
+            <div class="benefit-copy">
+              <strong>スタンプ保存</strong>
+              <span>集めたスタンプを記録</span>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📖</div>
+            <div class="benefit-copy">
+              <strong>PDF資料集の購入</strong>
+              <span>学習に使えるオリジナル資料</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="guest-note">
+        ゲストでも全問題を無料で利用できます。<br>
+        学習データの保存・苦手分析はGoogleログイン後に利用できます。
+      </p>
+
+      <footer class="login-footer">
+        <a href="/terms">利用規約</a>
+        <span>|</span>
+        <a href="/privacy">プライバシーポリシー</a>
+      </footer>
+    </section>
+  </main>
 </div>

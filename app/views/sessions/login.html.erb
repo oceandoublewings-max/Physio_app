@@ -247,24 +247,35 @@
   .guest-badges {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 5px;
-    margin-top: 6px;
+    align-items: center;
+    gap: 0;
+    margin-top: 7px;
+    color: #365575;
   }
 
   .guest-badges span {
-    min-height: 28px;
+    position: relative;
+    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px 3px;
-    border: 1px solid #dbe7f5;
-    border-radius: 999px;
-    color: #23466f;
-    background: #f2f7fd;
+    padding: 1px 4px;
     font-size: 9px;
     font-weight: 800;
+    line-height: 1.4;
     text-align: center;
     white-space: nowrap;
+  }
+
+  .guest-badges span:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background: #d9e1eb;
+    transform: translateY(-50%);
   }
 
   .section-divider {
@@ -539,8 +550,8 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    margin-top: 8px;
-    padding-top: 6px;
+    margin-top: 7px;
+    padding: 6px 0 2px;
     border-top: 1px solid #e4e9ef;
     font-size: 9px;
     pointer-events: auto;
@@ -689,6 +700,7 @@
     }
 
     .guest-badges span {
+      padding-inline: 2px;
       font-size: 8px;
     }
 
@@ -840,15 +852,17 @@
       </p>
 
       <footer class="login-footer">
-        <%= link_to "利用規約",
-            terms_path,
-            class: "footer-link",
-            data: { turbo: false } %>
+        <a href="/terms"
+           class="footer-link"
+           data-turbo="false"
+           target="_self"
+           onclick="window.location.assign('/terms'); return false;">利用規約</a>
         <span>|</span>
-        <%= link_to "プライバシーポリシー",
-            privacy_path,
-            class: "footer-link",
-            data: { turbo: false } %>
+        <a href="/privacy"
+           class="footer-link"
+           data-turbo="false"
+           target="_self"
+           onclick="window.location.assign('/privacy'); return false;">プライバシーポリシー</a>
       </footer>
     </section>
   </main>

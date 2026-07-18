@@ -181,11 +181,11 @@
 
   /* ===== 本文 ===== */
   .login-content {
-    padding: 22px 20px 20px;
+    padding: 16px 16px 14px;
   }
 
   .guest-heading {
-    margin: 0 0 14px;
+    margin: 0 0 10px;
     text-align: center;
     color: #102847;
     font-size: 21px;
@@ -230,7 +230,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 7px;
-    margin-top: 13px;
+    margin-top: 8px;
   }
 
   .guest-badges span {
@@ -253,7 +253,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin: 23px 0 15px;
+    margin: 14px 0 10px;
     color: #718096;
     font-size: 12px;
     font-weight: 800;
@@ -269,9 +269,11 @@
 
   /* ===== ログインボタン ===== */
   .auth-stack {
-    display: grid;
-    gap: 10px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
   }
+  .mail-btn{grid-column:1/-1;min-height:42px;font-size:13px;}
 
   .apple-btn,
   .google-btn,
@@ -343,8 +345,8 @@
 
   /* ===== 登録機能 ===== */
   .benefit-box {
-    margin-top: 20px;
-    padding: 16px;
+    margin-top: 12px;
+    padding: 12px;
     border: 1px solid #dfe7f0;
     border-radius: 18px;
     background:
@@ -360,13 +362,13 @@
   }
 
   .benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
   }
 
   .benefit-item {
-    min-height: 72px;
+    min-height:48px;
     display: flex;
     align-items: center;
     gap: 9px;
@@ -377,10 +379,7 @@
     box-shadow: 0 3px 10px rgba(16, 40, 71, 0.04);
   }
 
-  .benefit-item:last-child {
-    grid-column: 1 / -1;
-    min-height: 58px;
-  }
+  .benefit-item:last-child{grid-column:auto;min-height:48px;}
 
   .benefit-icon {
     width: 34px;
@@ -400,8 +399,8 @@
     line-height: 1.35;
   }
 
-  .benefit-copy span {
-    display: block;
+   .benefit-copy span {
+    display:none;
     margin-top: 2px;
     color: #7b8797;
     font-size: 9px;

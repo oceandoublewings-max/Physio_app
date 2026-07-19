@@ -82,6 +82,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
+    aes_key_wrap (1.1.0)
     anonymous_loader (0.1.3)
       version_gem (~> 1.1, >= 1.1.14)
     auth-sanitizer (0.2.3)
@@ -90,6 +91,7 @@ GEM
     bcrypt (3.1.22)
     benchmark (0.5.0)
     bigdecimal (4.1.2)
+    bindata (3.0.0)
     bindex (0.8.1)
     bootsnap (1.24.4)
       msgpack (~> 1.2)
@@ -117,6 +119,10 @@ GEM
       railties (>= 7.0)
       responders
       warden (~> 1.2.3)
+    dotenv (3.2.0)
+    dotenv-rails (3.2.0)
+      dotenv (= 3.2.0)
+      railties (>= 6.1)
     drb (2.2.3)
     erb (6.0.4)
     erubi (1.13.1)
@@ -124,6 +130,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
+    faraday-follow_redirects (0.5.0)
+      faraday (>= 1, < 3)
     faraday-net_http (3.4.4)
       net-http (~> 0.5)
     globalid (1.3.0)
@@ -146,6 +154,13 @@ GEM
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
     json (2.21.1)
+    json-jwt (1.17.1)
+      activesupport (>= 4.2)
+      aes_key_wrap
+      base64
+      bindata
+      faraday (~> 2.0)
+      faraday-follow_redirects
     jwt (3.2.0)
       base64
     logger (1.7.0)
@@ -197,6 +212,9 @@ GEM
       logger
       rack (>= 2.2.3)
       rack-protection
+    omniauth-apple (1.4.0)
+      json-jwt
+      omniauth-oauth2
     omniauth-google-oauth2 (1.2.2)
       jwt (>= 2.9.2)
       oauth2 (~> 2.0)
@@ -333,9 +351,11 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dotenv-rails
   importmap-rails
   jbuilder
   omniauth
+  omniauth-apple
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   pg

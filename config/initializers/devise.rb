@@ -285,15 +285,15 @@ Devise.setup do |config|
                   scope: "email,profile",
                   prompt: "select_account"
 
-  =begin
-config.omniauth :apple,
-  ENV.fetch("APPLE_CLIENT_ID"),
-  "",
-  scope: "name email",
-  team_id: ENV.fetch("APPLE_TEAM_ID"),
-  key_id: ENV.fetch("APPLE_KEY_ID"),
-  pem: ENV.fetch("APPLE_PRIVATE_KEY")
-=end
+
+# config.omniauth :apple,
+#   ENV.fetch("APPLE_CLIENT_ID"),
+#   "",
+#   scope: "name email",
+#   team_id: ENV.fetch("APPLE_TEAM_ID"),
+#   key_id: ENV.fetch("APPLE_KEY_ID"),
+#   pem: ENV.fetch("APPLE_PRIVATE_KEY")
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

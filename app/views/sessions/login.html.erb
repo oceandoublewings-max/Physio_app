@@ -759,17 +759,23 @@
       <div class="section-divider">無料登録・ログイン</div>
 
       <div class="auth-stack">
-        <button type="button" class="apple-btn" disabled aria-disabled="true">
-          <span class="auth-logo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.05 12.54c-.03-2.84 2.32-4.22 2.43-4.29-1.33-1.95-3.4-2.22-4.13-2.24-1.74-.18-3.43 1.04-4.31 1.04-.9 0-2.25-1.02-3.72-.99-1.89.03-3.67 1.13-4.64 2.84-2 3.46-.51 8.55 1.41 11.35.96 1.37 2.08 2.9 3.55 2.84 1.43-.06 1.97-.91 3.7-.91 1.71 0 2.22.91 3.71.88 1.54-.03 2.51-1.37 3.43-2.75 1.11-1.57 1.56-3.12 1.58-3.2-.04-.01-2.98-1.14-3.01-4.57ZM14.21 4.16C14.98 3.2 15.5 1.9 15.36.6c-1.11.05-2.5.77-3.3 1.71-.71.83-1.35 2.18-1.19 3.43 1.25.09 2.52-.63 3.34-1.58Z"/>
-            </svg>
-          </span>
-          <span class="auth-copy">
-            <strong>Appleで続ける</strong>
-            <small>準備中</small>
-          </span>
-        </button>
+       <%= button_to user_apple_omniauth_authorize_path,
+      method: :post,
+      data: { turbo: false },
+      class: "apple-btn",
+      form_class: "oauth-form" do %>
+
+  <span class="auth-logo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.05 12.54c-.03-2.84 2.32-4.22 2.43-4.29-1.33-1.95-3.4-2.22-4.13-2.24-1.74-.18-3.43 1.04-4.31 1.04-.9 0-2.25-1.02-3.72-.99-1.89.03-3.67 1.13-4.64 2.84-2 3.46-.51 8.55 1.41 11.35.96 1.37 2.08 2.9 3.55 2.84 1.43-.06 1.97-.91 3.7-.91 1.71 0 2.22.91 3.71.88 1.54-.03 2.51-1.37 3.43-2.75 1.11-1.57 1.56-3.12 1.58-3.2-.04-.01-2.98-1.14-3.01-4.57ZM14.21 4.16C14.98 3.2 15.5 1.9 15.36.6c-1.11.05-2.5.77-3.3 1.71-.71.83-1.35 2.18-1.19 3.43 1.25.09 2.52-.63 3.34-1.58Z"/>
+    </svg>
+  </span>
+
+  <span class="auth-copy">
+    <strong>Appleで続ける</strong>
+  </span>
+
+<% end %> 
 
         <%= button_to user_google_oauth2_omniauth_authorize_path,
             method: :post,

@@ -276,19 +276,24 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
+   config.responder.error_status = :unprocessable_content
+   config.responder.redirect_status = :see_other
+  
   config.omniauth :google_oauth2,
                   ENV.fetch("GOOGLE_CLIENT_ID"),
                   ENV.fetch("GOOGLE_CLIENT_SECRET"),
                   scope: "email,profile",
                   prompt: "select_account"
 
-  config.omniauth :apple,
+  =begin
+config.omniauth :apple,
   ENV.fetch("APPLE_CLIENT_ID"),
   "",
   scope: "name email",
   team_id: ENV.fetch("APPLE_TEAM_ID"),
   key_id: ENV.fetch("APPLE_KEY_ID"),
   pem: ENV.fetch("APPLE_PRIVATE_KEY")
+=endq
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

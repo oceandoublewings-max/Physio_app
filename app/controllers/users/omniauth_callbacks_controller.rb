@@ -1,29 +1,10 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
-    Rails.logger.info "========== OMNIAUTH START =========="
-    Rails.logger.info request.env["omniauth.auth"].inspect
+    handle_auth("Google")
+  end
 
-    @user = User.from_omniauth(request.env["omniauth.auth"])
-
-    Rails.logger.info "USER: #{@user.inspect}"
-
-    if @user.persisted?
-      sign_in @user
-      redirect_to root_path, notice: "Googleでログインしました。"
-    else
-      Rails.logger.error @user.errors.full_messages.join(", ")
-
-      session["devise.google_data"] = request.env["omniauth.auth"]
-      redirect_to new_user_registration_url
-    end
-  rescue => e
-    Rails.logger.error "========== OMNIAUTH ERROR =========="
-    Rails.logger.error e.class.to_s
-    Rails.logger.error e.message
-    Rails.logger.error e.backtrace.join("\n")
-
-    redirect_to new_user_session_path,
-                alert: "Googleログイン中にエラーが発生しました。"
+  def apple
+    handle_auth("Apple")
   end
 
   def failure
@@ -33,11 +14,31 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     Rails.logger.error "error.strategy: #{request.env['omniauth.error.strategy']}"
     Rails.logger.error "error.reason: #{request.env['omniauth.error.reason']}"
 
-    if request.env["omniauth.error"].respond_to?(:backtrace)
-      Rails.logger.error request.env["omniauth.error"].backtrace.join("\n")
+    redirect_to new_user_session_path,
+                alert: "ログインに失敗しました。"
+  end
+
+  private
+
+  def handle_auth(provider_name)
+    Rails.logger.info "========== #{provider_name.upcase} OMNIAUTH START =========="
+    Rails.logger.info request.env["omniauth.auth"].inspect
+
+    @user = User.from_omniauth(request.env["omniauth.auth"])
+
+    if @user.persisted?
+      sign_in_and_redirect @user, event: :authentication
+      set_flash_message(:notice, :success, kind: provider_name) if is_navigational_format?
+    else
+      session["devise.auth_data"] = request.env["omniauth.auth"]
+      redirect_to new_user_registration_url
     end
+  rescue => e
+    Rails.logger.error e.class.to_s
+    Rails.logger.error e.message
+    Rails.logger.error e.backtrace.join("\n")
 
     redirect_to new_user_session_path,
-                alert: "Googleログインに失敗しました。"
+                alert: "#{provider_name}ログイン中にエラーが発生しました。"
   end
 end

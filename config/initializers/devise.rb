@@ -293,7 +293,7 @@ config.omniauth :apple,
   team_id: ENV.fetch("APPLE_TEAM_ID"),
   key_id: ENV.fetch("APPLE_KEY_ID"),
   pem: ENV.fetch("APPLE_PRIVATE_KEY")
-=endq
+=end
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

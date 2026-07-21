@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_17_013000) do
+ActiveRecord::Schema[7.1].define(version: 2026_07_21_045014) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,23 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_17_013000) do
     t.text "goro"
   end
 
+  create_table "stamps", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "season"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_stamps", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "stamp_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stamp_id"], name: "index_user_stamps_on_stamp_id"
+    t.index ["user_id"], name: "index_user_stamps_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.boolean "guest"
     t.datetime "created_at", null: false
@@ -56,4 +73,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_17_013000) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "user_stamps", "stamps"
+  add_foreign_key "user_stamps", "users"
 end

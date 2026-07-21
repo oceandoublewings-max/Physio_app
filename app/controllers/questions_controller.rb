@@ -129,7 +129,6 @@ def review
 end
 
 def answered
-  Rails.logger.info "current_user=#{current_user.inspect}"
 
   return head :unauthorized unless current_user
 

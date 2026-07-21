@@ -3,6 +3,25 @@ class HomeController < ApplicationController
   skip_before_action :authenticate_user!, only: [:terms, :privacy], raise: false
   skip_before_action :require_login, only: [:terms, :privacy], raise: false
 
+  bbefore_action :require_login, only: [
+  :anatomy_analysis,
+  :physiology_analysis,
+  :kinesiology_analysis,
+
+  :anatomy_pdfs,
+  :bone_pdfs,
+  :muscle_pdfs,
+  :neurovascular_pdfs,
+  :physiology_pdfs,
+  :kinesiology_pdfs,
+
+  :stamps,
+  :event_stamps,
+
+  :contact,
+  :about
+]
+
   def index
   end
 

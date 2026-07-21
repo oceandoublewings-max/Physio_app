@@ -313,45 +313,95 @@
 
   <div class="materials-list">
 
+    <% if current_user&.guest? %>
+    <div class="material-card bone-card" style="opacity:.7;cursor:not-allowed;">
+      <div class="material-icon">🦴</div>
+      <div class="material-text">
+        <span class="material-name">骨資料集🔒</span>
+        <span class="material-en">BONE LIBRARY</span>
+      </div>
+    </div>
+    <% else %>
     <a href="/bone_pdfs" class="material-card bone-card">
       <div class="material-icon">🦴</div>
       <div class="material-text">
-        <span class="material-name">骨資料集</span>
+        <span class="material-name">骨資料集🔒</span>
         <span class="material-en">BONE LIBRARY</span>
       </div>
     </a>
+    <% end %>
 
+    <% if current_user&.guest? %>
+    <div class="material-card muscle-card" style="opacity:.7;cursor:not-allowed;">
+      <div class="material-icon">💪</div>
+      <div class="material-text">
+        <span class="material-name">筋肉資料集🔒</span>
+        <span class="material-en">MUSCLE LIBRARY</span>
+      </div>
+    </div>
+    <% else %>
     <a href="/muscle_pdfs" class="material-card muscle-card">
       <div class="material-icon">💪</div>
       <div class="material-text">
-        <span class="material-name">筋肉資料集</span>
+        <span class="material-name">筋肉資料集🔒</span>
         <span class="material-en">MUSCLE LIBRARY</span>
       </div>
     </a>
+    <% end %>
 
+    <% if current_user&.guest? %>
+    <div class="material-card neuro-card" style="opacity:.7;cursor:not-allowed;">
+      <div class="material-icon">🩸</div>
+      <div class="material-text">
+        <span class="material-name">神経・血管資料集🔒</span>
+        <span class="material-en">NEUROVASCULAR LIBRARY</span>
+      </div>
+    </div>
+    <% else %>
     <a href="/neurovascular_pdfs" class="material-card neuro-card">
       <div class="material-icon">🩸</div>
       <div class="material-text">
-        <span class="material-name">神経・血管資料集</span>
+        <span class="material-name">神経・血管資料集🔒</span>
         <span class="material-en">NEUROVASCULAR LIBRARY</span>
       </div>
     </a>
+    <% end %>
 
+    <% if current_user&.guest? %>
+    <div class="material-card physiology-card" style="opacity:.7;cursor:not-allowed;">
+      <div class="material-icon">🫀</div>
+      <div class="material-text">
+        <span class="material-name">生理学資料集🔒</span>
+        <span class="material-en">PHYSIOLOGY LIBRARY</span>
+      </div>
+    </div>
+    <% else %>
     <a href="/physiology_pdfs" class="material-card physiology-card">
       <div class="material-icon">🫀</div>
       <div class="material-text">
-        <span class="material-name">生理学資料集</span>
+        <span class="material-name">生理学資料集🔒</span>
         <span class="material-en">PHYSIOLOGY LIBRARY</span>
       </div>
     </a>
+    <% end %>
 
+    <% if current_user&.guest? %>
+    <div class="material-card kinesiology-card" style="opacity:.7;cursor:not-allowed;">
+      <div class="material-icon">🏃</div>
+      <div class="material-text">
+        <span class="material-name">運動学資料集🔒</span>
+        <span class="material-en">KINESIOLOGY LIBRARY</span>
+      </div>
+    </div>
+    <% else %>
     <a href="/kinesiology_pdfs" class="material-card kinesiology-card">
       <div class="material-icon">🏃</div>
       <div class="material-text">
-        <span class="material-name">運動学資料集</span>
+        <span class="material-name">運動学資料集🔒</span>
         <span class="material-en">KINESIOLOGY LIBRARY</span>
       </div>
     </a>
+    <% end %>
 
   </div>
 

@@ -23,7 +23,8 @@ class HomeController < ApplicationController
 ]
 
   def index
-  end
+  @show_stamp_reward = session.delete(:show_stamp_reward)
+end
 
   def illustrations
   end

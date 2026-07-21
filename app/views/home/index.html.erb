@@ -546,6 +546,88 @@
       gap: 4px;
     }
   }
+
+  /* =========================
+   スタンプ獲得モーダル
+========================= */
+
+.stamp-reward-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+  animation:fadeIn .35s;
+}
+
+.stamp-reward-card{
+  width:min(340px,90%);
+  background:#fff;
+  border-radius:22px;
+  padding:26px 20px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+  animation:popup .45s;
+}
+
+.stamp-title{
+  font-size:26px;
+  font-weight:bold;
+  color:#f59e0b;
+}
+
+.stamp-image{
+  width:180px;
+  margin:18px auto;
+  display:block;
+}
+
+.stamp-number{
+  font-size:22px;
+  font-weight:bold;
+  color:#102847;
+}
+
+.stamp-name{
+  font-size:24px;
+  font-weight:bold;
+  margin-top:8px;
+}
+
+.stamp-message{
+  margin:18px 0;
+  color:#666;
+}
+
+.stamp-ok-button{
+  width:100%;
+  border:none;
+  border-radius:12px;
+  padding:14px;
+  background:#2563eb;
+  color:#fff;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+@keyframes popup{
+  from{
+    transform:scale(.7);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
 </style>
 
 
@@ -774,6 +856,42 @@
 </div>
 
 
+<% if @show_stamp_reward.present? %>
+<div id="stamp-reward-modal" class="stamp-reward-overlay">
+
+  <div class="stamp-reward-card">
+
+    <div class="stamp-title">
+      🎉 NEW STAMP!
+    </div>
+
+    <img
+      src="<%= @show_stamp_reward[:image] %>"
+      class="stamp-image">
+
+    <div class="stamp-number">
+      No.<%= @show_stamp_reward[:number] %>
+    </div>
+
+    <div class="stamp-name">
+      <%= @show_stamp_reward[:name] %>
+    </div>
+
+    <div class="stamp-message">
+      図鑑に追加されました✨
+    </div>
+
+    <button
+      id="close-stamp-reward"
+      class="stamp-ok-button">
+      OK
+    </button>
+
+  </div>
+
+</div>
+<% end %>
+
 <script>
   const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 
@@ -948,5 +1066,14 @@
       "&ids=" + encodeURIComponent(filtered.join(",")) +
       "&category=all";
   }
+
+  const stampModal = document.getElementById("stamp-reward-modal");
+const closeStampButton = document.getElementById("close-stamp-reward");
+
+if (stampModal && closeStampButton) {
+  closeStampButton.addEventListener("click", () => {
+    stampModal.style.display = "none";
+  });
+}
 </script>
 <script>document.getElementById("settings-overlay")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});document.getElementById("close-settings")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});</script>

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "/questions/review", to: "questions#review"
   get "/select", to: "questions#select"
   post "/questions/api_create", to: "questions#api_create"
+  post "/questions/answered", to: "questions#answered"
 
   get "illustrations", to: "home#illustrations"
   get "/category", to: "home#category"

@@ -128,4 +128,15 @@ end
 def review
 end
 
+def answered
+  return head :unauthorized unless current_user
+
+  current_user.increment!(:answered_questions_count)
+
+  render json: {
+    status: "ok",
+    answered_questions_count: current_user.answered_questions_count
+  }
+end
+
 end

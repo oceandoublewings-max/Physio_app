@@ -759,12 +759,10 @@
       <div class="section-divider">無料登録・ログイン</div>
 
       <div class="auth-stack">
-       <%= button_to user_apple_omniauth_authorize_path,
+   <%= button_to user_apple_omniauth_authorize_path,
     method: :post,
     class: "apple-btn",
-    form: {
-      data: { turbo: false }
-    },
+    data: { turbo: false },
     form_class: "oauth-form" do %>
 
   <span class="auth-logo" aria-hidden="true">

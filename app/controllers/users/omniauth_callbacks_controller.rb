@@ -29,6 +29,17 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
+if @user.new_oauth_user && !@user.first_login_rewarded?
+  stamp = Stamp.find_by(id: 1)
+
+  if stamp
+    UserStamp.create!(user: @user, stamp: stamp)
+    @user.update!(first_login_rewarded: true)
+  end
+end
+
+if @user.persisted?
+
     if @user.persisted?
       sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: provider_name) if is_navigational_format?

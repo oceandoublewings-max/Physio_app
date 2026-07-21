@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -12,10 +10,20 @@ class User < ApplicationRecord
   has_many :user_stamps, dependent: :destroy
   has_many :stamps, through: :user_stamps
 
+  attr_accessor :new_oauth_user
+
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create! do |user|
+    user = find_or_initialize_by(provider: auth.provider, uid: auth.uid)
+
+    if user.new_record?
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
+      user.new_oauth_user = true
+    else
+      user.new_oauth_user = false
     end
+
+    user.save!
+    user
   end
 end

@@ -332,4 +332,8 @@ config.omniauth :apple,
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
 end
+
+OmniAuth.config.allowed_request_methods = [:post]
+OmniAuth.config.silence_get_warning = true

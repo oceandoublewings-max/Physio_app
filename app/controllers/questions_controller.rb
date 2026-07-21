@@ -134,6 +134,19 @@ def answered
 
   current_user.increment!(:answered_questions_count)
 
+count = current_user.answered_questions_count
+
+if [20, 50, 100, 300, 500, 1000].include?(count)
+  owned_stamp_ids = current_user.stamps.pluck(:id)
+
+  stamp = Stamp.where(season: "normal")
+               .where.not(id: owned_stamp_ids)
+               .order(Arel.sql("RANDOM()"))
+               .first
+
+  current_user.user_stamps.create!(stamp: stamp) if stamp
+end
+  
   render json: {
     status: "ok",
     answered_questions_count: current_user.answered_questions_count

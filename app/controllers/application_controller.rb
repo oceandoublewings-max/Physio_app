@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
 
     redirect_to login_path
   end
+
+  def require_registered_user
+    if current_user&.guest?
+      redirect_to login_path, alert: "この機能はGoogle・Appleログイン限定です。"
+    end
+  end
 end

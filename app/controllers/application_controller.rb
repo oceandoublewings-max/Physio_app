@@ -13,8 +13,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_registered_user
-    if current_user&.guest?
-      redirect_to login_path, alert: "この機能はGoogle・Appleログイン限定です。"
-    end
+    return unless current_user&.guest?
+
+    flash[:alert] = "この機能はGoogle・Appleログイン限定です。"
+    redirect_to login_path and return
   end
 end

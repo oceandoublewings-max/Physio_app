@@ -729,7 +729,7 @@
     <section class="analysis-section">
 
       <h2 class="analysis-heading">
-        🔥 苦手問題分析
+        <%= current_user&.guest? ? "🔒 苦手問題分析" : "🔥 苦手問題分析" %>
       </h2>
 
       <p class="analysis-subtitle">
@@ -748,21 +748,21 @@
 
       <%= link_to "/materials", class: "bottom-link" do %>
         <span class="bottom-icon">📚</span>
-        <span class="bottom-title">参考資料</span>
+        <span class="bottom-title"><%= current_user&.guest? ? "🔒 参考資料" : "参考資料" %></span>
         <span class="bottom-note">重要ポイントを整理</span>
       <% end %>
 
 
       <%= link_to "/stamps", class: "bottom-link" do %>
         <span class="bottom-icon">🏅</span>
-        <span class="bottom-title">図鑑</span>
+        <span class="bottom-title"><%= current_user&.guest? ? "🔒 図鑑" : "図鑑" %></span>
         <span class="bottom-note">イラストで理解を深める</span>
       <% end %>
 
 
       <%= link_to "/contact", class: "bottom-link" do %>
         <span class="bottom-icon">✉️</span>
-        <span class="bottom-title">問合せ</span>
+        <span class="bottom-title"><%= current_user&.guest? ? "🔒 問合せ" : "問合せ" %></span>
         <span class="bottom-note">サポートに連絡する</span>
       <% end %>
 

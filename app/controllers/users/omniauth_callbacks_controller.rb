@@ -23,15 +23,16 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       stamp = Stamp.find_by(id: 1)
 
       if stamp
-  UserStamp.create!(user: @user, stamp: stamp)
-  @user.update!(first_login_rewarded: true)
+        UserStamp.create!(user: @user, stamp: stamp)
+        @user.update!(first_login_rewarded: true)
 
-  session[:show_stamp_reward] = {
-    number: "001",
-    name: stamp.name,
-    image: stamp.image
-  }
-end
+        session[:show_stamp_reward] = {
+          number: "001",
+          name: stamp.name,
+          image: stamp.image
+        }
+      end
+    end
 
     if @user.persisted?
       sign_in_and_redirect @user, event: :authentication

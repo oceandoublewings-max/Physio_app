@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   skip_before_action :authenticate_user!, only: [:terms, :privacy], raise: false
   skip_before_action :require_login, only: [:terms, :privacy], raise: false
 
-  bbefore_action :require_login, only: [
+  before_action :require_login, only: [
   :anatomy_analysis,
   :physiology_analysis,
   :kinesiology_analysis,

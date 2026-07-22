@@ -666,6 +666,8 @@ ${explanation.replace(/\n/g, "<br>")}
 localStorage.setItem("total", "<%= @questions.length %>");
 localStorage.setItem("wrong", JSON.stringify(wrong));
 
+console.log("fetch実行");
+
 fetch("/questions/answered", {
   method: "POST",
   headers: {

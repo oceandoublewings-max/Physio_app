@@ -348,7 +348,7 @@ body > * {
 
 
 
-/* ===== NEW STAMP：結果画面のあとに「ドーン！」演出 ===== */
+/* ===== スタンプ演出テスト専用 ===== */
 #stamp-modal {
   display:none;
   position:fixed;
@@ -357,55 +357,56 @@ body > * {
   align-items:center;
   justify-content:center;
   overflow:hidden;
-  background:rgba(4, 15, 31, .76);
+  background:rgba(3, 12, 27, .78);
   backdrop-filter:blur(2px);
   -webkit-backdrop-filter:blur(2px);
 }
 
 #stamp-modal.is-open {
   display:flex;
-  animation:stampOverlayIn .28s ease both;
+  animation:stampOverlayIn .25s ease both;
 }
 
-.stamp-stage {
-  width:min(94vw, 520px);
-  min-height:520px;
+.stamp-test-stage {
+  width:100%;
+  min-height:100vh;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  position:relative;
   text-align:center;
+  padding:24px;
+  box-sizing:border-box;
 }
 
-.stamp-image-wrap {
-  width:min(56vw, 260px);
-  height:min(56vw, 260px);
-  max-width:260px;
-  max-height:260px;
-  min-width:190px;
-  min-height:190px;
+.stamp-test-image-wrap {
+  width:min(58vw, 280px);
+  height:min(58vw, 280px);
+  min-width:210px;
+  min-height:210px;
   position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
-  z-index:2;
 }
 
 .stamp-glow {
   position:absolute;
-  inset:-18%;
+  inset:-22%;
   border-radius:50%;
   background:radial-gradient(
     circle,
-    rgba(255, 221, 112, .35) 0%,
-    rgba(255, 221, 112, .12) 44%,
-    rgba(255, 221, 112, 0) 72%
+    rgba(255,222,119,.38) 0%,
+    rgba(255,222,119,.14) 44%,
+    rgba(255,222,119,0) 72%
   );
   opacity:0;
-  transform:scale(.5);
-  animation:stampGlowIn .55s ease .48s forwards;
+  transform:scale(.45);
   pointer-events:none;
+}
+
+#stamp-modal.is-open .stamp-glow {
+  animation:stampGlow .6s ease .46s forwards;
 }
 
 #stamp-modal-image {
@@ -413,60 +414,56 @@ body > * {
   height:100%;
   object-fit:contain;
   display:block;
-  filter:drop-shadow(0 18px 24px rgba(0,0,0,.25));
-  transform:scale(.03);
   opacity:0;
+  transform:scale(.025);
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.35));
   will-change:transform, opacity;
 }
 
 #stamp-modal.is-open #stamp-modal-image {
-  animation:stampDon 1.18s cubic-bezier(.18,.88,.2,1.08) both;
+  animation:stampDonTest 1.2s cubic-bezier(.18,.88,.2,1.08) both;
 }
 
-.stamp-info {
-  margin-top:12px;
+.stamp-test-info {
+  margin-top:14px;
   opacity:0;
-  transform:translateY(12px);
-  pointer-events:none;
+  transform:translateY(14px);
 }
 
-#stamp-modal.is-open .stamp-info {
-  animation:stampInfoIn .42s ease 1.08s forwards;
-  pointer-events:auto;
+#stamp-modal.is-open .stamp-test-info {
+  animation:stampInfoIn .4s ease 1.08s forwards;
 }
 
 .stamp-title {
-  color:#f4cc61;
-  font-size:clamp(27px, 7vw, 36px);
+  color:#f3ca5e;
+  font-size:clamp(28px, 7vw, 38px);
   line-height:1.1;
   font-weight:900;
   letter-spacing:.04em;
-  text-shadow:0 3px 12px rgba(0,0,0,.35);
+  text-shadow:0 4px 14px rgba(0,0,0,.4);
 }
 
 #stamp-modal-name {
   margin-top:10px;
-  color:#fff;
-  font-size:clamp(17px, 4.6vw, 21px);
-  line-height:1.4;
+  color:white;
+  font-size:clamp(17px, 4.5vw, 22px);
   font-weight:800;
-  text-shadow:0 2px 8px rgba(0,0,0,.35);
+  text-shadow:0 3px 10px rgba(0,0,0,.35);
 }
 
 .stamp-ok-button {
   margin-top:22px;
-  min-width:132px;
-  min-height:48px;
-  border:1px solid rgba(255,255,255,.35);
+  min-width:140px;
+  min-height:50px;
+  border:none;
   border-radius:14px;
-  background:#fff;
+  background:white;
   color:#174f8a;
-  padding:11px 30px;
+  padding:12px 30px;
   font-size:16px;
   font-weight:900;
-  box-shadow:0 8px 24px rgba(0,0,0,.22);
+  box-shadow:0 10px 26px rgba(0,0,0,.24);
   cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
 }
 
 .stamp-ok-button:active {
@@ -475,37 +472,28 @@ body > * {
 
 @keyframes stampOverlayIn {
   from { opacity:0; }
-  to   { opacity:1; }
+  to { opacity:1; }
 }
 
-/*
-  小さい
-   ↓
-  画面中央にドーーーーン！
-   ↓
-  約0.2秒キープ
-   ↓
-  少し縮んで着地
-*/
-@keyframes stampDon {
+@keyframes stampDonTest {
   0% {
     opacity:0;
-    transform:scale(.03);
+    transform:scale(.025);
   }
-  10% {
+  9% {
     opacity:1;
   }
-  48% {
+  47% {
     opacity:1;
-    transform:scale(1.58);
+    transform:scale(1.72);
   }
   65% {
     opacity:1;
-    transform:scale(1.58);
+    transform:scale(1.72);
   }
   84% {
     opacity:1;
-    transform:scale(.92);
+    transform:scale(.91);
   }
   100% {
     opacity:1;
@@ -513,17 +501,17 @@ body > * {
   }
 }
 
-@keyframes stampGlowIn {
+@keyframes stampGlow {
   0% {
     opacity:0;
-    transform:scale(.5);
+    transform:scale(.45);
   }
   55% {
     opacity:1;
-    transform:scale(1.08);
+    transform:scale(1.12);
   }
   100% {
-    opacity:.8;
+    opacity:.85;
     transform:scale(1);
   }
 }
@@ -531,7 +519,7 @@ body > * {
 @keyframes stampInfoIn {
   from {
     opacity:0;
-    transform:translateY(12px);
+    transform:translateY(14px);
   }
   to {
     opacity:1;
@@ -540,23 +528,9 @@ body > * {
 }
 
 @media (max-width:480px) {
-  .stamp-stage {
-    min-height:480px;
-  }
-
-  .stamp-image-wrap {
-    width:58vw;
-    height:58vw;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  #stamp-modal,
-  #stamp-modal-image,
-  .stamp-glow,
-  .stamp-info {
-    animation-duration:.01ms !important;
-    animation-delay:0ms !important;
+  .stamp-test-image-wrap {
+    width:60vw;
+    height:60vw;
   }
 }
 </style>
@@ -902,8 +876,7 @@ fetch("/questions/answered", {
   try{
     const data = JSON.parse(text);
     if(data.new_stamp){
-      // 問題中には出さず、終了画面まで保存しておく
-      localStorage.setItem("pendingNewStamp", JSON.stringify(data.new_stamp));
+      showStampModal(data.new_stamp);
     }
   }catch(e){}
 })
@@ -1355,60 +1328,27 @@ document.body.style.setProperty("background-image", skeletonImage, "important");
 document.body.style.setProperty("background-repeat", "no-repeat", "important");
 document.body.style.setProperty("background-position", "center 75px", "important");
 document.body.style.setProperty("background-size", "320px", "important");
-
-// 正答率を見せてから、獲得したスタンプを表示
-window.addEventListener("load", () => {
-  const pendingStampJson = localStorage.getItem("pendingNewStamp");
-
-  if (pendingStampJson) {
-    try {
-      const pendingStamp = JSON.parse(pendingStampJson);
-
-      // 結果画面を約1.8秒見せてからご褒美演出
-      setTimeout(() => {
-        showStampModal(pendingStamp);
-        localStorage.removeItem("pendingNewStamp");
-      }, 1800);
-    } catch (error) {
-      console.error("pending stamp parse error:", error);
-      localStorage.removeItem("pendingNewStamp");
-    }
-  }
-
-  // 動作確認用：
-  // 結果画面URLの末尾に &stamp_test=1 を付けた時だけ表示
-  const params = new URLSearchParams(window.location.search);
-  if (!pendingStampJson && params.get("stamp_test") === "1") {
-    setTimeout(() => {
-      showStampModal({
-        image:"/images/stamps/normal/stamp_043.png",
-        name:"通常スタンプ No.043"
-      });
-    }, 1800);
-  }
-});
 </script>
 
 <% end %>
 <% end %>
 
-<!-- ===== NEW STAMP モーダル：結果画面で表示 ===== -->
-<div id="stamp-modal" role="dialog" aria-modal="true" aria-label="新しいスタンプを獲得">
-  <div class="stamp-stage">
-    <div class="stamp-image-wrap">
+<!-- ===== NEW STAMP アニメーション テスト専用 ===== -->
+<div id="stamp-modal" role="dialog" aria-modal="true" aria-label="スタンプ獲得演出">
+  <div class="stamp-test-stage">
+    <div class="stamp-test-image-wrap">
       <div class="stamp-glow"></div>
 
       <img
         id="stamp-modal-image"
-        src=""
-        alt="獲得したスタンプ"
+        src="/images/stamps/normal/stamp_043.png"
+        alt="通常スタンプ No.043"
       >
     </div>
 
-    <div class="stamp-info">
+    <div class="stamp-test-info">
       <div class="stamp-title">NEW STAMP!</div>
-
-      <div id="stamp-modal-name"></div>
+      <div id="stamp-modal-name">通常スタンプ No.043</div>
 
       <button
         type="button"
@@ -1422,19 +1362,12 @@ window.addEventListener("load", () => {
 </div>
 
 <script>
-function showStampModal(stamp) {
-  if (!stamp || !stamp.image) return;
-
+function showStampModal() {
   const modal = document.getElementById("stamp-modal");
   const image = document.getElementById("stamp-modal-image");
-  const name = document.getElementById("stamp-modal-name");
 
-  if (!modal || !image || !name) return;
+  if (!modal || !image) return;
 
-  image.src = stamp.image;
-  name.textContent = stamp.name || "新しいスタンプ";
-
-  // 同じページで再表示してもアニメーションを最初から再生
   modal.classList.remove("is-open");
   void modal.offsetWidth;
   modal.classList.add("is-open");
@@ -1451,4 +1384,9 @@ function closeStampModal() {
 
   document.body.style.overflow = "";
 }
+
+// テスト専用：ページを開くたびに0.5秒後、自動で再生
+window.addEventListener("load", () => {
+  setTimeout(showStampModal, 500);
+});
 </script>

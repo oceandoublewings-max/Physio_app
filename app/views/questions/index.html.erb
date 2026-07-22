@@ -1233,4 +1233,14 @@ function showStampModal(stamp){
 function closeStampModal(){
   document.getElementById("stamp-modal").style.display="none";
 }
+
+// ===== テスト用（確認後は削除してOK）=====
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    showStampModal({
+      image: "/images/stamps/normal/stamp_043.png",
+      name: "通常スタンプ No.043"
+    });
+  }, 500);
+});
 </script>

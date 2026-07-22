@@ -349,13 +349,15 @@ body > * {
 
 <style>
 #stamp-modal{animation:stampFade .25s ease;}
-#stamp-modal .stamp-card{
-animation:stampPop .45s cubic-bezier(.2,1.3,.4,1) forwards;
-transform:scale(.7);
+#stamp-modal #stamp-modal-image{
+animation:stampPop .9s cubic-bezier(.18,1.15,.3,1) forwards;
+transform:scale(.15);
 }
-#stamp-modal .stamp-title{
+#stamp-modal .stamp-title,
+#stamp-modal #stamp-modal-name,
+#stamp-modal button{
 opacity:0;
-animation:titleFade .35s ease .2s forwards;
+animation:titleFade .35s ease .65s forwards;
 }
 .stamp-glow{
 position:absolute;
@@ -367,9 +369,9 @@ z-index:-1;
 }
 @keyframes stampFade{from{opacity:0}to{opacity:1}}
 @keyframes stampPop{
-0%{transform:scale(.2)}
-45%{transform:scale(1.65)}
-70%{transform:scale(1.45)}
+0%{transform:scale(.15)}
+55%{transform:scale(2.0)}
+72%{transform:scale(1.7)}
 100%{transform:scale(1)}
 }
 @keyframes titleFade{
@@ -1235,13 +1237,13 @@ function closeStampModal(){
   document.getElementById("stamp-modal").style.display="none";
 }
 
-// ===== テスト用（確認後は削除してOK）=====
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    showStampModal({
-      image: "/images/stamps/normal/stamp_043.png",
-      name: "通常スタンプ No.043"
-    });
-  }, 500);
+// テスト用（確認後削除）
+window.addEventListener("load",()=>{
+ setTimeout(()=>{
+  showStampModal({
+   image:"/images/stamps/normal/stamp_043.png",
+   name:"通常スタンプ No.043"
+  });
+ },500);
 });
 </script>

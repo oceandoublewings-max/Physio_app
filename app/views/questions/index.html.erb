@@ -670,11 +670,22 @@ console.log("fetch実行");
 
 fetch("/questions/answered", {
   method: "POST",
+  credentials: "same-origin",
   headers: {
     "Content-Type": "application/json",
+    "Accept": "application/json",
     "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
-  }
-}).catch(console.error);
+  },
+  body: JSON.stringify({
+    question_id: questionId
+  })
+})
+.then(response => {
+  console.log("answered status:", response.status);
+  return response.text();
+})
+.then(text => console.log("answered response:", text))
+.catch(error => console.error("answered error:", error));
 
 showAnswer();
 }

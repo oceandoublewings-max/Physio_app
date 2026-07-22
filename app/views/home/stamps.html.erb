@@ -338,7 +338,7 @@
 </style>
 
 <p>Current User ID: <%= current_user&.id %></p>
-<p><%= @owned_stamp_ids.inspect %></p>
+<p>Owned: <%= current_user.stamps.pluck(:id).inspect %></p>
 
 <div class="stamp-page">
 
@@ -439,7 +439,7 @@
 
       <% (1..100).each do |i| %>
 
-        <% file = "stamps/stamp_%03d.png" % i %>
+        <% file = "stamps/normal/stamp_%03d.png" % i %>
         <% image_exists = File.exist?(Rails.root.join("public", "images", file)) %>
         <% owned = owned_stamp_ids.include?(i) %>
 

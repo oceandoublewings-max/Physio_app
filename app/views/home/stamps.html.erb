@@ -433,15 +433,20 @@
 
     <div class="stamp-grid">
 
+      <% owned_stamp_ids = current_user&.user_stamps&.pluck(:stamp_id) || [] %>
+
       <% (1..100).each do |i| %>
 
         <% file = "stamps/stamp_%03d.png" % i %>
+        <% image_exists = File.exist?(Rails.root.join("public", "images", file)) %>
+        <% owned = owned_stamp_ids.include?(i) %>
 
         <div class="stamp-cell">
 
-          <% if File.exist?(Rails.root.join("public", "images", file)) %>
+          <% if owned && image_exists %>
 
             <%= image_tag "/images/#{file}",
+              alt: "スタンプ No.#{format('%03d', i)}",
               onclick: "openStamp('/images/#{file}')"
             %>
 

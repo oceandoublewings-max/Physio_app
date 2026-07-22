@@ -347,191 +347,83 @@ body > * {
 }
 
 
-
-/* ===== スタンプ演出テスト専用 ===== */
 #stamp-modal {
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:rgba(3, 12, 27, .78);
-  backdrop-filter:blur(2px);
-  -webkit-backdrop-filter:blur(2px);
+  opacity:0;
+  transition:opacity .22s ease;
 }
 
 #stamp-modal.is-open {
-  display:flex;
-  animation:stampOverlayIn .25s ease both;
+  opacity:1;
 }
 
-.stamp-test-stage {
-  width:100%;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:24px;
-  box-sizing:border-box;
-}
-
-.stamp-test-image-wrap {
-  width:min(58vw, 280px);
-  height:min(58vw, 280px);
-  min-width:210px;
-  min-height:210px;
+#stamp-modal .stamp-card {
   position:relative;
+  overflow:hidden;
+}
+
+#stamp-modal .stamp-image-stage {
+  position:relative;
+  width:210px;
+  height:210px;
+  margin:10px auto 4px;
   display:flex;
   align-items:center;
   justify-content:center;
 }
 
-.stamp-glow {
+#stamp-modal .stamp-glow {
   position:absolute;
-  inset:-22%;
+  inset:0;
+  margin:auto;
+  width:210px;
+  height:210px;
   border-radius:50%;
-  background:radial-gradient(
-    circle,
-    rgba(255,222,119,.38) 0%,
-    rgba(255,222,119,.14) 44%,
-    rgba(255,222,119,0) 72%
-  );
+  background:radial-gradient(circle, rgba(255,215,0,.38), rgba(255,215,0,.11) 45%, transparent 72%);
   opacity:0;
-  transform:scale(.45);
-  pointer-events:none;
+  transform:scale(.35);
 }
 
-#stamp-modal.is-open .stamp-glow {
-  animation:stampGlow .6s ease .46s forwards;
+#stamp-modal.is-animating .stamp-glow {
+  animation:stampGlowBurst 1.05s ease .16s forwards;
 }
 
 #stamp-modal-image {
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
   opacity:0;
-  transform:scale(.025);
-  filter:drop-shadow(0 20px 30px rgba(0,0,0,.35));
+  transform:scale(.08);
+  filter:drop-shadow(0 12px 18px rgba(0,0,0,.20));
   will-change:transform, opacity;
 }
 
-#stamp-modal.is-open #stamp-modal-image {
-  animation:stampDonTest 1.2s cubic-bezier(.18,.88,.2,1.08) both;
+#stamp-modal.is-animating #stamp-modal-image {
+  animation:stampDon 1.05s cubic-bezier(.18,.88,.25,1.18) forwards;
 }
 
-.stamp-test-info {
-  margin-top:14px;
+#stamp-modal .stamp-details {
   opacity:0;
-  transform:translateY(14px);
+  transform:translateY(12px);
 }
 
-#stamp-modal.is-open .stamp-test-info {
-  animation:stampInfoIn .4s ease 1.08s forwards;
+#stamp-modal.is-animating .stamp-details {
+  animation:stampDetailsIn .34s ease .92s forwards;
 }
 
-.stamp-title {
-  color:#f3ca5e;
-  font-size:clamp(28px, 7vw, 38px);
-  line-height:1.1;
-  font-weight:900;
-  letter-spacing:.04em;
-  text-shadow:0 4px 14px rgba(0,0,0,.4);
+@keyframes stampDon {
+  0%   { opacity:0; transform:scale(.08) rotate(-7deg); }
+  20%  { opacity:1; transform:scale(.18) rotate(-5deg); }
+  58%  { opacity:1; transform:scale(1.34) rotate(2deg); }
+  78%  { opacity:1; transform:scale(.92) rotate(-1deg); }
+  100% { opacity:1; transform:scale(1) rotate(0deg); }
 }
 
-#stamp-modal-name {
-  margin-top:10px;
-  color:white;
-  font-size:clamp(17px, 4.5vw, 22px);
-  font-weight:800;
-  text-shadow:0 3px 10px rgba(0,0,0,.35);
+@keyframes stampGlowBurst {
+  0%   { opacity:0; transform:scale(.28); }
+  55%  { opacity:1; transform:scale(1.12); }
+  100% { opacity:.72; transform:scale(1); }
 }
 
-.stamp-ok-button {
-  margin-top:22px;
-  min-width:140px;
-  min-height:50px;
-  border:none;
-  border-radius:14px;
-  background:white;
-  color:#174f8a;
-  padding:12px 30px;
-  font-size:16px;
-  font-weight:900;
-  box-shadow:0 10px 26px rgba(0,0,0,.24);
-  cursor:pointer;
-}
-
-.stamp-ok-button:active {
-  transform:scale(.97);
-}
-
-@keyframes stampOverlayIn {
-  from { opacity:0; }
-  to { opacity:1; }
-}
-
-@keyframes stampDonTest {
-  0% {
-    opacity:0;
-    transform:scale(.025);
-  }
-  9% {
-    opacity:1;
-  }
-  47% {
-    opacity:1;
-    transform:scale(1.72);
-  }
-  65% {
-    opacity:1;
-    transform:scale(1.72);
-  }
-  84% {
-    opacity:1;
-    transform:scale(.91);
-  }
-  100% {
-    opacity:1;
-    transform:scale(1);
-  }
-}
-
-@keyframes stampGlow {
-  0% {
-    opacity:0;
-    transform:scale(.45);
-  }
-  55% {
-    opacity:1;
-    transform:scale(1.12);
-  }
-  100% {
-    opacity:.85;
-    transform:scale(1);
-  }
-}
-
-@keyframes stampInfoIn {
-  from {
-    opacity:0;
-    transform:translateY(14px);
-  }
-  to {
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@media (max-width:480px) {
-  .stamp-test-image-wrap {
-    width:60vw;
-    height:60vw;
-  }
+@keyframes stampDetailsIn {
+  from { opacity:0; transform:translateY(12px); }
+  to   { opacity:1; transform:translateY(0); }
 }
 </style>
 
@@ -760,6 +652,35 @@ function normalizeAnswerValue(value) {
   return v;
 }
 
+function recordAnsweredQuestion(questionId) {
+  return fetch("/questions/answered", {
+    method: "POST",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
+    },
+    body: JSON.stringify({ question_id: questionId })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`answered status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data.new_stamp) {
+      queuePendingStamp(data.new_stamp);
+    }
+    return data;
+  })
+  .catch(error => {
+    console.error("answered error:", error);
+    return null;
+  });
+}
+
 function checkAnswer(choice, selectedButton) {
 
   if (window.answered === true) {
@@ -853,34 +774,7 @@ ${explanation.replace(/\n/g, "<br>")}
 localStorage.setItem("total", "<%= @questions.length %>");
 localStorage.setItem("wrong", JSON.stringify(wrong));
 
-console.log("fetch実行");
-
-fetch("/questions/answered", {
-  method: "POST",
-  credentials: "same-origin",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content
-  },
-  body: JSON.stringify({
-    question_id: questionId
-  })
-})
-.then(response => {
-  console.log("answered status:", response.status);
-  return response.text();
-})
-.then(text => {
-  console.log("answered response:", text);
-  try{
-    const data = JSON.parse(text);
-    if(data.new_stamp){
-      showStampModal(data.new_stamp);
-    }
-  }catch(e){}
-})
-.catch(error => console.error("answered error:", error));
+recordAnsweredQuestion(questionId);
 
 showAnswer();
 }
@@ -959,12 +853,17 @@ function goIllustration(addWrong) {
 
   localStorage.setItem("wrong", JSON.stringify(wrong));
 
-  window.location.href =
+  const nextQuestionUrl =
     "/questions?ids=<%= @ids %>" +
     "&count=<%= params[:count] %>" +
     "&index=<%= @index + 1 %>" +
     "&category=<%= params[:category] %>" +
     "&qtype=<%= params[:qtype] %>";
+
+  recordAnsweredQuestion("<%= @question.id %>")
+    .finally(() => {
+      window.location.href = nextQuestionUrl;
+    });
 }
 </script>
 
@@ -1328,33 +1227,63 @@ document.body.style.setProperty("background-image", skeletonImage, "important");
 document.body.style.setProperty("background-repeat", "no-repeat", "important");
 document.body.style.setProperty("background-position", "center 75px", "important");
 document.body.style.setProperty("background-size", "320px", "important");
+
+// 正答率リングを見せたあと、今回獲得したスタンプを表示する。
+window.stampRedirectAfterQueue = true;
+window.setTimeout(() => {
+  showNextPendingStamp();
+}, 1500);
 </script>
 
 <% end %>
 <% end %>
 
-<!-- ===== NEW STAMP アニメーション テスト専用 ===== -->
-<div id="stamp-modal" role="dialog" aria-modal="true" aria-label="スタンプ獲得演出">
-  <div class="stamp-test-stage">
-    <div class="stamp-test-image-wrap">
+<!-- ===== NEW STAMP モーダル（本番用）===== -->
+<div id="stamp-modal" role="dialog" aria-modal="true" aria-labelledby="stamp-modal-title" style="
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.72);
+z-index:9999;
+justify-content:center;
+align-items:center;
+padding:20px;
+box-sizing:border-box;
+">
+  <div class="stamp-card" style="
+  width:min(90%,360px);
+  background:#fff;
+  border-radius:24px;
+  padding:22px 20px 26px;
+  text-align:center;
+  box-shadow:0 24px 60px rgba(0,0,0,.32);
+  ">
+    <div class="stamp-image-stage">
       <div class="stamp-glow"></div>
-
-      <img
-        id="stamp-modal-image"
-        src="/images/stamps/normal/stamp_043.png"
-        alt="通常スタンプ No.043"
-      >
+      <img id="stamp-modal-image"
+           src=""
+           alt="獲得したスタンプ"
+           style="width:190px;height:190px;object-fit:contain;display:block;">
     </div>
 
-    <div class="stamp-test-info">
-      <div class="stamp-title">NEW STAMP!</div>
-      <div id="stamp-modal-name">通常スタンプ No.043</div>
+    <div class="stamp-details">
+      <div id="stamp-modal-title" class="stamp-title" style="font-size:28px;font-weight:900;color:#d7b85a;">
+        🏅 NEW STAMP!
+      </div>
 
-      <button
-        type="button"
-        class="stamp-ok-button"
-        onclick="closeStampModal()"
-      >
+      <div id="stamp-modal-name" style="margin-top:8px;font-size:20px;font-weight:800;color:#174f8a;"></div>
+
+      <button type="button" onclick="closeStampModal()" style="
+        margin-top:22px;
+        background:#174f8a;
+        color:#fff;
+        border:none;
+        border-radius:12px;
+        padding:12px 34px;
+        font-size:16px;
+        font-weight:800;
+        cursor:pointer;
+      ">
         OK
       </button>
     </div>
@@ -1362,31 +1291,86 @@ document.body.style.setProperty("background-size", "320px", "important");
 </div>
 
 <script>
-function showStampModal() {
+window.currentStampQueue = window.currentStampQueue || [];
+window.stampRedirectAfterQueue = window.stampRedirectAfterQueue || false;
+
+function normalizeStampData(stamp) {
+  if (!stamp) return null;
+
+  return {
+    id: stamp.id ?? stamp.stamp_id ?? null,
+    name: stamp.name ?? stamp.title ?? "新しいスタンプ",
+    image: stamp.image ?? stamp.image_url ?? stamp.path ?? "",
+    title: stamp.modal_title ?? stamp.reward_title ?? "🏅 NEW STAMP!",
+    receivedAt: stamp.received_at ?? new Date().toISOString()
+  };
+}
+
+function queuePendingStamp(stamp) {
+  const normalizedStamp = normalizeStampData(stamp);
+  if (!normalizedStamp || !normalizedStamp.image) return;
+
+  const queue = JSON.parse(sessionStorage.getItem("pendingNewStamps") || "[]");
+  const duplicate = queue.some(item =>
+    normalizedStamp.id && String(item.id) === String(normalizedStamp.id)
+  );
+
+  if (!duplicate) {
+    queue.push(normalizedStamp);
+    sessionStorage.setItem("pendingNewStamps", JSON.stringify(queue));
+  }
+}
+
+function showStampModal(stamp) {
+  const normalizedStamp = normalizeStampData(stamp);
+  if (!normalizedStamp || !normalizedStamp.image) return;
+
   const modal = document.getElementById("stamp-modal");
   const image = document.getElementById("stamp-modal-image");
+  const name = document.getElementById("stamp-modal-name");
+  const title = document.getElementById("stamp-modal-title");
 
-  if (!modal || !image) return;
+  image.src = normalizedStamp.image;
+  name.textContent = normalizedStamp.name;
+  title.textContent = normalizedStamp.title;
 
-  modal.classList.remove("is-open");
+  modal.classList.remove("is-open", "is-animating");
+  modal.style.display = "flex";
+
+  // 同じモーダルを連続表示しても毎回アニメーションを最初から再生する。
   void modal.offsetWidth;
-  modal.classList.add("is-open");
+  modal.classList.add("is-open", "is-animating");
+}
 
-  document.body.style.overflow = "hidden";
+function showNextPendingStamp() {
+  if (window.currentStampQueue.length === 0) {
+    window.currentStampQueue = JSON.parse(
+      sessionStorage.getItem("pendingNewStamps") || "[]"
+    );
+    sessionStorage.removeItem("pendingNewStamps");
+  }
+
+  const nextStamp = window.currentStampQueue.shift();
+  if (nextStamp) {
+    showStampModal(nextStamp);
+  }
 }
 
 function closeStampModal() {
   const modal = document.getElementById("stamp-modal");
+  modal.classList.remove("is-open", "is-animating");
 
-  if (modal) {
-    modal.classList.remove("is-open");
-  }
+  window.setTimeout(() => {
+    modal.style.display = "none";
 
-  document.body.style.overflow = "";
+    if (window.currentStampQueue.length > 0) {
+      showStampModal(window.currentStampQueue.shift());
+      return;
+    }
+
+    if (window.stampRedirectAfterQueue) {
+      window.location.href = "/?index=0";
+    }
+  }, 220);
 }
-
-// テスト専用：ページを開くたびに0.5秒後、自動で再生
-window.addEventListener("load", () => {
-  setTimeout(showStampModal, 500);
-});
 </script>

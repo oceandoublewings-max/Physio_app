@@ -82,13 +82,15 @@ end
   end
 
   def stamps
-  end
+  @owned_stamp_ids = current_user.user_stamps.pluck(:stamp_id)
+end
 
   def contact
   end
 
   def event_stamps
-  end
+  @owned_stamp_ids = current_user.user_stamps.pluck(:stamp_id)
+end
 
   def about
   end

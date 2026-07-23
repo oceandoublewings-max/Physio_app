@@ -1,5 +1,5 @@
 <div class="tutorial-container">
-  <%= image_tag "tutorial/tutorial_#{@page}.png", class: "tutorial-image" %>
+  <img src="/tutorial/tutorial_<%= @page %>.png" class="tutorial-image">
 
   <div class="tutorial-buttons">
     <% if @page > 1 %>

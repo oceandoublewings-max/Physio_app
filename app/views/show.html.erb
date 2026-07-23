@@ -1,0 +1,65 @@
+<div class="tutorial-container">
+  <%= image_tag "tutorial/tutorial_#{@page}.png", class: "tutorial-image" %>
+
+  <div class="tutorial-buttons">
+    <% if @page > 1 %>
+      <%= link_to "← 戻る", tutorial_path(@page - 1), class: "back-btn" %>
+    <% else %>
+      <div></div>
+    <% end %>
+
+    <%= link_to "スキップ", root_path, class: "skip-btn" %>
+
+    <% if @page < 5 %>
+      <%= link_to "次へ →", tutorial_path(@page + 1), class: "next-btn" %>
+    <% else %>
+      <%= link_to "クイズを始める", root_path, class: "start-btn" %>
+    <% end %>
+  </div>
+</div>
+
+<style>
+.tutorial-container{
+  max-width:430px;
+  margin:20px auto;
+  text-align:center;
+}
+
+.tutorial-image{
+  width:100%;
+  border-radius:20px;
+}
+
+.tutorial-buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.back-btn,
+.skip-btn,
+.next-btn,
+.start-btn{
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+.back-btn{
+  background:#666;
+  color:#fff;
+}
+
+.skip-btn{
+  color:#666;
+}
+
+.next-btn,
+.start-btn{
+  background:#d9b24a;
+  color:#fff;
+}
+</style>

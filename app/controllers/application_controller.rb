@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
     return if controller_name == "sessions"
     return if controller_name == "omniauth_callbacks"
+    return if controller_name == "tutorials"
 
     redirect_to login_path
   end

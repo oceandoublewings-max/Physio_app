@@ -103,7 +103,9 @@ end
 
   
  def tutorial
-  raise "TUTORIAL ACTION"
+  @page = (params[:page] || 1).to_i
+  @page = 1 if @page < 1
+  @page = 5 if @page > 5
 end
 
 end

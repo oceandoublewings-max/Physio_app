@@ -280,6 +280,92 @@
     font-weight: bold;
   }
 
+
+  /* =========================
+     STEP2：獲得後24時間のNEW表示
+  ========================= */
+  .stamp-cell.new-stamp {
+    border: 3px solid #f2c94c;
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,.85) inset,
+      0 0 14px rgba(242,201,76,.55),
+      0 0 26px rgba(242,201,76,.28);
+    animation: newStampGoldGlow 1.9s ease-in-out infinite;
+    overflow: visible;
+    z-index: 2;
+  }
+
+  .stamp-cell.new-stamp::before {
+    content: "NEW";
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    z-index: 5;
+    padding: 4px 7px 3px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff5b6e, #e9364d);
+    color: #fff;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .06em;
+    box-shadow: 0 4px 10px rgba(220,45,70,.28);
+  }
+
+  .stamp-cell.new-stamp::after {
+    content: "✦";
+    position: absolute;
+    right: -3px;
+    top: -8px;
+    z-index: 5;
+    color: #ffd95a;
+    font-size: 22px;
+    line-height: 1;
+    text-shadow:
+      0 0 7px rgba(255,217,90,.9),
+      0 0 14px rgba(255,196,45,.5);
+    animation: newStampSparkle 1.15s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .stamp-cell.new-stamp img {
+    filter: drop-shadow(0 6px 10px rgba(215,184,90,.22));
+  }
+
+  @keyframes newStampGoldGlow {
+    0%, 100% {
+      transform: translateY(0);
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,.85) inset,
+        0 0 12px rgba(242,201,76,.42),
+        0 0 22px rgba(242,201,76,.20);
+    }
+    50% {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,.9) inset,
+        0 0 18px rgba(242,201,76,.72),
+        0 0 34px rgba(242,201,76,.35);
+    }
+  }
+
+  @keyframes newStampSparkle {
+    0%, 100% {
+      transform: scale(.72) rotate(0deg);
+      opacity: .45;
+    }
+    50% {
+      transform: scale(1.22) rotate(18deg);
+      opacity: 1;
+    }
+  }
+
   /* =========================
      モーダル
   ========================= */
@@ -433,15 +519,20 @@
 
     <div class="stamp-grid">
 
-      <% owned_stamp_ids = current_user&.user_stamps&.pluck(:stamp_id) || [] %>
+      <% user_stamps_by_stamp_id =
+           current_user&.user_stamps&.where(stamp_id: 1..100)&.index_by(&:stamp_id) || {} %>
 
       <% (1..100).each do |i| %>
 
         <% file = "stamps/normal/stamp_%03d.png" % i %>
         <% image_exists = File.exist?(Rails.root.join("public", "images", file)) %>
-        <% owned = owned_stamp_ids.include?(i) %>
+        <% user_stamp = user_stamps_by_stamp_id[i] %>
+        <% owned = user_stamp.present? %>
+        <% newly_received =
+             user_stamp&.created_at.present? &&
+             user_stamp.created_at >= 24.hours.ago %>
 
-        <div class="stamp-cell">
+        <div class="stamp-cell<%= " new-stamp" if newly_received %>">
 
           <% if owned && image_exists %>
 

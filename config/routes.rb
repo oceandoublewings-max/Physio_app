@@ -41,6 +41,8 @@ Rails.application.routes.draw do
   get "/terms", to: "home#terms"
   get "/privacy", to: "home#privacy"
 
+  resources :tutorials, only: [:show]
+
   get "export/anatomy_choice", to: "export#anatomy_choice"
   get "export/anatomy_true_false", to: "export#anatomy_true_false"
   get "export/physiology_choice", to: "export#physiology_choice"

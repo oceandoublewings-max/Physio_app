@@ -1,3 +1,8 @@
-<%= link_to "次へ →", "/tutorial?page=#{@page + 1}" %>
+class TutorialsController < ApplicationController
+  def show
+    @page = params[:id].to_i
 
-<%= link_to "← 戻る", "/tutorial?page=#{@page - 1}" %>
+    @page = 1 if @page < 1
+    @page = 5 if @page > 5
+  end
+end

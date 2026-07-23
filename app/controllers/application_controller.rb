@@ -4,14 +4,15 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    return if current_user.present?
+  return if current_user.present?
 
-    return if controller_name == "sessions"
-    return if controller_name == "omniauth_callbacks"
-    return if controller_name == "tutorials"
+  return if controller_name == "sessions"
+  return if controller_name == "omniauth_callbacks"
+  return if controller_name == "tutorials"
+  return if controller_name == "home" && action_name == "tutorial"
 
-    redirect_to login_path
-  end
+  redirect_to login_path
+end
 
   def require_registered_user
     return unless current_user&.guest?

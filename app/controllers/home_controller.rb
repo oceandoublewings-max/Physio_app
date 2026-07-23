@@ -101,4 +101,7 @@ end
   def privacy
   end
 
+  def tutorial
+  end
+
 end

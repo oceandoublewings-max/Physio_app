@@ -463,40 +463,6 @@
 
 
   <!-- =========================
-       イベントスタンプ図鑑へ
-  ========================= -->
-  <div class="event-link-area">
-
-    <%= link_to event_stamps_path, class: "event-link" do %>
-
-      <div class="event-link-left">
-
-        <div class="event-link-icon">
-          🎉
-        </div>
-
-        <div class="event-link-text">
-          <span class="event-link-main">
-            イベントスタンプ図鑑
-          </span>
-
-          <span class="event-link-sub">
-            LIMITED EVENT COLLECTION
-          </span>
-        </div>
-
-      </div>
-
-      <span class="event-link-arrow">
-        ›
-      </span>
-
-    <% end %>
-
-  </div>
-
-
-  <!-- =========================
        コレクション見出し
   ========================= -->
   <div class="collection-heading">
@@ -555,6 +521,49 @@
 
     </div>
 
+  </div>
+
+  <% current_month = Time.current.month %>
+
+  <% if (3..5).include?(current_month) %>
+    <% season_title = "🌸 Spring Stamps" %>
+    <% season_folder = "spring" %>
+    <% season_prefix = "spring_stamp_" %>
+  <% elsif (6..8).include?(current_month) %>
+    <% season_title = "☀️ Summer Stamps" %>
+    <% season_folder = "summer" %>
+    <% season_prefix = "summer_stamp_" %>
+  <% elsif (9..11).include?(current_month) %>
+    <% season_title = "🍁 Autumn Stamps" %>
+    <% season_folder = "autumn" %>
+    <% season_prefix = "autumn_stamp_" %>
+  <% else %>
+    <% season_title = "❄️ Winter Stamps" %>
+    <% season_folder = "winter" %>
+    <% season_prefix = "winter_stamp_" %>
+  <% end %>
+
+  <div class="collection-heading">
+    <h2 class="collection-title"><%= season_title %></h2>
+    <div class="collection-sub">季節限定スタンプコレクション</div>
+  </div>
+
+  <div class="stamp-grid-wrap">
+    <div class="stamp-grid">
+      <% (1..50).each do |i| %>
+        <% file = "stamps/#{season_folder}/#{season_prefix}%03d.png" % i %>
+        <% image_exists = File.exist?(Rails.root.join("public","images",file)) %>
+        <div class="stamp-cell">
+          <% if image_exists %>
+            <%= image_tag "/images/#{file}",
+              alt: "#{season_title} #{format('%03d',i)}",
+              onclick: "openStamp('/images/#{file}')" %>
+          <% else %>
+            <span class="stamp-number"><%= "%03d" % i %></span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
 </div>

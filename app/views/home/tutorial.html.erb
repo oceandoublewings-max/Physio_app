@@ -3,7 +3,7 @@
 
   <div class="tutorial-buttons">
     <% if @page > 1 %>
-      <%= link_to "← 戻る", tutorial_path(@page - 1), class: "back-btn" %>
+      <%= link_to "← 戻る", "/tutorial?page=#{@page - 1}", class: "back-btn" %>
     <% else %>
       <div></div>
     <% end %>
@@ -11,7 +11,7 @@
     <%= link_to "スキップ", root_path, class: "skip-btn" %>
 
     <% if @page < 5 %>
-      <%= link_to "次へ →", tutorial_path(@page + 1), class: "next-btn" %>
+      <%= link_to "次へ →", "/tutorial?page=#{@page + 1}", class: "next-btn" %>
     <% else %>
       <%= link_to "クイズを始める", root_path, class: "start-btn" %>
     <% end %>

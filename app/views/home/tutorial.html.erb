@@ -13,7 +13,7 @@
     <% if @page < 5 %>
       <%= link_to "次へ →", "/tutorial?page=#{@page + 1}", class: "next-btn" %>
     <% else %>
-      <%= link_to "クイズを始める", root_path, class: "start-btn finish-btn" %>
+      <%= link_to "クイズ開始", root_path, class: "start-btn finish-btn" %>
     <% end %>
   </div>
 </div>
@@ -44,9 +44,10 @@
 .skip-btn,
 .next-btn,
 .start-btn{
-  background:#d9b24a;
-  color:#fff;
-  min-width:160px;
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:12px;
+  font-weight:bold;
   text-align:center;
 }
 

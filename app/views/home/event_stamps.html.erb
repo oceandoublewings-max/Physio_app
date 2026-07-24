@@ -408,7 +408,9 @@
   </div>
 
 
-  <!-- =========================
+  <% owned_stamp_ids = @owned_stamp_ids || [] %>
+
+<!-- =========================
        イベント一覧
   ========================= -->
   <div class="event-sections">
@@ -435,7 +437,9 @@
 
           <div class="event-stamp-cell">
 
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+            <% owned = owned_stamp_ids.include?(stamp_id) %>
+
+            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -479,7 +483,9 @@
 
           <div class="event-stamp-cell">
 
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+            <% owned = owned_stamp_ids.include?(stamp_id) %>
+
+            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -523,7 +529,9 @@
 
           <div class="event-stamp-cell">
 
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+            <% owned = owned_stamp_ids.include?(stamp_id) %>
+
+            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -567,7 +575,9 @@
 
           <div class="event-stamp-cell">
 
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
+            <% owned = owned_stamp_ids.include?(stamp_id) %>
+
+            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"

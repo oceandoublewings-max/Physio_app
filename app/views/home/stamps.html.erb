@@ -541,30 +541,50 @@
     <% season_title = "❄️ Winter Stamps" %>
     <% season_folder = "winter" %>
     <% season_prefix = "winter_stamp_" %>
-  <% end %>
+ 
 
   <div class="collection-heading">
     <h2 class="collection-title"><%= season_title %></h2>
     <div class="collection-sub">季節限定スタンプコレクション</div>
   </div>
 
-  <div class="stamp-grid-wrap">
-    <div class="stamp-grid">
-      <% (1..50).each do |i| %>
-        <% file = "stamps/#{season_folder}/#{season_prefix}%03d.png" % i %>
-        <% image_exists = File.exist?(Rails.root.join("public","images",file)) %>
-        <div class="stamp-cell">
-          <% if image_exists %>
-            <%= image_tag "/images/#{file}",
-              alt: "#{season_title} #{format('%03d',i)}",
+  <% season_user_stamps =
+     current_user.user_stamps.where(stamp_id: 101..150).index_by(&:stamp_id) %>
+
+<div class="stamp-grid-wrap">
+  <div class="stamp-grid">
+
+    <% (1..50).each do |i| %>
+
+      <% stamp_id = 100 + i %>
+      <% file = "stamps/#{season_folder}/#{season_prefix}%03d.png" % i %>
+      <% image_exists = File.exist?(Rails.root.join("public", "images", file)) %>
+
+      <% user_stamp = season_user_stamps[stamp_id] %>
+      <% owned = user_stamp.present? %>
+
+      <div class="stamp-cell">
+
+        <% if owned && image_exists %>
+
+          <%= image_tag "/images/#{file}",
+              alt: "#{season_title} #{format('%03d', i)}",
               onclick: "openStamp('/images/#{file}')" %>
-          <% else %>
-            <span class="stamp-number"><%= "%03d" % i %></span>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+
+        <% else %>
+
+          <span class="stamp-number">
+            <%= "%03d" % i %>
+          </span>
+
+        <% end %>
+
+      </div>
+
+    <% end %>
+
   </div>
+</div>
 
 </div>
 

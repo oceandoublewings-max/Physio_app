@@ -429,9 +429,9 @@
 
       <div class="event-stamp-grid">
 
-        <% (1..25).each do |i| %>
+        <% (101..200).each do |stamp_id| %>
 
-          <% file = "events/spring_%03d.png" % i %>
+          <% file = "events/spring_%03d.png" % (stamp_id - 100) %>
 
           <div class="event-stamp-cell">
 
@@ -444,7 +444,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % i %>
+                <%= "%03d" % stamp_id %>
               </span>
 
             <% end %>
@@ -473,9 +473,9 @@
 
       <div class="event-stamp-grid">
 
-        <% (1..25).each do |i| %>
+        <% (201..300).each do |stamp_id| %>
 
-          <% file = "events/summer_%03d.png" % i %>
+          <% file = "events/summer_%03d.png" % (stamp_id - 200) %>
 
           <div class="event-stamp-cell">
 
@@ -488,7 +488,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % i %>
+                <%= "%03d" % stamp_id %>
               </span>
 
             <% end %>
@@ -517,9 +517,9 @@
 
       <div class="event-stamp-grid">
 
-        <% (1..25).each do |i| %>
+        <% (301..400).each do |stamp_id| %>
 
-          <% file = "events/autumn_%03d.png" % i %>
+          <% file = "events/autumn_%03d.png" % (stamp_id - 300) %>
 
           <div class="event-stamp-cell">
 
@@ -532,7 +532,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % i %>
+                <%= "%03d" % stamp_id %>
               </span>
 
             <% end %>
@@ -561,9 +561,9 @@
 
       <div class="event-stamp-grid">
 
-        <% (1..25).each do |i| %>
+        <% (401..500).each do |stamp_id| %>
 
-          <% file = "events/winter_%03d.png" % i %>
+          <% file = "events/winter_%03d.png" % (stamp_id - 400) %>
 
           <div class="event-stamp-cell">
 
@@ -576,7 +576,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % i %>
+                <%= "%03d" % stamp_id %>
               </span>
 
             <% end %>

@@ -23,6 +23,9 @@ class HomeController < ApplicationController
 ]
 
 def index
+  if session.delete(:show_tutorial)
+    redirect_to tutorial_path and return
+  end
 
   @show_stamp_reward = session.delete(:show_stamp_reward)
 end

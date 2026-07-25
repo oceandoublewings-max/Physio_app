@@ -33,6 +33,8 @@ skip_before_action :verify_authenticity_token, only: :apple
           name: stamp.name,
           image: stamp.image
         }
+
+        session[:show_tutorial] = true
       end
     end
 

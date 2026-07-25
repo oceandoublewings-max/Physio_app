@@ -13,7 +13,9 @@
     <% if @page < 5 %>
       <%= link_to "次へ →", "/tutorial?page=#{@page + 1}", class: "next-btn" %>
     <% else %>
-      <%= link_to "クイズ開始", root_path, class: "start-btn finish-btn" %>
+      <%= link_to "クイズ開始", root_path,
+      class: "start-btn finish-btn",
+      onclick: "localStorage.removeItem('wrong');localStorage.removeItem('score');localStorage.removeItem('total');localStorage.removeItem('currentQuizReview');" %>
     <% end %>
   </div>
 </div>

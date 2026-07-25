@@ -35,6 +35,7 @@ skip_before_action :verify_authenticity_token, only: :apple
         }
 
         session[:show_tutorial] = true
+        session[:clear_local_storage] = true
       end
     end
 

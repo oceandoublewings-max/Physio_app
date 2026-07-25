@@ -23,7 +23,6 @@ class HomeController < ApplicationController
 ]
 
 def index
-  Rails.logger.info "STAMP SESSION: #{session.inspect}"
 
   @show_stamp_reward = session.delete(:show_stamp_reward)
 end

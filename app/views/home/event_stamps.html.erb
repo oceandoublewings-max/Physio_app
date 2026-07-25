@@ -371,23 +371,6 @@
 
     </div>
 
-    <div style="
-      position: relative;
-      z-index: 1;
-      margin-top: 16px;
-      padding: 10px 12px;
-      border: 1px solid rgba(216,189,105,.55);
-      border-radius: 12px;
-      color: #f3df98;
-      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      text-align: center;
-      letter-spacing: .04em;
-    ">
-      🌸 春　🌻 夏　🍂 秋　❄️ 冬
-    </div>
-
   </section>
 
 
@@ -425,15 +408,13 @@
   </div>
 
 
-  <% owned_stamp_ids = @owned_stamp_ids || [] %>
-
-<!-- =========================
+  <!-- =========================
        イベント一覧
   ========================= -->
   <div class="event-sections">
 
 
-    <!-- 春：3月〜5月 / ID 101〜200 -->
+    <!-- お正月 -->
     <section class="event-section">
 
       <div class="event-section-heading">
@@ -448,15 +429,13 @@
 
       <div class="event-stamp-grid">
 
-        <% (101..200).each do |stamp_id| %>
+        <% (1..25).each do |i| %>
 
-          file = "stamps/spring/spring_stamp_%03d.png" % (stamp_id - 100)
+          <% file = "events/spring_%03d.png" % i %>
 
           <div class="event-stamp-cell">
 
-            <% owned = owned_stamp_ids.include?(stamp_id) %>
-
-            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -465,7 +444,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % stamp_id %>
+                <%= "%03d" % i %>
               </span>
 
             <% end %>
@@ -479,7 +458,7 @@
     </section>
 
 
-    <!-- 夏：6月〜8月 / ID 201〜300 -->
+    <!-- バレンタイン -->
     <section class="event-section">
 
       <div class="event-section-heading">
@@ -494,15 +473,13 @@
 
       <div class="event-stamp-grid">
 
-        <% (201..300).each do |stamp_id| %>
+        <% (1..25).each do |i| %>
 
-          file = "stamps/summer/summer_stamp_%03d.png" % (stamp_id - 200)
+          <% file = "events/summer_%03d.png" % i %>
 
           <div class="event-stamp-cell">
 
-            <% owned = owned_stamp_ids.include?(stamp_id) %>
-
-            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -511,7 +488,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % stamp_id %>
+                <%= "%03d" % i %>
               </span>
 
             <% end %>
@@ -525,7 +502,7 @@
     </section>
 
 
-    <!-- 秋：9月〜11月 / ID 301〜400 -->
+    <!-- 夏祭り -->
     <section class="event-section">
 
       <div class="event-section-heading">
@@ -540,15 +517,13 @@
 
       <div class="event-stamp-grid">
 
-        <% (301..400).each do |stamp_id| %>
+        <% (1..25).each do |i| %>
 
-          file = "stamps/autumn/autumn_stamp_%03d.png" % (stamp_id - 300)
+          <% file = "events/autumn_%03d.png" % i %>
 
           <div class="event-stamp-cell">
 
-            <% owned = owned_stamp_ids.include?(stamp_id) %>
-
-            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -557,7 +532,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % stamp_id %>
+                <%= "%03d" % i %>
               </span>
 
             <% end %>
@@ -571,7 +546,7 @@
     </section>
 
 
-    <!-- 冬：12月〜2月 / ID 401〜500 -->
+    <!-- ハロウィン -->
     <section class="event-section">
 
       <div class="event-section-heading">
@@ -586,15 +561,13 @@
 
       <div class="event-stamp-grid">
 
-        <% (401..500).each do |stamp_id| %>
+        <% (1..25).each do |i| %>
 
-          file = "stamps/winter/winter_stamp_%03d.png" % (stamp_id - 400)
+          <% file = "events/winter_%03d.png" % i %>
 
           <div class="event-stamp-cell">
 
-            <% owned = owned_stamp_ids.include?(stamp_id) %>
-
-            <% if owned && File.exist?(Rails.root.join("public", "images", file)) %>
+            <% if File.exist?(Rails.root.join("public", "images", file)) %>
 
               <%= image_tag "/images/#{file}",
                 onclick: "openStamp('/images/#{file}')"
@@ -603,7 +576,7 @@
             <% else %>
 
               <span class="event-stamp-number">
-                <%= "%03d" % stamp_id %>
+                <%= "%03d" % i %>
               </span>
 
             <% end %>

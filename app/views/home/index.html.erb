@@ -909,6 +909,15 @@
 </div>
 <% end %>
 
+<% if session.delete(:clear_local_storage) %>
+<script>
+  localStorage.removeItem("wrong");
+  localStorage.removeItem("score");
+  localStorage.removeItem("total");
+  localStorage.removeItem("currentQuizReview");
+</script>
+<% end %>
+
 <script>
   const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
 

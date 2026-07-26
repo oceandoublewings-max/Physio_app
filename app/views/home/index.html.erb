@@ -911,7 +911,12 @@
 
 <% if session.delete(:clear_local_storage) %>
 <script>
+  const currentUserWrongKeyForClear =
+    "wrong_user_<%= current_user&.id || 'anonymous' %>";
+
+  localStorage.removeItem(currentUserWrongKeyForClear);
   localStorage.removeItem("wrong");
+  localStorage.removeItem("wrong_owner_user_id");
   localStorage.removeItem("score");
   localStorage.removeItem("total");
   localStorage.removeItem("currentQuizReview");
@@ -919,7 +924,97 @@
 <% end %>
 
 <script>
-  const wrong = JSON.parse(localStorage.getItem("wrong")) || [];
+  // =========================================================
+  // 苦手問題をユーザーごとに分離
+  //
+  // これまで全員が localStorage の "wrong" を共有していたため、
+  // 同じ端末では Apple・Google・ゲストの苦手問題数が
+  // 同じになっていました。
+  //
+  // 今後は wrong_user_ユーザーID にユーザー別で保存します。
+  // 既存の問題画面が "wrong" を使っていても動くように、
+  // 表示時に現在のユーザー用データと同期します。
+  // =========================================================
+  const currentWrongUserId =
+    "<%= current_user&.id || 'anonymous' %>";
+
+  const wrongStorageKey =
+    `wrong_user_${currentWrongUserId}`;
+
+  const sharedWrongStorageKey =
+    "wrong";
+
+  const sharedWrongOwnerKey =
+    "wrong_owner_user_id";
+
+
+  function safeReadWrongQuestions(storageKey) {
+    try {
+      const storedValue =
+        localStorage.getItem(storageKey);
+
+      if (!storedValue) {
+        return [];
+      }
+
+      const parsedValue =
+        JSON.parse(storedValue);
+
+      return Array.isArray(parsedValue)
+        ? parsedValue
+        : [];
+
+    } catch (error) {
+      console.warn(
+        "苦手問題データの読み込みに失敗しました。",
+        error
+      );
+
+      return [];
+    }
+  }
+
+
+  function syncWrongStorageForCurrentUser() {
+    const sharedOwnerId =
+      localStorage.getItem(sharedWrongOwnerKey);
+
+    const sharedWrongValue =
+      localStorage.getItem(sharedWrongStorageKey);
+
+    // 現在ログイン中のユーザーが問題画面で更新した共通キーを、
+    // そのユーザー専用キーへ保存します。
+    if (
+      sharedOwnerId === currentWrongUserId &&
+      sharedWrongValue !== null
+    ) {
+      localStorage.setItem(
+        wrongStorageKey,
+        sharedWrongValue
+      );
+    }
+
+    // 現在のユーザー専用データを問題画面用の共通キーへセット。
+    // これにより、別アカウントの苦手問題は引き継がれません。
+    const currentUserWrongValue =
+      localStorage.getItem(wrongStorageKey);
+
+    localStorage.setItem(
+      sharedWrongStorageKey,
+      currentUserWrongValue || "[]"
+    );
+
+    localStorage.setItem(
+      sharedWrongOwnerKey,
+      currentWrongUserId
+    );
+  }
+
+
+  syncWrongStorageForCurrentUser();
+
+  const wrong =
+    safeReadWrongQuestions(wrongStorageKey);
 
   let anatomy = 0;
   let physiology = 0;
@@ -1076,11 +1171,16 @@
 
   function goWrongAll() {
 
+    // 現在のユーザー専用データだけを使用します。
+    syncWrongStorageForCurrentUser();
+
     const wrong =
-      JSON.parse(localStorage.getItem("wrong")) || [];
+      safeReadWrongQuestions(wrongStorageKey);
 
     const filtered =
-      wrong.map(q => q.id);
+      wrong
+        .map(q => q.id)
+        .filter(id => id !== null && id !== undefined);
 
     if (filtered.length === 0) {
       alert("苦手問題はありません");

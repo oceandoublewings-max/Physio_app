@@ -748,7 +748,8 @@
           "/guest_login",
           method: :post,
           class: "guest-btn",
-          form_class: "guest-form" %>
+          form_class: "guest-form",
+          form: { data: { turbo: false } } %>
 
       <div class="guest-badges">
         <span>✓ 問題演習無料</span>
@@ -762,8 +763,8 @@
    <%= button_to user_apple_omniauth_authorize_path,
     method: :post,
     class: "apple-btn",
-    data: { turbo: false },
-    form_class: "oauth-form" do %>
+    form_class: "oauth-form",
+    form: { data: { turbo: false } } do %>
 
   <span class="auth-logo" aria-hidden="true">
     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -780,8 +781,8 @@
         <%= button_to user_google_oauth2_omniauth_authorize_path,
     method: :post,
     class: "google-btn",
-    data: { turbo: false },
-    form_class: "oauth-form" do %>
+    form_class: "oauth-form",
+    form: { data: { turbo: false } } do %>
           <span class="auth-logo" aria-hidden="true">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.4-.18-2.06H12v3.89h5.38a4.6 4.6 0 0 1-2 3.02v2.52h3.24c1.9-1.75 2.98-4.33 2.98-7.37Z"/>
@@ -873,3 +874,19 @@
     </section>
   </main>
 </div>
+
+<script>
+  // Apple・Google認証からSafariで戻ったとき、
+  // 戻るキャッシュ内の古いCSRFトークンを使わないようにします。
+  window.addEventListener("pageshow", function (event) {
+    var entries = window.performance &&
+                  window.performance.getEntriesByType &&
+                  window.performance.getEntriesByType("navigation");
+    var restoredByBackForward =
+      entries && entries.length > 0 && entries[0].type === "back_forward";
+
+    if (event.persisted || restoredByBackForward) {
+      window.location.reload();
+    }
+  });
+</script>

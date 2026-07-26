@@ -1,5 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-skip_before_action :verify_authenticity_token, only: :apple
+  skip_before_action :verify_authenticity_token, only: %i[apple failure]
 
   def google_oauth2
     handle_auth("Google")
@@ -10,7 +10,8 @@ skip_before_action :verify_authenticity_token, only: :apple
   end
 
   def failure
-    redirect_to root_path, alert: "ログインに失敗しました。"
+    reset_session
+    redirect_to login_path, alert: "ログイン画面を更新しました。もう一度お試しください。"
   end
 
   private

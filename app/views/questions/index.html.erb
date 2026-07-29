@@ -1285,7 +1285,17 @@ window.stampRedirectAfterQueue = false;
 
 setTimeout(() => {
   document.getElementById("stamp-loading")?.remove();
-  showNextPendingStamp();
+
+  const queue = JSON.parse(sessionStorage.getItem("pendingNewStamps") || "[]");
+  if (queue.length > 0) {
+    showNextPendingStamp();
+  } else {
+    const topBtn = document.getElementById("top-button");
+    if (topBtn) {
+      topBtn.style.pointerEvents = "auto";
+      topBtn.style.opacity = "1";
+    }
+  }
 },1500);
 </script>
 

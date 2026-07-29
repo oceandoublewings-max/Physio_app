@@ -652,7 +652,7 @@ onclick="checkAnswer('false', this)">
       cursor:pointer;
       box-shadow:0 2px 6px rgba(0,0,0,0.2);
     ">
-      次の問題へ
+      <%= (@index + 1) >= @questions.length ? "結果を見る" : "次の問題へ" %>
     </button>
 
   </a>
@@ -690,6 +690,7 @@ function recordAnsweredQuestion(questionId) {
   return fetch("/questions/answered", {
     method: "POST",
     credentials: "same-origin",
+    keepalive: true,
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json",
@@ -808,23 +809,11 @@ ${explanation.replace(/\n/g, "<br>")}
 localStorage.setItem("total", "<%= @questions.length %>");
 localStorage.setItem("wrong", JSON.stringify(wrong));
 
+// 回答数の保存とスタンプ付与判定が完了してから、次へ進めるようにする。
+// 20問目で素早く画面遷移しても、NEW STAMP の情報を取りこぼさない。
 recordAnsweredQuestion(questionId).finally(() => {
-  const isLastQuestion = <%= (@index + 1) >= @questions.length %>;
-  if (isLastQuestion) {
-    window.stampRedirectAfterQueue = false;
-    showNextPendingStamp();
-
-    const originalClose = closeStampModal;
-    closeStampModal = function() {
-      originalClose();
-      window.setTimeout(() => {
-        window.location.href = "/questions";
-      }, 250);
-    };
-  }
+  showAnswer();
 });
-
-showAnswer();
 }
 
 function showAnswer() {
@@ -849,6 +838,17 @@ if (nextBtn && "<%= @question.qtype %>" !== "illustration") {
 }
 
 function goIllustration(addWrong) {
+
+  if (window.illustrationAnswered === true) {
+    return;
+  }
+
+  window.illustrationAnswered = true;
+
+  document.querySelectorAll("#illustration-buttons button").forEach(button => {
+    button.style.pointerEvents = "none";
+    button.style.opacity = ".65";
+  });
 
   if (addWrong) {
     playQuizSound("wrong");
@@ -1286,17 +1286,13 @@ window.stampRedirectAfterQueue = false;
 setTimeout(() => {
   document.getElementById("stamp-loading")?.remove();
 
-  const queue = JSON.parse(sessionStorage.getItem("pendingNewStamps") || "[]");
-  if (queue.length > 0) {
-    showNextPendingStamp();
-  } else {
-    const topBtn = document.getElementById("top-button");
-    if (topBtn) {
-      topBtn.style.pointerEvents = "auto";
-      topBtn.style.opacity = "1";
-    }
+  const stampWasShown = showNextPendingStamp();
+
+  // 今回の回答で新しいスタンプがない時だけ、ここでTOPを有効化する。
+  if (!stampWasShown) {
+    unlockTopButton();
   }
-},1500);
+}, 1500);
 </script>
 
 <% end %>
@@ -1415,8 +1411,21 @@ function showNextPendingStamp() {
   }
 
   const nextStamp = window.currentStampQueue.shift();
-  if (nextStamp) {
-    showStampModal(nextStamp);
+
+  if (!nextStamp) {
+    return false;
+  }
+
+  showStampModal(nextStamp);
+  return true;
+}
+
+function unlockTopButton() {
+  const topBtn = document.getElementById("top-button");
+
+  if (topBtn) {
+    topBtn.style.pointerEvents = "auto";
+    topBtn.style.opacity = "1";
   }
 }
 
@@ -1432,11 +1441,7 @@ function closeStampModal() {
       return;
     }
 
-    const topBtn=document.getElementById("top-button");
-    if(topBtn){
-      topBtn.style.pointerEvents="auto";
-      topBtn.style.opacity="1";
-    }
+    unlockTopButton();
 
     if (window.stampRedirectAfterQueue) {
       window.location.href = "/?index=0";

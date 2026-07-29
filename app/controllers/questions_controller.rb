@@ -129,30 +129,33 @@ def review
 end
 
 def answered
-
   return head :unauthorized unless current_user
 
-  current_user.increment!(:answered_questions_count)
-
-  count = current_user.answered_questions_count
   new_stamp = nil
 
-  if [20, 50, 100, 300, 500, 1000].include?(count)
-    owned_stamp_ids = current_user.stamps.pluck(:id)
+  # 素早い連続タップでも回答数が競合しないよう、ユーザー行をロックして処理する。
+  current_user.with_lock do
+    current_user.increment!(:answered_questions_count)
 
-    stamp = Stamp.where(season: "normal")
-                 .where.not(id: owned_stamp_ids)
-                 .order(Arel.sql("RANDOM()"))
-                 .first
+    count = current_user.answered_questions_count
 
-    if stamp
-      current_user.user_stamps.create!(stamp: stamp)
+    if [20, 50, 100, 300, 500, 1000].include?(count)
+      owned_stamp_ids = current_user.stamps.pluck(:id)
 
-      new_stamp = {
-        id: stamp.id,
-        name: stamp.name,
-        image_url: ActionController::Base.helpers.asset_path(stamp.image)
-      }
+      stamp = Stamp.where(season: "normal")
+                   .where.not(id: owned_stamp_ids)
+                   .order(Arel.sql("RANDOM()"))
+                   .first
+
+      if stamp
+        current_user.user_stamps.create!(stamp: stamp)
+
+        new_stamp = {
+          id: stamp.id,
+          name: stamp.name,
+          image_url: ActionController::Base.helpers.asset_path(stamp.image)
+        }
+      end
     end
   end
 

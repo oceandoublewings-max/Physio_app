@@ -3,7 +3,7 @@
   <section class="contact-hero">
     <div class="hero-glow"></div>
 
-    <%= link_to "← TOP", root_path, class: "contact-top-link" %>
+    <%= link_to "← TOP", home_path, class: "contact-top-link" %>
 
     <div class="contact-badge">
       <span class="badge-icon">✉</span>
@@ -34,33 +34,48 @@
     </p>
 
 
-    <div class="contact-card">
+    <% if flash[:notice].present? %>
+      <div class="contact-flash contact-flash-success">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
-      <div class="card-label">
-        <span class="label-icon">✎</span>
-        <span>MESSAGE</span>
+    <% if flash[:alert].present? %>
+      <div class="contact-flash contact-flash-error">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+
+    <%= form_with scope: :contact,
+                  url: submit_contact_path,
+                  method: :post,
+                  local: true,
+                  data: { turbo: false },
+                  class: "contact-form" do |form| %>
+
+      <div class="contact-card">
+
+        <div class="card-label">
+          <span class="label-icon">✎</span>
+          <span>MESSAGE</span>
+        </div>
+
+        <%= form.text_area :message,
+              value: @message,
+              class: "feedback-box",
+              placeholder: "ご意見・ご要望をご入力ください",
+              required: true,
+              maxlength: 2000 %>
+
+        <div class="contact-note">
+          皆さまの声をアプリ改善の参考にさせていただきます
+        </div>
+
       </div>
 
-      <textarea
-        class="feedback-box"
-        placeholder="ご意見・ご要望をご入力ください"
-      ></textarea>
+      <%= form.submit "送信", class: "send-btn" %>
 
-      <div class="contact-note">
-        皆さまの声をアプリ改善の参考にさせていただきます
-      </div>
-
-    </div>
-
-
-    <button class="send-btn" disabled>
-      <span>送信</span>
-      <small>準備中</small>
-    </button>
-
-    <p class="coming-soon">
-      COMING SOON
-    </p>
+    <% end %>
 
   </main>
 
@@ -371,23 +386,42 @@ body {
   font-family: inherit;
   font-size: 16px;
   box-shadow: 0 8px 20px rgba(23, 78, 145, 0.18);
-  opacity: 0.55;
+  opacity: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.send-btn small {
-  padding-left: 9px;
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 11px;
-  font-weight: 500;
+.send-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 14px rgba(23, 78, 145, 0.20);
 }
 
-.coming-soon {
-  margin: 9px 0 0;
-  text-align: center;
-  color: #aab4c1;
-  font-size: 8px;
+.contact-form {
+  margin: 0;
+}
+
+.contact-flash {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 13px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.contact-flash-success {
+  border: 1px solid #b9dfc5;
+  color: #23663a;
+  background: #eefaf2;
+}
+
+.contact-flash-error {
+  border: 1px solid #efc2c2;
+  color: #9a2f2f;
+  background: #fff2f2;
 }
 
 

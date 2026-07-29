@@ -1,0 +1,19 @@
+PT・OT共通基礎学習からお問い合わせが届きました。
+
+━━━━━━━━━━━━━━━━━━━━
+【お問い合わせ内容】
+<%= @message %>
+━━━━━━━━━━━━━━━━━━━━
+
+【送信ユーザー】
+ユーザーID：<%= @user&.id || "不明" %>
+メールアドレス：<%= @user&.email.presence || "未登録" %>
+<% if @user&.respond_to?(:provider) && @user.provider.present? %>
+ログイン方法：<%= @user.provider %>
+<% end %>
+
+【送信日時】
+<%= @sent_at.strftime("%Y年%m月%d日 %H:%M") %>
+
+このメールは「PT・OT共通基礎学習」のお問い合わせフォームから送信されました。
+

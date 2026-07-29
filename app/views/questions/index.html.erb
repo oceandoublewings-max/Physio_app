@@ -161,7 +161,7 @@ body > * {
   position:relative;
 }
 
-/* ===== ○×ボタンの記号サイズを統一 ===== */
+/* ===== ○×ボタンの記号サイズを完全統一 ===== */
 .true-false-btn {
   display:flex;
   align-items:center;
@@ -171,21 +171,22 @@ body > * {
 }
 
 .true-false-mark {
-  display:inline-block;
+  width:42px;
+  height:42px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   color:inherit;
   font-family:Arial, "Helvetica Neue", sans-serif;
+  font-size:32px;
   font-weight:500;
   line-height:1;
-  transform-origin:center;
 }
 
-.true-false-mark.is-circle {
-  font-size:31px;
-  transform:scale(1.08);
-}
-
+.true-false-mark.is-circle,
 .true-false-mark.is-cross {
-  font-size:30px;
+  font-size:32px;
+  transform:none;
 }
 
 .choice-btn.correct-choice {
@@ -630,7 +631,7 @@ onclick="checkAnswer('true', this)">
 data-answer-value="false"
 aria-label="×"
 onclick="checkAnswer('false', this)">
-  <span class="true-false-mark is-cross" aria-hidden="true">✕</span>
+  <span class="true-false-mark is-cross" aria-hidden="true">×</span>
 </button>
 <% end %>
 

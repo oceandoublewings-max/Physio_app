@@ -986,12 +986,16 @@ function goIllustration(addWrong) {
 
   </div>
 
-  <div class="result-button-wrap">
+  <div id="stamp-loading" style="margin:18px auto;color:#174f8a;font-weight:800;font-size:18px;">
+🎁 スタンプ獲得中…<br><span style="font-size:14px;font-weight:600;">もうすぐ新しいスタンプが届きます✨</span>
+</div>
+
+<div class="result-button-wrap">
     <a href="/questions/review" class="review-button">
       解答を振り返る
     </a>
 
-    <a href="/?index=0" class="top-button">
+    <a href="/?index=0" class="top-button" id="top-button" style="pointer-events:none;opacity:.5;">
       TOPへ戻る
     </a>
   </div>
@@ -1276,8 +1280,13 @@ document.body.style.setProperty("background-repeat", "no-repeat", "important");
 document.body.style.setProperty("background-position", "center 75px", "important");
 document.body.style.setProperty("background-size", "320px", "important");
 
-// スタンプは問題終了時に表示する仕様へ変更
+// 結果画面表示後にスタンプ演出
 window.stampRedirectAfterQueue = false;
+
+setTimeout(() => {
+  document.getElementById("stamp-loading")?.remove();
+  showNextPendingStamp();
+},1500);
 </script>
 
 <% end %>
@@ -1411,6 +1420,12 @@ function closeStampModal() {
     if (window.currentStampQueue.length > 0) {
       showStampModal(window.currentStampQueue.shift());
       return;
+    }
+
+    const topBtn=document.getElementById("top-button");
+    if(topBtn){
+      topBtn.style.pointerEvents="auto";
+      topBtn.style.opacity="1";
     }
 
     if (window.stampRedirectAfterQueue) {

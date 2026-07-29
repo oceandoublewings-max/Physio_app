@@ -762,6 +762,7 @@
       <div class="auth-stack">
    <%= button_to user_apple_omniauth_authorize_path,
     method: :post,
+    disabled: true,
     class: "apple-btn",
     form_class: "oauth-form",
     form: { data: { turbo: false } } do %>
@@ -773,7 +774,7 @@
   </span>
 
   <span class="auth-copy">
-    <strong>Appleで続ける</strong>
+    <strong>Apple 準備中</strong>
   </span>
 
 <% end %> 

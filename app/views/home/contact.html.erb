@@ -3,6 +3,8 @@
   <section class="contact-hero">
     <div class="hero-glow"></div>
 
+    <%= link_to "← TOP", root_path, class: "contact-top-link" %>
+
     <div class="contact-badge">
       <span class="badge-icon">✉</span>
       <span>CONTACT</span>
@@ -137,6 +139,39 @@ body {
   height: 100px;
   top: 69px;
   left: 69px;
+}
+
+.contact-top-link {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 14px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contact-top-link:active {
+  transform: scale(0.97);
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .contact-badge {
@@ -361,6 +396,11 @@ body {
 ========================= */
 
 @media (max-width: 480px) {
+
+  .contact-top-link {
+    top: 16px;
+    right: 14px;
+  }
 
   .contact-hero {
     padding: 31px 16px 29px;

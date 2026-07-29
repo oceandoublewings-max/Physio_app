@@ -134,22 +134,32 @@ def answered
 
   current_user.increment!(:answered_questions_count)
 
-count = current_user.answered_questions_count
+  count = current_user.answered_questions_count
+  new_stamp = nil
 
-if [20, 50, 100, 300, 500, 1000].include?(count)
-  owned_stamp_ids = current_user.stamps.pluck(:id)
+  if [20, 50, 100, 300, 500, 1000].include?(count)
+    owned_stamp_ids = current_user.stamps.pluck(:id)
 
-  stamp = Stamp.where(season: "normal")
-               .where.not(id: owned_stamp_ids)
-               .order(Arel.sql("RANDOM()"))
-               .first
+    stamp = Stamp.where(season: "normal")
+                 .where.not(id: owned_stamp_ids)
+                 .order(Arel.sql("RANDOM()"))
+                 .first
 
-  current_user.user_stamps.create!(stamp: stamp) if stamp
-end
-  
+    if stamp
+      current_user.user_stamps.create!(stamp: stamp)
+
+      new_stamp = {
+        id: stamp.id,
+        name: stamp.name,
+        image_url: ActionController::Base.helpers.asset_path(stamp.image)
+      }
+    end
+  end
+
   render json: {
     status: "ok",
-    answered_questions_count: current_user.answered_questions_count
+    answered_questions_count: current_user.answered_questions_count,
+    new_stamp: new_stamp
   }
 end
 

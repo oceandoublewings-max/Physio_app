@@ -1,894 +1,441 @@
-<!-- app/views/.../login.html.erb 完成版 -->
-<style>
-  * {
-    box-sizing: border-box;
-  }
+<div class="contact-page">
 
-  html,
-  body {
-    margin: 0;
-    min-height: 100%;
-  }
+  <section class="contact-hero">
+    <div class="hero-glow"></div>
 
-  body {
-    background:
-      radial-gradient(circle at 12% 8%, rgba(43, 102, 174, 0.12), transparent 28%),
-      linear-gradient(180deg, #edf3fa 0%, #f7f9fc 100%);
-    color: #102847;
-    font-family:
-      -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
-      "Yu Gothic", "Meiryo", sans-serif;
-  }
+    <%= link_to "← TOP", root_path, class: "contact-top-link" %>
 
-  button,
-  input {
-    font: inherit;
-  }
+    <div class="contact-badge">
+      <span class="badge-icon">✉</span>
+      <span>CONTACT</span>
+    </div>
 
-  .login-page {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-  }
+    <h1>ご意見・ご要望</h1>
 
-  .login-shell {
-    width: 100%;
-    max-width: 430px;
-    overflow: hidden;
-    border: 1px solid rgba(16, 40, 71, 0.08);
-    border-radius: 24px;
-    background: #ffffff;
-    box-shadow:
-      0 22px 55px rgba(16, 40, 71, 0.14),
-      0 5px 16px rgba(16, 40, 71, 0.07);
-  }
+    <div class="hero-line"></div>
 
-  /* ===== ヘッダー ===== */
-  .login-hero {
-    position: relative;
-    min-height: 148px;
-    overflow: hidden;
-    padding: 16px 16px 14px;
-    color: #ffffff;
-    background:
-      radial-gradient(circle at 84% 18%, rgba(255, 255, 255, 0.11), transparent 30%),
-      linear-gradient(145deg, #061b3c 0%, #0a3263 58%, #0d477e 100%);
-  }
+    <p class="hero-sub">
+      より良い国試対策アプリを目指して
+    </p>
+  </section>
 
-  .login-hero::before {
-    content: "";
-    position: absolute;
-    top: -58px;
-    right: -42px;
-    width: 155px;
-    height: 155px;
-    border: 1px solid rgba(235, 207, 132, 0.12);
-    transform: rotate(30deg);
-  }
 
-  .login-hero::after {
-    content: "";
-    position: absolute;
-    right: -50px;
-    bottom: -98px;
-    width: 205px;
-    height: 205px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-  }
+  <main class="contact-main">
 
-  .hero-top {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 9px;
-  }
+    <div class="contact-heading">
+      <span class="heading-line"></span>
+      <h2>お気軽にお送りください</h2>
+      <span class="heading-line"></span>
+    </div>
 
-  .brand-mark {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-  }
+    <p class="contact-description">
+      追加してほしい問題・改善点<br>
+      バグ報告などをお待ちしています
+    </p>
 
-  .brand-icon {
-    width: 34px;
-    height: 34px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    border: 1px solid rgba(222, 194, 116, 0.78);
-    border-radius: 10px;
-    color: #e5c979;
-    background: rgba(2, 17, 39, 0.34);
-    font-family: Georgia, serif;
-    font-size: 20px;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-  }
 
-  .brand-copy {
-    min-width: 0;
-    line-height: 1.1;
-  }
+    <div class="contact-card">
 
-  .brand-copy strong {
-    display: block;
-    color: #dec477;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    white-space: nowrap;
-  }
-
-  .brand-copy span {
-    display: block;
-    margin-top: 4px;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 9px;
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-  }
-
-  .grade-badge {
-    min-width: 76px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 9px;
-    border: 1px solid rgba(225, 200, 126, 0.62);
-    border-radius: 999px;
-    color: #f2dc9f;
-    background: rgba(5, 25, 56, 0.54);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.03em;
-    white-space: nowrap;
-  }
-
-  .hero-main {
-    position: relative;
-    z-index: 2;
-    margin-top: 13px;
-    padding-right: 80px;
-  }
-
-  .hero-main h1 {
-    margin: 0;
-    font-family: Georgia, "Yu Mincho", serif;
-    font-size: 25px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  }
-
-  .hero-main p {
-    margin: 6px 0 0;
-    color: #dfc57d;
-    font-size: 7.5px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1.4;
-    white-space: nowrap;
-  }
-
-  .hero-skeleton {
-    position: absolute;
-    z-index: 4;
-    right: 9px;
-    bottom: -2px;
-    width: 82px;
-    pointer-events: none;
-    filter: drop-shadow(0 7px 9px rgba(0, 0, 0, 0.16));
-  }
-
-  .hero-skeleton img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .gold-line {
-    height: 3px;
-    background: linear-gradient(90deg, #a87c22, #f0d88d 50%, #a87c22);
-  }
-
-  /* ===== 本文 ===== */
-  .login-content {
-    padding: 12px 14px 11px;
-  }
-
-  .guest-heading {
-    margin: 0 0 7px;
-    color: #102847;
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 0.01em;
-    text-align: center;
-  }
-
-  .guest-form,
-  .oauth-form {
-    width: 100%;
-    margin: 0;
-  }
-
-  .guest-form .guest-btn,
-  .oauth-form .google-btn {
-    width: 100%;
-  }
-
-  .guest-btn {
-    min-height: 48px;
-    border: 0;
-    border-radius: 13px;
-    color: #ffffff;
-    background: linear-gradient(180deg, #438ff0 0%, #2e6fd2 100%);
-    box-shadow:
-      0 7px 17px rgba(46, 111, 210, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.26);
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 0.01em;
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .guest-btn:active {
-    transform: translateY(1px);
-    box-shadow:
-      0 4px 11px rgba(46, 111, 210, 0.23),
-      inset 0 1px 0 rgba(255, 255, 255, 0.22);
-  }
-
-  .guest-badges {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: center;
-    gap: 0;
-    margin-top: 7px;
-    color: #365575;
-  }
-
-  .guest-badges span {
-    position: relative;
-    min-width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 4px;
-    font-size: 9px;
-    font-weight: 800;
-    line-height: 1.4;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  .guest-badges span:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 1px;
-    height: 12px;
-    background: #d9e1eb;
-    transform: translateY(-50%);
-  }
-
-  .section-divider {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0 8px;
-    color: #718096;
-    font-size: 10px;
-    font-weight: 800;
-  }
-
-  .section-divider::before,
-  .section-divider::after {
-    content: "";
-    height: 1px;
-    flex: 1;
-    background: #dce4ee;
-  }
-
-  /* ===== Apple・Google ===== */
-  .auth-stack {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 7px;
-  }
-
-  .apple-btn,
-  .google-btn {
-    position: relative;
-    width: 100%;
-    min-width: 0;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    padding: 6px 8px;
-    border-radius: 13px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0;
-  }
-
-  .apple-btn {
-    border: 1px solid #0a0a0a;
-    color: #ffffff;
-    background: linear-gradient(180deg, #1a1a1a 0%, #050505 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-    opacity: 1;
-    cursor: default;
-  }
-
-  .apple-btn:disabled {
-    color: #ffffff;
-    -webkit-text-fill-color: #ffffff;
-    opacity: 0.82;
-    cursor: not-allowed;
-    box-shadow: none;
-  }
-
-  .google-btn {
-    border: 1px solid #cfd7e1;
-    color: #26384f;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(16, 40, 71, 0.07);
-    cursor: pointer;
-  }
-
-  .auth-logo {
-    width: 19px;
-    height: 19px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 19px;
-  }
-
-  .auth-logo svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .auth-copy {
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    line-height: 1.05;
-    text-align: left;
-  }
-
-  .auth-copy strong {
-    display: block;
-    font-size: 12px;
-    font-weight: 850;
-    white-space: nowrap;
-  }
-
-  .auth-copy small {
-    display: block;
-    margin-top: 3px;
-    color: #dfc06a;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
-  }
-
-  /* ===== 登録すると使える機能 ===== */
-  .benefit-box {
-    position: relative;
-    margin-top: 10px;
-    overflow: hidden;
-    border: 1px solid rgba(213, 178, 84, 0.62);
-    border-radius: 17px;
-    color: #ffffff;
-    background:
-      linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-      linear-gradient(150deg, #061a3a 0%, #082854 58%, #0a3568 100%);
-    background-size: 22px 22px, 22px 22px, auto;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 8px 18px rgba(6, 27, 59, 0.14);
-  }
-
-  .benefit-box::before,
-  .benefit-box::after {
-    content: "";
-    position: absolute;
-    width: 88px;
-    height: 88px;
-    border: 1px solid rgba(223, 194, 111, 0.13);
-    transform: rotate(30deg);
-    pointer-events: none;
-  }
-
-  .benefit-box::before {
-    top: -55px;
-    left: -42px;
-  }
-
-  .benefit-box::after {
-    right: -50px;
-    bottom: -58px;
-  }
-
-  .benefit-title {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 9px 10px 8px;
-    color: #ecd17d;
-    font-family: Georgia, "Yu Mincho", serif;
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    text-align: center;
-  }
-
-  .benefit-title::before,
-  .benefit-title::after {
-    content: "";
-    width: 38px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #d7b75e);
-  }
-
-  .benefit-title::after {
-    background: linear-gradient(90deg, #d7b75e, transparent);
-  }
-
-  .benefit-grid {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    border-top: 1px solid rgba(224, 194, 111, 0.28);
-  }
-
-  .benefit-item {
-    min-width: 0;
-    min-height: 54px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 9px;
-    border-right: 1px solid rgba(224, 194, 111, 0.2);
-    border-bottom: 1px solid rgba(224, 194, 111, 0.2);
-  }
-
-  .benefit-item:nth-child(2n) {
-    border-right: 0;
-  }
-
-  .benefit-item:last-child {
-    grid-column: 1 / -1;
-    justify-content: center;
-    border-right: 0;
-    border-bottom: 0;
-  }
-
-  .benefit-icon {
-    position: relative;
-    width: 34px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 34px;
-    background: linear-gradient(145deg, #f1d583, #a87920);
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
-    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.22));
-  }
-
-  .benefit-icon::before {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    background: linear-gradient(145deg, #102f5d, #071c3d);
-    clip-path: inherit;
-  }
-
-  .benefit-symbol {
-    position: relative;
-    z-index: 1;
-    font-size: 17px;
-    line-height: 1;
-  }
-
-  .benefit-copy {
-    min-width: 0;
-  }
-
-  .benefit-copy strong {
-    display: block;
-    overflow: hidden;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 900;
-    line-height: 1.25;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .benefit-copy span {
-    display: block;
-    margin-top: 2px;
-    overflow: hidden;
-    color: #bfcce0;
-    font-size: 8px;
-    line-height: 1.3;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .guest-note {
-    margin: 8px 0 0;
-    color: #758196;
-    font-size: 9px;
-    line-height: 1.45;
-    text-align: center;
-  }
-
-  .login-footer {
-    position: relative;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 7px;
-    padding: 6px 0 2px;
-    border-top: 1px solid #e4e9ef;
-    font-size: 9px;
-    pointer-events: auto;
-  }
-
-  .login-footer .footer-link {
-    min-height: 28px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 5px;
-    color: #738095;
-    text-decoration: none;
-    cursor: pointer;
-    pointer-events: auto;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(16, 40, 71, 0.1);
-  }
-
-  .login-footer .footer-link:active {
-    color: #102847;
-  }
-
-  .login-footer span {
-    color: #c1c8d1;
-    pointer-events: none;
-  }
-
-  @media (max-width: 390px) {
-    .login-page {
-      align-items: flex-start;
-      padding: 5px;
-    }
-
-    .login-shell {
-      border-radius: 20px;
-    }
-
-    .login-hero {
-      min-height: 140px;
-      padding: 14px 13px 12px;
-    }
-
-    .brand-icon {
-      width: 31px;
-      height: 31px;
-      font-size: 18px;
-    }
-
-    .brand-copy strong {
-      font-size: 9px;
-    }
-
-    .brand-copy span {
-      font-size: 8px;
-    }
-
-    .grade-badge {
-      min-width: 70px;
-      padding: 5px 8px;
-      font-size: 9px;
-    }
-
-    .hero-main {
-      margin-top: 11px;
-    }
-
-    .hero-main h1 {
-      font-size: 23px;
-    }
-
-    .hero-main p {
-      font-size: 7px;
-    }
-
-    .hero-skeleton {
-      right: 6px;
-      width: 77px;
-    }
-
-    .login-content {
-      padding: 10px 11px 9px;
-    }
-
-    .guest-heading {
-      margin-bottom: 6px;
-      font-size: 17px;
-    }
-
-    .guest-btn {
-      min-height: 45px;
-      font-size: 14px;
-    }
-
-    .apple-btn,
-    .google-btn {
-      min-height: 45px;
-      gap: 5px;
-      padding: 5px 6px;
-    }
-
-    .auth-logo {
-      width: 17px;
-      height: 17px;
-      flex-basis: 17px;
-    }
-
-    .auth-copy strong {
-      font-size: 11px;
-    }
-
-    .benefit-title {
-      padding-top: 8px;
-      font-size: 14px;
-    }
-
-    .benefit-item {
-      min-height: 50px;
-      gap: 6px;
-      padding: 6px 7px;
-    }
-
-    .benefit-icon {
-      width: 31px;
-      height: 35px;
-      flex-basis: 31px;
-    }
-
-    .benefit-symbol {
-      font-size: 15px;
-    }
-
-    .benefit-copy strong {
-      font-size: 10px;
-    }
-
-    .benefit-copy span {
-      font-size: 7.5px;
-    }
-  }
-
-  @media (max-width: 340px) {
-    .brand-copy span,
-    .hero-main p {
-      display: none;
-    }
-
-    .guest-badges span {
-      padding-inline: 2px;
-      font-size: 8px;
-    }
-
-    .auth-copy strong {
-      font-size: 10px;
-    }
-
-    .benefit-copy span {
-      display: none;
-    }
-  }
-</style>
-
-<div class="login-page">
-  <main class="login-shell">
-    <header class="login-hero">
-      <div class="hero-top">
-        <div class="brand-mark">
-          <div class="brand-icon">⚕</div>
-          <div class="brand-copy">
-            <strong>PT・OT COMMON</strong>
-            <span>基礎から学ぶ国試対策</span>
-          </div>
-        </div>
-
-        <div class="grade-badge">1・2年生向け</div>
+      <div class="card-label">
+        <span class="label-icon">✎</span>
+        <span>MESSAGE</span>
       </div>
 
-      <div class="hero-main">
-        <h1>PT・OT共通<br>基礎学習</h1>
-        <p>PHYSICAL THERAPIST NATIONAL EXAM PREP</p>
+      <textarea
+        class="feedback-box"
+        placeholder="ご意見・ご要望をご入力ください"
+      ></textarea>
+
+      <div class="contact-note">
+        皆さまの声をアプリ改善の参考にさせていただきます
       </div>
 
-      <div class="hero-skeleton">
-        <img src="/images/stamps/normal/stamp_003.png" alt="ガイコツくん">
-      </div>
-    </header>
+    </div>
 
-    <div class="gold-line"></div>
 
-    <section class="login-content">
-      <h2 class="guest-heading">まずはゲストでお試し！</h2>
+    <button class="send-btn" disabled>
+      <span>送信</span>
+      <small>準備中</small>
+    </button>
 
-      <%= button_to "🚀 今すぐゲストで始める",
-          "/guest_login",
-          method: :post,
-          class: "guest-btn",
-          form_class: "guest-form",
-          form: { data: { turbo: false } } %>
+    <p class="coming-soon">
+      COMING SOON
+    </p>
 
-      <div class="guest-badges">
-        <span>✓ 問題演習無料</span>
-        <span>⚡ 登録不要</span>
-        <span>📚 すぐ始める</span>
-      </div>
-
-      <div class="section-divider">無料登録・ログイン</div>
-
-      <div class="auth-stack">
-        <button
-          type="button"
-          class="apple-btn"
-          disabled
-          aria-disabled="true"
-          aria-label="Appleで続ける 準備中">
-          <span class="auth-logo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.05 12.54c-.03-2.84 2.32-4.22 2.43-4.29-1.33-1.95-3.4-2.22-4.13-2.24-1.74-.18-3.43 1.04-4.31 1.04-.9 0-2.25-1.02-3.72-.99-1.89.03-3.67 1.13-4.64 2.84-2 3.46-.51 8.55 1.41 11.35.96 1.37 2.08 2.9 3.55 2.84 1.43-.06 1.97-.91 3.7-.91 1.71 0 2.22.91 3.71.88 1.54-.03 2.51-1.37 3.43-2.75 1.11-1.57 1.56-3.12 1.58-3.2-.04-.01-2.98-1.14-3.01-4.57ZM14.21 4.16C14.98 3.2 15.5 1.9 15.36.6c-1.11.05-2.5.77-3.3 1.71-.71.83-1.35 2.18-1.19 3.43 1.25.09 2.52-.63 3.34-1.58Z"/>
-            </svg>
-          </span>
-
-          <span class="auth-copy">
-            <strong>Appleで続ける</strong>
-            <small>準備中</small>
-          </span>
-        </button>
-
-        <%= button_to user_google_oauth2_omniauth_authorize_path,
-    method: :post,
-    class: "google-btn",
-    form_class: "oauth-form",
-    form: { data: { turbo: false } } do %>
-          <span class="auth-logo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.4-.18-2.06H12v3.89h5.38a4.6 4.6 0 0 1-2 3.02v2.52h3.24c1.9-1.75 2.98-4.33 2.98-7.37Z"/>
-              <path fill="#34A853" d="M12 22c2.7 0 4.97-.9 6.62-2.4l-3.24-2.52c-.9.6-2.05.96-3.38.96-2.61 0-4.82-1.76-5.61-4.13H3.04v2.6A10 10 0 0 0 12 22Z"/>
-              <path fill="#FBBC05" d="M6.39 13.91A6.02 6.02 0 0 1 6.08 12c0-.66.11-1.3.31-1.91v-2.6H3.04A10 10 0 0 0 2 12c0 1.61.38 3.14 1.04 4.51l3.35-2.6Z"/>
-              <path fill="#EA4335" d="M12 5.96c1.47 0 2.79.51 3.83 1.5l2.87-2.87C16.96 2.97 14.7 2 12 2a10 10 0 0 0-8.96 5.49l3.35 2.6C7.18 7.72 9.39 5.96 12 5.96Z"/>
-            </svg>
-          </span>
-          <span class="auth-copy">
-            <strong>Googleで続ける</strong>
-          </span>
-        <% end %>
-      </div>
-
-      <div class="benefit-box">
-        <h3 class="benefit-title">登録すると使える機能</h3>
-
-        <div class="benefit-grid">
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <span class="benefit-symbol">☁️</span>
-            </div>
-            <div class="benefit-copy">
-              <strong>学習データ保存</strong>
-              <span>端末を変えても引き継げる</span>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <span class="benefit-symbol">📊</span>
-            </div>
-            <div class="benefit-copy">
-              <strong>苦手分析</strong>
-              <span>苦手分野がひと目で分かる</span>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <span class="benefit-symbol">📈</span>
-            </div>
-            <div class="benefit-copy">
-              <strong>分野別分析</strong>
-              <span>学習状況を細かく確認</span>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <span class="benefit-symbol">🏅</span>
-            </div>
-            <div class="benefit-copy">
-              <strong>スタンプ保存</strong>
-              <span>集めたスタンプを記録</span>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <span class="benefit-symbol">📖</span>
-            </div>
-            <div class="benefit-copy">
-              <strong>PDF資料集の購入</strong>
-              <span>学習に使えるオリジナル資料</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="guest-note">
-        ゲストでも全問題を無料で利用できます。<br>
-        学習データの保存・苦手分析はGoogleログイン後に利用できます。
-      </p>
-
-      <footer class="login-footer">
-        <a href="/terms"
-           class="footer-link"
-           data-turbo="false"
-           target="_self"
-           onclick="window.location.assign('/terms'); return false;">利用規約</a>
-        <span>|</span>
-        <a href="/privacy"
-           class="footer-link"
-           data-turbo="false"
-           target="_self"
-           onclick="window.location.assign('/privacy'); return false;">プライバシーポリシー</a>
-      </footer>
-    </section>
   </main>
+
 </div>
 
-<script>
-  // Apple・Google認証からSafariで戻ったとき、
-  // 戻るキャッシュ内の古いCSRFトークンを使わないようにします。
-  window.addEventListener("pageshow", function (event) {
-    var entries = window.performance &&
-                  window.performance.getEntriesByType &&
-                  window.performance.getEntriesByType("navigation");
-    var restoredByBackForward =
-      entries && entries.length > 0 && entries[0].type === "back_forward";
 
-    if (event.persisted || restoredByBackForward) {
-      window.location.reload();
-    }
-  });
-</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% 25%, rgba(39, 104, 190, 0.06), transparent 34%),
+    linear-gradient(180deg, #f8faff 0%, #f3f7fd 100%);
+  color: #0b2345;
+}
+
+.contact-page {
+  width: 100%;
+  max-width: 680px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+
+/* =========================
+   上部ヒーロー
+========================= */
+
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 38px 20px 34px;
+  background:
+    linear-gradient(
+      120deg,
+      #061d3d 0%,
+      #0b3768 48%,
+      #3975a7 100%
+    );
+  border-radius: 0 0 34px 34px;
+  box-shadow: 0 10px 28px rgba(12, 45, 86, 0.18);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -70px;
+  top: -80px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+.hero-glow::before,
+.hero-glow::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.hero-glow::before {
+  width: 170px;
+  height: 170px;
+  top: 34px;
+  left: 34px;
+}
+
+.hero-glow::after {
+  width: 100px;
+  height: 100px;
+  top: 69px;
+  left: 69px;
+}
+
+.contact-top-link {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 14px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contact-top-link:active {
+  transform: scale(0.97);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.contact-badge {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  padding: 6px 15px;
+  border: 1px solid rgba(231, 199, 112, 0.65);
+  border-radius: 999px;
+  color: #e9cf83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.badge-icon {
+  font-size: 15px;
+}
+
+.contact-hero h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(29px, 7vw, 42px);
+  font-family: serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+}
+
+.hero-line {
+  position: relative;
+  z-index: 2;
+  width: 54px;
+  height: 2px;
+  margin: 15px auto 12px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #e7c770,
+    transparent
+  );
+}
+
+.hero-sub {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+.contact-main {
+  padding: 28px 20px 0;
+}
+
+.contact-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contact-heading h2 {
+  margin: 0;
+  color: #102b50;
+  font-family: serif;
+  font-size: clamp(20px, 5vw, 27px);
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.heading-line {
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c8a94e
+  );
+}
+
+.heading-line:last-child {
+  background: linear-gradient(
+    90deg,
+    #c8a94e,
+    transparent
+  );
+}
+
+.contact-description {
+  margin: 12px 0 20px;
+  text-align: center;
+  color: #607089;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   入力カード
+========================= */
+
+.contact-card {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #dbe5f2;
+  border-radius: 22px;
+  box-shadow:
+    0 10px 30px rgba(25, 58, 100, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 10px 4px;
+  color: #b49745;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.label-icon {
+  font-size: 14px;
+}
+
+.feedback-box {
+  display: block;
+  width: 100%;
+  height: 180px;
+  padding: 16px;
+  resize: none;
+  outline: none;
+  border: 1.5px solid #d5dfeb;
+  border-radius: 15px;
+  background: #fbfcff;
+  color: #152d4d;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.7;
+  transition: 0.2s ease;
+}
+
+.feedback-box::placeholder {
+  color: #aab3bf;
+}
+
+.feedback-box:focus {
+  border-color: #5c8dc4;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(54, 116, 179, 0.09);
+}
+
+.contact-note {
+  margin-top: 12px;
+  text-align: center;
+  color: #99a5b4;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   送信ボタン
+========================= */
+
+.send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: min(78%, 330px);
+  margin: 22px auto 0;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(
+    110deg,
+    #174e91,
+    #4877bc
+  );
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(23, 78, 145, 0.18);
+  opacity: 0.55;
+}
+
+.send-btn small {
+  padding-left: 9px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.coming-soon {
+  margin: 9px 0 0;
+  text-align: center;
+  color: #aab4c1;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   スマホ調整
+========================= */
+
+@media (max-width: 480px) {
+
+  .contact-top-link {
+    top: 16px;
+    right: 14px;
+  }
+
+  .contact-hero {
+    padding: 31px 16px 29px;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .contact-main {
+    padding: 24px 17px 0;
+  }
+
+  .contact-heading {
+    gap: 8px;
+  }
+
+  .heading-line {
+    width: 28px;
+  }
+
+  .contact-description {
+    font-size: 13px;
+    margin-bottom: 17px;
+  }
+
+  .contact-card {
+    padding: 14px;
+    border-radius: 19px;
+  }
+
+  .feedback-box {
+    height: 165px;
+    font-size: 14px;
+  }
+
+  .send-btn {
+    margin-top: 19px;
+  }
+}
+</style>

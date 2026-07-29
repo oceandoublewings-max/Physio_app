@@ -29,7 +29,10 @@ Rails.application.routes.draw do
   get "/physiology", to: "home#physiology"
   get "/materials", to: "questions#materials"
   get "/stamps", to: "home#stamps"
-  get "/contact", to: "home#contact"
+
+  get "/contact", to: "home#contact", as: :contact
+  post "/contact", to: "home#submit_contact", as: :submit_contact
+
   get "/illustration_count", to: "questions#illustration_count"
 
   get "anatomy_analysis", to: "home#anatomy_analysis"

@@ -808,7 +808,21 @@ ${explanation.replace(/\n/g, "<br>")}
 localStorage.setItem("total", "<%= @questions.length %>");
 localStorage.setItem("wrong", JSON.stringify(wrong));
 
-recordAnsweredQuestion(questionId);
+recordAnsweredQuestion(questionId).finally(() => {
+  const isLastQuestion = <%= (@index + 1) >= @questions.length %>;
+  if (isLastQuestion) {
+    window.stampRedirectAfterQueue = false;
+    showNextPendingStamp();
+
+    const originalClose = closeStampModal;
+    closeStampModal = function() {
+      originalClose();
+      window.setTimeout(() => {
+        window.location.href = "/questions";
+      }, 250);
+    };
+  }
+});
 
 showAnswer();
 }
@@ -1262,11 +1276,8 @@ document.body.style.setProperty("background-repeat", "no-repeat", "important");
 document.body.style.setProperty("background-position", "center 75px", "important");
 document.body.style.setProperty("background-size", "320px", "important");
 
-// 正答率リングを見せたあと、今回獲得したスタンプを表示する。
-window.stampRedirectAfterQueue = true;
-window.setTimeout(() => {
-  showNextPendingStamp();
-}, 1500);
+// スタンプは問題終了時に表示する仕様へ変更
+window.stampRedirectAfterQueue = false;
 </script>
 
 <% end %>

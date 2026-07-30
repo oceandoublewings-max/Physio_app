@@ -152,6 +152,9 @@ class HomeController < ApplicationController
   def privacy
   end
 
+  def account_delete
+  end
+
   def tutorial
     @page = (params[:page] || 1).to_i
     @page = 1 if @page < 1

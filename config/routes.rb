@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get "/about", to: "home#about"
   get "/terms", to: "home#terms"
   get "/privacy", to: "home#privacy"
+  get "/account_delete", to: "home#account_delete"
 
   get "/tutorial", to: "home#tutorial"
 

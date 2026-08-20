@@ -270,6 +270,41 @@
     letter-spacing: 0.12em;
   }
 
+
+  .purchase-button {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 16px;
+    border: 1px solid rgba(255,158,170,0.75);
+    border-radius: 12px;
+    background: #ff9eaa;
+    color: #071d3a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+
+  .purchase-button:disabled {
+    opacity: 0.65;
+    cursor: default;
+  }
+
+  .purchase-status {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.82);
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
   @media (max-width: 380px) {
     .physiology-library-page {
       padding-left: 14px;
@@ -339,14 +374,138 @@
     </h2>
 
     <p class="purchase-text">
-  完全版PDFは現在準備中です。<br>
-  <strong>🚧 準備中</strong>
-</p>
+      生理学 基礎学習PDFの完全版です。<br>
+      価格はGoogle Playに表示される金額をご確認ください。
+    </p>
 
-    <div class="coming-soon">
-  🚧 準備中
-</div>
+    <button type="button" id="physiology-purchase-button" class="purchase-button">
+      購入情報を読み込み中…
+    </button>
+
+    <div id="physiology-purchase-status" class="purchase-status"></div>
 
   </div>
 
 </div>
+
+
+<script type="module">
+  const PRODUCT_ID = "physiology_pdf";
+
+  // 完全版PDFを配置したら、実際のファイル名に合わせてここだけ変更してください。
+  const FULL_PDF_URL = "/pdfs/physiology/physiology_full.pdf";
+
+  const button = document.getElementById("physiology-purchase-button");
+  const status = document.getElementById("physiology-purchase-status");
+
+  const setStatus = (message) => {
+    if (status) status.textContent = message;
+  };
+
+  const openFullPdf = () => {
+    window.open(FULL_PDF_URL, "_blank", "noopener");
+  };
+
+  async function getNativePurchases() {
+    const module = await import("@capgo/native-purchases");
+    return {
+      NativePurchases: module.NativePurchases,
+      PURCHASE_TYPE: module.PURCHASE_TYPE
+    };
+  }
+
+  async function hasPurchased(NativePurchases, PURCHASE_TYPE) {
+    const { purchases = [] } = await NativePurchases.getPurchases({
+      productType: PURCHASE_TYPE.INAPP
+    });
+
+    return purchases.some((purchase) => {
+      const sameProduct =
+        purchase.productIdentifier === PRODUCT_ID ||
+        purchase.productId === PRODUCT_ID;
+
+      const purchasedState =
+        purchase.purchaseState == null ||
+        ["PURCHASED", "1", 1].includes(purchase.purchaseState);
+
+      return sameProduct && purchasedState;
+    });
+  }
+
+  async function initializePurchase() {
+    if (!button) return;
+
+    try {
+      const { NativePurchases, PURCHASE_TYPE } = await getNativePurchases();
+      const { isBillingSupported } = await NativePurchases.isBillingSupported();
+
+      if (!isBillingSupported) {
+        button.textContent = "購入はアプリ版で利用できます";
+        button.disabled = true;
+        return;
+      }
+
+      if (await hasPurchased(NativePurchases, PURCHASE_TYPE)) {
+        button.textContent = "購入済み｜完全版PDFを開く";
+        button.onclick = openFullPdf;
+        setStatus("このPDFは購入済みです。");
+        return;
+      }
+
+      const { products = [] } = await NativePurchases.getProducts({
+        productIdentifiers: [PRODUCT_ID],
+        productType: PURCHASE_TYPE.INAPP
+      });
+
+      const product = products.find((item) =>
+        item.identifier === PRODUCT_ID ||
+        item.productIdentifier === PRODUCT_ID ||
+        item.productId === PRODUCT_ID
+      ) || products[0];
+
+      button.textContent = product?.priceString
+        ? `${product.priceString}で購入`
+        : "購入する";
+
+      button.onclick = async () => {
+        button.disabled = true;
+        const originalText = button.textContent;
+        button.textContent = "購入処理中…";
+        setStatus("");
+
+        try {
+          await NativePurchases.purchaseProduct({
+            productIdentifier: PRODUCT_ID,
+            productType: PURCHASE_TYPE.INAPP,
+            quantity: 1,
+            isConsumable: false
+          });
+
+          if (await hasPurchased(NativePurchases, PURCHASE_TYPE)) {
+            button.textContent = "購入済み｜完全版PDFを開く";
+            button.disabled = false;
+            button.onclick = openFullPdf;
+            setStatus("購入が完了しました。");
+          } else {
+            button.textContent = originalText;
+            button.disabled = false;
+            setStatus("購入状態を確認できませんでした。もう一度お試しください。");
+          }
+        } catch (error) {
+          console.error("Purchase failed:", error);
+          button.textContent = originalText;
+          button.disabled = false;
+          setStatus("購入が完了しませんでした。");
+        }
+      };
+    } catch (error) {
+      console.error("Native purchases unavailable:", error);
+      button.textContent = "購入はアプリ版で利用できます";
+      button.disabled = true;
+      setStatus("");
+    }
+  }
+
+  initializePurchase();
+</script>
+

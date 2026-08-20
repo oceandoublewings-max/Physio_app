@@ -349,13 +349,117 @@
     </h2>
 
    <p class="purchase-text">
-  完全版PDFは現在準備中です。<br>
-  <strong>🚧 準備中</strong>
+  骨の基礎知識をまとめた完全版PDFです。<br>
+  購入後、この端末から完全版を開けます。
 </p>
 
-   <div class="coming-soon">
-  🚧 準備中
-</div>
+   <button type="button" class="coming-soon" id="bone-purchase-button">
+     <span id="bone-purchase-label">価格を確認中...</span>
+   </button>
+
+   <button type="button" class="coming-soon" id="bone-open-button" style="display:none; margin-top:10px;">
+     📄 完全版PDFを開く
+   </button>
+
+   <p class="purchase-text" id="bone-purchase-message" style="margin-top:10px;"></p>
+
+<script type="module">
+  import { NativePurchases, PURCHASE_TYPE } from '@capgo/native-purchases';
+
+  // Google Play Consoleで作成した「骨 基礎学習PDF」の商品IDと一致させてください。
+  const PRODUCT_ID = 'bone_pdf';
+  const FULL_PDF_URL = '/pdfs/bone/000bone_full.pdf';
+
+  const purchaseButton = document.getElementById('bone-purchase-button');
+  const purchaseLabel = document.getElementById('bone-purchase-label');
+  const openButton = document.getElementById('bone-open-button');
+  const message = document.getElementById('bone-purchase-message');
+
+  function showPurchased() {
+    purchaseButton.style.display = 'none';
+    openButton.style.display = 'flex';
+    message.textContent = '購入済みです。完全版PDFを利用できます。';
+  }
+
+  function isValidAndroidPurchase(purchase) {
+    return purchase.productIdentifier === PRODUCT_ID &&
+      ['PURCHASED', '1'].includes(String(purchase.purchaseState ?? '')) &&
+      purchase.isAcknowledged === true;
+  }
+
+  async function refreshPurchaseState() {
+    const { purchases } = await NativePurchases.getPurchases({
+      productType: PURCHASE_TYPE.INAPP
+    });
+
+    if ((purchases || []).some(isValidAndroidPurchase)) {
+      showPurchased();
+      return true;
+    }
+    return false;
+  }
+
+  async function initializePurchase() {
+    try {
+      const { isBillingSupported } = await NativePurchases.isBillingSupported();
+      if (!isBillingSupported) {
+        purchaseLabel.textContent = 'アプリ版で購入できます';
+        purchaseButton.disabled = true;
+        return;
+      }
+
+      if (await refreshPurchaseState()) return;
+
+      const { products } = await NativePurchases.getProducts({
+        productIdentifiers: [PRODUCT_ID],
+        productType: PURCHASE_TYPE.INAPP
+      });
+
+      const product = (products || []).find(p =>
+        p.identifier === PRODUCT_ID || p.productIdentifier === PRODUCT_ID
+      );
+
+      purchaseLabel.textContent = product?.priceString
+        ? `${product.priceString}で購入`
+        : '購入する';
+    } catch (error) {
+      console.error('購入情報の取得に失敗しました', error);
+      purchaseLabel.textContent = '購入する';
+      message.textContent = '購入情報を取得できませんでした。時間をおいて再度お試しください。';
+    }
+  }
+
+  purchaseButton.addEventListener('click', async () => {
+    purchaseButton.disabled = true;
+    message.textContent = '購入画面を開いています...';
+
+    try {
+      await NativePurchases.purchaseProduct({
+        productIdentifier: PRODUCT_ID,
+        productType: PURCHASE_TYPE.INAPP,
+        isConsumable: false
+      });
+
+      // 購入後、Play Storeが返す購入履歴を再確認します。
+      if (await refreshPurchaseState()) {
+        message.textContent = '購入が完了しました。';
+      } else {
+        message.textContent = '購入状態を確認中です。少し待ってからもう一度開いてください。';
+      }
+    } catch (error) {
+      console.error('購入に失敗しました', error);
+      message.textContent = '購入が完了しませんでした。キャンセルした場合はそのままで大丈夫です。';
+    } finally {
+      purchaseButton.disabled = false;
+    }
+  });
+
+  openButton.addEventListener('click', () => {
+    window.open(FULL_PDF_URL, '_blank');
+  });
+
+  initializePurchase();
+</script>
 
   </div>
 

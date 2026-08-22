@@ -877,10 +877,10 @@
 </div>
 
 <script>
-  // Androidアプリ内ではCapacitorのregisterPlugin経由で
-  // SocialLoginネイティブプラグインを直接呼びます。
-  // Web版は従来のOmniAuthフォームをそのまま使います。
-  document.addEventListener("DOMContentLoaded", async function () {
+  // Androidアプリ内ではGoogleフォームの通常送信を必ず止め、
+  // SocialLoginネイティブプラグインだけを使います。
+  // Web版では従来のOmniAuthフォームをそのまま使います。
+  document.addEventListener("DOMContentLoaded", function () {
     var capacitor = window.Capacitor;
 
     if (
@@ -891,46 +891,41 @@
       return;
     }
 
-    if (!capacitor.registerPlugin) {
-      console.error("Capacitor.registerPlugin is not available");
-      return;
-    }
-
-    var socialLogin = capacitor.registerPlugin("SocialLogin");
-
-    var googleWebClientId =
-      "<%= j(ENV['GOOGLE_CLIENT_ID'].presence || ENV['GOOGLE_OAUTH_CLIENT_ID'].presence || '') %>";
-
-    if (!googleWebClientId) {
-      console.error("Google Web Client ID is not configured");
-      return;
-    }
-
-    try {
-      await socialLogin.initialize({
-        google: {
-          webClientId: googleWebClientId,
-          mode: "online"
-        }
-      });
-    } catch (error) {
-      console.error("SocialLogin initialize error", error);
-      return;
-    }
-
     var googleForm =
       document.querySelector('form.oauth-form[data-oauth-provider="google"]');
 
     if (!googleForm) return;
 
     googleForm.addEventListener("submit", async function (event) {
+      // ここを最初に実行してChromeへの通常送信を必ず止める
       event.preventDefault();
       event.stopPropagation();
+      event.stopImmediatePropagation();
 
       var button = googleForm.querySelector("button");
       if (button) button.disabled = true;
 
       try {
+        if (!capacitor.registerPlugin) {
+          throw new Error("Capacitor.registerPlugin is not available");
+        }
+
+        var socialLogin = capacitor.registerPlugin("SocialLogin");
+
+        var googleWebClientId =
+          "<%= j(ENV['GOOGLE_CLIENT_ID'].presence || ENV['GOOGLE_OAUTH_CLIENT_ID'].presence || '') %>";
+
+        if (!googleWebClientId) {
+          throw new Error("Google Web Client ID is not configured");
+        }
+
+        await socialLogin.initialize({
+          google: {
+            webClientId: googleWebClientId,
+            mode: "online"
+          }
+        });
+
         var loginResult = await socialLogin.login({
           provider: "google",
           options: {
@@ -964,9 +959,7 @@
             "Accept": "application/json",
             "X-CSRF-Token": csrf ? csrf.content : ""
           },
-          body: JSON.stringify({
-            id_token: idToken
-          })
+          body: JSON.stringify({ id_token: idToken })
         });
 
         var data = await response.json();
@@ -981,11 +974,14 @@
       } catch (error) {
         console.error("Native Google login error", error);
         window.alert(
-          "Googleログインに失敗しました。もう一度お試しください。"
+          "ネイティブGoogleログインでエラー:\n" +
+          (error && error.message ? error.message : String(error))
         );
 
         if (button) button.disabled = false;
       }
+
+      return false;
     }, true);
   });
 </script>

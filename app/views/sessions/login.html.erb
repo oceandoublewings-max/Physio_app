@@ -783,7 +783,7 @@
     method: :post,
     class: "google-btn",
     form_class: "oauth-form",
-    form: { data: { turbo: false } } do %>
+    form: { data: { turbo: false, oauth_provider: "google" } } do %>
           <span class="auth-logo" aria-hidden="true">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.4-.18-2.06H12v3.89h5.38a4.6 4.6 0 0 1-2 3.02v2.52h3.24c1.9-1.75 2.98-4.33 2.98-7.37Z"/>
@@ -877,29 +877,44 @@
 </div>
 
 <script>
-  // Capacitorアプリ内ではOAuth開始時に mobile=1 を付けます。
-  // Google / Apple の認証完了後、ptot://auth のDeep Linkでアプリへ戻し、
-  // RailsのWebView側セッションを作り直してから /home を開きます。
+  // Native app: OAuthだけCapacitor Browserで開き、Deep Linkでアプリへ戻す。
+  // Web/guestは従来どおり。Apple有効化後も同じoauth-formで共通利用できます。
   document.addEventListener("DOMContentLoaded", async function () {
     var capacitor = window.Capacitor;
-    var appPlugin = capacitor && capacitor.Plugins && capacitor.Plugins.App;
-    if (!capacitor || !capacitor.isNativePlatform || !capacitor.isNativePlatform() || !appPlugin) return;
+    if (!capacitor || !capacitor.isNativePlatform || !capacitor.isNativePlatform()) return;
+
+    var plugins = capacitor.Plugins || {};
+    var appPlugin = plugins.App;
+    var browserPlugin = plugins.Browser;
+    if (!appPlugin || !browserPlugin) return;
 
     document.querySelectorAll("form.oauth-form").forEach(function (form) {
-      try {
-        var url = new URL(form.action, window.location.origin);
-        url.searchParams.set("mobile", "1");
-        form.action = url.toString();
-      } catch (_) {}
+      if (form.querySelector("button[disabled]")) return;
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        try {
+          var url = new URL(form.action, window.location.origin);
+          url.searchParams.set("mobile", "1");
+          url.searchParams.set("origin", "ptot://auth");
+          await browserPlugin.open({ url: url.toString() });
+        } catch (error) {
+          console.error("OAuth Browser open error", error);
+          form.submit();
+        }
+      });
     });
 
-    function handleAppUrl(url) {
+    async function handleAppUrl(url) {
       if (!url || !url.startsWith("ptot://auth")) return;
 
       try {
         var parsed = new URL(url);
         var token = parsed.searchParams.get("token");
         if (!token) return;
+
+        try { await browserPlugin.close(); } catch (_) {}
 
         window.location.replace(
           "/mobile_auth/complete?token=" + encodeURIComponent(token)

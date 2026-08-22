@@ -2,6 +2,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   skip_before_action :verify_authenticity_token, only: %i[apple failure]
 
   def google_oauth2
+    Rails.logger.info "MOBILE_OAUTH=#{mobile_oauth?} PARAMS=#{request.env['omniauth.params'].inspect}"
+    
     handle_auth("Google")
   end
 

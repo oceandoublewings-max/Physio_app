@@ -16,6 +16,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
+  def mobile_oauth?
+    request.env.dig("omniauth.params", "mobile") == "1"
+  end
+
   def handle_auth(provider_name)
     Rails.logger.info "========== #{provider_name.upcase} OMNIAUTH START =========="
     Rails.logger.info request.env["omniauth.auth"].inspect
@@ -41,8 +45,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     if @user.persisted?
-      sign_in_and_redirect @user, event: :authentication
-      set_flash_message(:notice, :success, kind: provider_name) if is_navigational_format?
+      if mobile_oauth?
+        sign_in @user, event: :authentication
+        token = @user.signed_id(purpose: :mobile_oauth, expires_in: 5.minutes)
+        redirect_to "ptot://auth?token=#{CGI.escape(token)}", allow_other_host: true
+      else
+        sign_in_and_redirect @user, event: :authentication
+        set_flash_message(:notice, :success, kind: provider_name) if is_navigational_format?
+      end
     else
       session["devise.auth_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url

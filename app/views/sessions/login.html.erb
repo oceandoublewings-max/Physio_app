@@ -877,7 +877,51 @@
 </div>
 
 <script>
-  // Apple・Google認証からSafariで戻ったとき、
+  // Capacitorアプリ内ではOAuth開始時に mobile=1 を付けます。
+  // Google / Apple の認証完了後、ptot://auth のDeep Linkでアプリへ戻し、
+  // RailsのWebView側セッションを作り直してから /home を開きます。
+  document.addEventListener("DOMContentLoaded", async function () {
+    var capacitor = window.Capacitor;
+    var appPlugin = capacitor && capacitor.Plugins && capacitor.Plugins.App;
+    if (!capacitor || !capacitor.isNativePlatform || !capacitor.isNativePlatform() || !appPlugin) return;
+
+    document.querySelectorAll("form.oauth-form").forEach(function (form) {
+      try {
+        var url = new URL(form.action, window.location.origin);
+        url.searchParams.set("mobile", "1");
+        form.action = url.toString();
+      } catch (_) {}
+    });
+
+    function handleAppUrl(url) {
+      if (!url || !url.startsWith("ptot://auth")) return;
+
+      try {
+        var parsed = new URL(url);
+        var token = parsed.searchParams.get("token");
+        if (!token) return;
+
+        window.location.replace(
+          "/mobile_auth/complete?token=" + encodeURIComponent(token)
+        );
+      } catch (error) {
+        console.error("Deep Link error", error);
+      }
+    }
+
+    appPlugin.addListener("appUrlOpen", function (event) {
+      handleAppUrl(event && event.url);
+    });
+
+    try {
+      var launch = await appPlugin.getLaunchUrl();
+      handleAppUrl(launch && launch.url);
+    } catch (_) {}
+  });
+</script>
+
+<script>
+  // Apple・Google認証からSafariで戻ったとき,
   // 戻るキャッシュ内の古いCSRFトークンを使わないようにします。
   window.addEventListener("pageshow", function (event) {
     var entries = window.performance &&

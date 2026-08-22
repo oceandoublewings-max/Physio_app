@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/home", to: "home#index", as: :home
 
   get "/login", to: "sessions#login"
+  get "/mobile_auth/complete", to: "mobile_auth#complete", as: :mobile_auth_complete
   post "/guest_login", to: "sessions#guest_login"
   delete "/logout", to: "sessions#destroy"
 

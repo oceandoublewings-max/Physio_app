@@ -714,6 +714,29 @@
   }
 </style>
 
+
+<div id="native-diagnostic"
+     style="position:fixed;top:8px;left:8px;right:8px;z-index:99999;
+            padding:10px 12px;border-radius:10px;background:#111827;color:#fff;
+            font-size:12px;line-height:1.5;box-shadow:0 4px 12px rgba(0,0,0,.25);">
+  Capacitor: 確認中 / Native: 確認中 / SocialLogin: 確認中
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var box = document.getElementById("native-diagnostic");
+    var capacitor = window.Capacitor;
+    var capacitorOk = !!capacitor;
+    var nativeOk = !!(capacitor && capacitor.isNativePlatform && capacitor.isNativePlatform());
+    var socialLoginOk = !!(capacitor && capacitor.Plugins && capacitor.Plugins.SocialLogin);
+    if (box) {
+      box.textContent =
+        "Capacitor: " + (capacitorOk ? "OK" : "NG") +
+        " / Native: " + (nativeOk ? "OK" : "NG") +
+        " / SocialLogin: " + (socialLoginOk ? "OK" : "NG");
+    }
+  });
+</script>
+
 <div class="login-page">
   <main class="login-shell">
     <header class="login-hero">

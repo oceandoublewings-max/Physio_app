@@ -17,7 +17,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def mobile_oauth?
-    request.env.dig("omniauth.params", "mobile") == "1"
+    omniauth_mobile = request.env.dig("omniauth.params", "mobile") == "1"
+    omniauth_origin = request.env["omniauth.origin"].to_s
+
+    # mobile=1 がOAuth往復で落ちても、OmniAuth標準の origin を使って
+    # Google / Apple 共通で「アプリから開始したログイン」を判定する。
+    omniauth_mobile || omniauth_origin.start_with?("ptot://auth")
   end
 
   def handle_auth(provider_name)

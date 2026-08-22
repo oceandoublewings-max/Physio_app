@@ -2,3 +2,4 @@
 // import "@hotwired/turbo-rails"
 
 import "controllers"
+import "./native_social_login"

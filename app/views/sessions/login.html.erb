@@ -714,29 +714,6 @@
   }
 </style>
 
-
-<div id="native-diagnostic"
-     style="position:fixed;top:8px;left:8px;right:8px;z-index:99999;
-            padding:10px 12px;border-radius:10px;background:#111827;color:#fff;
-            font-size:12px;line-height:1.5;box-shadow:0 4px 12px rgba(0,0,0,.25);">
-  Capacitor: 確認中 / Native: 確認中 / SocialLogin: 確認中
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var box = document.getElementById("native-diagnostic");
-    var capacitor = window.Capacitor;
-    var capacitorOk = !!capacitor;
-    var nativeOk = !!(capacitor && capacitor.isNativePlatform && capacitor.isNativePlatform());
-    var socialLoginOk = !!(capacitor && capacitor.Plugins && capacitor.Plugins.SocialLogin);
-    if (box) {
-      box.textContent =
-        "Capacitor: " + (capacitorOk ? "OK" : "NG") +
-        " / Native: " + (nativeOk ? "OK" : "NG") +
-        " / SocialLogin: " + (socialLoginOk ? "OK" : "NG");
-    }
-  });
-</script>
-
 <div class="login-page">
   <main class="login-shell">
     <header class="login-hero">
@@ -900,21 +877,27 @@
 </div>
 
 <script>
-  // Native appではGoogleをCapacitor Social Loginで認証します。
-  // Web版Googleは従来のOmniAuthフォーム、ゲストも従来どおりです。
+  // Androidアプリ内ではCapacitorのregisterPlugin経由で
+  // SocialLoginネイティブプラグインを直接呼びます。
+  // Web版は従来のOmniAuthフォームをそのまま使います。
   document.addEventListener("DOMContentLoaded", async function () {
     var capacitor = window.Capacitor;
-    if (!capacitor || !capacitor.isNativePlatform || !capacitor.isNativePlatform()) return;
 
-    var socialLogin = capacitor.Plugins && capacitor.Plugins.SocialLogin;
-    if (!socialLogin) {
-      console.error("SocialLogin plugin is not available");
+    if (
+      !capacitor ||
+      !capacitor.isNativePlatform ||
+      !capacitor.isNativePlatform()
+    ) {
       return;
     }
 
-    // Androidでは「Android Client ID」ではなく
-    // Google Cloudの「Web Client ID」を初期化に使います。
-    // Renderで現在のGoogleログインに使っているClient IDをそのまま利用します。
+    if (!capacitor.registerPlugin) {
+      console.error("Capacitor.registerPlugin is not available");
+      return;
+    }
+
+    var socialLogin = capacitor.registerPlugin("SocialLogin");
+
     var googleWebClientId =
       "<%= j(ENV['GOOGLE_CLIENT_ID'].presence || ENV['GOOGLE_OAUTH_CLIENT_ID'].presence || '') %>";
 
@@ -942,6 +925,7 @@
 
     googleForm.addEventListener("submit", async function (event) {
       event.preventDefault();
+      event.stopPropagation();
 
       var button = googleForm.querySelector("button");
       if (button) button.disabled = true;
@@ -949,7 +933,9 @@
       try {
         var loginResult = await socialLogin.login({
           provider: "google",
-          options: {}
+          options: {
+            scopes: ["email", "profile"]
+          }
         });
 
         var result =
@@ -960,7 +946,9 @@
         var idToken =
           (result && result.idToken) ||
           (result && result.id_token) ||
-          (result && result.authentication && result.authentication.idToken);
+          (result &&
+            result.authentication &&
+            result.authentication.idToken);
 
         if (!idToken) {
           throw new Error("Google ID token was not returned");
@@ -989,10 +977,7 @@
           );
         }
 
-        // Rails側でDevise sessionを作成できたら、
-        // Chromeではなくこのアプリ内WebViewのHOMEへ移動します。
         window.location.replace(data.redirect_to || "/home");
-
       } catch (error) {
         console.error("Native Google login error", error);
         window.alert(
@@ -1001,7 +986,7 @@
 
         if (button) button.disabled = false;
       }
-    });
+    }, true);
   });
 </script>
 

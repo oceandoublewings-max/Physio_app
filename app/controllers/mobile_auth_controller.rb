@@ -1,9 +1,6 @@
 class MobileAuthController < ApplicationController
   skip_before_action :require_login, only: %i[google apple complete]
 
-  # Capacitor Browser（外部ブラウザ）で最初にここを開く。
-  # OAuth の request/callback をまたいでも消えない encrypted cookie に
-  # 「アプリからのログイン」を保存してから OmniAuth を開始する。
   def google
     start_mobile_oauth(user_google_oauth2_omniauth_authorize_path)
   end
@@ -13,23 +10,16 @@ class MobileAuthController < ApplicationController
   end
 
   def complete
-    payload = Rails.application
-                   .message_verifier(:mobile_oauth)
-                   .verify(params[:token])
-
-    user_id = payload[:user_id] || payload["user_id"]
-    rewarded_now = payload[:rewarded_now] || payload["rewarded_now"]
-    user = User.find_by(id: user_id)
+    user = User.find_signed(params[:token], purpose: :mobile_oauth)
 
     unless user
-      redirect_to login_path, alert: "ログイン情報を確認できませんでした。もう一度お試しください。"
+      redirect_to login_path, alert: "ログイン情報の有効期限が切れました。もう一度お試しください。"
       return
     end
 
-    # ここで「アプリ内WebView側」のDevise sessionを作る。
     sign_in(user, event: :authentication)
 
-    if rewarded_now
+    if params[:rewarded] == "1"
       stamp = Stamp.find_by(id: 1)
 
       if stamp
@@ -45,16 +35,14 @@ class MobileAuthController < ApplicationController
     end
 
     redirect_to home_path, notice: "ログインしました！"
-  rescue ActiveSupport::MessageVerifier::InvalidSignature
-    redirect_to login_path, alert: "ログイン情報の有効期限が切れました。もう一度お試しください。"
   end
 
   private
 
   def start_mobile_oauth(oauth_path)
-    # session ではなく encrypted cookie にするのが今回のポイント。
-    # Google / Apple を往復しても同じ外部ブラウザ内で保持される。
-    cookies.encrypted[:mobile_oauth] = {
+    # 外部ブラウザ内でだけ使う目印。
+    # 暗号化Cookieは使わず、OmniAuthのOAuth処理に影響しない単純Cookieにする。
+    cookies[:mobile_oauth] = {
       value: "1",
       expires: 10.minutes.from_now,
       httponly: true,

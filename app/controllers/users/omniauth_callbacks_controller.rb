@@ -21,11 +21,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
-  # 外部ブラウザで /mobile_auth/google (または apple) を開いた時に
-  # encrypted cookie を保存しておく。OAuth 往復で query/session が変わっても
-  # 同じブラウザの同じドメインなので callback で確実に判定できる。
   def mobile_oauth?
-    cookies.encrypted[:mobile_oauth].to_s == "1"
+    cookies[:mobile_oauth].to_s == "1"
   end
 
   def clear_mobile_oauth_cookie
@@ -33,9 +30,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def handle_auth(provider_name)
-    Rails.logger.info "========== #{provider_name.upcase} OMNIAUTH START =========="
-    Rails.logger.info "MOBILE_OAUTH_COOKIE=#{mobile_oauth?}"
-
     mobile_login = mobile_oauth?
     @user = User.from_omniauth(request.env["omniauth.auth"])
     rewarded_now = false
@@ -64,16 +58,15 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       if mobile_login
         clear_mobile_oauth_cookie
 
-        payload = {
-          user_id: @user.id,
-          rewarded_now: rewarded_now
-        }
+        token = @user.signed_id(
+          purpose: :mobile_oauth,
+          expires_in: 5.minutes
+        )
 
-        token = Rails.application
-                     .message_verifier(:mobile_oauth)
-                     .generate(payload, expires_in: 5.minutes)
+        url = "ptot://auth?token=#{CGI.escape(token)}"
+        url += "&rewarded=1" if rewarded_now
 
-        redirect_to "ptot://auth?token=#{CGI.escape(token)}", allow_other_host: true
+        redirect_to url, allow_other_host: true
       else
         sign_in_and_redirect @user, event: :authentication
         set_flash_message(:notice, :success, kind: provider_name) if is_navigational_format?
@@ -82,10 +75,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.auth_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
-
   rescue => e
-    Rails.logger.error e.class.to_s
-    Rails.logger.error e.message
+    Rails.logger.error "#{provider_name} OAuth error: #{e.class}: #{e.message}"
     Rails.logger.error e.backtrace.join("\n")
 
     if mobile_login || mobile_oauth?

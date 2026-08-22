@@ -11,7 +11,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def failure
     if mobile_oauth?
-      session.delete(:mobile_oauth)
+      clear_mobile_oauth_cookie
       redirect_to "ptot://auth?error=oauth_failed", allow_other_host: true
     else
       reset_session
@@ -21,13 +21,20 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
+  # 外部ブラウザで /mobile_auth/google (または apple) を開いた時に
+  # encrypted cookie を保存しておく。OAuth 往復で query/session が変わっても
+  # 同じブラウザの同じドメインなので callback で確実に判定できる。
   def mobile_oauth?
-    session[:mobile_oauth].to_s == "1"
+    cookies.encrypted[:mobile_oauth].to_s == "1"
+  end
+
+  def clear_mobile_oauth_cookie
+    cookies.delete(:mobile_oauth)
   end
 
   def handle_auth(provider_name)
     Rails.logger.info "========== #{provider_name.upcase} OMNIAUTH START =========="
-    Rails.logger.info request.env["omniauth.auth"].inspect
+    Rails.logger.info "MOBILE_OAUTH_COOKIE=#{mobile_oauth?}"
 
     mobile_login = mobile_oauth?
     @user = User.from_omniauth(request.env["omniauth.auth"])
@@ -55,8 +62,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user.persisted?
       if mobile_login
-        # 外部ブラウザ側のsessionに残った判定フラグはここで使い切る。
-        session.delete(:mobile_oauth)
+        clear_mobile_oauth_cookie
 
         payload = {
           user_id: @user.id,
@@ -82,8 +88,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     Rails.logger.error e.message
     Rails.logger.error e.backtrace.join("\n")
 
-    if mobile_oauth?
-      session.delete(:mobile_oauth)
+    if mobile_login || mobile_oauth?
+      clear_mobile_oauth_cookie
       redirect_to "ptot://auth?error=oauth_error", allow_other_host: true
     else
       redirect_to new_user_session_path,

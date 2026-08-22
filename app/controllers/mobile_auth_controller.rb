@@ -2,8 +2,8 @@ class MobileAuthController < ApplicationController
   skip_before_action :require_login, only: %i[google apple complete]
 
   # Capacitor Browser（外部ブラウザ）で最初にここを開く。
-  # このブラウザ側のsessionへ mobile_oauth を保存してから、
-  # OmniAuthのPOST開始ページを自動送信する。
+  # OAuth の request/callback をまたいでも消えない encrypted cookie に
+  # 「アプリからのログイン」を保存してから OmniAuth を開始する。
   def google
     start_mobile_oauth(user_google_oauth2_omniauth_authorize_path)
   end
@@ -26,6 +26,7 @@ class MobileAuthController < ApplicationController
       return
     end
 
+    # ここで「アプリ内WebView側」のDevise sessionを作る。
     sign_in(user, event: :authentication)
 
     if rewarded_now
@@ -51,7 +52,15 @@ class MobileAuthController < ApplicationController
   private
 
   def start_mobile_oauth(oauth_path)
-    session[:mobile_oauth] = "1"
+    # session ではなく encrypted cookie にするのが今回のポイント。
+    # Google / Apple を往復しても同じ外部ブラウザ内で保持される。
+    cookies.encrypted[:mobile_oauth] = {
+      value: "1",
+      expires: 10.minutes.from_now,
+      httponly: true,
+      secure: Rails.env.production?,
+      same_site: :lax
+    }
 
     csrf_name = ERB::Util.html_escape(request_forgery_protection_token.to_s)
     csrf_token = ERB::Util.html_escape(form_authenticity_token)

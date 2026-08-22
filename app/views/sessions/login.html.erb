@@ -765,7 +765,7 @@
     disabled: true,
     class: "apple-btn",
     form_class: "oauth-form",
-    form: { data: { turbo: false } } do %>
+    form: { data: { turbo: false, oauth_provider: "apple" } } do %>
 
   <span class="auth-logo" aria-hidden="true">
     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -877,8 +877,9 @@
 </div>
 
 <script>
-  // Native app: OAuthだけCapacitor Browserで開き、Deep Linkでアプリへ戻す。
-  // Web/guestは従来どおり。Apple有効化後も同じoauth-formで共通利用できます。
+  // Native appでは、まずRailsのmobile_auth開始URLをCapacitor Browserで開きます。
+  // そこで外部ブラウザ側のsessionに「アプリからのOAuth」と保存してから
+  // Google / Apple OAuthを開始します。認証後は ptot://auth でアプリへ戻ります。
   document.addEventListener("DOMContentLoaded", async function () {
     var capacitor = window.Capacitor;
     if (!capacitor || !capacitor.isNativePlatform || !capacitor.isNativePlatform()) return;
@@ -895,10 +896,13 @@
         event.preventDefault();
 
         try {
-          var url = new URL(form.action, window.location.origin);
-          url.searchParams.set("mobile", "1");
-          url.searchParams.set("origin", "ptot://auth");
-          await browserPlugin.open({ url: url.toString() });
+          var provider = form.dataset.oauthProvider || "google";
+          var startPath = provider === "apple"
+            ? "/mobile_auth/apple"
+            : "/mobile_auth/google";
+          var startUrl = new URL(startPath, window.location.origin).toString();
+
+          await browserPlugin.open({ url: startUrl });
         } catch (error) {
           console.error("OAuth Browser open error", error);
           form.submit();
@@ -912,9 +916,16 @@
       try {
         var parsed = new URL(url);
         var token = parsed.searchParams.get("token");
-        if (!token) return;
+        var error = parsed.searchParams.get("error");
 
         try { await browserPlugin.close(); } catch (_) {}
+
+        if (error) {
+          window.alert("ログインに失敗しました。もう一度お試しください。");
+          return;
+        }
+
+        if (!token) return;
 
         window.location.replace(
           "/mobile_auth/complete?token=" + encodeURIComponent(token)

@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   get "/home", to: "home#index", as: :home
 
   get "/login", to: "sessions#login"
-  get "/mobile_auth/google", to: "mobile_auth#google", as: :mobile_auth_google
-  get "/mobile_auth/apple", to: "mobile_auth#apple", as: :mobile_auth_apple
-  get "/mobile_auth/complete", to: "mobile_auth#complete", as: :mobile_auth_complete
+  get  "/mobile_auth/google",        to: "mobile_auth#google",        as: :mobile_auth_google
+  post "/mobile_auth/google_native", to: "mobile_auth#google_native", as: :mobile_auth_google_native
+  get  "/mobile_auth/apple",         to: "mobile_auth#apple",         as: :mobile_auth_apple
+  get  "/mobile_auth/complete",      to: "mobile_auth#complete",      as: :mobile_auth_complete
   post "/guest_login", to: "sessions#guest_login"
   delete "/logout", to: "sessions#destroy"
 

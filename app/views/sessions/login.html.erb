@@ -877,72 +877,108 @@
 </div>
 
 <script>
-  // Native appでは、まずRailsのmobile_auth開始URLをCapacitor Browserで開きます。
-  // そこで外部ブラウザ側のsessionに「アプリからのOAuth」と保存してから
-  // Google / Apple OAuthを開始します。認証後は ptot://auth でアプリへ戻ります。
+  // Native appではGoogleをCapacitor Social Loginで認証します。
+  // Web版Googleは従来のOmniAuthフォーム、ゲストも従来どおりです。
   document.addEventListener("DOMContentLoaded", async function () {
     var capacitor = window.Capacitor;
     if (!capacitor || !capacitor.isNativePlatform || !capacitor.isNativePlatform()) return;
 
-    var plugins = capacitor.Plugins || {};
-    var appPlugin = plugins.App;
-    var browserPlugin = plugins.Browser;
-    if (!appPlugin || !browserPlugin) return;
-
-    document.querySelectorAll("form.oauth-form").forEach(function (form) {
-      if (form.querySelector("button[disabled]")) return;
-
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        try {
-          var provider = form.dataset.oauthProvider || "google";
-          var startPath = provider === "apple"
-            ? "/mobile_auth/apple"
-            : "/mobile_auth/google";
-          var startUrl = new URL(startPath, window.location.origin).toString();
-
-          await browserPlugin.open({ url: startUrl });
-        } catch (error) {
-          console.error("OAuth Browser open error", error);
-          form.submit();
-        }
-      });
-    });
-
-    async function handleAppUrl(url) {
-      if (!url || !url.startsWith("ptot://auth")) return;
-
-      try {
-        var parsed = new URL(url);
-        var token = parsed.searchParams.get("token");
-        var error = parsed.searchParams.get("error");
-
-        try { await browserPlugin.close(); } catch (_) {}
-
-        if (error) {
-          window.alert("ログインに失敗しました。もう一度お試しください。");
-          return;
-        }
-
-        if (!token) return;
-
-        window.location.replace(
-          "/mobile_auth/complete?token=" + encodeURIComponent(token)
-        );
-      } catch (error) {
-        console.error("Deep Link error", error);
-      }
+    var socialLogin = capacitor.Plugins && capacitor.Plugins.SocialLogin;
+    if (!socialLogin) {
+      console.error("SocialLogin plugin is not available");
+      return;
     }
 
-    appPlugin.addListener("appUrlOpen", function (event) {
-      handleAppUrl(event && event.url);
-    });
+    // Androidでは「Android Client ID」ではなく
+    // Google Cloudの「Web Client ID」を初期化に使います。
+    // Renderで現在のGoogleログインに使っているClient IDをそのまま利用します。
+    var googleWebClientId =
+      "<%= j(ENV['GOOGLE_CLIENT_ID'].presence || ENV['GOOGLE_OAUTH_CLIENT_ID'].presence || '') %>";
+
+    if (!googleWebClientId) {
+      console.error("Google Web Client ID is not configured");
+      return;
+    }
 
     try {
-      var launch = await appPlugin.getLaunchUrl();
-      handleAppUrl(launch && launch.url);
-    } catch (_) {}
+      await socialLogin.initialize({
+        google: {
+          webClientId: googleWebClientId,
+          mode: "online"
+        }
+      });
+    } catch (error) {
+      console.error("SocialLogin initialize error", error);
+      return;
+    }
+
+    var googleForm =
+      document.querySelector('form.oauth-form[data-oauth-provider="google"]');
+
+    if (!googleForm) return;
+
+    googleForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      var button = googleForm.querySelector("button");
+      if (button) button.disabled = true;
+
+      try {
+        var loginResult = await socialLogin.login({
+          provider: "google",
+          options: {}
+        });
+
+        var result =
+          loginResult && loginResult.result
+            ? loginResult.result
+            : loginResult;
+
+        var idToken =
+          (result && result.idToken) ||
+          (result && result.id_token) ||
+          (result && result.authentication && result.authentication.idToken);
+
+        if (!idToken) {
+          throw new Error("Google ID token was not returned");
+        }
+
+        var csrf = document.querySelector('meta[name="csrf-token"]');
+
+        var response = await fetch("/mobile_auth/google_native", {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "X-CSRF-Token": csrf ? csrf.content : ""
+          },
+          body: JSON.stringify({
+            id_token: idToken
+          })
+        });
+
+        var data = await response.json();
+
+        if (!response.ok || !data.ok) {
+          throw new Error(
+            (data && data.error) || "Native Google login failed"
+          );
+        }
+
+        // Rails側でDevise sessionを作成できたら、
+        // Chromeではなくこのアプリ内WebViewのHOMEへ移動します。
+        window.location.replace(data.redirect_to || "/home");
+
+      } catch (error) {
+        console.error("Native Google login error", error);
+        window.alert(
+          "Googleログインに失敗しました。もう一度お試しください。"
+        );
+
+        if (button) button.disabled = false;
+      }
+    });
   });
 </script>
 

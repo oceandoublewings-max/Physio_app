@@ -1,8 +1,118 @@
 class MobileAuthController < ApplicationController
-  skip_before_action :require_login, only: %i[google apple complete]
+  skip_before_action :require_login, only: %i[google google_native apple complete]
 
   def google
     start_mobile_oauth(user_google_oauth2_omniauth_authorize_path)
+  end
+
+  # AndroidアプリのネイティブGoogle Sign-Inから受け取ったIDトークンでログインする。
+  def google_native
+    id_token = params[:id_token].to_s
+
+    if id_token.blank?
+      render json: { ok: false, error: "Google ID token is missing" }, status: :unprocessable_entity
+      return
+    end
+
+    begin
+      require "net/http"
+      require "json"
+      require "uri"
+
+      # GoogleのtokeninfoでIDトークンの署名・期限などを検証する。
+      uri = URI("https://oauth2.googleapis.com/tokeninfo")
+      uri.query = URI.encode_www_form(id_token: id_token)
+
+      response = Net::HTTP.get_response(uri)
+
+      unless response.is_a?(Net::HTTPSuccess)
+        render json: { ok: false, error: "Google ID token is invalid" }, status: :unauthorized
+        return
+      end
+
+      payload = JSON.parse(response.body)
+
+      expected_client_id =
+        ENV["GOOGLE_CLIENT_ID"].presence ||
+        ENV["GOOGLE_OAUTH_CLIENT_ID"].presence
+
+      unless expected_client_id.present? && payload["aud"] == expected_client_id
+        render json: { ok: false, error: "Google token audience mismatch" }, status: :unauthorized
+        return
+      end
+
+      email = payload["email"].to_s
+      uid   = payload["sub"].to_s
+      name  = payload["name"].presence || email.split("@").first
+
+      unless email.present? && uid.present? && payload["email_verified"].to_s == "true"
+        render json: { ok: false, error: "Google account could not be verified" }, status: :unauthorized
+        return
+      end
+
+      user = User.find_by(provider: "google_oauth2", uid: uid)
+      user ||= User.find_by(email: email)
+
+      new_oauth_user = false
+
+      unless user
+        user = User.new(
+          provider: "google_oauth2",
+          uid: uid,
+          email: email
+        )
+
+        user.name = name if user.respond_to?(:name=)
+        user.password = Devise.friendly_token[0, 20] if user.respond_to?(:password=)
+        user.save!
+        new_oauth_user = true
+      end
+
+      # 既存メールユーザーでもGoogle識別子が未設定なら紐付ける。
+      updates = {}
+      updates[:provider] = "google_oauth2" if user.respond_to?(:provider) && user.provider.blank?
+      updates[:uid] = uid if user.respond_to?(:uid) && user.uid.blank?
+      user.update!(updates) if updates.any?
+
+      rewarded_now = false
+
+      if new_oauth_user && user.respond_to?(:first_login_rewarded?) && !user.first_login_rewarded?
+        stamp = Stamp.find_by(id: 1)
+
+        if stamp
+          UserStamp.find_or_create_by!(user: user, stamp: stamp)
+          user.update!(first_login_rewarded: true)
+          rewarded_now = true
+
+          session[:show_stamp_reward] = {
+            number: "001",
+            name: stamp.name,
+            image: stamp.image
+          }
+        end
+
+        session[:show_tutorial] = true
+        session[:clear_local_storage] = true
+      end
+
+      # ここでアプリ内WebView側にDevise sessionを作る。
+      sign_in(user, event: :authentication)
+
+      render json: {
+        ok: true,
+        redirect_to: home_path,
+        rewarded_now: rewarded_now
+      }
+    rescue StandardError => e
+      Rails.logger.error(
+        "[MobileAuth#google_native] #{e.class}: #{e.message}"
+      )
+
+      render json: {
+        ok: false,
+        error: "Googleログイン処理に失敗しました。"
+      }, status: :unprocessable_entity
+    end
   end
 
   def apple

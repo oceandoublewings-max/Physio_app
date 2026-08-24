@@ -363,102 +363,151 @@
 
    <p class="purchase-text" id="bone-purchase-message" style="margin-top:10px;"></p>
 
-<script type="module">
-  import { NativePurchases, PURCHASE_TYPE } from '@capgo/native-purchases';
+<script>
+  (() => {
+    // Google Play Consoleで作成した「骨 基礎学習PDF」の商品ID
+    const PRODUCT_ID = 'bone_pdf';
+    const FULL_PDF_URL = '/pdfs/bone/000bone_full.pdf';
+    const PURCHASE_TYPE = 'inapp';
 
-  // Google Play Consoleで作成した「骨 基礎学習PDF」の商品IDと一致させてください。
-  const PRODUCT_ID = 'bone_pdf';
-  const FULL_PDF_URL = '/pdfs/bone/000bone_full.pdf';
+    const purchaseButton = document.getElementById('bone-purchase-button');
+    const purchaseLabel = document.getElementById('bone-purchase-label');
+    const openButton = document.getElementById('bone-open-button');
+    const message = document.getElementById('bone-purchase-message');
 
-  const purchaseButton = document.getElementById('bone-purchase-button');
-  const purchaseLabel = document.getElementById('bone-purchase-label');
-  const openButton = document.getElementById('bone-open-button');
-  const message = document.getElementById('bone-purchase-message');
+    // RailsのHTML内から npm パッケージを import せず、
+    // Capacitorがアプリ側に登録しているネイティブプラグインを使います。
+    const NativePurchases =
+      window.Capacitor?.Plugins?.NativePurchases ||
+      window.Capacitor?.Plugins?.NativePurchasesPlugin;
 
-  function showPurchased() {
-    purchaseButton.style.display = 'none';
-    openButton.style.display = 'flex';
-    message.textContent = '購入済みです。完全版PDFを利用できます。';
-  }
-
-  function isValidAndroidPurchase(purchase) {
-    return purchase.productIdentifier === PRODUCT_ID &&
-      ['PURCHASED', '1'].includes(String(purchase.purchaseState ?? '')) &&
-      purchase.isAcknowledged === true;
-  }
-
-  async function refreshPurchaseState() {
-    const { purchases } = await NativePurchases.getPurchases({
-      productType: PURCHASE_TYPE.INAPP
-    });
-
-    if ((purchases || []).some(isValidAndroidPurchase)) {
-      showPurchased();
-      return true;
+    function showPurchased() {
+      purchaseButton.style.display = 'none';
+      openButton.style.display = 'flex';
+      message.textContent = '購入済みです。完全版PDFを利用できます。';
     }
-    return false;
-  }
 
-  async function initializePurchase() {
-    try {
-      const { isBillingSupported } = await NativePurchases.isBillingSupported();
-      if (!isBillingSupported) {
+    function purchaseProductId(purchase) {
+      return purchase?.productIdentifier || purchase?.productId || purchase?.identifier;
+    }
+
+    function isValidAndroidPurchase(purchase) {
+      if (purchaseProductId(purchase) !== PRODUCT_ID) return false;
+
+      // プラグイン/OSのバージョン差で値の形が異なる場合にも対応。
+      const state = String(purchase?.purchaseState ?? '').toUpperCase();
+      const purchased =
+        state === '' ||
+        state === 'PURCHASED' ||
+        state === '1';
+
+      const acknowledged =
+        purchase?.isAcknowledged === undefined ||
+        purchase?.isAcknowledged === true;
+
+      return purchased && acknowledged;
+    }
+
+    async function refreshPurchaseState() {
+      const result = await NativePurchases.getPurchases({
+        productType: PURCHASE_TYPE
+      });
+
+      const purchases = result?.purchases || [];
+      if (purchases.some(isValidAndroidPurchase)) {
+        showPurchased();
+        return true;
+      }
+
+      return false;
+    }
+
+    async function initializePurchase() {
+      // 通常のWebブラウザではGoogle Play課金は使えません。
+      if (!NativePurchases) {
         purchaseLabel.textContent = 'アプリ版で購入できます';
         purchaseButton.disabled = true;
+        message.textContent = '';
         return;
       }
 
-      if (await refreshPurchaseState()) return;
+      try {
+        const billing = await NativePurchases.isBillingSupported();
 
-      const { products } = await NativePurchases.getProducts({
-        productIdentifiers: [PRODUCT_ID],
-        productType: PURCHASE_TYPE.INAPP
-      });
+        if (!billing?.isBillingSupported) {
+          purchaseLabel.textContent = 'アプリ版で購入できます';
+          purchaseButton.disabled = true;
+          return;
+        }
 
-      const product = (products || []).find(p =>
-        p.identifier === PRODUCT_ID || p.productIdentifier === PRODUCT_ID
-      );
+        if (await refreshPurchaseState()) return;
 
-      purchaseLabel.textContent = product?.priceString
-        ? `${product.priceString}で購入`
-        : '購入する';
-    } catch (error) {
-      console.error('購入情報の取得に失敗しました', error);
-      purchaseLabel.textContent = '購入する';
-      message.textContent = '購入情報を取得できませんでした。時間をおいて再度お試しください。';
-    }
-  }
+        const result = await NativePurchases.getProducts({
+          productIdentifiers: [PRODUCT_ID],
+          productType: PURCHASE_TYPE
+        });
 
-  purchaseButton.addEventListener('click', async () => {
-    purchaseButton.disabled = true;
-    message.textContent = '購入画面を開いています...';
+        const products = result?.products || [];
+        const product = products.find(p =>
+          p?.identifier === PRODUCT_ID ||
+          p?.productIdentifier === PRODUCT_ID ||
+          p?.productId === PRODUCT_ID
+        );
 
-    try {
-      await NativePurchases.purchaseProduct({
-        productIdentifier: PRODUCT_ID,
-        productType: PURCHASE_TYPE.INAPP,
-        isConsumable: false
-      });
+        const price =
+          product?.priceString ||
+          product?.formattedPrice ||
+          product?.displayPrice;
 
-      // 購入後、Play Storeが返す購入履歴を再確認します。
-      if (await refreshPurchaseState()) {
-        message.textContent = '購入が完了しました。';
-      } else {
-        message.textContent = '購入状態を確認中です。少し待ってからもう一度開いてください。';
+        purchaseLabel.textContent = price
+          ? `${price}で購入`
+          : '購入する';
+
+        if (!product) {
+          message.textContent = '商品情報を取得できませんでした。Google Playからインストールしたアプリで再度お試しください。';
+        }
+      } catch (error) {
+        console.error('購入情報の取得に失敗しました', error);
+        purchaseLabel.textContent = '購入する';
+        message.textContent = '購入情報を取得できませんでした。時間をおいて再度お試しください。';
       }
-    } catch (error) {
-      console.error('購入に失敗しました', error);
-      message.textContent = '購入が完了しませんでした。キャンセルした場合はそのままで大丈夫です。';
-    } finally {
-      purchaseButton.disabled = false;
     }
-  });
 
-  openButton.addEventListener('click', () => {
-    window.open(FULL_PDF_URL, '_blank');
-  });
+    purchaseButton.addEventListener('click', async () => {
+      if (!NativePurchases) {
+        message.textContent = '購入はアプリ版からご利用ください。';
+        return;
+      }
 
-  initializePurchase();
+      purchaseButton.disabled = true;
+      message.textContent = '購入画面を開いています...';
+
+      try {
+        await NativePurchases.purchaseProduct({
+          productIdentifier: PRODUCT_ID,
+          productType: PURCHASE_TYPE,
+          isConsumable: false
+        });
+
+        if (await refreshPurchaseState()) {
+          message.textContent = '購入が完了しました。';
+        } else {
+          message.textContent = '購入状態を確認中です。少し待ってからもう一度開いてください。';
+        }
+      } catch (error) {
+        console.error('購入に失敗しました', error);
+        message.textContent = '購入が完了しませんでした。キャンセルした場合はそのままで大丈夫です。';
+      } finally {
+        purchaseButton.disabled = false;
+      }
+    });
+
+    openButton.addEventListener('click', () => {
+      window.open(FULL_PDF_URL, '_blank');
+    });
+
+    initializePurchase();
+  })();
 </script>
 
   </div>

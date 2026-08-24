@@ -408,10 +408,19 @@
   };
 
   async function getNativePurchases() {
-    const module = await import("@capgo/native-purchases");
+    // RailsのHTMLからnpmパッケージを直接importしない。
+    // Capacitorアプリ側に登録済みのネイティブプラグインを使用する。
+    const NativePurchases =
+      window.Capacitor?.Plugins?.NativePurchases ||
+      window.Capacitor?.Plugins?.NativePurchasesPlugin;
+
+    if (!NativePurchases) {
+      throw new Error("NativePurchases plugin is unavailable");
+    }
+
     return {
-      NativePurchases: module.NativePurchases,
-      PURCHASE_TYPE: module.PURCHASE_TYPE
+      NativePurchases,
+      PURCHASE_TYPE: { INAPP: "inapp" }
     };
   }
 

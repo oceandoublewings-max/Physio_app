@@ -391,12 +391,10 @@
 
 <script type="module">
   const PRODUCT_ID = "physiology_pdf";
+  const FULL_PDF_URL = "/pdfs/physiology/000physiology_full.pdf";
 
-  // 完全版PDFを配置したら、実際のファイル名に合わせてここだけ変更してください。
-  const FULL_PDF_URL = "/pdfs/physiology/physiology_full.pdf";
-
-  const button = document.getElementById("physiology-purchase-button");
-  const status = document.getElementById("physiology-purchase-status");
+  const button = document.querySelector(".purchase-button");
+  const status = document.querySelector(".purchase-status");
 
   const setStatus = (message) => {
     if (status) status.textContent = message;
@@ -407,15 +405,11 @@
   };
 
   async function getNativePurchases() {
-    // RailsのHTMLからnpmパッケージを直接importしない。
-    // Capacitorアプリ側に登録済みのネイティブプラグインを使用する。
     const NativePurchases =
       window.Capacitor?.Plugins?.NativePurchases ||
       window.Capacitor?.Plugins?.NativePurchasesPlugin;
 
-    if (!NativePurchases) {
-      throw new Error("NativePurchases plugin is unavailable");
-    }
+    if (!NativePurchases) throw new Error("NativePurchases plugin is unavailable");
 
     return {
       NativePurchases,
@@ -517,4 +511,3 @@
 
   initializePurchase();
 </script>
-

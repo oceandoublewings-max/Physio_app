@@ -390,14 +390,11 @@
 
 
 <script type="module">
-  // Google Play Consoleの「神経・血管」商品のアイテムID
   const PRODUCT_ID = "nerve_pdf";
+  const FULL_PDF_URL = "/pdfs/neurovascular/000neurovascular_full.pdf";
 
-  // 完全版PDFを配置したら、実際のファイル名に合わせてここだけ変更してください。
-  const FULL_PDF_URL = "/pdfs/vessel_nerve/vessel_nerve_full.pdf";
-
-  const button = document.getElementById("neurovascular-purchase-button");
-  const status = document.getElementById("neurovascular-purchase-status");
+  const button = document.querySelector(".purchase-button");
+  const status = document.querySelector(".purchase-status");
 
   const setStatus = (message) => {
     if (status) status.textContent = message;
@@ -408,15 +405,11 @@
   };
 
   async function getNativePurchases() {
-    // RailsのHTMLからnpmパッケージを直接importしない。
-    // Capacitorアプリ側に登録済みのネイティブプラグインを使用する。
     const NativePurchases =
       window.Capacitor?.Plugins?.NativePurchases ||
       window.Capacitor?.Plugins?.NativePurchasesPlugin;
 
-    if (!NativePurchases) {
-      throw new Error("NativePurchases plugin is unavailable");
-    }
+    if (!NativePurchases) throw new Error("NativePurchases plugin is unavailable");
 
     return {
       NativePurchases,
@@ -447,9 +440,7 @@
 
     try {
       const { NativePurchases, PURCHASE_TYPE } = await getNativePurchases();
-
-      const { isBillingSupported } =
-        await NativePurchases.isBillingSupported();
+      const { isBillingSupported } = await NativePurchases.isBillingSupported();
 
       if (!isBillingSupported) {
         button.textContent = "購入はアプリ版で利用できます";
@@ -520,4 +511,3 @@
 
   initializePurchase();
 </script>
-

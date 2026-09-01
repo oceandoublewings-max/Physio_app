@@ -1,6 +1,7 @@
 import { SocialLogin } from '@capgo/capacitor-social-login';
 
-let socialInitializationPromise = null;
+let googleInitializationPromise = null;
+let iosInitializationPromise = null;
 
 function isNativeApp() {
   return Boolean(window.Capacitor?.isNativePlatform?.());
@@ -18,21 +19,45 @@ function csrfToken() {
   return metaContent('csrf-token');
 }
 
-function initializeSocialLogin() {
-  if (!socialInitializationPromise) {
-    const googleWebClientId = metaContent('google-client-id');
-    const googleIOSClientId = metaContent('google-ios-client-id');
+// Androidは、すでに動作確認済みのGoogle設定だけで初期化する。
+// Apple設定をここへ混ぜるとAndroid側がredirectUrlを要求するため、絶対に混ぜない。
+function initializeAndroidGoogleLogin() {
+  if (!googleInitializationPromise) {
+    const webClientId = metaContent('google-client-id');
+
+    if (!webClientId) {
+      googleInitializationPromise = Promise.reject(
+        new Error('Google Web Client ID が設定されていません')
+      );
+    } else {
+      googleInitializationPromise = SocialLogin.initialize({
+        google: {
+          webClientId,
+          mode: 'online'
+        }
+      });
+    }
+  }
+
+  return googleInitializationPromise;
+}
+
+// iOSだけGoogle + Appleを初期化する。AppleのredirectUrlはAndroid専用なので指定しない。
+function initializeIOSSocialLogin() {
+  if (!iosInitializationPromise) {
+    const webClientId = metaContent('google-client-id');
+    const iosClientId = metaContent('google-ios-client-id');
     const appleClientId = metaContent('apple-native-client-id');
     const providers = {};
 
-    if (googleWebClientId) {
+    if (webClientId) {
       providers.google = {
-        webClientId: googleWebClientId,
+        webClientId,
         mode: 'online',
-        ...(googleIOSClientId
+        ...(iosClientId
           ? {
-              iOSClientId: googleIOSClientId,
-              iOSServerClientId: googleWebClientId
+              iOSClientId: iosClientId,
+              iOSServerClientId: webClientId
             }
           : {})
       };
@@ -42,10 +67,16 @@ function initializeSocialLogin() {
       providers.apple = { clientId: appleClientId };
     }
 
-    socialInitializationPromise = SocialLogin.initialize(providers);
+    iosInitializationPromise = SocialLogin.initialize(providers);
   }
 
-  return socialInitializationPromise;
+  return iosInitializationPromise;
+}
+
+function initializeForCurrentPlatform() {
+  return nativePlatform() === 'ios'
+    ? initializeIOSSocialLogin()
+    : initializeAndroidGoogleLogin();
 }
 
 async function postNativeLogin(path, body) {
@@ -78,7 +109,7 @@ function bindNativeGoogleLogin() {
   if (!googleForm || googleForm.dataset.nativeGoogleBound === 'true') return;
   googleForm.dataset.nativeGoogleBound = 'true';
 
-  initializeSocialLogin().catch((error) => {
+  initializeForCurrentPlatform().catch((error) => {
     console.error('SocialLogin initialize error:', error);
   });
 
@@ -92,7 +123,7 @@ function bindNativeGoogleLogin() {
         throw new Error('Google Web Client ID が設定されていません');
       }
 
-      await initializeSocialLogin();
+      await initializeForCurrentPlatform();
       const response = await SocialLogin.login({
         provider: 'google',
         options: { scopes: ['email', 'profile'] }
@@ -115,7 +146,7 @@ function bindNativeGoogleLogin() {
 }
 
 function bindNativeAppleLogin() {
-  // iOSではAppleのシステム認証画面を使う。Web/Androidは既存OAuthを維持する。
+  // AppleのネイティブログインはiOSだけ。AndroidにはApple設定を一切渡さない。
   if (!isNativeApp() || nativePlatform() !== 'ios') return;
 
   const appleForm = document.querySelector(
@@ -125,7 +156,7 @@ function bindNativeAppleLogin() {
   if (!appleForm || appleForm.dataset.nativeAppleBound === 'true') return;
   appleForm.dataset.nativeAppleBound = 'true';
 
-  initializeSocialLogin().catch((error) => {
+  initializeIOSSocialLogin().catch((error) => {
     console.error('SocialLogin initialize error:', error);
   });
 
@@ -135,7 +166,11 @@ function bindNativeAppleLogin() {
     event.stopImmediatePropagation();
 
     try {
-      await initializeSocialLogin();
+      if (!metaContent('apple-native-client-id')) {
+        throw new Error('Apple Client ID が設定されていません');
+      }
+
+      await initializeIOSSocialLogin();
 
       const nonceResponse = await fetch('/mobile_auth/apple_nonce', {
         credentials: 'same-origin',

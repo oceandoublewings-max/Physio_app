@@ -4,5 +4,15 @@
   "server": {
     "url": "https://physio-app-4ahv.onrender.com",
     "cleartext": false
+  },
+  "plugins": {
+    "SocialLogin": {
+      "providers": {
+        "google": true,
+        "facebook": false,
+        "apple": true,
+        "twitter": false
+      }
+    }
   }
 }

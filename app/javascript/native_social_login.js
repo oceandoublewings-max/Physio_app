@@ -20,6 +20,7 @@ function csrfToken() {
 
 function initializeSocialLogin() {
   if (!socialInitializationPromise) {
+    const platform = nativePlatform();
     const googleWebClientId = metaContent('google-client-id');
     const googleIOSClientId = metaContent('google-ios-client-id');
     const appleClientId = metaContent('apple-native-client-id');
@@ -38,11 +39,16 @@ function initializeSocialLogin() {
       };
     }
 
-    if (appleClientId) {
+    // AndroidのGoogle初期化にApple設定を混ぜると、Apple用redirectUrlを
+    // 要求されてGoogleまで失敗するため、AppleはiOSでだけ初期化する。
+    if (platform === 'ios' && appleClientId) {
       providers.apple = { clientId: appleClientId };
     }
 
-    socialInitializationPromise = SocialLogin.initialize(providers);
+    socialInitializationPromise = SocialLogin.initialize(providers).catch((error) => {
+      socialInitializationPromise = null;
+      throw error;
+    });
   }
 
   return socialInitializationPromise;
@@ -60,9 +66,12 @@ async function postNativeLogin(path, body) {
     body: JSON.stringify(body)
   });
 
-  const data = await response.json();
+  const contentType = response.headers.get('content-type') || '';
+  const data = contentType.includes('application/json')
+    ? await response.json()
+    : { error: await response.text() };
   if (!response.ok || !data.ok) {
-    throw new Error(data?.error || 'ログインに失敗しました');
+    throw new Error(data?.error || response.statusText || 'ログインに失敗しました');
   }
 
   window.location.replace(data.redirect_to || '/home');

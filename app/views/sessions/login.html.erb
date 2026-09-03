@@ -326,7 +326,7 @@
     background: linear-gradient(180deg, #1a1a1a 0%, #050505 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     opacity: 1;
-    cursor: default;
+    cursor: pointer;
   }
 
   .apple-btn:disabled {
@@ -762,7 +762,6 @@
       <div class="auth-stack">
    <%= button_to user_apple_omniauth_authorize_path,
     method: :post,
-    disabled: true,
     class: "apple-btn",
     form_class: "oauth-form",
     form: { data: { turbo: false, oauth_provider: "apple" } } do %>
@@ -774,7 +773,7 @@
   </span>
 
   <span class="auth-copy">
-    <strong>Apple 準備中</strong>
+    <strong>Appleで続ける</strong>
   </span>
 
 <% end %> 
@@ -856,7 +855,7 @@
 
       <p class="guest-note">
         ゲストでも全問題を無料で利用できます。<br>
-        学習データの保存・苦手分析はGoogleログイン後に利用できます。
+        学習データの保存・苦手分析はGoogle・Appleログイン後に利用できます。
       </p>
 
       <footer class="login-footer">

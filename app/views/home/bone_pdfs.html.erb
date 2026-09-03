@@ -7,7 +7,7 @@
 </style>
 
 <div class="bone-library-page">
-  <section class="bone-library-hero"><div class="hero-top"><div class="hero-icon">🦴</div><div><h1 class="hero-title"><%= @pdf_product.title %></h1><div class="hero-en">BONE LIBRARY</div></div></div><p class="hero-message"><%= @pdf_product.description %></p></section>
+  <section class="bone-library-hero"><nav aria-label="ページ移動" style="position:relative;z-index:1;display:flex;justify-content:flex-end;margin-bottom:12px;"><%= link_to "←TOP", home_path, aria: { label: "ホームに戻る" }, style: "display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 13px;box-sizing:border-box;border:1px solid rgba(255,255,255,.22);border-radius:10px;background:rgba(255,255,255,.12);color:#fff;text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap;" %></nav><div class="hero-top"><div class="hero-icon">🦴</div><div><h1 class="hero-title"><%= @pdf_product.title %></h1><div class="hero-en">BONE LIBRARY</div></div></div><p class="hero-message"><%= @pdf_product.description %></p></section>
   <div class="bone-library-heading">資料を見る</div>
   <a href="https://physio-app-4ahv.onrender.com/pdfs/bone/000bone_sample.pdf" class="sample-card pdf-open-link"><div class="sample-icon">📄</div><div><span class="sample-name">サンプルを見る</span><span class="sample-en">VIEW SAMPLE</span></div></a>
   <div class="purchase-card"><div class="purchase-label">BONE LIBRARY</div><h2 class="purchase-title"><span>🦴</span><span>骨 資料ライブラリ</span></h2><p class="purchase-text">一度ご購入いただくと、骨の資料を個別にダウンロードできます。<br>今後追加される骨の資料も追加料金なしでご利用いただけます。</p><button type="button" id="bone-purchase-button" class="purchase-button">購入情報を読み込み中…</button><div id="bone-purchase-status" class="purchase-status"></div></div>

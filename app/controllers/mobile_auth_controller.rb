@@ -1,4 +1,6 @@
 class MobileAuthController < ApplicationController
+  include Devise::Controllers::Rememberable
+
   skip_before_action :require_login,
                      only: %i[csrf google google_native apple apple_nonce apple_native complete]
 

@@ -14,8 +14,18 @@ function metaContent(name) {
   return document.querySelector(`meta[name="${name}"]`)?.content?.trim() || '';
 }
 
-function csrfToken() {
-  return metaContent('csrf-token');
+async function freshCsrfToken() {
+  const response = await fetch('/mobile_auth/csrf', {
+    credentials: 'same-origin',
+    cache: 'no-store',
+    headers: { Accept: 'application/json' }
+  });
+  if (!response.ok) throw new Error('ログインの確認情報を取得できませんでした。');
+  const data = await response.json();
+  if (!data.ok || !data.csrf_token) {
+    throw new Error('ログインの確認情報を取得できませんでした。');
+  }
+  return data.csrf_token;
 }
 
 function initializeSocialLogin() {
@@ -55,13 +65,14 @@ function initializeSocialLogin() {
 }
 
 async function postNativeLogin(path, body) {
+  const token = await freshCsrfToken();
   const response = await fetch(path, {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      'X-CSRF-Token': csrfToken()
+      'X-CSRF-Token': token
     },
     body: JSON.stringify(body)
   });
@@ -69,7 +80,7 @@ async function postNativeLogin(path, body) {
   const contentType = response.headers.get('content-type') || '';
   const data = contentType.includes('application/json')
     ? await response.json()
-    : { error: await response.text() };
+    : { error: `ログイン処理に失敗しました（HTTP ${response.status}）。` };
   if (!response.ok || !data.ok) {
     throw new Error(data?.error || response.statusText || 'ログインに失敗しました');
   }
@@ -148,6 +159,7 @@ function bindNativeAppleLogin() {
 
       const nonceResponse = await fetch('/mobile_auth/apple_nonce', {
         credentials: 'same-origin',
+        cache: 'no-store',
         headers: { Accept: 'application/json' }
       });
       const nonceData = await nonceResponse.json();

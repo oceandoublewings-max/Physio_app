@@ -21,7 +21,7 @@
 </div>
 
 <style>
-  /* Auto margins center short screens without clipping tall, scrollable pages. */
+  /* Use the same safe top inset regardless of page or question height. */
   html body.app-viewport {
     box-sizing: border-box;
     width: 100%;
@@ -42,12 +42,21 @@
     flex: 0 0 auto;
     width: 100%;
     min-width: 0;
-    margin-block: auto;
+    margin-block: 0;
   }
   .app-screen .login-page,
   .app-screen .bone-library-page,
   .app-screen .pdf-library-page {
     min-height: 0;
+  }
+  .app-screen .login-page,
+  .app-screen .bone-library-page,
+  .app-screen .pdf-library-page,
+  .app-screen .select-page {
+    padding-top: 0;
+  }
+  .app-screen .quiz-topbar {
+    margin-top: 0 !important;
   }
 </style>
 

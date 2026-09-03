@@ -16,11 +16,35 @@ function fixKinesiologySampleLink() {
   );
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", fixKinesiologySampleLink, { once: true });
-} else {
-  fixKinesiologySampleLink();
+function enableAppleLoginButton() {
+  const appleForm = document.querySelector(
+    'form.oauth-form[data-oauth-provider="apple"]'
+  );
+  if (!appleForm) return;
+
+  const appleButton = appleForm.querySelector(".apple-btn");
+  const appleLabel = appleForm.querySelector(".auth-copy strong");
+
+  if (appleButton) {
+    appleButton.disabled = false;
+    appleButton.style.cursor = "pointer";
+  }
+
+  if (appleLabel) {
+    appleLabel.textContent = "Appleで続ける";
+  }
 }
 
-document.addEventListener("turbo:load", fixKinesiologySampleLink);
-window.addEventListener("pageshow", fixKinesiologySampleLink);
+function refreshPageEnhancements() {
+  fixKinesiologySampleLink();
+  enableAppleLoginButton();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", refreshPageEnhancements, { once: true });
+} else {
+  refreshPageEnhancements();
+}
+
+document.addEventListener("turbo:load", refreshPageEnhancements);
+window.addEventListener("pageshow", refreshPageEnhancements);

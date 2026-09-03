@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>PhysioApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="google-client-id" content="<%= ENV['GOOGLE_CLIENT_ID'] %>">
     <meta name="google-ios-client-id" content="<%= ENV['GOOGLE_IOS_CLIENT_ID'] %>">
     <meta name="apple-native-client-id" content="<%= ENV['APPLE_NATIVE_CLIENT_ID'].presence || 'com.bonebuddystudio.ptot' %>">
@@ -14,9 +14,42 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-turbo="false">
+  <body class="app-viewport" data-turbo="false">
 
+<div class="app-screen">
 <%= yield %>
+</div>
+
+<style>
+  /* Auto margins center short screens without clipping tall, scrollable pages. */
+  html body.app-viewport {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto;
+    margin: 0 auto;
+    padding: calc(env(safe-area-inset-top, 0px) + 24px)
+             calc(env(safe-area-inset-right, 0px) + 16px)
+             calc(env(safe-area-inset-bottom, 0px) + 24px)
+             calc(env(safe-area-inset-left, 0px) + 16px);
+    display: flex;
+    flex-direction: column;
+  }
+  body.app-viewport > .app-screen {
+    display: flow-root;
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    margin-block: auto;
+  }
+  .app-screen .login-page,
+  .app-screen .bone-library-page,
+  .app-screen .pdf-library-page {
+    min-height: 0;
+  }
+</style>
 
 <% unless current_page?(root_path) || @finished %>
 

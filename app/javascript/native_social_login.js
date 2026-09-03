@@ -1,37 +1,71 @@
 import { SocialLogin } from '@capgo/capacitor-social-login';
 
-let googleInitializationPromise = null;
+let socialInitializationPromise = null;
 
 function isNativeApp() {
   return Boolean(window.Capacitor?.isNativePlatform?.());
 }
 
-function googleWebClientId() {
-  return document
-    .querySelector('meta[name="google-client-id"]')
-    ?.getAttribute('content')
-    ?.trim();
+function nativePlatform() {
+  return window.Capacitor?.getPlatform?.() || '';
 }
 
-function initializeGoogleLogin() {
-  if (!googleInitializationPromise) {
-    const webClientId = googleWebClientId();
+function metaContent(name) {
+  return document.querySelector(`meta[name="${name}"]`)?.content?.trim() || '';
+}
 
-    if (!webClientId) {
-      googleInitializationPromise = Promise.reject(
-        new Error('Google Web Client ID が設定されていません')
-      );
-    } else {
-      googleInitializationPromise = SocialLogin.initialize({
-        google: {
-          webClientId,
-          mode: 'online'
-        }
-      });
+function csrfToken() {
+  return metaContent('csrf-token');
+}
+
+function initializeSocialLogin() {
+  if (!socialInitializationPromise) {
+    const googleWebClientId = metaContent('google-client-id');
+    const googleIOSClientId = metaContent('google-ios-client-id');
+    const appleClientId = metaContent('apple-native-client-id');
+    const providers = {};
+
+    if (googleWebClientId) {
+      providers.google = {
+        webClientId: googleWebClientId,
+        mode: 'online',
+        ...(googleIOSClientId
+          ? {
+              iOSClientId: googleIOSClientId,
+              iOSServerClientId: googleWebClientId
+            }
+          : {})
+      };
     }
+
+    if (appleClientId) {
+      providers.apple = { clientId: appleClientId };
+    }
+
+    socialInitializationPromise = SocialLogin.initialize(providers);
   }
 
-  return googleInitializationPromise;
+  return socialInitializationPromise;
+}
+
+async function postNativeLogin(path, body) {
+  const response = await fetch(path, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      'X-CSRF-Token': csrfToken()
+    },
+    body: JSON.stringify(body)
+  });
+
+  const data = await response.json();
+  if (!response.ok || !data.ok) {
+    throw new Error(data?.error || 'ログインに失敗しました');
+  }
+
+  window.location.replace(data.redirect_to || '/home');
 }
 
 function bindNativeGoogleLogin() {
@@ -42,11 +76,9 @@ function bindNativeGoogleLogin() {
   );
 
   if (!googleForm || googleForm.dataset.nativeGoogleBound === 'true') return;
-
   googleForm.dataset.nativeGoogleBound = 'true';
 
-  // Start initialization as soon as the login screen is ready.
-  initializeGoogleLogin().catch((error) => {
+  initializeSocialLogin().catch((error) => {
     console.error('SocialLogin initialize error:', error);
   });
 
@@ -56,61 +88,102 @@ function bindNativeGoogleLogin() {
     event.stopImmediatePropagation();
 
     try {
-      await initializeGoogleLogin();
+      if (!metaContent('google-client-id')) {
+        throw new Error('Google Web Client ID が設定されていません');
+      }
 
+      await initializeSocialLogin();
       const response = await SocialLogin.login({
         provider: 'google',
-        options: {
-          scopes: ['email', 'profile']
-        }
+        options: { scopes: ['email', 'profile'] }
       });
 
       const result = response?.result ?? response;
       const idToken =
-        result?.idToken ||
-        result?.id_token ||
-        result?.authentication?.idToken;
+        result?.idToken || result?.id_token || result?.authentication?.idToken;
 
       if (!idToken) {
         throw new Error('Google ID token が取得できませんでした');
       }
 
-      const csrfToken =
-        document.querySelector('meta[name="csrf-token"]')?.content;
-
-      const loginResponse = await fetch('/mobile_auth/google_native', {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-          'X-CSRF-Token': csrfToken || ''
-        },
-        body: JSON.stringify({ id_token: idToken })
-      });
-
-      const data = await loginResponse.json();
-
-      if (!loginResponse.ok || !data.ok) {
-        throw new Error(data?.error || 'Googleログインに失敗しました');
-      }
-
-      window.location.replace(data.redirect_to || '/home');
+      await postNativeLogin('/mobile_auth/google_native', { id_token: idToken });
     } catch (error) {
       console.error('Native Google login error:', error);
-      alert(
-        'Googleログインでエラー:\n' +
-        (error?.message || String(error))
-      );
+      alert('Googleログインでエラー:\n' + (error?.message || String(error)));
     }
   });
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bindNativeGoogleLogin, { once: true });
-} else {
-  bindNativeGoogleLogin();
+function bindNativeAppleLogin() {
+  // iOSではAppleのシステム認証画面を使う。Web/Androidは既存OAuthを維持する。
+  if (!isNativeApp() || nativePlatform() !== 'ios') return;
+
+  const appleForm = document.querySelector(
+    'form.oauth-form[data-oauth-provider="apple"]'
+  );
+
+  if (!appleForm || appleForm.dataset.nativeAppleBound === 'true') return;
+  appleForm.dataset.nativeAppleBound = 'true';
+
+  initializeSocialLogin().catch((error) => {
+    console.error('SocialLogin initialize error:', error);
+  });
+
+  appleForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    try {
+      await initializeSocialLogin();
+
+      const nonceResponse = await fetch('/mobile_auth/apple_nonce', {
+        credentials: 'same-origin',
+        headers: { Accept: 'application/json' }
+      });
+      const nonceData = await nonceResponse.json();
+
+      if (!nonceResponse.ok || !nonceData.ok || !nonceData.nonce) {
+        throw new Error('Appleログインの準備に失敗しました');
+      }
+
+      const response = await SocialLogin.login({
+        provider: 'apple',
+        options: {
+          scopes: ['email', 'name'],
+          nonce: nonceData.nonce
+        }
+      });
+
+      const result = response?.result ?? response;
+      const idToken = result?.idToken || result?.identityToken;
+
+      if (!idToken) {
+        throw new Error('Apple ID token が取得できませんでした');
+      }
+
+      await postNativeLogin('/mobile_auth/apple_native', {
+        id_token: idToken,
+        given_name: result?.profile?.givenName,
+        family_name: result?.profile?.familyName
+      });
+    } catch (error) {
+      console.error('Native Apple login error:', error);
+      alert('Appleログインでエラー:\n' + (error?.message || String(error)));
+    }
+  });
 }
 
-document.addEventListener('turbo:load', bindNativeGoogleLogin);
-window.addEventListener('pageshow', bindNativeGoogleLogin);
+function bindNativeSocialLogins() {
+  bindNativeGoogleLogin();
+  bindNativeAppleLogin();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bindNativeSocialLogins, { once: true });
+} else {
+  bindNativeSocialLogins();
+}
+
+document.addEventListener('turbo:load', bindNativeSocialLogins);
+window.addEventListener('pageshow', bindNativeSocialLogins);

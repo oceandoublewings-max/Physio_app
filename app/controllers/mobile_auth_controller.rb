@@ -1,6 +1,13 @@
 class MobileAuthController < ApplicationController
   skip_before_action :require_login,
-                     only: %i[google google_native apple apple_nonce apple_native complete]
+                     only: %i[csrf google google_native apple apple_nonce apple_native complete]
+
+  # Cached WebView HTML can contain a token from an older session.
+  # Issue a fresh token for the current cookie without bypassing CSRF protection.
+  def csrf
+    response.headers["Cache-Control"] = "no-store"
+    render json: { ok: true, csrf_token: form_authenticity_token }
+  end
 
   def google
     start_mobile_oauth(user_google_oauth2_omniauth_authorize_path)
@@ -123,6 +130,7 @@ class MobileAuthController < ApplicationController
 
   # AppleのIDトークンを一度しか使えないよう、ログイン直前にnonceを発行する。
   def apple_nonce
+    response.headers["Cache-Control"] = "no-store"
     nonce = SecureRandom.urlsafe_base64(32)
     session[:apple_native_nonce] = nonce
     render json: { ok: true, nonce: nonce }

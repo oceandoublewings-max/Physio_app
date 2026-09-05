@@ -336,6 +336,28 @@
     padding-top: 12px;
   }
 
+  .wrong-top-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+  }
+
+  .wrong-top-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 13px;
+    border: 1px solid rgba(16, 43, 77, 0.2);
+    border-radius: 10px;
+    background: rgba(16, 43, 77, 0.06);
+    color: #102b4d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
   @media (max-width: 390px) {
     .select-page {
       width: 94%;
@@ -495,6 +517,12 @@
   <% if params[:qtype].present? || params[:mode] == "wrong" %>
 
     <section class="count-section <%= 'wrong-count-only' if params[:mode] == 'wrong' %>">
+
+      <% if params[:mode] == "wrong" %>
+        <nav class="wrong-top-nav" aria-label="ページ移動">
+          <%= link_to "←TOP", home_path, class: "wrong-top-link", aria: { label: "ホームに戻る" } %>
+        </nav>
+      <% end %>
 
       <h2 class="section-heading count-heading">
         問題数を選択

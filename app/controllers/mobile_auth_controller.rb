@@ -1,6 +1,15 @@
 class MobileAuthController < ApplicationController
+  include Devise::Controllers::Rememberable
+
   skip_before_action :require_login,
-                     only: %i[google google_native apple apple_nonce apple_native complete]
+                     only: %i[csrf google google_native apple apple_nonce apple_native complete]
+
+  # Cached WebView HTML can contain a token from an older session.
+  # Issue a fresh token for the current cookie without bypassing CSRF protection.
+  def csrf
+    response.headers["Cache-Control"] = "no-store"
+    render json: { ok: true, csrf_token: form_authenticity_token }
+  end
 
   def google
     start_mobile_oauth(user_google_oauth2_omniauth_authorize_path)
@@ -123,6 +132,7 @@ class MobileAuthController < ApplicationController
 
   # AppleのIDトークンを一度しか使えないよう、ログイン直前にnonceを発行する。
   def apple_nonce
+    response.headers["Cache-Control"] = "no-store"
     nonce = SecureRandom.urlsafe_base64(32)
     session[:apple_native_nonce] = nonce
     render json: { ok: true, nonce: nonce }
@@ -151,18 +161,26 @@ class MobileAuthController < ApplicationController
     end
 
     uid = payload["sub"].to_s
-    email = payload["email"].to_s.downcase
+    email = payload["email"].to_s.downcase.presence
     email_verified = payload["email_verified"].to_s == "true"
 
-    unless uid.present? && email.present? && email_verified
+    unless uid.present?
       render json: { ok: false, error: "Appleアカウントを確認できませんでした。" },
              status: :unauthorized
       return
     end
 
     user = User.find_by(provider: "apple", uid: uid)
-    user ||= User.find_by(email: email)
+    user ||= User.find_by(email: email) if email.present? && email_verified
     new_oauth_user = user.nil?
+
+    # Appleは氏名・メールを初回認証時にしか返さない場合がある。
+    # 既存のAppleユーザーはuidで確認できるため、メールなしでも再ログインを許可する。
+    if new_oauth_user && (!email.present? || !email_verified)
+      render json: { ok: false, error: "Appleアカウントのメールを確認できませんでした。" },
+             status: :unauthorized
+      return
+    end
 
     unless user
       user = User.new(
@@ -235,8 +253,10 @@ class MobileAuthController < ApplicationController
 
   def apple_native_audiences
     [
+      "com.bonebuddystudio.physioapp",
       ENV["APPLE_NATIVE_CLIENT_ID"].presence,
       ENV["APPLE_CLIENT_ID"].presence,
+      # Keep accepting tokens from development builds installed with the old ID.
       "com.bonebuddystudio.ptot"
     ].compact.uniq
   end

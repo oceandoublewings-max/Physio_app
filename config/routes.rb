@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/home", to: "home#index", as: :home
 
   get "/login", to: "sessions#login"
+  get "/mobile_auth/csrf", to: "mobile_auth#csrf"
   get  "/mobile_auth/google",        to: "mobile_auth#google",        as: :mobile_auth_google
   post "/mobile_auth/google_native", to: "mobile_auth#google_native", as: :mobile_auth_google_native
   get  "/mobile_auth/apple",         to: "mobile_auth#apple",         as: :mobile_auth_apple

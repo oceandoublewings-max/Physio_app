@@ -253,8 +253,10 @@ class MobileAuthController < ApplicationController
 
   def apple_native_audiences
     [
+      "com.bonebuddystudio.physioapp",
       ENV["APPLE_NATIVE_CLIENT_ID"].presence,
       ENV["APPLE_CLIENT_ID"].presence,
+      # Keep accepting tokens from development builds installed with the old ID.
       "com.bonebuddystudio.ptot"
     ].compact.uniq
   end

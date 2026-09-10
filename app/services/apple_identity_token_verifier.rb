@@ -33,7 +33,11 @@ class AppleIdentityTokenVerifier
 
     token_audiences = Array(payload["aud"]).map(&:to_s)
     unless (token_audiences & @audiences).any?
-      raise VerificationError, "Apple token audience mismatch"
+      # Client IDs are public identifiers. Include them in the warning so an
+      # App Store/Xcode bundle mismatch can be diagnosed without logging the token.
+      raise VerificationError,
+            "Apple token audience mismatch " \
+            "(received=#{token_audiences.join(',')}, expected=#{@audiences.join(',')})"
     end
 
     payload

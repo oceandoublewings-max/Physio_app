@@ -34,3 +34,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 node_modules/
+
+# Keep Android signing credentials out of Git.
+/android/ptot-upload-key.jks
+/android/ptot-upload-certificate.pem

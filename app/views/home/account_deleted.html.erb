@@ -1,0 +1,9 @@
+<section id="account-deleted" data-user-id="<%= @deleted_user_id %>">
+  <h1>アカウントを削除しました</h1>
+  <p>アプリのアカウント情報とスタンプ取得履歴を削除し、ログアウトしました。</p>
+  <p id="account-cleanup-status" role="status">この端末の学習データを削除しています…</p>
+  <noscript>端末内の学習データを削除するにはJavaScriptを有効にしてください。</noscript>
+  <button type="button" id="retry-account-cleanup" hidden>端末のデータ削除を再試行</button>
+  <%= link_to "ログイン画面に戻る", login_path %>
+</section>
+<%= javascript_include_tag "account_deletion_cleanup", defer: true %>

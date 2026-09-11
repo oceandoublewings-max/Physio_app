@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  include AccountDeletion
   CONTACT_MESSAGE_MAX_LENGTH = 2000
   CONTACT_COOLDOWN_SECONDS = 30
 
@@ -155,12 +156,43 @@ class HomeController < ApplicationController
   end
 
   def account_delete
+    response.headers["Cache-Control"] = "no-store"
+    session.delete(:apple_deletion_intent)
   end
 
   def destroy_account
-    current_user.destroy!
-    reset_session
-    redirect_to root_path, notice: "アカウントを削除しました。"
+    unless params[:confirm_deletion] == "1"
+      redirect_to account_delete_path, alert: "削除内容を確認してチェックを入れてください。", status: :see_other
+      return
+    end
+
+    if current_user.provider == "apple"
+      if params[:apple_id_token].present?
+        nonce = session.delete(:apple_native_nonce).to_s
+        payload = AppleIdentityTokenVerifier.new(
+          id_token: params[:apple_id_token],
+          audiences: ["com.bonebuddystudio.physioapp", "com.bonebuddystudio.ptot", ENV["APPLE_NATIVE_CLIENT_ID"]]
+        ).verify!
+        actual_nonce = payload["nonce"].to_s
+        unless nonce.present? && nonce.bytesize == actual_nonce.bytesize &&
+               ActiveSupport::SecurityUtils.secure_compare(nonce, actual_nonce) &&
+               payload["sub"] == current_user.uid
+          raise AppleTokenRevoker::Error, "Apple account confirmation failed"
+        end
+        AppleTokenRevoker.new(client_id: payload.fetch("aud")).revoke_code!(
+          code: params[:apple_authorization_code], uid: current_user.uid
+        )
+      else
+        session[:apple_deletion_intent] = { "user_id" => current_user.id, "expires_at" => 10.minutes.from_now.to_i }
+        response.headers["Cache-Control"] = "no-store"
+        render "home/apple_deletion_auth"
+        return
+      end
+    end
+
+    finish_account_deletion!
+  rescue AppleTokenRevoker::Error, AppleIdentityTokenVerifier::VerificationError, ActiveRecord::RecordNotDestroyed, ActiveRecord::InvalidForeignKey => error
+    account_deletion_failed(error)
   end
 
   def tutorial

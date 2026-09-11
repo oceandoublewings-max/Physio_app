@@ -23,7 +23,9 @@ class HomeController < ApplicationController
 
     :contact,
     :submit_contact,
-    :about
+    :about,
+    :account_delete,
+    :destroy_account
   ]
 
   def index
@@ -153,6 +155,12 @@ class HomeController < ApplicationController
   end
 
   def account_delete
+  end
+
+  def destroy_account
+    current_user.destroy!
+    reset_session
+    redirect_to root_path, notice: "アカウントを削除しました。"
   end
 
   def tutorial

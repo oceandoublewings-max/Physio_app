@@ -50,7 +50,8 @@ Rails.application.routes.draw do
   get "/about", to: "home#about"
   get "/terms", to: "home#terms"
   get "/privacy", to: "home#privacy"
-  get "/account_delete", to: "home#account_delete"
+  get "/account_delete", to: "home#account_delete", as: :account_delete
+  delete "/account_delete", to: "home#destroy_account", as: :destroy_account
 
   get "/tutorial", to: "home#tutorial"
 

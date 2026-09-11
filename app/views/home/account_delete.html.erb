@@ -1,32 +1,31 @@
-<div class="container" style="max-width:700px;margin:40px auto;padding:20px;">
-  <h1>アカウント削除について</h1>
+<div style="max-width:560px;margin:0 auto;padding:24px 20px 40px;color:#102847;">
+  <h1 style="font-size:24px;margin-bottom:24px;">アカウント削除</h1>
 
-  <p>
-    GoogleログインまたはAppleログインで作成したアカウントの削除をご希望の場合は、
-    以下のメールアドレスまでご連絡ください。
-  </p>
+  <p>アカウントを削除すると、以下のデータが完全に削除されます。</p>
 
-  <p>
-    <strong>bonebuddystudio@gmail.com</strong>
-  </p>
-
-  <h3>ご連絡いただきたい内容</h3>
-
-  <ul>
-    <li>登録したGoogleまたはAppleアカウント</li>
-    <li>削除希望であること</li>
-  </ul>
-
-  <h3>削除されるデータ</h3>
-
-  <ul>
+  <ul style="line-height:1.9;margin:18px 0;">
     <li>アカウント情報</li>
     <li>学習履歴</li>
-    <li>スタンプ情報</li>
+    <li>スタンプ取得履歴</li>
     <li>保存データ</li>
   </ul>
 
-  <p>
-    ご依頼確認後、順次削除対応いたします。
+  <p style="color:#b42318;font-weight:700;margin:24px 0;">
+    この操作は取り消せません。
   </p>
+
+  <%= button_to "アカウントを完全に削除",
+        destroy_account_path,
+        method: :delete,
+        form: {
+          data: {
+            turbo_confirm: "本当にアカウントを削除しますか？この操作は取り消せません。"
+          }
+        },
+        style: "width:100%;padding:14px;border:none;border-radius:10px;background:#c62828;color:white;font-size:16px;font-weight:700;cursor:pointer;" %>
+
+  <div style="margin-top:24px;text-align:center;">
+    <%= link_to "TOPに戻る", home_path,
+          style: "color:#102847;text-decoration:none;font-weight:700;" %>
+  </div>
 </div>

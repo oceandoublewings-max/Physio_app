@@ -1,0 +1,5 @@
+<h1>Appleで本人確認</h1>
+<p>登録したAppleアカウントで本人確認を行うと、連携解除とアプリのアカウント削除を実行します。</p>
+<%= button_to "Appleで本人確認して削除する", user_apple_omniauth_authorize_path,
+      method: :post, form: { data: { turbo: false } } %>
+<%= link_to "キャンセル", account_delete_path %>

@@ -1,4 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  include AccountDeletion
   skip_before_action :verify_authenticity_token, only: %i[apple failure]
 
   def google_oauth2
@@ -6,10 +7,18 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def apple
+    if session[:apple_deletion_intent].present?
+      delete_apple_account
+      return
+    end
     handle_auth("Apple")
   end
 
   def failure
+    if session.delete(:apple_deletion_intent)
+      redirect_to account_delete_path, alert: "Apple認証を完了できなかったため、アカウントは削除していません。", status: :see_other
+      return
+    end
     if mobile_oauth?
       clear_mobile_oauth_cookie
       redirect_to "ptot://auth?error=oauth_failed", allow_other_host: true
@@ -20,6 +29,20 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def delete_apple_account
+    intent = session.delete(:apple_deletion_intent)
+    auth = request.env["omniauth.auth"]
+    unless current_user.present? && current_user.provider == "apple" &&
+           intent["user_id"] == current_user.id && intent["expires_at"].to_i > Time.current.to_i &&
+           auth.provider == "apple" && auth.uid == current_user.uid
+      raise AppleTokenRevoker::Error, "Apple account confirmation failed"
+    end
+    AppleTokenRevoker.new(client_id: ENV["APPLE_CLIENT_ID"]).revoke_token!(auth.credentials.token)
+    finish_account_deletion!
+  rescue AppleTokenRevoker::Error, ActiveRecord::RecordNotDestroyed, ActiveRecord::InvalidForeignKey => error
+    account_deletion_failed(error)
+  end
 
   def mobile_oauth?
     cookies[:mobile_oauth].to_s == "1"

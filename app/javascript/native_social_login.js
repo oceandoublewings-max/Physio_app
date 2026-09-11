@@ -198,6 +198,47 @@ function bindNativeAppleLogin() {
 function bindNativeSocialLogins() {
   bindNativeGoogleLogin();
   bindNativeAppleLogin();
+  bindNativeAppleDeletion();
+}
+
+function bindNativeAppleDeletion() {
+  if (!isNativeApp() || nativePlatform() !== 'ios') return;
+  const form = document.getElementById('account-deletion-form');
+  if (!form || form.dataset.provider !== 'apple' || form.dataset.boundDeletion) return;
+  form.dataset.boundDeletion = 'true';
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (form.dataset.deleting === 'true') return;
+    form.dataset.deleting = 'true';
+    const button = form.querySelector('button[type="submit"]');
+    const message = document.getElementById('account-deletion-error');
+    button.disabled = true;
+    message.textContent = '';
+    try {
+      await initializeSocialLogin();
+      const response = await fetch('/mobile_auth/apple_nonce', {
+        credentials: 'same-origin', cache: 'no-store', headers: { Accept: 'application/json' }
+      });
+      const data = await response.json();
+      if (!response.ok || !data.nonce) throw new Error('本人確認の準備に失敗しました。');
+      const login = await SocialLogin.login({
+        provider: 'apple', options: { scopes: ['email', 'name'], nonce: data.nonce }
+      });
+      const result = login?.result ?? login;
+      const idToken = result?.idToken || result?.identityToken;
+      // Version 8.4.5 defaults to legacy mode: accessToken.token is the auth code.
+      const code = result?.authorizationCode || result?.accessToken?.token;
+      if (!idToken || !code) throw new Error('Appleの本人確認情報を取得できませんでした。');
+      form.elements.apple_id_token.value = idToken;
+      form.elements.apple_authorization_code.value = code;
+      form.elements.authenticity_token.value = await freshCsrfToken();
+      HTMLFormElement.prototype.submit.call(form);
+    } catch (_) {
+      message.textContent = '本人確認を完了できませんでした。アカウントは削除していません。もう一度お試しください。';
+      button.disabled = false;
+      form.dataset.deleting = 'false';
+    }
+  });
 }
 
 if (document.readyState === 'loading') {

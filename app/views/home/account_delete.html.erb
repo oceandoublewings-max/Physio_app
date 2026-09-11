@@ -1,31 +1,31 @@
 <div style="max-width:560px;margin:0 auto;padding:24px 20px 40px;color:#102847;">
   <h1 style="font-size:24px;margin-bottom:24px;">アカウント削除</h1>
-
-  <p>アカウントを削除すると、以下のデータが完全に削除されます。</p>
-
+  <% if flash[:alert].present? %>
+    <p role="alert" style="color:#b42318;"><%= flash[:alert] %></p>
+  <% end %>
+  <p>このアプリのアカウントと、次のデータを削除します。</p>
   <ul style="line-height:1.9;margin:18px 0;">
-    <li>アカウント情報</li>
-    <li>学習履歴</li>
-    <li>スタンプ取得履歴</li>
-    <li>保存データ</li>
+    <li>登録情報・解答数・スタンプ取得履歴</li>
+    <li>この端末の、このアカウントの苦手問題・直近の解答データ</li>
   </ul>
-
-  <p style="color:#b42318;font-weight:700;margin:24px 0;">
-    この操作は取り消せません。
-  </p>
-
-  <%= button_to "アカウントを完全に削除",
-        destroy_account_path,
-        method: :delete,
-        form: {
-          data: {
-            turbo_confirm: "本当にアカウントを削除しますか？この操作は取り消せません。"
-          }
-        },
-        style: "width:100%;padding:14px;border:none;border-radius:10px;background:#c62828;color:white;font-size:16px;font-weight:700;cursor:pointer;" %>
-
+  <p>別の端末に保存された学習データや、端末にダウンロード済みのPDFは、この操作では削除されません。</p>
+  <p>Apple・Googleのアカウント自体は削除されません。購入の返金手続きも行われません。</p>
+  <% if current_user.provider == "apple" %>
+    <p>削除の前に、登録したAppleアカウントで本人確認を行い、このアプリとの連携を解除します。</p>
+  <% end %>
+  <p style="color:#b42318;font-weight:700;margin:24px 0;">この操作は取り消せません。</p>
+  <%= form_with url: destroy_account_path, method: :delete, local: true,
+        id: "account-deletion-form", data: { turbo: false, provider: current_user.provider } do %>
+    <label style="display:block;margin-bottom:24px;">
+      <%= check_box_tag :confirm_deletion, "1", false, required: true %>
+      削除内容を確認しました。アカウントを削除します。
+    </label>
+    <%= hidden_field_tag :apple_id_token %>
+    <%= hidden_field_tag :apple_authorization_code %>
+    <button type="submit" style="width:100%;padding:14px;border:none;border-radius:10px;background:#c62828;color:white;font-size:16px;font-weight:700;cursor:pointer;">アカウントを削除する</button>
+    <p id="account-deletion-error" role="alert" style="color:#b42318;"></p>
+  <% end %>
   <div style="margin-top:24px;text-align:center;">
-    <%= link_to "TOPに戻る", home_path,
-          style: "color:#102847;text-decoration:none;font-weight:700;" %>
+    <%= link_to "TOPに戻る", home_path, style: "color:#102847;text-decoration:none;font-weight:700;" %>
   </div>
 </div>

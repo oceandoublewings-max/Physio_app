@@ -728,6 +728,12 @@
       form: { data: { turbo: false } },
       style: "margin-top:10px;width:100%;border:none;border-radius:10px;padding:10px;background:#ef4444;color:white;font-size:14px;font-weight:bold;cursor:pointer;" %>
 
+  <% unless current_user&.guest? %>
+    <%= link_to "アカウントを削除",
+          "/account_delete",
+          style: "display:block;margin-top:12px;color:#c62828;font-size:14px;font-weight:700;text-decoration:none;" %>
+  <% end %>
+
 </div>
 
         <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">

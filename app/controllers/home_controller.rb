@@ -12,13 +12,6 @@ class HomeController < ApplicationController
     :physiology_analysis,
     :kinesiology_analysis,
 
-    :anatomy_pdfs,
-    :bone_pdfs,
-    :muscle_pdfs,
-    :neurovascular_pdfs,
-    :physiology_pdfs,
-    :kinesiology_pdfs,
-
     :stamps,
     :event_stamps,
 

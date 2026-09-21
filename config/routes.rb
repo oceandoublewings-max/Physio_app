@@ -33,8 +33,9 @@ Rails.application.routes.draw do
   get "/anatomy_pdfs", to: "home#anatomy_pdfs"
   get "/neurovascular_pdfs", to: "home#neurovascular_pdfs"
   get "/kinesiology_pdfs", to: "home#kinesiology_pdfs"
+  get "/sample_pdfs/:kind/pages/:page", to: "home#sample_pdf_page", as: :sample_pdf_page,
+    constraints: { kind: /bone|muscle|vessel_nerve|physiology|kinesiology/, page: /\d+/ }
   get "/sample_pdfs/:kind", to: "home#sample_pdf", as: :sample_pdf,
-    defaults: { format: :pdf },
     constraints: { kind: /bone|muscle|vessel_nerve|physiology|kinesiology/ }
   get "/physiology", to: "home#physiology"
   get "/materials", to: "questions#materials"

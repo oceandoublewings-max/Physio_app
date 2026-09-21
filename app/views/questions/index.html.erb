@@ -986,7 +986,7 @@ function goIllustration(addWrong) {
 
   </div>
 
-  <div id="stamp-loading" style="margin:18px auto;color:#174f8a;font-weight:800;font-size:18px;">
+  <div id="stamp-loading" style="display:none;margin:18px auto;color:#174f8a;font-weight:800;font-size:18px;">
 🎁 スタンプ獲得中…<br><span style="font-size:14px;font-weight:600;">もうすぐ新しいスタンプが届きます✨</span>
 </div>
 
@@ -1283,16 +1283,24 @@ document.body.style.setProperty("background-size", "320px", "important");
 // 結果画面表示後にスタンプ演出
 window.stampRedirectAfterQueue = false;
 
-setTimeout(() => {
+const pendingStamps = JSON.parse(
+  sessionStorage.getItem("pendingNewStamps") || "[]"
+);
+
+if (pendingStamps.length > 0) {
+  const stampLoading = document.getElementById("stamp-loading");
+  if (stampLoading) stampLoading.style.display = "block";
+
+  setTimeout(() => {
+    stampLoading?.remove();
+
+    const stampWasShown = showNextPendingStamp();
+    if (!stampWasShown) unlockTopButton();
+  }, 1500);
+} else {
   document.getElementById("stamp-loading")?.remove();
-
-  const stampWasShown = showNextPendingStamp();
-
-  // 今回の回答で新しいスタンプがない時だけ、ここでTOPを有効化する。
-  if (!stampWasShown) {
-    unlockTopButton();
-  }
-}, 1500);
+  unlockTopButton();
+}
 </script>
 
 <% end %>

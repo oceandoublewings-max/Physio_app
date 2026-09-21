@@ -132,6 +132,7 @@ def answered
   return head :unauthorized unless current_user
 
   new_stamp = nil
+  reward_milestones = [20, 50, 100, 300, 500, 1000]
 
   # 素早い連続タップでも回答数が競合しないよう、ユーザー行をロックして処理する。
   current_user.with_lock do
@@ -139,7 +140,14 @@ def answered
 
     count = current_user.answered_questions_count
 
-    if [20, 50, 100, 300, 500, 1000].include?(count)
+    # 「ちょうど20問」の通信に失敗しても、次の回答時に未付与分を回収する。
+    # 初回登録スタンプがあるユーザーは、その1個も所持予定数に含める。
+    achieved_reward_count = reward_milestones.count { |milestone| count >= milestone }
+    first_login_reward_count = current_user.first_login_rewarded? ? 1 : 0
+    expected_normal_stamp_count = achieved_reward_count + first_login_reward_count
+    owned_normal_stamps = current_user.stamps.where(season: "normal")
+
+    if owned_normal_stamps.count < expected_normal_stamp_count
       owned_stamp_ids = current_user.stamps.pluck(:id)
 
       stamp = Stamp.where(season: "normal")

@@ -4,18 +4,6 @@
 import "controllers"
 import "native_social_login"
 
-function fixKinesiologySampleLink() {
-  if (window.location.pathname !== "/kinesiology_pdfs") return;
-
-  const sampleLink = document.querySelector("a.sample-card");
-  if (!sampleLink) return;
-
-  sampleLink.setAttribute(
-    "href",
-    "/pdfs/kinesiology/000kinesiology_sample.pdf"
-  );
-}
-
 function enableAppleLoginButton() {
   const appleForm = document.querySelector(
     'form.oauth-form[data-oauth-provider="apple"]'
@@ -36,7 +24,6 @@ function enableAppleLoginButton() {
 }
 
 function refreshPageEnhancements() {
-  fixKinesiologySampleLink();
   enableAppleLoginButton();
 }
 

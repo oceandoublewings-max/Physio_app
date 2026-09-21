@@ -2,10 +2,17 @@ class HomeController < ApplicationController
   include AccountDeletion
   CONTACT_MESSAGE_MAX_LENGTH = 2000
   CONTACT_COOLDOWN_SECONDS = 30
+  SAMPLE_PDF_PATHS = {
+    "bone" => "pdfs/bone/000bone_sample.pdf",
+    "muscle" => "pdfs/muscle/000muscle_sample.pdf",
+    "vessel_nerve" => "pdfs/vessel_nerve/000vessel_nerve_sample.pdf",
+    "physiology" => "pdfs/physiology/000physiology_sample.pdf",
+    "kinesiology" => "pdfs/kinesiology/000kinesiology_sample.pdf"
+  }.freeze
 
   # ログイン前でも利用規約・プライバシーポリシーを表示できるようにする
   skip_before_action :authenticate_user!, only: [:terms, :privacy], raise: false
-  skip_before_action :require_login, only: [:terms, :privacy], raise: false
+  skip_before_action :require_login, only: [:terms, :privacy, :sample_pdf], raise: false
 
   before_action :require_registered_user, only: [
     :anatomy_analysis,
@@ -83,6 +90,18 @@ class HomeController < ApplicationController
 
   def kinesiology_pdfs
     @pdf_product = PdfProduct.find_by(title: "運動学資料集")
+  end
+
+  def sample_pdf
+    relative_path = SAMPLE_PDF_PATHS.fetch(params[:kind])
+    pdf_path = Rails.root.join("public", relative_path)
+
+    return head :not_found unless pdf_path.file?
+
+    send_file pdf_path.to_s,
+      type: "application/pdf",
+      disposition: "inline",
+      filename: pdf_path.basename.to_s
   end
 
   def stamps

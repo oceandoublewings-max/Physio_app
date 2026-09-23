@@ -1,4 +1,6 @@
-<% bone_files = Dir.glob(Rails.root.join("public", "pdfs", "bone", "bone_*.pdf")).sort_by { |path| File.basename(path)[/\d+/].to_i } %>
+<% bone_files = Dir.glob(Rails.root.join("public", "pdfs", "bone", "*.pdf"))
+  .reject { |path| File.basename(path).downcase.include?("sample") }
+  .sort_by { |path| File.basename(path).downcase } %>
 
 <style>
   * { box-sizing: border-box; }
@@ -12,8 +14,14 @@
   <a href="<%= sample_pdf_path(kind: "bone") %>" class="sample-card pdf-open-link"><div class="sample-icon">📄</div><div><span class="sample-name">サンプルを見る</span><span class="sample-en">VIEW SAMPLE</span></div></a>
   <div class="purchase-card"><div class="purchase-label">BONE LIBRARY</div><h2 class="purchase-title"><span>🦴</span><span>骨 資料ライブラリ</span></h2><p class="purchase-text">ログイン不要で購入できます。<br>一度ご購入いただくと、骨の資料を個別にダウンロードできます。今後追加される資料も追加料金なしでご利用いただけます。</p><button type="button" id="bone-purchase-button" class="purchase-button">購入情報を読み込み中…</button><button type="button" id="bone-restore-button" class="restore-button">購入を復元</button><div id="bone-purchase-status" class="purchase-status" aria-live="polite"></div></div>
   <section id="bone-paid-library" class="paid-library" aria-hidden="true"><div class="bone-library-heading">ダウンロード資料</div><p class="library-note">必要な資料を選んで個別に開けます。</p><div class="pdf-list">
-    <% bone_files.each do |path| %><% filename=File.basename(path) %><% number=filename[/\d+/].to_i %>
-      <a href="https://physio-app-4ahv.onrender.com/pdfs/bone/<%= filename %>" class="pdf-item pdf-open-link"><div class="pdf-item-left"><div class="pdf-icon">📄</div><span class="pdf-name">骨 資料 <%= format('%03d',number) %></span></div><span class="pdf-download">開く ›</span></a>
+    <% bone_files.each do |path| %><% filename=File.basename(path) %><% basename=File.basename(filename, ".pdf") %><% number=basename[/\d+/]&.to_i %><% label_prefix=basename.sub(/[_-]?\d+.*\z/, "").tr("_-", " ").strip %><% display_name = if basename.match?(/\Abone[_-]?\d+/i) && number
+        "骨 資料 #{format('%03d', number)}"
+      elsif number
+        "#{label_prefix.upcase} 資料 #{format('%03d', number)}"
+      else
+        basename.tr("_-", " ")
+      end %>
+      <a href="https://physio-app-4ahv.onrender.com/pdfs/bone/<%= filename %>" class="pdf-item pdf-open-link"><div class="pdf-item-left"><div class="pdf-icon">📄</div><span class="pdf-name"><%= display_name %></span></div><span class="pdf-download">開く ›</span></a>
     <% end %>
   </div></section>
 </div>

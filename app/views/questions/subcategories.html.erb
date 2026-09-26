@@ -1,0 +1,54 @@
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f5f8fc; color: #0b2343; }
+  .category-page { width: min(92%, 520px); margin: 0 auto; padding: 22px 0 45px; }
+  .category-hero { border-radius: 0 0 28px 28px; padding: 24px 22px; margin-bottom: 26px; background: radial-gradient(circle at 88% 18%, rgba(255,255,255,.13), transparent 32%), linear-gradient(135deg,#082548,#0d3a69 58%,#174f82); box-shadow: 0 12px 30px rgba(9,40,77,.16); }
+  .hero-top-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .category-label { margin: 0; color: rgba(255,255,255,.72); font-size: 10px; letter-spacing: .12em; font-weight: 700; }
+  .top-link { flex-shrink: 0; color: #f0d58c; border: 1px solid #b59d61; border-radius: 999px; padding: 9px 13px; text-decoration: none; font-size: 12px; }
+  .category-title-wrap { display: flex; align-items: center; gap: 13px; margin-top: 15px; }
+  .category-icon { display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid #b59d61; border-radius: 50%; font-size: 26px; background: rgba(255,255,255,.1); }
+  .category-title { color: white; margin: 0; font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-size: 30px; }
+  .category-en { margin: 3px 0 0; color: #e8ca7d; font-family: Georgia,serif; font-size: 11px; letter-spacing: .16em; }
+  .hero-count { color: rgba(255,255,255,.82); font-size: 13px; margin: 18px 0 0; }
+  .section-heading { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 12px; font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-size: 21px; }
+  .section-heading::before, .section-heading::after { content: ""; width: 38px; height: 1px; background: #c9a84f; }
+  .study-arrow { color: #b38b32; font-size: 28px; }
+</style>
+<style>
+  .subcategory-list { display: flex; flex-direction: column; gap: 10px; }
+  .subcategory-row { display: flex; align-items: center; gap: 14px; padding: 17px 18px; min-height: 76px; border: 1px solid #e3e9f0; border-radius: 16px; background: #fff; box-shadow: 0 5px 15px rgba(20,52,88,.07); text-decoration: none; color: #102b4d; }
+  .subcategory-row:focus-visible { outline: 3px solid #b58a27; outline-offset: 3px; }
+  .subcategory-row:active { transform: scale(.98); }
+  .subcategory-emoji { font-size: 27px; }
+  .subcategory-name { flex: 1; font-size: 16px; font-weight: 700; }
+  .subcategory-count { color: #788596; font-size: 12px; white-space: nowrap; }
+  .subcategory-guide { text-align: center; color: #788596; font-size: 12px; margin: 0 0 16px; }
+  .subcategory-back { display: inline-block; margin-top: 20px; color: #102b4d; }
+</style>
+<div class="category-page">
+  <section class="category-hero">
+    <div class="hero-top-row">
+      <p class="category-label">PT NATIONAL EXAM PREP</p>
+      <a href="<%= home_path %>" class="top-link">← TOP</a>
+    </div>
+    <div class="category-title-wrap">
+      <div class="category-icon">🦴</div>
+      <div><h1 class="category-title">解剖学</h1><p class="category-en">BY CATEGORY</p></div>
+    </div>
+    <p class="hero-count">学びたいカテゴリーを選んでください</p>
+  </section>
+  <h2 class="section-heading">カテゴリー別</h2>
+  <p class="subcategory-guide">○×・5択問題から選んで学習できます</p>
+  <div class="subcategory-list">
+    <% @subcategories.each do |name, icon| %>
+      <a class="subcategory-row" href="<%= select_path(category: "解剖", subcategory: name) %>">
+        <span class="subcategory-emoji" aria-hidden="true"><%= icon %></span>
+        <span class="subcategory-name"><%= name == "断面・位置関係" ? "断面・位置" : name %></span>
+        <span class="subcategory-count"><%= number_with_delimiter(@subcategory_counts.fetch(name, 0)) %>問</span>
+        <span class="study-arrow" aria-hidden="true">›</span>
+      </a>
+    <% end %>
+  </div>
+  <a class="subcategory-back" href="<%= category_path(name: "解剖学") %>">← 学習方法に戻る</a>
+</div>

@@ -1,4 +1,17 @@
 class QuestionsController < ApplicationController
+  ANATOMY_SUBCATEGORIES = {
+    "骨" => "🦴", "筋肉" => "💪", "神経" => "🧠",
+    "臓器" => "🫀", "血管" => "🩸", "断面・位置関係" => "📍"
+  }.freeze
+
+  before_action :validate_anatomy_subcategory, only: [:index, :select]
+
+  def subcategories
+    @subcategory_counts = Question.where(category: ["解剖", "解剖学"], qtype: ["choice", "true_false"])
+                                  .group(:subcategory).count
+    @subcategories = ANATOMY_SUBCATEGORIES
+  end
+
 def index
 
   if params[:finish]
@@ -38,6 +51,8 @@ def index
     base = base.where(qtype: "illustration")
   end
 
+  base = base.where(subcategory: @subcategory, qtype: ["choice", "true_false"]) if @subcategory.present?
+
   count = params[:count].to_i
   count = 10 if count == 0
 
@@ -45,12 +60,19 @@ def index
   if params[:mode] != "wrong" && params[:ids].blank?
     ids = base.order("RANDOM()").limit(count).pluck(:id)
 
+    if ids.empty?
+      redirect_to select_path(category: @category, subcategory: @subcategory, qtype: @qtype),
+        alert: "この形式の問題はまだありません。別の形式を選んでください。"
+      return
+    end
+
     redirect_to questions_path(
       ids: ids.join(","),
       count: count,
       index: 0,
       qtype: params[:qtype],
-      category: @category
+      category: @category,
+      subcategory: @subcategory
     )
     return
   end
@@ -69,12 +91,14 @@ def index
   @questions = Question.where(id: ids)
 
   if @category.present? && @category != "all"
-    @questions = @questions.where(category: @category)
+    @questions = @questions.where(category: @subcategory.present? ? ["解剖", "解剖学"] : @category)
   end
 
   if @qtype.present? && @qtype != "all"
     @questions = @questions.where(qtype: @qtype)
   end
+
+  @questions = @questions.where(subcategory: @subcategory, qtype: ["choice", "true_false"]) if @subcategory.present?
 
   @questions = ids.filter_map { |id| @questions.find { |q| q.id == id } }
 
@@ -173,5 +197,18 @@ def answered
     new_stamp: new_stamp
   }
 end
+
+  private
+
+  def validate_anatomy_subcategory
+    return if params[:subcategory].blank?
+
+    @subcategory = params[:subcategory]
+    valid_category = ["解剖", "解剖学"].include?(params[:category])
+    valid_type = params[:qtype].blank? || ["choice", "true_false"].include?(params[:qtype])
+    unless valid_category && ANATOMY_SUBCATEGORIES.key?(@subcategory) && valid_type && params[:mode].blank?
+      head :bad_request
+    end
+  end
 
 end

@@ -388,6 +388,12 @@
 </style>
 
 <div class="select-page">
+  <% if @subcategory.present? %>
+    <p><%= link_to "← カテゴリー一覧", anatomy_subcategories_path %></p>
+  <% end %>
+  <% if flash[:alert].present? %>
+    <p role="alert"><%= flash[:alert] %></p>
+  <% end %>
 
   <% unless params[:mode] == "wrong" || params[:category] == "all" %>
 
@@ -432,7 +438,7 @@
         </div>
 
         <div>
-          <h1 class="category-title"><%= @category %></h1>
+          <h1 class="category-title"><%= @subcategory.present? ? "解剖学：#{@subcategory}" : @category %></h1>
           <p class="category-en"><%= category_en %></p>
         </div>
       </div>
@@ -448,6 +454,7 @@
 
     <div class="type-grid">
 
+      <% unless @subcategory.present? %>
       <!-- 全部 -->
       <a
         href="/select?category=<%= @category %>&qtype=all&mode=<%= params[:mode] %>"
@@ -463,9 +470,10 @@
         </button>
       </a>
 
+      <% end %>
       <!-- 5択 -->
       <a
-        href="/select?category=<%= @category %>&qtype=choice&mode=<%= params[:mode] %>"
+        href="<%= select_path(category: @category, qtype: "choice", mode: params[:mode], subcategory: @subcategory) %>"
         class="type-link"
       >
         <button
@@ -480,7 +488,7 @@
 
       <!-- ○× -->
       <a
-        href="/select?category=<%= @category %>&qtype=true_false&mode=<%= params[:mode] %>"
+        href="<%= select_path(category: @category, qtype: "true_false", mode: params[:mode], subcategory: @subcategory) %>"
         class="type-link"
       >
         <button
@@ -493,6 +501,7 @@
         </button>
       </a>
 
+      <% unless @subcategory.present? %>
       <!-- イラスト -->
       <a
         href="/select?category=<%= @category %>&qtype=illustration&mode=<%= params[:mode] %>"
@@ -508,6 +517,7 @@
         </button>
       </a>
 
+      <% end %>
     </div>
 
   <% end %>
@@ -544,7 +554,7 @@
         <a
           href="<%= params[:mode] == 'wrong' ?
             "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype] || 'all'}&count=5&index=0" :
-            "/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=5"
+            questions_path(category: params[:category], qtype: params[:qtype], count: 5, subcategory: @subcategory)
           %>"
           onclick="localStorage.removeItem('score'); localStorage.removeItem('total');"
         >
@@ -556,7 +566,7 @@
         <a
           href="<%= params[:mode] == 'wrong' ?
             "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype] || 'all'}&count=10&index=0" :
-            "/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=10"
+            questions_path(category: params[:category], qtype: params[:qtype], count: 10, subcategory: @subcategory)
           %>"
           onclick="localStorage.removeItem('score'); localStorage.removeItem('total');"
         >
@@ -568,7 +578,7 @@
         <a
           href="<%= params[:mode] == 'wrong' ?
             "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype] || 'all'}&count=15&index=0" :
-            "/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=15"
+            questions_path(category: params[:category], qtype: params[:qtype], count: 15, subcategory: @subcategory)
           %>"
           onclick="localStorage.removeItem('score'); localStorage.removeItem('total');"
         >
@@ -580,7 +590,7 @@
         <a
           href="<%= params[:mode] == 'wrong' ?
             "/questions?mode=wrong&ids=#{params[:ids]}&category=#{params[:category]}&qtype=#{params[:qtype] || 'all'}&count=20&index=0" :
-            "/questions?category=#{params[:category]}&qtype=#{params[:qtype]}&count=20"
+            questions_path(category: params[:category], qtype: params[:qtype], count: 20, subcategory: @subcategory)
           %>"
           onclick="localStorage.removeItem('score'); localStorage.removeItem('total');"
         >

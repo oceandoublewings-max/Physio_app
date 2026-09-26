@@ -1,15 +1,34 @@
 class QuestionsController < ApplicationController
-  ANATOMY_SUBCATEGORIES = {
-    "骨" => "🦴", "筋肉" => "💪", "神経" => "🧠",
-    "臓器" => "🫀", "血管" => "🩸", "断面・位置関係" => "📍"
+  STUDY_CATEGORIES = {
+    "解剖" => {
+      label: "解剖学", icon: "🦴",
+      subcategories: { "骨" => "🦴", "筋肉" => "💪", "神経" => "🧠",
+                       "臓器" => "🫀", "血管" => "🩸", "断面・位置関係" => "📍" }
+    },
+    "生理" => {
+      label: "生理学", icon: "🫀",
+      subcategories: { "神経生理" => "🧠", "筋生理" => "💪", "循環" => "🫀",
+                       "呼吸" => "🫁", "内臓" => "🩺", "ホルモン" => "🧪",
+                       "消化" => "🍚", "体温・恒常性" => "🌡️" }
+    },
+    "運動" => {
+      label: "運動学", icon: "🏃",
+      subcategories: { "関節運動" => "🦴", "ROM" => "📏", "筋作用" => "💪",
+                       "歩行" => "🚶", "姿勢" => "🧍", "バイオメカニズム" => "⚙️",
+                       "動作分析" => "🎥" }
+    }
   }.freeze
 
-  before_action :validate_anatomy_subcategory, only: [:index, :select]
+  before_action :validate_study_subcategory, only: [:index, :select]
 
   def subcategories
-    @subcategory_counts = Question.where(category: ["解剖", "解剖学"], qtype: ["choice", "true_false"])
+    @category = (params[:category].presence || "解剖").delete_suffix("学")
+    @study_category = STUDY_CATEGORIES[@category]
+    return head :bad_request unless @study_category
+
+    @subcategory_counts = Question.where(category: [@category, @study_category[:label]], qtype: ["choice", "true_false"])
                                   .group(:subcategory).count
-    @subcategories = ANATOMY_SUBCATEGORIES
+    @subcategories = @study_category[:subcategories]
   end
 
 def index
@@ -91,7 +110,7 @@ def index
   @questions = Question.where(id: ids)
 
   if @category.present? && @category != "all"
-    @questions = @questions.where(category: @subcategory.present? ? ["解剖", "解剖学"] : @category)
+    @questions = @questions.where(category: @subcategory.present? ? [@category, @study_category[:label]] : @category)
   end
 
   if @qtype.present? && @qtype != "all"
@@ -200,13 +219,13 @@ end
 
   private
 
-  def validate_anatomy_subcategory
+  def validate_study_subcategory
     return if params[:subcategory].blank?
 
     @subcategory = params[:subcategory]
-    valid_category = ["解剖", "解剖学"].include?(params[:category])
+    @study_category = STUDY_CATEGORIES[params[:category].to_s.delete_suffix("学")]
     valid_type = params[:qtype].blank? || ["choice", "true_false"].include?(params[:qtype])
-    unless valid_category && ANATOMY_SUBCATEGORIES.key?(@subcategory) && valid_type && params[:mode].blank?
+    unless @study_category && @study_category[:subcategories].key?(@subcategory) && valid_type && params[:mode].blank?
       head :bad_request
     end
   end

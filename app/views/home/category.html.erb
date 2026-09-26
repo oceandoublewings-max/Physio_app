@@ -426,14 +426,14 @@
     </a>
 
 
-    <% if @category == "解剖学" %>
-      <a href="<%= anatomy_subcategories_path %>" class="study-link">
+    <% if ["解剖学", "生理学", "運動学"].include?(@category) %>
+      <a href="<%= subcategories_path(category: @category) %>" class="study-link">
         <div class="study-card">
           <div class="study-icon">🗂️</div>
           <div class="study-text">
             <span class="study-title">カテゴリー別</span>
             <span class="study-en">BY CATEGORY</span>
-            <span class="study-description">骨・筋肉など、学びたい項目を選ぶ</span>
+            <span class="study-description"><%= { "解剖学" => "骨・筋肉", "生理学" => "神経生理・循環", "運動学" => "関節運動・歩行" }[@category] %>など、学びたい項目を選ぶ</span>
           </div>
           <span class="study-arrow">›</span>
         </div>

@@ -389,7 +389,7 @@
 
 <div class="select-page">
   <% if @subcategory.present? %>
-    <p><%= link_to "← カテゴリー一覧", anatomy_subcategories_path %></p>
+    <p><%= link_to "← カテゴリー一覧", subcategories_path(category: @category) %></p>
   <% end %>
   <% if flash[:alert].present? %>
     <p role="alert"><%= flash[:alert] %></p>
@@ -400,11 +400,11 @@
     <%
       icon =
         case @category
-        when "解剖学"
+        when "解剖", "解剖学"
           "🦴"
-        when "生理学"
+        when "生理", "生理学"
           "🫀"
-        when "運動学"
+        when "運動", "運動学"
           "🏃"
         else
           "📘"
@@ -412,11 +412,11 @@
 
       category_en =
         case @category
-        when "解剖学"
+        when "解剖", "解剖学"
           "ANATOMY"
-        when "生理学"
+        when "生理", "生理学"
           "PHYSIOLOGY"
-        when "運動学"
+        when "運動", "運動学"
           "KINESIOLOGY"
         else
           "NATIONAL EXAM PREP"
@@ -438,7 +438,7 @@
         </div>
 
         <div>
-          <h1 class="category-title"><%= @subcategory.present? ? "解剖学：#{@subcategory}" : @category %></h1>
+          <h1 class="category-title"><%= @subcategory.present? ? "#{@study_category[:label]}：#{@subcategory}" : @category %></h1>
           <p class="category-en"><%= category_en %></p>
         </div>
       </div>

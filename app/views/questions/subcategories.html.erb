@@ -33,8 +33,8 @@
       <a href="<%= home_path %>" class="top-link">← TOP</a>
     </div>
     <div class="category-title-wrap">
-      <div class="category-icon">🦴</div>
-      <div><h1 class="category-title">解剖学</h1><p class="category-en">BY CATEGORY</p></div>
+      <div class="category-icon"><%= @study_category[:icon] %></div>
+      <div><h1 class="category-title"><%= @study_category[:label] %></h1><p class="category-en">BY CATEGORY</p></div>
     </div>
     <p class="hero-count">学びたいカテゴリーを選んでください</p>
   </section>
@@ -42,7 +42,7 @@
   <p class="subcategory-guide">○×・5択問題から選んで学習できます</p>
   <div class="subcategory-list">
     <% @subcategories.each do |name, icon| %>
-      <a class="subcategory-row" href="<%= select_path(category: "解剖", subcategory: name) %>">
+      <a class="subcategory-row" href="<%= select_path(category: @category, subcategory: name) %>">
         <span class="subcategory-emoji" aria-hidden="true"><%= icon %></span>
         <span class="subcategory-name"><%= name == "断面・位置関係" ? "断面・位置" : name %></span>
         <span class="subcategory-count"><%= number_with_delimiter(@subcategory_counts.fetch(name, 0)) %>問</span>
@@ -50,5 +50,5 @@
       </a>
     <% end %>
   </div>
-  <a class="subcategory-back" href="<%= category_path(name: "解剖学") %>">← 学習方法に戻る</a>
+  <a class="subcategory-back" href="<%= category_path(name: @study_category[:label]) %>">← 学習方法に戻る</a>
 </div>

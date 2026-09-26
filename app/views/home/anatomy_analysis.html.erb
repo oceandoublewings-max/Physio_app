@@ -232,7 +232,15 @@
     border: 1px solid #e8edf3;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(19, 49, 83, 0.05);
+    width: 100%;
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
   }
+
+  .review-hint { margin: 0 16px 12px; color: #52647a; font-size: 12px; text-align: center; }
+
+  .category-item:focus-visible { outline: 3px solid #b28b2d; outline-offset: 2px; }
 
   .category-left {
     min-width: 0;
@@ -596,9 +604,11 @@
     </div>
 
 
+    <p class="review-hint">分野をタップして苦手問題を解き直す ›</p>
+
     <div class="category-grid">
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="骨" aria-label="骨の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🦴</div>
           <div class="category-name">骨</div>
@@ -606,9 +616,9 @@
         <div class="category-count">
           <span id="bone-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="筋肉" aria-label="筋肉の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">💪</div>
           <div class="category-name">筋肉</div>
@@ -616,9 +626,9 @@
         <div class="category-count">
           <span id="muscle-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="神経" aria-label="神経の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🧠</div>
           <div class="category-name">神経</div>
@@ -626,9 +636,9 @@
         <div class="category-count">
           <span id="nerve-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="臓器" aria-label="臓器の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🫀</div>
           <div class="category-name">臓器</div>
@@ -636,9 +646,9 @@
         <div class="category-count">
           <span id="organ-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="血管" aria-label="血管の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🩸</div>
           <div class="category-name">血管</div>
@@ -646,9 +656,9 @@
         <div class="category-count">
           <span id="vessel-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="断面・位置関係" aria-label="断面・位置関係の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">📍</div>
           <div class="category-name">断面・位置</div>
@@ -656,7 +666,7 @@
         <div class="category-count">
           <span id="position-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
     </div>
 
@@ -685,6 +695,25 @@
 
 
 <script>
+document.querySelectorAll(".category-item[data-subcategory]").forEach(card => {
+  card.addEventListener("click", () => {
+    const subcategory = card.dataset.subcategory;
+    const wrongQuestions = JSON.parse(localStorage.getItem("wrong") || "[]");
+    const ids = wrongQuestions
+      .filter(q => q.category === "解剖" && q.subcategory === subcategory)
+      .map(q => Number(q.id))
+      .filter(Number.isInteger);
+    if (ids.length === 0) {
+      alert(`${subcategory}の苦手問題はありません`);
+      return;
+    }
+    const params = new URLSearchParams({
+      mode: "wrong", category: "解剖", qtype: "all", ids: [...new Set(ids)].join(",")
+    });
+    window.location.href = `/select?${params.toString()}`;
+  });
+});
+
 const wrong = JSON.parse(localStorage.getItem("wrong")) || []
 
 let anatomy = 0

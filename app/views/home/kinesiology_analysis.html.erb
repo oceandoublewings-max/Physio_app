@@ -232,7 +232,15 @@
     border: 1px solid #e8edf3;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(19, 49, 83, 0.05);
+    width: 100%;
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
   }
+
+  .review-hint { margin: 0 16px 12px; color: #52647a; font-size: 12px; text-align: center; }
+
+  .category-item:focus-visible { outline: 3px solid #b28b2d; outline-offset: 2px; }
 
   .category-left {
     min-width: 0;
@@ -606,9 +614,11 @@
     </div>
 
 
+    <p class="review-hint">分野をタップして苦手問題を解き直す ›</p>
+
     <div class="category-grid">
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="関節運動" aria-label="関節運動の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🦴</div>
           <div class="category-name">関節運動</div>
@@ -616,9 +626,9 @@
         <div class="category-count">
           <span id="joint-motion-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="ROM" aria-label="ROMの苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">📏</div>
           <div class="category-name">ROM</div>
@@ -626,9 +636,9 @@
         <div class="category-count">
           <span id="rom-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="筋作用" aria-label="筋作用の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">💪</div>
           <div class="category-name">筋作用</div>
@@ -636,9 +646,9 @@
         <div class="category-count">
           <span id="muscle-action-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="歩行" aria-label="歩行の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🚶</div>
           <div class="category-name">歩行</div>
@@ -646,9 +656,9 @@
         <div class="category-count">
           <span id="gait-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="姿勢" aria-label="姿勢の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🧍</div>
           <div class="category-name">姿勢</div>
@@ -656,9 +666,9 @@
         <div class="category-count">
           <span id="posture-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="バイオメカニズム" aria-label="バイオメカニズムの苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">⚙️</div>
           <div class="category-name small">バイオメカニズム</div>
@@ -666,9 +676,9 @@
         <div class="category-count">
           <span id="biomechanics-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item last-item">
+      <button type="button" class="category-item last-item" data-subcategory="動作分析" aria-label="動作分析の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🎥</div>
           <div class="category-name">動作分析</div>
@@ -676,7 +686,7 @@
         <div class="category-count">
           <span id="movement-analysis-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
     </div>
 
@@ -714,6 +724,25 @@
 
 
 <script>
+document.querySelectorAll(".category-item[data-subcategory]").forEach(card => {
+  card.addEventListener("click", () => {
+    const subcategory = card.dataset.subcategory;
+    const wrongQuestions = JSON.parse(localStorage.getItem("wrong") || "[]");
+    const ids = wrongQuestions
+      .filter(q => q.category === "運動" && q.subcategory === subcategory)
+      .map(q => Number(q.id))
+      .filter(Number.isInteger);
+    if (ids.length === 0) {
+      alert(`${subcategory}の苦手問題はありません`);
+      return;
+    }
+    const params = new URLSearchParams({
+      mode: "wrong", category: "運動", qtype: "all", ids: [...new Set(ids)].join(",")
+    });
+    window.location.href = `/select?${params.toString()}`;
+  });
+});
+
 const wrong = JSON.parse(localStorage.getItem("wrong")) || []
 
 let kinesiology = 0

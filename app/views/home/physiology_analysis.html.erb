@@ -611,9 +611,11 @@
     </div>
 
 
+    <p class="review-hint">分野をタップして苦手問題を解き直す ›</p>
+
     <div class="category-grid">
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="神経生理" aria-label="神経生理の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🧠</div>
           <div class="category-name">神経生理</div>
@@ -621,9 +623,9 @@
         <div class="category-count">
           <span id="nerve-physiology-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="筋生理" aria-label="筋生理の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">💪</div>
           <div class="category-name">筋生理</div>
@@ -631,9 +633,9 @@
         <div class="category-count">
           <span id="muscle-physiology-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="循環" aria-label="循環の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🫀</div>
           <div class="category-name">循環</div>
@@ -641,9 +643,9 @@
         <div class="category-count">
           <span id="circulation-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="呼吸" aria-label="呼吸の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🫁</div>
           <div class="category-name">呼吸</div>
@@ -651,9 +653,9 @@
         <div class="category-count">
           <span id="respiration-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="内臓" aria-label="内臓の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🩺</div>
           <div class="category-name">内臓</div>
@@ -661,9 +663,9 @@
         <div class="category-count">
           <span id="organ-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item">
+      <button type="button" class="category-item" data-subcategory="ホルモン" aria-label="ホルモンの苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🧪</div>
           <div class="category-name">ホルモン</div>
@@ -671,9 +673,9 @@
         <div class="category-count">
           <span id="hormone-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item bottom-left">
+      <button type="button" class="category-item bottom-left" data-subcategory="消化" aria-label="消化の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🍚</div>
           <div class="category-name">消化</div>
@@ -681,9 +683,9 @@
         <div class="category-count">
           <span id="digestion-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
-      <div class="category-item bottom-right">
+      <button type="button" class="category-item bottom-right" data-subcategory="体温・恒常性" aria-label="体温・恒常性の苦手問題を解く">
         <div class="category-left">
           <div class="category-icon">🌡️</div>
           <div class="category-name small">体温・恒常性</div>
@@ -691,7 +693,7 @@
         <div class="category-count">
           <span id="homeostasis-count">0</span><span>問</span>
         </div>
-      </div>
+      </button>
 
     </div>
 
@@ -731,6 +733,25 @@
 
 
 <script>
+document.querySelectorAll(".category-item[data-subcategory]").forEach(card => {
+  card.addEventListener("click", () => {
+    const subcategory = card.dataset.subcategory;
+    const wrongQuestions = JSON.parse(localStorage.getItem("wrong") || "[]");
+    const ids = wrongQuestions
+      .filter(q => q.category === "生理" && q.subcategory === subcategory)
+      .map(q => Number(q.id))
+      .filter(Number.isInteger);
+    if (ids.length === 0) {
+      alert(`${subcategory}の苦手問題はありません`);
+      return;
+    }
+    const params = new URLSearchParams({
+      mode: "wrong", category: "生理", qtype: "all", ids: [...new Set(ids)].join(",")
+    });
+    window.location.href = `/select?${params.toString()}`;
+  });
+});
+
 const wrong = JSON.parse(localStorage.getItem("wrong")) || []
 
 let physiology = 0

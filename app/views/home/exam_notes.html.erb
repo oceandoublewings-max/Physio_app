@@ -51,11 +51,7 @@
       <a href="/pdfs/exam_notes/60/exam_notes_sample.pdf" style="display:block;margin-top:10px;padding:14px;border:1px solid #d8c58f;border-radius:12px;background:#fff;color:#102b4d;text-align:center;text-decoration:none;font-size:14px;font-weight:700;" onclick="if(window.Capacitor?.Plugins?.Browser){event.preventDefault();window.Capacitor.Plugins.Browser.open({url:this.href}).catch(()=>{window.location.href=this.href;});}">📖 解説・○×付きサンプル</a>
 <a href="/pdfs/exam_notes/60/exam_notes_sample_workbook.pdf" style="display:block;margin-top:10px;padding:14px;border:1px solid #d8c58f;border-radius:12px;background:#fff;color:#102b4d;text-align:center;text-decoration:none;font-size:14px;font-weight:700;" onclick="if(window.Capacitor?.Plugins?.Browser){event.preventDefault();window.Capacitor.Plugins.Browser.open({url:this.href}).catch(()=>{window.location.href=this.href;});}">✏️ 空欄版サンプル</a>
     </section>
-    <aside id="en-usage-notice" aria-label="ご利用にあたって"
-      style="margin-top:18px;padding:14px 16px;border:1px solid #e7d9b4;border-radius:12px;background:#fffdf6;color:#465970;font-size:13px;line-height:1.8;text-align:left;">
-      <p style="margin:0 0 8px;">※ 国家試験の問題は、ご自身でご用意ください。</p>
-      <p style="margin:0;">※ 同じ問題でも、PT版・OT版で解説のイラストやまとめ方が異なる場合があります。</p>
-    </aside>
+
     <h2 class="en-heading">資格を選んでください</h2>
     <div class="en-cards">
       <% { "pt" => "理学療法士", "ot" => "作業療法士" }.each do |profession, label| %>
@@ -66,6 +62,12 @@
         </a>
       <% end %>
     </div>
+
+    <aside id="en-usage-notice" aria-label="ご利用にあたって"
+      style="margin-top:16px;color:#63748a;">
+      <p style="margin:0 0 6px;">※ 国家試験の問題は、ご自身でご用意ください。</p>
+      <p style="margin:0;">※ 同じ問題でも、PT版・OT版で解説のイラストやまとめ方が異なる場合があります。</p>
+    </aside>
     <a class="en-back" href="<%= home_path %>">← ホームに戻る</a>
   <% elsif @exam_number.empty? %>
     <h2 class="en-heading">回数を選んでください</h2>

@@ -352,8 +352,8 @@
     margin-top: 13px;
     padding: 11px 9px 9px;
     background:
-      linear-gradient(145deg, rgba(255,255,255,0.95), rgba(234,244,255,0.95));
-    border: 1px solid #d3e2f1;
+      linear-gradient(145deg, #fffdf7, #f8faff);
+    border: 1px solid #e7d9b4;
     border-radius: 19px;
     box-shadow: 0 4px 13px rgba(29, 66, 108, 0.09);
   }
@@ -374,7 +374,7 @@
     content: "";
     width: 28px;
     height: 1px;
-    background: #aebdce;
+    background: #d2b96f;
   }
 
   .analysis-subtitle {
@@ -447,17 +447,29 @@
     background: linear-gradient(90deg, #1d51ad, #69a1ef);
   }
 
-  .wrong-all-link {
-    display: block;
-    margin: 9px auto 0;
-    padding: 4px 10px;
-    border: 0;
-    color: #55718f;
-    background: transparent;
-    font-size: 11px;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  .wrong-all-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px 8px;
+    border: 1px solid #e7d9b4;
+    border-radius: 11px;
+    color: #15375e;
+    background: linear-gradient(100deg, #fffaf0, #f4e5ba);
+    box-shadow: 0 5px 12px rgba(142, 113, 45, 0.12);
+    font-family: serif;
+    font-size: clamp(15px, 4vw, 20px);
     cursor: pointer;
+  }
+
+  .wrong-all-note {
+    margin: 4px 0 0;
+    text-align: center;
+    color: #778493;
+    font-size: 8px;
   }
 
   /* =========================
@@ -466,25 +478,25 @@
   .exam-guide {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 10px;
     margin-top: 13px;
-    padding: 15px 16px;
+    padding: 7px 12px;
     border: 1px solid #e7d9b4;
-    border-radius: 17px;
+    border-radius: 13px;
     background: linear-gradient(115deg, #fffdf7, #f8faff);
     box-shadow: 0 4px 13px rgba(29, 66, 108, 0.07);
   }
 
   .exam-guide-icon {
     display: flex;
-    flex: 0 0 45px;
+    flex: 0 0 30px;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #fbebbd;
-    font-size: 23px;
+    font-size: 17px;
   }
 
   .exam-guide-body {
@@ -496,13 +508,7 @@
     margin: 0;
     color: #15375e;
     font-family: serif;
-    font-size: clamp(17px, 4.5vw, 21px);
-  }
-
-  .exam-guide-description {
-    margin: 3px 0 0;
-    color: #66778b;
-    font-size: 11px;
+    font-size: clamp(16px, 4vw, 19px);
   }
 
   .exam-guide-badge {
@@ -897,7 +903,6 @@
       <span class="exam-guide-icon" aria-hidden="true">📖</span>
       <div class="exam-guide-body">
         <h2 class="exam-guide-title" id="exam-guide-title">国試解説ノート</h2>
-        <p class="exam-guide-description">過去問を○×や図解で丁寧に解説</p>
       </div>
       <span class="exam-guide-badge">準備中</span>
     </section>
@@ -1152,10 +1157,16 @@
 
     <button
       type="button"
-      class="wrong-all-link"
+      class="wrong-all-button"
       onclick="goWrongAll()">
-      全範囲の苦手問題を解く ›
+
+      🔥 苦手問題（全範囲） 〉
+
     </button>
+
+    <p class="wrong-all-note">
+      全分野の苦手問題をまとめて解く
+    </p>
   `;
 
 

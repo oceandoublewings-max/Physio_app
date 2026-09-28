@@ -203,7 +203,7 @@
     }
 
     async function refreshPurchases() {
-      const result = await purchases.getPurchases({
+      const result = await purchases.getPurchases({ onlyCurrentEntitlements: platform === "ios",
         productType: "inapp"
       });
       if (!Array.isArray(result.purchases)) {
@@ -212,7 +212,7 @@
       entries.forEach(entry => {
         entry.owned = result.purchases.some(purchase =>
           purchase.productIdentifier === entry.id &&
-          String(purchase.purchaseState) === "1"
+          (platform === "ios" || String(purchase.purchaseState) === "1")
         );
       });
     }
@@ -232,11 +232,11 @@
       });
     });
 
-    if (platform !== "android" || !purchases) {
+    if (!["android", "ios"].includes(platform) || !purchases) {
       entries.forEach(entry => {
         entry.buy.textContent = platform === "ios"
-          ? "iPhone版の購入は準備中"
-          : "購入はAndroidアプリ版で利用できます";
+          ? "購入機能を読み込めませんでした。アプリを更新してください"
+          : "購入はiPhone・Androidアプリ版で利用できます";
         entry.restore.disabled = true;
       });
       return;
@@ -290,7 +290,7 @@
           await refreshPurchases();
           entry.status.textContent = entry.owned
             ? "購入情報を復元しました。下のPDFを開けます。"
-            : "この商品の購入情報が見つかりませんでした。購入時のGoogleアカウントを確認してください。";
+            : "この商品の購入情報が見つかりませんでした。購入時のストアアカウントを確認してください。";
         } catch {
           entry.status.textContent =
             "購入情報を確認できませんでした。通信状態を確認して再度お試しください。";

@@ -66,7 +66,7 @@
     <div class="en-cards">
       <a class="en-card" href="<%= exam_notes_path(profession: @profession, exam: "60") %>">
         <span class="en-icon" aria-hidden="true">📘</span>
-        <span class="en-card-text"><span class="en-card-title">第60回</span><span class="en-card-note">午前・午後の解説ノートを準備中</span></span>
+        <span class="en-card-text"><span class="en-card-title">第60回</span><span class="en-card-note">午前・午後｜解説版＋空欄版のセット</span></span>
         <span class="en-arrow" aria-hidden="true">›</span>
       </a>
     </div>
@@ -74,14 +74,289 @@
   <% else %>
     <h2 class="en-heading">午前・午後を選択</h2>
     <div class="en-cards">
-      <% ["午前", "午後"].each do |period| %>
-        <section class="en-card en-product">
+
+      <% { "am" => "午前", "pm" => "午後" }.each do |code, period| %>
+        <% product_id = "#{@profession}#{@exam_number}_#{code}_notes" %>
+        <% file_prefix = "#{@profession}#{@exam_number}_#{code}" %>
+        <section class="en-card en-product"
+                 data-exam-product="<%= product_id %>">
           <h3><%= period %></h3>
-          <p class="en-description"><%= @profession.upcase %> 第<%= @exam_number %>回 <%= period %>の解説ノート</p>
-          <button type="button" class="en-disabled" disabled><%= period %>の解説ノートは準備中</button>
+          <p class="en-description">
+            <%= @profession.upcase %> 第<%= @exam_number %>回
+            <%= period %>の解説ノート<br>
+            解説版＋書き込み式の空欄版PDFのセットです。
+          </p>
+          <button type="button" class="en-buy" disabled>
+            購入情報を確認中…
+          </button>
+          <button type="button" class="en-restore" disabled>
+            購入を復元
+          </button>
+          <p class="en-status" role="status" aria-live="polite"></p>
+          <div class="en-files" hidden>
+            <a href="/pdfs/exam_notes/<%= @exam_number %>/<%= file_prefix %>_notes.pdf">
+              📖 解説版を開く
+            </a>
+            <a href="/pdfs/exam_notes/<%= @exam_number %>/<%= file_prefix %>_workbook.pdf">
+              ✏️ 空欄版を開く
+            </a>
+          </div>
         </section>
       <% end %>
     </div>
     <a class="en-back" href="<%= exam_notes_path(profession: @profession) %>">← 回数選択に戻る</a>
   <% end %>
 </main>
+
+<style>
+  .exam-notes .en-buy,
+  .exam-notes .en-restore {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px;
+    border-radius: 12px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .exam-notes .en-buy {
+    border: 1px solid #b99a46;
+    background: #ecd084;
+    color: #102b4d;
+  }
+  .exam-notes .en-restore {
+    margin-top: 9px;
+    border: 1px solid #b9c8da;
+    background: #fff;
+    color: #173b65;
+  }
+  .exam-notes button:disabled {
+    opacity: .6;
+    cursor: default;
+  }
+  .exam-notes .en-status {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #52677f;
+  }
+  .exam-notes .en-files[hidden] { display: none; }
+  .exam-notes .en-files a {
+    display: block;
+    margin-top: 10px;
+    padding: 14px;
+    border: 1px solid #d9e3ef;
+    border-radius: 10px;
+    background: #f4f8fd;
+    color: #173b65;
+    text-decoration: none;
+    font-weight: 700;
+  }
+</style>
+
+<script>
+(() => {
+  function initializeExamNotes() {
+    const cards = Array.from(
+      document.querySelectorAll("[data-exam-product]")
+    );
+    if (!cards.length || cards[0].dataset.initialized) return;
+
+    const entries = cards.map(card => {
+      card.dataset.initialized = "true";
+      return {
+        id: card.dataset.examProduct,
+        buy: card.querySelector(".en-buy"),
+        restore: card.querySelector(".en-restore"),
+        status: card.querySelector(".en-status"),
+        files: card.querySelector(".en-files"),
+        product: null,
+        owned: false
+      };
+    });
+
+    const capacitor = window.Capacitor;
+    const platform = capacitor?.getPlatform?.();
+    const purchases = capacitor?.Plugins?.NativePurchases ||
+                      capacitor?.Plugins?.NativePurchasesPlugin;
+    let busy = false;
+
+    function render() {
+      entries.forEach(entry => {
+        entry.files.hidden = !entry.owned;
+        entry.buy.disabled = busy || (!entry.owned && !entry.product);
+        entry.restore.disabled = busy;
+        entry.buy.textContent = entry.owned
+          ? "購入済み｜資料を見る"
+          : entry.product
+            ? `${entry.product.priceString}で購入（買い切り）`
+            : "商品情報を取得できません";
+      });
+    }
+
+    async function refreshPurchases() {
+      const result = await purchases.getPurchases({
+        productType: "inapp"
+      });
+      if (!Array.isArray(result.purchases)) {
+        throw new Error("Invalid purchase response");
+      }
+      entries.forEach(entry => {
+        entry.owned = result.purchases.some(purchase =>
+          purchase.productIdentifier === entry.id &&
+          String(purchase.purchaseState) === "1"
+        );
+      });
+    }
+
+    entries.forEach(entry => {
+      entry.files.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", async event => {
+          const browser = capacitor?.Plugins?.Browser;
+          if (!browser) return;
+          event.preventDefault();
+          try {
+            await browser.open({ url: link.href });
+          } catch {
+            window.location.assign(link.href);
+          }
+        });
+      });
+    });
+
+    if (platform !== "android" || !purchases) {
+      entries.forEach(entry => {
+        entry.buy.textContent = platform === "ios"
+          ? "iPhone版の購入は準備中"
+          : "購入はAndroidアプリ版で利用できます";
+        entry.restore.disabled = true;
+      });
+      return;
+    }
+
+    entries.forEach(entry => {
+      entry.buy.addEventListener("click", async () => {
+        if (busy) return;
+        if (entry.owned) {
+          entry.files.scrollIntoView({
+            behavior: "smooth", block: "center"
+          });
+          return;
+        }
+        if (!entry.product) return;
+
+        busy = true;
+        render();
+        entry.buy.textContent = "購入処理中…";
+        entry.status.textContent = "";
+
+        try {
+          await purchases.purchaseProduct({
+            productIdentifier: entry.id,
+            productType: "inapp",
+            quantity: 1,
+            isConsumable: false,
+            autoAcknowledgePurchases: true
+          });
+          await refreshPurchases();
+          entry.status.textContent = entry.owned
+            ? "購入を確認しました。下のPDFを開けます。"
+            : "購入完了をまだ確認できません。支払い完了後に「購入を復元」を押してください。";
+        } catch {
+          entry.status.textContent =
+            "購入完了を確認できませんでした。支払い済みの場合は「購入を復元」を押してください。";
+        } finally {
+          busy = false;
+          render();
+        }
+      });
+
+      entry.restore.addEventListener("click", async () => {
+        if (busy) return;
+        busy = true;
+        render();
+        entry.status.textContent = "購入情報を確認しています…";
+
+        try {
+          await purchases.restorePurchases();
+          await refreshPurchases();
+          entry.status.textContent = entry.owned
+            ? "購入情報を復元しました。下のPDFを開けます。"
+            : "この商品の購入情報が見つかりませんでした。購入時のGoogleアカウントを確認してください。";
+        } catch {
+          entry.status.textContent =
+            "購入情報を確認できませんでした。通信状態を確認して再度お試しください。";
+        } finally {
+          busy = false;
+          render();
+        }
+      });
+    });
+
+    async function load() {
+      try {
+        const support = await purchases.isBillingSupported();
+        if (!support.isBillingSupported) {
+          entries.forEach(entry => {
+            entry.buy.textContent = "この端末では購入を利用できません";
+          });
+          return;
+        }
+
+        try {
+          await refreshPurchases();
+        } catch {
+          entries.forEach(entry => {
+            entry.status.textContent =
+              "購入済みの場合は「購入を復元」を押してください。";
+          });
+        }
+
+        try {
+          const result = await purchases.getProducts({
+            productIdentifiers: entries.map(entry => entry.id),
+            productType: "inapp"
+          });
+          entries.forEach(entry => {
+            entry.product = (result.products || []).find(product =>
+              product.identifier === entry.id && product.priceString
+            ) || null;
+          });
+        } catch {
+          entries.forEach(entry => {
+            entry.status.textContent =
+              "価格を取得できませんでした。時間をおいて画面を開き直してください。";
+          });
+        }
+        render();
+      } catch {
+        entries.forEach(entry => {
+          entry.buy.textContent = "購入機能を読み込めませんでした";
+          entry.status.textContent = "アプリを開き直してください。";
+        });
+      }
+    }
+    load();
+  }
+
+  document.addEventListener("turbo:load", initializeExamNotes);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeExamNotes);
+  } else {
+    initializeExamNotes();
+  }
+
+  document.addEventListener("turbo:before-cache", () => {
+    document.querySelectorAll("[data-exam-product]").forEach(card => {
+      delete card.dataset.initialized;
+      card.querySelector(".en-files").hidden = true;
+      card.querySelector(".en-status").textContent = "";
+      const button = card.querySelector(".en-buy");
+      button.disabled = true;
+      button.textContent = "購入情報を確認中…";
+      card.querySelector(".en-restore").disabled = true;
+      card.replaceWith(card.cloneNode(true));
+    });
+  });
+})();
+</script>

@@ -476,6 +476,7 @@
      国試解説ノート
   ========================= */
   .exam-guide {
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -899,13 +900,13 @@
     <!-- =========================
          国試解説ノート
     ========================= -->
-    <section class="exam-guide" aria-labelledby="exam-guide-title">
+    <a href="<%= exam_notes_path %>" class="exam-guide" aria-labelledby="exam-guide-title">
       <span class="exam-guide-icon" aria-hidden="true">📖</span>
       <div class="exam-guide-body">
         <h2 class="exam-guide-title" id="exam-guide-title">国試解説ノート</h2>
       </div>
-      <span class="exam-guide-badge">準備中</span>
-    </section>
+      <span class="exam-guide-badge" aria-hidden="true">›</span>
+    </a>
 
 
     <!-- =========================

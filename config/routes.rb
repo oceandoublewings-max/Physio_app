@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root "sessions#login"
 
   get "/home", to: "home#index", as: :home
+  get "/exam_notes", to: "home#exam_notes", as: :exam_notes
 
   get "/login", to: "sessions#login"
   get "/mobile_auth/csrf", to: "mobile_auth#csrf"

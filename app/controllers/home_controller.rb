@@ -40,6 +40,17 @@ class HomeController < ApplicationController
   def illustrations
   end
 
+  # Navigation only until the sample and paid notes are ready.
+  def exam_notes
+    @profession = params[:profession].to_s
+    @exam_number = params[:exam].to_s
+    return head :not_found unless ["", "pt", "ot"].include?(@profession)
+    return head :not_found unless ["", "60"].include?(@exam_number)
+    return head :not_found if @profession.empty? && !@exam_number.empty?
+
+    @profession_label = { "pt" => "PT（理学療法士）", "ot" => "OT（作業療法士）" }[@profession]
+  end
+
   def category
     @category = params[:name]
 

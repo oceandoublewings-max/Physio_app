@@ -44,6 +44,10 @@
     </p>
   </header>
 
+  <aside aria-label="教材のご利用について" style="margin:16px 0;padding:12px 14px;border:1px solid #e7dfca;border-radius:12px;background:#fffaf0;color:#52677f;">
+    <p style="margin:0;font-size:12px !important;font-weight:400 !important;line-height:1.8 !important;text-align:left !important;">本教材の無断転載・複製・再配布・販売を禁止します。<br>ご購入者本人の学習目的での閲覧・印刷に限りご利用ください。</p>
+  </aside>
+
   <% if @profession.empty? %>
     <section class="en-sample" aria-labelledby="en-sample-title">
       <h2 id="en-sample-title">無料サンプル</h2>
@@ -114,8 +118,7 @@
     </div>
     <a class="en-back" href="<%= exam_notes_path(profession: @profession) %>">← 回数選択に戻る</a>
   <% end %>
-  <footer aria-label="教材の著作権・ご利用について" style="margin-top:24px;padding-top:16px;border-top:1px solid #dce3eb;color:#52677f;">
-    <p style="margin:0 0 8px;font-size:12px !important;font-weight:400 !important;line-height:1.8 !important;text-align:left !important;">本教材の無断転載・複製・再配布・販売を禁止します。<br>ご購入者本人の学習目的での閲覧・印刷に限りご利用ください。</p>
+  <footer aria-label="著作権表記" style="margin-top:24px;padding-top:16px;border-top:1px solid #dce3eb;color:#52677f;">
     <p style="margin:0;font-size:12px !important;font-weight:400 !important;line-height:1.8 !important;text-align:center !important;">© bonebuddystudio</p>
   </footer>
 </main>

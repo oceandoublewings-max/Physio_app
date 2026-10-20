@@ -69,6 +69,8 @@ group :development do
 end
 
 group :test do
+  # Rails 7.1 test runner uses the Minitest 5 run signature.
+  gem "minitest", "~> 5.25.5"
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"

@@ -6,6 +6,10 @@ class DailyStudyCalendarTest < ActionDispatch::IntegrationTest
   self.fixture_table_names = []
 
   setup do
+    https!
+    Stamp.create!(name: "通常1", season: "normal", image: "/images/stamps/normal/stamp_001.png")
+    Stamp.create!(name: "通常2", season: "normal", image: "/images/stamps/normal/stamp_002.png")
+    Stamp.create!(name: "夏1", season: "summer", image: "/images/stamps/summer/summer_stamp_001.png")
     @user = User.create!(email: "daily-test@example.test", password: "password123", guest: false)
     @question = Question.create!(content: "test", answer: "true", qtype: "true_false")
     sign_in @user

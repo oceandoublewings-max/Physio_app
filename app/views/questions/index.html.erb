@@ -1227,7 +1227,26 @@ function goIllustration(addWrong) {
    Allow scrolling on small screens / enlarged text instead of clipping controls. */
 .result-page { max-width:460px; margin:auto; padding:8px 12px max(12px, env(safe-area-inset-bottom)); }
 .result-page .result-title { font-size:22px; }
-.result-page .result-spacer { height:18px; }
+/* Anchor the mascot to the result content, below the title and safe area. */
+.result-page { position:relative; isolation:isolate; }
+.result-page::before {
+  content:"";
+  position:absolute;
+  top:38px;
+  left:50%;
+  transform:translateX(-50%);
+  width:200px;
+  height:290px;
+  background:var(--result-mascot, url('/images/top/sad_skeleton.png')) center top / 100% auto no-repeat;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+  z-index:-1;
+}
+.result-page .result-spacer { height:128px; }
+@media (max-height:740px) {
+  .result-page::before { width:170px; height:250px; }
+  .result-page .result-spacer { height:108px; }
+}
 .result-page .score-card { width:100%; padding:12px; border-radius:20px; }
 .result-page .score-heading { font-size:21px; margin:0 0 8px; }
 .result-page .score-ring-wrap { width:190px; }
@@ -1301,10 +1320,7 @@ const skeletonImage =
     ? "url('/images/top/happy_skeleton.png')"
     : "url('/images/top/sad_skeleton.png')";
 
-document.body.style.setProperty("background-image", skeletonImage, "important");
-document.body.style.setProperty("background-repeat", "no-repeat", "important");
-document.body.style.setProperty("background-position", "right 12px top 12px", "important");
-document.body.style.setProperty("background-size", "90px", "important");
+document.querySelector(".result-page").style.setProperty("--result-mascot", skeletonImage);
 
 // 結果画面表示後にスタンプ演出
 window.stampRedirectAfterQueue = false;

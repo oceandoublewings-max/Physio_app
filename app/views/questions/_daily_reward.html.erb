@@ -1,0 +1,14 @@
+<% if @daily_record %>
+  <section class="daily-reward" aria-label="今日のスタンプ">
+    <% if @daily_reward_new %>
+      <h3>🎉 今日のスタンプGET！</h3>
+      <div class="daily-reward-detail">
+        <%= image_tag @daily_record.stamp.display_image, alt: @daily_record.stamp.name %>
+        <div><strong>今日も1問、おつかれさま！</strong><p>カレンダーと図鑑に追加しました</p></div>
+      </div>
+    <% else %>
+      <strong>✓ 今日のスタンプ獲得済み</strong>
+    <% end %>
+    <%= link_to "毎日の記録を見る ›", daily_records_path, class: "daily-record-link" %>
+  </section>
+<% end %>

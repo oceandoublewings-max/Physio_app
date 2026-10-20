@@ -414,181 +414,37 @@
   <div class="event-sections">
 
 
-    <!-- お正月 -->
-    <section class="event-section">
-
-      <div class="event-section-heading">
-        <h2 class="event-section-title">
-          🌸 Spring Collection
-        </h2>
-
-        <span class="event-section-status">
-          開催期間：3月〜5月
-        </span>
-      </div>
-
-      <div class="event-stamp-grid">
-
-        <% (1..100).each do |i| %>
-
-          <% file = "events/spring_%03d.png" % i %>
-
-          <div class="event-stamp-cell">
-
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
-
-              <%= image_tag "/images/#{file}",
-                onclick: "openStamp('/images/#{file}')"
-              %>
-
-            <% else %>
-
-              <span class="event-stamp-number">
-                <%= "%03d" % i %>
-              </span>
-
-            <% end %>
-
-          </div>
-
-        <% end %>
-
-      </div>
-
-    </section>
-
-
-    <!-- バレンタイン -->
-    <section class="event-section">
-
-      <div class="event-section-heading">
-        <h2 class="event-section-title">
-          🌻 Summer Collection
-        </h2>
-
-        <span class="event-section-status">
-          開催期間：6月〜8月
-        </span>
-      </div>
-
-      <div class="event-stamp-grid">
-
-        <% (1..100).each do |i| %>
-
-          <% file = "events/summer_%03d.png" % i %>
-
-          <div class="event-stamp-cell">
-
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
-
-              <%= image_tag "/images/#{file}",
-                onclick: "openStamp('/images/#{file}')"
-              %>
-
-            <% else %>
-
-              <span class="event-stamp-number">
-                <%= "%03d" % i %>
-              </span>
-
-            <% end %>
-
-          </div>
-
-        <% end %>
-
-      </div>
-
-    </section>
-
-
-    <!-- 夏祭り -->
-    <section class="event-section">
-
-      <div class="event-section-heading">
-        <h2 class="event-section-title">
-          🍂 Autumn Collection
-        </h2>
-
-        <span class="event-section-status">
-          開催期間：9月〜11月
-        </span>
-      </div>
-
-      <div class="event-stamp-grid">
-
-        <% (1..100).each do |i| %>
-
-          <% file = "events/autumn_%03d.png" % i %>
-
-          <div class="event-stamp-cell">
-
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
-
-              <%= image_tag "/images/#{file}",
-                onclick: "openStamp('/images/#{file}')"
-              %>
-
-            <% else %>
-
-              <span class="event-stamp-number">
-                <%= "%03d" % i %>
-              </span>
-
-            <% end %>
-
-          </div>
-
-        <% end %>
-
-      </div>
-
-    </section>
-
-
-    <!-- ハロウィン -->
-    <section class="event-section">
-
-      <div class="event-section-heading">
-        <h2 class="event-section-title">
-          ❄️ Winter Collection
-        </h2>
-
-        <span class="event-section-status">
-          開催期間：12月〜2月
-        </span>
-      </div>
-
-      <div class="event-stamp-grid">
-
-        <% (1..100).each do |i| %>
-
-          <% file = "events/winter_%03d.png" % i %>
-
-          <div class="event-stamp-cell">
-
-            <% if File.exist?(Rails.root.join("public", "images", file)) %>
-
-              <%= image_tag "/images/#{file}",
-                onclick: "openStamp('/images/#{file}')"
-              %>
-
-            <% else %>
-
-              <span class="event-stamp-number">
-                <%= "%03d" % i %>
-              </span>
-
-            <% end %>
-
-          </div>
-
-        <% end %>
-
-      </div>
-
-    </section>
-
+    <% collections = { "spring" => ["🌸 Spring Collection", "3月〜5月"],
+                       "summer" => ["🌻 Summer Collection", "6月〜8月"],
+                       "autumn" => ["🍂 Autumn Collection", "9月〜11月"],
+                       "winter" => ["❄️ Winter Collection", "12月〜2月"],
+                       "halloween" => ["🎃 Halloween", "10月"],
+                       "christmas" => ["🎄 Christmas", "12月"],
+                       "new_year" => ["🎍 New Year", "1月"] } %>
+    <% stamps_by_season = Stamp.where(season: collections.keys).order(:id).group_by(&:season) %>
+    <% collections.each do |season, (title, period)| %>
+      <% stamps = stamps_by_season.fetch(season, []) %>
+      <% next if stamps.empty? && !%w[spring summer autumn winter].include?(season) %>
+      <section class="event-section">
+        <div class="event-section-heading">
+          <h2 class="event-section-title"><%= title %></h2>
+          <span class="event-section-status">開催期間：<%= period %></span>
+        </div>
+        <% if stamps.empty? %><p>スタンプ準備中</p><% end %>
+        <div class="event-stamp-grid">
+          <% stamps.each_with_index do |stamp, index| %>
+            <div class="event-stamp-cell">
+              <% if @owned_stamp_ids.include?(stamp.id) && stamp.image_available? %>
+                <%= image_tag stamp.display_image, alt: stamp.name,
+                    data: { stamp_preview: stamp.display_image }, style: "cursor:pointer;" %>
+              <% else %>
+                <span class="event-stamp-number"><%= format('%03d', index + 1) %></span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </section>
+    <% end %>
 
 
 
@@ -616,4 +472,10 @@
   function closeStamp() {
     document.getElementById("stampModal").style.display = "none";
   }
+</script>
+
+<script>
+document.querySelectorAll('[data-stamp-preview]').forEach(image => {
+  image.addEventListener('click', () => openStamp(image.dataset.stampPreview));
+});
 </script>

@@ -20,6 +20,8 @@ class QuestionsController < ApplicationController
   }.freeze
 
   before_action :validate_study_subcategory, only: [:index, :select]
+  before_action :prepare_daily_reward, only: :index
+  after_action :consume_daily_reward, only: :index
 
   def subcategories
     @category = (params[:category].presence || "解剖").delete_suffix("学")
@@ -172,9 +174,12 @@ def review
 end
 
 def answered
-  return head :unauthorized unless current_user
+  return head :unauthorized unless current_user && !current_user.guest?
+  return head :unprocessable_entity unless Question.exists?(id: params[:question_id])
 
   new_stamp = nil
+  daily_record = nil
+  daily_awarded = false
   reward_milestones = [20, 50, 100, 300, 500, 1000]
 
   # 素早い連続タップでも回答数が競合しないよう、ユーザー行をロックして処理する。
@@ -186,11 +191,7 @@ def answered
     # 「ちょうど20問」の通信に失敗しても、次の回答時に未付与分を回収する。
     # 初回登録スタンプがあるユーザーは、その1個も所持予定数に含める。
     achieved_reward_count = reward_milestones.count { |milestone| count >= milestone }
-    first_login_reward_count = current_user.first_login_rewarded? ? 1 : 0
-    expected_normal_stamp_count = achieved_reward_count + first_login_reward_count
-    owned_normal_stamps = current_user.stamps.where(season: "normal")
-
-    if owned_normal_stamps.count < expected_normal_stamp_count
+    if current_user.milestone_rewards_count < achieved_reward_count
       owned_stamp_ids = current_user.stamps.pluck(:id)
 
       stamp = Stamp.where(season: "normal")
@@ -200,6 +201,7 @@ def answered
 
       if stamp
         current_user.user_stamps.create!(stamp: stamp)
+        current_user.increment!(:milestone_rewards_count)
 
         new_stamp = {
           id: stamp.id,
@@ -208,16 +210,35 @@ def answered
         }
       end
     end
+
+    today = DailyStudyRecord.today
+    daily_awarded = !current_user.daily_study_records.exists?(studied_on: today)
+    daily_record = DailyStudyRecord.award_for!(current_user, date: today)
+    daily_awarded &&= daily_record.present?
   end
+  session[:daily_reward_record_id] = daily_record.id if daily_awarded
 
   render json: {
     status: "ok",
+    daily_stamp_awarded: daily_awarded,
     answered_questions_count: current_user.answered_questions_count,
     new_stamp: new_stamp
   }
 end
 
   private
+
+  def consume_daily_reward
+    session.delete(:daily_reward_record_id) if @finished && @daily_reward_new
+  end
+
+  def prepare_daily_reward
+    return unless current_user && !current_user.guest?
+    response.headers["Cache-Control"] = "no-store"
+    @daily_record = current_user.daily_study_records.includes(:stamp).find_by(studied_on: DailyStudyRecord.today)
+    @daily_reward_new = @daily_record && session[:daily_reward_record_id] == @daily_record.id
+    # Consume only on the result render, not on intermediate question pages.
+  end
 
   def validate_study_subcategory
     return if params[:subcategory].blank?

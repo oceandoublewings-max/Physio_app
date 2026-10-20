@@ -1,0 +1,47 @@
+name: Daily calendar check
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'config/routes.rb'
+      - 'db/migrate/**'
+      - 'test/integration/daily_study_calendar_test.rb'
+      - '.github/workflows/daily-calendar-check.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 10s
+          --health-timeout 5s --health-retries 5
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/physio_app_test
+      SECRET_KEY_BASE: daily-calendar-test-only-not-a-production-secret
+      GOOGLE_CLIENT_ID: test
+      GOOGLE_CLIENT_SECRET: test
+      APPLE_CLIENT_ID: test
+      APPLE_TEAM_ID: test
+      APPLE_KEY_ID: test
+      APPLE_PRIVATE_KEY: test
+      PARALLEL_WORKERS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+          bundler-cache: true
+      - run: bundle exec rails db:create db:migrate
+      - name: Verify migrated stamp catalog and print generated schema
+        run: |
+          bundle exec rails runner 'abort "Missing normal catalog" unless Stamp.where(season: "normal").count == 59; abort "Missing summer catalog" unless Stamp.where(season: "summer").count == 50'
+          ruby -rbase64 -e 'puts "SCHEMA_BASE64=" + Base64.strict_encode64(File.read("db/schema.rb"))'
+      - run: bundle exec rails test test/integration/daily_study_calendar_test.rb

@@ -20,6 +20,7 @@ class HomeController < ApplicationController
     :kinesiology_analysis,
 
     :stamps,
+    :daily_records,
     :event_stamps,
 
     :contact,
@@ -129,6 +130,20 @@ class HomeController < ApplicationController
   def sample_pdf_kind
     kind = params[:kind].to_s.strip
     SAMPLE_PAGE_COUNTS.key?(kind) ? kind : nil
+  end
+
+  def daily_records
+    response.headers["Cache-Control"] = "no-store"
+    @today = DailyStudyRecord.today
+    month = params[:month].to_s
+    @month = month.match?(/\A\d{4}-\d{2}\z/) ? Date.strptime(month, "%Y-%m") : @today.beginning_of_month
+    return head :bad_request unless @month.year.between?(2000, 2100)
+    @records = current_user.daily_study_records.includes(:stamp)
+                           .where(studied_on: @month.all_month).index_by(&:studied_on)
+    @today_record = current_user.daily_study_records.includes(:stamp).find_by(studied_on: @today)
+    @total_days = current_user.daily_study_records.count
+  rescue Date::Error
+    head :bad_request
   end
 
   def stamps

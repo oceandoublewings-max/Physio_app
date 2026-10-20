@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :omniauthable,
          omniauth_providers: [:google_oauth2, :apple]
 
+  has_many :daily_study_records, dependent: :destroy
   has_many :user_stamps, dependent: :destroy
   has_many :stamps, through: :user_stamps
 

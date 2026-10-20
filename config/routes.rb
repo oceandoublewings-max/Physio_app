@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get "/physiology", to: "home#physiology"
   get "/materials", to: "questions#materials"
   get "/stamps", to: "home#stamps"
+  get "/daily_records", to: "home#daily_records", as: :daily_records
 
   get "/contact", to: "home#contact", as: :contact
   post "/contact", to: "home#submit_contact", as: :submit_contact

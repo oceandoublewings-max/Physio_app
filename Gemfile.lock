@@ -176,9 +176,7 @@ GEM
     marcel (1.2.1)
     matrix (0.4.3)
     mini_mime (1.1.5)
-    minitest (6.0.6)
-      drb (~> 2.0)
-      prism (~> 1.5)
+    minitest (5.25.5)
     msgpack (1.8.0)
     multi_xml (0.9.1)
       bigdecimal (>= 3.1, < 5)
@@ -354,6 +352,7 @@ DEPENDENCIES
   dotenv-rails
   importmap-rails
   jbuilder
+  minitest (~> 5.25.5)
   omniauth
   omniauth-apple
   omniauth-google-oauth2

@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_21_223441) do
+ActiveRecord::Schema[7.1].define(version: 2026_10_21_000001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "daily_study_records", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "stamp_id", null: false
+    t.date "studied_on", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stamp_id"], name: "index_daily_study_records_on_stamp_id"
+    t.index ["user_id", "studied_on"], name: "index_daily_study_records_on_user_id_and_studied_on", unique: true
+    t.index ["user_id"], name: "index_daily_study_records_on_user_id"
+  end
 
   create_table "pdf_products", force: :cascade do |t|
     t.string "title"
@@ -61,7 +72,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_21_223441) do
     t.boolean "guest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
+    t.string "email"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -70,11 +81,14 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_21_223441) do
     t.string "uid"
     t.boolean "first_login_rewarded"
     t.integer "answered_questions_count", default: 0, null: false
+    t.integer "milestone_rewards_count", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "daily_study_records", "stamps"
+  add_foreign_key "daily_study_records", "users"
   add_foreign_key "user_stamps", "stamps"
   add_foreign_key "user_stamps", "users"
 end

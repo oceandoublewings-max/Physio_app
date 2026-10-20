@@ -1,0 +1,68 @@
+<style>
+.daily-page { max-width:520px;margin:0 auto;padding:16px 12px max(20px, env(safe-area-inset-bottom));color:#174f8a;font-family:system-ui,sans-serif; }
+.daily-page * { box-sizing:border-box; }
+.daily-page a { color:#174f8a; }
+.daily-heading { display:flex;align-items:center;gap:16px; }
+.daily-heading a { min-height:44px;display:flex;align-items:center;text-decoration:none; }
+.daily-heading h1 { font-size:23px;margin:0; }
+.daily-subtitle { text-align:center;font-weight:700;margin:16px 0; }
+.daily-calendar { background:white;border-radius:20px;padding:12px;box-shadow:0 6px 20px #174f8a14; }
+.daily-month { display:flex;align-items:center;justify-content:space-between;margin-bottom:10px; }
+.daily-month h2 { font-size:20px;margin:0; }
+.daily-month a { min-width:44px;min-height:44px;display:grid;place-items:center;font-size:23px;text-decoration:none; }
+.daily-grid { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px; }
+.daily-weekday { text-align:center;font-size:13px;padding:6px 0;background:#f3f7fb;border-radius:5px; }
+.daily-weekday:first-child { color:#da5378; }.daily-weekday:nth-child(7) { color:#347dd9; }
+.daily-cell { min-height:66px;border:1px solid #e4edf5;border-radius:7px;padding:3px;min-width:0; }
+.daily-cell.is-today { border:2px solid #4da3ff;background:#f0f7ff; }
+.daily-cell.is-outside { background:#fafbfd;opacity:.4; }
+.daily-date { display:block;font-size:12px;line-height:16px; }
+.daily-stamp { margin:0; }.daily-stamp summary { list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center; }
+.daily-stamp summary::-webkit-details-marker { display:none; }
+.daily-stamp img { display:block;width:100%;height:43px;object-fit:contain; }
+.daily-stamp[open] { position:relative; }
+.daily-stamp-caption { position:absolute;z-index:2;left:0;width:140px;padding:8px;background:white;border:1px solid #dce6ef;border-radius:8px;box-shadow:0 4px 14px #174f8a22;font-size:12px; }
+.daily-cell:nth-child(7n) .daily-stamp-caption,.daily-cell:nth-child(7n - 1) .daily-stamp-caption { left:auto;right:0; }
+.daily-status { background:#eaf5ff;border-radius:16px;padding:14px;text-align:center;margin-top:14px; }
+.daily-status h2 { font-size:19px;margin:0 0 6px; }.daily-status p { margin:4px 0;font-size:14px; }
+.daily-collection { display:flex;gap:8px;margin-top:12px; }.daily-collection a { flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;background:#4da3ff;color:white;text-decoration:none;border-radius:12px;font-size:14px;font-weight:700; }
+.daily-help { text-align:center;font-size:12px;color:#65758a;line-height:1.8; }
+</style>
+<main class="daily-page">
+  <header class="daily-heading"><%= link_to "‹ TOP", home_path %><h1>毎日の記録</h1></header>
+  <p class="daily-subtitle">1日1問、コツコツの足あと</p>
+  <section class="daily-calendar" aria-label="学習カレンダー">
+    <nav class="daily-month" aria-label="表示月">
+      <%= link_to "‹", daily_records_path(month: @month.prev_month.strftime("%Y-%m")), aria: { label: "前の月" } %>
+      <h2><%= @month.strftime("%Y年%-m月") %></h2>
+      <%= link_to "›", daily_records_path(month: @month.next_month.strftime("%Y-%m")), aria: { label: "次の月" } %>
+    </nav>
+    <div class="daily-grid">
+      <% %w[日 月 火 水 木 金 土].each do |day| %><div class="daily-weekday"><%= day %></div><% end %>
+      <% first = @month.beginning_of_month.beginning_of_week(:sunday) %>
+      <% last = @month.end_of_month.end_of_week(:sunday) %>
+      <% (first..last).each do |day| %>
+        <% record = @records[day] %>
+        <div class="daily-cell<%= ' is-today' if day == @today %><%= ' is-outside' if day.month != @month.month %>" <%= 'aria-current=date' if day == @today %>>
+          <time class="daily-date" datetime="<%= day.iso8601 %>"><%= day.day %></time>
+          <% if record %>
+            <details class="daily-stamp">
+              <summary aria-label="<%= day.strftime('%-m月%-d日') %>：<%= record.stamp.name %>"><%= image_tag record.stamp.display_image, alt: record.stamp.name %></summary>
+              <div class="daily-stamp-caption"><%= record.stamp.name %></div>
+            </details>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+  <section class="daily-status">
+    <% if @today_record %>
+      <h2>✓ 今日のスタンプ獲得済み</h2><p>今日も1問、おつかれさま！</p>
+    <% else %>
+      <h2>今日の1問でスタンプGET！</h2><p>正解・不正解に関係なくもらえるよ</p>
+    <% end %>
+    <p>今月 <strong><%= @records.size %></strong>日 ／ 累計 <strong><%= @total_days %></strong>日</p>
+  </section>
+  <div class="daily-collection"><%= link_to "通常スタンプ図鑑 ›", stamps_path %><%= link_to "イベント図鑑 ›", event_stamps_path %></div>
+  <p class="daily-help">ログインして1問解くと、1日1個もらえる<br>毎日0:00更新（日本時間）<br>通常＋その季節のスタンプからランダムで登場<br>同じスタンプが出ることもあります</p>
+</main>

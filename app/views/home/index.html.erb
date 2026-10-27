@@ -679,6 +679,36 @@
   from{opacity:0;}
   to{opacity:1;}
 }
+
+  /* Keep both shortcuts within the existing 46px home row. */
+  .home-shortcuts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; margin-top:13px; }
+  .home-shortcuts .exam-guide { min-width:0; min-height:46px; margin-top:0; padding:7px 6px; gap:5px; }
+  .home-shortcuts .exam-guide-icon { flex-basis:24px; width:24px; height:28px; font-size:16px; }
+  .home-shortcuts .exam-guide-title { font-size:clamp(11px,3.1vw,17px); line-height:1.25; white-space:nowrap; }
+  .home-shortcuts .exam-guide-badge { padding:3px; background:transparent; }
+  .home-shortcuts .line-shortcut { border-color:#a7dcb7; background:linear-gradient(115deg,#f1fff6,#f8fbff); }
+  .line-shortcut .exam-guide-icon { background:#dcf5e5; }
+  .line-shortcut .exam-guide-title { color:#186b42; }
+  .line-shortcut-note { display:block; color:#536e60; font-size:clamp(8px,2.1vw,11px); line-height:1.3; white-space:nowrap; }
+  @media (max-width:360px) {
+    .home-shortcuts .exam-guide { gap:3px; padding-inline:4px; }
+    .home-shortcuts .exam-guide-icon { flex-basis:18px; width:18px; font-size:14px; }
+    .home-shortcuts .exam-guide-badge { display:none; }
+  }
+  .line-invite { width:min(420px,calc(100vw - 32px)); max-height:calc(100dvh - 48px); padding:28px 20px 20px; border:0; border-radius:22px; color:#102847; background:#fff; box-shadow:0 18px 48px #10284740; text-align:center; overflow:auto; }
+  .line-invite:not([open]) { display:none; }
+  .line-invite::backdrop { background:rgba(16,40,71,.6); }
+  .line-invite-close { position:absolute; top:10px; right:10px; width:44px; height:44px; border:0; border-radius:50%; background:#f0f3f6; color:#102847; font-size:26px; cursor:pointer; }
+  .line-invite-gift { margin:0 0 12px; font-size:46px; }
+  .line-invite-title { margin:0 0 18px; font-family:serif; font-size:clamp(19px,5vw,25px); line-height:1.5; }
+  .line-invite-benefit { display:flex; align-items:center; gap:12px; margin:10px 0; padding:14px 12px; border-radius:14px; background:#eff9f4; text-align:left; font-size:15px; line-height:1.6; }
+  .line-invite-benefit > span { font-size:28px; }
+  .line-invite-skip { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; margin:12px 0; font-size:13px; cursor:pointer; }
+  .line-invite-skip input { width:18px; height:18px; accent-color:#168642; }
+  .line-invite-action { display:block; padding:15px 8px; border-radius:14px; background:linear-gradient(100deg,#159c45,#078342); color:#fff; text-decoration:none; font-size:clamp(13px,3.6vw,17px); font-weight:bold; }
+  .line-invite-note { margin:10px 0 0; font-size:11px; line-height:1.5; color:#617181; }
+  .line-invite :focus-visible, .home-shortcuts a:focus-visible { outline:3px solid #236fd0; outline-offset:3px; }
+
 </style>
 
 
@@ -909,6 +939,7 @@
     <!-- =========================
          国試解説ノート
     ========================= -->
+    <div class="home-shortcuts">
     <a href="<%= exam_notes_path %>" class="exam-guide" aria-labelledby="exam-guide-title">
       <span class="exam-guide-icon" aria-hidden="true">📖</span>
       <div class="exam-guide-body">
@@ -916,6 +947,15 @@
       </div>
       <span class="exam-guide-badge" aria-hidden="true">›</span>
     </a>
+      <a href="https://lin.ee/9oc8YyZd" class="exam-guide line-shortcut" id="line-invite-trigger" target="_blank" rel="noopener noreferrer" data-turbo="false">
+        <span class="exam-guide-icon" aria-hidden="true">🎁</span>
+        <span class="exam-guide-body">
+          <span class="exam-guide-title">公式LINE</span>
+          <span class="line-shortcut-note">無料教材を受け取る</span>
+        </span>
+        <span class="exam-guide-badge" aria-hidden="true">›</span>
+      </a>
+    </div>
 
 
     <!-- =========================
@@ -950,6 +990,51 @@
 
 </div>
 
+
+
+<dialog class="line-invite" id="line-invite-dialog" aria-labelledby="line-invite-title">
+  <button type="button" class="line-invite-close" id="line-invite-close" aria-label="案内を閉じる" autofocus>×</button>
+  <div class="line-invite-gift" aria-hidden="true">🎁</div>
+  <h2 class="line-invite-title" id="line-invite-title">公式LINEで<br>無料の学習資料をプレゼント！</h2>
+  <p class="line-invite-benefit"><span aria-hidden="true">📖</span>シンプルなイラスト資料で<br>基礎を復習</p>
+  <p class="line-invite-benefit"><span aria-hidden="true">✏️</span>毎月の○×問題にも<br>挑戦できるよ！</p>
+  <label class="line-invite-skip"><input type="checkbox" id="line-invite-skip">次回からこの案内を表示しない</label>
+  <a href="https://lin.ee/9oc8YyZd" class="line-invite-action" id="line-invite-action" target="_blank" rel="noopener noreferrer" data-turbo="false">LINEで無料教材を受け取る ›</a>
+  <p class="line-invite-note">公式LINEの友だち追加画面が開きます</p>
+</dialog>
+<script>
+(() => {
+  const trigger = document.getElementById('line-invite-trigger');
+  const dialog = document.getElementById('line-invite-dialog');
+  const skip = document.getElementById('line-invite-skip');
+  const key = 'line_invite_skip_v1_<%= current_user&.id || "anonymous" %>';
+  // Preference only: this is not a LINE friendship-status check.
+  let skipInMemory = false;
+  function shouldSkip() {
+    try { return localStorage.getItem(key) === 'true' || skipInMemory; }
+    catch (_) { return skipInMemory; }
+  }
+  skip.addEventListener('change', () => {
+    skipInMemory = skip.checked;
+    try {
+      if (skip.checked) localStorage.setItem(key, 'true');
+      else localStorage.removeItem(key);
+    } catch (_) { /* Keep the link usable when storage is unavailable. */ }
+  });
+  trigger.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || shouldSkip() || typeof dialog.showModal !== 'function') return;
+    event.preventDefault();
+    skip.checked = shouldSkip();
+    dialog.showModal();
+  });
+  document.getElementById('line-invite-close').addEventListener('click', () => dialog.close());
+  document.getElementById('line-invite-action').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
+})();
+</script>
 
 <% if @show_stamp_reward.present? %>
 <div id="stamp-reward-modal" class="stamp-reward-overlay">
@@ -1281,3 +1366,4 @@ if (stampModal && closeStampButton) {
 }
 </script>
 <script>document.getElementById("settings-overlay")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});document.getElementById("close-settings")?.addEventListener("click",()=>{document.getElementById("settings-overlay").classList.remove("is-open");document.getElementById("sound-settings-panel").classList.remove("is-open");});</script>
+

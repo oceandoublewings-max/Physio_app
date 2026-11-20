@@ -794,10 +794,10 @@
 
         <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
           <div>
-            <div style="font-size:15px;font-weight:700;color:#102847;">📅 毎日の記録</div>
-            <div style="font-size:12px;color:#6b7280;margin-top:2px;">カレンダーで学習の足あとを確認</div>
+            <div style="font-size:15px;font-weight:700;color:#102847;">🏅 図鑑</div>
+            <div style="font-size:12px;color:#6b7280;margin-top:2px;">集めたスタンプを確認</div>
           </div>
-          <%= link_to "見る", daily_records_path, style: "text-decoration:none;background:#d7b24d;color:white;padding:9px 16px;border-radius:10px;font-weight:bold;font-size:14px;flex-shrink:0;", aria: { label: "毎日の記録を見る" } %>
+          <%= link_to "見る", stamps_path, style: "text-decoration:none;background:#d7b24d;color:white;padding:9px 16px;border-radius:10px;font-weight:bold;font-size:14px;flex-shrink:0;", aria: { label: "図鑑を見る" } %>
         </div>
         <hr style="border:none;border-top:1px solid #e3e7ec;margin:10px 0;">
 
@@ -971,10 +971,10 @@
 
 
 
-      <%= link_to "/stamps", class: "bottom-link" do %>
-        <span class="bottom-icon">🏅</span>
-        <span class="bottom-title"><%= current_user&.guest? ? "🔒 図鑑" : "図鑑" %></span>
-        <span class="bottom-note">イラストで理解を深める</span>
+      <%= link_to daily_records_path, class: "bottom-link" do %>
+        <span class="bottom-icon">📅</span>
+        <span class="bottom-title"><%= current_user&.guest? ? "🔒 毎日の記録" : "毎日の記録" %></span>
+        <span class="bottom-note">学習の足あとを確認</span>
       <% end %>
 
 

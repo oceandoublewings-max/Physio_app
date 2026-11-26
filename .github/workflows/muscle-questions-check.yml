@@ -1,0 +1,22 @@
+name: Muscle questions check
+on:
+  pull_request:
+    paths:
+      - 'db/data/anatomy_muscle_20261126.json'
+      - 'db/migrate/20261126000000_add_anatomy_muscle_questions.rb'
+      - 'test/data_migrations/anatomy_muscle_questions_test.rb'
+      - '.github/workflows/muscle-questions-check.yml'
+permissions:
+  contents: read
+jobs:
+  migration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.3'
+      - run: gem install activerecord -v 7.1.6 --no-document
+      - run: gem install sqlite3 -v 1.7.3 --no-document
+      - run: gem install minitest -v 5.25.5 --no-document
+      - run: ruby test/data_migrations/anatomy_muscle_questions_test.rb

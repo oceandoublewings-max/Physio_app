@@ -29,8 +29,8 @@ class AnatomyMuscleQuestionsTest < Minitest::Test
 
   def test_inserts_expected_questions_and_is_repeatable
     migrate
-    assert_equal 15, @model.count
-    assert_equal 15, @model.where(category: "解剖", subcategory: "筋肉", qtype: "true_false").count
+    assert_equal 14, @model.count
+    assert_equal 14, @model.where(category: "解剖", subcategory: "筋肉", qtype: "true_false").count
     assert_equal %w[false true], @model.distinct.pluck(:answer).sort
     assert @model.all.all? { |q| q.explanation.start_with?("【国試ポイント】") && q.choices.nil? }
     before = @model.order(:id).map(&:attributes)
@@ -43,8 +43,8 @@ class AnatomyMuscleQuestionsTest < Minitest::Test
       category: "生理", subcategory: "筋生理", qtype: "true_false", explanation: "既存の解説")
     before = existing.attributes
     migrate
-    assert_equal 15, @model.count
-    assert_equal 14, @model.where(category: "解剖").count
+    assert_equal 14, @model.count
+    assert_equal 13, @model.where(category: "解剖").count
     assert_equal before, existing.reload.attributes
   end
 

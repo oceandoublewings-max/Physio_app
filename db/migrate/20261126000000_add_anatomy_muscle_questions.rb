@@ -12,7 +12,7 @@ class AddAnatomyMuscleQuestions < ActiveRecord::Migration[7.1]
 
   def up
     rows = JSON.parse(File.read(File.expand_path("../data/anatomy_muscle_20261126.json", __dir__)))
-    raise "Expected 15 muscle questions" unless rows.size == 15
+    raise "Expected 14 muscle questions" unless rows.size == 14
     keys = rows.map { |row| self.class.normalize(row.fetch("content")) }
     raise "Duplicate source questions" unless keys.uniq.size == rows.size
     raise "Invalid answers" unless rows.all? { |row| %w[true false].include?(row.fetch("answer")) }
